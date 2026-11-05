@@ -22,21 +22,21 @@ Las cifras se validarán midiendo el piloto de seis capítulos antes de extrapol
 
 | ID | Capítulos | Título provisional |
 |---|---|---|
-| DQ.P1.E01 | I.1, I.2 | Preparación y primera salida |
-| DQ.P1.E02 | I.3, I.4, I.5 | Armarse caballero; Andrés; regreso |
-| DQ.P1.E04 | I.8, I.9 | Molinos y batalla con el vizcaíno |
-| DQ.P1.E06 | I.12, I.13, I.14 | Marcela y Grisóstomo |
-| DQ.P1.E07 | I.15, I.16, I.17 | Yangüeses y Maritornes en la venta |
-| DQ.P1.E09 | I.23, I.24, I.25, I.26, I.27, I.28 | Sierra Morena (penitencia y resolución) |
-| DQ.P1.E10 | I.29, I.30, I.31 | Rescate de don Quijote; Dorotea |
-| DQ.P1.E11 | I.32, I.33, I.34, I.35 | La venta segunda; el Curioso impertinente (novela interpolada) |
-| DQ.P1.E12 | I.46, I.47, I.48, I.49, I.50, I.51, I.52 | Encantamiento y vuelta en jaula |
-| DQ.P2.E01 | II.2, II.3, II.4 | Dulcinea encantada |
-| DQ.P2.E04 | II.8, II.9, II.10 | Partida del pueblo; Clara Perlerina |
-| DQ.P2.E07 | II.22, II.23 | Aventura del rebuzno |
-| DQ.P2.E09 | II.41, II.42, II.43 | Clavileño; consejos de Sancho |
-| DQ.P2.E10 | II.47, II.48, II.49, II.50, II.51, II.52, II.53 | Sancho gobernador de Barataria |
-| DQ.P2.E12 | II.69, II.70, II.71 | Altisidora y la cueva de Montesinos fingida |
+| DQ.P1.C01.E01 | I.1, I.2 | Preparación y primera salida |
+| DQ.P1.C03.E01 | I.3, I.4, I.5 | Armarse caballero; Andrés; regreso |
+| DQ.P1.C08.E01 | I.8, I.9 | Molinos y batalla con el vizcaíno |
+| DQ.P1.C12.E01 | I.12, I.13, I.14 | Marcela y Grisóstomo |
+| DQ.P1.C15.E01 | I.15, I.16, I.17 | Yangüeses y Maritornes en la venta |
+| DQ.P1.C23.E01 | I.23, I.24, I.25, I.26, I.27, I.28 | Sierra Morena (penitencia y resolución) |
+| DQ.P1.C29.E01 | I.29, I.30, I.31 | Rescate de don Quijote; Dorotea |
+| DQ.P1.C32.E01 | I.32, I.33, I.34, I.35 | La venta segunda; el Curioso impertinente (novela interpolada) |
+| DQ.P1.C46.E01 | I.46, I.47, I.48, I.49, I.50, I.51, I.52 | Encantamiento y vuelta en jaula |
+| DQ.P2.C02.E01 | II.2, II.3, II.4 | Dulcinea encantada |
+| DQ.P2.C08.E01 | II.8, II.9, II.10 | Partida del pueblo; Clara Perlerina |
+| DQ.P2.C22.E01 | II.22, II.23 | Aventura del rebuzno |
+| DQ.P2.C41.E01 | II.41, II.42, II.43 | Clavileño; consejos de Sancho |
+| DQ.P2.C47.E01 | II.47, II.48, II.49, II.50, II.51, II.52, II.53 | Sancho gobernador de Barataria |
+| DQ.P2.C69.E01 | II.69, II.70, II.71 | Altisidora y la cueva de Montesinos fingida |
 
 ## Capítulos — Parte I
 

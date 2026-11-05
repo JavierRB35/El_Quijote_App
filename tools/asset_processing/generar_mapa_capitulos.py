@@ -55,6 +55,7 @@ def main():
         titulo = meta["capitulo_titulo"] or "(sin título NCX)"
         caps.append({
             "id": key, "parte": p, "capitulo": c, "archivo_epub": archivo,
+            "episodio_canonico": "DQ.P%d.C%02d.E01" % (p, c),
             "seccion_1605": meta["seccion_1605"], "titulo": titulo,
             "n_acuarelas": info["n"], "acuarelas_ejemplo": info["primeras"],
         })
@@ -66,21 +67,21 @@ def main():
         "resumen": {},
         "capitulos": caps,
         "episodios_multicapitulo_propuestos": [
-            {"id": "DQ.P1.E01", "caps": [1, 2], "titulo": "Preparación y primera salida"},
-            {"id": "DQ.P1.E02", "caps": [3, 4, 5], "titulo": "Armarse caballero; Andrés; regreso"},
-            {"id": "DQ.P1.E04", "caps": [8, 9], "titulo": "Molinos y batalla con el vizcaíno"},
-            {"id": "DQ.P1.E06", "caps": [12, 13, 14], "titulo": "Marcela y Grisóstomo"},
-            {"id": "DQ.P1.E07", "caps": [15, 16, 17], "titulo": "Yangüeses y Maritornes en la venta"},
-            {"id": "DQ.P1.E09", "caps": [23, 24, 25, 26, 27, 28], "titulo": "Sierra Morena (penitencia y resolución)"},
-            {"id": "DQ.P1.E10", "caps": [29, 30, 31], "titulo": "Rescate de don Quijote; Dorotea"},
-            {"id": "DQ.P1.E11", "caps": [32, 33, 34, 35], "titulo": "La venta segunda; el Curioso impertinente (novela interpolada)"},
-            {"id": "DQ.P1.E12", "caps": [46, 47, 48, 49, 50, 51, 52], "titulo": "Encantamiento y vuelta en jaula"},
-            {"id": "DQ.P2.E01", "caps": [2, 3, 4], "titulo": "Dulcinea encantada"},
-            {"id": "DQ.P2.E04", "caps": [8, 9, 10], "titulo": "Partida del pueblo; Clara Perlerina"},
-            {"id": "DQ.P2.E07", "caps": [22, 23], "titulo": "Aventura del rebuzno"},
-            {"id": "DQ.P2.E09", "caps": [41, 42, 43], "titulo": "Clavileño; consejos de Sancho"},
-            {"id": "DQ.P2.E10", "caps": [47, 48, 49, 50, 51, 52, 53], "titulo": "Sancho gobernador de Barataria"},
-            {"id": "DQ.P2.E12", "caps": [69, 70, 71], "titulo": "Altisidora y la cueva de Montesinos fingida"},
+            {"id": "DQ.P1.C01.E01", "caps": [1, 2], "titulo": "Preparación y primera salida"},
+            {"id": "DQ.P1.C03.E01", "caps": [3, 4, 5], "titulo": "Armarse caballero; Andrés; regreso"},
+            {"id": "DQ.P1.C08.E01", "caps": [8, 9], "titulo": "Molinos y batalla con el vizcaíno"},
+            {"id": "DQ.P1.C12.E01", "caps": [12, 13, 14], "titulo": "Marcela y Grisóstomo"},
+            {"id": "DQ.P1.C15.E01", "caps": [15, 16, 17], "titulo": "Yangüeses y Maritornes en la venta"},
+            {"id": "DQ.P1.C23.E01", "caps": [23, 24, 25, 26, 27, 28], "titulo": "Sierra Morena (penitencia y resolución)"},
+            {"id": "DQ.P1.C29.E01", "caps": [29, 30, 31], "titulo": "Rescate de don Quijote; Dorotea"},
+            {"id": "DQ.P1.C32.E01", "caps": [32, 33, 34, 35], "titulo": "La venta segunda; el Curioso impertinente (novela interpolada)"},
+            {"id": "DQ.P1.C46.E01", "caps": [46, 47, 48, 49, 50, 51, 52], "titulo": "Encantamiento y vuelta en jaula"},
+            {"id": "DQ.P2.C02.E01", "caps": [2, 3, 4], "titulo": "Dulcinea encantada"},
+            {"id": "DQ.P2.C08.E01", "caps": [8, 9, 10], "titulo": "Partida del pueblo; Clara Perlerina"},
+            {"id": "DQ.P2.C22.E01", "caps": [22, 23], "titulo": "Aventura del rebuzno"},
+            {"id": "DQ.P2.C41.E01", "caps": [41, 42, 43], "titulo": "Clavileño; consejos de Sancho"},
+            {"id": "DQ.P2.C47.E01", "caps": [47, 48, 49, 50, 51, 52, 53], "titulo": "Sancho gobernador de Barataria"},
+            {"id": "DQ.P2.C69.E01", "caps": [69, 70, 71], "titulo": "Altisidora y la cueva de Montesinos fingida"},
         ],
     }
 
@@ -98,6 +99,16 @@ def main():
     }
 
     os.makedirs(os.path.join(repo, "docs", "data"), exist_ok=True)
+    # los capítulos agrupados apuntan al episodio-grupo anclado en su primer capítulo
+    grupo_por_cap = {}
+    for e in datos["episodios_multicapitulo_propuestos"]:
+        parte_e = int(e["id"][4])
+        for c in e["caps"]:
+            grupo_por_cap[(parte_e, c)] = e["id"]
+    for c in caps:
+        k = (c["parte"], c["capitulo"])
+        if k in grupo_por_cap:
+            c["episodio_canonico"] = grupo_por_cap[k]
     with open(os.path.join(repo, "docs", "data", "mapa_capitulos.json"), "w", encoding="utf-8") as f:
         json.dump(datos, f, ensure_ascii=False, indent=1)
 

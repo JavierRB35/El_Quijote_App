@@ -7,7 +7,7 @@
 Se incorpora una **copia íntegra, sin alteraciones**, del TXT entregado por el propietario:
 
 - **Fichero en Git:** `content/textos/gutenberg_2000/El_Quijote.txt`.
-- **Registro Source canónico:** `content/sources/DQ.SRC.0004.json`.
+- **Registro Source canónico:** `content/sources/DQ.SRC.0005.json`.
 - **Manifiesto de integridad:** `content/manifests/gutenberg_2000_source.json`.
 - **Fuente original pública:** https://www.gutenberg.org/ebooks/2000
 - **TXT de referencia:** https://www.gutenberg.org/cache/epub/2000/pg2000.txt
@@ -39,7 +39,7 @@ El hash Git de la copia reconstruida y el hash Git del archivo recibido coincide
 
 ## Relación con el catálogo y el juego
 
-- `DQ.SRC.0004` es **Source**, no una aprobación automática como **Edition**. No se crea aquí `DQ.ED.0002`: el esquema de Edition exige derechos verificados y la selección canónica sigue pendiente (**PEND-01**).
+- `DQ.SRC.0005` es **Source**, no una aprobación automática como **Edition**. No se crea aquí `DQ.ED.0002`: el esquema de Edition exige derechos verificados y la selección canónica sigue pendiente (**PEND-01**).
 - El texto de Gutenberg puede ser candidato al lector completo y al índice local offline, pero **no está todavía segmentado en 126 registros de capítulos ni indexado**; estos son entregables separados de FASE 1.
 - Los **pasajes, preguntas, citas y offsets ya producidos del piloto** se derivan de `DQ.ED.0001` (Tusell). **No cambiar silenciosamente `edition_id`, hashes de pasaje, anclas, redacción de citas ni la atribución de fuentes**.
 - Las acuarelas Tusell son activos iconográficos independientes: se conectan por capítulo/episodio y, cuando proceda, por pasaje **cotejado**, nunca por igualdad presumida de offsets o texto.

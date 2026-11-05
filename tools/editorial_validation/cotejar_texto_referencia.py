@@ -32,6 +32,9 @@ def prefijo_comun_mas_largo(normalizada, ref):
 
 def main():
     repo, ruta_ref = sys.argv[1], sys.argv[2]
+    if ruta_ref.lower() in ("default", "repo"):
+        # texto íntegro de integridad almacenado (DQ.SRC.0005, fusión feature/cont-fuente-gutenberg-2000-20261105)
+        ruta_ref = os.path.join(repo, "content", "textos", "gutenberg_2000", "El_Quijote.txt")
     pkg = json.load(open(os.path.join(repo, "content", "piloto", "package.json"), encoding="utf-8"))
     ref_raw = open(ruta_ref, encoding="utf-8", errors="replace").read()
     ref = normalizar(re.sub(r"\s+", " ", ref_raw))

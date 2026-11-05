@@ -42,3 +42,7 @@ assets/**/*.pmtiles
 # Documentada en GOBERNANZA_GIT.md §5. PEND-05 (LFS vs. releases) sigue abierto
 # para los maestros audiovisuales pesados (escenas, audio, mapas).
 !assets/ilustraciones_tusell/**
+
+# --- EXCEPCIÓN por orden expresa del propietario: piloto de escenas IA (2026-11-05) ---
+# Solo derivados WebP optimizados (~3 MB, 11 archivos). PNG maestros fuera de Git.
+!assets/scenes/**/*.webp

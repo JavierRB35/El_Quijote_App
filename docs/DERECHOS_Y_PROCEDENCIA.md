@@ -11,4 +11,5 @@
 
 ## Estado actual
 
-Sin evaluaciones realizadas todavía. Todo recurso pendiente de verificación individual con evidencia documental (URL, fecha de consulta, límites de uso).
+- **Acuarelas Tusell (evaluación realizada 2026-11-05):** muy probable dominio público (edición Luis Tasso, Barcelona, 1905), con residuales documentados — ver [`DERECHOS_Y_PROCEDENCIA_ILUSTRACIONES.md`](DERECHOS_Y_PROCEDENCIA_ILUSTRACIONES.md). Publicación en este repositorio privado autorizada expresamente por el propietario (2026-11-05); la redistribución pública sigue bloqueada hasta cerrar los residuales.
+- Resto de recursos (texto de la edición de referencia, fotografía patrimonial, arte histórico, audio, mapas/teselas): sin evaluaciones todavía; todo pendiente de verificación individual con evidencia documental (URL, fecha de consulta, límites de uso).

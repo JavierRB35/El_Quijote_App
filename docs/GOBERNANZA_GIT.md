@@ -38,6 +38,8 @@ No se difieren pushes «para más tarde». Si un bloque está a medias, se commi
 
 `.gitignore` en la raíz aplica estas exclusiones. Si un fichero necesita excepción, se decide explícitamente y se documenta aquí.
 
+**Excepción registrada (2026-11-05, modo CONTENIDOS):** `assets/ilustraciones_tusell/**` se sube a Git normal por **orden expresa del propietario** de esa misma fecha («extraer todas las ilustraciones del libro y dejarlas en una carpeta local y en GitHub»). Justificación técnica: 415 ficheros, ~29 MB en total, máximo 295 KB por fichero — sin necesidad de LFS. Alcance: solo esta carpeta (acuarelas de la ed. Luis Tasso 1905, dominio público presunto según `docs/DERECHOS_Y_PROCEDENCIA_ILUSTRACIONES.md`, uso interno no comercial). **PEND-05 sigue abierta** para los maestros audiovisuales pesados (escenas, audio, mapas PMTiles): eso sí exigirá LFS o releases.
+
 ## 6. Versionado y etiquetas
 
 - Etiquetas `v0.0.x` para hitos de documentación aprobados (p. ej. cierre de FASE 0).

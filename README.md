@@ -10,6 +10,8 @@ Videojuego premium para PC basado en las **dos partes completas de Don Quijote d
 
 Trabajo autorizado en esta fase: estudio, inventario, diseño documental, estimaciones y propuestas de esquema.
 
+**Entrega 2026-11-05 (modo CONTENIDOS):** auditoría y extracción reales del EPUB ilustrado — **376 acuarelas de Salvador Tusell + 39 elementos de edición** en [`assets/ilustraciones_tusell/`](assets/ilustraciones_tusell/), con manifiestos (CSV/JSON), [informe de inventario](docs/INVENTARIO_ILUSTRACIONES_TUSELL.md) y [expediente de derechos](docs/DERECHOS_Y_PROCEDENCIA_ILUSTRACIONES.md). Corresponde a la decisión DP-03 y resuelve PEND-02 (`docs/VISION_Y_DECISIONES.md`). Excepción de `.gitignore` documentada en [`docs/GOBERNANZA_GIT.md`](docs/GOBERNANZA_GIT.md) §5.
+
 ## Repositorio
 
 - **Principal y única fuente de verdad:** `JavierRB35/El_Quijote_App` en GitHub (privado), rama `main`.

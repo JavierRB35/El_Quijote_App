@@ -30,7 +30,7 @@ Mantiene la tabla de decisiones **cerradas / provisionales / pendientes** (entre
 |---|---|---|---|
 | DP-01 | Stack técnico base: Tauri 2 + React + TypeScript + Vite + Rust + SQLite/FTS5 + epub.js + MapLibre GL JS/PMTiles; escenas HTML/CSS + Web Animations API. **Es propuesta; no autoriza a programar.** Godot 4 solo se reconsidera con evidencia de limitación esencial | Aprobación pendiente (GO/NO-GO) | §2.6, §5.2 |
 | DP-02 | Objetivo orientativo 1920×1080, adaptación 1440p/4K, ~8 GB RAM, gráfica integrada moderna | NO publicar como requisito validado sin medir | §2.6 |
-| DP-03 | EPUB ilustrado Tusell (>300 acuarelas atribuidas, relación con Doré) como recurso potencial del lector/museo | Pendiente de acceso real al EPUB y auditoría; no afirmar que se ha inspeccionado | §2.5 |
+| DP-03 | EPUB ilustrado Tusell (>300 acuarelas atribuidas, relación con Doré) como recurso potencial del lector/museo | **Auditoría realizada 2026-11-05** (modo CONTENIDOS): 376 acuarelas + 39 elementos de edición, correspondencia capítulo y alt texts en `assets/ilustraciones_tusell/manifests/`; ver `docs/INVENTARIO_ILUSTRACIONES_TUSELL.md`. Uso interno autorizado; recurso como tal sigue provisional hasta GO/NO-GO | §2.5 |
 | DP-04 | Estructura de repositorio candidata (§6.4) implementada como esqueleto | Sujeta a evolución; carpetas placeholder con `.gitkeep` | §6.4 |
 | DP-05 | FASE 0: commits directos a `main` para documentación; FASE 1+: ramas + PR | Operativa mientras haya un único agente activo | `GOBERNANZA_GIT.md` |
 
@@ -39,14 +39,16 @@ Mantiene la tabla de decisiones **cerradas / provisionales / pendientes** (entre
 | ID | Cuestión | Qué falta | Bloquea a |
 |---|---|---|---|
 | PEND-01 | Edición española de referencia legalmente utilizable para el texto | Selección y verificación de derechos (BNE, BVC, etc.) | Contenidos + Lector |
-| PEND-02 | EPUB Tusell: estructura, nº real de acuarelas, calidad, correspondencia capítulo, derechos | Acceso al archivo y autorización de análisis | Iconografía, Lector, Museo |
+| ~~PEND-02~~ | **RESUELTA 2026-11-05:** EPUB Tusell auditado de verdad: 415 imágenes (376 acuarelas numeradas sin huecos, 0 duplicados, 0 huérfanas, 100 % con texto alternativo), mediana 849×688 px, correspondencia capítulo↔acuarela completa. Evidencia: `docs/INVENTARIO_ILUSTRACIONES_TUSELL.md` + manifiestos | Residuales → PEND-09 | Iconografía, Lector, Museo |
 | PEND-03 | Licencias de fotografía patrimonial, mapas y arte histórico | Verificación individual por recurso | Iconografía, Atlas, Museo |
 | PEND-04 | Teselas cartográficas offline: fuente, licencia y empaquetado (PMTiles) | Comprobación de acceso local y licencias | Atlas |
-| PEND-05 | Mecanismo para medios pesados: Git LFS vs. releases privados | Decisión al inventariar activos | Distribución |
+| PEND-05 | Mecanismo para medios pesados: Git LFS vs. releases privados | Decisión al inventariar activos. **Excepción ya decidida (2026-11-05):** ilustraciones Tusell (~29 MB) en Git normal por orden expresa del propietario; ver `GOBERNANZA_GIT.md` §5 | Distribución |
 | PEND-06 | Requisitos hardware objetivo (RAM/VRAM/tamaño instalación) | Mediciones en hardware real | QA, Distribución |
 | PEND-07 | WebView2 en instalador offline: modo de distribución exacto | Prueba en VM limpia sin internet | Distribución |
 | PEND-08 | Aprobación GO/NO-GO de FASE 0 por el propietario | Presentación de los 11 entregables FASE 0 | Todo lo ejecutable |
+| PEND-09 | Residuales de la auditoría Tusell: fechas vitales de Salvador Tusell (BNE / Archivo de Arte Valenciano 1981), ficha de la ed. Tasso 1905 en BNE y licencia declarada de Epublibre EPL 64375 | Verificación documental; solo bloquea redistribución pública, no el uso interno | Iconografía, Derechos |
 
 ## 4. Registro de cambios de este documento
 
 - 2026-11-05: creación inicial; DC-01…DC-17, DP-01…DP-05, PEND-01…PEND-08.
+- 2026-11-05 (modo CONTENIDOS): DP-03 auditado; PEND-02 resuelta con evidencia (PEND-09 recoge residuales); PEND-05 anotada con la excepción de las ilustraciones Tusell.

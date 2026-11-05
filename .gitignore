@@ -35,3 +35,10 @@ assets/**/*.m4a
 assets/**/*.mp4
 assets/**/*.pmtiles
 !**/.gitkeep
+
+# --- EXCEPCIÓN explícita decidida por el propietario (2026-11-05, modo CONTENIDOS) ---
+# Ilustraciones Tusell extraídas del EPUB: 415 ficheros, ~29 MB, máx. 295 KB/fichero;
+# en Git normal por orden expresa del propietario («dejarlas en GitHub»).
+# Documentada en GOBERNANZA_GIT.md §5. PEND-05 (LFS vs. releases) sigue abierto
+# para los maestros audiovisuales pesados (escenas, audio, mapas).
+!assets/ilustraciones_tusell/**

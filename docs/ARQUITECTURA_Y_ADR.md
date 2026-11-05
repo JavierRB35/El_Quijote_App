@@ -43,11 +43,13 @@ Aplicación documental interactiva premium para Windows 11 x64: escenas 2.5D con
 
 ### Criterios de validación antes de la aprobación (evidencia exigida)
 
-1. **FTS5 y castellano áureo:** prueba de indexación con texto de la ed. Tasso (ortografía 1905: «á», qu/gu, diacríticos) y capa `text_indexable` normalizada; medir calidad de resultados.
-2. **PMTiles local:** acceso por protocolo seguro/rangos desde Tauri sin servidor; verificar licencia de los datos de teselas (PEND-04).
-3. **WebView2 offline:** instalador con bootstrapper en VM Windows 11 limpia **sin red** (PEND-07); ninguna descarga en primer arranque (encargo §5.2.6).
-4. **Benchmark de escena representativa:** episodio del piloto (molinos) con capas + parallax + hotspot en hardware modesto; medir RAM/VRAM/FPS y alternativa de movimiento reducido (PEND-06).
-5. **Smoke/e2e nativo:** instalador real en Windows, no solo Playwright web (encargo §5.2.9).
+1. **FTS5 y castellano áureo — SUPERADO (2026-11-05, 9/9):** `tests/dev/fts5_castellano_aureo.py` + `tests/dev/last_fts5_report.json`. Diseño confirmado: búsqueda SOBRE la capa `text_indexable` normalizada; `text_original` se muestra intacto (integridad verificada). Consultas con/sin tilde equivalentes («sabia» ≡ «sabía»); sin stemming deliberado — la equivalencia de lemas se resuelve editorialmente si el piloto la exige. SQLite 3.50.4 con FTS5.
+2. **PMTiles local:** acceso por protocolo seguro/rangos desde Tauri sin servidor; verificar licencia de los datos de teselas (PEND-04). — Pendiente.
+3. **WebView2 offline:** instalador con bootstrapper en VM Windows 11 limpia **sin red** (PEND-07); ninguna descarga en primer arranque (encargo §5.2.6). — Pendiente.
+4. **Benchmark de escena representativa:** episodio del piloto (molinos) con capas + parallax + hotspot en hardware modesto; medir RAM/VRAM/FPS y alternativa de movimiento reducido (PEND-06). — Pendiente.
+5. **Smoke/e2e nativo:** instalador real en Windows, no solo Playwright web (encargo §5.2.9). — En curso: primer `cargo check` del stack Tauri en la máquina del propietario.
+
+**Nota de entorno Windows (para CI futura):** el toolchain local es Node v24.20.0 + Rust 1.99.1 (MSVC) + VS 18 Community (MSVC 14.51) + Windows SDK 10.0.26100. Desde Git Bash, `cargo` debe ejecutarse dentro del entorno `vcvars64.bat` (sin `LIB`/`INCLUDE` el enlazador falla con `LNK1104: msvcrt.lib`). GitHub Actions `windows-latest` resuelve esto automáticamente.
 
 ### Riesgos y mitigaciones
 

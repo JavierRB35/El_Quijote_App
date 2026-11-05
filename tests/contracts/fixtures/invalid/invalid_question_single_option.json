@@ -1,0 +1,29 @@
+{
+  "id": "DQ.Q.000102",
+  "contract_version": "1.0.0",
+  "episode_id": "DQ.P1.C01.E01",
+  "chapter_ids": ["DQ.P1.C01"],
+  "passage_ids": ["DQ.P1.C01.P0001"],
+  "prompt": "CASO NEGATIVO: single_choice con una sola opción (no hay elección real).",
+  "interaction": {
+    "type": "single_choice",
+    "options": [
+      { "id": "DQ.Q.000102.O01", "label": "Única opción" }
+    ],
+    "correct_option_ids": ["DQ.Q.000102.O01"],
+    "shuffle_options": false
+  },
+  "rationale": "Inválido: mínimo tres opciones para single_choice.",
+  "evidence": [
+    { "kind": "cita_literal", "passage_id": "DQ.P1.C01.P0001", "quote": "cita sintética" }
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "cognitive_type": "hecho",
+  "difficulty": 1,
+  "spoiler_policy": { "safe_after_episodes": [] },
+  "visual_requirements": { "pre_image_must_not_reveal": true },
+  "language": "es",
+  "tags": ["negativo"],
+  "review": { "state": "borrador", "reviewer_role": null, "date": null },
+  "semantic_key": "negativo-single-una-opcion"
+}

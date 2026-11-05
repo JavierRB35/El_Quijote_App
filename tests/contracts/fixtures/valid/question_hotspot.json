@@ -1,0 +1,33 @@
+{
+  "id": "DQ.Q.000006",
+  "contract_version": "1.0.0",
+  "episode_id": "DQ.P1.C01.E01",
+  "chapter_ids": ["DQ.P1.C01"],
+  "passage_ids": ["DQ.P1.C01.P0001"],
+  "scene_id": "DQ.P1.C01.E01.S01",
+  "prompt": "PREGUNTA SINTÉTICA DE PRUEBA (no publicable): seleccione en la escena el punto sintético correcto.",
+  "interaction": {
+    "type": "hotspot",
+    "options": [
+      { "id": "DQ.Q.000006.O01", "label": "Zona sintética izquierda" },
+      { "id": "DQ.Q.000006.O02", "label": "Zona sintética central" },
+      { "id": "DQ.Q.000006.O03", "label": "Zona sintética derecha" }
+    ],
+    "correct_option_ids": ["DQ.Q.000006.O02"],
+    "hotspot_area": { "x": 0.4, "y": 0.3, "w": 0.2, "h": 0.2 },
+    "shuffle_options": false
+  },
+  "rationale": "Explicación breve sintética que describe la zona correcta.",
+  "evidence": [
+    { "kind": "cita_literal", "passage_id": "DQ.P1.C01.P0001", "quote": "Texto sintético de prueba — cita de ejemplo no publicable." }
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "cognitive_type": "lugar",
+  "difficulty": 2,
+  "spoiler_policy": { "safe_after_episodes": [] },
+  "visual_requirements": { "pre_image_must_not_reveal": true, "hotspot_media_id": "DQ.MA.000002" },
+  "language": "es",
+  "tags": ["sintetico", "prueba"],
+  "review": { "state": "borrador", "reviewer_role": null, "date": null },
+  "semantic_key": "sintetico-p1c01-zona-01"
+}

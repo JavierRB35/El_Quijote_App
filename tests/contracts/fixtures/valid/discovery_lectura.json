@@ -1,0 +1,16 @@
+{
+  "id": "DQ.DIS.000002",
+  "contract_version": "1.0.0",
+  "kind": "lectura_posible",
+  "content": "Lectura sintética de prueba formulada como hipótesis documentada, no publicable.",
+  "context": "Se presenta como una lectura defendible entre otras; no como verdad única.",
+  "bibliography": ["DQ.SRC.0002"],
+  "appearance": {
+    "episode_id": "DQ.P1.C01.E01",
+    "moment": "exploracion",
+    "frequency_hint": "raro"
+  },
+  "certainty": "HIPOTESIS_PLAUSIBLE",
+  "review": { "state": "borrador", "reviewer_role": null, "date": null },
+  "notes": "Ejemplo sintético: las interpretaciones se atribuyen y gradúan por evidencia (encargo §2.3, Anexo A)."
+}

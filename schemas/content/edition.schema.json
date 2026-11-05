@@ -1,23 +1,24 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "edition.schema.json",
+  "$id": "https://github.com/JavierRB35/El_Quijote_App/schemas/content/edition.schema.json",
   "title": "Edition",
-  "$comment": "BORRADOR 0.1 — edición de referencia. PEND-01: la edición española jurídicamente utilizable está por seleccionar.",
   "type": "object",
-  "required": ["id", "title", "author", "orthography", "license_id", "consulted_date"],
+  "additionalProperties": false,
+  "required": ["id", "contract_version", "title", "editor", "year", "source_id", "digital_version", "rights_status", "orthographic_rules", "review"],
   "properties": {
-    "id": {"type": "string", "pattern": "^DQ\\.ED\\.[0-9]{4}$"},
-    "title": {"type": "string"},
-    "author": {"type": "string"},
-    "editor_year": {"type": "string"},
-    "source_url": {"type": "string"},
-    "digital_version": {"type": "string"},
-    "orthography": {"enum": ["original_1605", "moderna", "tasso_1905", "otra"],
-                     "$comment": "tasso_1905 = ortografía modernizada de la ed. Tusell usada por el EPUB («á», «sabía» con diacrítico del s. XVII-XVIII conservado parcialmente)"},
-    "license_id": {"type": "string", "pattern": "^DQ\\.LIC\\.[0-9]{4}$"},
-    "checksum": {"type": "string"},
-    "consulted_date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
-    "notes": {"type": "string"}
-  },
-  "unevaluatedProperties": false
+    "id": { "$ref": "_definitions.schema.json#/$defs/editionId" },
+    "contract_version": { "$ref": "_definitions.schema.json#/$defs/ContractVersion" },
+    "title": { "type": "string", "minLength": 1 },
+    "editor": { "type": "string", "minLength": 1 },
+    "year": { "type": "integer", "minimum": 1605, "maximum": 2100 },
+    "source_id": { "$ref": "_definitions.schema.json#/$defs/sourceId" },
+    "digital_version": { "type": "string", "minLength": 1 },
+    "url": { "type": "string", "format": "uri" },
+    "rights_status": { "$ref": "_definitions.schema.json#/$defs/LicenseStatus" },
+    "orthographic_rules": { "type": "string", "enum": ["original_epoca", "modernizada"] },
+    "checksum": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "provenance": { "type": "string" },
+    "notes": { "type": "string" },
+    "review": { "$ref": "_definitions.schema.json#/$defs/Review" }
+  }
 }

@@ -1,0 +1,13 @@
+{
+  "id": "DQ.PER.0001",
+  "contract_version": "1.0.0",
+  "class": "ficticio",
+  "canonical_name": "Personaje Sintético A (no publicable)",
+  "variants": ["Alias sintético A"],
+  "relations": [
+    { "person_id": "DQ.PER.0002", "kind": "contraste_con" }
+  ],
+  "appearances": ["DQ.P1.C01.E01"],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": { "state": "documentada", "reviewer_role": null, "date": null }
+}

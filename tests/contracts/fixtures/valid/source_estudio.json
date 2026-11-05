@@ -1,0 +1,10 @@
+{
+  "id": "DQ.SRC.0002",
+  "contract_version": "1.0.0",
+  "title": "Estudio académico sintético de prueba",
+  "author_editor": "Autoría sintética",
+  "publication": "Revista sintética de prueba",
+  "kind": "estudio_academico",
+  "url": "https://example.org/estudio-sintetico",
+  "consulted_date": "2026-11-05"
+}

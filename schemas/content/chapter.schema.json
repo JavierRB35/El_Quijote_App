@@ -1,20 +1,20 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "chapter.schema.json",
+  "$id": "https://github.com/JavierRB35/El_Quijote_App/schemas/content/chapter.schema.json",
   "title": "Chapter",
-  "$comment": "BORRADOR 0.1 — capítulo según edición de referencia; seccion_1605 documenta la división en cuatro partes de la ed. de 1605 que conserva el EPUB Tusell.",
   "type": "object",
-  "required": ["id", "part", "number", "title", "edition_id", "order"],
+  "additionalProperties": false,
+  "required": ["id", "contract_version", "edition_id", "part", "number", "title", "order", "text_ref"],
   "properties": {
-    "id": {"type": "string", "pattern": "^DQ\\.P[12]\\.C[0-9]{2}$"},
-    "part": {"enum": ["I", "II"]},
-    "number": {"type": "integer", "minimum": 1, "maximum": 74},
-    "title": {"type": "string", "minLength": 3},
-    "edition_id": {"type": "string", "pattern": "^DQ\\.ED\\.[0-9]{4}$"},
-    "order": {"type": "integer", "minimum": 1, "maximum": 126},
-    "source_file": {"type": "string"},
-    "seccion_1605": {"enum": ["Primera", "Segunda", "Tercera", "Cuarta"]},
-    "review_state": {"enum": ["borrador", "documentada", "revisada", "aprobada", "descartada"]}
-  },
-  "unevaluatedProperties": false
+    "id": { "$ref": "_definitions.schema.json#/$defs/chapterId" },
+    "contract_version": { "$ref": "_definitions.schema.json#/$defs/ContractVersion" },
+    "edition_id": { "$ref": "_definitions.schema.json#/$defs/editionId" },
+    "part": { "type": "integer", "enum": [1, 2] },
+    "number": { "type": "integer", "minimum": 1, "maximum": 74 },
+    "title": { "type": "string", "minLength": 1 },
+    "order": { "type": "integer", "minimum": 1, "maximum": 126 },
+    "$comment_order": "order = posición global en el orden canónico de lectura (P1: 1-52, P2: 53-126).",
+    "text_ref": { "type": "string", "minLength": 1, "$comment": "URI lógica local del texto del capítulo en la edición de referencia." },
+    "synopsis": { "type": "string" }
+  }
 }

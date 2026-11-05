@@ -1,0 +1,31 @@
+{
+  "id": "DQ.Q.000105",
+  "contract_version": "1.0.0",
+  "episode_id": "DQ.P1.C01.E01",
+  "chapter_ids": ["DQ.P1.C99"],
+  "passage_ids": ["DQ.P1.C01.P0001"],
+  "prompt": "CASO NEGATIVO: referencia a un capítulo inexistente (P1 solo tiene 52 capítulos).",
+  "interaction": {
+    "type": "single_choice",
+    "options": [
+      { "id": "DQ.Q.000105.O01", "label": "Opción A" },
+      { "id": "DQ.Q.000105.O02", "label": "Opción B" },
+      { "id": "DQ.Q.000105.O03", "label": "Opción C" }
+    ],
+    "correct_option_ids": ["DQ.Q.000105.O01"],
+    "shuffle_options": true
+  },
+  "rationale": "Inválido: capítulo mal referenciado (encargo §6.3.7).",
+  "evidence": [
+    { "kind": "cita_literal", "passage_id": "DQ.P1.C01.P0001", "quote": "cita sintética" }
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "cognitive_type": "hecho",
+  "difficulty": 2,
+  "spoiler_policy": { "safe_after_episodes": [] },
+  "visual_requirements": { "pre_image_must_not_reveal": true },
+  "language": "es",
+  "tags": ["negativo"],
+  "review": { "state": "borrador", "reviewer_role": null, "date": null },
+  "semantic_key": "negativo-capitulo-mal-referenciado"
+}

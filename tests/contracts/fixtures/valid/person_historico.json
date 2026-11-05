@@ -1,0 +1,13 @@
+{
+  "id": "DQ.PER.0002",
+  "contract_version": "1.0.0",
+  "class": "historico",
+  "canonical_name": "Figura Histórica Sintética (no publicable)",
+  "historical_ref": {
+    "source_id": "DQ.SRC.0002",
+    "locator": "cap. 1, §2 (localizador sintético)",
+    "note": "Referencia documental sintética de prueba."
+  },
+  "certainty": "HECHO_HISTORICO_DOCUMENTADO",
+  "review": { "state": "documentada", "reviewer_role": null, "date": null }
+}

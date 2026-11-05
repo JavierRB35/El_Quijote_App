@@ -1,0 +1,12 @@
+{
+  "id": "DQ.LIC.0001",
+  "contract_version": "1.0.0",
+  "title": "Licencia sintética de prueba",
+  "holder": "Titular sintético de prueba",
+  "url": "https://example.org/licencia-sintetica",
+  "consulted_date": "2026-11-05",
+  "attribution_required": true,
+  "redistribution": "condicionada",
+  "evidence_documental": "Texto de condiciones sintético en https://example.org/condiciones (evidencia de ejemplo).",
+  "notes": "Registro sintético: 'condicionada' exige documentar las condiciones antes de cualquier redistribución."
+}

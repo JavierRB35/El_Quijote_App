@@ -1,0 +1,19 @@
+{
+  "id": "DQ.MUS.0001",
+  "contract_version": "1.0.0",
+  "title": "Pieza sintética de museo (no publicable)",
+  "authorship": "Taller sintético de prueba",
+  "attribution_status": "atribuida",
+  "date": "fecha sintética de prueba",
+  "provenance": "Procedencia sintética de prueba.",
+  "technique": "Técnica sintética de prueba",
+  "owner_entity": "Institución sintética de prueba",
+  "context": "Contexto histórico sintético de prueba.",
+  "relation_to_quixote": "Relación documentada sintética con el episodio de prueba.",
+  "chapters": ["DQ.P1.C01"],
+  "media_ids": ["DQ.MA.000002"],
+  "source_id": "DQ.SRC.0002",
+  "license_id": "DQ.LIC.0001",
+  "certainty": "HECHO_HISTORICO_DOCUMENTADO",
+  "review": { "state": "documentada", "reviewer_role": null, "date": null }
+}

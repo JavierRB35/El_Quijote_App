@@ -1,0 +1,19 @@
+{
+  "profile_id": "prf_12345678-1234-4321-8765-1234567890ab",
+  "display_name": "Perfil sintético de prueba",
+  "created_at": "2026-11-05T20:00:00Z",
+  "settings": {
+    "question_frequency": "media",
+    "text_size": "medio",
+    "reduced_motion": false,
+    "subtitles": true,
+    "volumes": { "voice": 0.8, "ambience": 0.5, "music": 0.4 }
+  },
+  "progress_summary": {
+    "last_episode_id": "DQ.P1.C01.E01",
+    "answered_questions": 3,
+    "notebook_entries": 1
+  },
+  "backup_version": 1,
+  "catalog_version_seen": "0.1.0"
+}

@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/JavierRB35/El_Quijote_App/schemas/content/_definitions.schema.json",
+  "title": "Definiciones compartidas del contrato editorial-técnico (v1.0.0)",
+  "$comment": "Referenciado por todos los esquemas de entidad vía _definitions.schema.json#/$defs/... Reglas fuente: encargo maestro §6.1, §6.2, §6.3, Anexo A.",
+  "$defs": {
+    "ContractVersion": { "type": "string", "const": "1.0.0" },
+    "NonEmptyString": { "type": "string", "minLength": 1 },
+    "IsoDate": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+
+    "editionId": { "type": "string", "pattern": "^DQ\\.ED\\.\\d{4}$" },
+    "chapterId": {
+      "type": "string",
+      "anyOf": [
+        { "pattern": "^DQ\\.P1\\.C(0[1-9]|[1-4][0-9]|5[0-2])$" },
+        { "pattern": "^DQ\\.P2\\.C(0[1-9]|[1-6][0-9]|7[0-4])$" }
+      ]
+    },
+    "passageId": { "type": "string", "pattern": "^DQ\\.P[12]\\.C\\d{2}\\.P\\d{4}$" },
+    "episodeId": { "type": "string", "pattern": "^DQ\\.P[12]\\.C\\d{2}\\.E\\d{2}$" },
+    "sceneId": { "type": "string", "pattern": "^DQ\\.P[12]\\.C\\d{2}\\.E\\d{2}\\.S\\d{2}$" },
+    "questionId": { "type": "string", "pattern": "^DQ\\.Q\\.\\d{6}$" },
+    "optionId": { "type": "string", "pattern": "^DQ\\.Q\\.\\d{6}\\.O\\d{2}$" },
+    "discoveryId": { "type": "string", "pattern": "^DQ\\.DIS\\.\\d{6}$" },
+    "personId": { "type": "string", "pattern": "^DQ\\.PER\\.\\d{4}$" },
+    "placeId": { "type": "string", "pattern": "^DQ\\.LOC\\.\\d{4}$" },
+    "routeId": { "type": "string", "pattern": "^DQ\\.RTE\\.\\d{4}$" },
+    "museumItemId": { "type": "string", "pattern": "^DQ\\.MUS\\.\\d{4}$" },
+    "mediaAssetId": { "type": "string", "pattern": "^DQ\\.MA\\.\\d{6}$" },
+    "sourceId": { "type": "string", "pattern": "^DQ\\.SRC\\.\\d{4}$" },
+    "licenseId": { "type": "string", "pattern": "^DQ\\.LIC\\.\\d{4}$" },
+
+    "ReviewState": {
+      "type": "string",
+      "enum": ["borrador", "documentada", "revisada", "aprobada", "descartada"]
+    },
+    "Certainty": {
+      "type": "string",
+      "enum": [
+        "TEXTO_EXPLICITO",
+        "HECHO_HISTORICO_DOCUMENTADO",
+        "INTERPRETACION_ACADEMICA",
+        "HIPOTESIS_PLAUSIBLE",
+        "DISCUTIDO",
+        "RECREACION_ARTISTICA"
+      ],
+      "$comment": "Anexo A del encargo. 'desconocido' no existe: un registro sin certeza determinada no puede publicarse."
+    },
+    "MediaClass": {
+      "type": "string",
+      "enum": ["FOTOGRAFIA_ACTUAL", "IMAGEN_HISTORICA", "RECREACION_IA", "ILUSTRACION_EDITORIAL"],
+      "$comment": "Clases de evidencia visual distintas y siempre rotuladas (encargo §2.1, §2.5, §4.7.6)."
+    },
+    "LicenseStatus": {
+      "type": "string",
+      "enum": ["verificada", "pendiente", "restringida", "desconocida"],
+      "$comment": "'desconocida' NO equivale a autorizada (encargo §6.3.4). Publicación exige 'verificada'."
+    },
+    "AllowedUse": {
+      "type": "string",
+      "enum": ["uso_personal_app", "almacenamiento_repo_git", "redistribucion"]
+    },
+    "QuestionType": {
+      "type": "string",
+      "enum": ["single_choice", "multi_choice", "true_false", "ordering", "matching", "hotspot"],
+      "$comment": "Encargo §2.2 y §4.3.6. No existe ningún tipo de respuesta libre escrita."
+    },
+    "CognitiveType": {
+      "type": "string",
+      "enum": ["hecho", "secuencia", "causa_consecuencia", "actitud_reaccion", "dialogo", "humor", "cita", "interpretacion", "historia", "lugar", "arte"],
+      "$comment": "Encargo §4.3.3. Ampliaciones exigen versión MINOR del contrato."
+    },
+    "ScenePhase": { "type": "string", "enum": ["before", "question", "reveal", "after"] },
+    "SpoilerLevel": { "type": "string", "enum": ["ninguno", "leve", "revelador"] },
+    "MediaFunction": {
+      "type": "string",
+      "enum": ["pre_pregunta", "post_desenlace", "lector", "museo", "cuaderno", "atlas", "interfaz"]
+    },
+
+    "Review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state"],
+      "properties": {
+        "state": { "$ref": "_definitions.schema.json#/$defs/ReviewState" },
+        "reviewer_role": { "type": ["string", "null"], "enum": ["editorial", "tecnica", "coordinacion", null] },
+        "date": { "type": ["string", "null"], "$ref": "_definitions.schema.json#/$defs/IsoDate" }
+      }
+    },
+
+    "EvidenceItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["cita_literal", "fuente_historica", "estudio_academico", "interpretacion_editorial"]
+        },
+        "passage_id": { "$ref": "_definitions.schema.json#/$defs/passageId" },
+        "quote": { "type": "string", "minLength": 1 },
+        "source_id": { "$ref": "_definitions.schema.json#/$defs/sourceId" },
+        "locator": { "type": "string", "minLength": 1 },
+        "note": { "type": "string" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "cita_literal" } }, "required": ["kind"] },
+          "then": { "required": ["passage_id", "quote"] }
+        },
+        {
+          "if": { "properties": { "kind": { "enum": ["fuente_historica", "estudio_academico"] } }, "required": ["kind"] },
+          "then": { "required": ["source_id", "locator"] }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "interpretacion_editorial" } }, "required": ["kind"] },
+          "then": { "required": ["note"] }
+        }
+      ]
+    },
+
+    "NormalizedArea": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "w", "h"],
+      "properties": {
+        "x": { "type": "number", "minimum": 0, "maximum": 1 },
+        "y": { "type": "number", "minimum": 0, "maximum": 1 },
+        "w": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 },
+        "h": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }
+      },
+      "$comment": "Coordenadas normalizadas 0..1 sobre la imagen objetivo. La regla x+w<=1, y+h<=1 se comprueba en el validador semántico."
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "DQ.LOC.000101",
+  "contract_version": "1.0.0",
+  "kind": "lugar",
+  "literary_name": "Lugar negativo sin grado de certeza",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-3.0, 39.0],
+    "crs": "EPSG:4326"
+  },
+  "status": "explicito",
+  "chapters": ["DQ.P1.C01"],
+  "sources": ["DQ.SRC.0002"],
+  "review": { "state": "borrador", "reviewer_role": null, "date": null }
+}

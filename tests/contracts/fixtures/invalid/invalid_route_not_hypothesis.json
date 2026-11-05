@@ -1,0 +1,18 @@
+{
+  "id": "DQ.RTE.000101",
+  "contract_version": "1.0.0",
+  "kind": "ruta",
+  "literary_name": "Ruta negativa presentada como hecho",
+  "geometry": {
+    "type": "LineString",
+    "track": [[-3.0, 39.0], [-3.5, 39.2]],
+    "crs": "EPSG:4326",
+    "precision_m": 10000
+  },
+  "status": "interpretativo",
+  "presented_as": "hecho",
+  "certainty": "HIPOTESIS_PLAUSIBLE",
+  "chapters": ["DQ.P1.C01"],
+  "sources": ["DQ.SRC.0002"],
+  "review": { "state": "borrador", "reviewer_role": null, "date": null }
+}

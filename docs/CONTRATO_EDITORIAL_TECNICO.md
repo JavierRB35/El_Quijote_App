@@ -1,212 +1,206 @@
-# CONTRATO EDITORIAL-TÉCNICO — Borrador 0.1
+# CONTRATO EDITORIAL-TÉCNICO — v0.2.0 (borrador integrado)
 
-**Estado:** BORRADOR desde el modo CONTENIDOS — **propiedad conjunta**: requiere revisión y aprobación del responsable técnico antes de considerar versión 0.1 válida (encargo §6.5.3).
-**Modos responsables:** CONTENIDOS + DESARROLLO
-**Última actualización:** 2026-11-05
-
-## Alcance previsto (checklist del bootstrap) → estado al 2026-11-05
-
-1. JSON Schema por cada entidad del §6.2 — **13 esquemas en `/schemas/`** (question, media_asset, episode, scene, passage, chapter, edition, discovery, person, place_route, museum_item, source, license); falta `Profile` (dominio `player/`, del equipo técnico).
-2. Convención de IDs estables — **hecho** (§1). Esquema de ejemplo, NO inventario de contenido aprobado.
-3. Reglas de evolución, compatibilidad y migraciones/alias — **hecho** (§7).
-4. Ejemplos sintéticos **explícitamente no publicables** — **los 6 tipos de pregunta** (single, multi, true_false, ordering, matching, hotspot) + episode + media_asset + discovery, en `schemas/content/examples/`.
-5. Pruebas de contrato con casos negativos (§6.3.7) — **automatizadas**: `tools/editorial_validation/validar_contrato.py` — 37/37 PASS (13 esquemas, 9 positivos, 8 semánticas, 7 negativos que fallan como deben). Ejecución: `python -I tools/editorial_validation/validar_contrato.py <raiz_repo>`.
-6. Manifests de paquete e índice por episodios — **reglas definidas** (§7); formato binario/detalle pendiente con el equipo técnico.
-
-## Regla de integración vinculante
-
-Un elemento editorial nunca se publica si apunta a un ID inexistente o si su imagen/cita/licencia requerida está pendiente (§6.2).
+**Estado:** BORRADOR v0.2.0 — **integración de los dos borradores paralelos del 2026-11-05** (borrador 0.1 editorial + v0.1.0 técnico). Esquemas implementados y **verificados con validador automático (42/42 pruebas de contrato en PASS)**. Propiedad conjunta: cambios exigen revisión de los responsables editorial y técnico (encargo §6, §6.5.3). Pendiente de aprobación en el GO/NO-GO de FASE 0.
+**Fuente normativa:** `docs/ENCARGO_MAESTRO.md` §2.2, §4.3, §6.1–§6.3, Anexo A.
+**Última actualización:** 2026-11-05.
 
 ---
 
-## 1. Convención de identificadores (encargo §6.1)
+## 0. Registro de reconciliación (borrador 0.1 editorial ⊕ v0.1.0 técnico)
 
-| Entidad | Patrón | Ejemplo |
+Ambos equipos redactaron en paralelo el 2026-11-05. Divergencias detectadas y resolución adoptada:
+
+| Punto | Propuesta editorial | Propuesta técnica | Resolución v0.2.0 |
+|---|---|---|---|
+| ID de episodio | `DQ.P{n}.E{nn}` (orden canónico) | `DQ.P{n}.C{nn}.E{nn}` (anclado al primer capítulo) | **Técnica**: el encargo §6.1 usa `DQ.P1.C08.E01` como ejemplo orientativo; el ancla al primer capítulo conserva trazabilidad. Los IDs provisionales del `MAPA_EPISODIOS_Y_CAPITULOS.md` (p. ej. `DQ.P1.E04`) migrarán al formalizar los episodios; el mapa ya declara sus IDs provisionales |
+| ID de opción | `.O{a-z}` (letras) | `.O{nn}` (2 dígitos) | **Técnica**: uniforme, ordenable y sin límite de 26 |
+| ID de descubrimiento | `DQ.A.{6}` | `DQ.DIS.{6}` | **Técnica**: `DIS` es autoexplicativo; el encargo no fija este prefijo |
+| ID de medio | `DQ.IL/DEC/MED` (3 familias) | `DQ.MA.{6}` única | **Técnica**: una entidad MediaAsset con `media_class` distingue acuarela/decorativo/general; un solo patrón simplifica validación y referencias. El manifiesto del EPUB ya comprometido usa claves de documento (no IDs de contrato), sin coste de migración |
+| ID de personaje | `DQ.PER.{6}` | `DQ.PER.{4}` | **Técnica**: 4 dígitos (1.999 personajes bastan con holgura); ampliable solo con versión MAJOR |
+| ID de pasaje | `DQ.P1.C08.PS03` | `DQ.P1.C08.P{4d}` | **Técnica**: ordinal numérico uniforme |
+| Clases de medio | `acuarela_historica, arte_historico, fotografia_actual, recreacion_ia, captura_ui` | `FOTOGRAFIA_ACTUAL, IMAGEN_HISTORICA, RECREACION_IA, ILUSTRACION_EDITORIAL` | **Editorial** (con ajuste): `ACUARELA_HISTORICA`, `ARTE_HISTORICO`, `FOTOGRAFIA_ACTUAL`, `RECREACION_IA`, `ILUSTRACION_EDITORIAL`. `captura_ui` no es evidencia editorial; las acuarelas Tusell requieren su propia clase (415 ficheros ya inventariados) |
+| Tipos de evidencia | `cita_literal, parafraasis_localizada (sic), fuente_historica, estudio_academico, comentario_editorial` | `cita_literal, fuente_historica, estudio_academico, interpretacion_editorial` | **Fusión**: `cita_literal`, `parrafo_localizado` (ortografía corregida), `fuente_historica`, `estudio_academico`, `interpretacion_editorial` |
+| spoiler_policy | enum simple: `capitulo_actual/episodios_anteriores/siempre/nunca` | estructura `safe_after_episodes[]` | **Técnica**: estructurada es comprobable por máquina; el enum editorial queda como abreviatura documental (tabla de equivalencias en §4) |
+| difficulty | `facil/media/dificil` | entero 1–5 | **Técnica**: 1–5 alimenta el selector adaptativo (§5.4); equivalencia documentada 1–2=fácil, 3=media, 4–5=difícil |
+| allowed_uses | `uso_interno, instalador, web_publica` | `uso_personal_app, almacenamiento_repo_git, redistribucion` | **Técnica**: alineado con el encargo §4.1/§4.7.8 (uso personal / repositorio / redistribución) y con las puertas de licencia implementadas |
+| Opciones por pregunta | minItems 3, maxItems 8 | minItems 3 (single) sin máximo | **Fusión**: 3–8 opciones; `true_false` exactamente 2 |
+| evidence obligatoria | `passage_ids` minItems 1 en TODA pregunta | pasajes opcionales si hay fuente histórica | **Técnica**: el encargo §4.3.9 admite «capítulo/pasaje **o** fuente histórica»; `evidence[]` siempre ≥1 |
+
+## 1. Versionado y compatibilidad
+
+- Versión del contrato: **semver**. Soportada actualmente: **`1.0.0`** (los borradores 0.x no fijan compatibilidad).
+  - **MAJOR**: cambio incompatible (renombrar/eliminar campo, restringir enumeración, cambiar patrón de ID).
+  - **MINOR**: añadido compatible (campo opcional nuevo, valor nuevo de enumeración, entidad nueva).
+  - **PATCH**: correcciones de documentación o de validador sin efecto en datos.
+- Cada registro declara `contract_version`; el paquete declara la suya en el manifest. Un consumidor **rechaza** paquetes con versión no soportada (error `CONTRACT_VERSION_UNSUPPORTED`): ningún equipo asume actualizaciones silenciosas ajenas (§6.5.8).
+- Al cambiar el contrato: registrar versión, calendario de adaptación y pruebas de consumidor en este documento (§9).
+
+## 2. Identificadores estables (§6.1)
+
+Formato general `DQ.<TIPO>…`; separador `.`; ceros a la izquierda fijos. **Reglas:**
+
+1. Los IDs son únicos, permanentes y **nunca se reutilizan** tras retirar un elemento.
+2. Toda relación entre entidades se expresa **por ID**, jamás por texto visible, posición de opción, nombre de fichero o fila.
+3. Los cambios editoriales que alteren IDs se resuelven con **alias/migraciones** (`content/manifests/aliases.json`, aún sin crear), no con renumeraciones masivas (§6.5.9).
+4. El ID de un episodio se ancla a su **primer** capítulo, aunque el episodio atraviese varios (`chapters[]` los lista).
+
+| Entidad | Patrón (regex) | Ejemplo |
 |---|---|---|
-| Parte/capítulo | `DQ.P{n}.C{nn}` | `DQ.P1.C08` |
-| Episodio | `DQ.P{n}.E{nn}` (orden canónico) | `DQ.P1.E04` |
-| Escena | `+ .S{nn}` | `DQ.P1.E04.S01` |
-| Pregunta | `DQ.Q.{000001}` | `DQ.Q.000001` |
-| Opción | `DQ.Q.000001.O{a-z}` | `DQ.Q.000001.Oa` |
-| Cita/Descubrimiento | `DQ.A.{000001}` | `DQ.A.000001` |
-| Lugar/Ruta | `DQ.LOC.{000001}` / `DQ.RTE.{000001}` | `DQ.LOC.000001` |
-| Personaje/entidad | `DQ.PER.{000001}` / `DQ.ENT.{000001}` | `DQ.PER.000001` |
-| Pieza de museo | `DQ.MUS.{000001}` | `DQ.MUS.000001` |
-| Media (imagen/audio/mapa) | `DQ.IL.{0001}` acuarela · `DQ.DEC.{0001}` decorativo · `DQ.MED.{000001}` general | `DQ.IL.0001` |
-| Fuente / Licencia | `DQ.SRC.{0001}` / `DQ.LIC.{0001}` | `DQ.SRC.0001` |
+| Edition | `^DQ\.ED\.\d{4}$` | `DQ.ED.0001` |
+| Chapter | `^DQ\.P1\.C(0[1-9]\|[1-4][0-9]\|5[0-2])$` o `^DQ\.P2\.C(0[1-9]\|[1-6][0-9]\|7[0-4])$` | `DQ.P1.C08` |
+| Passage | `^DQ\.P[12]\.C\d{2}\.P\d{4}$` | `DQ.P1.C08.P0003` |
+| Episode | `^DQ\.P[12]\.C\d{2}\.E\d{2}$` | `DQ.P1.C08.E01` |
+| Scene | `^DQ\.P[12]\.C\d{2}\.E\d{2}\.S\d{2}$` | `DQ.P1.C08.E01.S02` |
+| Question | `^DQ\.Q\.\d{6}$` | `DQ.Q.000123` |
+| Option | `^DQ\.Q\.\d{6}\.O\d{2}$` | `DQ.Q.000123.O02` |
+| Discovery | `^DQ\.DIS\.\d{6}$` | `DQ.DIS.000045` |
+| Person | `^DQ\.PER\.\d{4}$` | `DQ.PER.0012` |
+| Place / Route | `^DQ\.LOC\.\d{4}$` / `^DQ\.RTE\.\d{4}$` | `DQ.LOC.0007` / `DQ.RTE.0002` |
+| MuseumItem | `^DQ\.MUS\.\d{4}$` | `DQ.MUS.0031` |
+| MediaAsset | `^DQ\.MA\.\d{6}$` | `DQ.MA.000567` |
+| Source / License | `^DQ\.SRC\.\d{4}$` / `^DQ\.LIC\.\d{4}$` | `DQ.SRC.0014` / `DQ.LIC.0006` |
+| Profile (jugador) | `^prf_[0-9a-f]{8}-(…){12}$` | `prf_12345678-…` |
 
-Reglas: nunca reutilizar un ID retirado; cambios editoriales → alias/migración; las relaciones se referencian **solo por ID** (nunca por texto visible, posición, nombre de fichero ni número de fila).
+Los patrones de capítulo ya codifican la realidad textual (P1: 52 capítulos, P2: 74): `DQ.P1.C99` es estructuralmente inválido.
 
-## 2. Estados y enumeraciones
+## 3. Entidades y esquemas (§6.2)
 
-- `review_state`: `borrador → documentada → revisada → aprobada | descartada`.
-- `certainty` (Anexo A): `TEXTO_EXPLICITO | HECHO_HISTORICO_DOCUMENTADO | INTERPRETACION_ACADEMICA | HIPOTESIS_PLAUSIBLE | DISCUTIDO | RECREACION_ARTISTICA`.
-- `media_class`: `acuarela_historica | arte_historico | fotografia_actual | recreacion_ia | captura_ui`.
-- `question_type`: `single_choice | multi_choice | true_false | ordering | matching | hotspot` — **todas de respuesta seleccionada** (DC-04); nunca campo de texto libre.
-- `spoiler_policy`: `capitulo_actual | episodios_anteriores | siempre | nunca`.
-
-## 3. Esquema JSON — `Question` (propuesta, JSON Schema 2020-12)
-
-```json
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "schemas/content/question.schema.json",
-  "title": "Question",
-  "type": "object",
-  "required": ["id", "schema_version", "episode_id", "chapter_ids", "passage_ids",
-               "prompt", "type", "options", "correct_option_ids", "rationale",
-               "evidence", "difficulty", "spoiler_policy", "review_state",
-               "semantic_key"],
-  "properties": {
-    "id": {"type": "string", "pattern": "^DQ\\.Q\\.[0-9]{6}$"},
-    "schema_version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
-    "episode_id": {"type": "string", "pattern": "^DQ\\.P[12]\\.E[0-9]{2}$"},
-    "chapter_ids": {"type": "array", "minItems": 1,
-                    "items": {"type": "string", "pattern": "^DQ\\.P[12]\\.C[0-9]{2}$"}},
-    "passage_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
-    "prompt": {"type": "string", "minLength": 15, "maxLength": 400},
-    "type": {"enum": ["single_choice", "multi_choice", "true_false",
-                       "ordering", "matching", "hotspot"]},
-    "options": {"type": "array", "minItems": 3, "maxItems": 8,
-                "items": {"type": "object",
-                          "required": ["id", "label"],
-                          "properties": {"id": {"pattern": "^DQ\\.Q\\.[0-9]{6}\\.O[a-z]$"},
-                                          "label": {"type": "string", "maxLength": 200}}}},
-    "correct_option_ids": {"type": "array", "minItems": 1, "maxItems": 8,
-                           "items": {"type": "string"}},
-    "rationale": {"type": "string", "minLength": 20},
-    "evidence": {"type": "array", "minItems": 1,
-                 "items": {"type": "object",
-                           "required": ["kind", "ref", "certainty"],
-                           "properties": {"kind": {"enum": ["cita_literal", "parafraasis_localizada", "fuente_historica", "estudio_academico", "comentario_editorial"]},
-                                            "ref": {"type": "string"},
-                                            "certainty": {"$ref": "#/$defs/certainty"}}}},
-    "difficulty": {"enum": ["facil", "media", "dificil"]},
-    "spoiler_policy": {"enum": ["capitulo_actual", "episodios_anteriores", "siempre", "nunca"]},
-    "scene_id": {"type": "string"},
-    "media_ids": {"type": "array", "items": {"type": "string"}},
-    "tags": {"type": "array", "items": {"type": "string"}},
-    "review_state": {"enum": ["borrador", "documentada", "revisada", "aprobada", "descartada"]},
-    "semantic_key": {"type": "string", "minLength": 8}
-  },
-  "$defs": {"certainty": {"enum": ["TEXTO_EXPLICITO", "HECHO_HISTORICO_DOCUMENTADO",
-                                    "INTERPRETACION_ACADEMICA", "HIPOTESIS_PLAUSIBLE",
-                                    "DISCUTIDO", "RECREACION_ARTISTICA"]}},
-  "allOf": [{
-    "if": {"properties": {"type": {"const": "single_choice"}}},
-    "then": {"properties": {"correct_option_ids": {"maxItems": 1}}}
-  }, {
-    "if": {"properties": {"type": {"const": "multi_choice"}}},
-    "then": {"required": ["multi_select_hint"],
-              "properties": {"multi_select_hint": {"type": "boolean"}}}
-  }],
-  "unevaluatedProperties": false
-}
-```
-
-**Regla semántica no expresable en el esquema** (validador dedicado): todo id de `correct_option_ids` debe existir en `options`; para `ordering`/`matching` el formato exacto se define con el equipo técnico (propuesta: `solution` estructurada aparte, no reutilizar `correct_option_ids`).
-
-## 4. Esquema JSON — `MediaAsset` (propuesta, núcleo)
-
-```json
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "schemas/media/media_asset.schema.json",
-  "title": "MediaAsset",
-  "type": "object",
-  "required": ["id", "kind", "uri", "mime", "sha256", "bytes",
-               "media_class", "source_id", "license_id", "review_state"],
-  "properties": {
-    "id": {"type": "string", "pattern": "^DQ\\.(IL|DEC|MED)\\.[0-9]{4,6}$"},
-    "kind": {"enum": ["imagen", "audio", "mapa", "video"]},
-    "uri": {"type": "string", "description": "URI local lógica, no ruta de fichero"},
-    "mime": {"type": "string"},
-    "width": {"type": "integer", "minimum": 1},
-    "height": {"type": "integer", "minimum": 1},
-    "bytes": {"type": "integer", "minimum": 1},
-    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
-    "alt": {"type": "string", "minLength": 3},
-    "media_class": {"enum": ["acuarela_historica", "arte_historico",
-                              "fotografia_actual", "recreacion_ia", "captura_ui"]},
-    "source_id": {"type": "string", "pattern": "^DQ\\.SRC\\.[0-9]{4}$"},
-    "license_id": {"type": "string", "pattern": "^DQ\\.LIC\\.[0-9]{4}$"},
-    "author": {"type": "string"},
-    "date": {"type": "string"},
-    "allowed_uses": {"type": "array", "items": {"enum": ["uso_interno", "instalador", "web_publica"]}},
-    "provenance": {"type": "string"},
-    "spoiler_level": {"enum": ["ninguno", "leve", "revelador"]},
-    "review_state": {"enum": ["borrador", "documentada", "revisada", "aprobada", "descartada"]}
-  },
-  "unevaluatedProperties": false
-}
-```
-
-## 5. Ejemplo sintético — **NO PUBLICABLE** (una respuesta)
-
-```json
-{
-  "id": "DQ.Q.000001",
-  "schema_version": "0.1.0",
-  "episode_id": "DQ.P1.E04",
-  "chapter_ids": ["DQ.P1.C08"],
-  "passage_ids": ["DQ.P1.C08.PS03"],
-  "prompt": "¿Qué advierte Sancho a don Quijote antes de la embestida?",
-  "type": "single_choice",
-  "options": [
-    {"id": "DQ.Q.000001.Oa", "label": "Que no son gigantes sino molinos de viento"},
-    {"id": "DQ.Q.000001.Ob", "label": "Que Rocinante no puede correr más"},
-    {"id": "DQ.Q.000001.Oc", "label": "Que está cerca la venta donde han de armarlo caballero"}
-  ],
-  "correct_option_ids": ["DQ.Q.000001.Oa"],
-  "rationale": "Sancho identifica correctamente los molinos; don Quijote los reinterpreta como gigantes (I, 8).",
-  "evidence": [{"kind": "cita_literal", "ref": "DQ.P1.C08.PS03", "certainty": "TEXTO_EXPLICITO"}],
-  "difficulty": "facil",
-  "spoiler_policy": "episodios_anteriores",
-  "review_state": "borrador",
-  "semantic_key": "molinos sancho advierte no son gigantes"
-}
-```
-
-La cita del ejemplo es ilustrativa del método: **debe cotejarse contra la edición de referencia (PEND-01) antes de cualquier aprobación**; así lo marca `review_state: borrador`.
-
-## 6. Casos negativos que deben fallar en validación (encargo §6.3.7)
-
-1. Pregunta sin ninguna opción correcta o con `correct_option_ids` inexistente en `options`.
-2. Duplicado de `semantic_key` dentro del mismo episodio.
-3. Escena sin imagen de fase `before`; pregunta con `media` revelador para su `spoiler_policy`.
-4. Cita sin `passage_ids` resoluble; pasaje con hash distinto al del texto de la edición.
-5. Imagen con `license_id` inexistente o licencia sin `allowed_uses: uso_interno`.
-6. Capítulo inexistente en `chapter_ids`; `episode_id` fuera del rango del mapa.
-7. Hotspot con punto fuera de los límites normalizados de la imagen (0–1).
-8. Paquete cuyo `schema_version` no sea compatible con el consumidor (semver: cambio mayor = migración).
-
-## 7. Reglas de evolución y compatibilidad
-
-- Semver separado para: `schema_version` (contrato), `catalog_version` (contenidos), `asset_pack_version` (medios), `app_version`.
-- Cambios de esquema: propuesta como ADR → aprobación de **ambos** responsables → migración documentada + consumidor de prueba actualizado en el mismo ciclo.
-- Añadir campos opcionales = minor; renombrar/restringir = major con migración; borrar = solo tras un ciclo de deprecación.
-- Manifiesto de paquete editorial: IDs añadidos/modificados/retirados + versión de esquema + hash de ficheros + resultado de validadores (encargo §6.5.6).
-
-## 8. Puntos abiertos para el equipo técnico (respuesta esperada en revisión)
-
-1. Formato de `ordering`/`matching`/`hotspot` (nota en §3).
-2. URI local lógica de `MediaAsset`: mapeo a recursos empaquetados (¿tabla de resoluciones físicas por perfil de dispositivo?).
-3. Índice FTS5: campos indexados y tratamiento del castellano áureo (variantes diacríticas de la ed. 1905: «á», «á…», ortografía de la época).
-4. Dónde vive el catálogo validado (SQLite generado en build vs. JSON validado en runtime).
-5. Mecanismo de parche cultural versionado sin tocar datos de perfil (§5.3.A del encargo).
-
-## 9. Divergencias detectadas — manifiesto de escenas (commit `ae927a1`) vs `media_asset.schema` (borrador)
-
-Detectadas el 2026-11-05 por CONTENIDOS tras la integración del primer paquete visual. **Convergencias:** `media_class: recreacion_ia`, `review_state: borrador`, `sha256` real, `source_class: RECREACION_ARTISTICA` (≡ certainty), `schema_version: 0.1.0`, política de no mezclar acuarelas Tusell en la línea de escenas (coherente con la limitación de resolución documentada: 849×688 px mediana).
-
-| Campo escenas (ae927a1) | Campo schema (borrador) | Recomendación para v0.1 |
+| Entidad | Esquema | Notas de integración |
 |---|---|---|
-| `id: "personajes_ref"` + `candidate_media_id: "DQ.MED.900001"` | `id` contractual único | Distinguir `slug` (descriptivo) de `id` contractual; decidir cuál persiste como clave de relaciones |
-| `width_px` / `height_px` | `width` / `height` | Unificar nombres (propuesta: `width`/`height`) |
-| `mime_type` | `mime` | Unificar (`mime`) |
-| `phase: "reference"` | phase: before/question/reveal/after | Añadir `reference` al enum de Scene (no de MediaAsset) o moverlo a uso |
-| `title_es` / `alt_es` / `attribution_es` (sufijo de idioma) | `alt` / `author` (neutros) | **Adoptar el sufijo `_es`** y prever objeto multilingüe futuro (encargo §2.6); es la opción más i18n-ready |
-| `rights_status` + `source_class` | `license_id` + `source_id` obligatorios | Completar el paquete con `DQ.SRC.*`/`DQ.LIC.*` de las recreaciones propias (licencia «derechos propios») |
-| — (no existe) | `bytes` obligatorio | Añadir `bytes` al manifiesto de escenas (empaquetado/actualizaciones lo necesitan) |
+| Edition | `schemas/content/edition.schema.json` | Edición de referencia textual; `rights_status` exige `verificada` |
+| Chapter | `schemas/content/chapter.schema.json` | `order` = posición canónica global (P1: 1–52, P2: 53–126) |
+| Passage | `schemas/content/passage.schema.json` | `text_indexable` separado del original; `sha256` de estabilidad |
+| Episode | `schemas/content/episode.schema.json` | Atraviesa capítulos; `spoiler_flags` gobierna aventuras aleatorias |
+| Scene | `schemas/content/scene.schema.json` | Capas con `parallax` (se ignora con movimiento reducido); hotspots siempre opcionales y accesibles por teclado |
+| Question | `schemas/content/question.schema.json` | El contrato más estricto; ver §4 |
+| Discovery | `schemas/content/discovery.schema.json` | Cita/refrán exige pasaje + locutor; lectura/alusión exige bibliografía y certeza no textual |
+| Person | `schemas/content/person.schema.json` | Clase `ficticio/historico/debatido` |
+| Place/Route | `schemas/content/place.schema.json` | Ruta ⇒ `presented_as: hipotesis` **obligatorio** |
+| MuseumItem | `schemas/content/museum-item.schema.json` | `attribution_status` controla si `authorship` puede estar vacío |
+| MediaAsset | `schemas/media/media-asset.schema.json` | `alt` obligatorio; clases de evidencia siempre rotuladas |
+| Source / License | `schemas/media/source.schema.json`, `license.schema.json` | Fecha de consulta obligatoria |
+| Profile | `schemas/player/profile.schema.json` | Dominio C del jugador; intercambio/backup, no catálogo |
+| ContentPackage | `schemas/manifests/content-package.schema.json` | Manifest con rutas relativas, checksums opcionales y `counts` |
 
-Decisión pendiente de **doble revisión** (CONTENIDOS + DESARROLLO); ninguna de las partes debe cambiar unilateralmente el formato del otro paquete antes de la v0.1 del contrato.
+Definiciones compartidas (IDs, enumeraciones, Review, EvidenceItem, NormalizedArea): `schemas/content/_definitions.schema.json`.
+
+## 4. Preguntas — reglas vinculantes (§2.2, §4.3)
+
+- Tipos permitidos (`interaction.type`): `single_choice`, `multi_choice`, `true_false`, `ordering`, `matching`, `hotspot`. **No existe ningún mecanismo de respuesta escrita libre.**
+- `multi_choice` exige `multi_declared: true`: el enunciado declara expresamente que puede haber varias correctas.
+- Opciones: **3–8** para choice; `single_choice` exactamente 1 correcta; `true_false` exactamente 2 opciones; `ordering` con `correct_order` = TODAS las opciones y `shuffle_options: false`; `matching` con `pairs` sin reutilización de lados.
+- `hotspot`: `hotspot_area` normalizada 0..1 con `x+w ≤ 1`, `y+h ≤ 1` (comprobado por el validador).
+- `shuffle_options` puede reordenar el **texto** de las opciones; **nunca** altera el ID de la correcta ni la cita asociada.
+- `evidence`: mínimo 1 elemento. `cita_literal` ⇒ `passage_id` + `quote`; `parrafo_localizado` ⇒ `passage_id`; `fuente_historica`/`estudio_academico` ⇒ `source_id` + `locator`. **Regla anti-fábrica-de-verdades:** si alguna evidencia es `interpretacion_editorial`, `certainty` no puede ser `TEXTO_EXPLICITO` ni `HECHO_HISTORICO_DOCUMENTADO`.
+- `visual_requirements.pre_image_must_not_reveal` es siempre `true`; además, el activo usado como imagen previa o hotspot debe tener `spoiler_level: ninguno` (comprobado en paquete).
+- `semantic_key`: **único entre todas las preguntas del paquete** (detector de duplicados semánticos, §4.3.13).
+- `spoiler_policy` estructurada con `safe_after_episodes[]`; equivalencia documental con la abreviatura editorial: `capitulo_actual` = `[]` + escena del capítulo; `episodios_anteriores` = lista de episodios previos; `siempre` = `[]`; `nunca` = episodios posteriores al suyo.
+- Estados de revisión (`review.state`): `borrador → documentada → revisada → aprobada` (o `descartada`). Solo `aprobada` es empaquetable; la puerta de publicación es editorial.
+- `difficulty` 1–5: 1–2 fácil, 3 media, 4–5 difícil (alimenta el selector adaptativo §5.4).
+
+## 5. Enumeraciones formales (§6.3.4)
+
+| Enumeración | Valores |
+|---|---|
+| Certainty (Anexo A) | `TEXTO_EXPLICITO`, `HECHO_HISTORICO_DOCUMENTADO`, `INTERPRETACION_ACADEMICA`, `HIPOTESIS_PLAUSIBLE`, `DISCUTIDO`, `RECREACION_ARTISTICA` |
+| ReviewState | `borrador`, `documentada`, `revisada`, `aprobada`, `descartada` |
+| LicenseStatus | `verificada`, `pendiente`, `restringida`, `desconocida` — **«desconocida» ≠ autorizada** |
+| AllowedUse | `uso_personal_app`, `almacenamiento_repo_git`, `redistribucion` |
+| MediaClass | `ACUARELA_HISTORICA`, `ARTE_HISTORICO`, `FOTOGRAFIA_ACTUAL`, `RECREACION_IA`, `ILUSTRACION_EDITORIAL` |
+| QuestionType | `single_choice`, `multi_choice`, `true_false`, `ordering`, `matching`, `hotspot` |
+| CognitiveType | `hecho`, `secuencia`, `causa_consecuencia`, `actitud_reaccion`, `dialogo`, `humor`, `cita`, `interpretacion`, `historia`, `lugar`, `arte` |
+| ScenePhase | `before`, `question`, `reveal`, `after` |
+| SpoilerLevel | `ninguno`, `leve`, `revelador` |
+
+Ampliar una enumeración = versión MINOR del contrato con registro aquí.
+
+## 6. Puertas de licencia y publicación
+
+| Puerta | Exige al MediaAsset | Aplica a |
+|---|---|---|
+| `app` | `license_status = verificada` ∧ `uso_personal_app ∈ allowed_uses` | Empaquetado del instalador |
+| `repo` | lo anterior ∧ `almacenamiento_repo_git ∈ allowed_uses` | Cualquier subida al Git remoto |
+
+Reglas derivadas (encargo §4.7.8, §6.5.11, §6.3.4): un activo puede ser legítimo en el instalador y aun así **prohibido en el repositorio**; ningún registro se publica apuntando a un ID inexistente o a un activo/cita/licencia pendiente; los maestros audiovisuales pesados no se commitean. **Excepción vigente:** las ilustraciones Tusell (~29 MB) se alojan en Git normal **por orden expresa del propietario (2026-11-05)**, con expediente de derechos en `docs/DERECHOS_Y_PROCEDENCIA_ILUSTRACIONES.md` (uso interno autorizado; redistribución bloqueada hasta PEND-09). Ver `.gitignore` y `docs/GOBERNANZA_GIT.md` §5.
+
+## 7. Ejemplos sintéticos NO publicables (§6.3.2)
+
+`tests/contracts/fixtures/` — **todo su contenido es sintético y jamás entra al catálogo**:
+
+- `valid/` — 25 registros: uno por entidad y uno por cada tipo de pregunta (single, multi, true_false, ordering, matching, hotspot), más perfil de jugador.
+- `package_valid.json` — manifest de paquete íntegro con referencias cruzadas resueltas.
+- Los `sha256:000…0` de los fixtures son marcadores; los hashes reales los calcula el pipeline de importación.
+
+## 8. Casos negativos y pruebas de contrato (§6.3.7)
+
+Cada caso negativo debe FALLAR con el código esperado. Batería: `python tools/editorial_validation/validate.py suite tests/contracts/fixtures` → **42/42 PASS (2026-11-05, puerta repo)**; informe: `tests/contracts/last_validation_report.json`.
+
+| Fixture | Código esperado | Regla del encargo |
+|---|---|---|
+| `invalid/invalid_question_no_correct.json` | `SCHEMA_ERROR` | Sin respuesta inequívoca (§7.1) |
+| `invalid/invalid_question_single_option.json` | `SCHEMA_ERROR` | Elección real exige ≥3 opciones |
+| `invalid/invalid_question_multi_not_declared.json` | `SCHEMA_ERROR` | Multi solo con declaración explícita (§2.2) |
+| `invalid/invalid_question_option_ids_mismatch.json` | `SEMANTIC_ERROR` | Relaciones por ID existente (§6.1) |
+| `invalid/invalid_question_bad_chapter.json` | `SCHEMA_ERROR` | Capítulo mal referenciado (§6.3.7) |
+| `invalid/invalid_question_certainty_mismatch.json` | `SEMANTIC_ERROR` | No fabricar verdad única (§2.2) |
+| `invalid/invalid_question_hotspot_out_of_bounds.json` | `SEMANTIC_ERROR` | Punto fuera de imagen (§6.3.7) |
+| `invalid/invalid_discovery_cita_without_passage.json` | `SCHEMA_ERROR` | Cita sin pasaje (§6.3.7) |
+| `invalid/invalid_media_unknown_license.json` | `LICENSE_NOT_VERIFIED` | «Desconocido» ≠ autorizado (§6.3.4) |
+| `invalid/invalid_media_repo_only.json` | `ALLOWED_USE_MISSING` (puerta repo; válido bajo app) | Legítimo en instalador, no en Git (§4.7.8) |
+| `invalid/invalid_place_no_certainty.json` | `SCHEMA_ERROR` | Topónimo sin certeza (§7.1) |
+| `invalid/invalid_route_not_hypothesis.json` | `SCHEMA_ERROR` | Ruta sin grado de hipótesis (§2.4) |
+| `package_invalid_missing_media.json` | `REFERENCE_ERROR` | Escena con imagen inexistente (§6.3.7) |
+| `package_invalid_stale_contract.json` | `CONTRACT_VERSION_UNSUPPORTED` | Paquete incompatible (§6.5.8) |
+| `package_invalid_duplicate_semantic.json` | `SEMANTIC_ERROR` | Duplicado semántico (§4.3.13) |
+| `package_invalid_revealing_preimage.json` | `SEMANTIC_ERROR` | Imagen previa reveladora (§4.3.4, §7.2) |
+
+Códigos del validador: `SCHEMA_ERROR`, `SEMANTIC_ERROR`, `REFERENCE_ERROR`, `LICENSE_NOT_VERIFIED`, `ALLOWED_USE_MISSING`, `CONTRACT_VERSION_UNSUPPORTED`.
+
+Casos negativos definidos por el equipo editorial aún **sin automatizar** (requieren la capa de texto o el build): pasaje con hash distinto al de la edición; cobertura de fases de escena por episodio. Quedan en el plan de QA.
+
+## 9. Respuestas del equipo técnico a los puntos abiertos del borrador editorial
+
+1. **`ordering`/`matching`/`hotspot`:** definidos en `question.schema.json` (`correct_order`, `pairs`, `hotspot_area` + `visual_requirements.hotspot_media_id`); no se reutiliza `correct_option_ids` para la secuencia.
+2. **URI lógica de MediaAsset:** `logical_uri` (`assets://…`) resuelta por la app vía manifiestos de paquete; la tabla de resoluciones físicas por dispositivo se decide en ADR-0002 (almacenamiento local), no en este contrato.
+3. **FTS5 y castellano áureo:** la capa `text_indexable` del Passage lleva el texto normalizado (diacríticos, ortografía modernizada) separado del `text_original`; la configuración del tokenizador (variantes de la ed. 1905: «á», qu/gu, etc.) se fija en ADR-0002 tras elegir la edición (PEND-01).
+4. **Dónde vive el catálogo:** JSON validado en el repositorio → conversión a **SQLite de solo lectura en el build/importación** (encargo §5.3.A); el runtime nunca escribe en el catálogo.
+5. **Parche cultural versionado:** paquetes de catálogo versionados con manifest propio; los datos de perfil viven en SQLite independiente y solo guardan `catalog_version_seen` (migraciones separadas).
+
+## 10. Evolución, migraciones y protocolo de cambio
+
+1. **Propuesta:** PR que modifique `/schemas` y este documento; etiqueta `schema`; revisión obligatoria de ambos responsables (CODEOWNERS cuando se habilite).
+2. **Registro:** nueva versión en §1 con lista de cambios y compatibilidad; si es MAJOR, calendario de adaptación y pruebas de consumidor antes de fusionar.
+3. **Migración de datos:** nunca renumerar en masa; `aliases.json` registra `id_viejo → id_nuevo` con motivo y versión.
+4. **Retirada de IDs:** los retirados quedan en `aliases.json` como `estado: retirado` y jamás se reasignan.
+5. **Validación obligatoria en CI** (cuando se autorice GitHub Actions): la suite de contrato debe estar en PASS para fusionar cualquier PR que toque `/schemas`, `/content` o `/tools`.
+
+## 11. Divergencias del paquete visual de escenas (`ae927a1`) — análisis editorial y respuesta técnica
+
+Divergencias detectadas por CONTENIDOS entre el manifiesto de escenas cinematográficas del primer paquete visual y el esquema MediaAsset. **Respuesta técnica (DESARROLLO), sujeta a doble revisión:**
+
+| Campo escenas (ae927a1) | Campo contrato v0.2.0 | Respuesta técnica |
+|---|---|---|
+| `id: "personajes_ref"` + `candidate_media_id: "DQ.MED.900001"` | `id` contractual único | Clave de relaciones = `id` contractual (`DQ.MA.*`); las etiquetas descriptivas viven en `slug`/`title`. El pipeline de escenas migrará `candidate_media_id` → `id` al regenerar el manifiesto (lado editorial) |
+| `width_px` / `height_px` | `width` / `height` (en `derivatives`) | Adoptar `width`/`height` — ya es lo que hace el contrato; el manifiesto de escenas se ajustará al importar |
+| `mime_type` | `format` (enum) en `derivatives` | Se añadirá campo opcional `mime` a `derivatives` en MINOR (útil para empaquetado); `format` permanece como clave de variante |
+| `phase: "reference"` | Scene.phase = `before/question/reveal/after` (encargo §6.2) | `reference` NO entra en Scene.phase; las imágenes de referencia de recreación usarán `MediaAsset.function: referencia` (valor nuevo, MINOR) |
+| `title_es` / `alt_es` / `attribution_es` | `alt` / `author` neutros + `language: es` | El contrato mantiene campos neutros (castellano canónico, DC-10); la internacionalización futura cambiará el TIPO de los campos a objeto por idioma (MINOR/MAJOR), no sufijos. El manifiesto de escenas puede conservar sufijos internos y mapearlos en importación |
+| `rights_status` + `source_class` | `source_id` + `license_id` obligatorios | Acuerdo: las recreaciones propias obtienen `DQ.SRC.*` (producción propia) y `DQ.LIC.*` (derechos propios) reales; su expediente se registra en `DERECHOS_Y_PROCEDENCIA` |
+| — (no existe) | `derivatives[].size_bytes` | El manifiesto de escenas añadirá tamaños en bytes al importar (empaquetado/actualizaciones lo requieren) |
+
+## 12. Consolidación de implementaciones paralelas (2026-11-05)
+
+Durante FASE 0 ambos equipos implementaron en paralelo esquemas y validador (riesgo previsto por el encargo §6.5.2). Estado consolidado:
+
+- **Canónico:** los esquemas de `/schemas/**` (incl. `_definitions.schema.json`, `Profile` y `ContentPackage`) y el validador `tools/editorial_validation/validate.py` (suite 42/42 PASS), conforme a las resoluciones de §0.
+- **Borrador 0.1 editorial preservado (no eliminado):** los esquemas paralelos, ejemplos y `validar_contrato.py` del modo CONTENIDOS se conservan aislados en `schemas/_borrador_0.1/` y `tools/editorial_validation/_borrador_0.1/` como referencia de la propuesta editorial, pendientes de retirada formal cuando esta versión reciba la doble firma.
+- Los artefactos editoriales de trabajo (matriz de trazabilidad, dossier del piloto, precarga, paquete de escenas) **no se alteran**; su adaptación al contrato canónico se hará en importación, no editando su formato (§11).
+
+## 13. Qué DEBE y NO DEBE hacer cada equipo
+
+| | Equipo editorial (CONTENIDOS) | Equipo técnico (DESARROLLO) |
+|---|---|---|
+| Debe | Producir registros conformes; verificar referencias y licencias; declarar certeza y spoilers | Consumir esquemas sin hardcodear contenido; validar paquetes antes de integrar; mantener el validador |
+| No debe | Alterar esquemas sin PR conjunta; suponer campos de UI | Alterar criterios editoriales; añadir campos sin versión MINOR/MAJOR |
+
+**Regla de oro (§6.2):** un elemento editorial nunca se publica si apunta a un ID inexistente o si su imagen/cita/licencia requerida está pendiente.

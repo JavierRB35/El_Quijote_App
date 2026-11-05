@@ -1,0 +1,12 @@
+{
+  "id": "DQ.P1.C01.E01",
+  "contract_version": "1.0.0",
+  "title": "Episodio sintético de prueba (no publicable)",
+  "chapters": ["DQ.P1.C01"],
+  "narrative_order": 1,
+  "synopsis": "Sinopsis sintética de prueba para validar el contrato.",
+  "actors": ["DQ.PER.0001"],
+  "places": ["DQ.LOC.0001"],
+  "passages": ["DQ.P1.C01.P0001"],
+  "spoiler_flags": { "reveals_future_events": false }
+}

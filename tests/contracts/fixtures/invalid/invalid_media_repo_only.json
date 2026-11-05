@@ -1,0 +1,15 @@
+{
+  "id": "DQ.MA.000102",
+  "contract_version": "1.0.0",
+  "function": "lector",
+  "media_class": "ILUSTRACION_EDITORIAL",
+  "logical_uri": "assets://historical_art/sintetico/negativo-repo.webp",
+  "alt": "Caso negativo: licencia verificada pero sin permiso para repositorio Git.",
+  "source_id": "DQ.SRC.0003",
+  "license_id": "DQ.LIC.0001",
+  "allowed_uses": ["uso_personal_app"],
+  "license_status": "verificada",
+  "provenance": "CASO NEGATIVO para la puerta de licencia de repositorio (encargo §4.7.8): válido para el instalador, NO para el Git remoto.",
+  "review": { "state": "aprobada", "reviewer_role": "editorial", "date": "2026-11-05" },
+  "spoiler_level": "ninguno"
+}

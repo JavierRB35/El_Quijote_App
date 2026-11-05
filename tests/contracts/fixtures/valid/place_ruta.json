@@ -1,0 +1,19 @@
+{
+  "id": "DQ.RTE.0001",
+  "contract_version": "1.0.0",
+  "kind": "ruta",
+  "literary_name": "Ruta Sintética de Prueba",
+  "geometry": {
+    "type": "LineString",
+    "track": [[-3.0, 39.0], [-3.5, 39.2], [-4.0, 39.1]],
+    "crs": "EPSG:4326",
+    "precision_m": 10000
+  },
+  "status": "interpretativo",
+  "presented_as": "hipotesis",
+  "certainty": "HIPOTESIS_PLAUSIBLE",
+  "chapters": ["DQ.P1.C01"],
+  "sources": ["DQ.SRC.0002"],
+  "attribution_note": "Trazado hipotético con variantes posibles; nunca se presenta como itinerario probado (encargo §2.4).",
+  "review": { "state": "documentada", "reviewer_role": null, "date": null }
+}

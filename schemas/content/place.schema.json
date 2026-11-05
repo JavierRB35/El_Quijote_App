@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/JavierRB35/El_Quijote_App/schemas/content/place.schema.json",
+  "title": "Place/Route",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "contract_version", "kind", "literary_name", "geometry", "status", "certainty", "chapters", "sources", "review"],
+  "properties": {
+    "id": { "anyOf": [ { "$ref": "_definitions.schema.json#/$defs/placeId" }, { "$ref": "_definitions.schema.json#/$defs/routeId" } ] },
+    "contract_version": { "$ref": "_definitions.schema.json#/$defs/ContractVersion" },
+    "kind": { "type": "string", "enum": ["lugar", "ruta"], "$comment": "Las rutas usan ID DQ.RTE (ver validador). Encargo §4.5, §6.2." },
+    "literary_name": { "type": "string", "minLength": 1 },
+    "modern_name": { "type": "string" },
+    "variants": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "geometry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "crs"],
+      "properties": {
+        "type": { "type": "string", "enum": ["Point", "LineString"] },
+        "coordinates": {
+          "type": "array",
+          "items": { "type": "number" },
+          "$comment": "Para Point: [lon, lat]. Prohibido en LineString, que usa 'track'."
+        },
+        "track": { "type": "array", "items": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 }, "minItems": 2 },
+        "crs": { "type": "string", "const": "EPSG:4326" },
+        "precision_m": { "type": "integer", "minimum": 0, "$comment": "Incertidumbre espacial en metros; obligatoria si status != explicito." }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "type": { "const": "Point" } }, "required": ["type"] },
+          "then": { "required": ["coordinates"], "properties": { "coordinates": { "minItems": 2, "maxItems": 2 } } }
+        },
+        {
+          "if": { "properties": { "type": { "const": "LineString" } }, "required": ["type"] },
+          "then": { "required": ["track"], "not": { "required": ["coordinates"] } }
+        }
+      ]
+    },
+    "status": { "type": "string", "enum": ["explicito", "probable", "debatido", "interpretativo"], "$comment": "Encargo §4.5: lugar explícito, identificación probable/debatida, patrimonio asociado o ruta interpretativa." },
+    "presented_as": { "type": "string", "enum": ["hecho", "hipotesis"] },
+    "certainty": { "$ref": "_definitions.schema.json#/$defs/Certainty" },
+    "chapters": { "type": "array", "items": { "$ref": "_definitions.schema.json#/$defs/chapterId" }, "minItems": 1, "uniqueItems": true },
+    "sources": { "type": "array", "items": { "$ref": "_definitions.schema.json#/$defs/sourceId" }, "minItems": 1, "uniqueItems": true },
+    "heritage_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "note"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "media_id": { "$ref": "_definitions.schema.json#/$defs/mediaAssetId" },
+          "note": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "attribution_note": { "type": "string" },
+    "review": { "$ref": "_definitions.schema.json#/$defs/Review" },
+    "notes": { "type": "string" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "kind": { "const": "lugar" } }, "required": ["kind"] },
+      "then": { "properties": { "id": { "$ref": "_definitions.schema.json#/$defs/placeId" } } }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "ruta" } }, "required": ["kind"] },
+      "then": {
+        "properties": {
+          "id": { "$ref": "_definitions.schema.json#/$defs/routeId" },
+          "geometry": { "required": ["track"], "properties": { "type": { "const": "LineString" } } },
+          "presented_as": { "const": "hipotesis", "$comment": "Toda ruta es hipótesis: nunca se presenta un único trazado como hecho (encargo §2.4, §4.5)." },
+          "certainty": { "enum": ["HECHO_HISTORICO_DOCUMENTADO", "INTERPRETACION_ACADEMICA", "HIPOTESIS_PLAUSIBLE", "DISCUTIDO"] }
+        },
+        "required": ["presented_as"]
+      }
+    },
+    {
+      "if": { "properties": { "status": { "enum": ["probable", "debatido", "interpretativo"] } }, "required": ["status"] },
+      "then": { "properties": { "geometry": { "required": ["precision_m"] } } }
+    }
+  ]
+}

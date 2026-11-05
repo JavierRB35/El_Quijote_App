@@ -1,0 +1,31 @@
+{
+  "id": "DQ.Q.000106",
+  "contract_version": "1.0.0",
+  "episode_id": "DQ.P1.C01.E01",
+  "chapter_ids": ["DQ.P1.C01"],
+  "passage_ids": ["DQ.P1.C01.P0001"],
+  "prompt": "CASO NEGATIVO: zona interactiva (hotspot) que se sale de la imagen.",
+  "interaction": {
+    "type": "hotspot",
+    "options": [
+      { "id": "DQ.Q.000106.O01", "label": "Zona A" },
+      { "id": "DQ.Q.000106.O02", "label": "Zona B" }
+    ],
+    "correct_option_ids": ["DQ.Q.000106.O01"],
+    "hotspot_area": { "x": 0.85, "y": 0.5, "w": 0.3, "h": 0.2 },
+    "shuffle_options": false
+  },
+  "rationale": "Inválido: punto fuera de imagen (encargo §6.3.7); x+w = 1.15 > 1.",
+  "evidence": [
+    { "kind": "cita_literal", "passage_id": "DQ.P1.C01.P0001", "quote": "cita sintética" }
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "cognitive_type": "lugar",
+  "difficulty": 2,
+  "spoiler_policy": { "safe_after_episodes": [] },
+  "visual_requirements": { "pre_image_must_not_reveal": true, "hotspot_media_id": "DQ.MA.000002" },
+  "language": "es",
+  "tags": ["negativo"],
+  "review": { "state": "borrador", "reviewer_role": null, "date": null },
+  "semantic_key": "negativo-zona-fuera-de-imagen"
+}

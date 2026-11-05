@@ -1,0 +1,10 @@
+{
+  "id": "DQ.P1.C01.P0001",
+  "contract_version": "1.0.0",
+  "chapter_id": "DQ.P1.C01",
+  "anchor": "§1",
+  "text_original": "TEXTO SINTÉTICO DE PRUEBA — pasaje de ejemplo no publicable.",
+  "text_indexable": "texto sintetico de prueba pasaje de ejemplo no publicable",
+  "position": { "start_char": 0, "end_char": 60 },
+  "sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+}

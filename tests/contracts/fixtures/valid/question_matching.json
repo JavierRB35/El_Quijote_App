@@ -1,0 +1,35 @@
+{
+  "id": "DQ.Q.000005",
+  "contract_version": "1.0.0",
+  "episode_id": "DQ.P1.C01.E01",
+  "chapter_ids": ["DQ.P1.C01"],
+  "passage_ids": ["DQ.P1.C01.P0001"],
+  "prompt": "PREGUNTA SINTÉTICA DE PRUEBA (no publicable): asocie cada elemento sintético con su par correspondiente.",
+  "interaction": {
+    "type": "matching",
+    "options": [
+      { "id": "DQ.Q.000005.O01", "label": "Elemento sintético A" },
+      { "id": "DQ.Q.000005.O02", "label": "Elemento sintético B" },
+      { "id": "DQ.Q.000005.O03", "label": "Par sintético X" },
+      { "id": "DQ.Q.000005.O04", "label": "Par sintético Y" }
+    ],
+    "pairs": [
+      { "left": "DQ.Q.000005.O01", "right": "DQ.Q.000005.O03" },
+      { "left": "DQ.Q.000005.O02", "right": "DQ.Q.000005.O04" }
+    ],
+    "shuffle_options": false
+  },
+  "rationale": "Explicación breve sintética de cada asociación.",
+  "evidence": [
+    { "kind": "cita_literal", "passage_id": "DQ.P1.C01.P0001", "quote": "Texto sintético de prueba — cita de ejemplo no publicable." }
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "cognitive_type": "dialogo",
+  "difficulty": 3,
+  "spoiler_policy": { "safe_after_episodes": [] },
+  "visual_requirements": { "pre_image_must_not_reveal": true },
+  "language": "es",
+  "tags": ["sintetico", "prueba"],
+  "review": { "state": "borrador", "reviewer_role": null, "date": null },
+  "semantic_key": "sintetico-p1c01-asociacion-01"
+}

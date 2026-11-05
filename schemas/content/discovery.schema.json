@@ -1,25 +1,53 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "discovery.schema.json",
-  "title": "Discovery",
-  "$comment": "BORRADOR 0.1 — cápsula de descubrimiento: cita literal, refrán, humor, curiosidad o interpretación graduada (encargo §4.4).",
+  "$id": "https://github.com/JavierRB35/El_Quijote_App/schemas/content/discovery.schema.json",
+  "title": "Discovery (cápsula de descubrimiento)",
   "type": "object",
-  "required": ["id", "kind", "content", "certainty", "review_state"],
+  "additionalProperties": false,
+  "required": ["id", "contract_version", "kind", "content", "appearance", "certainty", "review"],
   "properties": {
-    "id": {"type": "string", "pattern": "^DQ\\.A\\.[0-9]{6}$"},
-    "kind": {"enum": ["cita_literal", "refran", "humor", "curiosidad",
-                       "interpretacion", "recepcion"]},
-    "content": {"type": "string", "minLength": 10},
-    "speaker": {"type": ["string", "null"]},
-    "context": {"type": "string"},
-    "passage_ids": {"type": "array", "items": {"type": "string"}},
-    "bibliography": {"type": "array", "items": {"type": "string"}},
-    "condition_display": {"enum": ["tras_capitulo", "tras_episodio", "aleatorio", "siempre"]},
-    "media_ids": {"type": "array", "items": {"type": "string"}},
-    "certainty": {"enum": ["TEXTO_EXPLICITO", "HECHO_HISTORICO_DOCUMENTADO",
-                            "INTERPRETACION_ACADEMICA", "HIPOTESIS_PLAUSIBLE",
-                            "DISCUTIDO", "RECREACION_ARTISTICA"]},
-    "review_state": {"enum": ["borrador", "documentada", "revisada", "aprobada", "descartada"]}
+    "id": { "$ref": "_definitions.schema.json#/$defs/discoveryId" },
+    "contract_version": { "$ref": "_definitions.schema.json#/$defs/ContractVersion" },
+    "kind": {
+      "type": "string",
+      "enum": ["cita_literal", "refran", "humor_escena", "curiosidad_recepcion", "lectura_posible", "alusion_historica"],
+      "$comment": "Encargo §4.4. cita_literal y refran exigen pasaje y locutor: no se inventan citas."
+    },
+    "content": { "type": "string", "minLength": 1 },
+    "speaker": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "person_id": { "$ref": "_definitions.schema.json#/$defs/personId" },
+        "label": { "type": "string", "minLength": 1 }
+      }
+    },
+    "context": { "type": "string" },
+    "passages": { "type": "array", "items": { "$ref": "_definitions.schema.json#/$defs/passageId" }, "uniqueItems": true },
+    "bibliography": { "type": "array", "items": { "$ref": "_definitions.schema.json#/$defs/sourceId" }, "uniqueItems": true },
+    "appearance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["episode_id"],
+      "properties": {
+        "episode_id": { "$ref": "_definitions.schema.json#/$defs/episodeId" },
+        "moment": { "type": "string", "enum": ["antes_pregunta", "tras_respuesta", "desenlace", "exploracion"] },
+        "frequency_hint": { "type": "string", "enum": ["habitual", "ocasional", "raro"], "$comment": "Aparición habitual pero sin saturación (encargo §2.3, §4.4)." }
+      }
+    },
+    "asset_ids": { "type": "array", "items": { "$ref": "_definitions.schema.json#/$defs/mediaAssetId" }, "uniqueItems": true },
+    "certainty": { "$ref": "_definitions.schema.json#/$defs/Certainty" },
+    "review": { "$ref": "_definitions.schema.json#/$defs/Review" },
+    "notes": { "type": "string" }
   },
-  "unevaluatedProperties": false
+  "allOf": [
+    {
+      "if": { "properties": { "kind": { "enum": ["cita_literal", "refran"] } }, "required": ["kind"] },
+      "then": { "required": ["speaker", "passages"], "properties": { "passages": { "minItems": 1 } } }
+    },
+    {
+      "if": { "properties": { "kind": { "enum": ["lectura_posible", "alusion_historica"] } }, "required": ["kind"] },
+      "then": { "required": ["bibliography"], "properties": { "certainty": { "enum": ["INTERPRETACION_ACADEMICA", "HIPOTESIS_PLAUSIBLE", "DISCUTIDO"] }, "bibliography": { "minItems": 1 } } }
+    }
+  ]
 }

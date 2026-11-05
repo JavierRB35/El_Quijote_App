@@ -1,0 +1,285 @@
+{
+  "gate": "repo",
+  "all_ok": true,
+  "total": 40,
+  "passed": 40,
+  "results": [
+    {
+      "file": "valid/chapter.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/discovery_cita.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/discovery_lectura.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/edition.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/episode.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/license.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/media_asset_ilustracion.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/media_asset_recreacion.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/museum_item.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/passage.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/person_ficticio.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/person_historico.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/place_lugar.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/place_ruta.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/profile.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/question_hotspot.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/question_matching.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/question_multi.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/question_ordering.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/question_single.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/question_true_false.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/scene.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/source_edicion.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/source_estudio.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/source_produccion.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "invalid/invalid_discovery_cita_without_passage.json",
+      "expect": "FALLA con SCHEMA_ERROR",
+      "result": "PASS",
+      "codes": [
+        "SCHEMA_ERROR",
+        "SCHEMA_ERROR"
+      ]
+    },
+    {
+      "file": "invalid/invalid_media_repo_only.json",
+      "expect": "FALLA con ALLOWED_USE_MISSING",
+      "result": "PASS",
+      "codes": [
+        "ALLOWED_USE_MISSING"
+      ]
+    },
+    {
+      "file": "invalid/invalid_media_unknown_license.json",
+      "expect": "FALLA con LICENSE_NOT_VERIFIED",
+      "result": "PASS",
+      "codes": [
+        "LICENSE_NOT_VERIFIED",
+        "ALLOWED_USE_MISSING"
+      ]
+    },
+    {
+      "file": "invalid/invalid_place_no_certainty.json",
+      "expect": "FALLA con SCHEMA_ERROR",
+      "result": "PASS",
+      "codes": [
+        "SCHEMA_ERROR",
+        "SCHEMA_ERROR",
+        "SCHEMA_ERROR"
+      ]
+    },
+    {
+      "file": "invalid/invalid_question_bad_chapter.json",
+      "expect": "FALLA con SCHEMA_ERROR",
+      "result": "PASS",
+      "codes": [
+        "SCHEMA_ERROR"
+      ]
+    },
+    {
+      "file": "invalid/invalid_question_certainty_mismatch.json",
+      "expect": "FALLA con SEMANTIC_ERROR",
+      "result": "PASS",
+      "codes": [
+        "SEMANTIC_ERROR"
+      ]
+    },
+    {
+      "file": "invalid/invalid_question_hotspot_out_of_bounds.json",
+      "expect": "FALLA con SEMANTIC_ERROR",
+      "result": "PASS",
+      "codes": [
+        "SEMANTIC_ERROR"
+      ]
+    },
+    {
+      "file": "invalid/invalid_question_multi_not_declared.json",
+      "expect": "FALLA con SCHEMA_ERROR",
+      "result": "PASS",
+      "codes": [
+        "SCHEMA_ERROR"
+      ]
+    },
+    {
+      "file": "invalid/invalid_question_no_correct.json",
+      "expect": "FALLA con SCHEMA_ERROR",
+      "result": "PASS",
+      "codes": [
+        "SCHEMA_ERROR"
+      ]
+    },
+    {
+      "file": "invalid/invalid_question_option_ids_mismatch.json",
+      "expect": "FALLA con SEMANTIC_ERROR",
+      "result": "PASS",
+      "codes": [
+        "SEMANTIC_ERROR"
+      ]
+    },
+    {
+      "file": "invalid/invalid_question_single_option.json",
+      "expect": "FALLA con SCHEMA_ERROR",
+      "result": "PASS",
+      "codes": [
+        "SCHEMA_ERROR"
+      ]
+    },
+    {
+      "file": "invalid/invalid_route_not_hypothesis.json",
+      "expect": "FALLA con SCHEMA_ERROR",
+      "result": "PASS",
+      "codes": [
+        "SCHEMA_ERROR",
+        "SCHEMA_ERROR",
+        "SCHEMA_ERROR"
+      ]
+    },
+    {
+      "file": "package_invalid_missing_media.json",
+      "expect": "FALLA con REFERENCE_ERROR",
+      "result": "PASS",
+      "codes": [
+        "REFERENCE_ERROR",
+        "REFERENCE_ERROR",
+        "REFERENCE_ERROR",
+        "REFERENCE_ERROR"
+      ]
+    },
+    {
+      "file": "package_invalid_stale_contract.json",
+      "expect": "FALLA con CONTRACT_VERSION_UNSUPPORTED",
+      "result": "PASS",
+      "codes": [
+        "CONTRACT_VERSION_UNSUPPORTED"
+      ]
+    },
+    {
+      "file": "package_valid.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    }
+  ]
+}

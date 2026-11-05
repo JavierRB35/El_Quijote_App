@@ -1,0 +1,12 @@
+{
+  "id": "DQ.SRC.0001",
+  "contract_version": "1.0.0",
+  "title": "Edición sintética de prueba (no publicable)",
+  "author_editor": "Editor sintético",
+  "publication": "Publicación sintética de prueba",
+  "kind": "edicion_textual",
+  "url": "https://example.org/edicion-sintetica",
+  "permalink": "https://example.org/permalink-edicion",
+  "consulted_date": "2026-11-05",
+  "notes": "Registro sintético: en producción, aquí constaría la edición real verificada con fecha de consulta."
+}

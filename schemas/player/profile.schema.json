@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/JavierRB35/El_Quijote_App/schemas/player/profile.schema.json",
+  "title": "Profile (datos privados del jugador — dominio C, encargo §5.3)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["profile_id", "display_name", "created_at", "settings", "backup_version", "catalog_version_seen"],
+  "properties": {
+    "profile_id": { "type": "string", "pattern": "^prf_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$" },
+    "display_name": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "settings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "question_frequency": { "type": "string", "enum": ["baja", "media", "alta"] },
+        "text_size": { "type": "string", "enum": ["pequeno", "medio", "grande", "muy_grande"] },
+        "reduced_motion": { "type": "boolean" },
+        "subtitles": { "type": "boolean" },
+        "volumes": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "voice": { "type": "number", "minimum": 0, "maximum": 1 },
+            "ambience": { "type": "number", "minimum": 0, "maximum": 1 },
+            "music": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        }
+      }
+    },
+    "progress_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "last_episode_id": { "$ref": "../content/_definitions.schema.json#/$defs/episodeId" },
+        "answered_questions": { "type": "integer", "minimum": 0 },
+        "notebook_entries": { "type": "integer", "minimum": 0 }
+      },
+      "$comment": "Resumen informativo; el estado completo de progreso vive en la base SQLite privada, NO en el catálogo (encargo §5.3 C)."
+    },
+    "backup_version": { "type": "integer", "minimum": 1 },
+    "catalog_version_seen": { "type": "string", "minLength": 1 },
+    "notes": { "type": "string" }
+  },
+  "$comment": "Esquema provisional (DP): define el contrato de intercambio/backup del perfil. La persistencia real es SQLite con migraciones independientes del catálogo."
+}

@@ -1,0 +1,21 @@
+{
+  "id": "DQ.LOC.0001",
+  "contract_version": "1.0.0",
+  "kind": "lugar",
+  "literary_name": "Lugar Sintético de Prueba",
+  "modern_name": "Pueblo Sintético",
+  "variants": ["Topónimo sintético arcaico"],
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-3.0, 39.0],
+    "crs": "EPSG:4326",
+    "precision_m": 5000
+  },
+  "status": "probable",
+  "presented_as": "hipotesis",
+  "certainty": "HIPOTESIS_PLAUSIBLE",
+  "chapters": ["DQ.P1.C01"],
+  "sources": ["DQ.SRC.0002"],
+  "attribution_note": "Identificación probable, no probada: se conserva el grado de incertidumbre (encargo §4.5).",
+  "review": { "state": "documentada", "reviewer_role": null, "date": null }
+}

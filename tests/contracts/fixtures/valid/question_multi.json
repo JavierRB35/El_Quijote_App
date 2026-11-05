@@ -1,0 +1,34 @@
+{
+  "id": "DQ.Q.000002",
+  "contract_version": "1.0.0",
+  "episode_id": "DQ.P1.C01.E01",
+  "chapter_ids": ["DQ.P1.C01"],
+  "passage_ids": ["DQ.P1.C01.P0001"],
+  "prompt": "PREGUNTA SINTÉTICA DE PRUEBA (no publicable): seleccione TODAS las opciones sintéticas que correspondan; puede haber varias correctas.",
+  "interaction": {
+    "type": "multi_choice",
+    "multi_declared": true,
+    "options": [
+      { "id": "DQ.Q.000002.O01", "label": "Opción sintética A" },
+      { "id": "DQ.Q.000002.O02", "label": "Opción sintética B" },
+      { "id": "DQ.Q.000002.O03", "label": "Opción sintética C" },
+      { "id": "DQ.Q.000002.O04", "label": "Opción sintética D" },
+      { "id": "DQ.Q.000002.O05", "label": "Opción sintética E" }
+    ],
+    "correct_option_ids": ["DQ.Q.000002.O02", "DQ.Q.000002.O04"],
+    "shuffle_options": true
+  },
+  "rationale": "Explicación breve sintética que aborda las dos alternativas válidas.",
+  "evidence": [
+    { "kind": "cita_literal", "passage_id": "DQ.P1.C01.P0001", "quote": "Texto sintético de prueba — cita de ejemplo no publicable." }
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "cognitive_type": "secuencia",
+  "difficulty": 3,
+  "spoiler_policy": { "safe_after_episodes": [] },
+  "visual_requirements": { "pre_image_must_not_reveal": true },
+  "language": "es",
+  "tags": ["sintetico", "prueba"],
+  "review": { "state": "borrador", "reviewer_role": null, "date": null },
+  "semantic_key": "sintetico-p1c01-multiple-01"
+}

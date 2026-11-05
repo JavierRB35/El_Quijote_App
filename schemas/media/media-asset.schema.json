@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/JavierRB35/El_Quijote_App/schemas/media/media-asset.schema.json",
+  "title": "MediaAsset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "contract_version", "function", "media_class", "logical_uri", "alt", "allowed_uses", "license_status", "review", "spoiler_level"],
+  "properties": {
+    "id": { "$ref": "../content/_definitions.schema.json#/$defs/mediaAssetId" },
+    "contract_version": { "$ref": "../content/_definitions.schema.json#/$defs/ContractVersion" },
+    "function": { "$ref": "../content/_definitions.schema.json#/$defs/MediaFunction" },
+    "media_class": { "$ref": "../content/_definitions.schema.json#/$defs/MediaClass" },
+    "logical_uri": { "type": "string", "pattern": "^(assets|content)://[A-Za-z0-9_/.-]+$", "$comment": "URI lógica local, resuelta por la app mediante manifiestos; nunca ruta absoluta ni URL remota en ejecución offline." },
+    "derivatives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["variant", "format"],
+        "properties": {
+          "variant": { "type": "string", "enum": ["original", "hd", "sd", "thumb"] },
+          "format": { "type": "string", "enum": ["webp", "avif", "png", "jpg", "mp3", "ogg", "pmtiles"] },
+          "width": { "type": "integer", "minimum": 1 },
+          "height": { "type": "integer", "minimum": 1 },
+          "size_bytes": { "type": "integer", "minimum": 0 },
+          "sha256": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+        }
+      }
+    },
+    "alt": { "type": "string", "minLength": 1, "$comment": "Texto alternativo OBLIGATORIO para todo activo visible (encargo §4.7.7, §7.2)." },
+    "source_id": { "$ref": "../content/_definitions.schema.json#/$defs/sourceId" },
+    "license_id": { "$ref": "../content/_definitions.schema.json#/$defs/licenseId" },
+    "author": { "type": "string" },
+    "date": { "type": "string" },
+    "allowed_uses": { "type": "array", "items": { "$ref": "../content/_definitions.schema.json#/$defs/AllowedUse" }, "uniqueItems": true },
+    "license_status": { "$ref": "../content/_definitions.schema.json#/$defs/LicenseStatus" },
+    "provenance": { "type": "string" },
+    "review": { "$ref": "../content/_definitions.schema.json#/$defs/Review" },
+    "spoiler_level": { "$ref": "../content/_definitions.schema.json#/$defs/SpoilerLevel" }
+  }
+}

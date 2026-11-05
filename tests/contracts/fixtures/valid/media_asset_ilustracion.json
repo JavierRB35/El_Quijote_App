@@ -1,0 +1,20 @@
+{
+  "id": "DQ.MA.000002",
+  "contract_version": "1.0.0",
+  "function": "museo",
+  "media_class": "ILUSTRACION_EDITORIAL",
+  "logical_uri": "assets://historical_art/sintetico/prueba.webp",
+  "derivatives": [
+    { "variant": "hd", "format": "webp", "width": 1600, "height": 1200, "size_bytes": 1, "sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000" }
+  ],
+  "alt": "Ilustración editorial sintética de prueba con atribución de ejemplo.",
+  "source_id": "DQ.SRC.0003",
+  "license_id": "DQ.LIC.0001",
+  "author": "Autoría sintética de prueba",
+  "date": "fecha sintética",
+  "allowed_uses": ["uso_personal_app", "almacenamiento_repo_git"],
+  "license_status": "verificada",
+  "provenance": "Registro sintético para validar el contrato.",
+  "review": { "state": "aprobada", "reviewer_role": "editorial", "date": "2026-11-05" },
+  "spoiler_level": "leve"
+}

@@ -1,27 +1,41 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "person.schema.json",
-  "title": "Person",
-  "$comment": "BORRADOR 0.1 — personajes ficticios, históricos reales y atribuciones debatidas, siempre con clase y certeza (encargo §2.4).",
+  "$id": "https://github.com/JavierRB35/El_Quijote_App/schemas/content/person.schema.json",
+  "title": "Person/Character",
   "type": "object",
-  "required": ["id", "name", "person_class", "certainty", "review_state"],
+  "additionalProperties": false,
+  "required": ["id", "contract_version", "class", "canonical_name", "certainty", "review"],
   "properties": {
-    "id": {"type": "string", "pattern": "^DQ\\.PER\\.[0-9]{6}$"},
-    "name": {"type": "string", "minLength": 2},
-    "person_class": {"enum": ["ficticio", "historico", "debatido"]},
-    "variants": {"type": "array", "items": {"type": "string"}},
-    "description": {"type": "string"},
-    "relations": {"type": "array", "items": {"type": "object",
-                   "required": ["target_id", "kind"],
-                   "properties": {"target_id": {"type": "string"},
-                                    "kind": {"enum": ["amo_escudero", "familiar", "rival", "amor", "alusion_historica", "autor_ficticio"]}}}},
-    "historical_ref": {"type": "string"},
-    "appearance_chapter_ids": {"type": "array",
-                                "items": {"type": "string", "pattern": "^DQ\\.P[12]\\.C[0-9]{2}$"}},
-    "certainty": {"enum": ["TEXTO_EXPLICITO", "HECHO_HISTORICO_DOCUMENTADO",
-                            "INTERPRETACION_ACADEMICA", "HIPOTESIS_PLAUSIBLE",
-                            "DISCUTIDO", "RECREACION_ARTISTICA"]},
-    "review_state": {"enum": ["borrador", "documentada", "revisada", "aprobada", "descartada"]}
-  },
-  "unevaluatedProperties": false
+    "id": { "$ref": "_definitions.schema.json#/$defs/personId" },
+    "contract_version": { "$ref": "_definitions.schema.json#/$defs/ContractVersion" },
+    "class": { "type": "string", "enum": ["ficticio", "historico", "debatido"], "$comment": "Distinguir personaje ficticio, histórico real y atribución debatida (encargo §2.4, §6.2)." },
+    "canonical_name": { "type": "string", "minLength": 1 },
+    "variants": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["person_id", "kind"],
+        "properties": {
+          "person_id": { "$ref": "_definitions.schema.json#/$defs/personId" },
+          "kind": { "type": "string", "minLength": 1, "$comment": "p. ej. 'escudero_de', 'amigo_de', 'posible_alusion_a'" }
+        }
+      }
+    },
+    "historical_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id"],
+      "properties": {
+        "source_id": { "$ref": "_definitions.schema.json#/$defs/sourceId" },
+        "locator": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "appearances": { "type": "array", "items": { "$ref": "_definitions.schema.json#/$defs/episodeId" }, "uniqueItems": true },
+    "certainty": { "$ref": "_definitions.schema.json#/$defs/Certainty" },
+    "review": { "$ref": "_definitions.schema.json#/$defs/Review" },
+    "notes": { "type": "string" }
+  }
 }

@@ -1,0 +1,31 @@
+{
+  "id": "DQ.Q.000103",
+  "contract_version": "1.0.0",
+  "episode_id": "DQ.P1.C01.E01",
+  "chapter_ids": ["DQ.P1.C01"],
+  "passage_ids": ["DQ.P1.C01.P0001"],
+  "prompt": "CASO NEGATIVO: multi_choice sin declarar expresamente que puede haber varias correctas.",
+  "interaction": {
+    "type": "multi_choice",
+    "options": [
+      { "id": "DQ.Q.000103.O01", "label": "Opción A" },
+      { "id": "DQ.Q.000103.O02", "label": "Opción B" },
+      { "id": "DQ.Q.000103.O03", "label": "Opción C" }
+    ],
+    "correct_option_ids": ["DQ.Q.000103.O01", "DQ.Q.000103.O02"],
+    "shuffle_options": true
+  },
+  "rationale": "Inválido: el enunciado debe indicar explícitamente la posibilidad de varias correctas (encargo §2.2).",
+  "evidence": [
+    { "kind": "cita_literal", "passage_id": "DQ.P1.C01.P0001", "quote": "cita sintética" }
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "cognitive_type": "hecho",
+  "difficulty": 2,
+  "spoiler_policy": { "safe_after_episodes": [] },
+  "visual_requirements": { "pre_image_must_not_reveal": true },
+  "language": "es",
+  "tags": ["negativo"],
+  "review": { "state": "borrador", "reviewer_role": null, "date": null },
+  "semantic_key": "negativo-multi-no-declarado"
+}

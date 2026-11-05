@@ -1,0 +1,11 @@
+{
+  "id": "DQ.P1.C01.E01.S99",
+  "contract_version": "1.0.0",
+  "episode_id": "DQ.P1.C01.E01",
+  "phase": "question",
+  "media_ids": ["DQ.MA.999999"],
+  "accessibility": {
+    "reduced_motion_fallback": "imagen_estatica",
+    "alt": "Caso negativo: escena que referencia una imagen inexistente."
+  }
+}

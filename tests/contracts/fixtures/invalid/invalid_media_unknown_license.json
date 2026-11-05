@@ -1,0 +1,15 @@
+{
+  "id": "DQ.MA.000101",
+  "contract_version": "1.0.0",
+  "function": "museo",
+  "media_class": "FOTOGRAFIA_ACTUAL",
+  "logical_uri": "assets://photographs/sintetico/negativo.webp",
+  "alt": "Caso negativo: licencia desconocida.",
+  "source_id": "DQ.SRC.0003",
+  "license_id": "DQ.LIC.0001",
+  "allowed_uses": [],
+  "license_status": "desconocida",
+  "provenance": "CASO NEGATIVO: 'desconocida' no equivale a autorizada (encargo §6.3.4).",
+  "review": { "state": "borrador", "reviewer_role": null, "date": null },
+  "spoiler_level": "ninguno"
+}

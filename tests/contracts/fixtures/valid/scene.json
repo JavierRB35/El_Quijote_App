@@ -1,0 +1,28 @@
+{
+  "id": "DQ.P1.C01.E01.S01",
+  "contract_version": "1.0.0",
+  "episode_id": "DQ.P1.C01.E01",
+  "phase": "before",
+  "media_ids": ["DQ.MA.000001"],
+  "layers": [
+    { "media_id": "DQ.MA.000001", "depth": "fondo", "parallax": 0.2 }
+  ],
+  "hotspots": [
+    {
+      "id": "objeto_sintetico",
+      "media_id": "DQ.MA.000001",
+      "area": { "x": 0.1, "y": 0.1, "w": 0.2, "h": 0.2 },
+      "label": "Objeto sintético de prueba",
+      "optional": true,
+      "keyboard_accessible": true
+    }
+  ],
+  "subtitles_ref": "assets://audio/p1c01e01s01/subtitles.vtt",
+  "audio_ref": "assets://audio/p1c01e01s01/ambiente.ogg",
+  "entry_transition": "fade",
+  "exit_transition": "dissolve",
+  "accessibility": {
+    "reduced_motion_fallback": "imagen_estatica",
+    "alt": "Escena sintética de prueba para validar el contrato."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/JavierRB35/El_Quijote_App/schemas/media/source.schema.json",
+  "title": "Source",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "contract_version", "title", "kind", "consulted_date"],
+  "properties": {
+    "id": { "$ref": "../content/_definitions.schema.json#/$defs/sourceId" },
+    "contract_version": { "$ref": "../content/_definitions.schema.json#/$defs/ContractVersion" },
+    "title": { "type": "string", "minLength": 1 },
+    "author_editor": { "type": "string" },
+    "publication": { "type": "string" },
+    "kind": { "type": "string", "enum": ["edicion_textual", "estudio_academico", "registro_patrimonial", "archivo_institucional", "cartografia", "otro"] },
+    "url": { "type": "string", "format": "uri" },
+    "permalink": { "type": "string", "format": "uri" },
+    "consulted_date": { "$ref": "../content/_definitions.schema.json#/$defs/IsoDate" },
+    "notes": { "type": "string" }
+  }
+}

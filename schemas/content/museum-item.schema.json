@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/JavierRB35/El_Quijote_App/schemas/content/museum-item.schema.json",
+  "title": "MuseumItem",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "contract_version", "title", "attribution_status", "context", "relation_to_quixote", "chapters", "media_ids", "source_id", "license_id", "certainty", "review"],
+  "properties": {
+    "id": { "$ref": "_definitions.schema.json#/$defs/museumItemId" },
+    "contract_version": { "$ref": "_definitions.schema.json#/$defs/ContractVersion" },
+    "title": { "type": "string", "minLength": 1 },
+    "authorship": { "type": "string", "$comment": "Autor o atribución documentada; vacío solo si attribution_status es 'anonima'." },
+    "attribution_status": { "type": "string", "enum": ["confirmada", "atribuida", "anonima", "debatida"], "$comment": "No atribuir retratos no identificados de forma inequívoca (encargo §4.6)." },
+    "date": { "type": "string" },
+    "provenance": { "type": "string" },
+    "technique": { "type": "string" },
+    "owner_entity": { "type": "string" },
+    "context": { "type": "string", "minLength": 1 },
+    "relation_to_quixote": { "type": "string", "minLength": 1, "$comment": "Relación concreta y documentada con el Quijote (encargo §4.6)." },
+    "chapters": { "type": "array", "items": { "$ref": "_definitions.schema.json#/$defs/chapterId" }, "minItems": 1, "uniqueItems": true },
+    "media_ids": { "type": "array", "items": { "$ref": "_definitions.schema.json#/$defs/mediaAssetId" }, "minItems": 1, "uniqueItems": true },
+    "source_id": { "$ref": "_definitions.schema.json#/$defs/sourceId" },
+    "license_id": { "$ref": "_definitions.schema.json#/$defs/licenseId" },
+    "certainty": { "$ref": "_definitions.schema.json#/$defs/Certainty" },
+    "review": { "$ref": "_definitions.schema.json#/$defs/Review" },
+    "notes": { "type": "string" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "attribution_status": { "const": "anonima" } }, "required": ["attribution_status"] },
+      "then": { "properties": { "authorship": { "maxLength": 0 } } }
+    }
+  ]
+}

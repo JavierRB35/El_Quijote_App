@@ -1,0 +1,15 @@
+{
+  "id": "DQ.ED.0001",
+  "contract_version": "1.0.0",
+  "title": "Edición sintética de prueba (no publicable)",
+  "editor": "Editor Sintético de Prueba",
+  "year": 2026,
+  "source_id": "DQ.SRC.0001",
+  "digital_version": "versión digital sintética 1.0",
+  "url": "https://example.org/edicion-sintetica",
+  "rights_status": "verificada",
+  "orthographic_rules": "modernizada",
+  "checksum": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "provenance": "Registro sintético creado para probar el contrato; no corresponde a ninguna edición real.",
+  "review": { "state": "borrador", "reviewer_role": null, "date": null }
+}

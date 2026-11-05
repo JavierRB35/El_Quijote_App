@@ -1,0 +1,17 @@
+{
+ "id": "DQ.PER.0009",
+ "contract_version": "1.0.0",
+ "class": "ficticio",
+ "canonical_name": "Bachiller Sanson Carrasco",
+ "variants": [],
+ "relations": [],
+ "appearances": [
+  "DQ.P2.C74.E01"
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-05"
+ }
+}

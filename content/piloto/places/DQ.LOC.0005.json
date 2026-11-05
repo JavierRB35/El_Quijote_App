@@ -1,0 +1,34 @@
+{
+ "id": "DQ.LOC.0005",
+ "contract_version": "1.0.0",
+ "kind": "lugar",
+ "literary_name": "Trapobana",
+ "modern_name": "Topónimo clásico (Taprobana/Ceilán) usado en clave paródica",
+ "variants": [
+  "la grande isla Trapobana"
+ ],
+ "geometry": {
+  "type": "Point",
+  "coordinates": [
+   80.7,
+   7.9
+  ],
+  "crs": "EPSG:4326",
+  "precision_m": 500000
+ },
+ "status": "probable",
+ "presented_as": "hipotesis",
+ "certainty": "DISCUTIDO",
+ "chapters": [
+  "DQ.P1.C18"
+ ],
+ "sources": [
+  "DQ.SRC.0001"
+ ],
+ "attribution_note": "Isla del emperador Alifanfaron, dentro del catalogo militar imaginado (I, 18). Taprobana clásica (Ceilán) usada en clave paródica; no localizable como lugar de la novela.",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-05"
+ }
+}

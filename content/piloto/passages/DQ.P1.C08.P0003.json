@@ -1,0 +1,13 @@
+{
+ "id": "DQ.P1.C08.P0003",
+ "contract_version": "1.0.0",
+ "chapter_id": "DQ.P1.C08",
+ "anchor": "EPUB 1008.xhtml; extracto verbatim",
+ "text_original": "Mire vuestra merced, respondió Sancho, que aquellos que allí se parecen no son gigantes, sino molinos de viento, y lo que en ellos parecen brazos son las aspas, que, volteadas del viento, hacen andar la piedra del molino",
+ "text_indexable": "mire vuestra merced respondió sancho que aquellos que allí se parecen no son gigantes sino molinos de viento y lo que en ellos parecen brazos son las aspas que volteadas del viento hacen andar la piedra del molino",
+ "position": {
+  "start_char": 875,
+  "end_char": 945
+ },
+ "sha256": "sha256:74d943934900b0d1a97f284b748c2ef4988bf185aafddf43c9e0db1118572c52"
+}

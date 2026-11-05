@@ -1,0 +1,17 @@
+{
+ "id": "DQ.PER.0011",
+ "contract_version": "1.0.0",
+ "class": "historico",
+ "canonical_name": "Avellaneda (seudonimo)",
+ "variants": [
+  "Alonso Fernandez de Avellaneda"
+ ],
+ "relations": [],
+ "appearances": [],
+ "certainty": "DISCUTIDO",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-05"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "id": "DQ.P1.C08.P0004",
+ "contract_version": "1.0.0",
+ "chapter_id": "DQ.P1.C08",
+ "anchor": "EPUB 1008.xhtml; extracto verbatim",
+ "text_original": "Levantóse en esto un poco de viento, y las grandes aspas comenzaron á moverse, lo cual visto por don Quijote, dijo: «Pues aunque mováis más brazos que los del gigante Briareo, me lo habéis de pagar»",
+ "text_indexable": "levantóse en esto un poco de viento y las grandes aspas comenzaron á moverse lo cual visto por don quijote dijo pues aunque mováis más brazos que los del gigante briareo me lo habéis de pagar",
+ "position": {
+  "start_char": 1814,
+  "end_char": 1884
+ },
+ "sha256": "sha256:0c5a32de901b4daa13cf53348f2e71ec43e9131861cc41b62d049a7f133a9439"
+}

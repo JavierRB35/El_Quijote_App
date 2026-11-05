@@ -1,0 +1,19 @@
+{
+ "id": "DQ.ED.0001",
+ "contract_version": "1.0.0",
+ "title": "Don Quijote de la Mancha (Ilustrado por Salvador Tusell)",
+ "editor": "Epublibre / Titivillus (base: Barcelona, Luis Tasso, 1905)",
+ "year": 2024,
+ "source_id": "DQ.SRC.0001",
+ "digital_version": "EPUB Epublibre/Titivillus, base r2.1, revisión 1.0 (2024-02-11)",
+ "rights_status": "verificada",
+ "orthographic_rules": "modernizada",
+ "checksum": "sha256:82647ac553c40eb0c216e9c76bbbbcb012ded1497711626b9c48a2f30bda7858",
+ "provenance": "Ortografía modernizada de la edición Tasso 1905 (diacríticos áureos conservados parcialmente).",
+ "notes": "Texto de trabajo del proyecto; la edición de referencia definitiva está pendiente (PEND-01).",
+ "review": {
+  "state": "documentada",
+  "reviewer_role": "editorial",
+  "date": "2026-11-05"
+ }
+}

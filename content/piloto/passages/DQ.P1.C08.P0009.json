@@ -1,0 +1,13 @@
+{
+ "id": "DQ.P1.C08.P0009",
+ "contract_version": "1.0.0",
+ "chapter_id": "DQ.P1.C08",
+ "anchor": "EPUB 1008.xhtml; extracto verbatim",
+ "text_original": "Peor será esto que los molinos de viento, dijo Sancho",
+ "text_indexable": "peor será esto que los molinos de viento dijo sancho",
+ "position": {
+  "start_char": 9155,
+  "end_char": 9208
+ },
+ "sha256": "sha256:51175428b11057d7553dc6a0a29442c930a8b6db5db97cde39ba29beaab90703"
+}

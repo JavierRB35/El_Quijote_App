@@ -1,0 +1,22 @@
+{
+ "id": "DQ.PER.0010",
+ "contract_version": "1.0.0",
+ "class": "ficticio",
+ "canonical_name": "Cide Hamete Benengeli",
+ "variants": [],
+ "relations": [
+  {
+   "person_id": "DQ.PER.0001",
+   "kind": "narrador_ficticio_de"
+  }
+ ],
+ "appearances": [
+  "DQ.P2.C01.E01"
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-05"
+ }
+}

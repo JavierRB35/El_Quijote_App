@@ -1,0 +1,28 @@
+{
+ "id": "DQ.DIS.000010",
+ "contract_version": "1.0.0",
+ "kind": "cita_literal",
+ "content": "«…el cura y el barbero se estuvieron casi un mes sin verle, por no renovarle y traerle á la memoria las cosas pasadas…»",
+ "speaker": {
+  "person_id": "DQ.PER.0010",
+  "label": "narrador (marco de Cide Hamete)"
+ },
+ "context": "Piloto II.1; corrige la pre-carga anterior: Avellaneda solo se NOMBRA en II, 72.",
+ "passages": [
+  "DQ.P2.C01.P0001"
+ ],
+ "appearance": {
+  "episode_id": "DQ.P2.C01.E01",
+  "moment": "tras_respuesta",
+  "frequency_hint": "ocasional"
+ },
+ "asset_ids": [
+  "DQ.MA.000170"
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-05"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "DQ.MA.000035",
+ "contract_version": "1.0.0",
+ "function": "museo",
+ "media_class": "ACUARELA_HISTORICA",
+ "logical_uri": "assets://ilustraciones_tusell/acuarelas/035.jpg",
+ "derivatives": [
+  {
+   "variant": "original",
+   "format": "jpg",
+   "width": 822,
+   "height": 1035,
+   "size_bytes": 89992,
+   "sha256": "sha256:6b9e7facf9b76fbb51e531b6645108197e6904dbc9194f414ca76a2e8112c7be"
+  }
+ ],
+ "alt": "Discurso de Don Quijote sobre la Edad Dorada.",
+ "source_id": "DQ.SRC.0001",
+ "license_id": "DQ.LIC.0001",
+ "author": "Salvador Tusell (sobre composición de Gustave Doré)",
+ "date": "1905",
+ "allowed_uses": [
+  "uso_personal_app",
+  "almacenamiento_repo_git"
+ ],
+ "license_status": "verificada",
+ "provenance": "EPUB Epublibre/Titivillus 2024; ed. Barcelona, Luis Tasso, 1905 (BVPB registro 463832).",
+ "review": {
+  "state": "documentada",
+  "reviewer_role": "editorial",
+  "date": "2026-11-05"
+ },
+ "spoiler_level": "ninguno"
+}

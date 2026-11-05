@@ -1,0 +1,34 @@
+{
+ "id": "DQ.MA.900008",
+ "contract_version": "1.0.0",
+ "function": "pre_pregunta",
+ "media_class": "RECREACION_IA",
+ "logical_uri": "assets://scenes/part_1/chapter_18/p1_c18_rebanos_pre.webp",
+ "derivatives": [
+  {
+   "variant": "original",
+   "format": "webp",
+   "width": 1672,
+   "height": 941,
+   "size_bytes": 310032,
+   "sha256": "sha256:0a2e613a3678bd3acf338933496f388615547410e8fb7a46482728cf7055c414"
+  }
+ ],
+ "alt": "Don Quijote señala un gran rebaño de ovejas que avanza por las colinas; Sancho lo observa desconcertado.",
+ "source_id": "DQ.SRC.0003",
+ "license_id": "DQ.LIC.0002",
+ "author": "Equipo de arte El_Quijote_App (recreación IA)",
+ "date": "2026-11-05",
+ "allowed_uses": [
+  "uso_personal_app",
+  "almacenamiento_repo_git"
+ ],
+ "license_status": "verificada",
+ "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA (nunca evidencia histórica).",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "spoiler_level": "ninguno"
+}

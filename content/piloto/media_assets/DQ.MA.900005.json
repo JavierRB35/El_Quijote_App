@@ -1,0 +1,34 @@
+{
+ "id": "DQ.MA.900005",
+ "contract_version": "1.0.0",
+ "function": "pre_pregunta",
+ "media_class": "RECREACION_IA",
+ "logical_uri": "assets://scenes/part_1/chapter_08/p1_c08_molinos_pre.webp",
+ "derivatives": [
+  {
+   "variant": "original",
+   "format": "webp",
+   "width": 1672,
+   "height": 941,
+   "size_bytes": 304644,
+   "sha256": "sha256:6bd172fcc4447b4170fa5b735905952e8c69fb6975a8402e4098a84970c680f8"
+  }
+ ],
+ "alt": "Don Quijote señala unos molinos de viento desde Rocinante mientras Sancho le hace un gesto de advertencia.",
+ "source_id": "DQ.SRC.0003",
+ "license_id": "DQ.LIC.0002",
+ "author": "Equipo de arte El_Quijote_App (recreación IA)",
+ "date": "2026-11-05",
+ "allowed_uses": [
+  "uso_personal_app",
+  "almacenamiento_repo_git"
+ ],
+ "license_status": "verificada",
+ "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA (nunca evidencia histórica).",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "spoiler_level": "ninguno"
+}

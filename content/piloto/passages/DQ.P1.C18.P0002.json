@@ -1,0 +1,13 @@
+{
+ "id": "DQ.P1.C18.P0002",
+ "contract_version": "1.0.0",
+ "chapter_id": "DQ.P1.C18",
+ "anchor": "EPUB 1.18.xhtml; extracto verbatim",
+ "text_original": "llégate á mí y mira cuántas muelas y dientes me faltan, que me parece que no me ha quedado ninguno en la boca",
+ "text_indexable": "llégate á mí y mira cuántas muelas y dientes me faltan que me parece que no me ha quedado ninguno en la boca",
+ "position": {
+  "start_char": 15851,
+  "end_char": 15921
+ },
+ "sha256": "sha256:6cbce1ab6d1e34c4003ef6cfe50e8d2ab50f7b5dc15192a595826862e99b73f8"
+}

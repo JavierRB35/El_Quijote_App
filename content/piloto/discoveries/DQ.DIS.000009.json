@@ -1,0 +1,28 @@
+{
+ "id": "DQ.DIS.000009",
+ "contract_version": "1.0.0",
+ "kind": "humor_escena",
+ "content": "«…llégate á mí y mira cuántas muelas y dientes me faltan, que me parece que no me ha quedado ninguno en la boca.»",
+ "speaker": {
+  "person_id": "DQ.PER.0001",
+  "label": "don Quijote a Sancho"
+ },
+ "context": "Piloto I.18; tras las pedradas de los pastores.",
+ "passages": [
+  "DQ.P1.C18.P0002"
+ ],
+ "appearance": {
+  "episode_id": "DQ.P1.C18.E01",
+  "moment": "tras_respuesta",
+  "frequency_hint": "ocasional"
+ },
+ "asset_ids": [
+  "DQ.MA.000058"
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-05"
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "id": "DQ.DIS.000014",
+ "contract_version": "1.0.0",
+ "kind": "curiosidad_recepcion",
+ "content": "Las 376 acuarelas de esta edición derivan de las composiciones de Gustave Doré y fueron pintadas por Salvador Tusell para la edición de Barcelona, Luis Tasso, 1905, en dos volúmenes.",
+ "speaker": {
+  "person_id": "DQ.PER.0010",
+  "label": "Cuaderno del investigador (ficha editorial del proyecto)"
+ },
+ "context": "Cuaderno del investigador — ficha de ilustración. Verificado: BVPB registro 463832.",
+ "passages": [],
+ "appearance": {
+  "episode_id": "DQ.P1.C08.E01",
+  "moment": "tras_respuesta",
+  "frequency_hint": "ocasional"
+ },
+ "asset_ids": [
+  "DQ.MA.000001"
+ ],
+ "certainty": "HECHO_HISTORICO_DOCUMENTADO",
+ "review": {
+  "state": "documentada",
+  "reviewer_role": null,
+  "date": "2026-11-05"
+ }
+}

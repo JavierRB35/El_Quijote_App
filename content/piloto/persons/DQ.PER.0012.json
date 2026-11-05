@@ -1,0 +1,17 @@
+{
+ "id": "DQ.PER.0012",
+ "contract_version": "1.0.0",
+ "class": "historico",
+ "canonical_name": "Miguel de Cervantes",
+ "variants": [],
+ "relations": [],
+ "appearances": [
+  "DQ.P1.C06.E01"
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-05"
+ }
+}

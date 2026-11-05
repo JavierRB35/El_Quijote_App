@@ -1,0 +1,34 @@
+{
+ "id": "DQ.MA.900007",
+ "contract_version": "1.0.0",
+ "function": "pre_pregunta",
+ "media_class": "RECREACION_IA",
+ "logical_uri": "assets://scenes/part_1/chapter_11/p1_c11_cabreros_pre.webp",
+ "derivatives": [
+  {
+   "variant": "original",
+   "format": "webp",
+   "width": 1672,
+   "height": 941,
+   "size_bytes": 282228,
+   "sha256": "sha256:7cc57ef82fa77d29f00f03b8b63b80edbd2fd327d0838192c12ac9e35e1f4a3b"
+  }
+ ],
+ "alt": "Don Quijote habla animadamente al calor de una hoguera junto a Sancho y varios cabreros bajo el cielo estrellado.",
+ "source_id": "DQ.SRC.0003",
+ "license_id": "DQ.LIC.0002",
+ "author": "Equipo de arte El_Quijote_App (recreación IA)",
+ "date": "2026-11-05",
+ "allowed_uses": [
+  "uso_personal_app",
+  "almacenamiento_repo_git"
+ ],
+ "license_status": "verificada",
+ "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA (nunca evidencia histórica).",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "spoiler_level": "ninguno"
+}

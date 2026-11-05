@@ -1,0 +1,25 @@
+{
+ "id": "DQ.PER.0002",
+ "contract_version": "1.0.0",
+ "class": "ficticio",
+ "canonical_name": "Sancho Panza",
+ "variants": [],
+ "relations": [
+  {
+   "person_id": "DQ.PER.0001",
+   "kind": "escudero_de"
+  }
+ ],
+ "appearances": [
+  "DQ.P1.C08.E01",
+  "DQ.P1.C11.E01",
+  "DQ.P1.C18.E01",
+  "DQ.P2.C74.E01"
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-05"
+ }
+}

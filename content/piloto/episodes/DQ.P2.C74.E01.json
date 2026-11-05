@@ -1,0 +1,30 @@
+{
+ "id": "DQ.P2.C74.E01",
+ "contract_version": "1.0.0",
+ "title": "La muerte de Alonso Quijano",
+ "chapters": [
+  "DQ.P2.C74"
+ ],
+ "narrative_order": 126,
+ "synopsis": "Confesión, renuncia al nombre de don Quijote, testamento y muerte; epitafio de Sansón Carrasco.",
+ "actors": [
+  "DQ.PER.0001",
+  "DQ.PER.0002",
+  "DQ.PER.0005",
+  "DQ.PER.0006",
+  "DQ.PER.0007",
+  "DQ.PER.0008",
+  "DQ.PER.0009"
+ ],
+ "places": [
+  "DQ.LOC.0001"
+ ],
+ "passages": [
+  "DQ.P2.C74.P0001",
+  "DQ.P2.C74.P0002",
+  "DQ.P2.C74.P0003"
+ ],
+ "spoiler_flags": {
+  "reveals_future_events": true
+ }
+}

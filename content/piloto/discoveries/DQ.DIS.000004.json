@@ -1,0 +1,28 @@
+{
+ "id": "DQ.DIS.000004",
+ "contract_version": "1.0.0",
+ "kind": "humor_escena",
+ "content": "«Muchos años ha que es grande amigo mío ese Cervantes, y sé que es más versado en desdichas que en versos.» — el cura salva La Galatea; Cervantes se burla de sí mismo dentro de su propia novela.",
+ "speaker": {
+  "person_id": "DQ.PER.0005",
+  "label": "el cura"
+ },
+ "context": "Piloto I.6; humor meta-referencial. El propio autor real aparece citado en la ficción.",
+ "passages": [
+  "DQ.P1.C06.P0001"
+ ],
+ "appearance": {
+  "episode_id": "DQ.P1.C06.E01",
+  "moment": "tras_respuesta",
+  "frequency_hint": "ocasional"
+ },
+ "asset_ids": [
+  "DQ.MA.000021"
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-05"
+ }
+}

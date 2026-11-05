@@ -1,0 +1,34 @@
+{
+ "id": "DQ.MA.000034",
+ "contract_version": "1.0.0",
+ "function": "museo",
+ "media_class": "ACUARELA_HISTORICA",
+ "logical_uri": "assets://ilustraciones_tusell/acuarelas/034.jpg",
+ "derivatives": [
+  {
+   "variant": "original",
+   "format": "jpg",
+   "width": 784,
+   "height": 482,
+   "size_bytes": 48614,
+   "sha256": "sha256:4d9e923f5a6ebfb6c09b7853f618f254b6434f317048c231251ec8b78ac77a33"
+  }
+ ],
+ "alt": "Don Quijote y Sancho Panza comparten cena con unos cabreros",
+ "source_id": "DQ.SRC.0001",
+ "license_id": "DQ.LIC.0001",
+ "author": "Salvador Tusell (sobre composición de Gustave Doré)",
+ "date": "1905",
+ "allowed_uses": [
+  "uso_personal_app",
+  "almacenamiento_repo_git"
+ ],
+ "license_status": "verificada",
+ "provenance": "EPUB Epublibre/Titivillus 2024; ed. Barcelona, Luis Tasso, 1905 (BVPB registro 463832).",
+ "review": {
+  "state": "documentada",
+  "reviewer_role": "editorial",
+  "date": "2026-11-05"
+ },
+ "spoiler_level": "ninguno"
+}

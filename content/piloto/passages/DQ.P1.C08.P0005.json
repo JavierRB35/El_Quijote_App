@@ -1,0 +1,13 @@
+{
+ "id": "DQ.P1.C08.P0005",
+ "contract_version": "1.0.0",
+ "chapter_id": "DQ.P1.C08",
+ "anchor": "EPUB 1008.xhtml; extracto verbatim",
+ "text_original": "con la lanza en el ristre, arremetió á todo el galope de Rocinante, y embistió con el primer molino que estaba delante; y dándole una lanzada en el aspa, la volvió el viento con tanta furia, que hizo la lanza pedazos, llevándose tras sí al caballo y al caballero, que fué rodando muy mal trecho por el campo",
+ "text_indexable": "con la lanza en el ristre arremetió á todo el galope de rocinante y embistió con el primer molino que estaba delante y dándole una lanzada en el aspa la volvió el viento con tanta furia que hizo la lanza pedazos llevándose tras sí al caballo y al caballero que fué rodando muy mal trecho por el campo",
+ "position": {
+  "start_char": 2161,
+  "end_char": 2231
+ },
+ "sha256": "sha256:af4dc5a99a9d801c88bdfc1acb6fcb1a4df624fd4923f1daca19954e6742cf6e"
+}

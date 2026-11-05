@@ -1,0 +1,145 @@
+{
+ "package_id": "piloto-editorial-i8",
+ "contract_version": "1.0.0",
+ "catalog_version": "0.1.0",
+ "created": "2026-11-05",
+ "files": {
+  "editions": [
+   "editions/DQ.ED.0001.json"
+  ],
+  "chapters": [
+   "chapters/DQ.P1.C06.json",
+   "chapters/DQ.P1.C08.json",
+   "chapters/DQ.P1.C09.json",
+   "chapters/DQ.P1.C11.json",
+   "chapters/DQ.P1.C18.json",
+   "chapters/DQ.P2.C01.json",
+   "chapters/DQ.P2.C74.json"
+  ],
+  "passages": [
+   "passages/DQ.P1.C08.P0001.json",
+   "passages/DQ.P1.C08.P0002.json",
+   "passages/DQ.P1.C08.P0003.json",
+   "passages/DQ.P1.C08.P0004.json",
+   "passages/DQ.P1.C08.P0005.json",
+   "passages/DQ.P1.C08.P0006.json",
+   "passages/DQ.P1.C08.P0007.json",
+   "passages/DQ.P1.C08.P0008.json",
+   "passages/DQ.P1.C08.P0009.json",
+   "passages/DQ.P1.C08.P0010.json",
+   "passages/DQ.P1.C08.P0011.json",
+   "passages/DQ.P1.C08.P0012.json",
+   "passages/DQ.P1.C06.P0001.json",
+   "passages/DQ.P1.C06.P0002.json",
+   "passages/DQ.P1.C11.P0001.json",
+   "passages/DQ.P1.C11.P0002.json",
+   "passages/DQ.P1.C18.P0001.json",
+   "passages/DQ.P1.C18.P0002.json",
+   "passages/DQ.P2.C01.P0001.json",
+   "passages/DQ.P2.C74.P0001.json",
+   "passages/DQ.P2.C74.P0002.json",
+   "passages/DQ.P2.C74.P0003.json"
+  ],
+  "episodes": [
+   "episodes/DQ.P1.C08.E01.json",
+   "episodes/DQ.P1.C06.E01.json",
+   "episodes/DQ.P1.C11.E01.json",
+   "episodes/DQ.P1.C18.E01.json",
+   "episodes/DQ.P2.C01.E01.json",
+   "episodes/DQ.P2.C74.E01.json"
+  ],
+  "questions": [
+   "questions/DQ.Q.000101.json",
+   "questions/DQ.Q.000102.json",
+   "questions/DQ.Q.000103.json",
+   "questions/DQ.Q.000104.json",
+   "questions/DQ.Q.000105.json",
+   "questions/DQ.Q.000106.json",
+   "questions/DQ.Q.000107.json",
+   "questions/DQ.Q.000108.json",
+   "questions/DQ.Q.000109.json",
+   "questions/DQ.Q.000110.json",
+   "questions/DQ.Q.000111.json",
+   "questions/DQ.Q.000112.json"
+  ],
+  "discoveries": [
+   "discoveries/DQ.DIS.000001.json",
+   "discoveries/DQ.DIS.000002.json",
+   "discoveries/DQ.DIS.000003.json",
+   "discoveries/DQ.DIS.000004.json",
+   "discoveries/DQ.DIS.000005.json",
+   "discoveries/DQ.DIS.000006.json",
+   "discoveries/DQ.DIS.000007.json",
+   "discoveries/DQ.DIS.000008.json",
+   "discoveries/DQ.DIS.000009.json",
+   "discoveries/DQ.DIS.000010.json",
+   "discoveries/DQ.DIS.000011.json",
+   "discoveries/DQ.DIS.000012.json",
+   "discoveries/DQ.DIS.000013.json",
+   "discoveries/DQ.DIS.000014.json"
+  ],
+  "persons": [
+   "persons/DQ.PER.0001.json",
+   "persons/DQ.PER.0002.json",
+   "persons/DQ.PER.0003.json",
+   "persons/DQ.PER.0004.json",
+   "persons/DQ.PER.0005.json",
+   "persons/DQ.PER.0006.json",
+   "persons/DQ.PER.0007.json",
+   "persons/DQ.PER.0008.json",
+   "persons/DQ.PER.0009.json",
+   "persons/DQ.PER.0010.json",
+   "persons/DQ.PER.0011.json",
+   "persons/DQ.PER.0012.json",
+   "persons/DQ.PER.0013.json",
+   "persons/DQ.PER.0014.json"
+  ],
+  "places": [
+   "places/DQ.LOC.0001.json",
+   "places/DQ.LOC.0002.json",
+   "places/DQ.LOC.0003.json",
+   "places/DQ.LOC.0004.json",
+   "places/DQ.LOC.0005.json"
+  ],
+  "media_assets": [
+   "media_assets/DQ.MA.000001.json",
+   "media_assets/DQ.MA.000020.json",
+   "media_assets/DQ.MA.000021.json",
+   "media_assets/DQ.MA.000026.json",
+   "media_assets/DQ.MA.000027.json",
+   "media_assets/DQ.MA.000029.json",
+   "media_assets/DQ.MA.000034.json",
+   "media_assets/DQ.MA.000035.json",
+   "media_assets/DQ.MA.000036.json",
+   "media_assets/DQ.MA.000056.json",
+   "media_assets/DQ.MA.000057.json",
+   "media_assets/DQ.MA.000058.json",
+   "media_assets/DQ.MA.000170.json",
+   "media_assets/DQ.MA.000371.json",
+   "media_assets/DQ.MA.000372.json",
+   "media_assets/DQ.MA.000373.json",
+   "media_assets/DQ.MA.900005.json",
+   "media_assets/DQ.MA.900006.json",
+   "media_assets/DQ.MA.900007.json",
+   "media_assets/DQ.MA.900008.json",
+   "media_assets/DQ.MA.900011.json"
+  ],
+  "sources": [
+   "sources/DQ.SRC.0001.json",
+   "sources/DQ.SRC.0002.json",
+   "sources/DQ.SRC.0003.json"
+  ],
+  "licenses": [
+   "licenses/DQ.LIC.0001.json",
+   "licenses/DQ.LIC.0002.json",
+   "licenses/DQ.LIC.0003.json"
+  ],
+  "scenes": []
+ },
+ "counts": {
+  "questions": 12,
+  "episodes": 6,
+  "media_assets": 21,
+  "discoveries": 14
+ }
+}

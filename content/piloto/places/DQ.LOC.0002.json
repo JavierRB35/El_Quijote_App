@@ -1,0 +1,32 @@
+{
+ "id": "DQ.LOC.0002",
+ "contract_version": "1.0.0",
+ "kind": "lugar",
+ "literary_name": "Campo de Montiel",
+ "modern_name": "Campo de Montiel (Ciudad Real/Albacete)",
+ "variants": [],
+ "geometry": {
+  "type": "Point",
+  "coordinates": [
+   -2.95,
+   38.7
+  ],
+  "crs": "EPSG:4326",
+  "precision_m": 15000
+ },
+ "status": "explicito",
+ "presented_as": "hecho",
+ "certainty": "TEXTO_EXPLICITO",
+ "chapters": [
+  "DQ.P1.C08"
+ ],
+ "sources": [
+  "DQ.SRC.0001"
+ ],
+ "attribution_note": "Terreno del inicio de la segunda salida (contexto de I, 2 e I, 8). Comarca histórica del Campo de Montiel.",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-05"
+ }
+}

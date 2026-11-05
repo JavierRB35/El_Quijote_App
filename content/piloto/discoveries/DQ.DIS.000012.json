@@ -1,0 +1,28 @@
+{
+ "id": "DQ.DIS.000012",
+ "contract_version": "1.0.0",
+ "kind": "cita_literal",
+ "content": "«—Dadme albricias, buenos señores, de que ya yo no soy don Quijote de la Mancha, sino Alonso Quijano…»",
+ "speaker": {
+  "person_id": "DQ.PER.0001",
+  "label": "don Quijote (Alonso Quijano)"
+ },
+ "context": "Piloto II.74; renuncia canónica. Punto de cierre de spoilers de todo el banco.",
+ "passages": [
+  "DQ.P2.C74.P0002"
+ ],
+ "appearance": {
+  "episode_id": "DQ.P2.C74.E01",
+  "moment": "desenlace",
+  "frequency_hint": "ocasional"
+ },
+ "asset_ids": [
+  "DQ.MA.000371"
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-05"
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "id": "DQ.DIS.000006",
+ "contract_version": "1.0.0",
+ "kind": "cita_literal",
+ "content": "«¡Dichosa edad y siglos dichosos aquellos á quien los antiguos pusieron nombre de dorados!»",
+ "speaker": {
+  "person_id": "DQ.PER.0001",
+  "label": "don Quijote (discurso de la Edad de Oro)"
+ },
+ "context": "Piloto I.11.",
+ "passages": [
+  "DQ.P1.C11.P0001"
+ ],
+ "appearance": {
+  "episode_id": "DQ.P1.C11.E01",
+  "moment": "tras_respuesta",
+  "frequency_hint": "ocasional"
+ },
+ "asset_ids": [
+  "DQ.MA.000035"
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-05"
+ }
+}

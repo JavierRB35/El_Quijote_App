@@ -1,0 +1,17 @@
+{
+ "id": "DQ.PER.0003",
+ "contract_version": "1.0.0",
+ "class": "ficticio",
+ "canonical_name": "Rocinante",
+ "variants": [],
+ "relations": [],
+ "appearances": [
+  "DQ.P1.C08.E01"
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-05"
+ }
+}

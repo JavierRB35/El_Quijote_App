@@ -1,0 +1,13 @@
+{
+ "id": "DQ.P1.C08.P0006",
+ "contract_version": "1.0.0",
+ "chapter_id": "DQ.P1.C08",
+ "anchor": "EPUB 1008.xhtml; extracto verbatim",
+ "text_original": "Acudió Sancho Panza á socorrerle á todo el correr de su asno",
+ "text_indexable": "acudió sancho panza á socorrerle á todo el correr de su asno",
+ "position": {
+  "start_char": 2470,
+  "end_char": 2530
+ },
+ "sha256": "sha256:76edc15dc149d269baf2a76320c2608f47fe425b30f738cf07f7e9428fb91345"
+}

@@ -1,0 +1,89 @@
+{
+ "id": "DQ.Q.000109",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C08.E01",
+ "chapter_ids": [
+  "DQ.P1.C08"
+ ],
+ "passage_ids": [
+  "DQ.P1.C08.P0003",
+  "DQ.P1.C08.P0008",
+  "DQ.P1.C08.P0010"
+ ],
+ "prompt": "Relaciona lo que don Quijote percibe con lo que realmente es.",
+ "interaction": {
+  "type": "matching",
+  "options": [
+   {
+    "id": "DQ.Q.000109.O01",
+    "label": "Desaforados gigantes"
+   },
+   {
+    "id": "DQ.Q.000109.O02",
+    "label": "Encantadores que llevan hurtada una princesa"
+   },
+   {
+    "id": "DQ.Q.000109.O03",
+    "label": "Molinos de viento"
+   },
+   {
+    "id": "DQ.Q.000109.O04",
+    "label": "Dos frailes de San Benito"
+   },
+   {
+    "id": "DQ.Q.000109.O05",
+    "label": "Una señora vizcaína que va a Sevilla"
+   },
+   {
+    "id": "DQ.Q.000109.O06",
+    "label": "La princesa hurtada"
+   }
+  ],
+  "pairs": [
+   {
+    "left": "DQ.Q.000109.O01",
+    "right": "DQ.Q.000109.O03"
+   },
+   {
+    "left": "DQ.Q.000109.O02",
+    "right": "DQ.Q.000109.O04"
+   },
+   {
+    "left": "DQ.Q.000109.O06",
+    "right": "DQ.Q.000109.O05"
+   }
+  ],
+  "shuffle_options": false
+ },
+ "rationale": "Tres percepciones desviadas y una broma del narrador (los «dromedarios») fuera del emparejamiento.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C08.P0008",
+   "quote": "algunos encantadores, que llevan hurtada alguna princesa en aquel coche"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "humor",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C08.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900005"
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "molinos"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "molinos emparejamiento percepcion realidad"
+}

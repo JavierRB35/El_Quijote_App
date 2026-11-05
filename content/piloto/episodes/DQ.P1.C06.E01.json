@@ -1,0 +1,27 @@
+{
+ "id": "DQ.P1.C06.E01",
+ "contract_version": "1.0.0",
+ "title": "El escrutinio de la librería",
+ "chapters": [
+  "DQ.P1.C06"
+ ],
+ "narrative_order": 6,
+ "synopsis": "Cura y barbero revisan la biblioteca: quema mayoritaria con salvamentos selectivos (Amadís, Tirante) y la aparición meta-referencial de La Galatea.",
+ "actors": [
+  "DQ.PER.0005",
+  "DQ.PER.0006",
+  "DQ.PER.0007",
+  "DQ.PER.0008",
+  "DQ.PER.0012"
+ ],
+ "places": [
+  "DQ.LOC.0001"
+ ],
+ "passages": [
+  "DQ.P1.C06.P0001",
+  "DQ.P1.C06.P0002"
+ ],
+ "spoiler_flags": {
+  "reveals_future_events": false
+ }
+}

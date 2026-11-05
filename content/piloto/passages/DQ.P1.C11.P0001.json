@@ -1,0 +1,13 @@
+{
+ "id": "DQ.P1.C11.P0001",
+ "contract_version": "1.0.0",
+ "chapter_id": "DQ.P1.C11",
+ "anchor": "EPUB 2011.xhtml; extracto verbatim",
+ "text_original": "¡Dichosa edad y siglos dichosos aquellos á quien los antiguos pusieron nombre de dorados!",
+ "text_indexable": "dichosa edad y siglos dichosos aquellos á quien los antiguos pusieron nombre de dorados",
+ "position": {
+  "start_char": 3282,
+  "end_char": 3352
+ },
+ "sha256": "sha256:2b163f263550b321bc7e010c6c2106a6fe7e843e828ca64669a5aa9e29b1a575"
+}

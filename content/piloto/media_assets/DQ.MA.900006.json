@@ -1,0 +1,34 @@
+{
+ "id": "DQ.MA.900006",
+ "contract_version": "1.0.0",
+ "function": "post_desenlace",
+ "media_class": "RECREACION_IA",
+ "logical_uri": "assets://scenes/part_1/chapter_08/p1_c08_molinos_post.webp",
+ "derivatives": [
+  {
+   "variant": "original",
+   "format": "webp",
+   "width": 1672,
+   "height": 941,
+   "size_bytes": 301808,
+   "sha256": "sha256:c7da1dbb5182fd9183edec3e042383a5293719ac7d68f6d07519dc12e00d5fdf"
+  }
+ ],
+ "alt": "Don Quijote se encuentra en el suelo junto a una lanza rota; Sancho se acerca para ayudarlo junto a un molino de viento.",
+ "source_id": "DQ.SRC.0003",
+ "license_id": "DQ.LIC.0002",
+ "author": "Equipo de arte El_Quijote_App (recreación IA)",
+ "date": "2026-11-05",
+ "allowed_uses": [
+  "uso_personal_app",
+  "almacenamiento_repo_git"
+ ],
+ "license_status": "verificada",
+ "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA (nunca evidencia histórica).",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "spoiler_level": "leve"
+}

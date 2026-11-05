@@ -286,13 +286,33 @@ def validate_package(manifest_path: Path, gate: str = "repo") -> list[dict]:
                 continue
             loaded.setdefault(category, []).append((rel, files_key, load_json(path)))
     index: dict[str, set[str]] = {target: set() for target in set(CATEGORY_TO_INDEX.values())}
+    objects: dict[str, dict[str, dict]] = {}
     for category, items in loaded.items():
         for _rel, _files_key, inst in items:
             index[CATEGORY_TO_INDEX[category]].add(inst["id"])
+            objects.setdefault(category, {})[inst["id"]] = inst
     for category, items in loaded.items():
         for rel, _files_key, inst in items:
             for err in validate_entity(inst, category, gate=gate, index=index):
                 errors.append({**err, "message": f"[{rel}] {err['message']}"})
+    # Reglas de paquete enteras (v0.2.0): duplicados semánticos e imagen previa reveladora.
+    questions = objects.get("question", {})
+    seen_keys: dict[str, str] = {}
+    for qid in sorted(questions):
+        key = questions[qid].get("semantic_key")
+        if key:
+            if key in seen_keys:
+                errors.append({"code": "SEMANTIC_ERROR",
+                               "message": f"semantic_key duplicado '{key}' en {seen_keys[key]} y {qid}"})
+            seen_keys[key] = qid
+    media = objects.get("media_asset", {})
+    for qid in sorted(questions):
+        pre = questions[qid].get("visual_requirements", {}).get("pre_image_media_id")
+        asset = media.get(pre or "")
+        if asset and asset.get("spoiler_level") != "ninguno":
+            errors.append({"code": "SEMANTIC_ERROR",
+                           "message": f"imagen previa de {qid} ({pre}) tiene spoiler_level "
+                                      f"'{asset.get('spoiler_level')}': revelaría la respuesta (§4.3.4)"})
     return errors
 
 
@@ -324,6 +344,8 @@ EXPECTED_INVALID = {
 EXPECTED_INVALID_PACKAGES = {
     "package_invalid_missing_media.json": "REFERENCE_ERROR",
     "package_invalid_stale_contract.json": "CONTRACT_VERSION_UNSUPPORTED",
+    "package_invalid_duplicate_semantic.json": "SEMANTIC_ERROR",
+    "package_invalid_revealing_preimage.json": "SEMANTIC_ERROR",
 }
 
 

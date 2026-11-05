@@ -1,0 +1,20 @@
+{
+  "id": "DQ.MA.000103",
+  "contract_version": "1.0.0",
+  "function": "pre_pregunta",
+  "media_class": "RECREACION_IA",
+  "logical_uri": "assets://scenes/p1c01e01s01/revelador.webp",
+  "derivatives": [
+    { "variant": "hd", "format": "webp", "width": 1920, "height": 1080, "size_bytes": 1, "sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000" }
+  ],
+  "alt": "Activo sintético de prueba con contenido revelador marcado.",
+  "source_id": "DQ.SRC.0003",
+  "license_id": "DQ.LIC.0001",
+  "author": "Producción sintética del proyecto",
+  "date": "2026-11-05",
+  "allowed_uses": ["uso_personal_app", "almacenamiento_repo_git"],
+  "license_status": "verificada",
+  "provenance": "Fixture negativo de paquete: válido por sí solo, prohibido como imagen previa de pregunta.",
+  "review": { "state": "aprobada", "reviewer_role": "tecnica", "date": "2026-11-05" },
+  "spoiler_level": "revelador"
+}

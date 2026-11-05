@@ -92,7 +92,7 @@ Definiciones compartidas (IDs, enumeraciones, Review, EvidenceItem, NormalizedAr
 - `hotspot`: `hotspot_area` normalizada 0..1 con `x+w ≤ 1`, `y+h ≤ 1` (comprobado por el validador).
 - `shuffle_options` puede reordenar el **texto** de las opciones; **nunca** altera el ID de la correcta ni la cita asociada.
 - `evidence`: mínimo 1 elemento. `cita_literal` ⇒ `passage_id` + `quote`; `parrafo_localizado` ⇒ `passage_id`; `fuente_historica`/`estudio_academico` ⇒ `source_id` + `locator`. **Regla anti-fábrica-de-verdades:** si alguna evidencia es `interpretacion_editorial`, `certainty` no puede ser `TEXTO_EXPLICITO` ni `HECHO_HISTORICO_DOCUMENTADO`.
-- `visual_requirements.pre_image_must_not_reveal` es siempre `true`; además, el activo usado como imagen previa o hotspot debe tener `spoiler_level: ninguno` (comprobado en paquete).
+- `visual_requirements.pre_image_must_not_reveal` es siempre `true`; además, el activo usado como **imagen previa** debe tener `spoiler_level: ninguno` (comprobado en paquete; el medio de hotspot se rige por su fase `question`).
 - `semantic_key`: **único entre todas las preguntas del paquete** (detector de duplicados semánticos, §4.3.13).
 - `spoiler_policy` estructurada con `safe_after_episodes[]`; equivalencia documental con la abreviatura editorial: `capitulo_actual` = `[]` + escena del capítulo; `episodios_anteriores` = lista de episodios previos; `siempre` = `[]`; `nunca` = episodios posteriores al suyo.
 - Estados de revisión (`review.state`): `borrador → documentada → revisada → aprobada` (o `descartada`). Solo `aprobada` es empaquetable; la puerta de publicación es editorial.

@@ -31,6 +31,8 @@
               "explanation": { "type": "string", "$comment": "Explicación específica de la opción si procede (encargo §6.2)." }
             }
           },
+          "minItems": 2,
+          "maxItems": 8,
           "uniqueItems": true
         },
         "correct_option_ids": {

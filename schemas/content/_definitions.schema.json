@@ -48,8 +48,8 @@
     },
     "MediaClass": {
       "type": "string",
-      "enum": ["FOTOGRAFIA_ACTUAL", "IMAGEN_HISTORICA", "RECREACION_IA", "ILUSTRACION_EDITORIAL"],
-      "$comment": "Clases de evidencia visual distintas y siempre rotuladas (encargo §2.1, §2.5, §4.7.6)."
+      "enum": ["ACUARELA_HISTORICA", "ARTE_HISTORICO", "FOTOGRAFIA_ACTUAL", "RECREACION_IA", "ILUSTRACION_EDITORIAL"],
+      "$comment": "Clases de evidencia visual distintas y siempre rotuladas (encargo §2.1, §2.5, §4.7.6). ACUARELA_HISTORICA añadida en v0.2.0 para las 415 ilustraciones Tusell inventariadas."
     },
     "LicenseStatus": {
       "type": "string",
@@ -95,7 +95,7 @@
       "properties": {
         "kind": {
           "type": "string",
-          "enum": ["cita_literal", "fuente_historica", "estudio_academico", "interpretacion_editorial"]
+          "enum": ["cita_literal", "parrafo_localizado", "fuente_historica", "estudio_academico", "interpretacion_editorial"]
         },
         "passage_id": { "$ref": "_definitions.schema.json#/$defs/passageId" },
         "quote": { "type": "string", "minLength": 1 },
@@ -107,6 +107,10 @@
         {
           "if": { "properties": { "kind": { "const": "cita_literal" } }, "required": ["kind"] },
           "then": { "required": ["passage_id", "quote"] }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "parrafo_localizado" } }, "required": ["kind"] },
+          "then": { "required": ["passage_id"] }
         },
         {
           "if": { "properties": { "kind": { "enum": ["fuente_historica", "estudio_academico"] } }, "required": ["kind"] },

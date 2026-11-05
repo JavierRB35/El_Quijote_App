@@ -75,7 +75,7 @@ Estas indicaciones sintetizan los requisitos artísticos empleados en la generac
 
 Para regenerar o ampliar una escena, conservar el ID semántico si solo se reemplaza su versión gráfica y registrar una nueva revisión de fichero/hash en `manifest.json`. Si cambia el episodio, la pregunta asociada o la fase narrativa, asignar ID nuevo y revisar enlaces editoriales.
 
-## Cuarta batería — huecos del piloto editorial (solicitud CONTENIDOS, 2026-11-05)
+## Quinta batería — huecos del piloto editorial (solicitud CONTENIDOS, 2026-11-05)
 
 Dos fases sin cobertura detectadas por el catálogo editorial (`docs/CATALOGO_NECESIDADES_VISUALES.md`). Prioridad alta: completan las fases de los capítulos del piloto con preguntas ya producidas.
 

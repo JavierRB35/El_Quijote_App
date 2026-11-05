@@ -23,12 +23,13 @@ Mantiene la tabla de decisiones **cerradas / provisionales / pendientes** (entre
 | DC-15 | Actualizaciones de software y contenido separadas; aviso y consentimiento; nunca instaladas sin permiso | §2.7 |
 | DC-16 | Separación arquitectónica en tres dominios: catálogo cultural versionado (solo lectura), activos audiovisuales, datos privados del jugador | §5.3 |
 | DC-17 | GitHub `JavierRB35/El_Quijote_App` (privado, rama `main`) es el repositorio principal y única fuente de verdad, siempre actualizado | Propietario, 2026-11-05 — ver `GOBERNANZA_GIT.md` |
+| DC-18 | **GO de FASE 1** concedido por el propietario (2026-11-05): sistema vertical mínimo (molinos end-to-end), los 5 criterios de validación empírica de ADR-0001 (incluida la instalación de Node/Rust necesarias), producción editorial del piloto de 6 capítulos y QA de caja negra. **No autoriza** FASE 2 (producción completa), distribución pública ni comercialización | Propietario, 2026-11-05 — `GO_NO_GO_FASE0.md` |
 
 ## 2. Decisiones PROVISIONALES (propuestas concretas pendientes de aprobación del propietario)
 
 | ID | Decisión | Estado | Fuente |
 |---|---|---|---|
-| DP-01 | Stack técnico base: Tauri 2 + React + TypeScript + Vite + Rust + SQLite/FTS5 + epub.js + MapLibre GL JS/PMTiles; escenas HTML/CSS + Web Animations API. **Es propuesta; no autoriza a programar.** Godot 4 solo se reconsidera con evidencia de limitación esencial | Aprobación pendiente (GO/NO-GO) | §2.6, §5.2 |
+| DP-01 | Stack técnico base: Tauri 2 + React + TypeScript + Vite + Rust + SQLite/FTS5 + epub.js + MapLibre GL JS/PMTiles; escenas HTML/CSS + Web Animations API. **Es propuesta; no autoriza a programar.** Godot 4 solo se reconsidera con evidencia de limitación esencial |  Aprobada por DC-18 (GO FASE 1, 2026-11-05): la validación empírica de sus 5 criterios es trabajo de FASE 1 | §2.6, §5.2
 | DP-02 | Objetivo orientativo 1920×1080, adaptación 1440p/4K, ~8 GB RAM, gráfica integrada moderna | NO publicar como requisito validado sin medir | §2.6 |
 | DP-03 | EPUB ilustrado Tusell (>300 acuarelas atribuidas, relación con Doré) como recurso potencial del lector/museo | **Auditoría realizada 2026-11-05** (modo CONTENIDOS): 376 acuarelas + 39 elementos de edición, correspondencia capítulo y alt texts en `assets/ilustraciones_tusell/manifests/`; ver `docs/INVENTARIO_ILUSTRACIONES_TUSELL.md`. Uso interno autorizado; recurso como tal sigue provisional hasta GO/NO-GO | §2.5 |
 | DP-04 | Estructura de repositorio candidata (§6.4) implementada como esqueleto | Sujeta a evolución; carpetas placeholder con `.gitkeep` | §6.4 |
@@ -46,7 +47,7 @@ Mantiene la tabla de decisiones **cerradas / provisionales / pendientes** (entre
 | PEND-05 | Mecanismo para medios pesados: Git LFS vs. releases privados | Decisión al inventariar activos. **Excepción ya decidida (2026-11-05):** ilustraciones Tusell (~29 MB) en Git normal por orden expresa del propietario; ver `GOBERNANZA_GIT.md` §5 | Distribución |
 | PEND-06 | Requisitos hardware objetivo (RAM/VRAM/tamaño instalación) | Mediciones en hardware real | QA, Distribución |
 | PEND-07 | WebView2 en instalador offline: modo de distribución exacto | Prueba en VM limpia sin internet | Distribución |
-| PEND-08 | Aprobación GO/NO-GO de FASE 0 por el propietario | Presentación de los 11 entregables FASE 0 | Todo lo ejecutable |
+| ~~PEND-08~~ | **RESUELTA 2026-11-05:** **GO** del propietario tras la presentación de los 11 entregables → DC-18. FASE 1 autorizada | — | — |
 | PEND-09 | Residuales de la auditoría Tusell: fechas vitales de Salvador Tusell (Wikidata Q96751230 solo «fl. 1895»; pista: Archivo de Arte Valenciano 1981) y licencia declarada de Epublibre EPL 64375 (web inaccesible el 2026-11-05). **Edición Tasso 1905 ya confirmada** en BVPB registro 463832 (digitalización oficial CC BY) | Solo bloquea redistribución pública, no el uso interno | Iconografía, Derechos |
 
 ## 4. Registro de cambios de este documento

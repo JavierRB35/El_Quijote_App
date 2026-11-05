@@ -54,6 +54,6 @@
 | Rol | Estado |
 |---|---|
 | Contrato editorial-técnico v0.2.0 | **Firmado** por CONTENIDOS (b1cb2fe) y consolidado por DESARROLLO |
-| Este dossier | Pendiente de decisión del propietario: **GO** / NO-GO / GO con condiciones |
+| Este dossier | **DECIDIDO: GO** (propietario, 2026-11-05) → registrado como **DC-18**; FASE 1 en marcha |
 
 La decisión del propietario se registrará en `VISION_Y_DECISIONES.md` como DC-18 (GO FASE 1) o su equivalente, con fecha.

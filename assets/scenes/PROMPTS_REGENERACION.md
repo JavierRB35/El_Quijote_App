@@ -39,4 +39,21 @@ Estas indicaciones sintetizan los requisitos artísticos empleados en la generac
 | `p2_c45_barataria_pre` | Sancho sentado como gobernador escucha a dos litigantes en una sala de justicia rural, sin vestuario judicial moderno. | Inicio del gobierno. |
 | `p2_c64_blanca_luna_pre` | Don Quijote y el Caballero de la Blanca Luna a caballo se encaran en una playa histórica de Barcelona, **sin combate ni resultado**. | Desafío previo. |
 
+## Tercera batería — escenas y personajes secundarios
+
+| ID | Variación sobre el prompt base | Uso |
+|---|---|---|
+| `p1_c14_marcela_discurso_pre` | Marcela, pastora autónoma y de porte firme, defiende su libertad desde unas rocas del monte ante pastores que la escuchan; bosque y luz natural, **sin sexualización ni ilustrar un castigo**. | Discurso de Marcela. |
+| `p1_c21_mambrino_pre` | Un barbero de pueblo cabalga bajo la llovizna con una **bacía de latón** brillante sobre la cabeza; Don Quijote lo divisa desde lejos y Sancho duda. **No mostrar conquista ni casco mágico real**. | Equívoco previo. |
+| `p1_c23_maleta_sierra_morena_pre` | Sancho y Don Quijote encuentran una maleta abandonada entre piedras y matorrales de Sierra Morena; sin revelar contenido ni identidad del dueño. | Misterio previo. |
+| `p1_c30_dorotea_micomicona_pre` | Dorotea caracterizada como la supuesta princesa Micomicona pide ayuda al caballero en un claro de Sierra Morena; Sancho escucha, utilería sobria, **sin palacio fantástico**. | Inicio de la farsa. |
+| `p1_c38_armas_letras_pre` | Cena y conversación en la venta, Don Quijote reflexiona sobre armas y letras ante viajeros iluminados por velas; libros y armas sencillas, intimidad narrativa. | Discurso durante tertulia. |
+| `p2_c01_recuperacion_pre` | En la casa de Alonso Quijano, cura y barbero lo visitan mientras descansa sin armadura; ambiente manchego cotidiano y luz de ventana. | Conversación inicial de la segunda parte. |
+| `p2_c20_bodas_camacho_pre` | Festejo campesino de las bodas de Camacho con mesas, viandas y músicos del siglo XVII; Sancho contempla la comida y Don Quijote observa; **sin revelar el ardid de Basilio**. | Celebración previa. |
+| `p2_c22_cueva_montesinos_pre` | Entrada rocosa a la cueva de Montesinos; Don Quijote ceñido con cuerda se prepara para bajar mientras Sancho y un guía lo sujetan, **sin interior onírico ni desenlace**. | Antes del descenso. |
+| `p2_c29_barca_encantada_pre` | Orilla de río ancho y una pequeña barca de madera amarrada; Don Quijote pretende embarcar mientras Sancho duda, molino lejano sin destacar ningún peligro, **sin magia visible**. | Antes de navegar. |
+| `p2_c30_duquesa_caceria_pre` | Encuentro de Don Quijote y Sancho con una duquesa aristocrática a caballo acompañada de cazadores y perros en un bosque; telas y armamento de caza verosímiles. | Primer encuentro ducal. |
+| `p2_c54_ricote_sancho_pre` | Sancho se reúne con Ricote, antiguo vecino morisco retornado, y comparte un almuerzo campestre con otros viajeros; escena humana respetuosa, sin exotizar. | Reencuentro y diálogo. |
+| `p2_c62_imprenta_barcelona_pre` | Taller de imprenta barcelonés del siglo XVII, prensa manual de madera, cajistas, pliegos y Don Quijote observando curiosamente el trabajo; **sin textos legibles ni tecnología industrial moderna**. | Visita a la imprenta. |
+
 Para regenerar o ampliar una escena, conservar el ID semántico si solo se reemplaza su versión gráfica y registrar una nueva revisión de fichero/hash en `manifest.json`. Si cambia el episodio, la pregunta asociada o la fase narrativa, asignar ID nuevo y revisar enlaces editoriales.

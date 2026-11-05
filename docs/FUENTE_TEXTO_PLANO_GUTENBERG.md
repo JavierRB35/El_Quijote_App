@@ -53,3 +53,12 @@ El hash Git de la copia reconstruida y el hash Git del archivo recibido coincide
 4. **Pruebas de integración**: cobertura 126/126, no pérdida de párrafos, navegación por parte/capítulo, búsqueda/acento, enlaces desde preguntas y constancia de fuente/edición por cita.
 
 **Estado de aceptación:** fuente recibida e integrada físicamente en una rama de Git con trazabilidad de bytes; **no** edición canonizada, lector implementado ni licencia general de redistribución.
+
+## Primeras discrepancias comprobables (muestra, no cotejo exhaustivo)
+
+| Comprobación | EPUB Tusell / paquete piloto | TXT Gutenberg #2000 | Dictamen |
+|---|---|---|---|
+| Arranque de I.8 | `DQ.P1.C08.P0001.text_original`: «EEn esto descubrieron treinta ó cuarenta molinos…» | Línea 2.560: «En esto, descubrieron treinta o cuarenta molinos…» | El doble **E** del piloto es un probable defecto al recomponer una capitular; las diferencias de puntuación/tilde requieren cotejo editorial antes de corregirse |
+| Encantador Frestón | `docs/INVENTARIO_OCURRENCIAS_ENTIDADES.md`: **0** ocurrencias en el EPUB auditado | **3** menciones en las líneas 2.444, 2.446 y 2.616 | Discrepancia de cobertura textual entre fuentes o en el método de detección; **no** inferir omisión deliberada ni modificar citas sin comparar ambos textos |
+
+Estas dos pruebas delimitan trabajo de **PEND-01**. **No se ha ejecutado un diff crítico completo** de los seis capítulos y el archivo original Gutenberg permanece inalterado.

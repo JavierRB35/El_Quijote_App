@@ -1,0 +1,27 @@
+{
+ "id": "DQ.MUS.0006",
+ "contract_version": "1.0.0",
+ "title": "La visita del cura y el barbero",
+ "authorship": "Salvador Tusell (sobre composición de Gustave Doré)",
+ "attribution_status": "atribuida",
+ "date": "1905",
+ "provenance": "EPUB Epublibre/Titivillus 2024; ed. Barcelona, Luis Tasso, 1905 (BVPB registro 463832)",
+ "technique": "Acuarela sobre composición de Gustave Doré (reproducción editorial)",
+ "owner_entity": "Edición Barcelona, Luis Tasso, 1905 (ejemplar digitalizado: BVPB registro 463832)",
+ "context": "Apertura de la segunda parte: la prudencia de los amigos y la charla literaria (II, 1).",
+ "relation_to_quixote": "Verificar en auditoría si la acuarela 171 («Metáfora del loco sevillano») ilustra un pasaje AUSENTE en esta edición digitalizada.",
+ "chapters": [
+  "DQ.P2.C01"
+ ],
+ "media_ids": [
+  "DQ.MA.000170"
+ ],
+ "source_id": "DQ.SRC.0002",
+ "license_id": "DQ.LIC.0001",
+ "certainty": "HECHO_HISTORICO_DOCUMENTADO",
+ "review": {
+  "state": "documentada",
+  "reviewer_role": "editorial",
+  "date": "2026-11-05"
+ }
+}

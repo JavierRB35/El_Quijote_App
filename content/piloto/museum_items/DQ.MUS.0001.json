@@ -1,0 +1,27 @@
+{
+ "id": "DQ.MUS.0001",
+ "contract_version": "1.0.0",
+ "title": "El espurgo de la librería",
+ "authorship": "Salvador Tusell (sobre composición de Gustave Doré)",
+ "attribution_status": "atribuida",
+ "date": "1905",
+ "provenance": "EPUB Epublibre/Titivillus 2024; ed. Barcelona, Luis Tasso, 1905 (BVPB registro 463832)",
+ "technique": "Acuarela sobre composición de Gustave Doré (reproducción editorial)",
+ "owner_entity": "Edición Barcelona, Luis Tasso, 1905 (ejemplar digitalizado: BVPB registro 463832)",
+ "context": "La quema de los libros de caballerías, salvamentos selectivos incluidos (I, 6).",
+ "relation_to_quixote": "Ilustra literalmente el «escrutinio» que dicta el cura; el alt del EPUB lo titula «Espurgo de libros de caballerías».",
+ "chapters": [
+  "DQ.P1.C06"
+ ],
+ "media_ids": [
+  "DQ.MA.000021"
+ ],
+ "source_id": "DQ.SRC.0002",
+ "license_id": "DQ.LIC.0001",
+ "certainty": "HECHO_HISTORICO_DOCUMENTADO",
+ "review": {
+  "state": "documentada",
+  "reviewer_role": "editorial",
+  "date": "2026-11-05"
+ }
+}

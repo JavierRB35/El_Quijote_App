@@ -190,13 +190,23 @@
    "licenses/DQ.LIC.0002.json",
    "licenses/DQ.LIC.0003.json"
   ],
-  "scenes": []
+  "scenes": [],
+  "museum_items": [
+   "museum_items/DQ.MUS.0001.json",
+   "museum_items/DQ.MUS.0002.json",
+   "museum_items/DQ.MUS.0003.json",
+   "museum_items/DQ.MUS.0004.json",
+   "museum_items/DQ.MUS.0005.json",
+   "museum_items/DQ.MUS.0006.json",
+   "museum_items/DQ.MUS.0007.json"
+  ]
  },
  "counts": {
   "questions": 50,
   "episodes": 6,
   "media_assets": 22,
   "discoveries": 14,
-  "passages": 39
+  "passages": 39,
+  "museum_items": 7
  }
 }

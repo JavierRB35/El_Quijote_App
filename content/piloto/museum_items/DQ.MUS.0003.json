@@ -1,0 +1,27 @@
+{
+ "id": "DQ.MUS.0003",
+ "contract_version": "1.0.0",
+ "title": "Sancho ayuda a montar a don Quijote tras los molinos",
+ "authorship": "Salvador Tusell (sobre composición de Gustave Doré)",
+ "attribution_status": "atribuida",
+ "date": "1905",
+ "provenance": "EPUB Epublibre/Titivillus 2024; ed. Barcelona, Luis Tasso, 1905 (BVPB registro 463832)",
+ "technique": "Acuarela sobre composición de Gustave Doré (reproducción editorial)",
+ "owner_entity": "Edición Barcelona, Luis Tasso, 1905 (ejemplar digitalizado: BVPB registro 463832)",
+ "context": "El desenlace físico de la embestida: Rocinante derribado y su amo remontado (I, 8).",
+ "relation_to_quixote": "Verificada visualmente contra el alt del EPUB; contraste útil con la recreación DQ.MA.900006 (post).",
+ "chapters": [
+  "DQ.P1.C08"
+ ],
+ "media_ids": [
+  "DQ.MA.000029"
+ ],
+ "source_id": "DQ.SRC.0002",
+ "license_id": "DQ.LIC.0001",
+ "certainty": "HECHO_HISTORICO_DOCUMENTADO",
+ "review": {
+  "state": "documentada",
+  "reviewer_role": "editorial",
+  "date": "2026-11-05"
+ }
+}

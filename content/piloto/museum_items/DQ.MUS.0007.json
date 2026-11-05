@@ -1,0 +1,27 @@
+{
+ "id": "DQ.MUS.0007",
+ "contract_version": "1.0.0",
+ "title": "Don Quijote en el lecho con el crucifijo",
+ "authorship": "Salvador Tusell (sobre composición de Gustave Doré)",
+ "attribution_status": "atribuida",
+ "date": "1905",
+ "provenance": "EPUB Epublibre/Titivillus 2024; ed. Barcelona, Luis Tasso, 1905 (BVPB registro 463832)",
+ "technique": "Acuarela sobre composición de Gustave Doré (reproducción editorial)",
+ "owner_entity": "Edición Barcelona, Luis Tasso, 1905 (ejemplar digitalizado: BVPB registro 463832)",
+ "context": "La enfermedad final y el anuncio de la muerte de Alonso Quijano (II, 74).",
+ "relation_to_quixote": "Contraste recomendado con la recreación DQ.MA.900011 (post, «El regreso de Alonso Quijano»).",
+ "chapters": [
+  "DQ.P2.C74"
+ ],
+ "media_ids": [
+  "DQ.MA.000371"
+ ],
+ "source_id": "DQ.SRC.0002",
+ "license_id": "DQ.LIC.0001",
+ "certainty": "HECHO_HISTORICO_DOCUMENTADO",
+ "review": {
+  "state": "documentada",
+  "reviewer_role": "editorial",
+  "date": "2026-11-05"
+ }
+}

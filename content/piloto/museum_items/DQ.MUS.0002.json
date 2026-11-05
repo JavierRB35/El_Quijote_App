@@ -1,0 +1,27 @@
+{
+ "id": "DQ.MUS.0002",
+ "contract_version": "1.0.0",
+ "title": "Don Quijote arremete contra los frailes de San Benito",
+ "authorship": "Salvador Tusell (sobre composición de Gustave Doré)",
+ "attribution_status": "atribuida",
+ "date": "1905",
+ "provenance": "EPUB Epublibre/Titivillus 2024; ed. Barcelona, Luis Tasso, 1905 (BVPB registro 463832)",
+ "technique": "Acuarela sobre composición de Gustave Doré (reproducción editorial)",
+ "owner_entity": "Edición Barcelona, Luis Tasso, 1905 (ejemplar digitalizado: BVPB registro 463832)",
+ "context": "Los «bultos negros» que don Quijote toma por encantadores con una princesa hurtada (I, 8).",
+ "relation_to_quixote": "Corresponde a la composición de Doré para la segunda aventura del capítulo VIII.",
+ "chapters": [
+  "DQ.P1.C08"
+ ],
+ "media_ids": [
+  "DQ.MA.000027"
+ ],
+ "source_id": "DQ.SRC.0002",
+ "license_id": "DQ.LIC.0001",
+ "certainty": "HECHO_HISTORICO_DOCUMENTADO",
+ "review": {
+  "state": "documentada",
+  "reviewer_role": "editorial",
+  "date": "2026-11-05"
+ }
+}

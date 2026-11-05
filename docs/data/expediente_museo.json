@@ -1,0 +1,21 @@
+{
+ "aviso": "Piezas candidatas NO verificadas individualmente: NO se suben ni se muestran hasta resolver su licencia (PEND-03). Se listan como cartera de curaduría.",
+ "cartera_pendiente": [
+  {
+   "pieza": "Retrato de Cervantes (acuarela 001 de la ed. Tasso)",
+   "estado": "verificada como pieza de la edición; su vínculo con retratos históricos de Cervantes requiere estudio (atribución del modelo: DEBATIDO)"
+  },
+  {
+   "pieza": "Edición de Luis Tasso, Barcelona, 1905, 2 vols. (pieza bibliográfica completa)",
+   "estado": "documentada en BVPB registro 463832 (CC BY); ficha de museo pendiente de campaña"
+  },
+  {
+   "pieza": "Composiciones de Gustave Doré originales (Gallica/BnF y otras)",
+   "estado": "dominio público probable; verificar recurso por recurso (PEND-03) antes de añadir medios"
+  },
+  {
+   "pieza": "Retratos históricos de Cervantes (Jauregui, del Mazo y otros)",
+   "estado": "atribuciones debatidas; exige verificación institucional individual (PEND-03)"
+  }
+ ]
+}

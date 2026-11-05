@@ -19,7 +19,7 @@ Documento rector: **`docs/ENCARGO_MAESTRO.md`** — léelo íntegro antes de act
 
 ## Fase actual
 
-FASE 0 — auditoría y diseño. **No implementar el videojuego ni producir catálogo en masa** hasta GO/NO-GO explícito del propietario (encargo §8). Documentación y propuestas de esquema: autorizadas.
+**FASE 1 — piloto coordinado** (autorizada por DC-18, GO del propietario el 2026-11-05). Autorizado: sistema vertical (molinos end-to-end), criterios de validación empírica de ADR-0001, producción editorial del piloto de 6 capítulos, QA de caja negra. **NO autorizado**: FASE 2 (producción completa), distribución pública, comercialización. Código en ramas `feature/*` + Pull Request. Entorno MSVC de esta máquina: compilar con `app/scripts/cargo-dev.cmd` y ejecutar dev con `app/scripts/tauri-dev.cmd` (el MSVC de VS 18 está incompleto; ver ADR-0001).
 
 ## Idioma
 

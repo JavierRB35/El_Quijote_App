@@ -4,7 +4,7 @@
 
 ## 1. Por qué era urgente
 
-La auditoría de ilustraciones detectó que la digitalización Epublibre/Titivillus parece **abreviar el texto** respecto a la edición impresa Tasso 1905: ni «Frestón» ni la «metáfora del loco sevillano» (acuarela 171) existen en el texto del EPUB, aunque la iconografía sí los representa. Citar solo desde el EPUB sería frágil: cualquier pasaje ausente o alterado invalidaría preguntas y citas «literales».
+El cotejo de integridad detectó **variantes reales entre ediciones**: el EPUB Tasso dice «**Fristón**» donde otras ediciones (p. ej. PG #2000) dicen «**Frestón**» (I, 7, intercambio del ama sobre el sabio «Muñatón»). Una primera hipótesis de «digitalización abreviada» (basada en buscar la frase fija «loco de Sevilla» y «Frestón») fue **corregida el 2026-11-05**: el pasaje del loco existe en II, 1 con la fórmula «En la casa de los locos de Sevilla…». Conclusión vigente: las ediciones difieren en **variantes de palabra y ortografía áurea**, no (hasta donde se ha verificado) en pasajes ausentes — y precisamente por eso el cotejo sistemático contra la edición de referencia es imprescindible antes de dar cualquier cita por literal.
 
 ## 2. Decisión: arquitectura textual de tres capas
 

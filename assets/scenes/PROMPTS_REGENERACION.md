@@ -74,3 +74,12 @@ Estas indicaciones sintetizan los requisitos artísticos empleados en la generac
 | `p2_c63_galeras_barcelona_pre` | Cubierta de galera mediterránea a comienzos del XVII: remeros, marineros, aparejos, Don Quijote y Sancho; sin persecución ni revelación. | Visita marítima previa a la aventura de Ana Félix. |
 
 Para regenerar o ampliar una escena, conservar el ID semántico si solo se reemplaza su versión gráfica y registrar una nueva revisión de fichero/hash en `manifest.json`. Si cambia el episodio, la pregunta asociada o la fase narrativa, asignar ID nuevo y revisar enlaces editoriales.
+
+## Cuarta batería — huecos del piloto editorial (solicitud CONTENIDOS, 2026-11-05)
+
+Dos fases sin cobertura detectadas por el catálogo editorial (`docs/CATALOGO_NECESIDADES_VISUALES.md`). Prioridad alta: completan las fases de los capítulos del piloto con preguntas ya producidas.
+
+| ID | Variación sobre el prompt base | Uso |
+|---|---|---|
+| `p1_c06_hoguera_corral_post` | Patio-corral manchego al anochecer: hoguera con libros de caballerías ardiendo, el ama lanza un libro por la ventana abierta, cura y barbero junto al fuego, sobrina observa; **sin Don Quijote (duerme dentro), humo moderado, sin llamas fuera de la hoguera**. | Desenlace del escrutinio (I, 6; fase `after`). |
+| `p2_c01_loco_sevillano_reveal` | Misma sala manchega que `p2_c01_recuperacion_pre` (continuidad de espacio y luz): don Quijote, animado, narra con gesto vivo la historia del loco de Sevilla ante el cura y el barbero que le escuchan; ventana con luz suave; **sin personajes de la historia representados, sin locos ni perros visibles**. | Durante la conversación literaria (II, 1; fase `reveal`); contraste con la acuarela DQ.MA.000170. |

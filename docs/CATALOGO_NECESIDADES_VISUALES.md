@@ -52,7 +52,7 @@ Patrón recomendado: la recreación IA abre el episodio (`before`, spoiler `ning
 |---|---|---|---|---|
 | 043 | «Discurso de Don Quijote sobre la Edad Dorada.» | I.15 (3015.xhtml) | I.11 | **Vincular a I.11** (el discurso está verbatim en 2011.xhtml): colocación del editor sin función puente identificable; criterio curatorial del episodio *representado* |
 | 056 | «Sancho sale de la venta» | I.18 (1.18.xhtml) | cierre de I.17 | **Puente de apertura válido**: I.18 abre con Sancho llegando «marchito y desmayado» tras salir de la venta; acuarela funcional como imagen de transición |
-| 171 | «Metáfora del loco sevillano» | II.1 (2.1.xhtml) | pasaje **AUSENTE** en esta digitalización (verificado: ni «loco de Sevilla» ni «Frestón» existen en el EPUB) | **Evidencia de abreviación**: la iconografía sigue el texto completo de la ed. Tasso 1905. Mostrar la acuarela con nota «pasaje completo en la edición de referencia» (RESOLUCION_PEND01) |
+| 171 | «Metáfora del loco sevillano» | II.1 (2.1.xhtml) | pasaje **presente** en II.1 con la fórmula «En la casa de los locos de Sevilla estaba un hombre...» | **Sin discrepancia (corregido 2026-11-05):** mi búsqueda previa usó la frase fija «loco de Sevilla», que no ocurre en el texto; la historia existe y la acuarela la ilustra correctamente. La única variante real confirmada es **Fristón (Tasso/EPUB) vs. Frestón (otras ediciones)**, en I.7 |
 
 **Criterio adoptado:** el manifiesto conserva la colocación real del EPUB (capa de fuente, intacta); la vinculación editorial (museo, cuaderno, preguntas) usa el episodio *representado*. Consecuencia estructural registrada: la capa de texto del lector cotejará su integridad contra la edición de referencia (DQ.ED.0002).
 

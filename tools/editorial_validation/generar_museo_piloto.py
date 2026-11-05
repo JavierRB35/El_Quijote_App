@@ -35,7 +35,7 @@ PIEZAS = [
   "Composición derivada de la plancha de Doré para la aventura de los rebaños.", "documentada"),
  ("DQ.MUS.0006", "La visita del cura y el barbero", "DQ.MA.000170", ["DQ.P2.C01"],
   "Apertura de la segunda parte: la prudencia de los amigos y la charla literaria (II, 1).",
-  "Verificar en auditoría si la acuarela 171 («Metáfora del loco sevillano») ilustra un pasaje AUSENTE en esta edición digitalizada.", "documentada"),
+  "La acuarela 171 («Metáfora del loco sevillano») ilustra la historia del «loco de Sevilla» que don Quijote cuenta en este capítulo — presente en el texto con la fórmula «En la casa de los locos de Sevilla estaba un hombre... graduado en cánones, por Osuna» (corregido 2026-11-05; ver cotejo textual).", "documentada"),
  ("DQ.MUS.0007", "Don Quijote en el lecho con el crucifijo", "DQ.MA.000371", ["DQ.P2.C74"],
   "La enfermedad final y el anuncio de la muerte de Alonso Quijano (II, 74).",
   "Contraste recomendado con la recreación DQ.MA.900011 (post, «El regreso de Alonso Quijano»).", "documentada"),
@@ -46,6 +46,9 @@ def main():
     files = manifest["files"]
     files.setdefault("museum_items", [])
     for mid, titulo, media_id, caps, contexto, relacion, estado in PIEZAS:
+        rel = "museum_items/%s.json" % mid
+        if rel in files["museum_items"]:
+            continue  # idempotente: no duplicar fichas ya registradas
         obj = {
             "id": mid, "contract_version": CV, "title": titulo,
             "authorship": AUTORIA, "attribution_status": "atribuida",
@@ -64,7 +67,7 @@ def main():
         os.makedirs(os.path.dirname(ruta), exist_ok=True)
         with open(ruta, "w", encoding="utf-8") as f:
             json.dump(obj, f, ensure_ascii=False, indent=1)
-        files["museum_items"].append("museum_items/%s.json" % mid)
+        files["museum_items"].append(rel)
     manifest["counts"]["museum_items"] = len(files["museum_items"])
     with open(os.path.join(PKG, "package.json"), "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, indent=1)

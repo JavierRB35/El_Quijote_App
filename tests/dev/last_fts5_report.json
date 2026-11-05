@@ -1,0 +1,117 @@
+{
+  "criterio": "ADR-0001.1 — FTS5 con castellano áureo",
+  "sqlite": "3.50.4",
+  "fts5_disponible": true,
+  "diseno": "text_original (mostrar, UNINDEXED) + text_indexable normalizado (buscar)",
+  "normalizacion_ejemplo": {
+    "original": "«—¿Qué gigantes? —dijo Sancho Panza. —Aquellos que allí ves, respondió su amo, d",
+    "indexable": "que gigantes dijo sancho panza aquellos que alli ves respondio su amo de los bra"
+  },
+  "integridad_del_original": true,
+  "pruebas": [
+    {
+      "query": "gigantes",
+      "esperado": [
+        "DQ.P1.C08.P0001"
+      ],
+      "obtenido": [
+        "DQ.P1.C08.P0001"
+      ],
+      "ok": true,
+      "demuestra": "palabra simple sobre capa normalizada"
+    },
+    {
+      "query": "molino",
+      "esperado": [
+        "DQ.P1.C08.P0002"
+      ],
+      "obtenido": [
+        "DQ.P1.C08.P0002"
+      ],
+      "ok": true,
+      "demuestra": "singular encuentra 'molino' (y NO confunde con 'molinos' de otro pasaje si no está)"
+    },
+    {
+      "query": "leguas",
+      "esperado": [
+        "DQ.P1.C08.P0001"
+      ],
+      "obtenido": [
+        "DQ.P1.C08.P0001"
+      ],
+      "ok": true,
+      "demuestra": "término del diálogo áureo"
+    },
+    {
+      "query": "sabia",
+      "esperado": [
+        "DQ.TEST.P0005",
+        "DQ.TEST.P0006"
+      ],
+      "obtenido": [
+        "DQ.TEST.P0005",
+        "DQ.TEST.P0006"
+      ],
+      "ok": true,
+      "demuestra": "imperfecto sin tilde: la capa normalizada iguala 'sabía' del original con 'sabia' de consulta"
+    },
+    {
+      "query": "sabía",
+      "esperado": [
+        "DQ.TEST.P0005",
+        "DQ.TEST.P0006"
+      ],
+      "obtenido": [
+        "DQ.TEST.P0005",
+        "DQ.TEST.P0006"
+      ],
+      "ok": true,
+      "demuestra": "consulta CON tilde también debe encontrar el texto sin tilde (remove_diacritics + capa)"
+    },
+    {
+      "query": "lanza astillero",
+      "esperado": [
+        "DQ.P1.C01.P0001"
+      ],
+      "obtenido": [
+        "DQ.P1.C01.P0001"
+      ],
+      "ok": true,
+      "demuestra": "dos términos AND"
+    },
+    {
+      "query": "quijote",
+      "esperado": [
+        "DQ.P1.C08.P0002",
+        "DQ.TEST.P0005"
+      ],
+      "obtenido": [
+        "DQ.TEST.P0005",
+        "DQ.P1.C08.P0002"
+      ],
+      "ok": true,
+      "demuestra": "nombre del hidalgo en las muestras que lo contienen"
+    },
+    {
+      "query": "freston",
+      "esperado": [],
+      "obtenido": [],
+      "ok": true,
+      "demuestra": "término ausente en esta edición (hallazgo del inventario: cotejo PEND-01)"
+    },
+    {
+      "query": "nombre quiero",
+      "esperado": [
+        "DQ.P1.C01.P0001"
+      ],
+      "obtenido": [
+        "DQ.P1.C01.P0001"
+      ],
+      "ok": true,
+      "demuestra": "dos términos AND (texto literal: «no quiero» — FTS5 sin stemming no iguala 'querer', y eso es correcto aquí)"
+    }
+  ],
+  "total": 9,
+  "ok": 9,
+  "veredicto": "CRITERIO 1 SUPERADO"
+}

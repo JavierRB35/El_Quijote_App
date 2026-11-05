@@ -43,6 +43,9 @@ No se difieren pushes «para más tarde». Si un bloque está a medias, se commi
 
 **Excepción registrada (2026-11-05, modo ILUSTRACIÓN):** el propietario ordenó expresamente «Usa el repositorio en github de El_Quijote_App y deja las imágenes organizadas según su ubicación correcta en el proyecto». Se admiten en Git normal **solo 11 WebP optimizados** (~3,1 MB en conjunto; ficheros individuales de unos 150–335 KB), dentro de `assets/scenes/**`. El ZIP independiente contiene los PNG maestros y no se commitea al repositorio. Los activos son `recreacion_ia`, con procedencia y riesgo de spoilers declarados en `assets/scenes/manifest.json`, y quedan pendientes de aprobación editorial. La excepción no levanta la exclusión general de otros medios pesados ni resuelve PEND-05 para el resto de recursos.
 
+
+**Ampliación de excepción (2026-11-05, batería visual 02):** por nueva orden expresa del propietario («Genera otra batería de escenas y fusiónalas en main organizadas»), se añaden otros **12 WebP optimizados**, ~3,5 MB, repartidos entre `assets/scenes/part_1` y `part_2`, elevando el piloto a **23 WebP**, ~6,5 MB. Todos son recreaciones IA de uso interno, con manifiesto y hashes; los 12 PNG maestros de esta tanda se entregan en ZIP fuera de Git. Se mantiene sin cambios la prohibición de otros medios pesados y la revisión de PEND-05.
+
 ## 6. Versionado y etiquetas
 
 - Etiquetas `v0.0.x` para hitos de documentación aprobados (p. ej. cierre de FASE 0).

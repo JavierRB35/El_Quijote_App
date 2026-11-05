@@ -1,6 +1,6 @@
-# Dirección artística — primer paquete de escenas
+# Dirección artística — colección de escenas
 
-**Estado:** piloto visual para revisión, v0.1, 5 de noviembre de 2026.
+**Estado:** piloto visual para revisión, v0.2, 5 de noviembre de 2026. Dos baterías, 23 imágenes en conjunto.
 
 ## Identidad
 
@@ -26,6 +26,7 @@
 - Sujeto principal preferentemente en tercio izquierdo o central-izquierdo para reservar parte del entorno a la UI. Cada escena exige comprobación de área segura en la maquetación real; no hay caja universal garantizada.
 - Elementos definidos en primer término, plano medio y fondo para zoom y paneos discretos; evitar afirmar que existe parallax real sin recortes de profundidad.
 - Anular animaciones para usuarios con preferencia de movimiento reducido. No sustituir información textual por detalles visuales difíciles de ver.
+- La segunda batería incorpora perspectivas de interiores, conversaciones, objetos escénicos y desafíos sin depender siempre del mismo encuadre de protagonistas a caballo; conservar esta diversidad en la producción posterior.
 
 ### Orden narrativo
 

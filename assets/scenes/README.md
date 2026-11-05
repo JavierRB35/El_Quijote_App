@@ -1,4 +1,4 @@
-# Catálogo de escenas — piloto visual v0.1
+# Catálogo de escenas — piloto visual v0.2
 
 Las imágenes de este directorio son **recreaciones originales generadas con IA** para el videojuego *El Quijote*. Su lenguaje visual sigue el encargo maestro: realismo cinematográfico con influencias pictóricas, España de comienzos del siglo XVII, profundidad para un tratamiento 2.5D, personajes consistentes e interfaz discreta.
 
@@ -23,6 +23,8 @@ Las imágenes de este directorio son **recreaciones originales generadas con IA*
 
 Este piloto no incorpora ninguna de las acuarelas del EPUB ilustrado por Salvador Tusell ni imágenes de Gustave Doré. Atribución: **recreación artística generada mediante OpenAI ImageGen, noviembre de 2026, a petición del propietario del proyecto**. La obra literaria es la referencia temática, no un origen de píxeles. No se otorga licencia CC0 ni se afirma un permiso sobre obras de terceros. Revisar condiciones aplicables si cambia el ámbito personal del proyecto.
 
-Por petición expresa del propietario, los **WebP optimizados de este piloto** se almacenan en Git normal (11 archivos, aproximadamente 3 MB en total); los PNG maestros de mayor tamaño permanecen fuera del repositorio y se entregan en el ZIP independiente. Esta excepción debe estar recogida en `.gitignore` y `docs/GOBERNANZA_GIT.md`.
+Por petición expresa del propietario, los **WebP optimizados de este piloto** se almacenan en Git normal (23 archivos, unos 6,5 MB en total); los PNG maestros de mayor tamaño permanecen fuera del repositorio y se entregan en ZIPs independientes por batería. Esta excepción está recogida en `.gitignore` y `docs/GOBERNANZA_GIT.md`.
+
+**Historial del catálogo:** v0.1, 11 imágenes (10 escenas más referencia); v0.2, 12 escenas nuevas en 12 capítulos distintos, conservando los IDs y los hashes de los 11 activos anteriores. No se considera un catálogo editorial aprobado: la versión indica evolución del paquete artístico, no aprobación GO/NO-GO del videojuego.
 
 Todos los archivos quedan en `editorial_review_pending` hasta que se cotejen los capítulos, la indumentaria, la arquitectura y los detalles de utilería. Las asociaciones con la novela no constituyen una edición textual ni justifican preguntas por sí mismas.

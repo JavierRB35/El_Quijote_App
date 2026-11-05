@@ -29,11 +29,11 @@
 
 ### 2.1 Evaluación de la capa Tusell
 
-1. **Edición impresa identificada:** *El ingenioso hidalgo Don Quijote de la Mancha*, ilustraciones de Gustavo Doré y Salvador Tusell, Barcelona, Luis Tasso, 1905, en dos volúmenes (Wikisource, ficha de autor; cotejada con la marca «TASSO» visible en la acuarela `001.jpg`). **Pendiente de confirmar en el catálogo de la BNE.**
+1. **Edición impresa CONFIRMADA en registro patrimonial oficial (2026-11-05):** *El ingenioso hidalgo Don Quijote de la Mancha*, Barcelona, **Luis Tasso, 1905**, 2 vols. (568 + 647 págs. + láminas), «adornada con más de 350 acuarelas» de Tusell sobre composiciones de Doré — **BVPB, registro [463832](https://bvpb.mcu.es/cervantes/es/consulta/registro.do?id=463832)**, ejemplar del Centro de Estudios Cervantinos (signatura 24), digitalizada por la BVPB con licencia **CC BY**. Concordante con Wikisource y con la marca «TASSO» visible en la acuarela `001.jpg`. Estado: **HECHO_HISTORICO_DOCUMENTADO**.
 2. **EE. UU.:** obra publicada en 1905, antes de 1930 → dominio público (regla de 95 años desde publicación). HECHO derivado de regla legal + fecha de edición documentada.
-3. **España (LPI, RDL 1/1996):** obras con autor conocido: 80 años post mortem; las fuentes consultadas solo establecen «fl. 1895» para Tusell (Wikisource) y discrepan sobre su biografía (Valencia 1877 vs. San Gervasio de Cassolas). **Escenario más conservador** (fallecimiento hipotético en 1946) → dominio público desde el 01-01-2027. Escenario probable (fallecimiento en las primeras décadas del s. XX) → dominio público ya vigente. Estado global: **muy probable dominio público, con la fecha de muerte como única incógnita** (DISCUTIDO/NO_ESTABLECIDO en ese punto concreto).
-4. La reproducción fotomecánica de una obra en dominio público **no genera derecho nuevo** (doctrina CJUE, *Painer* C-145/10). La capa de digitalización de 2024 no renueva la protección de las imágenes.
-5. **Epublibre** distribuye con licencia comunitaria gratuita de carácter no comercial; el EPUB no la incluye. Esto **no restringe** el uso de imágenes subyacentes en dominio público, pero obliga a cortesía de atribución por la digitalización.
+3. **España (LPI, RDL 1/1996):** obras con autor conocido: 80 años post mortem; las fuentes consultadas solo establecen «fl. 1895» para Tusell (Wikidata Q96751230: sin P569/P570, solo floruit 1895) y lo sitúan en San Gervasi de Cassoles (Barcelona). **Escenario más conservador** (fallecimiento hipotético en 1946) → dominio público desde el 01-01-2027. Escenario probable (fallecimiento en las primeras décadas del s. XX) → dominio público ya vigente. Estado global: **muy probable dominio público, con la fecha de muerte como única incógnita** (DISCUTIDO/NO_ESTABLECIDO en ese punto concreto).
+4. La reproducción fotomecánica de una obra en dominio público **no genera derecho nuevo** (doctrina CJUE, *Painer* C-145/10). La capa de digitalización de 2024 no renueva la protección de las imágenes. Existe además copia digital oficial **CC BY** de la edición de 1905 en la BVPB, alternativa trazable a la digitalización de Epublibre.
+5. **Epublibre** distribuye con licencia comunitaria gratuita de carácter no comercial; el EPUB no la incluye y la ficha web (EPL 64375) no respondió en la comprobación de 2026-11-05. Esto **no restringe** el uso de imágenes subyacentes en dominio público, pero obliga a cortesía de atribución por la digitalización.
 
 ## 3. Condiciones de uso adoptadas para este proyecto
 
@@ -44,9 +44,9 @@
 
 ## 4. Pendientes de verificación (bloquean redistribución, no el uso interno)
 
-1. Ficha de la edición Tasso 1905 en el catálogo **BNE** (perma-link y numeración de volúmenes).
-2. Ficha **EPL 64375** en Epublibre: licencia declarada de la edición digital.
-3. Fechas vitales de **Salvador Tusell** (pista: *Archivo de Arte Valenciano*, 1981, Real Academia de San Carlos; y BNE autoridad). Cerrará el único punto DISCUTIDO.
+1. ~~Ficha de la edición Tasso 1905~~ **RESUELTA 2026-11-05:** confirmada en BVPB registro [463832](https://bvpb.mcu.es/cervantes/es/consulta/registro.do?id=463832) (digitalización oficial CC BY). Pendiente opcional: perma-link equivalente en BNE.
+2. Ficha **EPL 64375** en Epublibre: licencia declarada de la edición digital (la web no respondió el 2026-11-05; el expediente dispone ya de la alternativa BVPB CC BY, de mayor autoridad).
+3. Fechas vitales de **Salvador Tusell** (Wikidata Q96751230 solo registra «fl. 1895»; pista documental: *Archivo de Arte Valenciano*, 1981, Real Academia de San Carlos). Cerrará el único punto DISCUTIDO.
 4. Confirmar que las 376 numeradas son todas acuarelas de Tusell y no mezclas con reproducciones directas de Doré (muestreo visual ya positivo: `001`, `029`, `376`; auditoría completa pendiente si el destino del proyecto cambia).
 
 ## 5. Trazabilidad

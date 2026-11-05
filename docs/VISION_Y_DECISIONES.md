@@ -46,9 +46,10 @@ Mantiene la tabla de decisiones **cerradas / provisionales / pendientes** (entre
 | PEND-06 | Requisitos hardware objetivo (RAM/VRAM/tamaño instalación) | Mediciones en hardware real | QA, Distribución |
 | PEND-07 | WebView2 en instalador offline: modo de distribución exacto | Prueba en VM limpia sin internet | Distribución |
 | PEND-08 | Aprobación GO/NO-GO de FASE 0 por el propietario | Presentación de los 11 entregables FASE 0 | Todo lo ejecutable |
-| PEND-09 | Residuales de la auditoría Tusell: fechas vitales de Salvador Tusell (BNE / Archivo de Arte Valenciano 1981), ficha de la ed. Tasso 1905 en BNE y licencia declarada de Epublibre EPL 64375 | Verificación documental; solo bloquea redistribución pública, no el uso interno | Iconografía, Derechos |
+| PEND-09 | Residuales de la auditoría Tusell: fechas vitales de Salvador Tusell (Wikidata Q96751230 solo «fl. 1895»; pista: Archivo de Arte Valenciano 1981) y licencia declarada de Epublibre EPL 64375 (web inaccesible el 2026-11-05). **Edición Tasso 1905 ya confirmada** en BVPB registro 463832 (digitalización oficial CC BY) | Solo bloquea redistribución pública, no el uso interno | Iconografía, Derechos |
 
 ## 4. Registro de cambios de este documento
 
 - 2026-11-05: creación inicial; DC-01…DC-17, DP-01…DP-05, PEND-01…PEND-08.
 - 2026-11-05 (modo CONTENIDOS): DP-03 auditado; PEND-02 resuelta con evidencia (PEND-09 recoge residuales); PEND-05 anotada con la excepción de las ilustraciones Tusell.
+- 2026-11-05 (modo CONTENIDOS, continuación): entregables FASE 0.3 y 0.4 — `MAPA_EPISODIOS_Y_CAPITULOS.md` (126 capítulos con títulos, secciones 1605 y acuarelas reales; ~87 episodios propuestos) y `PLAN_PILOTO_EDITORIAL_SEIS_CAPITULOS.md` (muestra justificada: I.8, I.6, I.11, I.18, II.1, II.74). Corregidos defectos del manifiesto (títulos NCX y numeración de capítulos). Edición Tasso 1905 confirmada en BVPB (PEND-09 reducida).

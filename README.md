@@ -12,6 +12,8 @@ Trabajo autorizado en esta fase: estudio, inventario, diseño documental, estima
 
 **Entrega 2026-11-05 (modo CONTENIDOS):** auditoría y extracción reales del EPUB ilustrado — **376 acuarelas de Salvador Tusell + 39 elementos de edición** en [`assets/ilustraciones_tusell/`](assets/ilustraciones_tusell/), con manifiestos (CSV/JSON), [informe de inventario](docs/INVENTARIO_ILUSTRACIONES_TUSELL.md) y [expediente de derechos](docs/DERECHOS_Y_PROCEDENCIA_ILUSTRACIONES.md). Corresponde a la decisión DP-03 y resuelve PEND-02 (`docs/VISION_Y_DECISIONES.md`). Excepción de `.gitignore` documentada en [`docs/GOBERNANZA_GIT.md`](docs/GOBERNANZA_GIT.md) §5.
 
+**Continuación 2026-11-05 (FASE 0, entregables 3 y 4):** [mapa de episodios y capítulos](docs/MAPA_EPISODIOS_Y_CAPITULOS.md) generado desde datos reales (126 capítulos, ~87 episodios propuestos, `docs/data/mapa_capitulos.json`) y [plan del piloto editorial de seis capítulos](docs/PLAN_PILOTO_EDITORIAL_SEIS_CAPITULOS.md) (I.8, I.6, I.11, I.18, II.1, II.74 — justificados). Edición Tasso 1905 confirmada en [BVPB registro 463832](https://bvpb.mcu.es/cervantes/es/consulta/registro.do?id=463832).
+
 ## Repositorio
 
 - **Principal y única fuente de verdad:** `JavierRB35/El_Quijote_App` en GitHub (privado), rama `main`.

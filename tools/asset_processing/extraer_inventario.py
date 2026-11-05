@@ -107,9 +107,9 @@ def parse_opf(root):
 def parse_ncx(root):
     ncx = open(os.path.join(root, "OEBPS", "toc.ncx"), encoding="utf-8").read()
     entries = []
-    for m in re.finditer(r"<text>(.*?)</text>\s*<content src=\"([^\"]+)\"", ncx, re.S):
+    for m in re.finditer(r"<text>(.*?)</text>.*?<content src=\"([^\"]+)\"", ncx, re.S):
         label = html.unescape(re.sub(r"\s+", " ", m.group(1))).strip()
-        src = m.group(2).split("#")[0].lstrip("./")
+        src = os.path.basename(m.group(2).split("#")[0])
         entries.append((label, src))
     return entries
 
@@ -258,16 +258,22 @@ def main():
         r["duplicado_de"] = dup_map.get(r["id"], [])
 
     # --- copiar ficheros ---
+    import shutil
+    import stat
+    def copiar(ruta_src, ruta_dst):
+        if os.path.exists(ruta_dst):
+            os.chmod(ruta_dst, stat.S_IWRITE)
+            os.remove(ruta_dst)
+        shutil.copyfile(ruta_src, ruta_dst)
+        os.chmod(ruta_dst, stat.S_IWRITE)
     os.makedirs(os.path.join(out, "acuarelas"), exist_ok=True)
     os.makedirs(os.path.join(out, "decorativos"), exist_ok=True)
     for r in acuarelas:
-        import shutil
-        shutil.copy2(os.path.join(img_dir, r["archivo"]),
-                     os.path.join(out, "acuarelas", r["archivo"]))
+        copiar(os.path.join(img_dir, r["archivo"]),
+               os.path.join(out, "acuarelas", r["archivo"]))
     for r in otras:
-        import shutil
-        shutil.copy2(os.path.join(img_dir, r["archivo"]),
-                     os.path.join(out, "decorativos", r["archivo"]))
+        copiar(os.path.join(img_dir, r["archivo"]),
+               os.path.join(out, "decorativos", r["archivo"]))
 
     # --- CSV plano ---
     csv_path = os.path.join(out, "manifest_ilustraciones.csv")

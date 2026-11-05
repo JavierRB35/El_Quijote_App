@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "chapter.schema.json",
+  "title": "Chapter",
+  "$comment": "BORRADOR 0.1 — capítulo según edición de referencia; seccion_1605 documenta la división en cuatro partes de la ed. de 1605 que conserva el EPUB Tusell.",
+  "type": "object",
+  "required": ["id", "part", "number", "title", "edition_id", "order"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^DQ\\.P[12]\\.C[0-9]{2}$"},
+    "part": {"enum": ["I", "II"]},
+    "number": {"type": "integer", "minimum": 1, "maximum": 74},
+    "title": {"type": "string", "minLength": 3},
+    "edition_id": {"type": "string", "pattern": "^DQ\\.ED\\.[0-9]{4}$"},
+    "order": {"type": "integer", "minimum": 1, "maximum": 126},
+    "source_file": {"type": "string"},
+    "seccion_1605": {"enum": ["Primera", "Segunda", "Tercera", "Cuarta"]},
+    "review_state": {"enum": ["borrador", "documentada", "revisada", "aprobada", "descartada"]}
+  },
+  "unevaluatedProperties": false
+}

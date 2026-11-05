@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "scene.schema.json",
+  "title": "Scene",
+  "$comment": "BORRADOR 0.1 — fase narrativa de una escena 2.5D. Hotspots en coordenadas normalizadas 0-1.",
+  "type": "object",
+  "required": ["id", "episode_id", "phase", "media_ids"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^DQ\\.P[12]\\.E[0-9]{2}\\.S[0-9]{2}$"},
+    "episode_id": {"type": "string", "pattern": "^DQ\\.P[12]\\.E[0-9]{2}$"},
+    "phase": {"enum": ["before", "question", "reveal", "after"]},
+    "media_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "layers": {"type": "array", "items": {"type": "object",
+               "required": ["media_id", "role"],
+               "properties": {"media_id": {"type": "string"},
+                               "role": {"enum": ["fondo", "medio", "primer_plano", "efecto"]},
+                               "parallax": {"type": "number", "minimum": 0, "maximum": 1}}}},
+    "hotspots": {"type": "array", "items": {"type": "object",
+                 "required": ["id", "media_id", "rect", "action"],
+                 "properties": {"id": {"type": "string"},
+                                 "media_id": {"type": "string"},
+                                 "rect": {"type": "array", "minItems": 4, "maxItems": 4,
+                                           "items": {"type": "number", "minimum": 0, "maximum": 1}},
+                                 "action": {"enum": ["detalle", "pregunta", "cita", "descubrimiento"]},
+                                 "keyboard_focus_order": {"type": "integer"}}}},
+    "audio_ids": {"type": "array", "items": {"type": "string"}},
+    "subtitle_ref": {"type": "string"},
+    "reduced_motion_safe": {"type": "boolean"},
+    "review_state": {"enum": ["borrador", "documentada", "revisada", "aprobada", "descartada"]}
+  },
+  "unevaluatedProperties": false
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "episode.schema.json",
+  "title": "Episode",
+  "$comment": "BORRADOR 0.1 — agrupación narrativa canónica; el mapa de referencia es docs/data/mapa_capitulos.json.",
+  "type": "object",
+  "required": ["id", "title", "chapter_ids", "narrative_order", "synopsis",
+               "spoiler_flags", "review_state"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^DQ\\.P[12]\\.E[0-9]{2}$"},
+    "title": {"type": "string", "minLength": 3},
+    "chapter_ids": {"type": "array", "minItems": 1,
+                    "items": {"type": "string", "pattern": "^DQ\\.P[12]\\.C[0-9]{2}$"}},
+    "narrative_order": {"type": "integer", "minimum": 1},
+    "synopsis": {"type": "string", "minLength": 20},
+    "actor_ids": {"type": "array", "items": {"type": "string", "pattern": "^DQ\\.PER\\.[0-9]{6}$"}},
+    "place_ids": {"type": "array", "items": {"type": "string", "pattern": "^DQ\\.LOC\\.[0-9]{6}$"}},
+    "passage_ids": {"type": "array", "items": {"type": "string"}},
+    "media_ids": {"type": "array", "items": {"type": "string"}},
+    "spoiler_flags": {"type": "object",
+                      "properties": {
+                        "muerte_personaje": {"type": "boolean"},
+                        "final_obra": {"type": "boolean"},
+                        "identidad_revelada": {"type": "boolean"}
+                      },
+                      "additionalProperties": false},
+    "review_state": {"enum": ["borrador", "documentada", "revisada", "aprobada", "descartada"]}
+  },
+  "unevaluatedProperties": false
+}

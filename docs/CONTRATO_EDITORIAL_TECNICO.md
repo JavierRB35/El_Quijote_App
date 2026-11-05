@@ -4,14 +4,14 @@
 **Modos responsables:** CONTENIDOS + DESARROLLO
 **Última actualización:** 2026-11-05
 
-## Alcance previsto (checklist del bootstrap) → estado en este borrador
+## Alcance previsto (checklist del bootstrap) → estado al 2026-11-05
 
-1. JSON Schema por cada entidad del §6.2 — **parcial**: `Question` y `MediaAsset` completos (los dos más críticos para la integración); resto pendiente de redactar en `/schemas/`.
+1. JSON Schema por cada entidad del §6.2 — **13 esquemas en `/schemas/`** (question, media_asset, episode, scene, passage, chapter, edition, discovery, person, place_route, museum_item, source, license); falta `Profile` (dominio `player/`, del equipo técnico).
 2. Convención de IDs estables — **hecho** (§1). Esquema de ejemplo, NO inventario de contenido aprobado.
-3. Reglas de evolución, compatibilidad y migraciones/alias — **hecho** (§8).
-4. Ejemplos sintéticos **explícitamente no publicables** — **parcial**: `single_choice` completo (§6); faltan multi/ordenación/emparejamiento/hotspot y las demás entidades.
-5. Pruebas de contrato con casos negativos (§6.3.7) — **lista definida** (§7); automatización pendiente (equipo técnico).
-6. Manifests de paquete e índice por episodios — **reglas definidas** (§8); formato binario/detalle pendiente con el equipo técnico.
+3. Reglas de evolución, compatibilidad y migraciones/alias — **hecho** (§7).
+4. Ejemplos sintéticos **explícitamente no publicables** — **los 6 tipos de pregunta** (single, multi, true_false, ordering, matching, hotspot) + episode + media_asset + discovery, en `schemas/content/examples/`.
+5. Pruebas de contrato con casos negativos (§6.3.7) — **automatizadas**: `tools/editorial_validation/validar_contrato.py` — 37/37 PASS (13 esquemas, 9 positivos, 8 semánticas, 7 negativos que fallan como deben). Ejecución: `python -I tools/editorial_validation/validar_contrato.py <raiz_repo>`.
+6. Manifests de paquete e índice por episodios — **reglas definidas** (§7); formato binario/detalle pendiente con el equipo técnico.
 
 ## Regla de integración vinculante
 

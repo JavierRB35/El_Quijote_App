@@ -1,0 +1,25 @@
+{
+  "_aviso": "EJEMPLO SINTETICO - NO PUBLICABLE. Ordenacion por seleccion/arrastre con alternativa de teclado.",
+  "id": "DQ.Q.000004",
+  "schema_version": "0.1.0",
+  "episode_id": "DQ.P1.E04",
+  "chapter_ids": ["DQ.P1.C08", "DQ.P1.C09", "DQ.P1.C11"],
+  "passage_ids": ["DQ.P1.C08.PS001", "DQ.P1.C09.PS001", "DQ.P1.C11.PS001"],
+  "prompt": "Ordena cronológicamente estas primeras aventuras de la segunda salida.",
+  "type": "ordering",
+  "options": [
+    {"id": "DQ.Q.000004.Oa", "label": "Los molinos de viento"},
+    {"id": "DQ.Q.000004.Ob", "label": "La batalla con el vizcaíno"},
+    {"id": "DQ.Q.000004.Oc", "label": "El encuentro con los cabreros"},
+    {"id": "DQ.Q.000004.Od", "label": "La pelea con los yangüeses"}
+  ],
+  "solution": {
+    "order": ["DQ.Q.000004.Oa", "DQ.Q.000004.Ob", "DQ.Q.000004.Oc", "DQ.Q.000004.Od"]
+  },
+  "rationale": "Orden canónico de la segunda salida: molinos (I, 8), vizcaíno (I, 8-9), cabreros (I, 11), yangüeses (I, 15).",
+  "evidence": [{"kind": "parafraasis_localizada", "ref": "mapa capitulos DQ.P1.C08-C15", "certainty": "TEXTO_EXPLICITO"}],
+  "difficulty": "media",
+  "spoiler_policy": "episodios_anteriores",
+  "review_state": "borrador",
+  "semantic_key": "orden cronologico molinos vizcaino cabreros yangueses"
+}

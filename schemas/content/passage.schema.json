@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "passage.schema.json",
+  "title": "Passage",
+  "$comment": "BORRADOR 0.1 — segmento textual con localizador estable. text_original intacto según la Edition; text_indexable normalizado para búsqueda (FTS5).",
+  "type": "object",
+  "required": ["id", "chapter_id", "edition_id", "anchor", "text_original", "position", "hash"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^DQ\\.P[12]\\.C[0-9]{2}\\.PS[0-9]{3}$"},
+    "chapter_id": {"type": "string", "pattern": "^DQ\\.P[12]\\.C[0-9]{2}$"},
+    "edition_id": {"type": "string", "pattern": "^DQ\\.ED\\.[0-9]{4}$"},
+    "anchor": {"type": "string", "minLength": 1},
+    "text_original": {"type": "string", "minLength": 1},
+    "text_indexable": {"type": "string"},
+    "position": {"type": "integer", "minimum": 0},
+    "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "notes": {"type": "string"}
+  },
+  "unevaluatedProperties": false
+}

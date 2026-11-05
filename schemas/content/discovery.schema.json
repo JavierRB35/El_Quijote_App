@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "discovery.schema.json",
+  "title": "Discovery",
+  "$comment": "BORRADOR 0.1 — cápsula de descubrimiento: cita literal, refrán, humor, curiosidad o interpretación graduada (encargo §4.4).",
+  "type": "object",
+  "required": ["id", "kind", "content", "certainty", "review_state"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^DQ\\.A\\.[0-9]{6}$"},
+    "kind": {"enum": ["cita_literal", "refran", "humor", "curiosidad",
+                       "interpretacion", "recepcion"]},
+    "content": {"type": "string", "minLength": 10},
+    "speaker": {"type": ["string", "null"]},
+    "context": {"type": "string"},
+    "passage_ids": {"type": "array", "items": {"type": "string"}},
+    "bibliography": {"type": "array", "items": {"type": "string"}},
+    "condition_display": {"enum": ["tras_capitulo", "tras_episodio", "aleatorio", "siempre"]},
+    "media_ids": {"type": "array", "items": {"type": "string"}},
+    "certainty": {"enum": ["TEXTO_EXPLICITO", "HECHO_HISTORICO_DOCUMENTADO",
+                            "INTERPRETACION_ACADEMICA", "HIPOTESIS_PLAUSIBLE",
+                            "DISCUTIDO", "RECREACION_ARTISTICA"]},
+    "review_state": {"enum": ["borrador", "documentada", "revisada", "aprobada", "descartada"]}
+  },
+  "unevaluatedProperties": false
+}

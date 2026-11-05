@@ -1,0 +1,14 @@
+{
+  "_aviso": "EJEMPLO SINTETICO - NO PUBLICABLE. Episodio multicapitulo propuesto en el mapa FASE 0.3.",
+  "id": "DQ.P1.E04",
+  "title": "Los molinos de viento y la batalla con el vizcaíno",
+  "chapter_ids": ["DQ.P1.C08", "DQ.P1.C09"],
+  "narrative_order": 4,
+  "synopsis": "Don Quijote ve gigantes donde Sancho distingue molinos, embiste al primero, cae derribado y reinterpreta la derrota; acto seguido se enfrenta a un vizcaíno que ofendió a su escudero, combate suspendido por la intervención de las dueñas del coche.",
+  "actor_ids": ["DQ.PER.000001", "DQ.PER.000002"],
+  "place_ids": ["DQ.LOC.000001"],
+  "passage_ids": ["DQ.P1.C08.PS003", "DQ.P1.C09.PS001"],
+  "media_ids": ["DQ.IL.0026", "DQ.IL.0027", "DQ.IL.0028", "DQ.IL.0029"],
+  "spoiler_flags": {"muerte_personaje": false, "final_obra": false, "identidad_revelada": false},
+  "review_state": "borrador"
+}

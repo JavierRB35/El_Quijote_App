@@ -1,0 +1,40 @@
+{
+  "source_id": "DQ.SRC.0004",
+  "source_status": "recibida_verificada_tecnicamente_candidata",
+  "repository_path": "content/textos/gutenberg_2000/El_Quijote.txt",
+  "source_url": "https://www.gutenberg.org/ebooks/2000",
+  "direct_download_url": "https://www.gutenberg.org/cache/epub/2000/pg2000.txt",
+  "received_date": "2026-11-05",
+  "sha256": "afa1a638df7a27c343ee2d786036f5b52a0669fb75c09ac3ae594ff04fb6e239",
+  "git_blob_sha": "9d7a51e978dca96b11ba1d1b66eabd57c6ef5eb5",
+  "size_bytes": 2225775,
+  "encoding": "UTF-8",
+  "byte_order_mark": false,
+  "line_ending": "CRLF",
+  "line_count": 38056,
+  "chapters": {
+    "part_1": 52,
+    "part_2": 74,
+    "total": 126
+  },
+  "anchors_1_based": {
+    "part_1_start_line": 1064,
+    "part_1_first_chapter_line": 1069,
+    "part_1_chapter_52_line": 17594,
+    "part_1_internal_second_section_line": 2859,
+    "part_2_start_line": 18044,
+    "part_2_first_chapter_line": 18398,
+    "part_2_final_chapter_line": 37449,
+    "gutenberg_end_marker_line": 37707
+  },
+  "integrity_checks": {
+    "utf8_decode": "PASS",
+    "source_start_end_markers": "PASS",
+    "chapter_heading_count_and_order": "PASS",
+    "same_bytes_as_user_file": "PASS_BY_GIT_BLOB_SHA",
+    "textual_collation_with_tusell": "PENDING"
+  },
+  "publication_ready": false,
+  "reader_integrated": false,
+  "notes": "Manifiesto de procedencia e integridad; no es un ContentPackage ni sustituye la revisión de derechos/editorial PEND-01. Cualquier transformación debe conservar la copia fuente intacta y generar un nuevo hash."
+}

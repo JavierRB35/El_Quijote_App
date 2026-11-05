@@ -31,18 +31,20 @@ Estado: `✔` implementado con evidencia · `◐` borrador/proposal · `○` pen
 | §6.4 Mecanismo LFS vs releases | DESARROLLO | PEND-05 | Decisión + prueba de clonado/instalación | ○ |
 | BVPB como fuente oficial CC BY de la ed. 1905 | CONTENIDOS | expediente derechos | Registro 463832 citado con fecha de consulta | ✔ |
 
-## C. Desarrollo (filas para DESARROLLO — no cerradas desde CONTENIDOS)
+## C. Desarrollo (cerradas por DESARROLLO donde procede; el resto es trabajo de FASE 1)
 
 | Req. | Responsable | Archivo / entidad | Prueba de aceptación | Estado |
 |---|---|---|---|---|
-| §5.2 ADR del stack Tauri 2 | DESARROLLO | `docs/ARQUITECTURA_Y_ADR.md` | ADR con comparación Godot 4 y riesgos offline | ○ |
-| §5.3 Separación catálogo/activos/perfil | DESARROLLO | arquitectura | Prueba de actualización de catálogo sin tocar perfil | ○ |
-| §5.2 FTS5 castellano áureo | DESARROLLO | índice búsqueda | Búsqueda con «á»/«sabia» y ortografía 1905 | ○ |
-| §2.7 Perfiles + backup atómico | DESARROLLO | storage | Restauración demostrable tras fallo simulado | ○ |
-| §7.3 Claves IA en almacén seguro | DESARROLLO | security | Ningún secreto en repo/backup/logs (grep del release) | ○ |
-| §7.2 Instalación offline en VM limpia | DESARROLLO + QA | instalador | Recorrido completo sin red | ○ |
-| §7.4 Prueba de caja negra con usuarios | QA | plan de pruebas | Guiones por perfil de jugador; problemas registrados | ○ |
-| Consumidor técnico del paquete editorial | DESARROLLO | importer | Integración sin preguntas improvisadas (criterio §9) | ○ |
+| §5.2 ADR del stack Tauri 2 | DESARROLLO | `docs/ARQUITECTURA_Y_ADR.md` | ADR-0001 completo: comparativa Godot 4/Electron/nativo, riesgos offline y 5 criterios de validación empírica definidos | ◐ (propuesto; validación empírica = FASE 1) |
+| §5.4 Especificación funcional | DESARROLLO | `docs/ESPECIFICACION_FUNCIONAL.md` | 13 subsistemas con requisitos `EF-*` verificables y prueba referida | ✔ (v1.0 para GO/NO-GO) |
+| §8.10 Plan de QA y aceptación | DESARROLLO | `docs/PLAN_QA_Y_ACEPTACION.md` | Capas, 7 perfiles de caja negra, criterios de salida por fase; deuda declarada | ✔ (v1.0 para GO/NO-GO) |
+| §5.3 Separación catálogo/activos/perfil | DESARROLLO | arquitectura (ADR-0002) | Prueba de actualización de catálogo sin tocar perfil | ○ (FASE 1) |
+| §5.2 FTS5 castellano áureo | DESARROLLO | índice búsqueda (ADR-0002) | Búsqueda con «á»/«sabia» y ortografía 1905 | ○ (FASE 1, criterio ADR-0001.1) |
+| §2.7 Perfiles + backup atómico | DESARROLLO | storage (EF-PER) | Restauración demostrable tras fallo simulado | ○ (FASE 1) |
+| §7.3 Claves IA en almacén seguro | DESARROLLO | security (EF-IA) | Ningún secreto en repo/backup/logs (grep del release) | ○ (FASE 1) |
+| §7.2 Instalación offline en VM limpia | DESARROLLO + QA | instalador (criterio ADR-0001.3) | Recorrido completo sin red | ○ (FASE 1) |
+| §7.4 Prueba de caja negra con usuarios | QA | `PLAN_QA_Y_ACEPTACION.md` §2 | 7 perfiles definidos; ejecución y registro en FASE 1 | ◐ |
+| Consumidor técnico del paquete editorial | DESARROLLO | `importar_precarga.py` + `validate.py` | **HECHO:** precarga (73 registros) y piloto I.8 (12 preguntas) VÁLIDOS sin reescritura manual — criterio §9 | ✔ |
 
 ## D. Coordinación / control
 

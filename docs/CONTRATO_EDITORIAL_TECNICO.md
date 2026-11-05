@@ -194,3 +194,19 @@ La cita del ejemplo es ilustrativa del método: **debe cotejarse contra la edici
 3. Índice FTS5: campos indexados y tratamiento del castellano áureo (variantes diacríticas de la ed. 1905: «á», «á…», ortografía de la época).
 4. Dónde vive el catálogo validado (SQLite generado en build vs. JSON validado en runtime).
 5. Mecanismo de parche cultural versionado sin tocar datos de perfil (§5.3.A del encargo).
+
+## 9. Divergencias detectadas — manifiesto de escenas (commit `ae927a1`) vs `media_asset.schema` (borrador)
+
+Detectadas el 2026-11-05 por CONTENIDOS tras la integración del primer paquete visual. **Convergencias:** `media_class: recreacion_ia`, `review_state: borrador`, `sha256` real, `source_class: RECREACION_ARTISTICA` (≡ certainty), `schema_version: 0.1.0`, política de no mezclar acuarelas Tusell en la línea de escenas (coherente con la limitación de resolución documentada: 849×688 px mediana).
+
+| Campo escenas (ae927a1) | Campo schema (borrador) | Recomendación para v0.1 |
+|---|---|---|
+| `id: "personajes_ref"` + `candidate_media_id: "DQ.MED.900001"` | `id` contractual único | Distinguir `slug` (descriptivo) de `id` contractual; decidir cuál persiste como clave de relaciones |
+| `width_px` / `height_px` | `width` / `height` | Unificar nombres (propuesta: `width`/`height`) |
+| `mime_type` | `mime` | Unificar (`mime`) |
+| `phase: "reference"` | phase: before/question/reveal/after | Añadir `reference` al enum de Scene (no de MediaAsset) o moverlo a uso |
+| `title_es` / `alt_es` / `attribution_es` (sufijo de idioma) | `alt` / `author` (neutros) | **Adoptar el sufijo `_es`** y prever objeto multilingüe futuro (encargo §2.6); es la opción más i18n-ready |
+| `rights_status` + `source_class` | `license_id` + `source_id` obligatorios | Completar el paquete con `DQ.SRC.*`/`DQ.LIC.*` de las recreaciones propias (licencia «derechos propios») |
+| — (no existe) | `bytes` obligatorio | Añadir `bytes` al manifiesto de escenas (empaquetado/actualizaciones lo necesitan) |
+
+Decisión pendiente de **doble revisión** (CONTENIDOS + DESARROLLO); ninguna de las partes debe cambiar unilateralmente el formato del otro paquete antes de la v0.1 del contrato.

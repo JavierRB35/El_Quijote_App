@@ -1,0 +1,37 @@
+# El_Quijote_App
+
+Videojuego premium para PC basado en las **dos partes completas de Don Quijote de la Mancha**, con equilibrio real entre aventura narrativa interactiva, preguntas de respuesta seleccionada, atlas geográfico, museo histórico-literario y cuaderno personal de investigador. Proyecto personal, no destinado a distribución pública ni comercial en su fase actual.
+
+> **Documento rector:** [`docs/ENCARGO_MAESTRO.md`](docs/ENCARGO_MAESTRO.md) — especificación íntegra de producción editorial y desarrollo. Todo trabajo debe ser conforme a él.
+
+## Estado del proyecto
+
+**FASE 0 — Auditoría y diseño.** No hay implementación del videojuego, producción de contenido ni código de aplicación. La implementación requiere la aprobación expresa del propietario en el punto de control GO/NO-GO (encargo maestro, §8).
+
+Trabajo autorizado en esta fase: estudio, inventario, diseño documental, estimaciones y propuestas de esquema.
+
+## Repositorio
+
+- **Principal y única fuente de verdad:** `JavierRB35/El_Quijote_App` en GitHub (privado), rama `main`.
+- Regla del propietario (2026-11-05): **GitHub debe estar siempre actualizado** — ver [`docs/GOBERNANZA_GIT.md`](docs/GOBERNANZA_GIT.md).
+- Registro de decisiones cerradas/provisionales/pendientes: [`docs/VISION_Y_DECISIONES.md`](docs/VISION_Y_DECISIONES.md). No reabrir decisiones cerradas.
+
+## Estructura del repositorio
+
+Estructura candidata del encargo (§6.4), sujeta a validación y evolución:
+
+```
+/docs/       Especificaciones, contratos, ADR, gobernanza y planes
+/schemas/    JSON Schema: content / media / player / manifests
+/content/    Catálogo cultural versionado (solo lectura en ejecución)
+/assets/     Activos audiovisuales (maestros fuera de Git hasta decidir LFS)
+/app/        Aplicación: ui / domain / storage / native / accessibility
+/tools/      Validación editorial, empaquetado, procesado de activos
+/tests/      Contratos / content / unit / integration / ui / offline / accessibility
+```
+
+## Reglas inmediatas
+
+1. **Nada de secretos, claves de IA, el EPUB privado del propietario ni datos personales en Git** (`.gitignore` lo aplica; encargo §2.7 y §6.5.11).
+2. Los medios pesados no se suben hasta decidir el mecanismo (Git LFS vs. releases) según §6.4.
+3. Toda entrega acaba en commit + push a `origin/main` (o PR según fase). Ver [`docs/GOBERNANZA_GIT.md`](docs/GOBERNANZA_GIT.md).

@@ -1,0 +1,37 @@
+# --- Secretos y credenciales (encargo §2.7: nunca en repositorio ni backup) ---
+.env
+.env.*
+*.key
+secrets/
+
+# --- Material privado del propietario (encargo §6.5.11: no subir el EPUB privado) ---
+*.epub
+
+# --- Artefactos de build y dependencias ---
+node_modules/
+dist/
+target/
+.vite/
+coverage/
+__pycache__/
+.venv/
+
+# --- Sistema ---
+Thumbs.db
+.DS_Store
+
+# --- Medios pesados: PROVISIONAL hasta decidir Git LFS vs. releases (encargo §6.4) ---
+# Los maestros audiovisuales no se suben a Git; solo manifiestos, hashes y metadatos.
+assets/**/*.png
+assets/**/*.jpg
+assets/**/*.jpeg
+assets/**/*.webp
+assets/**/*.avif
+assets/**/*.gif
+assets/**/*.mp3
+assets/**/*.ogg
+assets/**/*.wav
+assets/**/*.m4a
+assets/**/*.mp4
+assets/**/*.pmtiles
+!**/.gitkeep

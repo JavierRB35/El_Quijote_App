@@ -1,0 +1,49 @@
+# GOBERNANZA GIT — «GitHub como repositorio principal, siempre actualizado»
+
+**Decisión del propietario (2026-11-05):** GitHub (`JavierRB35/El_Quijote_App`, privado, rama `main`) es el **repositorio principal y única fuente de verdad** del proyecto, y debe mantenerse **siempre actualizado**. Registrada como `D-2026-11-05-01` en `VISION_Y_DECISIONES.md`.
+
+## 1. Principio rector
+
+Ningún trabajo está terminado hasta que está en `origin/main`. El estado local de cualquier máquina es **desechable**; lo que no está en GitHub se considera no hecho. `main` en GitHub es además la copia de seguridad de todo el trabajo documental y de especificación.
+
+## 2. Cadencia de sincronización (obligatoria)
+
+| Momento | Acción |
+|---|---|
+| Inicio de sesión de trabajo | `git pull --rebase origin main` |
+| Tras cada entregable o bloque coherente | `git commit` con mensaje descriptivo |
+| Cierre de cualquier sesión | `git push origin main` (o PR abierta y lista). **Prohibido cerrar con trabajo solo local.** |
+
+No se difieren pushes «para más tarde». Si un bloque está a medias, se commitea con mensaje explícito `WIP:` solo si es imprescindible, y se resuelve en la misma jornada.
+
+## 3. Ramas y revisión
+
+- **FASE 0 (documentación):** commits directos a `main` permitidos. Justificación: agente único, sin código ejecutable, historial limpio como evidencia de auditoría.
+- **FASE 1+ (código y contenido):** ramas de trabajo `feature/<área>-<tema>` (p. ej. `feature/dev-lector`, `feature/cont-c08-preguntas`) + Pull Request con checklist según encargo §6.5 (PR editorial vs. PR técnico). Revisión obligatoria del responsable del área afectada; los esquemas (`/schemas`) son propiedad conjunta y exigen revisión de ambos responsables.
+- **Prohibido siempre:** force-push, reescritura del historial de `main`, `git push --force`, borrado de `main`.
+- Colisiones: rebase local antes de push; nunca «merge a ciegas» sobre `main`.
+
+## 4. Mensajes de commit
+
+- Convención: `tipo(área): resumen en imperativo` — tipos: `docs`, `feat`, `fix`, `chore`, `test`, `schema`, `content`.
+- Referenciar el entregable o sección del encargo cuando aplique (p. ej. `docs(fase0): ADR-0001 del stack — encargo §5.2`).
+- Un commit = una intención coherente. Nada de «cambios varios».
+
+## 5. Qué NUNCA se sube a Git
+
+1. **Secretos y claves** (API de IA, tokens) — encargo §2.7: van al almacén seguro del sistema, jamás a repositorio, recursos empaquetados, logs ni backup.
+2. **El EPUB privado del propietario** (`*.epub`) y cualquier material cuyo uso en repositorio remoto no esté comprobado — encargo §6.5.11 y §4.7.8.
+3. **Medios pesados** (imágenes maestras, audio, mapas PMTiles) hasta decidir el mecanismo: Git LFS vs. releases privados — encargo §6.4. Provisionalmente, `.gitignore` los excluye; solo se suben manifiestos, hashes y metadatos.
+4. **Datos personales de jugadores** (perfiles, progreso, anotaciones).
+
+`.gitignore` en la raíz aplica estas exclusiones. Si un fichero necesita excepción, se decide explícitamente y se documenta aquí.
+
+## 6. Versionado y etiquetas
+
+- Etiquetas `v0.0.x` para hitos de documentación aprobados (p. ej. cierre de FASE 0).
+- Cuando exista contrato editorial-técnico: versionado semántico independiente de esquema / catálogo / activos / aplicación, con compatibilidad declarada (encargo §6.1).
+
+## 7. Evidencia y trazabilidad
+
+- El historial de `main` es evidencia de auditoría: cada entrega debe poder rastrearse a un commit con fecha, autor y contenido.
+- Los hitos GO/NO-GO se etiquetan y se referencian desde `VISION_Y_DECISIONES.md`.

@@ -13,7 +13,7 @@ Regla aplicada (encargo §2.5/§4.7.5): las acuarelas pueden ilustrar `question/
 | **I.6** Escrutinio | DQ.MED.900013 ✔ *(2.ª batería)* | DQ.IL.020 ◐ (era cierre de I.5) | DQ.IL.021 ✔ | — | 020–021 | 900013 | **1 recreación: quema en el corral (after)** |
 | **I.11** Edad de Oro | DQ.MED.900007 ✔ | DQ.IL.034 ✔ | DQ.IL.035 ✔ | DQ.IL.036 ✔ | 034–036 | 900007 | **ninguno** |
 | **I.18** Rebaños | DQ.MED.900008 ✔ | DQ.IL.056 ⚠ (auditar, parece I.17) | DQ.IL.057 ✔ | DQ.IL.058 ✔ | 056–058 | 900008 | **auditoría de 056**; alternativa: recreación de la polvareda inicial |
-| **II.1** Visita | DQ.IL.0170 ◐ | DQ.IL.0171 ✔ | — | — | 170–171 | — | **1 recreación: reacción/cierre (reveal-after)** |
+| **II.1** Visita | DQ.MED.900029 ✔ *(3.ª batería)* | DQ.IL.0171 ✔ | — | — | 170–171 | 900029 | **1 recreación: reacción/cierre (reveal-after)** |
 | **II.74** Muerte | DQ.IL.0371 ✔ | DQ.IL.0372 ✔ | DQ.IL.0371/0373 ✔ | DQ.MED.900011 ✔ | 371–373 | 900011 | **ninguno** |
 
 ## Cobertura fuera del piloto — aprovechamiento de las 23 escenas producidas
@@ -46,14 +46,15 @@ Patrón recomendado: la recreación IA abre el episodio (`before`, spoiler `ning
 - **Huecos reales del piloto: 2 recreaciones nuevas** (I.6-after «quema en el corral»; II.1-reveal/after) + 1 decisión de auditoría (056) con posible recreación alternativa (polvareda).
 - Fuera del piloto: 15 capítulos con recreación propia + acuarelas; las fases `reveal` de esos capítulos se cubren con acuarelas existentes.
 
-## Discrepancias alt↔capítulo a auditar (criterio a fijar en el piloto)
+## Auditoría de discrepancias alt↔capítulo (FASE 1, resuelta con criterio curatorial)
 
-| Acuarela | alt | Colocada en | Contenido aparente |
-|---|---|---|---|
-| 043 | «Discurso de Don Quijote sobre la Edad Dorada.» | I.15 (3015.xhtml) | I.11 |
-| 056 | «Sancho sale de la venta» | I.18 (1.18.xhtml) | cierre de I.17 |
+| Acuarela | alt | Colocada en | Contenido aparente | Veredicto de auditoría |
+|---|---|---|---|---|
+| 043 | «Discurso de Don Quijote sobre la Edad Dorada.» | I.15 (3015.xhtml) | I.11 | **Vincular a I.11** (el discurso está verbatim en 2011.xhtml): colocación del editor sin función puente identificable; criterio curatorial del episodio *representado* |
+| 056 | «Sancho sale de la venta» | I.18 (1.18.xhtml) | cierre de I.17 | **Puente de apertura válido**: I.18 abre con Sancho llegando «marchito y desmayado» tras salir de la venta; acuarela funcional como imagen de transición |
+| 171 | «Metáfora del loco sevillano» | II.1 (2.1.xhtml) | pasaje **AUSENTE** en esta digitalización (verificado: ni «loco de Sevilla» ni «Frestón» existen en el EPUB) | **Evidencia de abreviación**: la iconografía sigue el texto completo de la ed. Tasso 1905. Mostrar la acuarela con nota «pasaje completo en la edición de referencia» (RESOLUCION_PEND01) |
 
-Hipótesis: colocación deliberada del editor como imagen de apertura-recapitulación; el piloto decidirá si el catálogo vincula la acuarela al episodio **representado** (criterio curatorial recomendado) o al **documento donde aparece** (criterio de fuente). Mientras tanto, el manifiesto conserva la colocación real del EPUB.
+**Criterio adoptado:** el manifiesto conserva la colocación real del EPUB (capa de fuente, intacta); la vinculación editorial (museo, cuaderno, preguntas) usa el episodio *representado*. Consecuencia estructural registrada: la capa de texto del lector cotejará su integridad contra la edición de referencia (DQ.ED.0002).
 
 ## Nota técnica para DESARROLLO (extracto del dossier)
 

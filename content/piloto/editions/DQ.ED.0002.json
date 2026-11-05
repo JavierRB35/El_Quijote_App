@@ -1,0 +1,18 @@
+{
+ "id": "DQ.ED.0002",
+ "contract_version": "1.0.0",
+ "title": "Don Quijote de la Mancha — edición de referencia (cotejo)",
+ "editor": "Instituto Cervantes, dirección de Francisco Rico (2004; rev. 2015)",
+ "year": 2015,
+ "source_id": "DQ.SRC.0004",
+ "digital_version": "Consulta en línea (BVMC / portal Quijotes BNE); sin copia local",
+ "rights_status": "restringida",
+ "orthographic_rules": "modernizada",
+ "provenance": "Edición académica del IV Centenario; estándar de cotejo citado por BNE.",
+ "notes": "Capa de cotejo de la resolución PEND-01 (docs/RESOLUCION_PEND01_EDICION_REFERENCIA.md). No se almacena.",
+ "review": {
+  "state": "documentada",
+  "reviewer_role": "editorial",
+  "date": "2026-11-05"
+ }
+}

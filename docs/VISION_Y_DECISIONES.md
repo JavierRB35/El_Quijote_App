@@ -40,7 +40,7 @@ Mantiene la tabla de decisiones **cerradas / provisionales / pendientes** (entre
 
 | ID | Cuestión | Qué falta | Bloquea a |
 |---|---|---|---|
-| PEND-01 | Edición española de referencia legalmente utilizable para el texto | Selección y verificación de derechos (BNE, BVC, etc.) | Contenidos + Lector |
+| ~~PEND-01~~ | **RESUELTA 2026-11-05 (modo CONTENIDOS):** arquitectura textual de tres capas — texto de trabajo/lector: EPUB Tusell (interno, autorizado); edición de referencia para COTEJO: ed. Instituto Cervantes dir. Rico (2004, rev. 2015), consultada en línea con cita puntual y atribución (sin almacenamiento ni redistribución); respaldo princeps 1605/1615 (BNE/BVPB, dominio público). Política de citas vinculante y registro `DQ.ED.0002`/`DQ.SRC.0004`/`DQ.LIC.0004` en el paquete del piloto (VÁLIDO). Urgencia motivada por el hallazgo de abreviación de la digitalización | Documento: `docs/RESOLUCION_PEND01_EDICION_REFERENCIA.md` | Contenidos + Lector |
 | ~~PEND-02~~ | **RESUELTA 2026-11-05:** EPUB Tusell auditado de verdad: 415 imágenes (376 acuarelas numeradas sin huecos, 0 duplicados, 0 huérfanas, 100 % con texto alternativo), mediana 849×688 px, correspondencia capítulo↔acuarela completa. Evidencia: `docs/INVENTARIO_ILUSTRACIONES_TUSELL.md` + manifiestos | Residuales → PEND-09 | Iconografía, Lector, Museo |
 | PEND-03 | Licencias de fotografía patrimonial, mapas y arte histórico | Verificación individual por recurso | Iconografía, Atlas, Museo |
 | PEND-04 | Teselas cartográficas offline: fuente, licencia y empaquetado (PMTiles) | Comprobación de acceso local y licencias | Atlas |

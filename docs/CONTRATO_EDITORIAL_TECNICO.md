@@ -196,6 +196,15 @@ Durante FASE 0 ambos equipos implementaron en paralelo esquemas y validador (rie
 - **Borrador 0.1 editorial preservado (no eliminado):** los esquemas paralelos, ejemplos y `validar_contrato.py` del modo CONTENIDOS se conservan aislados en `schemas/_borrador_0.1/` y `tools/editorial_validation/_borrador_0.1/` como referencia de la propuesta editorial, pendientes de retirada formal cuando esta versión reciba la doble firma.
 - Los artefactos editoriales de trabajo (matriz de trazabilidad, dossier del piloto, precarga, paquete de escenas) **no se alteran**; su adaptación al contrato canónico se hará en importación, no editando su formato (§11).
 
+### Firma editorial de la consolidación (2026-11-05, modo CONTENIDOS)
+
+Revisadas las resoluciones de §0 y las respuestas técnicas de §9/§11 **desde el lado editorial**, con verificación práctica: el paquete real `content/piloto/package.json` (12 preguntas del piloto I.8, migración completa de la precarga, 21 medios reales) **valida VÁLIDO** contra el validador canónico con cero errores, incluidas las reglas de paquete v0.2.0 (semantic_key único, pre-imagen sin spoiler). Con esa evidencia:
+
+1. **Se aprueba el contrato v0.2.0 como canónico** desde el rol editorial: las resoluciones de §0 (ID contractual único + slug, `derivatives`, campos neutros con internacionalización futura por tipo, `function` de media) **preservan todos los requisitos editoriales del encargo** (§2.2 respuesta seleccionada, §4.3 evidencia y certeza, §4.7.6 clases de evidencia, DC-04).
+2. **Se autoriza la retirada formal de `_borrador_0.1/`** (esquemas, ejemplos y `validar_contrato.py`) tal como prevé este §12; su contenido histórico queda en el historial Git y la referencia editorial viva es este contrato.
+3. **Nota editorial pendiente (MINOR futura):** `MediaFunction` aún no incluye el valor `referencia` previsto en §11 para las imágenes de referencia de recreación (usado provisionalmente `interfaz`); añadir cuando se ejecute la migración del manifiesto de escenas.
+4. La numeración de episodios de los primeros borradores (`DQ.P1.E04`) queda migrada al patrón canónico anidado (`DQ.P1.C08.E01`); `docs/data/mapa_capitulos.json` se ajustará en su próxima regeneración para emitir IDs canónicos directamente.
+
 ## 13. Qué DEBE y NO DEBE hacer cada equipo
 
 | | Equipo editorial (CONTENIDOS) | Equipo técnico (DESARROLLO) |

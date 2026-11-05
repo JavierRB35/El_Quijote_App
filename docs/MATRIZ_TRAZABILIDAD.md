@@ -13,7 +13,7 @@ Estado: `✔` implementado con evidencia · `◐` borrador/proposal · `○` pen
 | §4.7.3 Originales sin retoque + trazabilidad | CONTENIDOS | `assets/ilustraciones_tusell/` | Copia byte a byte (sha256 en manifiesto); derivados futuros con hash propio | ✔ |
 | §8.3 Mapa de episodios y capítulos | CONTENIDOS | `docs/MAPA_EPISODIOS_Y_CAPITULOS.md`, `docs/data/mapa_capitulos.json` | 126 capítulos con título real y recuento; agrupación marcada como propuesta | ✔ |
 | §8.4 Plan editorial de 6 capítulos | CONTENIDOS | `docs/PLAN_PILOTO_EDITORIAL_SEIS_CAPITULOS.md` | Muestra justificada con datos; métricas y criterios de salida definidos | ✔ |
-| §6 Contrato editorial-técnico | AMBOS | `docs/CONTRATO_EDITORIAL_TECNICO.md`, `/schemas/` | Validador 37/37 PASS; revisión técnica pendiente | ◐ |
+| §6 Contrato editorial-técnico | AMBOS | `docs/CONTRATO_EDITORIAL_TECNICO.md` (v0.2.0 canónico), `/schemas/` | Suite técnica 42/42 + paquete real del piloto **VÁLIDO**; firma editorial registrada (§12) | ✔ |
 | §4.3 Requisitos de cada pregunta | CONTENIDOS | `schemas/content/question.schema.json` | Los 6 tipos con respuesta seleccionada; caso negativo «respuesta escrita» falla | ◐ |
 | §4.4 Cápsulas de descubrimiento | CONTENIDOS | `schemas/content/discovery.schema.json` | kind + certainty + bibliography; cita/refrán exige pasaje (semántica) | ◐ |
 | §2.4/4.5 Atlas con certeza tipada | CONTENIDOS | `schemas/content/place_route.schema.json` | status/precision/geometry; rutas nunca como hecho (DC-08) | ◐ |

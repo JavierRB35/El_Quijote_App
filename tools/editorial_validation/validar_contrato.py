@@ -152,6 +152,26 @@ def main():
         f = falla(esq, doc) or bool(checks_q(doc)) if nombre != "sha256 malformado" else falla(esq, doc)
         resultados.append(("NEGATIVO", nombre, f, "fallo como debe" if f else "NO fallo (BUG)"))
 
+    # --- 5. pre-carga del piloto (docs/data/piloto_precarga.json) contra esquemas ---
+    precarga_path = os.path.join(repo, "docs", "data", "piloto_precarga.json")
+    if os.path.isfile(precarga_path):
+        pre = cargar(precarga_path)
+        cat_map = {"personas": "content/person.schema.json",
+                   "lugares": "content/place_route.schema.json",
+                   "descubrimientos": "content/discovery.schema.json",
+                   "episodios": "content/episode.schema.json"}
+        n_cat = 0
+        for clave, rel_esq in cat_map.items():
+            esq = esquemas.get(rel_esq)
+            if esq is None:
+                continue
+            for i, reg in enumerate(pre.get(clave, []), 1):
+                n_cat += 1
+                errs = list(Draft202012Validator(esq).iter_errors(reg))
+                idr = reg.get("id", "%s[%d]" % (clave, i))
+                resultados.append(("CATALOG", "%s %s" % (clave, idr), not errs,
+                                   "OK" if not errs else errs[0].message[:90]))
+
     # --- informe ---
     fallos = [r for r in resultados if not r[2]]
     for tipo, nombre, ok, msg in resultados:

@@ -1,0 +1,409 @@
+{
+ "aviso": "Draft FASE 1 — segmentación con anclas verificadas sobre el texto del EPUB Tusell; IDs provisionales.",
+ "capitulos": {
+  "DQ.P1.C08": {
+   "archivo_epub": "1008.xhtml",
+   "episodio": "DQ.P1.C08.E01",
+   "segmentos": [
+    {
+     "id": "DQ.P1.C08.SG01",
+     "titulo": "Avistamiento y propuesta de batalla",
+     "ancla": "esto descubrieron treinta ó cuarenta molinos",
+     "posicion_char": 205,
+     "personajes": [
+      "DQ.PER.0001",
+      "DQ.PER.0002"
+     ],
+     "lugares": [
+      "DQ.LOC.0002",
+      "DQ.LOC.0004"
+     ],
+     "hechos": "30-40 molinos vistos como gigantes; motivación del botín y del servicio divino."
+    },
+    {
+     "id": "DQ.P1.C08.SG02",
+     "titulo": "Diálogo de percepciones",
+     "ancla": "Mire vuestra merced, respondió Sancho",
+     "posicion_char": 875,
+     "personajes": [
+      "DQ.PER.0001",
+      "DQ.PER.0002"
+     ],
+     "lugares": [],
+     "hechos": "Sancho: aspas del viento; don Quijote: gigantes y advertencia de miedo."
+    },
+    {
+     "id": "DQ.P1.C08.SG03",
+     "titulo": "Embestida y caída",
+     "ancla": "Levantóse en esto un poco de viento",
+     "posicion_char": 1814,
+     "personajes": [
+      "DQ.PER.0001",
+      "DQ.PER.0002",
+      "DQ.PER.0003"
+     ],
+     "lugares": [
+      "DQ.LOC.0004"
+     ],
+     "hechos": "Briareo; lanzada en el aspa; lanza en pedazos; arrastre de caballo y caballero; socorro de Sancho."
+    },
+    {
+     "id": "DQ.P1.C08.SG04",
+     "titulo": "Frailes como encantadores",
+     "ancla": "Estando en estas razones, asomaron por el camino dos frailes",
+     "posicion_char": 8271,
+     "personajes": [
+      "DQ.PER.0001",
+      "DQ.PER.0002"
+     ],
+     "lugares": [],
+     "hechos": "Bultos negros como encantadores con princesa; Sancho: «Peor será esto»; ataque y presentación ante la «princesa»."
+    },
+    {
+     "id": "DQ.P1.C08.SG05",
+     "titulo": "Desafío del vizcaíno",
+     "ancla": "asiéndole de la lanza, le dijo en mala lengua castellana",
+     "posicion_char": 12779,
+     "personajes": [
+      "DQ.PER.0001"
+     ],
+     "lugares": [
+      "DQ.LOC.0003"
+     ],
+     "hechos": "Insulto del escudero; el combate se suspende y concluye en I, 9."
+    }
+   ]
+  },
+  "DQ.P1.C06": {
+   "archivo_epub": "1006.xhtml",
+   "episodio": "DQ.P1.C06.E01",
+   "segmentos": [
+    {
+     "id": "DQ.P1.C06.SG01",
+     "titulo": "Inicio del escrutinio",
+     "ancla": "todavía dormía. Pidió á la sobrina las llaves",
+     "posicion_char": 149,
+     "personajes": [
+      "DQ.PER.0005",
+      "DQ.PER.0006",
+      "DQ.PER.0007",
+      "DQ.PER.0008"
+     ],
+     "lugares": [],
+     "hechos": "El dueño duerme; se piden las llaves del aposento de los libros «autores del daño»."
+    },
+    {
+     "id": "DQ.P1.C06.SG02",
+     "titulo": "Amadís juzgado y perdonado",
+     "ancla": "el primero que maese Nicolás le dió en las manos",
+     "posicion_char": 1408,
+     "personajes": [
+      "DQ.PER.0005",
+      "DQ.PER.0006"
+     ],
+     "lugares": [],
+     "hechos": "Amadís de Gaula: «único en su arte» → vida por ahora; Esplandián al corral."
+    },
+    {
+     "id": "DQ.P1.C06.SG03",
+     "titulo": "Linaje de Amadís de Grecia; secunda la condena",
+     "ancla": "Pues vayan todos al corral",
+     "posicion_char": 2681,
+     "personajes": [
+      "DQ.PER.0005",
+      "DQ.PER.0006",
+      "DQ.PER.0007",
+      "DQ.PER.0008"
+     ],
+     "lugares": [],
+     "hechos": "Hipérbole de la Pintiquinestra; barbero, sobrina y ama secundan; quema en el corral."
+    },
+    {
+     "id": "DQ.P1.C06.SG04",
+     "titulo": "Palmerines: Oliva fuera, Ingalaterra dentro",
+     "ancla": "abriendo otro libro vió que era Palmerín",
+     "posicion_char": 6047,
+     "personajes": [
+      "DQ.PER.0005"
+     ],
+     "lugares": [],
+     "hechos": "Oliva: «rajas y se queme»; Ingalaterra: «se guarde como á cosa única»."
+    },
+    {
+     "id": "DQ.P1.C06.SG05",
+     "titulo": "Tirante hallado y elogiado",
+     "ancla": "se le cayó uno á los pies del barbero",
+     "posicion_char": 7970,
+     "personajes": [
+      "DQ.PER.0005",
+      "DQ.PER.0006"
+     ],
+     "lugares": [],
+     "hechos": "«Tesoro de contento y una mina de pasatiempos»; don Kirieleisón de Montalbán."
+    },
+    {
+     "id": "DQ.P1.C06.SG06",
+     "titulo": "La Galatea salvada (ironía)",
+     "ancla": "Muchos años ha que es grande amigo mío",
+     "posicion_char": 12547,
+     "personajes": [
+      "DQ.PER.0005",
+      "DQ.PER.0006",
+      "DQ.PER.0012"
+     ],
+     "lugares": [],
+     "hechos": "Cervantes aparece citado: «más versado en desdichas que en versos»; «propone algo y no concluye nada»."
+    }
+   ]
+  },
+  "DQ.P1.C11": {
+   "archivo_epub": "2011.xhtml",
+   "episodio": "DQ.P1.C11.E01",
+   "segmentos": [
+    {
+     "id": "DQ.P1.C11.SG01",
+     "titulo": "Acogida de los cabreros",
+     "ancla": "recogido de los cabreros con buen ánimo",
+     "posicion_char": 89,
+     "personajes": [
+      "DQ.PER.0001",
+      "DQ.PER.0002"
+     ],
+     "lugares": [
+      "DQ.LOC.0001"
+     ],
+     "hechos": "Sancho acomoda Rocinante y el rucio; olor de tasajos al fuego."
+    },
+    {
+     "id": "DQ.P1.C11.SG02",
+     "titulo": "Cena con los cabreros",
+     "ancla": "tendieron sobre las zaleas gran cantidad de bellotas",
+     "posicion_char": 2747,
+     "personajes": [
+      "DQ.PER.0001",
+      "DQ.PER.0002"
+     ],
+     "lugares": [],
+     "hechos": "Bellotas avellanadas, queso «de argamasa», cuerno como arcaduz; se vacía un zaque."
+    },
+    {
+     "id": "DQ.P1.C11.SG03",
+     "titulo": "Inicio del discurso de la Edad de Oro",
+     "ancla": "tomó un puño de bellotas en la mano",
+     "posicion_char": 3137,
+     "personajes": [
+      "DQ.PER.0001"
+     ],
+     "lugares": [],
+     "hechos": "«¡Dichosa edad...!»; el oro de ahora frente a aquella felicidad."
+    },
+    {
+     "id": "DQ.P1.C11.SG04",
+     "titulo": "Imágenes de la edad dorada",
+     "ancla": "alzar la mano, y alcanzarle de las robustas encinas",
+     "posicion_char": 3732,
+     "personajes": [
+      "DQ.PER.0001"
+     ],
+     "lugares": [],
+     "hechos": "Encinas liberales, fuentes y ríos claros; repúblicas en peñas y árboles."
+    },
+    {
+     "id": "DQ.P1.C11.SG05",
+     "titulo": "Justicia, favor e interés; ley del encaje",
+     "ancla": "La justicia se estaba en sus propios términos",
+     "posicion_char": 5638,
+     "personajes": [
+      "DQ.PER.0001"
+     ],
+     "lugares": [],
+     "hechos": "Sin fraude ni malicia; la ley del encaje aún sin sentar: «no había qué juzgar»."
+    }
+   ]
+  },
+  "DQ.P1.C18": {
+   "archivo_epub": "1.18.xhtml",
+   "episodio": "DQ.P1.C18.E01",
+   "segmentos": [
+    {
+     "id": "DQ.P1.C18.SG01",
+     "titulo": "Apertura: Sancho desmayado y consuelo",
+     "ancla": "Sancho á su amo, marchito y desmayado",
+     "posicion_char": 174,
+     "personajes": [
+      "DQ.PER.0001",
+      "DQ.PER.0002"
+     ],
+     "lugares": [],
+     "hechos": "La venta «encantada»; recuento del mal pasar de la noche anterior."
+    },
+    {
+     "id": "DQ.P1.C18.SG02",
+     "titulo": "Polvareda y catálogo de improviso",
+     "ancla": "vió don Quijote que por el camino que iban venía hacia ellos una grande y espesa",
+     "posicion_char": 4064,
+     "personajes": [
+      "DQ.PER.0001",
+      "DQ.PER.0002",
+      "DQ.PER.0013",
+      "DQ.PER.0014"
+     ],
+     "lugares": [
+      "DQ.LOC.0001",
+      "DQ.LOC.0005"
+     ],
+     "hechos": "Alifanfarón y Pentapolín; causa de la guerra; Espartafilardo del Bosque y su esparraguera."
+    },
+    {
+     "id": "DQ.P1.C18.SG03",
+     "titulo": "La carga contra las ovejas",
+     "ancla": "se entró por medio del escuadrón de ovejas",
+     "posicion_char": 9367,
+     "personajes": [
+      "DQ.PER.0001"
+     ],
+     "lugares": [],
+     "hechos": "Invocación a Dulcinea y embestida entre las manadas."
+    },
+    {
+     "id": "DQ.P1.C18.SG04",
+     "titulo": "Pedradas y huida de los pastores",
+     "ancla": "Tal fué el golpe primero y tal el segundo",
+     "posicion_char": 14366,
+     "personajes": [
+      "DQ.PER.0001"
+     ],
+     "lugares": [],
+     "hechos": "Alcuza hecha pedazos; dientes y muelas; pastores creyéndole muerto con más de siete reses."
+    },
+    {
+     "id": "DQ.P1.C18.SG05",
+     "titulo": "Recuento de muelas y bálsamo",
+     "ancla": "Llegóse Sancho tan cerca",
+     "posicion_char": 15962,
+     "personajes": [
+      "DQ.PER.0001",
+      "DQ.PER.0002"
+     ],
+     "lugares": [],
+     "hechos": "Revisión de la boca; vómito del bálsamo «más recio que una escopeta» en las barbas de Sancho."
+    }
+   ]
+  },
+  "DQ.P2.C01": {
+   "archivo_epub": "2.1.xhtml",
+   "episodio": "DQ.P2.C01.E01",
+   "segmentos": [
+    {
+     "id": "DQ.P2.C01.SG01",
+     "titulo": "Marco: un mes de prudencia",
+     "ancla": "Cide Hamete Benengeli, en la segunda parte desta historia",
+     "posicion_char": 151,
+     "personajes": [
+      "DQ.PER.0005",
+      "DQ.PER.0006",
+      "DQ.PER.0010"
+     ],
+     "lugares": [
+      "DQ.LOC.0001"
+     ],
+     "hechos": "Sin verle «por no renovarle»; visitas a la sobrina y al ama con recado de vigilarle."
+    },
+    {
+     "id": "DQ.P2.C01.SG02",
+     "titulo": "Conversación literaria: Angélica",
+     "ancla": "fué una doncella distraída, andariega y algo antojadiza",
+     "posicion_char": 20772,
+     "personajes": [
+      "DQ.PER.0005",
+      "DQ.PER.0006",
+      "DQ.PER.0001"
+     ],
+     "lugares": [],
+     "hechos": "Juicio sobre Angélica; Ariosto «gran cantor de su belleza»; no hay versos infamatorios."
+    },
+    {
+     "id": "DQ.P2.C01.SG03",
+     "titulo": "Interrupción doméstica",
+     "ancla": "daban grandes voces en el patio",
+     "posicion_char": 22452,
+     "personajes": [
+      "DQ.PER.0007",
+      "DQ.PER.0008"
+     ],
+     "lugares": [],
+     "hechos": "Ama y sobrina dan voces; «acudieron todos al ruido»."
+    }
+   ]
+  },
+  "DQ.P2.C74": {
+   "archivo_epub": "2.74.xhtml",
+   "episodio": "DQ.P2.C74.E01",
+   "segmentos": [
+    {
+     "id": "DQ.P2.C74.SG01",
+     "titulo": "Apertura elegíaca y enfermedad",
+     "ancla": "las cosas humanas no sean eternas",
+     "posicion_char": 106,
+     "personajes": [
+      "DQ.PER.0001"
+     ],
+     "lugares": [
+      "DQ.LOC.0001"
+     ],
+     "hechos": "Declinación de las vidas; calentura de seis días en la cama; visitas de amigos."
+    },
+    {
+     "id": "DQ.P2.C74.SG02",
+     "titulo": "Anuncio de la muerte",
+     "ancla": "siento que me voy muriendo á toda priesa",
+     "posicion_char": 4533,
+     "personajes": [
+      "DQ.PER.0001",
+      "DQ.PER.0002",
+      "DQ.PER.0005"
+     ],
+     "lugares": [],
+     "hechos": "Petición de confesor y escribano; admiración por la facilidad de pasar «de loco á cuerdo»."
+    },
+    {
+     "id": "DQ.P2.C74.SG03",
+     "titulo": "Muerte entre lágrimas",
+     "ancla": "Acabóse la confesión",
+     "posicion_char": 5574,
+     "personajes": [
+      "DQ.PER.0001",
+      "DQ.PER.0002",
+      "DQ.PER.0007",
+      "DQ.PER.0008"
+     ],
+     "lugares": [],
+     "hechos": "«Apacible condición y agradable trato» en ambas identidades; último de don Quijote tras los sacramentos."
+    },
+    {
+     "id": "DQ.P2.C74.SG04",
+     "titulo": "Confesión, juicio y testamento",
+     "ancla": "Verdaderamente se muere, y verdaderamente está cuerdo",
+     "posicion_char": 5624,
+     "personajes": [
+      "DQ.PER.0005",
+      "DQ.PER.0009"
+     ],
+     "lugares": [],
+     "hechos": "El cura sale y dicta el veredicto; entra el escribano con Sancho."
+    },
+    {
+     "id": "DQ.P2.C74.SG05",
+     "titulo": "Epitafio y advertencia final",
+     "ancla": "Yace aquí el hidalgo fuerte",
+     "posicion_char": 11607,
+     "personajes": [
+      "DQ.PER.0009"
+     ],
+     "lugares": [],
+     "hechos": "Epitafio de Sansón Carrasco; que nadie le lleve «á Castilla la Vieja» para hacer «tercera parte»."
+    }
+   ]
+  }
+ }
+}

@@ -205,8 +205,8 @@ Divergencias detectadas por CONTENIDOS entre el manifiesto de escenas cinematogr
 
 Durante FASE 0 ambos equipos implementaron en paralelo esquemas y validador (riesgo previsto por el encargo §6.5.2). Estado consolidado:
 
-- **Canónico:** los esquemas de `/schemas/**` (incl. `_definitions.schema.json`, `Profile` y `ContentPackage`) y el validador `tools/editorial_validation/validate.py` (suite 42/42 PASS), conforme a las resoluciones de §0.
-- **Borrador 0.1 editorial preservado (no eliminado):** los esquemas paralelos, ejemplos y `validar_contrato.py` del modo CONTENIDOS se conservan aislados en `schemas/_borrador_0.1/` y `tools/editorial_validation/_borrador_0.1/` como referencia de la propuesta editorial, pendientes de retirada formal cuando esta versión reciba la doble firma.
+- **Canónico (único vigente):** los esquemas de `/schemas/**` (incl. `_definitions.schema.json`, `Profile` y `ContentPackage`) y el validador `tools/editorial_validation/validate.py` (suite 42/42 PASS), conforme a las resoluciones de §0.
+- **Borrador 0.1 editorial — RETIRADO:** los esquemas paralelos, ejemplos y `validar_contrato.py` del modo CONTENIDOS estuvieron aislados temporalmente en `schemas/_borrador_0.1/` y `tools/editorial_validation/_borrador_0.1/`; **retirados formalmente el 2026-11-05 tras la firma editorial** (ver abajo). Su contenido histórico y sus ideas conservadas viven en el historial Git y en este contrato.
 - Los artefactos editoriales de trabajo (matriz de trazabilidad, dossier del piloto, precarga, paquete de escenas) **no se alteran**; su adaptación al contrato canónico se hará en importación, no editando su formato (§11).
 
 ### Firma editorial de la consolidación (2026-11-05, modo CONTENIDOS)

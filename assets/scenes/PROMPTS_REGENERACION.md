@@ -56,4 +56,21 @@ Estas indicaciones sintetizan los requisitos artísticos empleados en la generac
 | `p2_c54_ricote_sancho_pre` | Sancho se reúne con Ricote, antiguo vecino morisco retornado, y comparte un almuerzo campestre con otros viajeros; escena humana respetuosa, sin exotizar. | Reencuentro y diálogo. |
 | `p2_c62_imprenta_barcelona_pre` | Taller de imprenta barcelonés del siglo XVII, prensa manual de madera, cajistas, pliegos y Don Quijote observando curiosamente el trabajo; **sin textos legibles ni tecnología industrial moderna**. | Visita a la imprenta. |
 
+## Cuarta batería — capítulos adicionales sin ilustraciones previas
+
+| ID | Variación sobre el prompt base | Uso |
+|---|---|---|
+| `p1_c07_segunda_salida_pre` | Don Quijote sale discretamente de su aldea acompañado **por primera vez** por Sancho montado en rucio; penumbra anterior al alba. | Inicio de la segunda salida, distinto del capítulo 2. |
+| `p1_c09_manuscrito_toledo_pre` | En el Alcaná de Toledo un lector anónimo descubre y adquiere cuadernos manuscritos; **narrador-marco, sin Don Quijote ni Sancho**. | Hallazgo de la narración de Cide Hamete; letra ilegible. |
+| `p1_c17_manteo_sancho_post` | En patio de venta varios hombres mantean a Sancho sobre una tela, Don Quijote impotente fuera; humor físico, sin heridas. | Desenlace: spoiler alto. |
+| `p1_c19_cortejo_encamisados_pre` | De noche, cortejo de hombres con camisas blancas, antorchas y litera cubierta; Don Quijote y Sancho se detienen a observar. | Antes del enfrentamiento; sin fantasmas reales. |
+| `p1_c33_curioso_impertinente_pre` | Patio renacentista florentino: conversan Anselmo y Lotario, Camila permanece al fondo; **novela intercalada, no aventura de Don Quijote**. | Presentación de personajes, sin revelar consecuencias. |
+| `p1_c52_procesion_disciplinantes_pre` | Procesión penitencial castellana humilde con imagen devocional en andas; Don Quijote y Sancho la observan; sin flagelación ni ataque. | Antes del conflicto. |
+| `p2_c03_sanson_carrasco_pre` | Sansón Carrasco, bachiller joven, conversa con Don Quijote y Sancho sobre un libro impreso en una casa modesta; portada sin palabras legibles. | Conversación sobre la fama de sus aventuras. |
+| `p2_c08_toboso_noche_pre` | Don Quijote y Sancho recorren de noche calles reales y humildes del Toboso buscando el supuesto palacio de Dulcinea; **sin mostrar a Dulcinea ni castillo**. | Búsqueda nocturna. |
+| `p2_c11_carreta_comediantes_pre` | Carro de cómicos ambulantes con **disfraces humanos teatrales** de Muerte y diablo; Don Quijote los observa, Sancho duda. | «Cortes de la Muerte», sin supernaturalidad. |
+| `p2_c50_teresa_carta_pre` | Teresa Panza y Sanchica reciben de un paje una carta sellada en su hogar de aldea, **sin Sancho ni Don Quijote**, sin texto legible. | Carta del palacio ducal. |
+| `p2_c60_roque_guinart_pre` | En un bosque catalán Roque Guinart y sus hombres con armas históricas bajas reciben a los viajeros, sin disparar. | Encuentro con el bandolero. |
+| `p2_c63_galeras_barcelona_pre` | Cubierta de galera mediterránea a comienzos del XVII: remeros, marineros, aparejos, Don Quijote y Sancho; sin persecución ni revelación. | Visita marítima previa a la aventura de Ana Félix. |
+
 Para regenerar o ampliar una escena, conservar el ID semántico si solo se reemplaza su versión gráfica y registrar una nueva revisión de fichero/hash en `manifest.json`. Si cambia el episodio, la pregunta asociada o la fase narrativa, asignar ID nuevo y revisar enlaces editoriales.

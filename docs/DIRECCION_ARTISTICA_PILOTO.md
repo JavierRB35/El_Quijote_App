@@ -1,6 +1,6 @@
 # Dirección artística — colección de escenas
 
-**Estado:** piloto visual para revisión, v0.3, 5 de noviembre de 2026. Tres baterías, 35 imágenes en conjunto (34 escenas y una referencia de personajes).
+**Estado:** piloto visual para revisión, v0.4, 5 de noviembre de 2026. Cuatro baterías, 47 imágenes en conjunto (46 escenas y una referencia de personajes).
 
 ## Identidad
 
@@ -26,7 +26,7 @@
 - Sujeto principal preferentemente en tercio izquierdo o central-izquierdo para reservar parte del entorno a la UI. Cada escena exige comprobación de área segura en la maquetación real; no hay caja universal garantizada.
 - Elementos definidos en primer término, plano medio y fondo para zoom y paneos discretos; evitar afirmar que existe parallax real sin recortes de profundidad.
 - Anular animaciones para usuarios con preferencia de movimiento reducido. No sustituir información textual por detalles visuales difíciles de ver.
-- La segunda y tercera baterías incorporan perspectivas de interiores, conversaciones, objetos escénicos, paisajes, escenas multitudinarias y desafíos sin depender siempre del mismo encuadre de protagonistas a caballo; conservar esta diversidad en la producción posterior.
+- Las baterías segunda a cuarta incorporan perspectivas de interiores, conversaciones, objetos escénicos, paisajes, escenas multitudinarias y desafíos sin depender siempre del mismo encuadre de protagonistas a caballo; conservar esta diversidad en la producción posterior. La cuarta introduce además al narrador-marco, un cuento intercalado y personajes secundarios sin los protagonistas: no presentar estas escenas como si Don Quijote hubiera presenciado tales hechos.
 
 ### Orden narrativo
 

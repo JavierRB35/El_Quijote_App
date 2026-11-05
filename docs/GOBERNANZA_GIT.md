@@ -46,6 +46,9 @@ No se difieren pushes «para más tarde». Si un bloque está a medias, se commi
 
 **Ampliación de excepción (2026-11-05, batería visual 02):** por nueva orden expresa del propietario («Genera otra batería de escenas y fusiónalas en main organizadas»), se añaden otros **12 WebP optimizados**, ~3,5 MB, repartidos entre `assets/scenes/part_1` y `part_2`, elevando el piloto a **23 WebP**, ~6,5 MB. Todos son recreaciones IA de uso interno, con manifiesto y hashes; los 12 PNG maestros de esta tanda se entregan en ZIP fuera de Git. Se mantiene sin cambios la prohibición de otros medios pesados y la revisión de PEND-05.
 
+
+**Ampliación de excepción (2026-11-05, baterías visuales 03 y 04):** por autorización expresa del propietario para nuevas baterías de ilustraciones y su organización en `main`, se incorporan **12 WebP optimizados adicionales en cada batería**, elevando la colección a **47 WebP** (46 escenas y una referencia visual). Los maestros PNG se entregan en ZIPs independientes y permanecen fuera del repositorio; cada nuevo archivo se identifica por parte y capítulo y registra SHA-256 y estado de revisión editorial en `assets/scenes/manifest.json`. Por instrucción específica del propietario, estas entregas artísticas se publican directamente en `main` sin crear ramas o PR dedicados, mediante commits de avance rápido con control de cabeza concurrente y sin `force`; **esta autorización no exime de PR a cambios de código, esquemas ni otros contenidos de FASE 1**. La revisión editorial por especialistas sigue pendiente y PEND-05 continúa abierta para otros medios pesados.
+
 ## 6. Versionado y etiquetas
 
 - Etiquetas `v0.0.x` para hitos de documentación aprobados (p. ej. cierre de FASE 0).

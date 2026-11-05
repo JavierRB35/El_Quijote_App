@@ -1,0 +1,18 @@
+{
+  "id": "DQ.ED.0001",
+  "contract_version": "1.0.0",
+  "title": "Edición digital del EPUB ilustrado Tusell (impresa: Luis Tasso, Barcelona, 1905) — PROVISIONAL hasta designar edición de referencia (PEND-01)",
+  "editor": "Digital: Epublibre/Titivillus (r2.1). Impresa: Luis Tasso (1905)",
+  "year": 1905,
+  "source_id": "DQ.SRC.0001",
+  "digital_version": "EPUB base r2.1, modificado 2024-02-11",
+  "rights_status": "pendiente",
+  "orthographic_rules": "original_epoca",
+  "checksum": "sha256:82647ac553c40eb0c216e9c76bbbbcb012ded1497711626b9c48a2f30bda7858",
+  "provenance": "EPUB facilitado por el propietario; expediente de derechos en docs/DERECHOS_Y_PROCEDENCIA_ILUSTRACIONES.md",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  }
+}

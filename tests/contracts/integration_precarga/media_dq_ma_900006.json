@@ -1,0 +1,23 @@
+{
+  "id": "DQ.MA.900006",
+  "contract_version": "1.0.0",
+  "function": "referencia",
+  "media_class": "RECREACION_IA",
+  "logical_uri": "assets://scenes/_art_direction/pendiente_mapeo/dq_ma_900006.webp",
+  "alt": "Recreación de referencia del paquete de escenas cinematográficas; URI definitiva pendiente de mapeo con assets/scenes/manifest.json (contrato §11).",
+  "source_id": "DQ.SRC.0003",
+  "license_id": "DQ.LIC.0001",
+  "author": "Producción propia del proyecto",
+  "allowed_uses": [
+    "uso_personal_app",
+    "almacenamiento_repo_git"
+  ],
+  "license_status": "verificada",
+  "provenance": "Mapeo pendiente con el manifiesto de escenas (ae927a1): DQ.MED.9000NN → registro correspondiente.",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "spoiler_level": "ninguno"
+}

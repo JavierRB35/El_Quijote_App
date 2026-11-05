@@ -28,6 +28,19 @@ Ambos equipos redactaron en paralelo el 2026-11-05. Divergencias detectadas y re
 
 ## 1. Versionado y compatibilidad
 
+**Regla de integración vinculante (§6.2 del encargo):** un elemento editorial nunca se publica si apunta a un ID inexistente o si su imagen/cita/licencia requerida está pendiente.
+
+### Cambios v0.2.0 registrados durante la integración real (§6.5.10)
+
+Ejercicio con la precarga editorial real (`docs/INTEGRACION_PRECARGA.md`): 73 registros importados y **VÁLIDOS** contra el contrato canónico (suite principal: 42/42 PASS, sin regresión). Cambios MINOR que provocó:
+
+1. `place.status` añade `patrimonio_asociado` (estaba en el encargo §4.5 y faltaba en el esquema — defecto del contrato, no de la precarga).
+2. `place.geometry` admite `null` (topónimos literarios no geolocalizables con honradez; prohibido inventar coordenadas).
+3. `MediaAsset.function` añade `referencia` (imágenes de referencia artística del paquete de escenas, sin fase narrativa).
+4. Reglas de paquete del validador: `semantic_key` único por paquete e imagen previa con `spoiler_level: ninguno` (§4).
+
+Pendiente de doble firma: el vocabulario de **producción** editorial (`humor` vs `humor_escena`, nombres de campo) se alineará con la canónica — o el contrato absorberá las variantes — al formalizar la batería de preguntas.
+
 - Versión del contrato: **semver**. Soportada actualmente: **`1.0.0`** (los borradores 0.x no fijan compatibilidad).
   - **MAJOR**: cambio incompatible (renombrar/eliminar campo, restringir enumeración, cambiar patrón de ID).
   - **MINOR**: añadido compatible (campo opcional nuevo, valor nuevo de enumeración, entidad nueva).

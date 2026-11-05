@@ -1,0 +1,18 @@
+{
+  "id": "DQ.PER.0003",
+  "contract_version": "1.0.0",
+  "class": "ficticio",
+  "canonical_name": "Rocinante",
+  "variants": [],
+  "relations": [],
+  "appearances": [
+    "DQ.P1.C08.E04"
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Caballo de don Quijote; derribado en la embestida de los molinos (I, 8).; Apariencia por capítulos (precarga): DQ.P1.C08"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "DQ.DIS.000005",
+  "contract_version": "1.0.0",
+  "kind": "humor_escena",
+  "content": "«Muchos años ha que es grande amigo mío ese Cervantes, y sé que es más versado en desdichas que en versos.» — el cura salva La Galatea; Cervantes se burla de sí mismo dentro de su propia novela.",
+  "passages": [
+    "DQ.P1.C06.P0001"
+  ],
+  "bibliography": [],
+  "appearance": {
+    "episode_id": "DQ.P1.C08.E04",
+    "moment": "desenlace"
+  },
+  "asset_ids": [
+    "DQ.MA.000021"
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Kind original de la precarga: humor; Condición original de la precarga: tras_capitulo",
+  "speaker": {
+    "label": "el cura"
+  }
+}

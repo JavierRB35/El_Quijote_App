@@ -1,0 +1,26 @@
+{
+  "id": "DQ.LOC.0004",
+  "contract_version": "1.0.0",
+  "kind": "lugar",
+  "literary_name": "Campo de los molinos",
+  "modern_name": "Sin topónimo textual; asociación patrimonial popular con Consuegra",
+  "variants": [
+    "molinos de viento"
+  ],
+  "geometry": null,
+  "status": "patrimonio_asociado",
+  "presented_as": "hipotesis",
+  "certainty": "DISCUTIDO",
+  "chapters": [
+    "DQ.P1.C08"
+  ],
+  "sources": [
+    "DQ.SRC.0001"
+  ],
+  "attribution_note": "Geometría pendiente de geolocalización (precarga declara precisión: discutida); 'Treinta o cuarenta molinos de viento que hay en aquel campo' (I, 8) sin topónimo; la vinculación con los molinos de Consuegra es asociación patrimonial posterior, no texto.",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  }
+}

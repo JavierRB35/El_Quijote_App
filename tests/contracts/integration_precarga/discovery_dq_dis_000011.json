@@ -1,0 +1,27 @@
+{
+  "id": "DQ.DIS.000011",
+  "contract_version": "1.0.0",
+  "kind": "cita_literal",
+  "content": "«…el cura y el barbero se estuvieron casi un mes sin verle, por no renovarle y traerle á la memoria las cosas pasadas…»",
+  "passages": [
+    "DQ.P2.C01.P0001"
+  ],
+  "bibliography": [],
+  "appearance": {
+    "episode_id": "DQ.P1.C08.E04",
+    "moment": "desenlace"
+  },
+  "asset_ids": [
+    "DQ.MA.000170"
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Condición original de la precarga: tras_capitulo",
+  "speaker": {
+    "label": "narrador (marco de Cide Hamete)"
+  }
+}

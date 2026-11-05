@@ -1,0 +1,29 @@
+{
+  "id": "DQ.DIS.000014",
+  "contract_version": "1.0.0",
+  "kind": "curiosidad_recepcion",
+  "content": "«Yace aquí el hidalgo fuerte, / que á tanto extremo llegó / de valiente, que se advierte / que la muerte no triunfó de su vida con su muerte.» — epitafio que le puso Sansón Carrasco.",
+  "passages": [
+    "DQ.P2.C74.P0003"
+  ],
+  "bibliography": [
+    "DQ.SRC.0002"
+  ],
+  "appearance": {
+    "episode_id": "DQ.P1.C08.E04",
+    "moment": "exploracion"
+  },
+  "asset_ids": [
+    "DQ.MA.000373"
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Kind original de la precarga: recepcion; Condición original de la precarga: tras_episodio; Bibliografía original de la precarga: «BVPB registro 463832 (ed. Tasso 1905), consultado 2026-11-05»",
+  "speaker": {
+    "label": "Sanson Carrasco (versos)"
+  }
+}

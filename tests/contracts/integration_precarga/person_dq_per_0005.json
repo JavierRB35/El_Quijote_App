@@ -1,0 +1,16 @@
+{
+  "id": "DQ.PER.0005",
+  "contract_version": "1.0.0",
+  "class": "ficticio",
+  "canonical_name": "El cura",
+  "variants": [],
+  "relations": [],
+  "appearances": [],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Clérigo del pueblo; dirige el escrutinio de la libreria (I, 6) y juzga la cordura final (II, 74).; Apariencia por capítulos (precarga): DQ.P1.C06, DQ.P2.C01, DQ.P2.C74"
+}

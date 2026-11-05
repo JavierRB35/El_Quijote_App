@@ -1,0 +1,26 @@
+{
+  "id": "DQ.LOC.0005",
+  "contract_version": "1.0.0",
+  "kind": "lugar",
+  "literary_name": "Trapobana",
+  "modern_name": "Topónimo clásico (Taprobana/Ceilán) usado en clave paródica",
+  "variants": [
+    "la grande isla Trapobana"
+  ],
+  "geometry": null,
+  "status": "debatido",
+  "presented_as": "hipotesis",
+  "certainty": "DISCUTIDO",
+  "chapters": [
+    "DQ.P1.C18"
+  ],
+  "sources": [
+    "DQ.SRC.0001"
+  ],
+  "attribution_note": "Geometría pendiente de geolocalización (precarga declara precisión: discutida); Isla del emperador Alifanfaron, dentro del catalogo militar imaginado (I, 18).",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "DQ.DIS.000003",
+  "contract_version": "1.0.0",
+  "kind": "cita_literal",
+  "content": "«…en esto descubrieron treinta ó cuarenta molinos de viento que hay en aquel campo…»",
+  "passages": [
+    "DQ.P1.C08.P0002"
+  ],
+  "bibliography": [],
+  "appearance": {
+    "episode_id": "DQ.P1.C08.E04",
+    "moment": "desenlace"
+  },
+  "asset_ids": [
+    "DQ.MA.900005"
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Condición original de la precarga: tras_capitulo",
+  "speaker": {
+    "label": "narrador"
+  }
+}

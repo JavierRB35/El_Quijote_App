@@ -1,0 +1,20 @@
+{
+  "id": "DQ.PER.0004",
+  "contract_version": "1.0.0",
+  "class": "ficticio",
+  "canonical_name": "El rucio",
+  "variants": [
+    "asno de Sancho"
+  ],
+  "relations": [],
+  "appearances": [
+    "DQ.P1.C08.E04"
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Jumento de Sancho, identificado en el EPUB como burro pequeno gris en la referencia artistica.; Apariencia por capítulos (precarga): DQ.P1.C08, DQ.P1.C11"
+}

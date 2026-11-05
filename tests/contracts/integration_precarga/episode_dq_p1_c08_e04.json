@@ -1,0 +1,31 @@
+{
+  "id": "DQ.P1.C08.E04",
+  "contract_version": "1.0.0",
+  "title": "Los molinos de viento y la batalla con el vizcaíno",
+  "chapters": [
+    "DQ.P1.C08",
+    "DQ.P1.C09"
+  ],
+  "narrative_order": 4,
+  "synopsis": "Gigantes que son molinos, frailes que son 'bultos negros' encantadores y el desafio del escudero vizcaino: tres percepciones desviadas encadenadas; el combate queda suspendido por las duenas del coche y concluye en I, 9.",
+  "actors": [
+    "DQ.PER.0001",
+    "DQ.PER.0002",
+    "DQ.PER.0003",
+    "DQ.PER.0004"
+  ],
+  "places": [
+    "DQ.LOC.0002",
+    "DQ.LOC.0003",
+    "DQ.LOC.0004"
+  ],
+  "passages": [
+    "DQ.P1.C08.P0001",
+    "DQ.P1.C08.P0002",
+    "DQ.P1.C08.P0003"
+  ],
+  "spoiler_flags": {
+    "reveals_future_events": false,
+    "notes": "Pendiente de valoración editorial (borrador 0.1 sin este campo)"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "DQ.PER.0010",
+  "contract_version": "1.0.0",
+  "class": "ficticio",
+  "canonical_name": "Cide Hamete Benengeli",
+  "variants": [],
+  "relations": [
+    {
+      "person_id": "DQ.PER.0001",
+      "kind": "autor_ficticio"
+    }
+  ],
+  "appearances": [],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Historiador arabe ficticio, autor interno de la historia; abre la segunda parte (II, 1).; Apariencia por capítulos (precarga): DQ.P2.C01"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "DQ.PER.0011",
+  "contract_version": "1.0.0",
+  "class": "historico",
+  "canonical_name": "Avellaneda (seudonimo)",
+  "variants": [
+    "Alonso Fernandez de Avellaneda"
+  ],
+  "relations": [],
+  "appearances": [],
+  "certainty": "DISCUTIDO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Autor de la continuacion apocrifa (1614, 'natural de Tordesillas' segun el texto); su identidad real es debatida. Nombrado en II, 72 de esta edicion.; Apariencia por capítulos (precarga): DQ.P2.C72",
+  "historical_ref": {
+    "source_id": "DQ.SRC.0002",
+    "note": "Continuacion apocrifa publicada en 1614; existencia documentada, autoria real no establecida."
+  }
+}

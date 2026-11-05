@@ -13,32 +13,38 @@
     "modern_name": { "type": "string" },
     "variants": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
     "geometry": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["type", "crs"],
-      "properties": {
-        "type": { "type": "string", "enum": ["Point", "LineString"] },
-        "coordinates": {
-          "type": "array",
-          "items": { "type": "number" },
-          "$comment": "Para Point: [lon, lat]. Prohibido en LineString, que usa 'track'."
-        },
-        "track": { "type": "array", "items": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 }, "minItems": 2 },
-        "crs": { "type": "string", "const": "EPSG:4326" },
-        "precision_m": { "type": "integer", "minimum": 0, "$comment": "Incertidumbre espacial en metros; obligatoria si status != explicito." }
-      },
-      "allOf": [
+      "description": "null = lugar mencionado en la obra pero aún sin coordenadas justificables (v0.2.0 MINOR: hallazgo de la integración de la precarga; los topónimos literarios amplios no siempre son geolocalizables).",
+      "anyOf": [
+        { "type": "null" },
         {
-          "if": { "properties": { "type": { "const": "Point" } }, "required": ["type"] },
-          "then": { "required": ["coordinates"], "properties": { "coordinates": { "minItems": 2, "maxItems": 2 } } }
-        },
-        {
-          "if": { "properties": { "type": { "const": "LineString" } }, "required": ["type"] },
-          "then": { "required": ["track"], "not": { "required": ["coordinates"] } }
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "crs"],
+          "properties": {
+            "type": { "type": "string", "enum": ["Point", "LineString"] },
+            "coordinates": {
+              "type": "array",
+              "items": { "type": "number" },
+              "$comment": "Para Point: [lon, lat]. Prohibido en LineString, que usa 'track'."
+            },
+            "track": { "type": "array", "items": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 }, "minItems": 2 },
+            "crs": { "type": "string", "const": "EPSG:4326" },
+            "precision_m": { "type": "integer", "minimum": 0, "$comment": "Incertidumbre espacial en metros; obligatoria si status != explicito." }
+          },
+          "allOf": [
+            {
+              "if": { "properties": { "type": { "const": "Point" } }, "required": ["type"] },
+              "then": { "required": ["coordinates"], "properties": { "coordinates": { "minItems": 2, "maxItems": 2 } } }
+            },
+            {
+              "if": { "properties": { "type": { "const": "LineString" } }, "required": ["type"] },
+              "then": { "required": ["track"], "not": { "required": ["coordinates"] } }
+            }
+          ]
         }
       ]
     },
-    "status": { "type": "string", "enum": ["explicito", "probable", "debatido", "interpretativo"], "$comment": "Encargo §4.5: lugar explícito, identificación probable/debatida, patrimonio asociado o ruta interpretativa." },
+    "status": { "type": "string", "enum": ["explicito", "probable", "debatido", "interpretativo", "patrimonio_asociado"], "$comment": "Encargo §4.5: lugar explícito, identificación probable/debatida, patrimonio asociado o ruta interpretativa. 'patrimonio_asociado' añadido en v0.2.0: omitido por error en v0.1 y detectado al integrar la precarga editorial." },
     "presented_as": { "type": "string", "enum": ["hecho", "hipotesis"] },
     "certainty": { "$ref": "_definitions.schema.json#/$defs/Certainty" },
     "chapters": { "type": "array", "items": { "$ref": "_definitions.schema.json#/$defs/chapterId" }, "minItems": 1, "uniqueItems": true },

@@ -1,0 +1,27 @@
+{
+  "id": "DQ.DIS.000009",
+  "contract_version": "1.0.0",
+  "kind": "humor_escena",
+  "content": "«…el grande emperador Alifanfarón, señor de la grande isla Trapobana…» y «Pentapolín del Arremangado Brazo, porque siempre entra en las batallas con el brazo derecho desnudo» — catálogo militar de improviso sobre dos manadas de ovejas.",
+  "passages": [
+    "DQ.P1.C18.P0001"
+  ],
+  "bibliography": [],
+  "appearance": {
+    "episode_id": "DQ.P1.C08.E04",
+    "moment": "desenlace"
+  },
+  "asset_ids": [
+    "DQ.MA.900008"
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Kind original de la precarga: humor; Condición original de la precarga: tras_capitulo",
+  "speaker": {
+    "label": "don Quijote"
+  }
+}

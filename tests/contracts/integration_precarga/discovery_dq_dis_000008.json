@@ -1,0 +1,25 @@
+{
+  "id": "DQ.DIS.000008",
+  "contract_version": "1.0.0",
+  "kind": "humor_escena",
+  "content": "«…entonces los que en ella vivían ignoraban estas dos palabras de ¡tuyo y mío!»",
+  "passages": [
+    "DQ.P1.C11.P0002"
+  ],
+  "bibliography": [],
+  "appearance": {
+    "episode_id": "DQ.P1.C08.E04",
+    "moment": "desenlace"
+  },
+  "asset_ids": [],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Kind original de la precarga: humor; Condición original de la precarga: tras_capitulo",
+  "speaker": {
+    "label": "don Quijote"
+  }
+}

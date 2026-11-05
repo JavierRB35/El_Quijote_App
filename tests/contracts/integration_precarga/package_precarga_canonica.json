@@ -1,0 +1,116 @@
+{
+  "package_id": "precarga-piloto-canonica",
+  "contract_version": "1.0.0",
+  "catalog_version": "0.0.1",
+  "created": "2026-11-05",
+  "files": {
+    "editions": [
+      "edition_epub_tusell.json"
+    ],
+    "chapters": [
+      "chapter_p1_c08.json",
+      "chapter_p1_c06.json",
+      "chapter_p1_c11.json",
+      "chapter_p1_c18.json",
+      "chapter_p2_c01.json",
+      "chapter_p2_c74.json",
+      "chapter_p1_c09.json"
+    ],
+    "passages": [
+      "passage_dq_p1_c06_p0001.json",
+      "passage_dq_p1_c06_p0002.json",
+      "passage_dq_p1_c08_p0001.json",
+      "passage_dq_p1_c08_p0002.json",
+      "passage_dq_p1_c08_p0003.json",
+      "passage_dq_p1_c11_p0001.json",
+      "passage_dq_p1_c11_p0002.json",
+      "passage_dq_p1_c18_p0001.json",
+      "passage_dq_p1_c18_p0002.json",
+      "passage_dq_p2_c01_p0001.json",
+      "passage_dq_p2_c74_p0001.json",
+      "passage_dq_p2_c74_p0002.json",
+      "passage_dq_p2_c74_p0003.json"
+    ],
+    "episodes": [
+      "episode_dq_p1_c08_e04.json"
+    ],
+    "scenes": [],
+    "questions": [],
+    "discoveries": [
+      "discovery_dq_dis_000002.json",
+      "discovery_dq_dis_000003.json",
+      "discovery_dq_dis_000004.json",
+      "discovery_dq_dis_000005.json",
+      "discovery_dq_dis_000006.json",
+      "discovery_dq_dis_000007.json",
+      "discovery_dq_dis_000008.json",
+      "discovery_dq_dis_000009.json",
+      "discovery_dq_dis_000010.json",
+      "discovery_dq_dis_000011.json",
+      "discovery_dq_dis_000012.json",
+      "discovery_dq_dis_000013.json",
+      "discovery_dq_dis_000014.json",
+      "discovery_dq_dis_000001.json"
+    ],
+    "persons": [
+      "person_dq_per_0001.json",
+      "person_dq_per_0002.json",
+      "person_dq_per_0003.json",
+      "person_dq_per_0004.json",
+      "person_dq_per_0005.json",
+      "person_dq_per_0006.json",
+      "person_dq_per_0007.json",
+      "person_dq_per_0008.json",
+      "person_dq_per_0009.json",
+      "person_dq_per_0010.json",
+      "person_dq_per_0011.json",
+      "person_dq_per_0012.json",
+      "person_dq_per_0013.json",
+      "person_dq_per_0014.json"
+    ],
+    "places": [
+      "place_dq_loc_0001.json",
+      "place_dq_loc_0002.json",
+      "place_dq_loc_0003.json",
+      "place_dq_loc_0004.json",
+      "place_dq_loc_0005.json"
+    ],
+    "museum_items": [],
+    "media_assets": [
+      "media_dq_ma_000001.json",
+      "media_dq_ma_000021.json",
+      "media_dq_ma_000026.json",
+      "media_dq_ma_000027.json",
+      "media_dq_ma_000028.json",
+      "media_dq_ma_000029.json",
+      "media_dq_ma_000035.json",
+      "media_dq_ma_000058.json",
+      "media_dq_ma_000170.json",
+      "media_dq_ma_000371.json",
+      "media_dq_ma_000373.json",
+      "media_dq_ma_900005.json",
+      "media_dq_ma_900006.json",
+      "media_dq_ma_900008.json"
+    ],
+    "sources": [
+      "source_epub_tusell.json",
+      "source_bvpb_tasso.json",
+      "source_produccion_propia.json"
+    ],
+    "licenses": [
+      "license_uso_interno.json"
+    ]
+  },
+  "counts": {
+    "editions": 1,
+    "chapters": 7,
+    "passages": 13,
+    "episodes": 1,
+    "discoveries": 14,
+    "persons": 14,
+    "places": 5,
+    "media_assets": 14,
+    "sources": 3,
+    "licenses": 1
+  }
+}

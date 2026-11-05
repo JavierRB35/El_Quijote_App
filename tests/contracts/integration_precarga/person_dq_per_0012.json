@@ -1,0 +1,20 @@
+{
+  "id": "DQ.PER.0012",
+  "contract_version": "1.0.0",
+  "class": "historico",
+  "canonical_name": "Miguel de Cervantes",
+  "variants": [],
+  "relations": [],
+  "appearances": [],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Autor real, citado DENTRO de la novela en I, 6 ('La Galatea, de Miguel de Cervantes' y 'grande amigo mio ese Cervantes').; Apariencia por capítulos (precarga): DQ.P1.C06",
+  "historical_ref": {
+    "source_id": "DQ.SRC.0002",
+    "note": "Autor de la obra (1616, d.); La Galatea (1585)."
+  }
+}

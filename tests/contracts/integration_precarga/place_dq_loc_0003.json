@@ -1,0 +1,24 @@
+{
+  "id": "DQ.LOC.0003",
+  "contract_version": "1.0.0",
+  "kind": "lugar",
+  "literary_name": "El Toboso",
+  "modern_name": "El Toboso (Toledo)",
+  "variants": [],
+  "geometry": null,
+  "status": "explicito",
+  "presented_as": "hecho",
+  "certainty": "TEXTO_EXPLICITO",
+  "chapters": [
+    "DQ.P1.C08"
+  ],
+  "sources": [
+    "DQ.SRC.0001"
+  ],
+  "attribution_note": "Geometría pendiente de geolocalización (precarga declara precisión: aproximada); Destino que don Quijote encomienda a los del coche (I, 8); aldea de Dulcinea.",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  }
+}

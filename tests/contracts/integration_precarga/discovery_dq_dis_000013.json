@@ -1,0 +1,27 @@
+{
+  "id": "DQ.DIS.000013",
+  "contract_version": "1.0.0",
+  "kind": "cita_literal",
+  "content": "«—Dadme albricias, buenos señores, de que ya yo no soy don Quijote de la Mancha, sino Alonso Quijano…»",
+  "passages": [
+    "DQ.P2.C74.P0002"
+  ],
+  "bibliography": [],
+  "appearance": {
+    "episode_id": "DQ.P1.C08.E04",
+    "moment": "exploracion"
+  },
+  "asset_ids": [
+    "DQ.MA.000371"
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Condición original de la precarga: tras_episodio",
+  "speaker": {
+    "label": "don Quijote (Alonso Quijano)"
+  }
+}

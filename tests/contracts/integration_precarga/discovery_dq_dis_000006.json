@@ -1,0 +1,25 @@
+{
+  "id": "DQ.DIS.000006",
+  "contract_version": "1.0.0",
+  "kind": "curiosidad_recepcion",
+  "content": "«…este libro fué el primero de caballerías que se imprimió en España…» — declara el cura sobre Amadís de Gaula. Es una afirmación del personaje: su veracidad histórica se documenta aparte, nunca como hecho del banco.",
+  "passages": [
+    "DQ.P1.C06.P0002"
+  ],
+  "bibliography": [],
+  "appearance": {
+    "episode_id": "DQ.P1.C08.E04",
+    "moment": "desenlace"
+  },
+  "asset_ids": [],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Kind original de la precarga: curiosidad; Condición original de la precarga: tras_capitulo",
+  "speaker": {
+    "label": "el cura"
+  }
+}

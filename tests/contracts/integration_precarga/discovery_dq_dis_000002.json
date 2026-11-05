@@ -1,0 +1,27 @@
+{
+  "id": "DQ.DIS.000002",
+  "contract_version": "1.0.0",
+  "kind": "cita_literal",
+  "content": "«—¿Qué gigantes? Dijo Sancho Panza. —Aquellos que allí ves, respondió su amo, de los brazos largos, que los suelen tener algunos de casi dos leguas.»",
+  "passages": [
+    "DQ.P1.C08.P0001"
+  ],
+  "bibliography": [],
+  "appearance": {
+    "episode_id": "DQ.P1.C08.E04",
+    "moment": "desenlace"
+  },
+  "asset_ids": [
+    "DQ.MA.000026"
+  ],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Condición original de la precarga: tras_capitulo",
+  "speaker": {
+    "label": "Sancho Panza y don Quijote"
+  }
+}

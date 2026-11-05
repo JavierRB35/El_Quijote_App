@@ -74,7 +74,8 @@
     "SpoilerLevel": { "type": "string", "enum": ["ninguno", "leve", "revelador"] },
     "MediaFunction": {
       "type": "string",
-      "enum": ["pre_pregunta", "post_desenlace", "lector", "museo", "cuaderno", "atlas", "interfaz"]
+      "enum": ["pre_pregunta", "post_desenlace", "lector", "museo", "cuaderno", "atlas", "interfaz", "referencia"],
+      "$comment": "'referencia' añadido en v0.2.0 (MINOR): imágenes de referencia artística de recreaciones, sin fase narrativa (hallazgo de la integración del paquete de escenas)."
     },
 
     "Review": {

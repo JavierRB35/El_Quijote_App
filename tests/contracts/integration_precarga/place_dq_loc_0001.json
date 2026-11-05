@@ -1,0 +1,25 @@
+{
+  "id": "DQ.LOC.0001",
+  "contract_version": "1.0.0",
+  "kind": "lugar",
+  "literary_name": "La Mancha",
+  "modern_name": "La Mancha (Castilla-La Mancha)",
+  "variants": [],
+  "geometry": null,
+  "status": "explicito",
+  "presented_as": "hecho",
+  "certainty": "TEXTO_EXPLICITO",
+  "chapters": [
+    "DQ.P1.C08",
+    "DQ.P2.C74"
+  ],
+  "sources": [
+    "DQ.SRC.0001"
+  ],
+  "attribution_note": "Geometría pendiente de geolocalización (precarga declara precisión: aproximada); Comarca narrativa; el pueblo del hidalgo queda expresamente sin nombre (I, 1).",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  }
+}

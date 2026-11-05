@@ -1,0 +1,16 @@
+{
+  "id": "DQ.PER.0009",
+  "contract_version": "1.0.0",
+  "class": "ficticio",
+  "canonical_name": "Bachiller Sanson Carrasco",
+  "variants": [],
+  "relations": [],
+  "appearances": [],
+  "certainty": "TEXTO_EXPLICITO",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "notes": "Bachiller del pueblo; autor del epitafio de la sepultura (II, 74).; Apariencia por capítulos (precarga): DQ.P2.C74"
+}

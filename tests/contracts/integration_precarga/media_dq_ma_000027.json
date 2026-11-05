@@ -1,0 +1,24 @@
+{
+  "id": "DQ.MA.000027",
+  "contract_version": "1.0.0",
+  "function": "lector",
+  "media_class": "ACUARELA_HISTORICA",
+  "logical_uri": "assets://ilustraciones_tusell/acuarelas/027.jpg",
+  "alt": "Acuarela de Salvador Tusell sobre composición de Gustave Doré (Barcelona: Luis Tasso, 1905). Digitalización: Epublibre/Titivillus. Lámina n.º 027.",
+  "source_id": "DQ.SRC.0001",
+  "license_id": "DQ.LIC.0001",
+  "author": "Salvador Tusell (sobre composiciones de Gustave Doré)",
+  "date": "1905",
+  "allowed_uses": [
+    "uso_personal_app",
+    "almacenamiento_repo_git"
+  ],
+  "license_status": "verificada",
+  "provenance": "Extraída del EPUB (SHA-256 82647ac5…) sin retoque; expediente: docs/DERECHOS_Y_PROCEDENCIA_ILUSTRACIONES.md. Atribución obligatoria en pantalla.",
+  "review": {
+    "state": "documentada",
+    "reviewer_role": "editorial",
+    "date": "2026-11-05"
+  },
+  "spoiler_level": "ninguno"
+}

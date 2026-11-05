@@ -1,0 +1,13 @@
+{
+ "id": "DQ.P1.C11.P0005",
+ "contract_version": "1.0.0",
+ "chapter_id": "DQ.P1.C11",
+ "anchor": "EPUB 2011.xhtml; extracto verbatim",
+ "text_original": "La justicia se estaba en sus propios términos, sin que la osasen turbar ni ofender los del favor y los del interés, que tanto ahora la menoscaban, turban y persiguen",
+ "text_indexable": "la justicia se estaba en sus propios términos sin que la osasen turbar ni ofender los del favor y los del interés que tanto ahora la menoscaban turban y persiguen",
+ "position": {
+  "start_char": 5638,
+  "end_char": 5803
+ },
+ "sha256": "sha256:9bc3822403415c977984455fe707bd9fa77732fd96b1ae9424d1e2318c6f197a"
+}

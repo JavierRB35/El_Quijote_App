@@ -1,0 +1,13 @@
+{
+ "id": "DQ.P1.C06.P0003",
+ "contract_version": "1.0.0",
+ "chapter_id": "DQ.P1.C06",
+ "anchor": "EPUB 1006.xhtml; extracto verbatim",
+ "text_original": "como á único en su arte, se debe perdonar. —Así es verdad, dijo el cura, y por esa razón se le otorga la vida por ahora",
+ "text_indexable": "como á único en su arte se debe perdonar así es verdad dijo el cura y por esa razón se le otorga la vida por ahora",
+ "position": {
+  "start_char": 1942,
+  "end_char": 2061
+ },
+ "sha256": "sha256:b5cadbcd81486668a3e10880822a208c13f468c15726d9045e80b1ae16739ab8"
+}

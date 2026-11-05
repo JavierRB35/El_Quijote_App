@@ -1,0 +1,13 @@
+{
+ "id": "DQ.P2.C01.P0003",
+ "contract_version": "1.0.0",
+ "chapter_id": "DQ.P2.C01",
+ "anchor": "EPUB 2.1.xhtml; extracto verbatim",
+ "text_original": "oyeron que la ama y la sobrina, que ya habían dejado la conversación, daban grandes voces en el patio, y acudieron todos al ruido",
+ "text_indexable": "oyeron que la ama y la sobrina que ya habían dejado la conversación daban grandes voces en el patio y acudieron todos al ruido",
+ "position": {
+  "start_char": 22382,
+  "end_char": 22511
+ },
+ "sha256": "sha256:063b698eba572089f06b765c15c98cd2e2896f97d5fbf9f52cdf57665b11e44e"
+}

@@ -1,0 +1,63 @@
+{
+ "id": "DQ.Q.000231",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P2.C01.E01",
+ "chapter_ids": [
+  "DQ.P2.C01"
+ ],
+ "passage_ids": [
+  "DQ.P2.C01.P0002"
+ ],
+ "prompt": "¿Quién exclama «¡Milagro!» durante la conversación y a propósito de qué?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000231.O01",
+    "label": "El cura, ante que no haya versos infamatorios contra Angélica"
+   },
+   {
+    "id": "DQ.Q.000231.O02",
+    "label": "Sancho, ante la llegada del tazón de caldo"
+   },
+   {
+    "id": "DQ.Q.000231.O03",
+    "label": "La sobrina, al ver que tiran un libro"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000231.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "La sorpresa del cura subraya la sátira sobre la fama literaria de la heroína.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P2.C01.P0002",
+   "quote": "no ha llegado á mi noticia ningún verso infamatorio contra la señora Angélica, que trujo revuelto el mundo. —¡Milagro! Dijo el cura"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "dialogo",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P2.C01.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "visita"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "visita milagro cura angélica versos"
+}

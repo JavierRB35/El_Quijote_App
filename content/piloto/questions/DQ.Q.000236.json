@@ -1,0 +1,63 @@
+{
+ "id": "DQ.Q.000236",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P2.C74.E01",
+ "chapter_ids": [
+  "DQ.P2.C74"
+ ],
+ "passage_ids": [
+  "DQ.P2.C74.P0003"
+ ],
+ "prompt": "¿Quién compuso el epitafio «Yace aquí el hidalgo fuerte...»?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000236.O01",
+    "label": "El bachiller Sansón Carrasco"
+   },
+   {
+    "id": "DQ.Q.000236.O02",
+    "label": "Cide Hamete Benengeli"
+   },
+   {
+    "id": "DQ.Q.000236.O03",
+    "label": "El escribano del pueblo"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000236.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "«Los nuevos epitafios de su sepultura, aunque Sansón Carrasco le puso éste».",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P2.C74.P0003",
+   "quote": "los nuevos epitafios de su sepultura, aunque Sansón Carrasco le puso éste"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "hecho",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P2.C74.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "final"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "final epitafio carrasco compuso"
+}

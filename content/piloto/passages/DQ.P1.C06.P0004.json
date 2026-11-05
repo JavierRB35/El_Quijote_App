@@ -1,0 +1,13 @@
+{
+ "id": "DQ.P1.C06.P0004",
+ "contract_version": "1.0.0",
+ "chapter_id": "DQ.P1.C06",
+ "anchor": "EPUB 1006.xhtml; extracto verbatim",
+ "text_original": "Pues, en verdad, dijo el cura, que no le ha de valer al hijo la bondad del padre: tomad, señora ama, abrid esa ventana, y echalde al corral",
+ "text_indexable": "pues en verdad dijo el cura que no le ha de valer al hijo la bondad del padre tomad señora ama abrid esa ventana y echalde al corral",
+ "position": {
+  "start_char": 2182,
+  "end_char": 2321
+ },
+ "sha256": "sha256:5d608a9482417addd8dcf1ce34ca2eb961e04f45bdb55a1477373eee93d596ac"
+}

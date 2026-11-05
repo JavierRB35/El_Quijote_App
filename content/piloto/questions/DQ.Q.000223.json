@@ -1,0 +1,64 @@
+{
+ "id": "DQ.Q.000223",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C18.E01",
+ "chapter_ids": [
+  "DQ.P1.C18"
+ ],
+ "passage_ids": [
+  "DQ.P1.C18.P0005"
+ ],
+ "prompt": "Al examinarle Sancho la boca, ¿qué ocurre de pronto?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000223.O01",
+    "label": "Don Quijote vomita el bálsamo «más recio que una escopeta» sobre las barbas de Sancho"
+   },
+   {
+    "id": "DQ.Q.000223.O02",
+    "label": "Sancho encuentra la muela perdida entre los dientes"
+   },
+   {
+    "id": "DQ.Q.000223.O03",
+    "label": "Don Quijote recupera el habla y pronuncia un juramento"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000223.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "El bálsamo de Fierabrás «ya había obrado en el estómago»: comicidad física en el desenlace (I, 18).",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C18.P0005",
+   "quote": "arrojó de sí, más recio que una escopeta, cuanto dentro tenía y dió con todo ello en las barbas del compasivo escudero"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "humor",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C18.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900008"
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "rebaños"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "rebaños vomito bálsamo escopeta barbas"
+}

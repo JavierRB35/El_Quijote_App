@@ -1,0 +1,13 @@
+{
+ "id": "DQ.P1.C18.P0005",
+ "contract_version": "1.0.0",
+ "chapter_id": "DQ.P1.C18",
+ "anchor": "EPUB 1.18.xhtml; extracto verbatim",
+ "text_original": "arrojó de sí, más recio que una escopeta, cuanto dentro tenía y dió con todo ello en las barbas del compasivo escudero",
+ "text_indexable": "arrojó de sí más recio que una escopeta cuanto dentro tenía y dió con todo ello en las barbas del compasivo escudero",
+ "position": {
+  "start_char": 16152,
+  "end_char": 16270
+ },
+ "sha256": "sha256:b4a1e720aeb5f7cc00bf6c494a7dfbf791932bdd8400f89d453f34619f8036cb"
+}

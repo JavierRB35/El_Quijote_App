@@ -1,0 +1,13 @@
+{
+ "id": "DQ.P2.C74.P0004",
+ "contract_version": "1.0.0",
+ "chapter_id": "DQ.P2.C74",
+ "anchor": "EPUB 2.74.xhtml; extracto verbatim",
+ "text_original": "se le arraigó una calentura, que le tuvo seis días en la cama",
+ "text_indexable": "se le arraigó una calentura que le tuvo seis días en la cama",
+ "position": {
+  "start_char": 529,
+  "end_char": 590
+ },
+ "sha256": "sha256:3d16c546aca19b2423e245187997e7dfdc1771a16c8d569f091119e3dcdf95e6"
+}

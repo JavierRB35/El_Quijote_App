@@ -1,0 +1,64 @@
+{
+ "id": "DQ.Q.000203",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C06.E01",
+ "chapter_ids": [
+  "DQ.P1.C06"
+ ],
+ "passage_ids": [
+  "DQ.P1.C06.P0004"
+ ],
+ "prompt": "¿Qué veredicto recibe Las Sergas de Esplandián, hijo de Amadís?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000203.O01",
+    "label": "Al corral: «no le ha de valer al hijo la bondad del padre»"
+   },
+   {
+    "id": "DQ.Q.000203.O02",
+    "label": "Se guarda por ser continuación de un libro perdonado"
+   },
+   {
+    "id": "DQ.Q.000203.O03",
+    "label": "Se reparte entre el cura y el barbero como curiosidad"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000203.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "El cura niega que la bondad del padre ampare al hijo y manda echarlo al corral (I, 6).",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C06.P0004",
+   "quote": "no le ha de valer al hijo la bondad del padre: tomad, señora ama, abrid esa ventana, y echalde al corral"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "causa_consecuencia",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C06.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900013"
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "escrutinio"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "escrutinio esplandian hijo padre corral"
+}

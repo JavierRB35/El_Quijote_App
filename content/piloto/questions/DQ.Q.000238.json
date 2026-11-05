@@ -1,0 +1,63 @@
+{
+ "id": "DQ.Q.000238",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P2.C74.E01",
+ "chapter_ids": [
+  "DQ.P2.C74"
+ ],
+ "passage_ids": [
+  "DQ.P2.C74.P0006"
+ ],
+ "prompt": "¿Contra qué advertencia termina la obra?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000238.O01",
+    "label": "Contra quien quiera sacarlo de la fuesa «á Castilla la Vieja» para hacerle «tercera parte y salida nueva»"
+   },
+   {
+    "id": "DQ.Q.000238.O02",
+    "label": "Contra los que quemen libros de caballerías sin leerlos"
+   },
+   {
+    "id": "DQ.Q.000238.O03",
+    "label": "Contra los escuderos que sueñan con ínsulas"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000238.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "«...bastan las dos que él hizo tan á gusto y beneplácito de las gentes»: réplica final a los fabricantes de segundas partes.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P2.C74.P0006",
+   "quote": "no le quiera llevar, contra todos los fueros de la muerte, á Castilla la Vieja... imposibilitado de hacer tercera parte y salida nueva"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "interpretacion",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P2.C74.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "final"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "final advertencia castilla vieja tercera parte"
+}

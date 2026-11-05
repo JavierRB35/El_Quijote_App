@@ -1,0 +1,71 @@
+{
+ "id": "DQ.Q.000206",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C06.E01",
+ "chapter_ids": [
+  "DQ.P1.C06"
+ ],
+ "passage_ids": [
+  "DQ.P1.C06.P0006"
+ ],
+ "prompt": "¿Quiénes secundan llevar los libros al corral? (varias)",
+ "interaction": {
+  "type": "multi_choice",
+  "multi_declared": true,
+  "options": [
+   {
+    "id": "DQ.Q.000206.O01",
+    "label": "El barbero: «Dese parecer soy yo»"
+   },
+   {
+    "id": "DQ.Q.000206.O02",
+    "label": "La sobrina: «Y aun yo»"
+   },
+   {
+    "id": "DQ.Q.000206.O03",
+    "label": "El ama: «vengan, y al corral con ellos»"
+   },
+   {
+    "id": "DQ.Q.000206.O04",
+    "label": "Don Quijote, desde su lecho"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000206.O01",
+   "DQ.Q.000206.O02",
+   "DQ.Q.000206.O03"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "Los tres secundan la condena; don Quijote duerme durante todo el escrutinio.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C06.P0006",
+   "quote": "—Dese parecer soy yo, dijo el barbero. —Y aun yo, añadió la sobrina. —Pues así es, dijo el ama, vengan, y al corral con ellos"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "dialogo",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C06.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900013"
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "escrutinio"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "escrutinio secundan barbero sobrina ama corral"
+}

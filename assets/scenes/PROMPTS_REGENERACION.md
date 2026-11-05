@@ -73,13 +73,21 @@ Estas indicaciones sintetizan los requisitos artísticos empleados en la generac
 | `p2_c60_roque_guinart_pre` | En un bosque catalán Roque Guinart y sus hombres con armas históricas bajas reciben a los viajeros, sin disparar. | Encuentro con el bandolero. |
 | `p2_c63_galeras_barcelona_pre` | Cubierta de galera mediterránea a comienzos del XVII: remeros, marineros, aparejos, Don Quijote y Sancho; sin persecución ni revelación. | Visita marítima previa a la aventura de Ana Félix. |
 
-Para regenerar o ampliar una escena, conservar el ID semántico si solo se reemplaza su versión gráfica y registrar una nueva revisión de fichero/hash en `manifest.json`. Si cambia el episodio, la pregunta asociada o la fase narrativa, asignar ID nuevo y revisar enlaces editoriales.
-
-## Quinta batería — huecos del piloto editorial (solicitud CONTENIDOS, 2026-11-05)
-
-Dos fases sin cobertura detectadas por el catálogo editorial (`docs/CATALOGO_NECESIDADES_VISUALES.md`). Prioridad alta: completan las fases de los capítulos del piloto con preguntas ya producidas.
+## Quinta batería — ampliación de capítulos
 
 | ID | Variación sobre el prompt base | Uso |
 |---|---|---|
-| `p1_c06_hoguera_corral_post` | Patio-corral manchego al anochecer: hoguera con libros de caballerías ardiendo, el ama lanza un libro por la ventana abierta, cura y barbero junto al fuego, sobrina observa; **sin Don Quijote (duerme dentro), humo moderado, sin llamas fuera de la hoguera**. | Desenlace del escrutinio (I, 6; fase `after`). |
-| `p2_c01_loco_sevillano_reveal` | Misma sala manchega que `p2_c01_recuperacion_pre` (continuidad de espacio y luz): don Quijote, animado, narra con gesto vivo la historia del loco de Sevilla ante el cura y el barbero que le escuchan; ventana con luz suave; **sin personajes de la historia representados, sin locos ni perros visibles**. | Durante la conversación literaria (II, 1; fase `reveal`); contraste con la acuarela DQ.MA.000170. |
+| `p1_c05_pedro_alonso_auxilio_post` | Pedro Alonso, labrador, socorre al hidalgo exhausto junto a un camino manchego; Rocinante cerca, **sin Sancho**. | Rescate tras el percance; desenlace. |
+| `p1_c16_maritornes_venta_pre` | Maritornes y las mujeres de la venta cuidan a Don Quijote en un lecho humilde, con Sancho en segundo término. | Hospitalidad previa al equívoco nocturno; sin sexualizar. |
+| `p1_c24_cardenio_sierra_morena_pre` | Cardenio, joven noble desaliñado y afligido, habla con Don Quijote y Sancho entre rocas y encinas. | Inicio de su relato; sin revelar conflictos. |
+| `p1_c36_dorotea_reencuentro_post` | Dorotea, Luscinda, Cardenio y don Fernando se reconocen con emoción en la venta. | **Spoiler alto:** reencuentro y reconciliación. |
+| `p1_c41_zoraida_cautivo_barca_pre` | Zoraida y el cautivo Ruy Pérez viajan con acompañantes en una embarcación mediterránea nocturna; **relato interpolado, no aventura vista por Don Quijote**. | Travesía del relato del cautivo. |
+| `p1_c45_bacia_disputa_post` | Debate cómico y abarrotado en la venta; el barbero muestra una bacía de latón, Don Quijote defiende su supuesto yelmo. | **Spoiler alto** del equívoco de Mambrino. |
+| `p2_c13_escuderos_bosque_pre` | Sancho y otro escudero comparten pan y conversación junto a una pequeña hoguera nocturna; no mostrar identidad posterior. | Coloquio de los dos escuderos. |
+| `p2_c18_lorenzo_poesia_pre` | Lorenzo lee versos sin palabras legibles a Don Quijote en el patio de don Diego de Miranda. | Conversación sobre la poesía. |
+| `p2_c21_basilio_bodas_post` | Basilio representa su ardid ante Quiteria e invitados a las bodas; gesto teatral, **sin sangre ni desenlace final**. | **Spoiler alto:** giro del episodio. |
+| `p2_c35_merlin_mascarada_pre` | En el bosque de los duques aparece un **actor humano** vestido de Merlín en una función nocturna con antorchas y decorados. | Mascarada cortesana, no magia real. |
+| `p2_c47_pedro_recio_mesa_pre` | El médico Pedro Recio ordena retirar los platos ante el hambriento Sancho gobernador en Barataria; sin vestimenta médica moderna. | Humor de gobierno. |
+| `p2_c55_sancho_rucio_sima_post` | Sancho protege al rucio desde el fondo de una sima rocosa con luz y una cuerda desde la abertura, sin heridas. | **Spoiler alto:** consecuencia de la caída. |
+
+Para regenerar o ampliar una escena, conservar el ID semántico si solo se reemplaza su versión gráfica y registrar una nueva revisión de fichero/hash en `manifest.json`. Si cambia el episodio, la pregunta asociada o la fase narrativa, asignar ID nuevo y revisar enlaces editoriales.

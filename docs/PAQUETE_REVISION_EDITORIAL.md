@@ -4,6 +4,8 @@
 **Objetivo:** un solo expediente que agrupe **todas** las decisiones editoriales pendientes del piloto, con **tabla común de visados por especialidad** (R05, R06, R12, R01/R02) y **comprobación técnica posterior (R09)** — según la recomendación expresa: «una única pasada de R01/R02 no sustituye los visados de R05, R06 y R12».
 **Regla de cierre:** una fila queda decidida cuando las cuatro especialidades marcan conformidad (o rechazo con motivo) **y** R09 valida la viabilidad técnica del resultado. Ninguna fila de este paquete autoriza por sí sola integración en runtime.
 
+**Nota de vigencia R14 — rectificación P0 aceptada (PR #44):** los balances o afirmaciones anteriores que aún describen **cuatro R06-NC** (incluidos §D0, las notas cronológicas de §D1 y los resúmenes del antiguo cierre) son **HISTÓRICOS**, no dictámenes activos. Prevalecen **la tabla A rectificada y §D2**: **25 R06-CC / 0 R06-NC / 1 R06-PEND**. Las anotaciones y contrafirmas R05 se conservan sin cambios; quedan pendientes los visados R12, R01/R02 y R09. **Sin GO de runtime ni de producción.**
+
 ## A. Las 14 propuestas antiespoiler (PR #30 — no incorporadas a la matriz #32)
 
 Fuente: `docs/data/propuesta_correcciones_visuales_pre_r15.csv` (13 `RETIRAR_PRE` + 1 `MANTENER_CONDICIONAL`). Estado: **0/14 incorporadas, 0/14 aprobadas** (PR #35).
@@ -205,7 +207,7 @@ Fuentes: `content/piloto/media_assets/DQ.MA.900042.json`, `DQ.MA.900036.json`, `
 > **Rectificación P0 R06 posterior al histórico PR #40 y al visado R05 PR #42:** **4 R06-NC pasan a R06-CC condicionadas** solo para A-05/A-11/A-13/A-14, con evidencia de URI en §D2. **Balance R06 actual: 25 CC / 0 NC / 1 PEND**. El texto histórico de los cierres anteriores se mantiene abajo como registro, pero **no debe usarse para atribuir rechazo vigente a las cuatro filas**. No cambia ningún estado de R05, R12, R01/R02 o R09.
 
 
-- ☑ **Visado R06 — COMPLETADO**: 26 pronunciamientos (21 CC · 4 NC · 1 PEND), PR #40 fusionada `cabe1cd`, **ratificado por R14** (A-05/A-11/A-13/A-14: retirada procedente pero destinos NO aceptados; A-12 exige cronología intrapregunta; 021/025 condicionadas; 900157 excluido). **Reauditoría (dictamen R14 posterior): las 4 R06-NC están CUESTIONADAS por discrepancia de identidad canónica DQ.MA/DQ.MED (resolución por logical_uri + SHA-256 en PR #42); la rectificación corresponde exclusivamente a Dirección Artística — registro histórico preservado.**
+- ☑ **HISTÓRICO — visado R06 de PR #40, SUPERADO POR LA RECTIFICACIÓN §D2:** 26 pronunciamientos (21 CC · 4 NC · 1 PEND), PR #40 fusionada `cabe1cd`, **ratificado por R14** (A-05/A-11/A-13/A-14: retirada procedente pero destinos NO aceptados; A-12 exige cronología intrapregunta; 021/025 condicionadas; 900157 excluido). **Reauditoría (dictamen R14 posterior): las 4 R06-NC están CUESTIONADAS por discrepancia de identidad canónica DQ.MA/DQ.MED (resolución por logical_uri + SHA-256 en PR #42); la rectificación corresponde exclusivamente a Dirección Artística — registro histórico preservado.**
 - ☑ **R05: visado documental ratificado por R14**, 26/26 pronunciamientos (25 CC condicionadas y A-12 PEND). Se mantienen los estados R06 ya ratificados; las cuatro NC requieren contrarrevisión de identidad.
 - ☐ Visado R12 — pendiente
 - ☐ Visado editorial R01/R02 — pendiente (ejecutable en la misma pasada que la contrafirma de ADR-0005, H5)

@@ -1,77 +1,77 @@
 {
- "id": "DQ.Q.000213",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P1.C11.E01",
- "chapter_ids": [
-  "DQ.P1.C11"
- ],
- "passage_ids": [
-  "DQ.P1.C11.P0004",
-  "DQ.P1.C11.P0005"
- ],
- "prompt": "¿Qué imágenes ofrece el discurso sobre aquella edad? (varias)",
- "interaction": {
-  "type": "multi_choice",
-  "multi_declared": true,
-  "options": [
-   {
-    "id": "DQ.Q.000213.O01",
-    "label": "Las robustas encinas convidando con su dulce y sazonado fruto"
-   },
-   {
-    "id": "DQ.Q.000213.O02",
-    "label": "Claras fuentes y corrientes ríos con aguas sabrosas y transparentes"
-   },
-   {
-    "id": "DQ.Q.000213.O03",
-    "label": "La justicia «en sus propios términos», sin favor ni interés"
-   },
-   {
-    "id": "DQ.Q.000213.O04",
-    "label": "Monedas de oro creciendo en las ramas de los robles"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000213.O01",
-   "DQ.Q.000213.O02",
-   "DQ.Q.000213.O03"
-  ],
-  "shuffle_options": true
- },
- "rationale": "Tres imágenes textuales del discurso; el oro crecido en robles no aparece: la ironía es que NO se estimaba el oro.",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C11.P0004",
-   "quote": "las robustas encinas, que\nliberalmente les estaban convidando con su dulce y sazonado fruto."
-  },
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C11.P0005",
-   "quote": "La justicia se estaba en sus proprios términos, sin que\nla osasen turbar ni ofender los del favor y los del interese"
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "interpretacion",
- "difficulty": 2,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P1.C11.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true,
-  "pre_image_media_id": "DQ.MA.900007"
- },
- "language": "es",
- "tags": [
-  "piloto",
-  "edad-oro"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "edad-oro imagines encinas fuentes justicia"
+    "id": "DQ.Q.000213",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P1.C11.E01",
+    "chapter_ids": [
+        "DQ.P1.C11"
+    ],
+    "passage_ids": [
+        "DQ.P1.C11.P0004",
+        "DQ.P1.C11.P0005"
+    ],
+    "prompt": "¿Qué imágenes ofrece el discurso sobre aquella edad? (varias)",
+    "interaction": {
+        "type": "multi_choice",
+        "multi_declared": true,
+        "options": [
+            {
+                "id": "DQ.Q.000213.O01",
+                "label": "Las robustas encinas convidando con su dulce y sazonado fruto"
+            },
+            {
+                "id": "DQ.Q.000213.O02",
+                "label": "Claras fuentes y corrientes ríos con aguas sabrosas y transparentes"
+            },
+            {
+                "id": "DQ.Q.000213.O03",
+                "label": "La justicia «en sus propios términos», sin favor ni interés"
+            },
+            {
+                "id": "DQ.Q.000213.O04",
+                "label": "Monedas de oro creciendo en las ramas de los robles"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000213.O01",
+            "DQ.Q.000213.O02",
+            "DQ.Q.000213.O03"
+        ],
+        "shuffle_options": true
+    },
+    "rationale": "Tres imágenes textuales del discurso; el oro crecido en robles no aparece: la ironía es que NO se estimaba el oro.",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C11.P0004",
+            "quote": "las robustas encinas, que\nliberalmente les estaban convidando con su dulce y sazonado fruto."
+        },
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C11.P0005",
+            "quote": "La justicia se estaba en sus proprios términos, sin que\nla osasen turbar ni ofender los del favor y los del interese"
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "interpretacion",
+    "difficulty": 2,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P1.C11.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900032"
+    },
+    "language": "es",
+    "tags": [
+        "piloto",
+        "edad-oro"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "edad-oro imagines encinas fuentes justicia"
 }

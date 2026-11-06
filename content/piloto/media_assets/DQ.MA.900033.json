@@ -1,0 +1,34 @@
+{
+    "id": "DQ.MA.900033",
+    "contract_version": "1.0.0",
+    "function": "pre_pregunta",
+    "media_class": "RECREACION_IA",
+    "logical_uri": "assets://scenes/part_1/chapter_16/p1_c16_maritornes_venta_pre.webp",
+    "derivatives": [
+        {
+            "variant": "original",
+            "format": "webp",
+            "width": 1672,
+            "height": 941,
+            "size_bytes": 249442,
+            "sha256": "sha256:ab9864062fb248b4daf5775784ae873691e119e544c17508468f4230b27e1769"
+        }
+    ],
+    "alt": "Maritornes y otras mujeres de una humilde venta preparan un lecho y atienden a Don Quijote, con Sancho a un lado.",
+    "source_id": "DQ.SRC.0003",
+    "license_id": "DQ.LIC.0002",
+    "author": "Equipo de arte El_Quijote_App (recreación IA)",
+    "date": "2026-11-06",
+    "allowed_uses": [
+        "uso_personal_app",
+        "almacenamiento_repo_git"
+    ],
+    "license_status": "verificada",
+    "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA (nunca evidencia histórica).",
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "spoiler_level": "ninguno"
+}

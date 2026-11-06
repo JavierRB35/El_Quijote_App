@@ -1,100 +1,100 @@
 {
- "id": "DQ.Q.000204",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P1.C06.E01",
- "chapter_ids": [
-  "DQ.P1.C06"
- ],
- "passage_ids": [
-  "DQ.P1.C06.P0005",
-  "DQ.P1.C06.P0003"
- ],
- "prompt": "Relaciona cada libro del escrutinio con el veredicto que le da el cura.",
- "interaction": {
-  "type": "matching",
-  "options": [
-   {
-    "id": "DQ.Q.000204.O01",
-    "label": "Tirante el Blanco"
-   },
-   {
-    "id": "DQ.Q.000204.O02",
-    "label": "Amadís de Gaula"
-   },
-   {
-    "id": "DQ.Q.000204.O03",
-    "label": "Palmerín de Oliva"
-   },
-   {
-    "id": "DQ.Q.000204.O04",
-    "label": "Palmerín de Ingalaterra"
-   },
-   {
-    "id": "DQ.Q.000204.O05",
-    "label": "«tesoro de contento y una mina de pasatiempos»"
-   },
-   {
-    "id": "DQ.Q.000204.O06",
-    "label": "«vida por ahora», único en su arte"
-   },
-   {
-    "id": "DQ.Q.000204.O07",
-    "label": "«se haga luego rajas y se queme»"
-   },
-   {
-    "id": "DQ.Q.000204.O08",
-    "label": "«se guarde como á cosa única»"
-   }
-  ],
-  "pairs": [
-   {
-    "left": "DQ.Q.000204.O01",
-    "right": "DQ.Q.000204.O05"
-   },
-   {
-    "left": "DQ.Q.000204.O02",
-    "right": "DQ.Q.000204.O06"
-   },
-   {
-    "left": "DQ.Q.000204.O03",
-    "right": "DQ.Q.000204.O07"
-   },
-   {
-    "left": "DQ.Q.000204.O04",
-    "right": "DQ.Q.000204.O08"
-   }
-  ],
-  "shuffle_options": false
- },
- "rationale": "Cuatro veredictos textuales del escrutinio: dos salvamentos con elogio, una condena y una condena pareada.",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C06.P0005",
-   "quote": "Esa Oliva se haga luego rajas y se queme... y esa Palma de Ingalaterra se guarde y se conserve como á cosa única"
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "hecho",
- "difficulty": 2,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P1.C06.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true,
-  "pre_image_media_id": "DQ.MA.900013"
- },
- "language": "es",
- "tags": [
-  "piloto",
-  "escrutinio"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "escrutinio emparejamiento veredictos palmerines"
+    "id": "DQ.Q.000204",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P1.C06.E01",
+    "chapter_ids": [
+        "DQ.P1.C06"
+    ],
+    "passage_ids": [
+        "DQ.P1.C06.P0005",
+        "DQ.P1.C06.P0003"
+    ],
+    "prompt": "Relaciona cada libro del escrutinio con el veredicto que le da el cura.",
+    "interaction": {
+        "type": "matching",
+        "options": [
+            {
+                "id": "DQ.Q.000204.O01",
+                "label": "Tirante el Blanco"
+            },
+            {
+                "id": "DQ.Q.000204.O02",
+                "label": "Amadís de Gaula"
+            },
+            {
+                "id": "DQ.Q.000204.O03",
+                "label": "Palmerín de Oliva"
+            },
+            {
+                "id": "DQ.Q.000204.O04",
+                "label": "Palmerín de Ingalaterra"
+            },
+            {
+                "id": "DQ.Q.000204.O05",
+                "label": "«tesoro de contento y una mina de pasatiempos»"
+            },
+            {
+                "id": "DQ.Q.000204.O06",
+                "label": "«vida por ahora», único en su arte"
+            },
+            {
+                "id": "DQ.Q.000204.O07",
+                "label": "«se haga luego rajas y se queme»"
+            },
+            {
+                "id": "DQ.Q.000204.O08",
+                "label": "«se guarde como á cosa única»"
+            }
+        ],
+        "pairs": [
+            {
+                "left": "DQ.Q.000204.O01",
+                "right": "DQ.Q.000204.O05"
+            },
+            {
+                "left": "DQ.Q.000204.O02",
+                "right": "DQ.Q.000204.O06"
+            },
+            {
+                "left": "DQ.Q.000204.O03",
+                "right": "DQ.Q.000204.O07"
+            },
+            {
+                "left": "DQ.Q.000204.O04",
+                "right": "DQ.Q.000204.O08"
+            }
+        ],
+        "shuffle_options": false
+    },
+    "rationale": "Cuatro veredictos textuales del escrutinio: dos salvamentos con elogio, una condena y una condena pareada.",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C06.P0005",
+            "quote": "Esa Oliva se haga luego rajas y se queme... y esa Palma de Ingalaterra se guarde y se conserve como á cosa única"
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "hecho",
+    "difficulty": 2,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P1.C06.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900013"
+    },
+    "language": "es",
+    "tags": [
+        "piloto",
+        "escrutinio"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "escrutinio emparejamiento veredictos palmerines"
 }

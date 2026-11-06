@@ -1,64 +1,64 @@
 {
- "id": "DQ.Q.000207",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P1.C06.E01",
- "chapter_ids": [
-  "DQ.P1.C06"
- ],
- "passage_ids": [
-  "DQ.P1.C06.P0006"
- ],
- "prompt": "¿Cuál es la hipérbole del cura al condenar al linaje de Amadís de Grecia?",
- "interaction": {
-  "type": "single_choice",
-  "options": [
-   {
-    "id": "DQ.Q.000207.O01",
-    "label": "Quemaría con ellos «al padre que me engendró, si anduviera en figura de caballero andante»"
-   },
-   {
-    "id": "DQ.Q.000207.O02",
-    "label": "Los echaría al mar con molinos de rueda al cuello"
-   },
-   {
-    "id": "DQ.Q.000207.O03",
-    "label": "Los enterraría bajo la hoguera misma"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000207.O01"
-  ],
-  "shuffle_options": true
- },
- "rationale": "La exageración humorística encadena la reina Pintiquinestra y el pastor Darinel con su propio progenitor.",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C06.P0006",
-   "quote": "quemaré con ellos al padre que\nme engendró, si anduviera en figura de caballero andante."
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "humor",
- "difficulty": 2,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P1.C06.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true,
-  "pre_image_media_id": "DQ.MA.900013"
- },
- "language": "es",
- "tags": [
-  "piloto",
-  "escrutinio"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "escrutinio hiperbole padre engendro pintiquinestra"
+    "id": "DQ.Q.000207",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P1.C06.E01",
+    "chapter_ids": [
+        "DQ.P1.C06"
+    ],
+    "passage_ids": [
+        "DQ.P1.C06.P0006"
+    ],
+    "prompt": "¿Cuál es la hipérbole del cura al condenar al linaje de Amadís de Grecia?",
+    "interaction": {
+        "type": "single_choice",
+        "options": [
+            {
+                "id": "DQ.Q.000207.O01",
+                "label": "Quemaría con ellos «al padre que me engendró, si anduviera en figura de caballero andante»"
+            },
+            {
+                "id": "DQ.Q.000207.O02",
+                "label": "Los echaría al mar con molinos de rueda al cuello"
+            },
+            {
+                "id": "DQ.Q.000207.O03",
+                "label": "Los enterraría bajo la hoguera misma"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000207.O01"
+        ],
+        "shuffle_options": true
+    },
+    "rationale": "La exageración humorística encadena la reina Pintiquinestra y el pastor Darinel con su propio progenitor.",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C06.P0006",
+            "quote": "quemaré con ellos al padre que\nme engendró, si anduviera en figura de caballero andante."
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "humor",
+    "difficulty": 2,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P1.C06.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900013"
+    },
+    "language": "es",
+    "tags": [
+        "piloto",
+        "escrutinio"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "escrutinio hiperbole padre engendro pintiquinestra"
 }

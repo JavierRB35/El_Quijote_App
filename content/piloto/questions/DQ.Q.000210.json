@@ -1,64 +1,64 @@
 {
- "id": "DQ.Q.000210",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P1.C11.E01",
- "chapter_ids": [
-  "DQ.P1.C11"
- ],
- "passage_ids": [
-  "DQ.P1.C11.P0001"
- ],
- "prompt": "¿Qué gesto precede inmediatamente al discurso de don Quijote?",
- "interaction": {
-  "type": "single_choice",
-  "options": [
-   {
-    "id": "DQ.Q.000210.O01",
-    "label": "Toma un puño de bellotas en la mano y las mira atentamente"
-   },
-   {
-    "id": "DQ.Q.000210.O02",
-    "label": "Se arrodilla sobre una peña al modo de Beltenebros"
-   },
-   {
-    "id": "DQ.Q.000210.O03",
-    "label": "Descarga un golpe de lanza contra el caldero"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000210.O01"
-  ],
-  "shuffle_options": true
- },
- "rationale": "El objeto cotidiano (bellotas) dispara el discurso áureo.",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C11.P0001",
-   "quote": "tomó un puño de\nbellotas en la mano, y, mirándolas atentamente, soltó la voz"
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "secuencia",
- "difficulty": 1,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P1.C11.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true,
-  "pre_image_media_id": "DQ.MA.900007"
- },
- "language": "es",
- "tags": [
-  "piloto",
-  "edad-oro"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "edad-oro puño bellotas gesto discurso"
+    "id": "DQ.Q.000210",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P1.C11.E01",
+    "chapter_ids": [
+        "DQ.P1.C11"
+    ],
+    "passage_ids": [
+        "DQ.P1.C11.P0001"
+    ],
+    "prompt": "¿Qué gesto precede inmediatamente al discurso de don Quijote?",
+    "interaction": {
+        "type": "single_choice",
+        "options": [
+            {
+                "id": "DQ.Q.000210.O01",
+                "label": "Toma un puño de bellotas en la mano y las mira atentamente"
+            },
+            {
+                "id": "DQ.Q.000210.O02",
+                "label": "Se arrodilla sobre una peña al modo de Beltenebros"
+            },
+            {
+                "id": "DQ.Q.000210.O03",
+                "label": "Descarga un golpe de lanza contra el caldero"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000210.O01"
+        ],
+        "shuffle_options": true
+    },
+    "rationale": "El objeto cotidiano (bellotas) dispara el discurso áureo.",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C11.P0001",
+            "quote": "tomó un puño de\nbellotas en la mano, y, mirándolas atentamente, soltó la voz"
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "secuencia",
+    "difficulty": 1,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P1.C11.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900007"
+    },
+    "language": "es",
+    "tags": [
+        "piloto",
+        "edad-oro"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "edad-oro puño bellotas gesto discurso"
 }

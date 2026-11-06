@@ -1,63 +1,64 @@
 {
- "id": "DQ.Q.000229",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P2.C01.E01",
- "chapter_ids": [
-  "DQ.P2.C01"
- ],
- "passage_ids": [
-  "DQ.P2.C01.P0002"
- ],
- "prompt": "¿A quién llama el texto «el gran cantor de su belleza» al hablar de Angélica?",
- "interaction": {
-  "type": "single_choice",
-  "options": [
-   {
-    "id": "DQ.Q.000229.O01",
-    "label": "Al famoso Ariosto"
-   },
-   {
-    "id": "DQ.Q.000229.O02",
-    "label": "A Torcuato Tasso"
-   },
-   {
-    "id": "DQ.Q.000229.O03",
-    "label": "A Boiardo"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000229.O01"
-  ],
-  "shuffle_options": true
- },
- "rationale": "Referencia literaria real dentro de la conversación (II, 1).",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P2.C01.P0002",
-   "quote": "El gran cantor de su belleza, el famoso Ariosto"
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "historia",
- "difficulty": 2,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P2.C01.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true
- },
- "language": "es",
- "tags": [
-  "piloto",
-  "visita"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "visita ariosto cantor angélica"
+    "id": "DQ.Q.000229",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P2.C01.E01",
+    "chapter_ids": [
+        "DQ.P2.C01"
+    ],
+    "passage_ids": [
+        "DQ.P2.C01.P0002"
+    ],
+    "prompt": "¿A quién llama el texto «el gran cantor de su belleza» al hablar de Angélica?",
+    "interaction": {
+        "type": "single_choice",
+        "options": [
+            {
+                "id": "DQ.Q.000229.O01",
+                "label": "Al famoso Ariosto"
+            },
+            {
+                "id": "DQ.Q.000229.O02",
+                "label": "A Torcuato Tasso"
+            },
+            {
+                "id": "DQ.Q.000229.O03",
+                "label": "A Boiardo"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000229.O01"
+        ],
+        "shuffle_options": true
+    },
+    "rationale": "Referencia literaria real dentro de la conversación (II, 1).",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P2.C01.P0002",
+            "quote": "El gran cantor de su belleza, el famoso Ariosto"
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "historia",
+    "difficulty": 2,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P2.C01.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900039"
+    },
+    "language": "es",
+    "tags": [
+        "piloto",
+        "visita"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "visita ariosto cantor angélica"
 }

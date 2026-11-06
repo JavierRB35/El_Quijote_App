@@ -1,34 +1,34 @@
 {
- "id": "DQ.MA.900011",
- "contract_version": "1.0.0",
- "function": "post_desenlace",
- "media_class": "RECREACION_IA",
- "logical_uri": "assets://scenes/part_2/chapter_74/p2_c74_despedida_post.webp",
- "derivatives": [
-  {
-   "variant": "original",
-   "format": "webp",
-   "width": 1672,
-   "height": 941,
-   "size_bytes": 195062,
-   "sha256": "sha256:79b6c1439818af00b348b8ee7ee2a4959a7c2ec8794ca9106f3318452cf7346c"
-  }
- ],
- "alt": "Alonso Quijano descansa en cama en su casa, mientras Sancho sostiene con tristeza su mano.",
- "source_id": "DQ.SRC.0003",
- "license_id": "DQ.LIC.0002",
- "author": "Equipo de arte El_Quijote_App (recreación IA)",
- "date": "2026-11-05",
- "allowed_uses": [
-  "uso_personal_app",
-  "almacenamiento_repo_git"
- ],
- "license_status": "verificada",
- "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA (nunca evidencia histórica).",
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "spoiler_level": "leve"
+    "id": "DQ.MA.900011",
+    "contract_version": "1.0.0",
+    "function": "post_desenlace",
+    "media_class": "RECREACION_IA",
+    "logical_uri": "assets://scenes/part_2/chapter_74/p2_c74_despedida_post.webp",
+    "derivatives": [
+        {
+            "variant": "original",
+            "format": "webp",
+            "width": 1672,
+            "height": 941,
+            "size_bytes": 195062,
+            "sha256": "sha256:79b6c1439818af00b348b8ee7ee2a4959a7c2ec8794ca9106f3318452cf7346c"
+        }
+    ],
+    "alt": "Alonso Quijano descansa en cama en su casa, mientras Sancho sostiene con tristeza su mano.",
+    "source_id": "DQ.SRC.0003",
+    "license_id": "DQ.LIC.0002",
+    "author": "Equipo de arte El_Quijote_App (recreación IA)",
+    "date": "2026-11-05",
+    "allowed_uses": [
+        "uso_personal_app",
+        "almacenamiento_repo_git"
+    ],
+    "license_status": "verificada",
+    "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA (nunca evidencia histórica).",
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "spoiler_level": "ninguno"
 }

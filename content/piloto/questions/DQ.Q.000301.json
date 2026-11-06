@@ -1,64 +1,64 @@
 {
- "id": "DQ.Q.000301",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P1.C01.E01",
- "chapter_ids": [
-  "DQ.P1.C01"
- ],
- "passage_ids": [
-  "DQ.P1.C01.P0001"
- ],
- "prompt": "¿Cómo se presenta el lugar natal del hidalgo en el arranque de la obra?",
- "interaction": {
-  "type": "single_choice",
-  "options": [
-   {
-    "id": "DQ.Q.000301.O01",
-    "label": "«En un lugar de la Mancha, de cuyo nombre no quiero acordarme»"
-   },
-   {
-    "id": "DQ.Q.000301.O02",
-    "label": "«En la ilustre villa de Argamasilla, honrada por todos»"
-   },
-   {
-    "id": "DQ.Q.000301.O03",
-    "label": "«A las puertas de Toledo, junto a la vega»"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000301.O01"
-  ],
-  "shuffle_options": true
- },
- "rationale": "El incipit canónico deja el pueblo sin nombre por voluntad narrativa (I, 1).",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C01.P0001",
-   "quote": "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho\ntiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua,\nrocín flaco y galgo corredor. Una olla de algo más vaca que carnero,\nsalpicón las más noches, duelos y quebrantos los sábados, lantejas los\nviernes, algún palomino de añadidura los domingos, consumían las tres\npartes de su hacienda. El resto della concluían sayo de velarte, calzas de\nvelludo para las fiestas, con sus pantuflos de lo mesmo, y los días de\nentresemana se honraba con su vellorí de lo más fino. Tenía en su casa una"
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "hecho",
- "difficulty": 1,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P1.C01.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true,
-  "pre_image_media_id": "DQ.MA.900002"
- },
- "language": "es",
- "tags": [
-  "banco",
-  "inicio"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "inicio lugar mancha no quiero acordarme"
+    "id": "DQ.Q.000301",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P1.C01.E01",
+    "chapter_ids": [
+        "DQ.P1.C01"
+    ],
+    "passage_ids": [
+        "DQ.P1.C01.P0001"
+    ],
+    "prompt": "¿Cómo se presenta el lugar natal del hidalgo en el arranque de la obra?",
+    "interaction": {
+        "type": "single_choice",
+        "options": [
+            {
+                "id": "DQ.Q.000301.O01",
+                "label": "«En un lugar de la Mancha, de cuyo nombre no quiero acordarme»"
+            },
+            {
+                "id": "DQ.Q.000301.O02",
+                "label": "«En la ilustre villa de Argamasilla, honrada por todos»"
+            },
+            {
+                "id": "DQ.Q.000301.O03",
+                "label": "«A las puertas de Toledo, junto a la vega»"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000301.O01"
+        ],
+        "shuffle_options": true
+    },
+    "rationale": "El incipit canónico deja el pueblo sin nombre por voluntad narrativa (I, 1).",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C01.P0001",
+            "quote": "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho\ntiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua,\nrocín flaco y galgo corredor. Una olla de algo más vaca que carnero,\nsalpicón las más noches, duelos y quebrantos los sábados, lantejas los\nviernes, algún palomino de añadidura los domingos, consumían las tres\npartes de su hacienda. El resto della concluían sayo de velarte, calzas de\nvelludo para las fiestas, con sus pantuflos de lo mesmo, y los días de\nentresemana se honraba con su vellorí de lo más fino. Tenía en su casa una"
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "hecho",
+    "difficulty": 1,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P1.C01.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900026"
+    },
+    "language": "es",
+    "tags": [
+        "banco",
+        "inicio"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "inicio lugar mancha no quiero acordarme"
 }

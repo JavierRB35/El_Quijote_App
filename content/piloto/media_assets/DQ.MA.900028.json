@@ -1,0 +1,34 @@
+{
+    "id": "DQ.MA.900028",
+    "contract_version": "1.0.0",
+    "function": "pre_pregunta",
+    "media_class": "RECREACION_IA",
+    "logical_uri": "assets://scenes/part_1/chapter_06/p1_c06_cura_barbero_libros_pre.webp",
+    "derivatives": [
+        {
+            "variant": "original",
+            "format": "webp",
+            "width": 1672,
+            "height": 941,
+            "size_bytes": 207206,
+            "sha256": "sha256:52d5538c3546d7e49f20c59a0d9656d89e6acb61b93f764697f8adb451e2dd66"
+        }
+    ],
+    "alt": "Recreación artística: El cura y el barbero examinan los títulos de los libros de caballerías sobre una mesa antes de decidir su destino.",
+    "source_id": "DQ.SRC.0003",
+    "license_id": "DQ.LIC.0002",
+    "author": "Equipo de arte El_Quijote_App (recreación IA)",
+    "date": "2026-11-06",
+    "allowed_uses": [
+        "uso_personal_app",
+        "almacenamiento_repo_git"
+    ],
+    "license_status": "verificada",
+    "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA (nunca evidencia histórica).",
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "spoiler_level": "ninguno"
+}

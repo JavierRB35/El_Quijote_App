@@ -1,60 +1,60 @@
 {
- "id": "DQ.Q.000205",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P1.C06.E01",
- "chapter_ids": [
-  "DQ.P1.C06"
- ],
- "passage_ids": [
-  "DQ.P1.C06.P0007"
- ],
- "prompt": "¿Verdadero o falso: el cura salva La Galatea elogiando su desenlace?",
- "interaction": {
-  "type": "true_false",
-  "options": [
-   {
-    "id": "DQ.Q.000205.O01",
-    "label": "Verdadero"
-   },
-   {
-    "id": "DQ.Q.000205.O02",
-    "label": "Falso"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000205.O02"
-  ],
-  "shuffle_options": false
- },
- "rationale": "El veredicto es doblemente irónico: «propone algo y no concluye nada», y el salvamento viene de la amistad con el autor.",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C06.P0007",
-   "quote": "propone algo, y no concluye nada"
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "humor",
- "difficulty": 2,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P1.C06.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true,
-  "pre_image_media_id": "DQ.MA.900013"
- },
- "language": "es",
- "tags": [
-  "piloto",
-  "escrutinio"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "escrutinio galatea salva conclusion ironia"
+    "id": "DQ.Q.000205",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P1.C06.E01",
+    "chapter_ids": [
+        "DQ.P1.C06"
+    ],
+    "passage_ids": [
+        "DQ.P1.C06.P0007"
+    ],
+    "prompt": "¿Verdadero o falso: el cura salva La Galatea elogiando su desenlace?",
+    "interaction": {
+        "type": "true_false",
+        "options": [
+            {
+                "id": "DQ.Q.000205.O01",
+                "label": "Verdadero"
+            },
+            {
+                "id": "DQ.Q.000205.O02",
+                "label": "Falso"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000205.O02"
+        ],
+        "shuffle_options": false
+    },
+    "rationale": "El veredicto es doblemente irónico: «propone algo y no concluye nada», y el salvamento viene de la amistad con el autor.",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C06.P0007",
+            "quote": "propone algo, y no concluye nada"
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "humor",
+    "difficulty": 2,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P1.C06.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900013"
+    },
+    "language": "es",
+    "tags": [
+        "piloto",
+        "escrutinio"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "escrutinio galatea salva conclusion ironia"
 }

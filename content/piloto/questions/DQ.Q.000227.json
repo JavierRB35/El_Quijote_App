@@ -1,63 +1,64 @@
 {
- "id": "DQ.Q.000227",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P2.C01.E01",
- "chapter_ids": [
-  "DQ.P2.C01"
- ],
- "passage_ids": [
-  "DQ.P2.C01.P0001"
- ],
- "prompt": "¿Qué voz narrativa abre formalmente la segunda parte?",
- "interaction": {
-  "type": "single_choice",
-  "options": [
-   {
-    "id": "DQ.Q.000227.O01",
-    "label": "«Cuenta Cide Hamete Benengeli, en la segunda parte desta historia, y tercera salida de don Quijote»"
-   },
-   {
-    "id": "DQ.Q.000227.O02",
-    "label": "El propio Cervantes, en primera persona"
-   },
-   {
-    "id": "DQ.Q.000227.O03",
-    "label": "Sancho Panza, dictando a un escribano"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000227.O01"
-  ],
-  "shuffle_options": true
- },
- "rationale": "El marco del historiador arábigo ficticio se mantiene en la apertura (II, 1).",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P2.C01.P0001",
-   "quote": "Cuenta Cide Hamete Benengeli, en la segunda parte desta historia y tercera\nsalida de don Quijote"
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "historia",
- "difficulty": 1,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P2.C01.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true
- },
- "language": "es",
- "tags": [
-  "piloto",
-  "visita"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "visita cide hamete marco narrativo"
+    "id": "DQ.Q.000227",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P2.C01.E01",
+    "chapter_ids": [
+        "DQ.P2.C01"
+    ],
+    "passage_ids": [
+        "DQ.P2.C01.P0001"
+    ],
+    "prompt": "¿Qué voz narrativa abre formalmente la segunda parte?",
+    "interaction": {
+        "type": "single_choice",
+        "options": [
+            {
+                "id": "DQ.Q.000227.O01",
+                "label": "«Cuenta Cide Hamete Benengeli, en la segunda parte desta historia, y tercera salida de don Quijote»"
+            },
+            {
+                "id": "DQ.Q.000227.O02",
+                "label": "El propio Cervantes, en primera persona"
+            },
+            {
+                "id": "DQ.Q.000227.O03",
+                "label": "Sancho Panza, dictando a un escribano"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000227.O01"
+        ],
+        "shuffle_options": true
+    },
+    "rationale": "El marco del historiador arábigo ficticio se mantiene en la apertura (II, 1).",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P2.C01.P0001",
+            "quote": "Cuenta Cide Hamete Benengeli, en la segunda parte desta historia y tercera\nsalida de don Quijote"
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "historia",
+    "difficulty": 1,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P2.C01.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900038"
+    },
+    "language": "es",
+    "tags": [
+        "piloto",
+        "visita"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "visita cide hamete marco narrativo"
 }

@@ -1,0 +1,34 @@
+{
+    "id": "DQ.MA.900035",
+    "contract_version": "1.0.0",
+    "function": "pre_pregunta",
+    "media_class": "RECREACION_IA",
+    "logical_uri": "assets://scenes/part_1/chapter_18/p1_c18_pastores_piedras_post.webp",
+    "derivatives": [
+        {
+            "variant": "original",
+            "format": "webp",
+            "width": 1672,
+            "height": 941,
+            "size_bytes": 301930,
+            "sha256": "sha256:3544376c9b4fa004df234a8c62b0283d081eb594048e4f1734e5c11966689393"
+        }
+    ],
+    "alt": "Recreación cinematográfica de pastores piedras en el capítulo 18 de la parte 1.",
+    "source_id": "DQ.SRC.0003",
+    "license_id": "DQ.LIC.0002",
+    "author": "Equipo de arte El_Quijote_App (recreación IA)",
+    "date": "2026-11-06",
+    "allowed_uses": [
+        "uso_personal_app",
+        "almacenamiento_repo_git"
+    ],
+    "license_status": "verificada",
+    "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA (nunca evidencia histórica).",
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "spoiler_level": "ninguno"
+}

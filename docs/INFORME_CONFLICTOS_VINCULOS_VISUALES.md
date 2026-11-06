@@ -3,6 +3,8 @@
 **Corte:** `main@66d2f7d3a5c6a28b18fdc7cce5148375d277e21f` · **Origen:** R05 (#22), R15 (#25), R16 (#26), R12 (#27).  
 **Estado:** diagnóstico documental, **sin correcciones automáticas ni autorizaciones**. El detalle completo por vínculo se encuentra en `docs/data/vinculos_visuales_consolidados.csv`.
 
+**Subsanación del dictamen de Coordinación de PR #32:** C018/C019 se rectifican como **precisiones P1 de cronología documental y QA de Q.112**, sin reasignar su `MediaAsset`. PR #30 queda fuera del conjunto fuente de 2.805 relaciones; la función de PR #29 y la precedencia documental se explicitan más abajo. PR #32 ya está fusionada: esta corrección se tramita en una PR documental de seguimiento, sin alterar el CSV.
+
 ## Resumen verificable
 - **26 incidencias explícitas** (incluidas **17 colisiones de identidad** por número histórico). Cada incidencia del inventario de recursos se cuenta una vez por clave, no por cantidad de destinos donde aparece.
 - **0 cruces R15 con capítulos diferentes** de la ubicación del archivo; no todos prueban fallo, pero requieren justificación textual o corrección.
@@ -17,7 +19,7 @@
 
 **P0 — ID origen ≠ ID canónico por mero número.** Diecisiete filas de R05 decían tener `DQ.MA.*` existente con el mismo sufijo que `DQ.MED.*`, pero la URI/hash del MediaAsset canónico corresponde a otro fichero. El CSV deja en blanco esa relación falsa y marca `id_numerico_en_colision`. Se añade correspondencia verdadera solo si coinciden ruta/hashes de catálogo. No se cambian contratos ni se declara migración.
 
-**P0 — Q.112 y contenido de acuarelas.** La observación R12 indica que 027 contiene frailes y 026 la embestida/molino. R15 propone Q.112+026 en `question_focus` mientras QA restringe su revelación a un momento posterior a la embestida; faltan validación de hotspot y coordenadas. Evitar que una pregunta revele su solución.
+**P1 documental — Q.112, cronología H4 y QA real (C018/C019).** La acuarela 026 ya está asignada al campo `hotspot_media_id` del JSON. H4 v0.2.1 ya proponía 026 y H4 v0.2.2 (PR #33) ha corregido además la descripción de 027 (frailes) y 030 (vizcaíno). No existe contradicción automática entre fase `question_focus` y revelación narrativa: **el jugador debe ver 026 como soporte del hotspot durante la pregunta, pero solo después de narrar la embestida y satisfacer `safe_after_episodes=[DQ.P1.C08.E01]`**. Pendientes: verificar cronología de beats, rectángulo vigente, escalado 833×1041, interacción con teclado/puntero, accesibilidad y ejecución. La imagen 900005 es contexto previo, **no** hotspot. No cambiar el ID de la pregunta por esta corrección.
 
 **P0 — final II.74 y revelaciones prematuras.** Imágenes `post` de despedida/testamento no deben aparecer en `pre_question` o pregunta que desconozca el desenlace. Las propuestas R15 negativas preservan esa decisión de no uso y no se traducen en asociación positiva.
 
@@ -47,8 +49,8 @@ Las advertencias R12 de alcance global (208 escenas `pre` con clasificación pro
 | C015 | P0 | ID_NUMERIC_R05 | `DQ.MED.900033` | R05 declara DQ.MA.900033 para DQ.MED.900033, pero la ficha canónica de ese ID localiza assets/scenes/part_1/chapter_16/p1_c16_maritornes_venta_pre.webp. SHA/URI de ambas imágenes diferentes. | No convertir el identificador por número; usar el MediaAsset solo donde coincidan URI y hash; reservar nuevo ID tras doble revisión. |
 | C016 | P0 | ID_NUMERIC_R05 | `DQ.MED.900034` | R05 declara DQ.MA.900034 para DQ.MED.900034, pero la ficha canónica de ese ID localiza assets/scenes/part_1/chapter_16/p1_c16_venta_cama_quijote_pre.webp. SHA/URI de ambas imágenes diferentes. | No convertir el identificador por número; usar el MediaAsset solo donde coincidan URI y hash; reservar nuevo ID tras doble revisión. |
 | C017 | P0 | ID_NUMERIC_R05 | `DQ.MED.900035` | R05 declara DQ.MA.900035 para DQ.MED.900035, pero la ficha canónica de ese ID localiza assets/scenes/part_1/chapter_18/p1_c18_pastores_piedras_post.webp. SHA/URI de ambas imágenes diferentes. | No convertir el identificador por número; usar el MediaAsset solo donde coincidan URI y hash; reservar nuevo ID tras doble revisión. |
-| C018 | P0 | Q112 / 027 | `DQ.Q.000112` | H4 §5 atribuye 027 a molino, R12 y R15 verificaron que representa encuentro con frailes; 026 sí contiene la embestida. | No asociar 027 al hotspot; reservarla al episodio de frailes. Validar 026 tras desenlace y geometría de foco. |
-| C019 | P0 | R15_R12_Q112_FASE | `DQ.MA.000026` | R15 coloca 026 en question_focus; R12 exige revelar solo tras la embestida. Hotspot y coordenadas no validados; 027 representa frailes, no molino. | Mantener 026 solo tras narración de embestida/reveal, verificar pregunta y geometría/alternativa accesible; no aprobar foco prematuro. |
+| C018 | P1 | Q112_H4_CRONOLOGIA | `DQ.Q.000112` | **Fe de erratas del informe anterior:** H4 v0.2.1 ya recomendaba 026 para la embestida, no 027; en esa versión 027 se describía incorrectamente como vizcaíno. H4 v0.2.2, incorporada en PR #33, ya corrige 027 = frailes y 030 = vizcaíno. Q.112 ya tiene `hotspot_media_id=DQ.MA.000026`; 900005 es solo fondo de contexto. | **CERRADA la atribución documental**, sin reescribir H4 ni reasignar la imagen. Mantener la referencia histórica de versiones y QA pendiente de C019. |
+| C019 | P1 | Q112_GATING_INTERACCION_PENDIENTE | `DQ.MA.000026` | `question_focus` es correcto para un hotspot **después de que el relato haya mostrado la embestida**. El JSON exige `safe_after_episodes=[DQ.P1.C08.E01]` y mantiene `hotspot_area` normalizada (`x=0.30,y=0.22,w=0.45,h=0.50`), **sin QA**. Si la pregunta se presenta antes de completar el episodio, se produciría un conflicto temporal no validado. | Probar 026 como foco activo **durante Q.112**, tras narración y gating. R06/R12: geometría a 833×1041, escalado, puntero/teclado, accesibilidad, texto y audio; registrar PASS/FAIL. **No cambiar el MediaAsset ya asignado.** |
 | C020 | P0 | R16_MEDIA_ID_NO_CORRESPONDE | `R16-054` | R16 indica DQ.MA.900029 pero la URI/hash corresponde a DQ.MA.900038. | Corregir propuesta tras cotejo de URI y hash; no crear alias automático. |
 | C021 | P1 | Cobertura QA | `general` | R12 visualizó directamente 27 de 678 archivos; 651 no vistos. Dictamen PASS 6/FAIL 1/PENDIENTE 671, no 678 aprobados. | No asumir aprobación por dictamen QA ni por catálogo existente. |
 | C022 | P1 | Huellas SHA | `general` | R05 identifica 9 escenas sin SHA-256 declarado; R12 no recalculó binarios. | Completar SHA-256 binario y revisión de duplicados perceptivos. |
@@ -82,3 +84,16 @@ Las advertencias R12 de alcance global (208 escenas `pre` con clasificación pro
 **697 ≠ 678 (diferencia 19)** sigue **ABIERTA**. Los XLSX de origen requieren extracción estructurada y contraste fila a fila; ninguna diferencia se interpreta como medio perdido o vínculo duplicado en ausencia de prueba. El universo de la presente consolidación son 678 rutas existentes, no 697 imágenes distintas.
 
 **Responsables de cierre:** R05 + R15 + R16 para pertinencia; R01/R03 para texto/guion; R06/UX para TS-001; R13 para derechos; R09 para identidad y contrato; R12 para QA; Coordinación para aceptación. **Ninguna relación se aprueba automáticamente.**
+
+## Adenda R15 PR #30 — expresamente no incorporada en la matriz de 2.805 vínculos
+
+La PR #30 (`docs/data/propuesta_correcciones_visuales_pre_r15.csv`) aporta **14 propuestas adicionales** para Q.217, Q.232–238 y Q.313–318: **13 `RETIRAR_PRE` y una `MANTENER_CONDICIONAL` (Q.316)**. No forman parte de las 97 filas fuente de PR #25 que alimentaron la consolidación #32, aunque las PR estén ya fusionadas en `main`. **0/14 incorporadas a la matriz #32 y 0/14 aprobadas para integración**. R05/R06/R12 deben revisarlas individualmente antes de tramitar un ajuste del producto. `SIN_IMAGEN` expresa ausencia de imagen específica y **nunca** es un identificador MediaAsset; el campo `pre_image_media_id` es opcional. No añadir 14 bindings automáticamente ni contar dos veces asociaciones de la misma pregunta/fase.
+
+## Precedencia entre tres capas documentales (decisión de Coordinación)
+
+1. **Inventario físico maestro:** `docs/data/matriz_aprovechamiento_visual.csv` — PR #22, **678 rutas**.
+2. **Matriz maestra de propuestas de asociación:** `docs/data/vinculos_visuales_consolidados.csv` — PR #32, **2.805 vínculos/decisiones**, por recurso, destino, fase y destinatario; **no** un esquema de implementación ni relaciones aprobadas.
+3. **Vista auxiliar de conciliación y trazabilidad:** `docs/data/matriz_consolidada_aprovechamiento_visual.csv` — PR #29, **759 registros**, **no** segunda matriz operativa ni tabla importable directamente al runtime.
+
+Los CSV se mantienen inalterados. Los **759** y **2.805** recuentan unidades editoriales distintas y no representan recuentos de imágenes. Esta precedencia se anota también en `docs/INFORME_CONSOLIDACION_VISUAL_R05_R15_R16.md` (PR #29). Ninguna fusión documental sustituye el dictamen individual sobre spoiler, TS-001, derechos específicos, QA y aprobación editorial.
+

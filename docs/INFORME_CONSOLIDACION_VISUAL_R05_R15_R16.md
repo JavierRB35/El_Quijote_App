@@ -3,6 +3,9 @@
 **Fecha:** 2026-11-06 · **Modo:** COORDINACIÓN / CONTENIDOS · **Estado:** propuesta documental para revisión, **sin autorización de integración**.  
 **Fuente principal:** `docs/data/matriz_consolidada_aprovechamiento_visual.csv` · **Rama:** `feature/r14-consolidacion-visual-r05-r15-r16`.
 
+> **Nota de precedencia de Coordinación (subsanación posterior a las PR fusionadas #29 y #32).** Este CSV de **759 registros / 44 columnas** es exclusivamente una **vista auxiliar de conciliación y trazabilidad** (inventario físico, cruces URI/hash, decisiones y propuestas R15/R16). **No es el maestro operativo de asociaciones, no se importa directamente al runtime y no sustituye ningún contrato**. La **única matriz maestra documental de propuestas de vínculo por recurso–destino–fase–destinatario** es `docs/data/vinculos_visuales_consolidados.csv` de PR #32 (**2.805 registros / 37 columnas**, igualmente **no aprobados**). El inventario físico maestro de 678 recursos continúa en `docs/data/matriz_aprovechamiento_visual.csv` (PR #22). Los dos recuentos 759/2.805 son niveles de granularidad diferentes, no universos físicos incompatibles. **La PR #30** aporta 14 correcciones antiespoiler adicionales (**13 retirar imagen previa y una mantener condicional**) **no incluidas ni aprobadas en ninguno de los vínculos #32**; precisan visado R05/R06/R12 y decisión separada. H4 v0.2.2 (PR #33) ya identifica correctamente 026 (embestida), 027 (frailes), 030 (vizcaíno); Q.112 ya contiene `hotspot_media_id=DQ.MA.000026`, con pruebas de fase/geometría/accesibilidad pendientes. Esta nota **no modifica el CSV histórico de PR #29**.
+
+
 ## 1. Alcance y procedencia de datos
 
 Se cruzaron **tres fuentes ya existentes**, sin alterar sus CSV ni los manifiestos originales:

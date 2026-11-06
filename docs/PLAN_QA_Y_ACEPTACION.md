@@ -54,6 +54,10 @@ Se verifican contra los requisitos `EF-*` de `ESPECIFICACION_FUNCIONAL.md` (cada
 3. Pasaje → «hash distinto» y duplicados semánticos entre paquetes distintos (el detector actual opera por paquete).
 Estas deudas viven en el backlog de QA y bloquean FASE 2, no el GO/NO-GO.
 
+## 4 bis. Pruebas TS-001 — intervenciones narrativas (DC-22, R12)
+
+De la matriz completa en `docs/COMPONENTES_NARRATIVOS_UX.md` §4: **automáticas y activas** (T1–T4: texto obligatorio, pasajes de respaldo, audio real o ausente pero nunca sustituto, unicidad de IDs/orden — integradas en la suite de contrato, 49/49) y **de usabilidad/accesibilidad al implementar el reproductor** (T5–T9: comprensión con sonido desactivado, persistencia de texto en transiciones, controles por teclado, voz fallida sin bloqueo, movimiento reducido). El criterio de aceptación del propietario queda así convertido en casos verificables desde el contrato.
+
 ## 5. Criterios de salida por fase (§8)
 
 | Fase | Salida exige |

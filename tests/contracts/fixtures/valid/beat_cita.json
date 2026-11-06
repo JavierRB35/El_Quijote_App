@@ -1,0 +1,27 @@
+{
+  "id": "DQ.BEAT.000001",
+  "contract_version": "1.1.0",
+  "scene_id": "DQ.P1.C01.E01.S01",
+  "unit_ids": ["DQ.UN.P1.C01.U01"],
+  "order": 1,
+  "kind": "DIALOGO",
+  "utterances": [
+    {
+      "utterance_id": "DQ.INT.000001",
+      "speaker": { "tipo": "personaje", "person_id": "DQ.PER.0001", "label": "Hidalgo sintético" },
+      "texto_visible": "TEXTO SINTÉTICO DE PRUEBA (no publicable): frase de diálogo que se ve siempre, con o sin voz.",
+      "text_kind": "CITA_LITERAL",
+      "passage_ids": ["DQ.P1.C01.P0001"],
+      "audio_asset_id": "DQ.MA.000100",
+      "localizador": "Fuente sintética (DQ.SRC.0001) offset 0-100; extracto de prueba",
+      "nota_editorial": "Fixture sintético: corresponde al patrón 'dialogos_literales' del inventario literario."
+    }
+  ],
+  "visual_asset_ids": ["DQ.MA.000001"],
+  "manual_advance_allowed": true,
+  "replay_allowed": true,
+  "reduced_motion_fallback": true,
+  "entry_condition": "SECUENCIA_CANONICA",
+  "exit_condition": "FIN_DE_BEAT_O_AVANCE_MANUAL",
+  "review": { "state": "borrador", "reviewer_role": null, "date": null }
+}

@@ -1,9 +1,21 @@
 {
   "gate": "repo",
   "all_ok": true,
-  "total": 42,
-  "passed": 42,
+  "total": 49,
+  "passed": 49,
   "results": [
+    {
+      "file": "valid/beat_cita.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/beat_silencio.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
     {
       "file": "valid/chapter.json",
       "expect": "válido",
@@ -48,6 +60,12 @@
     },
     {
       "file": "valid/media_asset_recreacion.json",
+      "expect": "válido",
+      "result": "PASS",
+      "codes": []
+    },
+    {
+      "file": "valid/media_asset_voz.json",
       "expect": "válido",
       "result": "PASS",
       "codes": []
@@ -155,6 +173,22 @@
       "codes": []
     },
     {
+      "file": "invalid/invalid_beat_cita_sin_pasaje.json",
+      "expect": "FALLA con SCHEMA_ERROR",
+      "result": "PASS",
+      "codes": [
+        "SCHEMA_ERROR"
+      ]
+    },
+    {
+      "file": "invalid/invalid_beat_sin_texto.json",
+      "expect": "FALLA con SCHEMA_ERROR",
+      "result": "PASS",
+      "codes": [
+        "SCHEMA_ERROR"
+      ]
+    },
+    {
       "file": "invalid/invalid_discovery_cita_without_passage.json",
       "expect": "FALLA con SCHEMA_ERROR",
       "result": "PASS",
@@ -255,6 +289,28 @@
         "SCHEMA_ERROR",
         "SCHEMA_ERROR",
         "SCHEMA_ERROR"
+      ]
+    },
+    {
+      "file": "package_invalid_beats_audio_fantasma.json",
+      "expect": "FALLA con REFERENCE_ERROR",
+      "result": "PASS",
+      "codes": [
+        "REFERENCE_ERROR",
+        "REFERENCE_ERROR",
+        "REFERENCE_ERROR"
+      ]
+    },
+    {
+      "file": "package_invalid_beats_orden_duplicado.json",
+      "expect": "FALLA con SEMANTIC_ERROR",
+      "result": "PASS",
+      "codes": [
+        "REFERENCE_ERROR",
+        "REFERENCE_ERROR",
+        "REFERENCE_ERROR",
+        "REFERENCE_ERROR",
+        "SEMANTIC_ERROR"
       ]
     },
     {

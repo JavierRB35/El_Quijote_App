@@ -1,14 +1,24 @@
 {
   "package_id": "sintetico-prueba",
-  "contract_version": "1.0.0",
+  "contract_version": "1.1.0",
   "catalog_version": "0.1.0",
   "created": "2026-11-05",
   "files": {
-    "editions": ["valid/edition.json"],
-    "chapters": ["valid/chapter.json"],
-    "passages": ["valid/passage.json"],
-    "episodes": ["valid/episode.json"],
-    "scenes": ["valid/scene.json"],
+    "editions": [
+      "valid/edition.json"
+    ],
+    "chapters": [
+      "valid/chapter.json"
+    ],
+    "passages": [
+      "valid/passage.json"
+    ],
+    "episodes": [
+      "valid/episode.json"
+    ],
+    "scenes": [
+      "valid/scene.json"
+    ],
     "questions": [
       "valid/question_single.json",
       "valid/question_multi.json",
@@ -17,13 +27,44 @@
       "valid/question_matching.json",
       "valid/question_hotspot.json"
     ],
-    "discoveries": ["valid/discovery_cita.json", "valid/discovery_lectura.json"],
-    "persons": ["valid/person_ficticio.json", "valid/person_historico.json"],
-    "places": ["valid/place_lugar.json", "valid/place_ruta.json"],
-    "museum_items": ["valid/museum_item.json"],
-    "media_assets": ["valid/media_asset_recreacion.json", "valid/media_asset_ilustracion.json"],
-    "sources": ["valid/source_edicion.json", "valid/source_estudio.json", "valid/source_produccion.json"],
-    "licenses": ["valid/license.json"]
+    "discoveries": [
+      "valid/discovery_cita.json",
+      "valid/discovery_lectura.json"
+    ],
+    "persons": [
+      "valid/person_ficticio.json",
+      "valid/person_historico.json"
+    ],
+    "places": [
+      "valid/place_lugar.json",
+      "valid/place_ruta.json"
+    ],
+    "museum_items": [
+      "valid/museum_item.json"
+    ],
+    "media_assets": [
+      "valid/media_asset_recreacion.json",
+      "valid/media_asset_ilustracion.json",
+      "valid/media_asset_voz.json"
+    ],
+    "sources": [
+      "valid/source_edicion.json",
+      "valid/source_estudio.json",
+      "valid/source_produccion.json"
+    ],
+    "licenses": [
+      "valid/license.json"
+    ],
+    "beats": [
+      "valid/beat_cita.json",
+      "valid/beat_silencio.json"
+    ]
   },
-  "counts": { "questions": 6, "episodes": 1, "scenes": 1, "media_assets": 2 }
+  "counts": {
+    "questions": 6,
+    "episodes": 1,
+    "scenes": 1,
+    "media_assets": 3,
+    "beats": 2
+  }
 }

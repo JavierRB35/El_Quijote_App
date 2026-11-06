@@ -27,9 +27,11 @@ from jsonschema import Draft202012Validator, FormatChecker
 REPO_ROOT = Path(__file__).resolve().parents[2]
 SCHEMA_ROOT = REPO_ROOT / "schemas"
 
-SUPPORTED_CONTRACT_VERSIONS = {"1.0.0"}
+SUPPORTED_CONTRACT_VERSIONS = {"1.0.0", "1.1.0"}
 APP_GATE_USES = {"uso_personal_app"}
 REPO_GATE_USES = {"uso_personal_app", "almacenamiento_repo_git"}
+
+FORMATOS_AUDIO = {"mp3", "ogg"}
 
 SCHEMA_BY_CATEGORY = {
     "edition": "content/edition.schema.json",
@@ -42,6 +44,7 @@ SCHEMA_BY_CATEGORY = {
     "person": "content/person.schema.json",
     "place": "content/place.schema.json",
     "museum_item": "content/museum-item.schema.json",
+    "beat": "content/beat.schema.json",
     "media_asset": "media/media-asset.schema.json",
     "source": "media/source.schema.json",
     "license": "media/license.schema.json",
@@ -56,14 +59,14 @@ FILES_KEY_TO_CATEGORY = {
     "editions": "edition", "chapters": "chapter", "passages": "passage", "episodes": "episode",
     "scenes": "scene", "questions": "question", "discoveries": "discovery", "persons": "person",
     "places": "place", "museum_items": "museum_item", "media_assets": "media_asset",
-    "sources": "source", "licenses": "license",
+    "sources": "source", "licenses": "license", "beats": "beat",
 }
 # Categoría -> clave del índice de referencias usado por crossref_errors()
 CATEGORY_TO_INDEX = {
     "edition": "editions", "chapter": "chapters", "passage": "passages", "episode": "episodes",
     "scene": "scenes", "question": "questions", "discovery": "discoveries", "person": "persons",
     "place": "places", "museum_item": "museum_items", "media_asset": "media",
-    "source": "sources", "license": "licenses",
+    "source": "sources", "license": "licenses", "beat": "beats",
 }
 
 
@@ -243,6 +246,17 @@ def crossref_errors(entity: dict, category: str, index: dict[str, set[str]]) -> 
     elif category == "media_asset":
         chk(entity.get("source_id"), "sources", f"media_asset {entity['id']}.source_id")
         chk(entity.get("license_id"), "licenses", f"media_asset {entity['id']}.license_id")
+    elif category == "beat":
+        chk(entity.get("scene_id"), "scenes", f"beat {entity['id']}.scene_id")
+        chk(entity.get("visual_asset_ids"), "media", f"beat {entity['id']}.visual_asset_ids")
+        for utt in entity.get("utterances", []):
+            uid = utt.get("utterance_id", "?")
+            chk(utt.get("speaker", {}).get("person_id"), "persons", f"intervencion {uid}.speaker")
+            chk(utt.get("passage_ids"), "passages", f"intervencion {uid}.passage_ids")
+            audio = utt.get("audio_asset_id")
+            chk(audio, "media", f"intervencion {uid}.audio_asset_id")
+            if audio and isinstance(audio, str) and audio in index["media"]:
+                pass  # el formato de audio se comprueba en la fase de paquete (beat_semantic_errors)
     return errs
 
 
@@ -313,6 +327,41 @@ def validate_package(manifest_path: Path, gate: str = "repo") -> list[dict]:
             errors.append({"code": "SEMANTIC_ERROR",
                            "message": f"imagen previa de {qid} ({pre}) tiene spoiler_level "
                                       f"'{asset.get('spoiler_level')}': revelaría la respuesta (§4.3.4)"})
+
+    # Reglas de beats/intervenciones (v1.1.0, R11): orden único por escena,
+    # utterance_id único global, audio existente y con formato de voz.
+    beats = objects.get("beat", {})
+    orden_visto: dict[str, str] = {}
+    for bid in sorted(beats):
+        b = beats[bid]
+        clave_orden = f"{b.get('scene_id')}#{b.get('order')}"
+        if clave_orden in orden_visto:
+            errors.append({"code": "SEMANTIC_ERROR",
+                           "message": f"order {b.get('order')} duplicado en la escena {b.get('scene_id')}: "
+                                      f"{orden_visto[clave_orden]} y {bid}"})
+        orden_visto[clave_orden] = bid
+        for utt in b.get("utterances", []):
+            uid = utt.get("utterance_id", "?")
+            audio = utt.get("audio_asset_id")
+            if audio and isinstance(audio, str):
+                asset = media.get(audio)
+                if asset:
+                    formatos = {d.get("format") for d in asset.get("derivatives", []) if isinstance(d, dict)}
+                    uri = str(asset.get("logical_uri", ""))
+                    es_audio = bool(formatos & FORMATOS_AUDIO) or uri.rsplit(".", 1)[-1].lower() in FORMATOS_AUDIO
+                    if not es_audio:
+                        errors.append({"code": "SEMANTIC_ERROR",
+                                       "message": f"audio de la intervención {uid} ({audio}) no tiene "
+                                                  f"formato de voz ({sorted(formatos) or uri})"})
+    utt_visto: dict[str, str] = {}
+    for bid, b in sorted(beats.items()):
+        for utt in b.get("utterances", []):
+            uid = utt.get("utterance_id")
+            if uid:
+                if uid in utt_visto:
+                    errors.append({"code": "SEMANTIC_ERROR",
+                                   "message": f"utterance_id '{uid}' duplicado: {utt_visto[uid]} y {bid}"})
+                utt_visto[uid] = bid
     return errors
 
 
@@ -321,6 +370,7 @@ def validate_package(manifest_path: Path, gate: str = "repo") -> list[dict]:
 FILENAME_CATEGORY_RULES = [
     ("question", "question"), ("media_", "media_asset"), ("discovery", "discovery"),
     ("person", "person"), ("place_", "place"), ("route_", "place"), ("museum_item", "museum_item"),
+    ("beat", "beat"),
     ("edition", "edition"), ("chapter", "chapter"), ("passage", "passage"),
     ("episode", "episode"), ("scene", "scene"), ("license", "license"),
     ("source", "source"), ("profile", "profile"),
@@ -339,6 +389,8 @@ EXPECTED_INVALID = {
     "invalid_question_hotspot_out_of_bounds.json": "SEMANTIC_ERROR",
     "invalid_place_no_certainty.json": "SCHEMA_ERROR",
     "invalid_route_not_hypothesis.json": "SCHEMA_ERROR",
+    "invalid_beat_sin_texto.json": "SCHEMA_ERROR",
+    "invalid_beat_cita_sin_pasaje.json": "SCHEMA_ERROR",
 }
 
 EXPECTED_INVALID_PACKAGES = {
@@ -346,6 +398,8 @@ EXPECTED_INVALID_PACKAGES = {
     "package_invalid_stale_contract.json": "CONTRACT_VERSION_UNSUPPORTED",
     "package_invalid_duplicate_semantic.json": "SEMANTIC_ERROR",
     "package_invalid_revealing_preimage.json": "SEMANTIC_ERROR",
+    "package_invalid_beats_orden_duplicado.json": "SEMANTIC_ERROR",
+    "package_invalid_beats_audio_fantasma.json": "REFERENCE_ERROR",
 }
 
 

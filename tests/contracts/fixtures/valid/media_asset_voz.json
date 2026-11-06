@@ -1,0 +1,19 @@
+{
+  "id": "DQ.MA.000100",
+  "contract_version": "1.0.0",
+  "function": "voz",
+  "media_class": "RECREACION_IA",
+  "logical_uri": "assets://audio/intervenciones/prueba.mp3",
+  "derivatives": [
+    { "variant": "original", "format": "mp3", "size_bytes": 1, "sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000" }
+  ],
+  "alt": "Audio sintético de prueba de una intervención (la voz es opcional: el texto es el elemento principal).",
+  "source_id": "DQ.SRC.0003",
+  "license_id": "DQ.LIC.0001",
+  "author": "Producción sintética del proyecto",
+  "allowed_uses": ["uso_personal_app", "almacenamiento_repo_git"],
+  "license_status": "verificada",
+  "provenance": "Fixture de voz: función 'voz' añadida en contrato v1.1.0 (DC-22).",
+  "review": { "state": "borrador", "reviewer_role": null, "date": null },
+  "spoiler_level": "ninguno"
+}

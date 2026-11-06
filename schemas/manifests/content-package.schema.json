@@ -4,41 +4,146 @@
   "title": "ContentPackage (manifest de paquete, encargo §6.3.3)",
   "type": "object",
   "additionalProperties": false,
-  "required": ["package_id", "contract_version", "catalog_version", "created", "files"],
+  "required": [
+    "package_id",
+    "contract_version",
+    "catalog_version",
+    "created",
+    "files"
+  ],
   "properties": {
-    "package_id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
-    "contract_version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$", "$comment": "Debe coincidir con la versión soportada por el consumidor; el validador rechaza versiones desconocidas." },
-    "catalog_version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
-    "created": { "$ref": "../content/_definitions.schema.json#/$defs/IsoDate" },
+    "package_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "contract_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "$comment": "Debe coincidir con la versión soportada por el consumidor; el validador rechaza versiones desconocidas."
+    },
+    "catalog_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "created": {
+      "$ref": "../content/_definitions.schema.json#/$defs/IsoDate"
+    },
     "files": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["editions", "chapters", "passages", "episodes", "scenes", "questions", "media_assets", "sources", "licenses"],
+      "required": [
+        "editions",
+        "chapters",
+        "passages",
+        "episodes",
+        "scenes",
+        "questions",
+        "media_assets",
+        "sources",
+        "licenses"
+      ],
       "properties": {
-        "editions": { "type": "array", "items": { "type": "string" } },
-        "chapters": { "type": "array", "items": { "type": "string" } },
-        "passages": { "type": "array", "items": { "type": "string" } },
-        "episodes": { "type": "array", "items": { "type": "string" } },
-        "scenes": { "type": "array", "items": { "type": "string" } },
-        "questions": { "type": "array", "items": { "type": "string" } },
-        "discoveries": { "type": "array", "items": { "type": "string" } },
-        "persons": { "type": "array", "items": { "type": "string" } },
-        "places": { "type": "array", "items": { "type": "string" } },
-        "museum_items": { "type": "array", "items": { "type": "string" } },
-        "media_assets": { "type": "array", "items": { "type": "string" } },
-        "sources": { "type": "array", "items": { "type": "string" } },
-        "licenses": { "type": "array", "items": { "type": "string" } }
+        "editions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "chapters": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "passages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "episodes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "scenes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "discoveries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "persons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "places": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "museum_items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "media_assets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "licenses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "beats": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       },
       "$comment": "Rutas relativas al paquete. El validador comprueba existencia, esquema y referencias cruzadas entre todos los ficheros listados."
     },
     "checksums": {
       "type": "object",
-      "additionalProperties": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^sha256:[0-9a-f]{64}$"
+      },
       "$comment": "Opcional en v1.0.0: mapa ruta -> hash. El validador lo verifica si está presente."
     },
     "counts": {
       "type": "object",
-      "additionalProperties": { "type": "integer", "minimum": 0 }
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
     }
   }
 }

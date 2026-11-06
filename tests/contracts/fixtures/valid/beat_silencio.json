@@ -1,0 +1,13 @@
+{
+  "id": "DQ.BEAT.000002",
+  "contract_version": "1.1.0",
+  "scene_id": "DQ.P1.C01.E01.S01",
+  "order": 2,
+  "kind": "SILENCIO",
+  "utterances": [],
+  "visual_asset_ids": ["DQ.MA.000002"],
+  "manual_advance_allowed": true,
+  "replay_allowed": false,
+  "reduced_motion_fallback": true,
+  "review": { "state": "borrador", "reviewer_role": null, "date": null }
+}

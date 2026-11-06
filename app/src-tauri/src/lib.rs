@@ -45,7 +45,9 @@ fn cargar_paquete(raiz: Option<String>) -> Result<Value, String> {
         .and_then(Value::as_str)
         .ok_or("manifest sin contract_version")?
         .to_string();
-    if version != "1.0.0" {
+    // Versiones soportadas por el consumidor (§6.5.8): v1.1.0 añade beats/
+    // intervenciones; los paquetes 1.0.0 siguen siendo válidos (MINOR).
+    if !["1.0.0", "1.1.0"].contains(&version.as_str()) {
         return Err(format!(
             "contract_version '{version}' no soportada por este consumidor (§6.5.8)"
         ));

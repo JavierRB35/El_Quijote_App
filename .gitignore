@@ -46,3 +46,6 @@ assets/**/*.pmtiles
 # --- EXCEPCIÓN por orden expresa del propietario: piloto de escenas IA (2026-11-05) ---
 # Solo derivados WebP optimizados (~3 MB, 11 archivos). PNG maestros fuera de Git.
 !assets/scenes/**/*.webp
+
+# --- EXCEPCIÓN expresa del propietario (2026-11-06): retratos del Modo Historia ---
+!assets/closeups/**/*.webp

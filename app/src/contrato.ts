@@ -149,6 +149,10 @@ export class Catalogo {
     return this.categoria<MediaAsset>('media_assets')[id];
   }
 
+  medios(): Record<string, MediaAsset> {
+    return this.categoria<MediaAsset>('media_assets');
+  }
+
   descubrimientosDeEpisodio(episodeId: string): Discovery[] {
     return Object.values(this.categoria<Discovery>('discoveries')).filter(
       (d) => d.appearance.episode_id === episodeId,

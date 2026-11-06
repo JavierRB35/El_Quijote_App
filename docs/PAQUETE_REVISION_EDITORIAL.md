@@ -12,20 +12,20 @@ Fuente: `docs/data/propuesta_correcciones_visuales_pre_r15.csv` (13 `RETIRAR_PRE
 
 | # | Pregunta | Episodio | Pre-imagen actual | Condición temporal (safe_after) | Propuesta PR #30 | Visados |
 |---|---|---|---|---|---|---|
-| A-01 | Q.217 | DQ.P1.C18.E01 | `DQ.MA.900008` | C18.E01 | retirar pre | ☐ R05 · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-02 | Q.232 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☐ R05 · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-03 | Q.233 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☐ R05 · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-04 | Q.234 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☐ R05 · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-05 | Q.235 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☐ R05 · **R06-NC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-06 | Q.236 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☐ R05 · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-07 | Q.237 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☐ R05 · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-08 | Q.238 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☐ R05 · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-09 | Q.313 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☐ R05 · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-10 | Q.314 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☐ R05 · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-11 | Q.315 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | ☐ R05 · **R06-NC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-12 | Q.316 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | **mantener condicional** | ☐ R05 · **R06-PEND** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-13 | Q.317 | DQ.P1.C21.E01 | `DQ.MA.900037` | C21.E01 | retirar pre | ☐ R05 · **R06-NC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-14 | Q.318 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | ☐ R05 · **R06-NC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-01 | Q.217 | DQ.P1.C18.E01 | `DQ.MA.900008` | C18.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-02 | Q.232 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-03 | Q.233 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-04 | Q.234 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-05 | Q.235 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | **R05-CC** · **R06-NC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-06 | Q.236 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-07 | Q.237 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-08 | Q.238 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-09 | Q.313 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-10 | Q.314 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-11 | Q.315 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R05-CC** · **R06-NC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-12 | Q.316 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | **mantener condicional** | **R05-PEND** · **R06-PEND** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-13 | Q.317 | DQ.P1.C21.E01 | `DQ.MA.900037` | C21.E01 | retirar pre | **R05-CC** · **R06-NC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-14 | Q.318 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R05-CC** · **R06-NC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
 
 Nota técnica para el visado (R09/R12): la pre-imagen actual de todas ellas es una recreación `pre_pregunta` con `spoiler_level: ninguno` en el dato; la propuesta de PR #30 obedece a riesgos contextuales específicos (no al spoiler_level del catálogo). Retirar la pre en una pregunta no modifica su registro salvo en `visual_requirements.pre_image_media_id` (baja opcional del campo), y el gating temporal ya declarado sigue aplicando.
 
@@ -35,17 +35,17 @@ Fuente: `docs/ADENDA_R12_TRATAMIENTO_ACUARELAS_021_025.md` + `INFORME_QA_PATRIMO
 
 | # | Vínculo | Destino/fase | Condición a visar | R05 | R06 | R12 | R01/R02 | R09 |
 |---|---|---|---|---|---|---|---|---|
-| B-01 | `R05C-000005` (021) | cuaderno · consulta | Rotulado «alegoría de expurgo» | ☐ | **R06-CC** | ☐ | ☐ | ☐ |
-| B-02 | `R05C-000006` (021) | descubrimientos · discovery | Idem + sin uso como prueba del hecho | ☐ | **R06-CC** | ☐ | ☐ | ☐ |
-| B-03 | `R05C-000007` (021) | lector · after | Idem, tras el desenlace | ☐ | **R06-CC** | ☐ | ☐ | ☐ |
-| B-04 | `R05C-000008` (021) | lector · lectura contextual | Idem, anclada a su pasaje | ☐ | **R06-CC** | ☐ | ☐ | ☐ |
-| B-05 | `R05C-000009` (021) | museo · after | Idem, ficha con atribución Tusell/Doré | ☐ | **R06-CC** | ☐ | ☐ | ☐ |
-| B-06 | `R05C-000010` (021) | museo · consulta | Idem | ☐ | **R06-CC** | ☐ | ☐ | ☐ |
-| B-07 | `R05C-000011` (021) | preguntas → discovery | Idem + `safe_after` del episodio | ☐ | **R06-CC** | ☐ | ☐ | ☐ |
-| B-08 | `R05C-000505` (025) | cuaderno · consulta | Rotulado «apoyo ilustrado no literal» | ☐ | **R06-CC** | ☐ | ☐ | ☐ |
-| B-09 | `R05C-000506` (025) | descubrimientos · discovery | Idem | ☐ | **R06-CC** | ☐ | ☐ | ☐ |
-| B-10 | `R05C-000507` (025) | lector · lectura contextual | Idem (no recreación de la hoguera) | ☐ | **R06-CC** | ☐ | ☐ | ☐ |
-| B-11 | `R05C-000508` (025) | museo · consulta | Idem, con atribución Tusell/Doré 1905 | ☐ | **R06-CC** | ☐ | ☐ | ☐ |
+| B-01 | `R05C-000005` (021) | cuaderno · consulta | Rotulado «alegoría de expurgo» | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
+| B-02 | `R05C-000006` (021) | descubrimientos · discovery | Idem + sin uso como prueba del hecho | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
+| B-03 | `R05C-000007` (021) | lector · after | Idem, tras el desenlace | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
+| B-04 | `R05C-000008` (021) | lector · lectura contextual | Idem, anclada a su pasaje | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
+| B-05 | `R05C-000009` (021) | museo · after | Idem, ficha con atribución Tusell/Doré | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
+| B-06 | `R05C-000010` (021) | museo · consulta | Idem | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
+| B-07 | `R05C-000011` (021) | preguntas → discovery | Idem + `safe_after` del episodio | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
+| B-08 | `R05C-000505` (025) | cuaderno · consulta | Rotulado «apoyo ilustrado no literal» | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
+| B-09 | `R05C-000506` (025) | descubrimientos · discovery | Idem | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
+| B-10 | `R05C-000507` (025) | lector · lectura contextual | Idem (no recreación de la hoguera) | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
+| B-11 | `R05C-000508` (025) | museo · consulta | Idem, con atribución Tusell/Doré 1905 | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
 
 ## C. El fallo contextual de `900157` (I,6)
 
@@ -53,7 +53,7 @@ Fuente: `INFORME_QA_PATRIMONIO_VISUAL.md` (2.ª auditoría R12) y `PROPUESTAS_ME
 
 | # | Decisión | Evidencia | R05 | R06 | R12 | R01/R02 | R09 |
 |---|---|---|---|---|---|---|---|
-| C-01 | Retirar 900157 del uso completo en I,6 y evaluar rescate por recorte | R12 2.ª auditoría | ☐ | **R06-CC** | ☐ | ☐ | ☐ |
+| C-01 | Retirar 900157 del uso completo en I,6 y evaluar rescate por recorte | R12 2.ª auditoría | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
 
 ## D0. Pronunciamiento verificable R06 sobre A/B/C — 2026-11-06
 
@@ -105,6 +105,61 @@ Fuente: `INFORME_QA_PATRIMONIO_VISUAL.md` (2.ª auditoría R12) y `PROPUESTAS_ME
 
 ---
 
+## D1. Visado iconográfico R05 — 26 decisiones del expediente
+
+**Fecha:** 2026-11-06. **Resultado: 25 R05-CC (conformidad documental condicionada), 1 R05-PEND (A-12)**. La conformidad valora la propuesta de retirada o su *posible* destino iconográfico, no acredita un uso ejecutable ni autoriza un nuevo MediaAsset. No hay inspección ocular propia nueva ni pruebas de aplicación; se usa evidencia R12 v0.2 y catálogo por URI/hash declarados. Los estados R06/R12/R01/R02/R09 **no se sustituyen**.
+
+### Alerta P0 — R06 ha confundido DQ.MA con DQ.MED en cuatro rechazos
+
+**Identidad cotejada por `logical_uri` y SHA-256 declarado en fichas del piloto**, frente al manifiesto y el registro maestro R12:
+
+| ID que tienen las preguntas | Ruta de su MediaAsset **real** | ID de manifiesto correcto |
+|---|---|---|
+| `DQ.MA.900042` | `assets/scenes/part_2/chapter_74/p2_c74_testamento_quijano_post.webp` (SHA `fc3fbcf60f...`) | **`DQ.MED.900202`**, no `DQ.MED.900042` (Sansón II,3) |
+| `DQ.MA.900036` | `assets/scenes/part_1/chapter_21/p1_c21_bacia_lluvia_pre.webp` (SHA `67601cff8d...`) | **`DQ.MED.900237`**, no `DQ.MED.900036` (segunda salida I,7) |
+| `DQ.MA.900037` | `assets/scenes/part_1/chapter_21/p1_c21_sancho_bacia_examen_post.webp` (SHA `54d78b8f...`) | **`DQ.MED.900167`**, no `DQ.MED.900037` (manuscrito Toledo I,9) |
+
+Los `R06-NC` actuales en **A-05/A-11/A-13/A-14** se basan en imágenes **distintas de las referenciadas por el JSON**. **Solicitar contrarrevisión R06** con URI/hash correctos; R05 no modifica el dictamen ajeno. Su corrección de identidad **no da PASS a la propuesta**: R12 inspeccionó la imagen real de `DQ.MA.900042` y la mantiene **PENDIENTE**; `DQ.MA.900036` y `DQ.MA.900037` siguen **PENDIENTE sin inspección visual directa**.
+
+Fuentes: `content/piloto/media_assets/DQ.MA.900042.json`, `DQ.MA.900036.json`, `DQ.MA.900037.json`; los 14 JSON de preguntas, `docs/data/propuesta_correcciones_visuales_pre_r15.csv` (PR #30), `docs/data/registro_revision_visual.csv` (R12 v0.2), `docs/data/vinculos_consolidados_estado_qa_r12.csv` (**vista QA v2 corregida en PR #39**, 3.564 filas), `docs/ADENDA_R12_TRATAMIENTO_ACUARELAS_021_025.md`, `docs/FE_ERRATAS_R06_POST_QA.md`. Hashes **declarados**, no recalculados sobre bytes.
+
+### Pronunciamiento y condición individual por fila
+
+| Fila | R05 | Evidencia y condiciones para decisión conjunta |
+|---|---|---|
+| A-01 | **R05-CC** | Q.217: rebaños visibles en `DQ.MA.900008` (I,18; R12 inspeccionada). Retirar del foco que pregunta causa de polvareda; `reveal` únicamente tras respuesta/explicación. TS-001 y orden pendiente. |
+| A-02 | **R05-CC** | Q.232: `DQ.MA.900011` despedida **post** II,74, spoiler crítico, inspeccionada R12. Retirar pre; `discovery` tras desenlace completo. |
+| A-03 | **R05-CC** | Q.233: 900011 adelanta identidad y despedida; retirar pre y reservar `discovery` tras renuncia al nombre y cierre del relato. |
+| A-04 | **R05-CC** | Q.234: retirar 900011 antes de veredicto del cura. `post_answer` solo si muerte/despedida ya narradas; de otro modo posponer hasta cierre, sin adelantar desenlace. |
+| A-05 | **R05-CC** | Q.235: `DQ.MA.900042` es **testamento II,74** (manifiesto `DQ.MED.900202`), no Sansón II,3. Retirar pre; `post_answer` candidato tras testar, R12 la vio pero dictamen PENDIENTE. **R06-NC a revisar por URI.** |
+| A-06 | **R05-CC** | Q.236: retirar testamento 900042 de previa: no prueba autoría del epitafio. `DQ.MA.000373` es alegoría de epílogo (R12 PASS para ese uso); solo `discovery` final rotulada. |
+| A-07 | **R05-CC** | Q.237: respuesta del epitafio es textual. Retirar 900042 previa; `373.jpg` alegoría tras leer texto, no prueba del verso. |
+| A-08 | **R05-CC** | Q.238: retirar despedida 900011 antes de la advertencia final; 373 solo como `discovery` alegórico tras fin II,74. |
+| A-09 | **R05-CC** | Q.313: `DQ.MA.900025` = encuentro Mambrino/barbero I,21, futuro respecto a pregunta de lluvia/refugio. Retirar pre; mostrar tras encuentro. Sin inspección R12. |
+| A-10 | **R05-CC** | Q.314: 900025 anticipa bacía y perspectivas. Retirar foco; `post_answer` tras contestar y narrar ambas percepciones, pendiente inspección R12. |
+| A-11 | **R05-CC** | Q.315: `DQ.MA.900036` es **bacía bajo lluvia I,21** (`DQ.MED.900237`), no segunda salida I,7. Retirar pre; `post_answer` tras explicar protección del sombrero, pendiente apertura R12. **R06-NC a revisar.** |
+| A-12 | **R05-PEND** | Q.316: mantener `DQ.MA.900025` antes de pregunta SOLO si se acreditan encuentro y objeto ya narrados; no hay prueba de orden real. **No visar mantener pre** hasta R01/R15 y R12; fallback sin pre y 900025 después. |
+| A-13 | **R05-CC** | Q.317: `DQ.MA.900037` es examen de bacía **post** I,21 (`DQ.MED.900167`), no Toledo I,9. Retirar pre; `reveal` tras respuesta y reconocimiento, R12 sin inspección. **R06-NC a revisar.** |
+| A-14 | **R05-CC** | Q.318: retirar 900036 (bacía lluviosa) si adelanta orden. 900037 (examen posterior, I,21) candidato `post_answer` tras ordenar lances, ambos pendientes de inspección R12. **R06-NC a revisar por ID.** |
+| B-01 | **R05-CC** | 021 cuaderno/consulta: **alegoría de expurgo** (R12 vio gigante barriendo miniaturas caballerescas), no cura/barbero examinando libros de forma literal. |
+| B-02 | **R05-CC** | 021 descubrimiento: contextualizar como sátira alegórica tras relato del escrutinio, nunca prueba del hecho. |
+| B-03 | **R05-CC** | 021 lector/after: después de pasaje; rotulado alegórico y texto íntegro sin superposición (TS-001 pendiente). |
+| B-04 | **R05-CC** | 021 lector/lectura contextual: anclar a pasaje I,6 verificado por R01, no usar como imagen literal del gesto de expurgo. |
+| B-05 | **R05-CC** | 021 museo/after: atribución Tusell/Doré, edición Tasso 1905; distinguir símbolo literario de registro histórico. |
+| B-06 | **R05-CC** | 021 museo/consulta: rotular alegoría, fuente/atribución y carácter no documental; revisión concreta R13. |
+| B-07 | **R05-CC** | 021 pregunta Q.204/discovery: solo tras respuesta y `safe_after` I,6; nunca en foco como prueba de decisiones sobre libros. |
+| B-08 | **R05-CC** | 025 cuaderno: R12 vio mujer quemando libros en **interior**, no corral nocturno. **Apoyo ilustrado no literal**, fuente textual I,7. No existe ficha canónica aprobada `DQ.MA.000025`. |
+| B-09 | **R05-CC** | 025 descubrimiento: tras narrar quema, con crédito y nota de libertad artística; nunca reconstrucción nocturna literal. |
+| B-10 | **R05-CC** | 025 lector: anclaje I,7; montaje `after` I,6 exige acuerdo R01/R06, no falsear origen; TS-001 pendiente. |
+| B-11 | **R05-CC** | 025 museo: ficha Tusell/Doré/Tasso 1905, quema en interior y carácter no literal; no afirmar que ocurrió en corral ni quiénes estaban presentes. |
+| C-01 | **R05-CC** | `DQ.MED.900157` fue FAIL contextual R12: DQ armado y Sancho/rucio observan escrutinio I,6. **Prohibir plano entero** sin borrar fichero. Probar 900013+900230 (canónicos `DQ.MA.900013`+`DQ.MA.900028`); continuidad y TS-001 por R06/R12. Recorte izquierdo x≈0.00–0.49 es hipótesis **NO VISADA**. |
+
+**Reglas vinculantes para este visado:** (1) `safe_after_episodes` no demuestra por sí solo el instante del *beat*; (2) retirar `pre_image_media_id` **no** implica aprobar una imagen para `reveal`, `post_answer` o `discovery`; (3) `spoiler_level: ninguno` en MediaAsset no prevalece sobre la coherencia visual de la pregunta; (4) `021.jpg` permanece **FAIL en interpretación literal**, aunque puede consultarse como alegoría; `025.jpg` permanece **PENDIENTE para hoguera literal**, aunque sirve como apoyo no literal; (5) la 025 requiere alta canónica futura si se integrase, sin inferir IDs por nombre; (6) `900157` entero queda excluido de I,6 y su recorte no está visado; (7) no se alteran los CSV congelados ni contratos, imágenes, preguntas o código.
+
+**Cierre parcial R05:** pronunciamiento **26/26** documentado, **25 CC + 1 PEND**; las cuatro NC de R06 deben reevaluarse por identidad, y están pendientes R12, R01/R02, R09 y resolución de Coordinación. **GO de valoración iconográfica documental condicionada / NO-GO integración productiva**.
+
+---
+
 ## D. Comprobación técnica (R09) — tras los visados
 
 1. Verificar que toda fila «conforme» tiene su condición registrada en el dato (o su alta tramitada por PR documental, sin retroeditar CSVs).
@@ -113,6 +168,6 @@ Fuente: `INFORME_QA_PATRIMONIO_VISUAL.md` (2.ª auditoría R12) y `PROPUESTAS_ME
 
 ## Estado
 
-- ☐ Visados R05/R06/R12 (contenidos/arte/QA) — **pendientes**
+- ☑ **R05: pronunciamiento 26/26 (25 CC / 1 PEND)**; R06 conserva sus estados (cuatro NC requieren reauditoría de identidad); ☐ R12 pendiente. No hay aprobación conjunta.
 - ☐ Visado editorial R01/R02 — **pendiente** (puede ejecutarse en la misma pasada que la contrafirma de ADR-0005, H5)
 - ☐ Comprobación técnica R09 — la realizará DESARROLLO cuando la tabla vuelva con los visados

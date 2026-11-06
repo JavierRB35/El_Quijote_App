@@ -8,22 +8,26 @@
 
 Fuente: `docs/data/propuesta_correcciones_visuales_pre_r15.csv` (13 `RETIRAR_PRE` + 1 `MANTENER_CONDICIONAL`). Estado: **0/14 incorporadas, 0/14 aprobadas** (PR #35).
 
-| # | Propuesta (resumen) | Evidencia | R05 | R06 | R12 | R01/R02 | R09 |
-|---|---|---|---|---|---|---|---|
-| A-01 | Q.217 retirar pre | CSV PR #30 | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A-02 | Q.232 retirar pre | CSV PR #30 | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A-03 | Q.233 retirar pre | CSV PR #30 | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A-04 | Q.234 retirar pre | CSV PR #30 | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A-05 | Q.235 retirar pre | CSV PR #30 | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A-06 | Q.236 retirar pre | CSV PR #30 | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A-07 | Q.237 retirar pre | CSV PR #30 | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A-08 | Q.238 retirar pre | CSV PR #30 | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A-09 | Q.313 retirar pre | CSV PR #30 | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A-10 | Q.314 retirar pre | CSV PR #30 | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A-11 | Q.315 retirar pre | CSV PR #30 | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A-12 | Q.316 mantener condicional | CSV PR #30 | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A-13 | Q.317 retirar pre | CSV PR #30 | ☐ | ☐ | ☐ | ☐ | ☐ |
-| A-14 | Q.318 retirar pre | CSV PR #30 | ☐ | ☐ | ☐ | ☐ | ☐ |
+**Medios y condiciones temporales concretas** (extraídos del catálogo del piloto, `content/piloto/questions/`, para que cada especialidad revise sin reconstruir el contexto): la imagen pre actual de cada pregunta y su condición temporal declarada (`spoiler_policy.safe_after_episodes` = su propio episodio; el gating ya impide presentarlas antes de completarlo).
+
+| # | Pregunta | Episodio | Pre-imagen actual | Condición temporal (safe_after) | Propuesta PR #30 | Visados |
+|---|---|---|---|---|---|---|
+| A-01 | Q.217 | DQ.P1.C18.E01 | `DQ.MA.900008` | C18.E01 | retirar pre | ☐ R05 · ☐ R06 · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-02 | Q.232 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☐ ☐ ☐ ☐ · ☐ |
+| A-03 | Q.233 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☐ ☐ ☐ ☐ · ☐ |
+| A-04 | Q.234 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☐ ☐ ☐ ☐ · ☐ |
+| A-05 | Q.235 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☐ ☐ ☐ ☐ · ☐ |
+| A-06 | Q.236 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☐ ☐ ☐ ☐ · ☐ |
+| A-07 | Q.237 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☐ ☐ ☐ ☐ · ☐ |
+| A-08 | Q.238 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☐ ☐ ☐ ☐ · ☐ |
+| A-09 | Q.313 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☐ ☐ ☐ ☐ · ☐ |
+| A-10 | Q.314 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☐ ☐ ☐ ☐ · ☐ |
+| A-11 | Q.315 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | ☐ ☐ ☐ ☐ · ☐ |
+| A-12 | Q.316 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | **mantener condicional** | ☐ ☐ ☐ ☐ · ☐ |
+| A-13 | Q.317 | DQ.P1.C21.E01 | `DQ.MA.900037` | C21.E01 | retirar pre | ☐ ☐ ☐ ☐ · ☐ |
+| A-14 | Q.318 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | ☐ ☐ ☐ ☐ · ☐ |
+
+Nota técnica para el visado (R09/R12): la pre-imagen actual de todas ellas es una recreación `pre_pregunta` con `spoiler_level: ninguno` en el dato; la propuesta de PR #30 obedece a riesgos contextuales específicos (no al spoiler_level del catálogo). Retirar la pre en una pregunta no modifica su registro salvo en `visual_requirements.pre_image_media_id` (baja opcional del campo), y el gating temporal ya declarado sigue aplicando.
 
 ## B. Los 11 vínculos condicionados de las acuarelas 021/025 (adenda R12, PR #36)
 

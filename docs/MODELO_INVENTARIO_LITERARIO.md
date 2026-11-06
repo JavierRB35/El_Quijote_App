@@ -17,11 +17,16 @@ Este modelo define la **matriz `unidad_narrativa`** (entregable R02, H1) y su pr
 
 ## 2. Ediciones y registro de fuente (H0)
 
-| Rol | Identificador | Estado |
-|---|---|---|
-| Edición del paquete piloto (texto de las citas) | `DQ.ED.0001` (EPUB Tusell/Tasso 1905) | vigente |
-| Texto plano de cotejo y anclaje | `DQ.SRC.0005` — `content/textos/gutenberg_2000/El_Quijote.txt` (PG eBook #2000) | vigente |
-| Edición de referencia canónica | **PEND-01 abierta** | decidir en H0 antes de escalar |
+Arquitectura textual de tres capas, conforme a la resolución de PEND-01 (`docs/RESOLUCION_PEND01_EDICION_REFERENCIA.md`, RESUELTA 2026-11-05; registro en `docs/VISION_Y_DECISIONES.md`):
+
+| Rol de la capa | Identificador | Uso | Estado |
+|---|---|---|---|
+| **Edición de lectura** (lo que muestra el lector) | `DQ.ED.0001` — EPUB Tusell/Tasso 1905, ortografía modernizada | Texto del lector; correspondencia registrada en el `anchor` de cada pasaje | vigente, uso interno autorizado |
+| **Fuente de extracción de citas** (base literal del paquete) | `DQ.ED.0003` / `DQ.SRC.0005` — PG eBook #2000 (`content/textos/gutenberg_2000/El_Quijote.txt`) | Todo `text_original` y toda cita literal se extraen VERBATIM de este fichero, con offsets y hash | vigente, almacenado |
+| **Edición de cotejo académico** | `DQ.ED.0002` / `DQ.SRC.0004` — ed. Instituto Cervantes dir. Rico (2004, rev. 2015) | Cotejo puntual de variantes; requisito para estado `REVISADA_CERVANTISTA`; NO se almacena ni redistribuye | vigente, solo consulta/cita |
+| **Respaldo princeps** (variantes) | Juan de la Cuesta 1605/1615 (BNE/BVPB) | Resolución de dudas de época | dominio público |
+
+Variante documentada entre capas (motivo del cotejo obligatorio): el EPUB Tasso dice «Fristón» donde PG #2000 dice «Frestón» (registro completo en `docs/data/cotejo_texto_referencia.json`). Las citas de este inventario y de la ficha de escena proceden de la capa PG #2000; cualquier divergencia con el lector es variante de edición documentada, no error de transcripción.
 
 **Convención de anclaje verificada empíricamente** (documentada porque el equipo la necesita para reproducir offsets): los `position.start_char/end_char` del catálogo de pasajes están calculados sobre el texto de PG #2000 **decodificado UTF-8 y con saltos `CRLF→LF` normalizados** (2.168.088 caracteres; el archivo físico pesa 2.225.775 bytes CRLF). El inventario usa esa misma convención y añade **números de línea** del archivo normalizado, que son la forma más práctica de localización humana.
 
@@ -71,6 +76,8 @@ Reglas: no explicar el chiste en la escena (la explicación va en la ficha, no e
 ### 3.4 Diálogos a conservar literalmente
 
 Criterios para declarar `CITA_LITERAL` (R01): (a) sostiene el **mecanismo humorístico** o su punto exacto; (b) define la **voz** del personaje (modo de hablar de Sancho, hipergenia de don Quijote); (c) carga la **emoción** del giro de escena; (d) valor literario reconocido. Todo lo demás se adapta (`ADAPTACION_FIEL`) o se enlaza (`NARRACION_ENLACE`) — triple etiqueta exigida por TS-001 §1. La cita literal exige registro: pasaje existente o `pasajes_propuestos` con localizador verificado. **Nunca** se redacta una cita «de memoria».
+
+**Estructura mínima de cada intervención del guion** (obligatoria; aplicada desde la ficha demostrativa): toda intervención declara (1) `speaker_id` correctamente identificado; (2) `texto_visible` — lo que se muestra en pantalla, íntegro, incluidos los incisos del narrador («—respondió Sancho—»), que forman parte del texto literario; (3) `texto_oral` — lo que se entrega al intérprete de voz: solo las palabras del hablante, con los incisos retirados y la puntuación de diálogo regularizada; (4) `text_kind` (`CITA_LITERAL`/`ADAPTACION_FIEL`/`NARRACION_ENLACE`); (5) `passage_ref` (pasaje existente o propuesto con localizador). En las intervenciones del narrador, `texto_oral` coincide con `texto_visible` y `incisos_narrador` es vacío. TS-001 aplica también a narraciones y diálogos adaptados: si se pronuncia, se muestra.
 
 ### 3.5 Relatos intercalados y sus narradores
 

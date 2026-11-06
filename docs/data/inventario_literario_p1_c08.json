@@ -1,8 +1,14 @@
 {
   "id": "DQ.P1.C08",
-  "edition_id": "DQ.ED.0001",
+  "edition_id": "DQ.ED.0003",
   "part": 1,
   "chapter": 8,
+  "ediciones": {
+    "extraccion_citas": "DQ.ED.0003 / DQ.SRC.0005 (PG #2000; base literal verbatim del inventario)",
+    "lectura": "DQ.ED.0001 (EPUB Tusell/Tasso 1905; texto que muestra el lector)",
+    "cotejo_academico": "DQ.ED.0002 / DQ.SRC.0004 (ed. Rico/IC; consulta puntual, no almacenada)",
+    "nota_pend01": "PEND-01 RESUELTA 2026-11-05 (docs/RESOLUCION_PEND01_EDICION_REFERENCIA.md); variantes entre capas registradas en docs/data/cotejo_texto_referencia.json (p. ej. Fristón/Frestón)"
+  },
   "titulo_fuente": "Capítulo VIII. Del buen suceso que el valeroso don Quijote tuvo en la\nespantable y jamás imaginada aventura de los molinos de viento, con otros\nsucesos dignos de felice recordación",
   "localizacion_capitulo": {
     "cap8_cabecera": {
@@ -93,7 +99,15 @@
       "pasajes_propuestos": [
         {
           "id_propuesto": "DQ.P1.C08.P0013",
-          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "clase": "DIALOGO",
+          "estado": "VALIDADO_PENDIENTE_ALTA_FISICA_EN_CATALOGO",
+          "revision_r01_r02": {
+            "locador": "PASS (script de verificación contra DQ.SRC.0005, 2026-11-06)",
+            "texto": "PASS cotejo verbatim carácter a carácter",
+            "clasificacion": "revisada",
+            "aprobacion_editorial": "R01_APROBADO_2026-11-06",
+            "alta_fisica": "pendiente: crear registros en content/piloto/passages/ + package.json (requiere contrato beats R09/R11)"
+          },
           "fragmentos": [
             {
               "fragmento": "que_gigantes",
@@ -119,7 +133,15 @@
         },
         {
           "id_propuesto": "DQ.P1.C08.P0014",
-          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "clase": "DIALOGO",
+          "estado": "VALIDADO_PENDIENTE_ALTA_FISICA_EN_CATALOGO",
+          "revision_r01_r02": {
+            "locador": "PASS (script de verificación contra DQ.SRC.0005, 2026-11-06)",
+            "texto": "PASS cotejo verbatim carácter a carácter",
+            "clasificacion": "revisada",
+            "aprobacion_editorial": "R01_APROBADO_2026-11-06",
+            "alta_fisica": "pendiente: crear registros en content/piloto/passages/ + package.json (requiere contrato beats R09/R11)"
+          },
           "fragmentos": [
             {
               "fragmento": "bien_parece",
@@ -231,7 +253,15 @@
       "pasajes_propuestos": [
         {
           "id_propuesto": "DQ.P1.C08.P0015",
-          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "clase": "NARRACION",
+          "estado": "VALIDADO_PENDIENTE_ALTA_FISICA_EN_CATALOGO",
+          "revision_r01_r02": {
+            "locador": "PASS (script de verificación contra DQ.SRC.0005, 2026-11-06)",
+            "texto": "PASS cotejo verbatim carácter a carácter",
+            "clasificacion": "revisada",
+            "aprobacion_editorial": "R01_APROBADO_2026-11-06",
+            "alta_fisica": "pendiente: crear registros en content/piloto/passages/ + package.json (requiere contrato beats R09/R11)"
+          },
           "fragmentos": [
             {
               "fragmento": "dio_espuelas",
@@ -284,7 +314,13 @@
         "riesgo": "que el espectador lea el arrojo como valentía y no como sordera delirante",
         "compensacion": "gestual del beat (Sancho gritando en primer término) + narración breve en pantalla",
         "aprobacion": "PROPUESTA",
-        "alternativa_acceso": "lector íntegro"
+        "alternativa_acceso": "lector íntegro",
+        "resolucion_r01": {
+          "dictamen": "APROBADA CON CONDICION",
+          "condicion": "el texto narrativo (P0015) permanece íntegro y visible, incluida la causa del mecanismo («ni oía las voces de su escudero Sancho»); la fusión afecta solo a la puesta en beats, nunca al texto",
+          "verificacion_contenido": "acontecimiento (carga inicial), intención literaria (ironía narratorial + parodia de arenga) y mecanismo (sordera selectiva) permanecen completos",
+          "firma": "R01_FIRMADA_2026-11-06"
+        }
       },
       "arco_emocional": {
         "DQ.PER.0001": "furia belicosa ascendente: de la instrucción al ataque.",
@@ -378,7 +414,15 @@
       "pasajes_propuestos": [
         {
           "id_propuesto": "DQ.P1.C08.P0016",
-          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "clase": "DIALOGO",
+          "estado": "VALIDADO_PENDIENTE_ALTA_FISICA_EN_CATALOGO",
+          "revision_r01_r02": {
+            "locador": "PASS (script de verificación contra DQ.SRC.0005, 2026-11-06)",
+            "texto": "PASS cotejo verbatim carácter a carácter",
+            "clasificacion": "revisada",
+            "aprobacion_editorial": "R01_APROBADO_2026-11-06",
+            "alta_fisica": "pendiente: crear registros en content/piloto/passages/ + package.json (requiere contrato beats R09/R11)"
+          },
           "fragmentos": [
             {
               "fragmento": "valame_dios",
@@ -495,7 +539,15 @@
       "pasajes_propuestos": [
         {
           "id_propuesto": "DQ.P1.C08.P0017",
-          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "clase": "NARRACION",
+          "estado": "VALIDADO_PENDIENTE_ALTA_FISICA_EN_CATALOGO",
+          "revision_r01_r02": {
+            "locador": "PASS (script de verificación contra DQ.SRC.0005, 2026-11-06)",
+            "texto": "PASS cotejo verbatim carácter a carácter",
+            "clasificacion": "revisada",
+            "aprobacion_editorial": "R01_APROBADO_2026-11-06",
+            "alta_fisica": "pendiente: crear registros en content/piloto/passages/ + package.json (requiere contrato beats R09/R11)"
+          },
           "fragmentos": [
             {
               "fragmento": "transicion_puertolapice",
@@ -511,7 +563,15 @@
         },
         {
           "id_propuesto": "DQ.P1.C08.P0018",
-          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "clase": "DIALOGO",
+          "estado": "VALIDADO_PENDIENTE_ALTA_FISICA_EN_CATALOGO",
+          "revision_r01_r02": {
+            "locador": "PASS (script de verificación contra DQ.SRC.0005, 2026-11-06)",
+            "texto": "PASS cotejo verbatim carácter a carácter",
+            "clasificacion": "revisada",
+            "aprobacion_editorial": "R01_APROBADO_2026-11-06",
+            "alta_fisica": "pendiente: crear registros en content/piloto/passages/ + package.json (requiere contrato beats R09/R11)"
+          },
           "fragmentos": [
             {
               "fragmento": "vargas_machuca",
@@ -527,7 +587,15 @@
         },
         {
           "id_propuesto": "DQ.P1.C08.P0019",
-          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "clase": "DIALOGO",
+          "estado": "VALIDADO_PENDIENTE_ALTA_FISICA_EN_CATALOGO",
+          "revision_r01_r02": {
+            "locador": "PASS (script de verificación contra DQ.SRC.0005, 2026-11-06)",
+            "texto": "PASS cotejo verbatim carácter a carácter",
+            "clasificacion": "revisada",
+            "aprobacion_editorial": "R01_APROBADO_2026-11-06",
+            "alta_fisica": "pendiente: crear registros en content/piloto/passages/ + package.json (requiere contrato beats R09/R11)"
+          },
           "fragmentos": [
             {
               "fragmento": "codigo_dolor",
@@ -613,7 +681,15 @@
       "pasajes_propuestos": [
         {
           "id_propuesto": "DQ.P1.C08.P0020",
-          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "clase": "NARRACION",
+          "estado": "VALIDADO_PENDIENTE_ALTA_FISICA_EN_CATALOGO",
+          "revision_r01_r02": {
+            "locador": "PASS (script de verificación contra DQ.SRC.0005, 2026-11-06)",
+            "texto": "PASS cotejo verbatim carácter a carácter",
+            "clasificacion": "revisada",
+            "aprobacion_editorial": "R01_APROBADO_2026-11-06",
+            "alta_fisica": "pendiente: crear registros en content/piloto/passages/ + package.json (requiere contrato beats R09/R11)"
+          },
           "fragmentos": [
             {
               "fragmento": "sancho_comilon",
@@ -685,7 +761,15 @@
       "pasajes_propuestos": [
         {
           "id_propuesto": "DQ.P1.C08.P0021",
-          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "clase": "MIXTO",
+          "estado": "VALIDADO_PENDIENTE_ALTA_FISICA_EN_CATALOGO",
+          "revision_r01_r02": {
+            "locador": "PASS (script de verificación contra DQ.SRC.0005, 2026-11-06)",
+            "texto": "PASS cotejo verbatim carácter a carácter",
+            "clasificacion": "revisada",
+            "aprobacion_editorial": "R01_APROBADO_2026-11-06",
+            "alta_fisica": "pendiente: crear registros en content/piloto/passages/ + package.json (requiere contrato beats R09/R11)"
+          },
           "fragmentos": [
             {
               "fragmento": "puerto_lapice_regla",
@@ -765,7 +849,15 @@
       "pasajes_propuestos": [
         {
           "id_propuesto": "DQ.P1.C08.P0022",
-          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "clase": "DIALOGO",
+          "estado": "VALIDADO_PENDIENTE_ALTA_FISICA_EN_CATALOGO",
+          "revision_r01_r02": {
+            "locador": "PASS (script de verificación contra DQ.SRC.0005, 2026-11-06)",
+            "texto": "PASS cotejo verbatim carácter a carácter",
+            "clasificacion": "revisada",
+            "aprobacion_editorial": "R01_APROBADO_2026-11-06",
+            "alta_fisica": "pendiente: crear registros en content/piloto/passages/ + package.json (requiere contrato beats R09/R11)"
+          },
           "fragmentos": [
             {
               "fragmento": "ya_te_he_dicho",
@@ -811,7 +903,15 @@
         },
         {
           "id_propuesto": "DQ.P1.C08.P0023",
-          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "clase": "NARRACION",
+          "estado": "VALIDADO_PENDIENTE_ALTA_FISICA_EN_CATALOGO",
+          "revision_r01_r02": {
+            "locador": "PASS (script de verificación contra DQ.SRC.0005, 2026-11-06)",
+            "texto": "PASS cotejo verbatim carácter a carácter",
+            "clasificacion": "revisada",
+            "aprobacion_editorial": "R01_APROBADO_2026-11-06",
+            "alta_fisica": "pendiente: crear registros en content/piloto/passages/ + package.json (requiere contrato beats R09/R11)"
+          },
           "fragmentos": [
             {
               "fragmento": "carga_frailes_sancho",
@@ -924,7 +1024,13 @@
         "riesgo": "medio: la paliza de Sancho es consecuencia social del delirio; no omitir el hecho",
         "compensacion": "narración en pantalla con el término «despojos» + beat físico breve",
         "aprobacion": "PROPUESTA",
-        "alternativa_acceso": "lector íntegro"
+        "alternativa_acceso": "lector íntegro",
+        "resolucion_r01": {
+          "dictamen": "APROBADA CON CONDICION",
+          "condicion": "se conservan íntegras las réplicas «Peor será esto que los molinos de viento», «deben de ser, y son sin duda», «Gente endiablada…» y «Para conmigo no hay palabras blandas» (P0008, P0009, P0022); la condensación recae solo en la narración de la carga (P0023), que no se recorta por debajo del hecho y su consecuencia: fraile derribado, despojos de Sancho y paliza de los mozos",
+          "verificacion_contenido": "acontecimiento (derriba y paliza), intención (equívoco religioso-grotesco), mecanismo (materialismo literal del despojo) y reacción (terror cómico de los frailes) permanecen",
+          "firma": "R01_FIRMADA_2026-11-06"
+        }
       },
       "arco_emocional": {
         "DQ.PER.0001": "expansión combativa: el proyecto vuelve a funcionar (derriba al «encantador»).",
@@ -1014,7 +1120,15 @@
       "pasajes_propuestos": [
         {
           "id_propuesto": "DQ.P1.C08.P0024",
-          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "clase": "DIALOGO",
+          "estado": "VALIDADO_PENDIENTE_ALTA_FISICA_EN_CATALOGO",
+          "revision_r01_r02": {
+            "locador": "PASS (script de verificación contra DQ.SRC.0005, 2026-11-06)",
+            "texto": "PASS cotejo verbatim carácter a carácter",
+            "clasificacion": "revisada",
+            "aprobacion_editorial": "R01_APROBADO_2026-11-06",
+            "alta_fisica": "pendiente: crear registros en content/piloto/passages/ + package.json (requiere contrato beats R09/R11)"
+          },
           "fragmentos": [
             {
               "fragmento": "anda_caballero",
@@ -1155,7 +1269,15 @@
       "pasajes_propuestos": [
         {
           "id_propuesto": "DQ.P1.C08.P0025",
-          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "clase": "MIXTO",
+          "estado": "VALIDADO_PENDIENTE_ALTA_FISICA_EN_CATALOGO",
+          "revision_r01_r02": {
+            "locador": "PASS (script de verificación contra DQ.SRC.0005, 2026-11-06)",
+            "texto": "PASS cotejo verbatim carácter a carácter",
+            "clasificacion": "revisada",
+            "aprobacion_editorial": "R01_APROBADO_2026-11-06",
+            "alta_fisica": "pendiente: crear registros en content/piloto/passages/ + package.json (requiere contrato beats R09/R11)"
+          },
           "fragmentos": [
             {
               "fragmento": "combate_suspension",
@@ -1217,7 +1339,13 @@
         "riesgo": "medio: perder el tono de suspense paródico",
         "compensacion": "imagen de combate + narrador suspendiendo con la frase «no halló más escrito»",
         "aprobacion": "PROPUESTA",
-        "alternativa_acceso": "lector íntegro"
+        "alternativa_acceso": "lector íntegro",
+        "resolucion_r01": {
+          "dictamen": "APROBADA CON CONDICION",
+          "condicion": "la suspensión del autor (P0025, «no halló más escrito… el segundo autor…») NUNCA se condensa ni se resume: es la llave estructural de I, 9 y del dispositivo de autorías; la compresión afecta solo a los votos de las criadas",
+          "verificacion_contenido": "acontecimiento (combate suspendido en el golpe decisivo), intención (metaficción editorial), mecanismo (parodia de suspense) y reacción (expectativa) permanecen",
+          "firma": "R01_FIRMADA_2026-11-06"
+        }
       },
       "arco_emocional": {
         "DQ.PER.0001": "tensión máxima y fe absoluta en la intercesión de Dulcinea; el capítulo lo deja en el aire.",

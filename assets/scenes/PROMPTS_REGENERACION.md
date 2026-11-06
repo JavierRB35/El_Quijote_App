@@ -91,3 +91,16 @@ Estas indicaciones sintetizan los requisitos artísticos empleados en la generac
 | `p2_c55_sancho_rucio_sima_post` | Sancho protege al rucio desde el fondo de una sima rocosa con luz y una cuerda desde la abertura, sin heridas. | **Spoiler alto:** consecuencia de la caída. |
 
 Para regenerar o ampliar una escena, conservar el ID semántico si solo se reemplaza su versión gráfica y registrar una nueva revisión de fichero/hash en `manifest.json`. Si cambia el episodio, la pregunta asociada o la fase narrativa, asignar ID nuevo y revisar enlaces editoriales.
+
+## Sexta batería — nuevos capítulos sin recreación previa (2026-11-06)
+
+| ID | Escena | Uso |
+|---|---|---|
+| `p1_c04_mercaderes_pre` | Don Quijote solo ante unos mercaderes de Toledo en un camino manchego; conversación tensa, antes del desenlace, sin Sancho. | Previo al conflicto. |
+| `p1_c12_grisostomo_relato_pre` | El cabrero Pedro relata junto al fuego la historia de Grisóstomo ante Don Quijote y Sancho; sin funeral ni aparición de Marcela. | Presentación de relato. |
+| `p1_c27_cura_barbero_disfraz_pre` | Cura y barbero preparan su estratagema en Sierra Morena, con ropas humildes, antes de ejecutarla. | Planificación. |
+| `p2_c04_sancho_sanson_pre` | Sansón Carrasco conversa con Sancho y Don Quijote en patio rural; sin imprenta ni libros legibles. | Diálogo. |
+| `p2_c14_caballero_espejos_pre` | Encuentro a caballo en bosque entre Don Quijote y caballero de los Espejos, identidad oculta y sin choque. | Previsto al duelo. |
+| `p2_c43_consejos_sancho_pre` | Don Quijote aconseja afectuosamente a Sancho antes de su gobierno, estancia ducal sin trono. | Consejos. |
+
+Todas siguen el prompt base, son recreaciones originales IA y requieren cotejo textual/editorial antes de uso jugable.

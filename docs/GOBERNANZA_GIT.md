@@ -58,3 +58,5 @@ No se difieren pushes «para más tarde». Si un bloque está a medias, se commi
 
 - El historial de `main` es evidencia de auditoría: cada entrega debe poder rastrearse a un commit con fecha, autor y contenido.
 - Los hitos GO/NO-GO se etiquetan y se referencian desde `VISION_Y_DECISIONES.md`.
+
+**Ampliación de excepción (2026-11-06, batería visual 06):** a petición expresa del propietario, se incorporan seis WebP optimizados de nuevas escenas originales IA al árbol por parte/capítulo en `main`, alcanzando **65 activos**. Se mantienen las restricciones generales para medios de terceros y los controles de integridad del manifiesto; los PNG maestros permanecen fuera de Git.

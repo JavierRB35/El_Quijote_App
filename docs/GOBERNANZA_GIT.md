@@ -60,3 +60,5 @@ No se difieren pushes «para más tarde». Si un bloque está a medias, se commi
 - Los hitos GO/NO-GO se etiquetan y se referencian desde `VISION_Y_DECISIONES.md`.
 
 **Ampliación de excepción (2026-11-06, batería visual 06):** a petición expresa del propietario, se incorporan seis WebP optimizados de nuevas escenas originales IA al árbol por parte/capítulo en `main`, alcanzando **65 activos**. Se mantienen las restricciones generales para medios de terceros y los controles de integridad del manifiesto; los PNG maestros permanecen fuera de Git.
+
+**Ampliación de excepción (2026-11-06, batería visual 07):** se incorporan seis WebP optimizados de capítulos previamente sin recreaciones (I.10, I.13, I.15, II.12, II.31, II.51), elevando el inventario a **71 activos**. El propietario ha solicitado de nuevo la colocación en `main`. Conservación de PNG maestros fuera del repositorio, documentación de derechos, hashes y revisión editorial pendientes como en tandas previas.

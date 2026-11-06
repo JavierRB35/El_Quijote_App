@@ -104,3 +104,16 @@ Para regenerar o ampliar una escena, conservar el ID semántico si solo se reemp
 | `p2_c43_consejos_sancho_pre` | Don Quijote aconseja afectuosamente a Sancho antes de su gobierno, estancia ducal sin trono. | Consejos. |
 
 Todas siguen el prompt base, son recreaciones originales IA y requieren cotejo textual/editorial antes de uso jugable.
+
+## Séptima batería — nuevos capítulos (2026-11-06)
+
+| ID | Variación narrativa del prompt base | Función |
+|---|---|---|
+| `p1_c10_dialogo_victoria_pre` | Don Quijote y Sancho conversan en camino manchego tras encuentro con el vizcaíno, sin representar batalla. | Diálogo y transición. |
+| `p1_c13_camino_entierro_pre` | Viajeros y pastores de camino al entierro de Grisóstomo conversan con los protagonistas; sin cadáver ni sepultura. | Contexto previo. |
+| `p1_c15_rocinante_yeguas_pre` | Rocinante se acerca a unas yeguas que pacen; Sancho y Don Quijote descansan lejos, sin agresión. | Inicio del incidente. |
+| `p2_c12_caballero_bosque_noche_pre` | Don Quijote conversa a oscuras junto al fuego con caballero desconocido; identidad oculta. | Suspense. |
+| `p2_c31_recepcion_duques_pre` | Entrada solemne de Don Quijote y Sancho en estancia de los duques, indumentaria cortesana plausible. | Recepción. |
+| `p2_c51_sancho_gobernador_cartas_pre` | Sancho gobernador considera una carta y gestiones ante vecinos en Barataria; sin elementos modernos. | Gobierno. |
+
+Recreaciones IA originales, no fuentes históricas; pendiente cotejo con el texto y examen de spoilers.

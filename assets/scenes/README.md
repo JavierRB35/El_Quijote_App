@@ -1,4 +1,4 @@
-# Catálogo de escenas — piloto visual v0.6
+# Catálogo de escenas — piloto visual v0.7
 
 Las imágenes de este directorio son **recreaciones originales generadas con IA** para el videojuego *El Quijote*. Su lenguaje visual sigue el encargo maestro: realismo cinematográfico con influencias pictóricas, España de comienzos del siglo XVII, profundidad para un tratamiento 2.5D, personajes consistentes e interfaz discreta.
 
@@ -23,10 +23,12 @@ Las imágenes de este directorio son **recreaciones originales generadas con IA*
 
 Este piloto no incorpora ninguna de las acuarelas del EPUB ilustrado por Salvador Tusell ni imágenes de Gustave Doré. Atribución: **recreación artística generada mediante OpenAI ImageGen, noviembre de 2026, a petición del propietario del proyecto**. La obra literaria es la referencia temática, no un origen de píxeles. No se otorga licencia CC0 ni se afirma un permiso sobre obras de terceros. Revisar condiciones aplicables si cambia el ámbito personal del proyecto.
 
-Por petición expresa del propietario, los **WebP optimizados de este piloto** se almacenan en Git normal (65 archivos en total); los PNG maestros de mayor tamaño permanecen fuera del repositorio y se entregan en ZIPs independientes por batería. Esta excepción está recogida en `.gitignore` y `docs/GOBERNANZA_GIT.md`. Las baterías tercera, cuarta y quinta se incorporaron directamente a `main` por autorización expresa, mediante commits comprobados y sin abrir ramas o PR específicos. Esto no modifica automáticamente la política de integración de otros cambios del proyecto.
+Por petición expresa del propietario, los **WebP optimizados de este piloto** se almacenan en Git normal (71 archivos en total); los PNG maestros de mayor tamaño permanecen fuera del repositorio y se entregan en ZIPs independientes por batería. Esta excepción está recogida en `.gitignore` y `docs/GOBERNANZA_GIT.md`. Las baterías tercera, cuarta y quinta se incorporaron directamente a `main` por autorización expresa, mediante commits comprobados y sin abrir ramas o PR específicos. Esto no modifica automáticamente la política de integración de otros cambios del proyecto.
 
 **Historial del catálogo:** v0.1, 11 imágenes (10 escenas más referencia); v0.2, 12 escenas nuevas; v0.3, 12 escenas nuevas; v0.4, 12 escenas nuevas; v0.5, 12 escenas nuevas (6 de cada parte) en capítulos no ilustrados anteriormente, conservando IDs y hashes de los 47 recursos anteriores. El catálogo incluye escenas de relato intercalado (`p1_c33_*` y `p1_c41_*`) y narrador-marco (`p1_c09_*`), **que no deben confundirse con aventuras vividas por Don Quijote**. No se considera un catálogo editorial aprobado: la versión indica evolución del paquete artístico, no aprobación GO/NO-GO del videojuego.
 
 Todos los archivos quedan en `editorial_review_pending` hasta que se cotejen los capítulos, la indumentaria, la arquitectura y los detalles de utilería. Las asociaciones con la novela no constituyen una edición textual ni justifican preguntas por sí mismas.
 
 **Batería sexta (2026-11-06):** seis nuevas escenas `pre`, en capítulos I.4, I.12, I.27, II.4, II.14 y II.43 antes no representados por recreaciones propias; 65 recursos en total. Se conservan los 59 anteriores sin alteración. Pendiente de validación editorial.
+
+**Batería séptima (2026-11-06):** seis escenas `pre` adicionales de capítulos I.10, I.13, I.15, II.12, II.31 y II.51, inéditos en el catálogo de recreaciones hasta esta tanda; colección total de 71 recursos, con 65 anteriores intactos. Pendiente de aprobación editorial.

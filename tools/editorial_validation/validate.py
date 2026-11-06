@@ -362,6 +362,18 @@ def validate_package(manifest_path: Path, gate: str = "repo") -> list[dict]:
                     errors.append({"code": "SEMANTIC_ERROR",
                                    "message": f"utterance_id '{uid}' duplicado: {utt_visto[uid]} y {bid}"})
                 utt_visto[uid] = bid
+            # P1-5 (dictamen H5): proyección visible→oral sin divergencias.
+            # Regla verificable: ningún inciso del narrador puede aparecer en
+            # texto_oral (los incisos pertenecen al narrador; la voz solo lee
+            # palabras del hablante).
+            oral = utt.get("texto_oral")
+            if oral:
+                for inciso in utt.get("incisos_narrador", []) or []:
+                    if inciso and inciso in oral:
+                        errors.append({"code": "SEMANTIC_ERROR",
+                                       "message": f"intervención {uid}: el inciso del narrador "
+                                                  f"'{inciso}' aparece en texto_oral; la voz no debe "
+                                                  f"leer incisos del narrador (FICHA_ESCENA §3)"})
     return errors
 
 
@@ -391,6 +403,7 @@ EXPECTED_INVALID = {
     "invalid_route_not_hypothesis.json": "SCHEMA_ERROR",
     "invalid_beat_sin_texto.json": "SCHEMA_ERROR",
     "invalid_beat_cita_sin_pasaje.json": "SCHEMA_ERROR",
+    "invalid_beat_texto_blanco.json": "SCHEMA_ERROR",
 }
 
 EXPECTED_INVALID_PACKAGES = {

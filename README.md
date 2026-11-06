@@ -1,6 +1,6 @@
 # El_Quijote_App
 
-Videojuego premium para PC basado en las **dos partes completas de Don Quijote de la Mancha**, con equilibrio real entre aventura narrativa interactiva, preguntas de respuesta seleccionada, atlas geográfico, museo histórico-literario y cuaderno personal de investigador. Proyecto personal, no destinado a distribución pública ni comercial en su fase actual.
+Videojuego premium para PC basado en las **dos partes completas de Don Quijote de la Mancha**, con equilibrio real entre aventura narrativa interactiva, preguntas de respuesta seleccionada, atlas geográfico, museo histórico-literario y cuaderno personal de investigador. **Uso estrictamente personal, privado y no comercial:** la aplicación no está destinada a publicación, venta, distribución ni difusión en línea. La autorización del propietario para descargar imágenes destinadas a su consulta privada no equivale a permiso de terceros para alojarlas en GitHub. Véase [uso privado y recursos QBI](docs/USO_PRIVADO_Y_RECURSOS_QBI.md) para las condiciones de copia local, atribuciones y las limitaciones aplicables al repositorio remoto.
 
 > **Documento rector:** [`docs/ENCARGO_MAESTRO.md`](docs/ENCARGO_MAESTRO.md) — especificación íntegra de producción editorial y desarrollo. Todo trabajo debe ser conforme a él.
 

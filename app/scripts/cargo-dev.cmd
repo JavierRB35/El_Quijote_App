@@ -14,6 +14,10 @@ rem ============================================================================
 setlocal
 set "BT=C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools"
 
+rem Cargo de Rustup no siempre está en PATH (sesiones heredadas de antes de la
+rem instalación): anteponer el binario del usuario si existe.
+if exist "%USERPROFILE%\.cargo\bin\cargo.exe" set "PATH=%USERPROFILE%\.cargo\bin;%PATH%"
+
 if not exist "%BT%\VC\Auxiliary\Build\vcvars64.bat" (
   echo [cargo-dev] Build Tools no encontradas; ejecutando cargo sin entorno especial...
   cargo %*

@@ -4,25 +4,89 @@
   "title": "Episode",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "contract_version", "title", "chapters", "narrative_order", "synopsis", "actors", "places", "passages", "spoiler_flags"],
+  "required": [
+    "id",
+    "contract_version",
+    "title",
+    "chapters",
+    "narrative_order",
+    "synopsis",
+    "actors",
+    "places",
+    "passages",
+    "spoiler_flags"
+  ],
   "properties": {
-    "id": { "$ref": "_definitions.schema.json#/$defs/episodeId" },
-    "contract_version": { "$ref": "_definitions.schema.json#/$defs/ContractVersion" },
-    "title": { "type": "string", "minLength": 1 },
-    "$comment_id": "El ID se ancla al PRIMER capítulo del episodio; un episodio puede atravesar varios capítulos y chapters[] los lista todos.",
-    "chapters": { "type": "array", "items": { "$ref": "_definitions.schema.json#/$defs/chapterId" }, "minItems": 1, "uniqueItems": true },
-    "narrative_order": { "type": "integer", "minimum": 1 },
-    "synopsis": { "type": "string", "minLength": 1 },
-    "actors": { "type": "array", "items": { "$ref": "_definitions.schema.json#/$defs/personId" }, "uniqueItems": true },
-    "places": { "type": "array", "items": { "type": "string", "anyOf": [ { "$ref": "_definitions.schema.json#/$defs/placeId" }, { "$ref": "_definitions.schema.json#/$defs/routeId" } ] }, "uniqueItems": true },
-    "passages": { "type": "array", "items": { "$ref": "_definitions.schema.json#/$defs/passageId" }, "uniqueItems": true },
+    "id": {
+      "$ref": "_definitions.schema.json#/$defs/episodeId",
+      "$comment": "El ID se ancla al PRIMER capítulo del episodio; un episodio puede atravesar varios capítulos y chapters[] los lista todos."
+    },
+    "contract_version": {
+      "$ref": "_definitions.schema.json#/$defs/ContractVersion"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "chapters": {
+      "type": "array",
+      "items": {
+        "$ref": "_definitions.schema.json#/$defs/chapterId"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "narrative_order": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "synopsis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actors": {
+      "type": "array",
+      "items": {
+        "$ref": "_definitions.schema.json#/$defs/personId"
+      },
+      "uniqueItems": true
+    },
+    "places": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "anyOf": [
+          {
+            "$ref": "_definitions.schema.json#/$defs/placeId"
+          },
+          {
+            "$ref": "_definitions.schema.json#/$defs/routeId"
+          }
+        ]
+      },
+      "uniqueItems": true
+    },
+    "passages": {
+      "type": "array",
+      "items": {
+        "$ref": "_definitions.schema.json#/$defs/passageId"
+      },
+      "uniqueItems": true
+    },
     "spoiler_flags": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["reveals_future_events"],
+      "required": [
+        "reveals_future_events"
+      ],
       "properties": {
-        "reveals_future_events": { "type": "boolean", "$comment": "true si el episodio revela hechos de episodios posteriores; condiciona aventuras aleatorias (encargo §3)." },
-        "notes": { "type": "string" }
+        "reveals_future_events": {
+          "type": "boolean",
+          "$comment": "true si el episodio revela hechos de episodios posteriores; condiciona aventuras aleatorias (encargo §3)."
+        },
+        "notes": {
+          "type": "string"
+        }
       }
     }
   }

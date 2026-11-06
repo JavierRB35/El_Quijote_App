@@ -1,0 +1,58 @@
+name: validar-contrato
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  contrato:
+    name: Validación del contrato editorial-técnico
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Dependencias de validación
+        run: pip install jsonschema
+
+      - name: Suite canónica de contrato (fixtures válidos + negativos)
+        run: python tools/editorial_validation/validate.py suite tests/contracts/fixtures
+
+      - name: Meta-validación de esquemas (check_schema draft 2020-12)
+        run: |
+          python - <<'PY'
+          import glob, json
+          from jsonschema import Draft202012Validator
+          fallos = []
+          esquemas = sorted(glob.glob('schemas/**/*.schema.json', recursive=True))
+          assert esquemas, "no hay esquemas en schemas/**"
+          for s in esquemas:
+              try:
+                  Draft202012Validator.check_schema(json.load(open(s, encoding='utf-8')))
+                  print('OK  ', s)
+              except Exception as e:
+                  fallos.append(s); print('FAIL', s, str(e)[:120])
+          assert not fallos, f"esquemas inválidos: {fallos}"
+          print(f"check_schema: {len(esquemas)}/{len(esquemas)} OK")
+          PY
+
+      - name: Paquetes editoriales reales
+        run: |
+          set -e
+          for p in $(find content -name package.json); do
+            echo "== $p =="
+            python tools/editorial_validation/validate.py package "$p"
+          done
+
+      - name: Cotejo textual de la batería contra el texto almacenado
+        run: python tools/editorial_validation/cotejar_texto_referencia.py . repo

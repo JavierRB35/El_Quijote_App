@@ -218,6 +218,15 @@ Revisadas las resoluciones de §0 y las respuestas técnicas de §9/§11 **desde
 3. **Nota editorial pendiente (MINOR futura):** `MediaFunction` aún no incluye el valor `referencia` previsto en §11 para las imágenes de referencia de recreación (usado provisionalmente `interfaz`); añadir cuando se ejecute la migración del manifiesto de escenas.
 4. La numeración de episodios de los primeros borradores (`DQ.P1.E04`) queda migrada al patrón canónico anidado (`DQ.P1.C08.E01`); `docs/data/mapa_capitulos.json` se ajustará en su próxima regeneración para emitir IDs canónicos directamente.
 
+### Validación pre-integración definitiva (2026-11-06, modo CONTENIDOS — a petición del propietario)
+
+Batería completa documentada en `docs/VALIDACION_CONTRATO_INTEGRACION.md`. **Veredicto: integrable**, con un fix de defecto pendiente de contrafirma técnica:
+
+1. **Defecto detectado y corregido:** `chapter.schema.json` y `episode.schema.json` incluían claves espurias `"$comment_order"` / `"$comment_id"` (valor string) dentro de `properties` — inválidas como esquema (`check_schema` fallaba) y sin efecto sobre instancias. Las restricciones reales (`order: integer 1–126`, `id: $ref → episodeId`) estaban intactas; el texto se conservó como `$comment` de la propiedad correcta.
+2. **Evidencia tras el fix:** `check_schema` 16/16 · suite canónica 42/42 · paquete real `content/piloto` (74 preguntas) VÁLIDO · cotejo textual 130/130 · versiones coherentes (`1.0.0`).
+3. **Clasificación:** corrección de defecto (PATCH de esquema, sin cambio de comportamiento para instancias válidas) — **contrafirma técnica requerida** para el cierre definitivo de integración.
+4. **Validación continua:** workflow `.github/workflows/validar-contrato.yml` ejecuta suite + meta-validación + paquetes + cotejo en cada push/PR; el estado verde en Actions es parte de la puerta de integración.
+
 ## 13. Qué DEBE y NO DEBE hacer cada equipo
 
 | | Equipo editorial (CONTENIDOS) | Equipo técnico (DESARROLLO) |

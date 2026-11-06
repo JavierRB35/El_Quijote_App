@@ -4,17 +4,55 @@
   "title": "Chapter",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "contract_version", "edition_id", "part", "number", "title", "order", "text_ref"],
+  "required": [
+    "id",
+    "contract_version",
+    "edition_id",
+    "part",
+    "number",
+    "title",
+    "order",
+    "text_ref"
+  ],
   "properties": {
-    "id": { "$ref": "_definitions.schema.json#/$defs/chapterId" },
-    "contract_version": { "$ref": "_definitions.schema.json#/$defs/ContractVersion" },
-    "edition_id": { "$ref": "_definitions.schema.json#/$defs/editionId" },
-    "part": { "type": "integer", "enum": [1, 2] },
-    "number": { "type": "integer", "minimum": 1, "maximum": 74 },
-    "title": { "type": "string", "minLength": 1 },
-    "order": { "type": "integer", "minimum": 1, "maximum": 126 },
-    "$comment_order": "order = posición global en el orden canónico de lectura (P1: 1-52, P2: 53-126).",
-    "text_ref": { "type": "string", "minLength": 1, "$comment": "URI lógica local del texto del capítulo en la edición de referencia." },
-    "synopsis": { "type": "string" }
+    "id": {
+      "$ref": "_definitions.schema.json#/$defs/chapterId"
+    },
+    "contract_version": {
+      "$ref": "_definitions.schema.json#/$defs/ContractVersion"
+    },
+    "edition_id": {
+      "$ref": "_definitions.schema.json#/$defs/editionId"
+    },
+    "part": {
+      "type": "integer",
+      "enum": [
+        1,
+        2
+      ]
+    },
+    "number": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 74
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "order": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 126,
+      "$comment": "order = posición global en el orden canónico de lectura (P1: 1-52, P2: 53-126)."
+    },
+    "text_ref": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "URI lógica local del texto del capítulo en la edición de referencia."
+    },
+    "synopsis": {
+      "type": "string"
+    }
   }
 }

@@ -140,6 +140,20 @@ Reglas vinculantes (validador activo, §8 CI):
 
 Mapeo desde el inventario editorial (`dialogos_literales[]` → intervención) documentado en ADR-0005. **El reproductor NO se implementa en este encargo (R10)**: su contrato de consumidor y matriz de pruebas están en `COMPONENTES_NARRATIVOS_UX.md`.
 
+### Rev. 2 de v1.1.0 — subsanación del dictamen H5 (2026-11-06, Coordinación → DESARROLLO)
+
+Dictamen: **estructura aceptada; subsanación funcional necesaria** (registrado en PR #19). Cambios aplicados, todos retrocompatibles y sin implementar el reproductor:
+
+1. **P0-1:** eliminado el estado `AVANCE_BLOQUEADO`; invariante nuevo: ninguna combinación de estados/flags bloquea el avance por ausencia, silenciamiento o error de voz (`COMPONENTES_NARRATIVOS_UX.md` §2.1).
+2. **P0-2:** política de autoavance cinematográfico (DC-21): duración del beat = `max(voz, lectura_mínima)` con fórmula `max(1500 ms, 800 ms + 35 ms/palabra)` parametrizable por el piloto; el fin de la voz nunca oculta texto ni avanza por sí solo. Nuevos campos opcionales de beat: `avance_automatico`, `lectura_minima_ms`.
+3. **P1-1:** `manual_advance_allowed`/`replay_allowed` re-semanticizados como sugerencias de ritmo (solo difieren el salto con voz sonando / solo silencian la repetición de voz); los cuatro controles del propietario existen siempre.
+4. **P1-4:** el texto no espera imágenes (carga en paralelo + fallback en cascada); `visual_asset_ids ≥ 1` se mantiene en el dato **pendiente de doble firma**.
+5. **P1-5:** triada `texto_visible` / `incisos_narrador` / `texto_oral` con la semántica de FICHA_ESCENA_P1_C08 §3; regla verificable activa: ningún inciso del narrador aparece en `texto_oral` (caso «—respondió Sancho—»).
+6. **P1-6:** `texto_visible` con `pattern: \S` — se rechazan los textos de solo espacios, sin normalizar el contenido (fidelidad de citas).
+7. **P1-7:** pendiente la **contrafirma editorial** de ADR-0005 (desviaciones de la biblia §4 incluidas); solicitud formal registrada — la fusión en `main` y el CI verde no la sustituyen.
+
+Evidencia: suite **51/51 PASS** (+2 fixtures: `beat_oral_incisos`, `invalid_beat_texto_blanco`), paquetes reales VÁLIDOS, informe en `docs/INFORME_SUBSANACION_H5.md`.
+
 ## 5. Enumeraciones formales (§6.3.4)
 
 | Enumeración | Valores |

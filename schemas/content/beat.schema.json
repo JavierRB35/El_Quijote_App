@@ -17,6 +17,15 @@
     },
     "order": { "type": "integer", "minimum": 1, "$comment": "Posición del beat dentro de la escena; unicidad por escena en el validador semántico." },
     "kind": { "type": "string", "enum": ["NARRACION", "DIALOGO", "ACCION", "SILENCIO"] },
+    "avance_automatico": {
+      "anyOf": [ { "type": "boolean" }, { "type": "null" } ],
+      "$comment": "P0-2 (dictamen H5): null/ausente = preferencia del perfil (Modo Historia: cinematográfico por defecto, DC-21); true/false = anulación por beat. El avance automático usa la política de lectura del consumidor (COMPONENTES_NARRATIVOS_UX §2.3) y NUNCA elimina el texto: el texto persiste hasta el avance, y pausa/retroceso/avance manual siguen operables."
+    },
+    "lectura_minima_ms": {
+      "type": "integer",
+      "minimum": 0,
+      "$comment": "P0-2: tiempo mínimo de lectura del beat antes de cualquier autoavance (anula el cálculo por palabra de la política general). El fin de la voz por sí solo nunca determina la desaparición del texto."
+    },
     "utterances": {
       "type": "array",
       "items": { "$ref": "#/$defs/intervencion" },
@@ -27,10 +36,10 @@
       "items": { "$ref": "_definitions.schema.json#/$defs/mediaAssetId" },
       "minItems": 1,
       "uniqueItems": true,
-      "$comment": "DC-22/decisión del propietario: la intervención se representa con UNA o VARIAS perspectivas. Desviación deliberada del ejemplo de la biblia (array vacío): decidida en la conversión a esquema, sujeta a doble firma."
+      "$comment": "Pendiente de DOBLE FIRMA (dictamen H5 punto 4): la obligatoriedad de ≥1 perspectiva por beat es desviación de la biblia §4 mantenida en el dato editorial; en EJECUCIÓN el texto NUNCA espera a las imágenes (fallback: perspectivas del beat → de la escena → fotograma anterior → fondo neutro)."
     },
-    "manual_advance_allowed": { "type": "boolean", "$comment": "El jugador puede avanzar manualmente (controles del propietario: continuar/retroceder)." },
-    "replay_allowed": { "type": "boolean", "$comment": "Repetir intervención (reproduce de nuevo el audio si lo hay; el texto permanece)." },
+    "manual_advance_allowed": { "type": "boolean", "$comment": "P1-3 (dictamen H5): SUGERENCIA de ritmo, no restricción de controles vinculantes (DC-21/DC-22). Solo puede diferir el avance AUTOMÁTICO mientras exista voz sonando y quede tiempo de lectura; sin voz (ausente, silenciada o fallida) el avance manual está SIEMPRE disponible. Retroceder y pausa jamás se deshabilitan." },
+    "replay_allowed": { "type": "boolean", "$comment": "P1-3 (dictamen H5): false solo deshabilita la REPETICIÓN DE LA VOZ; el control Repetir permanece y reinicia el estado del beat (texto re-legible). Los cuatro controles del propietario existen siempre." },
     "reduced_motion_fallback": { "type": "boolean", "enum": [true], "$comment": "Obligatorio: todo beat declara alternativa sin movimiento (encargo §4.7.7)." },
     "entry_condition": { "type": "string", "minLength": 1 },
     "exit_condition": { "type": "string", "minLength": 1 },
@@ -53,13 +62,25 @@
         "texto_visible": {
           "type": "string",
           "minLength": 1,
-          "$comment": "DC-22 (TS-001): ELEMENTO PRINCIPAL del contrato — íntegro, obligatorio y siempre disponible; el audio es recurso opcional asociado. El jugador debe poder entender la escena con el sonido desactivado."
+          "pattern": "\\S",
+          "$comment": "DC-22 (TS-001): ELEMENTO PRINCIPAL del contrato — íntegro, obligatorio y siempre disponible; el audio es recurso opcional asociado. P1-6 (dictamen H5): se rechaza el texto compuesto solo por espacios (pattern \\S tras cualquier whitespace); NO se normaliza el contenido (fidelidad de las citas literales, incluidos saltos de línea de la edición)."
         },
         "text_kind": { "$ref": "_definitions.schema.json#/$defs/OrigenTexto" },
         "passage_ids": {
           "type": "array",
           "items": { "$ref": "_definitions.schema.json#/$defs/passageId" },
           "uniqueItems": true
+        },
+        "texto_oral": {
+          "type": "string",
+          "pattern": "\\S",
+          "$comment": "P1-5 (dictamen H5, semántica de FICHA_ESCENA_P1_C08 §3): lo que se entrega al intérprete de voz — SOLO las palabras del hablante, con los incisos del narrador retirados y la raya de diálogo eliminada. Ausente = la voz lee texto_visible verbatim (caso del NARRADOR)."
+        },
+        "incisos_narrador": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true,
+          "$comment": "P1-5: fragmentos del inciso dentro de la cita literaria («—respondió Sancho—»); pertenecen al NARRADOR, no al personaje. Visibles dentro de texto_visible (forman parte del texto literario) y retirados de texto_oral. El validador comprueba que ningún inciso aparece en texto_oral."
         },
         "audio_asset_id": {
           "anyOf": [ { "$ref": "_definitions.schema.json#/$defs/mediaAssetId" }, { "type": "null" } ],

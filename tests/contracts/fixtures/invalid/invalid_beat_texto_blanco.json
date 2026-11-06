@@ -1,0 +1,19 @@
+{
+  "id": "DQ.BEAT.000106",
+  "contract_version": "1.1.0",
+  "scene_id": "DQ.P1.C01.E01.S01",
+  "order": 4,
+  "kind": "NARRACION",
+  "utterances": [
+    {
+      "utterance_id": "DQ.INT.000106",
+      "speaker": { "tipo": "narrador" },
+      "texto_visible": "     ",
+      "text_kind": "NARRACION_ENLACE"
+    }
+  ],
+  "visual_asset_ids": ["DQ.MA.000001"],
+  "manual_advance_allowed": true,
+  "replay_allowed": true,
+  "reduced_motion_fallback": true
+}

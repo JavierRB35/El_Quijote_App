@@ -35,7 +35,18 @@
 
 **Regla TS-001 inmediata:** usar **banda externa o vista dividida** (no superponer a molinos, personajes, manos, lanza, aspa). Comparar composición con voz y sin ella, texto ampliado, teclado y movimiento reducido. Las duraciones en U siguen relativas y subordinadas a lectura íntegra, nunca límite temporal del texto.
 
-## 4. Dictamen sobre imágenes nuevas y pruebas de aceptación
+## 4. Coordinación con el expediente único de visados (PR #37)
+
+Mientras se redactaba esta fe de erratas, `main` incorporó `docs/PAQUETE_REVISION_EDITORIAL.md` (PR #37, merge `ecc0e987`). **No crear una tabla rival de aprobaciones**: registrar allí el resultado conjunto de las especialidades; este documento fija únicamente el **criterio de partida de R06**.
+
+- **B-01 a B-07 del paquete (acuarela 021):** R06 recomienda **CONFORME CON CONDICIONES** solo para usos alegóricos rotulados, con atribución, tiempo narrativo y sin presentarla como escena literal. No supone visado de R05, R12 o R01.
+- **B-08 a B-11 (acuarela 025):** R06 recomienda **CONFORME CON CONDICIONES** solo para soporte no literal, sin confundir interior con corral nocturno. La colocación `after` de I,6 requiere decisión conjunta R01/R06 sobre fuente I,7, texto y TS-001. No aprobar vínculo productivo sin prueba.
+- **C-01 (900157):** R06 recomienda **RETIRAR COMPLETO de I,6**, mantener el original sin alterar y cubrir con 900013/900230. Un recorte lateral puede estudiarse como alternativa futura, pero **no es condición para mantener cobertura del piloto** ni recibe aprobación en esta fe.
+- **A-01 a A-14 (antiespoiler) y comprobación R09:** **fuera del visado de esta fe**; siguen abiertas en el paquete y requieren revisión propia, sin aprobación tácita.
+
+Las casillas R06/R01/R12 del paquete **no se marcan como visadas** por la mera publicación de esta propuesta: la contrafirma exige evidencia y aceptación expresa, con enlace a versión/commit.
+
+## 5. Dictamen sobre imágenes nuevas y pruebas de aceptación
 
 El **R06 histórico** afirma **0 imágenes nuevas imprescindibles para que el relato se comprenda** con narración ilustrada. **H4 v0.2.2** mantiene **3 recreaciones cinematográficas justificadas + 1 hoguera diferible**. **Son criterios distintos**; ninguno concede GO de producción. Los planos B05/B08 están **cubiertos narrativamente de modo provisional**, no certificados como acabado premium. El relato de Sevilla puede apoyarse en imagen de conversación y texto fiel, no en la alegoría 171 como plano literal.
 

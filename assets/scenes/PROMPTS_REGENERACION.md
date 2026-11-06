@@ -117,3 +117,16 @@ Todas siguen el prompt base, son recreaciones originales IA y requieren cotejo t
 | `p2_c51_sancho_gobernador_cartas_pre` | Sancho gobernador considera una carta y gestiones ante vecinos en Barataria; sin elementos modernos. | Gobierno. |
 
 Recreaciones IA originales, no fuentes históricas; pendiente cotejo con el texto y examen de spoilers.
+
+## Octava batería — capítulos sin recreación anterior (2026-11-06)
+
+| ID | Variación narrativa del prompt base | Uso |
+|---|---|---|
+| `p1_c26_sancho_mision_pre` | Sancho, solo con rucio y el encargo de Dulcinea, atraviesa un sendero de Sierra Morena. | Tránsito narrativo. |
+| `p1_c32_venta_libros_pre` | Un ventero saca libros y escritos que examinan cura, barbero y huéspedes de la venta, a la luz de velas. | Historia de los libros. |
+| `p1_c40_relato_cautivo_pre` | En un relato intercalado, un cautivo cristiano contempla el puerto norteafricano desde una terraza; no es aventura de don Quijote. | Marco del relato del cautivo. |
+| `p2_c16_verde_gaban_pre` | Encuentro de don Quijote y Sancho con don Diego de Miranda, caballero con indumentaria verde de época. | Presentación. |
+| `p2_c27_maese_pedro_identidad_pre` | Maese Pedro junto a su retablo, su mono y sus bultos de titiritero en venta, sin revelar identidad. | Contexto del titiritero. |
+| `p2_c38_duena_dolorida_pre` | Presentación teatral de la Dueña Dolorida en palacio, acompañantes veladas, mascarada humana sin magia real. | Entrada de personaje. |
+
+Todas son recreaciones originales con IA, de uso contextual previo y pendientes de cotejo filológico y validación editorial.

@@ -1,6 +1,6 @@
 # El_Quijote_App
 
-Videojuego premium para PC basado en las **dos partes completas de Don Quijote de la Mancha**, con equilibrio real entre aventura narrativa interactiva, preguntas de respuesta seleccionada, atlas geográfico, museo histórico-literario y cuaderno personal de investigador. **Uso estrictamente personal, privado y no comercial:** la aplicación no está destinada a publicación, venta, distribución ni difusión en línea. La autorización del propietario para descargar imágenes destinadas a su consulta privada no equivale a permiso de terceros para alojarlas en GitHub. Véase [uso privado y recursos QBI](docs/USO_PRIVADO_Y_RECURSOS_QBI.md) para las condiciones de copia local, atribuciones y las limitaciones aplicables al repositorio remoto.
+Videojuego premium para PC basado en las **dos partes completas de Don Quijote de la Mancha**, con aventura narrativa interactiva, preguntas de respuesta seleccionada, **Modo Historia condensado** y **Modo Histórico-cultural real** previstos, atlas geográfico, museo histórico-literario y cuaderno personal de investigador. **Uso estrictamente personal, privado y no comercial:** la aplicación no está destinada a publicación, venta, distribución ni difusión en línea. La autorización del propietario para descargar imágenes destinadas a su consulta privada no equivale a permiso de terceros para alojarlas en GitHub. Véase [uso privado y recursos QBI](docs/USO_PRIVADO_Y_RECURSOS_QBI.md) para las condiciones de copia local, atribuciones y las limitaciones aplicables al repositorio remoto.
 
 > **Documento rector:** [`docs/ENCARGO_MAESTRO.md`](docs/ENCARGO_MAESTRO.md) — especificación íntegra de producción editorial y desarrollo. Todo trabajo debe ser conforme a él.
 
@@ -39,3 +39,10 @@ Estructura candidata del encargo (§6.4), sujeta a validación y evolución:
 1. **Nada de secretos, claves de IA, el EPUB privado del propietario ni datos personales en Git** (`.gitignore` lo aplica; encargo §2.7 y §6.5.11).
 2. Los medios pesados no se suben hasta decidir el mecanismo (Git LFS vs. releases) según §6.4.
 3. Toda entrega acaba en commit + push a `origin/main` (o PR según fase). Ver [`docs/GOBERNANZA_GIT.md`](docs/GOBERNANZA_GIT.md).
+
+## Nuevos modos previstos (decisión del propietario 2026-11-06)
+
+- **Modo Historia:** relato audiovisual breve y coherente de los hitos esenciales de ambas partes, aprovechando los recursos visuales pertinentes sin alargar innecesariamente la narración.
+- **Modo Histórico:** recorridos documentados por el contexto real histórico y cultural de la época, diferenciados de la ficción.
+
+Ambos están **documentados pero pendientes de implementación y validación**. Ver [`HOJA_RUTA_MODOS_HISTORIA_E_HISTORICO.md`](docs/HOJA_RUTA_MODOS_HISTORIA_E_HISTORICO.md) y decisiones DC-19/DC-20.

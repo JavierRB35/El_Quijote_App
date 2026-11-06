@@ -123,3 +123,5 @@ Reglas operativas:
 **Decisión solicitada a Coordinación/R14:** revisar las alertas, aceptar la **tabla de correspondencia por URI** como referencia de trabajo y asignar a R05/R09/Desarrollo una migración posterior de las asociaciones canónicas que deban entrar en el producto. El informe y su CSV son **documentación de integración**, no cambios productivos ni una aprobación implícita de los 759 registros.
 
 **Límites respetados:** no se modificaron medios, paquetes de preguntas, esquemas, originales R05/R15/R16, atlas, lector ni museo; no se descargaron nuevos assets ni se fusionó esta rama.
+
+> **⏳ AVISO DE INSTANTÁNEA QA (reauditoría H5 / coordinación, PR #36):** las anotaciones QA de este CSV de 759 registros son una **instantánea anterior** a la 2.ª auditoría R12: el cruce por ruta contra el registro maestro arroja **715 filas desactualizadas** (mayormente PENDIENTE anotado frente a inspecciones ya registradas) y **44 sin inspección R12**. **Vista de conciliación vigente (derivada): `docs/data/vinculos_consolidados_estado_qa_r12.csv`** — regenerable con `tools/editorial_validation/generar_vista_qa_r12.py`. CSV histórico congelado.

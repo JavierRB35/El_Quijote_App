@@ -4,6 +4,8 @@
 **Fuente de verdad:** `main@66d2f7d3a5c6a28b18fdc7cce5148375d277e21f`. Rama de entrega `feature/r05-consolidacion-maestra-visual`. **Estado:** documentación de coordinación, SIN nuevas aprobaciones ni migraciones.  
 **Entradas:** PR #22 (R05), #25 (R15), #26 (R16), #27 (R12), todas integradas en `main` antes de este corte.
 
+**Nota de subsanación tras el dictamen de Coordinación en PR #32:** las PR #29, #30, #32 y #33 aparecen ya fusionadas en `main`. Las precisiones documentales de esta nota se tramitan en una PR de seguimiento sobre `main`; **se preserva la matriz CSV original de 2.805 filas**, sin recalcular claves, sin nuevos vínculos aprobados y sin retroeditar la PR #32 fusionada.
+
 ## 1. Modelo de consolidación y límites
 
 El CSV `docs/data/vinculos_visuales_consolidados.csv` tiene **una fila por combinación imagen–destino–fase–destinatario–acción**. Un mismo fichero puede tener diferentes vínculos a capítulos, pasajes, preguntas, lector, museo, descubrimientos, cuaderno o Historia. **No es un segundo inventario físico**: el único inventario de ficheros sigue siendo `docs/data/matriz_aprovechamiento_visual.csv` (678 rutas).
@@ -25,6 +27,21 @@ Se despliegan los destinos múltiples de R05 (p. ej. `cuaderno / museo`) y R16 (
 
 **Prioridad por relación:** **238** filas vinculadas a los seis capítulos del piloto (I.6, I.8, I.11, I.18, II.1 y II.74); las restantes se reservan documentalmente. Incluir las propuestas R05 para imágenes ya existentes en capítulos fuera del piloto **no constituye producción ni autorización de ampliar a los 126 capítulos**.
 
+### Gobierno y precedencia de matrices (decisión de Coordinación)
+ 
+| Capa | Archivo y procedencia | Función autorizada |
+|---|---|---|
+| **Inventario físico maestro** | `docs/data/matriz_aprovechamiento_visual.csv` — PR #22, 678 recursos | Fuente de identidad/ruta y evaluación del archivo; **no representa** un vínculo específico aprobado |
+| **Matriz maestra documental de propuestas de asociación** | `docs/data/vinculos_visuales_consolidados.csv` — PR #32, 2.805 registros | **Única matriz de propuestas de asociación** por recurso/destino/fase/destinatario/acción, **no importable directamente al producto** ni con carácter aprobado |
+| **Vista auxiliar de conciliación y trazabilidad** | `docs/data/matriz_consolidada_aprovechamiento_visual.csv` — PR #29, 759 registros | Cotejo de IDs, inventario y vínculos específicos R15/R16; **no** segundo maestro operativo de bindings ni fuente importable |
+
+La diferencia de granularidad **759 frente a 2.805 no son imágenes adicionales ni resultados contradictorios**. La precedencia entre vistas es documental; el esquema técnico y la integración deberán aprobarse por separado. Se deja constancia cruzada en `docs/INFORME_CONSOLIDACION_VISUAL_R05_R15_R16.md` (#29) y en el presente informe; su fusión previa no convierte ninguna fila en una asignación validada.
+
+### Límite de alcance de la adenda antiespoiler R15 (PR #30)
+
+La matriz #32 **solo consolida las 97 filas fuente de PR #25**, además de R05/R16 y el QA R12. **No incorpora** las **14 propuestas adicionales de PR #30** (`docs/data/propuesta_correcciones_visuales_pre_r15.csv`): **13 recomendaciones de retirar imagen previa y 1 de mantenerla condicionalmente**, todas **no aprobadas / no integradas** y pendientes de revisión conjunta R05/R06/R12. Son **siguientes decisiones de corrección**, no 14 bindings nuevos, ni altas tácitas. La cadena de seguimiento será propuesta #30 → dictamen editorial/arte/QA → decisión de Coordinación → PR de integración aparte, sin transformar `SIN_IMAGEN` en un ID de medio (el campo `pre_image_media_id` puede omitirse).
+
+
 ## 3. Resolución de identidades sin migrar
 
 **Regla jerárquica de cruce:** 1) ID `DQ.MA.*` solo cuando existe una ficha MediaAsset con URI/hash del archivo; 2) `DQ.MED.*` / `DQ.IL.*` / `DQ.DEC.*` por ID exacto de manifiesto; 3) ruta física exacta y SHA-256 declarado para R16 y QA; 4) marcar ambiguos y discrepancias, nunca inventar alias ni renumerar. Hashes **declarados**, no recalculados de bytes.
@@ -43,7 +60,7 @@ En las filas del CSV el `media_asset_existente_uri_verificada` prevalece sobre c
 
 ## 4. Reglas de prioridad para el piloto
 
-1. **I.8 — Molinos / Q.112:** `026.jpg` visualmente corresponde al aspa; `027.jpg` representa frailes y **no** sirve para el hotspot de molino. R15 propone 026 en `question_focus`; R12 exige `reveal`/después de embestida. Es conflicto de fase **P0**, no aprobación de 026 en foco. Verificar geometría real, texto, opción accesible y orden de beats. Conservar escenas de siluetas → molinos previos → caída posterior.
+1. **I.8 — Molinos / Q.112 (precisión C018–C019):** la asignación **ya existe** en `content/piloto/questions/DQ.Q.000112.json`: `visual_requirements.hotspot_media_id = DQ.MA.000026` (acuarela 026, 833×1041) y `pre_image_media_id = DQ.MA.900005` (contexto previo). H4 **v0.2.1 ya recomendaba 026**; en la **v0.2.2 vigente, incorporada por PR #33**, también está corregido que `027.jpg` representa a los frailes de San Benito y `030.jpg` al vizcaíno. No hay que reasignar el hotspot ni hay incompatibilidad intrínseca entre `question_focus` y la revelación narrativa: la acuarela 026 debe mostrarse **como foco interactivo solo después de narrar la embestida y de cumplir `safe_after_episodes = [DQ.P1.C08.E01]`**. Si la secuencia plantea la pregunta antes de cumplirse la condición, deberá corregirse la secuencia, no el ID. **Pendiente QA:** rectángulo actual normalizado (`x=0.30; y=0.22; w=0.45; h=0.50`), escalado real, teclado/puntero, alternativa accesible, legibilidad y pruebas con/sin audio. Mantener las escenas de siluetas → molinos previos → caída posterior sin anticipar información.
 2. **I.6 — Escrutinio:** `025.jpg` muestra quema de libros; R12 recomienda probarla en fase posterior I.6–I.7 antes de generar nuevas imágenes, conservando ubicación real de EPUB en I.7.
 3. **I.18 — Rebaños:** `DQ.MA.900008` revela ovejas; evitar imagen específica cuando la pregunta exige descubrir identidad. Usarla como revelación solo tras responder, con panel TS-001 externo.
 4. **II.74 — Final:** `DQ.MA.900011` y `900042` son escenas posteriores. No trasladarlas a la fase previa por el valor artístico de la imagen; revisión especial de spoilers críticos y legibilidad.
@@ -65,9 +82,10 @@ Todas las propuestas sobre recursos Tusell están sujetas al expediente de derec
 | Cobertura documental R16 | 68/68 propuestas fuente |
 | R12 vinculado por ruta | 678/678 |
 | Filas consolidadas | 2805 (incluye decisiones negativas y referencia externa) |
-| Conflictos/incidencias individualizados | 26 en `INFORME_CONFLICTOS_VINCULOS_VISUALES.md` |
+| Conflictos/incidencias individualizados | 26 en `INFORME_CONFLICTOS_VINCULOS_VISUALES.md`; **C018 y C019 son precisiones documentales P1, no errores de asignación existentes** |
 | Colisiones numéricas R05 | 17 |
 | Cruces R05/R12 con discrepancia de ruta/hash declarado | 0 |
+| Adenda PR #30 integrada/aprobada en vínculos #32 | **0/14**; 13 retirar previa + 1 condicional, pendientes de revisión | 
 | Usos editoriales aprobados nuevos | **0** |
 | KPI-3 uso efectivo / KPI-4 cero errores | **No verificables** sin relaciones aprobadas y pruebas de runtime |
 
@@ -77,8 +95,8 @@ La cifra **697** corresponde a una referencia histórica de matriz XLSX; **678**
 
 ## 8. Puertas para integración posterior (fuera de este PR)
 
-- R01/R03: validar episodios y beats, pasajes y spoilers de cada uso prioritario; resolver Q.112 antes de cualquier prueba de hotspot.
-- R05/R06: validar contenido visual, continuidad y zonas TS-001 por asociación y escala; no convertir recomendaciones en aprobación tácita.
+- R01/R03: validar episodios y beats, pasajes y spoilers prioritarios; **realizar** las pruebas de Q.112 como condición para cerrar su QA, sin cambiar el `hotspot_media_id` ya existente ni anteponerlo a la narración y al `safe_after_episodes`.
+- R05/R06: validar contenido visual, continuidad y zonas TS-001 por asociación y escala; revisar **separadamente** las 14 propuestas antiespoiler de PR #30 con R12 antes de acordar cualquier modificación de imagen previa; no convertir recomendaciones en aprobación tácita.
 - R13: cerrar derechos individualizados por medio y destino; separar Git privado de redistribución.
 - R09/desarrollo: acordar alias/contrato con cambios versionados en otro PR, sin hardcodear ni sustituir esquemas con este CSV.
 - R12/QA: probar consumidor offline y antiespoiler en la aplicación, teclados y textos visibles, completar 651 inspecciones visuales si se exige cobertura gráfica exhaustiva.

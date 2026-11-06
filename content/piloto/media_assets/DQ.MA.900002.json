@@ -1,0 +1,34 @@
+{
+ "id": "DQ.MA.900002",
+ "contract_version": "1.0.0",
+ "function": "pre_pregunta",
+ "media_class": "RECREACION_IA",
+ "logical_uri": "assets://scenes/part_1/chapter_01/p1_c01_biblioteca_pre.webp",
+ "derivatives": [
+  {
+   "variant": "original",
+   "format": "webp",
+   "width": 1672,
+   "height": 941,
+   "size_bytes": 157786,
+   "sha256": "sha256:405bcb6501c21cc330786179901f81eee3252ebbe54eda813fe37e3890c2422e"
+  }
+ ],
+ "alt": "Alonso Quijano lee un voluminoso libro de caballerías en una habitación modesta iluminada por una ventana y una vela.",
+ "source_id": "DQ.SRC.0003",
+ "license_id": "DQ.LIC.0002",
+ "author": "Equipo de arte El_Quijote_App (recreación IA)",
+ "date": "2026-11-05",
+ "allowed_uses": [
+  "uso_personal_app",
+  "almacenamiento_repo_git"
+ ],
+ "license_status": "verificada",
+ "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA.",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "spoiler_level": "ninguno"
+}

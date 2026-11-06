@@ -16,7 +16,11 @@
    "chapters/DQ.P1.C11.json",
    "chapters/DQ.P1.C18.json",
    "chapters/DQ.P2.C01.json",
-   "chapters/DQ.P2.C74.json"
+   "chapters/DQ.P2.C74.json",
+   "chapters/DQ.P1.C01.json",
+   "chapters/DQ.P1.C16.json",
+   "chapters/DQ.P1.C21.json",
+   "chapters/DQ.P2.C10.json"
   ],
   "passages": [
    "passages/DQ.P1.C08.P0001.json",
@@ -57,7 +61,22 @@
    "passages/DQ.P2.C01.P0003.json",
    "passages/DQ.P2.C74.P0004.json",
    "passages/DQ.P2.C74.P0005.json",
-   "passages/DQ.P2.C74.P0006.json"
+   "passages/DQ.P2.C74.P0006.json",
+   "passages/DQ.P1.C01.P0001.json",
+   "passages/DQ.P1.C01.P0002.json",
+   "passages/DQ.P1.C01.P0003.json",
+   "passages/DQ.P1.C01.P0004.json",
+   "passages/DQ.P1.C01.P0005.json",
+   "passages/DQ.P1.C16.P0001.json",
+   "passages/DQ.P1.C16.P0002.json",
+   "passages/DQ.P1.C16.P0003.json",
+   "passages/DQ.P1.C21.P0001.json",
+   "passages/DQ.P1.C21.P0002.json",
+   "passages/DQ.P1.C21.P0003.json",
+   "passages/DQ.P1.C21.P0004.json",
+   "passages/DQ.P2.C10.P0001.json",
+   "passages/DQ.P2.C10.P0002.json",
+   "passages/DQ.P2.C10.P0003.json"
   ],
   "episodes": [
    "episodes/DQ.P1.C08.E01.json",
@@ -65,7 +84,11 @@
    "episodes/DQ.P1.C11.E01.json",
    "episodes/DQ.P1.C18.E01.json",
    "episodes/DQ.P2.C01.E01.json",
-   "episodes/DQ.P2.C74.E01.json"
+   "episodes/DQ.P2.C74.E01.json",
+   "episodes/DQ.P1.C01.E01.json",
+   "episodes/DQ.P1.C16.E01.json",
+   "episodes/DQ.P1.C21.E01.json",
+   "episodes/DQ.P2.C10.E01.json"
   ],
   "questions": [
    "questions/DQ.Q.000101.json",
@@ -117,7 +140,31 @@
    "questions/DQ.Q.000235.json",
    "questions/DQ.Q.000236.json",
    "questions/DQ.Q.000237.json",
-   "questions/DQ.Q.000238.json"
+   "questions/DQ.Q.000238.json",
+   "questions/DQ.Q.000301.json",
+   "questions/DQ.Q.000302.json",
+   "questions/DQ.Q.000303.json",
+   "questions/DQ.Q.000304.json",
+   "questions/DQ.Q.000305.json",
+   "questions/DQ.Q.000306.json",
+   "questions/DQ.Q.000307.json",
+   "questions/DQ.Q.000308.json",
+   "questions/DQ.Q.000309.json",
+   "questions/DQ.Q.000310.json",
+   "questions/DQ.Q.000311.json",
+   "questions/DQ.Q.000312.json",
+   "questions/DQ.Q.000313.json",
+   "questions/DQ.Q.000314.json",
+   "questions/DQ.Q.000315.json",
+   "questions/DQ.Q.000316.json",
+   "questions/DQ.Q.000317.json",
+   "questions/DQ.Q.000318.json",
+   "questions/DQ.Q.000319.json",
+   "questions/DQ.Q.000320.json",
+   "questions/DQ.Q.000321.json",
+   "questions/DQ.Q.000322.json",
+   "questions/DQ.Q.000323.json",
+   "questions/DQ.Q.000324.json"
   ],
   "discoveries": [
    "discoveries/DQ.DIS.000001.json",
@@ -149,7 +196,12 @@
    "persons/DQ.PER.0011.json",
    "persons/DQ.PER.0012.json",
    "persons/DQ.PER.0013.json",
-   "persons/DQ.PER.0014.json"
+   "persons/DQ.PER.0014.json",
+   "persons/DQ.PER.0015.json",
+   "persons/DQ.PER.0016.json",
+   "persons/DQ.PER.0017.json",
+   "persons/DQ.PER.0018.json",
+   "persons/DQ.PER.0019.json"
   ],
   "places": [
    "places/DQ.LOC.0001.json",
@@ -180,7 +232,21 @@
    "media_assets/DQ.MA.900007.json",
    "media_assets/DQ.MA.900008.json",
    "media_assets/DQ.MA.900011.json",
-   "media_assets/DQ.MA.900013.json"
+   "media_assets/DQ.MA.900013.json",
+   "media_assets/DQ.MA.000004.json",
+   "media_assets/DQ.MA.000005.json",
+   "media_assets/DQ.MA.000006.json",
+   "media_assets/DQ.MA.000048.json",
+   "media_assets/DQ.MA.000049.json",
+   "media_assets/DQ.MA.000050.json",
+   "media_assets/DQ.MA.000065.json",
+   "media_assets/DQ.MA.000066.json",
+   "media_assets/DQ.MA.000190.json",
+   "media_assets/DQ.MA.000191.json",
+   "media_assets/DQ.MA.000192.json",
+   "media_assets/DQ.MA.900002.json",
+   "media_assets/DQ.MA.900019.json",
+   "media_assets/DQ.MA.900025.json"
   ],
   "sources": [
    "sources/DQ.SRC.0001.json",
@@ -206,11 +272,11 @@
   ]
  },
  "counts": {
-  "questions": 50,
-  "episodes": 6,
-  "media_assets": 22,
+  "questions": 74,
+  "episodes": 10,
+  "media_assets": 36,
   "discoveries": 14,
-  "passages": 39,
+  "passages": 54,
   "museum_items": 7,
   "editions": 3
  }

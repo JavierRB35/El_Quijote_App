@@ -1,0 +1,61 @@
+{
+ "id": "DQ.Q.000317",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C21.E01",
+ "chapter_ids": [
+  "DQ.P1.C21"
+ ],
+ "passage_ids": [
+  "DQ.P1.C21.P0002",
+  "DQ.P1.C21.P0004"
+ ],
+ "prompt": "¿Verdadero o falso: Sancho reconoce desde el principio que aquello es un yelmo de oro?",
+ "interaction": {
+  "type": "true_false",
+  "options": [
+   {
+    "id": "DQ.Q.000317.O01",
+    "label": "Verdadero"
+   },
+   {
+    "id": "DQ.Q.000317.O02",
+    "label": "Falso"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000317.O02"
+  ],
+  "shuffle_options": false
+ },
+ "rationale": "Sancho ve «una cosa que relumbra» sobre un hombre de asno pardo; la gloria dorada es de su amo.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C21.P0002",
+   "quote": "y de caballero a escudero. Así\nque, desde hoy en adelante, nos hemos de tratar con más respeto, sin darnos\ncordelejo, porque, de cualquiera manera que yo me enoje con vos, ha de ser\nmal para el cántaro. Las mercedes y beneficios que yo os he prometido\nllegarán a su tiempo; y si no llegaren, el salario, a lo menos, no se ha de\nperder, como ya os he dicho.\n\n— Está bien cuanto vuestra merced dice —dijo Sancho—, pero querría yo saber,\npor si acaso no llegase el tiempo de las mercedes y fuese necesario acudir\nal de los salarios, cuánto ganaba un escudero de un caballero andante en\naquellos tiempos, y si se concertaban por meses, o por días, como peones de\nalbañir.\n\n— No creo yo —respondió don Quijote— que jamás los tales escuderos\nestuvieron a salario, sino a merced. Y si yo ahora te le he señalado a ti\nen el testamento cerrado que dejé en mi casa, fue por lo que podía suceder;\nque aún no sé cómo prueba en estos tan calamitosos tiempos nuestros la\ncaballería, y no querría que por pocas cosas penase mi ánima en el otro\nmundo. Porque quiero que sepas, Sancho, que en él no hay estado más\npeligroso que el de los aventureros.\n\n— Así es verdad —dijo Sancho—, pues sólo el ruido de los mazos de un batán\npudo alborotar y desasosegar el corazón de un tan valeroso andante\naventurero como es vuestra merced. Mas, bien puede estar seguro que, de\naquí adelante, no despliegue mis labios para hacer donaire de las cosas de\nvuestra merced, si no fuere para honrarle, como a mi amo y señor natural.\n— Desa manera —replicó don Quijote—, vivirás sobre la haz de la tierra;\nporque, después de a los padres, a los amos se ha de respetar como si lo\nfuesen.\n\n\n\n\nCapítulo XXI. Que trata de la alta aventura y rica ganancia del yelmo de\nMambrino, con otras cosas sucedidas a nuestro invencible caballero\n\nEn esto, comenzó a llover un poco, y quisiera Sancho que se entraran en el\nmolino de los batanes; mas habíales cobrado tal aborrecimiento don Quijote,\npor la pesada burla, que en ninguna manera quiso entrar dentro; y así,\ntorciendo el camino a la derecha mano, dieron en otro como el que habían\nllevado el día de antes.\n\nDe allí a poco, descubrió don Quijote un hombre a caballo, que traía en la\ncabeza una cosa que relumbraba como si fuera de oro, y aún él apenas le\nhubo visto, cuando se volvió a Sancho y le dijo:\n\n— Paréceme, Sancho, que no hay refrán que no sea verdadero, porque todos son\nsentencias sacadas de la mesma experiencia, madre de las ciencias todas,\nespecialmente aquel que dice: \"Donde una puerta se cierra, otra se abre\".\nDígolo porque si anoche nos cerró la ventura la puerta de la que\nbuscábamos, engañándonos con los batanes, ahora nos abre de par en par\notra, para otra mejor y más cierta aventura; que si yo no acertare a entrar\npor ella, mía será la culpa, sin que la pueda dar a la poca noticia de\nbatanes ni a la escuridad de la noche. Digo esto porque, si no me engaño,\nhacia nosotros viene uno que trae en su cabeza puesto el yelmo de Mambrino,\nsobre que yo hice el juramento que sabes.\n\n— Mire vuestra merced bien lo que dice, y mejor lo que hace —dijo Sancho—,\nque no querría que fuesen otros batanes que nos acabasen de abatanar y\naporrear el sentido.\n\n— ¡Válate el diablo por hombre! —replicó don Quijote—. ¿Qué va de yelmo a\nbatanes?\n\n— No sé nada —respondió Sancho—; mas, a fe que si yo pudiera hablar tanto\ncomo solía, que quizá diera tales razones que vuestra merced viera que se\nengañaba en lo que"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "dialogo",
+ "difficulty": 1,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C21.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900025"
+ },
+ "language": "es",
+ "tags": [
+  "banco",
+  "mambrino"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "mambrino sancho reconoce falso relumbra"
+}

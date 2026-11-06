@@ -59,6 +59,21 @@ Limitación declarada: PG #2000 procede de una edición decimonónica completa; 
 | pasaje | DQ.P2.C74.P0004 | DQ.P2.C74 | 13/13 | OK |
 | pasaje | DQ.P2.C74.P0005 | DQ.P2.C74 | 33/33 | OK |
 | pasaje | DQ.P2.C74.P0006 | DQ.P2.C74 | 34/34 | OK |
+| pasaje | DQ.P1.C01.P0001 | DQ.P1.C01 | 104/104 | OK |
+| pasaje | DQ.P1.C01.P0002 | DQ.P1.C01 | 317/317 | OK |
+| pasaje | DQ.P1.C01.P0003 | DQ.P1.C01 | 616/616 | OK |
+| pasaje | DQ.P1.C01.P0004 | DQ.P1.C01 | 254/254 | OK |
+| pasaje | DQ.P1.C01.P0005 | DQ.P1.C01 | 103/205 | OK |
+| pasaje | DQ.P1.C16.P0001 | DQ.P1.C16 | 86/86 | OK |
+| pasaje | DQ.P1.C16.P0002 | DQ.P1.C16 | 532/532 | OK |
+| pasaje | DQ.P1.C16.P0003 | DQ.P1.C16 | 434/434 | OK |
+| pasaje | DQ.P1.C21.P0001 | DQ.P1.C21 | 124/124 | OK |
+| pasaje | DQ.P1.C21.P0002 | DQ.P1.C21 | 631/631 | OK |
+| pasaje | DQ.P1.C21.P0003 | DQ.P1.C21 | 533/533 | OK |
+| pasaje | DQ.P1.C21.P0004 | DQ.P1.C21 | 638/638 | OK |
+| pasaje | DQ.P2.C10.P0001 | DQ.P2.C10 | 551/551 | OK |
+| pasaje | DQ.P2.C10.P0002 | DQ.P2.C10 | 504/504 | OK |
+| pasaje | DQ.P2.C10.P0003 | DQ.P2.C10 | 596/596 | OK |
 | evidencia | DQ.Q.000101 | DQ.P1.C08.E01 | 19/19 | OK |
 | evidencia | DQ.Q.000102 | DQ.P1.C08.E01 | 14/14 | OK |
 | evidencia | DQ.Q.000103 | DQ.P1.C08.E01 | 26/26 | OK |
@@ -110,5 +125,30 @@ Limitación declarada: PG #2000 procede de una edición decimonónica completa; 
 | evidencia | DQ.Q.000236 | DQ.P2.C74.E01 | 12/12 | OK |
 | evidencia | DQ.Q.000237 | DQ.P2.C74.E01 | 26/26 | OK |
 | evidencia | DQ.Q.000238 | DQ.P2.C74.E01 | 15/23 | OK |
+| evidencia | DQ.Q.000301 | DQ.P1.C01.E01 | 104/104 | OK |
+| evidencia | DQ.Q.000302 | DQ.P1.C01.E01 | 317/317 | OK |
+| evidencia | DQ.Q.000303 | DQ.P1.C01.E01 | 616/616 | OK |
+| evidencia | DQ.Q.000304 | DQ.P1.C01.E01 | 254/254 | OK |
+| evidencia | DQ.Q.000305 | DQ.P1.C01.E01 | 103/205 | OK |
+| evidencia | DQ.Q.000306 | DQ.P1.C01.E01 | 103/205 | OK |
+| evidencia | DQ.Q.000307 | DQ.P1.C16.E01 | 86/86 | OK |
+| evidencia | DQ.Q.000308 | DQ.P1.C16.E01 | 532/532 | OK |
+| evidencia | DQ.Q.000309 | DQ.P1.C16.E01 | 434/434 | OK |
+| evidencia | DQ.Q.000310 | DQ.P1.C16.E01 | 434/434 | OK |
+| evidencia | DQ.Q.000311 | DQ.P1.C16.E01 | 532/532 | OK |
+| evidencia | DQ.Q.000312 | DQ.P1.C16.E01 | 532/532 | OK |
+| evidencia | DQ.Q.000313 | DQ.P1.C21.E01 | 124/124 | OK |
+| evidencia | DQ.Q.000314 | DQ.P1.C21.E01 | 631/631 | OK |
+| evidencia | DQ.Q.000314 | DQ.P1.C21.E01 | 533/533 | OK |
+| evidencia | DQ.Q.000315 | DQ.P1.C21.E01 | 533/533 | OK |
+| evidencia | DQ.Q.000316 | DQ.P1.C21.E01 | 638/638 | OK |
+| evidencia | DQ.Q.000317 | DQ.P1.C21.E01 | 631/631 | OK |
+| evidencia | DQ.Q.000318 | DQ.P1.C21.E01 | 124/124 | OK |
+| evidencia | DQ.Q.000319 | DQ.P2.C10.E01 | 551/551 | OK |
+| evidencia | DQ.Q.000320 | DQ.P2.C10.E01 | 504/504 | OK |
+| evidencia | DQ.Q.000321 | DQ.P2.C10.E01 | 596/596 | OK |
+| evidencia | DQ.Q.000322 | DQ.P2.C10.E01 | 551/551 | OK |
+| evidencia | DQ.Q.000323 | DQ.P2.C10.E01 | 504/504 | OK |
+| evidencia | DQ.Q.000324 | DQ.P2.C10.E01 | 504/504 | OK |
 
-**Resumen: 90/90 coinciden íntegramente; 0 con variante.**
+**Resumen: 130/130 coinciden íntegramente; 0 con variante.**

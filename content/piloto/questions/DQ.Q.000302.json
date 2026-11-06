@@ -1,0 +1,71 @@
+{
+ "id": "DQ.Q.000302",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C01.E01",
+ "chapter_ids": [
+  "DQ.P1.C01"
+ ],
+ "passage_ids": [
+  "DQ.P1.C01.P0002"
+ ],
+ "prompt": "¿Qué sobrenombres del hidalgo baraja el narrador en I, 1?",
+ "interaction": {
+  "type": "multi_choice",
+  "multi_declared": true,
+  "options": [
+   {
+    "id": "DQ.Q.000302.O01",
+    "label": "Quijada"
+   },
+   {
+    "id": "DQ.Q.000302.O02",
+    "label": "Quesada"
+   },
+   {
+    "id": "DQ.Q.000302.O03",
+    "label": "Quejana"
+   },
+   {
+    "id": "DQ.Q.000302.O04",
+    "label": "Quijote de la Mancha, de nacimiento"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000302.O01",
+   "DQ.Q.000302.O02",
+   "DQ.Q.000302.O03"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "«Que en esto hay alguna diferencia en los autores»; Quijote será el nombre que se dará después, no el de nacimiento.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C01.P0002",
+   "quote": "cuitas muestra buen talante,\nen tal desmán, vueso conorte sea\nque Sancho Panza fue mal alcagüete,\nnecio él, dura ella, y vos no amante.\n\nDIÁLOGO ENTRE BABIECA Y ROCINANTE\n\nSoneto\n\nB. ¿Cómo estáis, Rocinante, tan delgado?\nR. Porque nunca se come, y se trabaja.\nB. Pues, ¿qué es de la cebada y de la paja?\nR. No me deja mi amo ni un bocado.\nB. Andá, señor, que estáis muy mal criado,\npues vuestra lengua de asno al amo ultraja.\nR. Asno se es de la cuna a la mortaja.\n¿Queréislo ver? Miraldo enamorado.\nB. ¿Es necedad amar? R. No es gran prudencia.\nB. Metafísico estáis. R. Es que no como.\nB. Quejaos del escudero. R. No es bastante.\n¿Cómo me he de quejar en mi dolencia,\nsi el amo y escudero o mayordomo\nson tan rocines como Rocinante?\n\nPrimera parte del ingenioso hidalgo don Quijote de la Mancha\n\n\n\n\nCapítulo primero. Que trata de la condición y ejercicio del famoso hidalgo\ndon Quijote de la Mancha\n\nEn un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho\ntiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua,\nrocín flaco y galgo corredor. Una olla de algo más vaca que carnero,\nsalpicón las más noches, duelos y quebrantos los sábados, lantejas los\nviernes, algún palomino de añadidura los domingos, consumían las tres\npartes de su hacienda. El resto della concluían sayo de velarte, calzas de\nvelludo para las fiestas, con sus pantuflos de lo mesmo, y los días de\nentresemana se honraba con su vellorí de lo más fino. Tenía en su casa una\nama que pasaba de los cuarenta, y una sobrina que no llegaba a los veinte,\ny un mozo de campo y plaza, que así ensillaba el rocín como tomaba la\npodadera. Frisaba la edad de nuestro hidalgo con los cincuenta años; era de\ncomplexión recia, seco de"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "hecho",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C01.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900002"
+ },
+ "language": "es",
+ "tags": [
+  "banco",
+  "inicio"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "inicio sobrenombres quijada quesada quejana"
+}

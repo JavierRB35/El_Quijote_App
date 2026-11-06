@@ -1,0 +1,13 @@
+{
+ "id": "DQ.P1.C01.P0001",
+ "contract_version": "1.0.0",
+ "chapter_id": "DQ.P1.C01",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 39976-40554; ed. lector: EPUB Tusell (DQ.ED.0001) — PG 2000 (DQ.SRC.0005) offset aprox. 7193; ed. lector: EPUB Tusell (DQ.ED.0001) — incipit",
+ "text_original": "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho\ntiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua,\nrocín flaco y galgo corredor. Una olla de algo más vaca que carnero,\nsalpicón las más noches, duelos y quebrantos los sábados, lantejas los\nviernes, algún palomino de añadidura los domingos, consumían las tres\npartes de su hacienda. El resto della concluían sayo de velarte, calzas de\nvelludo para las fiestas, con sus pantuflos de lo mesmo, y los días de\nentresemana se honraba con su vellorí de lo más fino. Tenía en su casa una",
+ "text_indexable": "en un lugar de la mancha de cuyo nombre no quiero acordarme no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero adarga antigua rocín flaco y galgo corredor una olla de algo más vaca que carnero salpicón las más noches duelos y quebrantos los sábados lantejas los viernes algún palomino de añadidura los domingos consumían las tres partes de su hacienda el resto della concluían sayo de velarte calzas de velludo para las fiestas con sus pantuflos de lo mesmo y los días de entresemana se honraba con su vellorí de lo más fino tenía en su casa una",
+ "position": {
+  "start_char": 39976,
+  "end_char": 40554
+ },
+ "sha256": "sha256:65b4cd705edd4b3f7be2e101698d3d58e79ca22483c6d0d7f5b29c596e5bd5f2"
+}

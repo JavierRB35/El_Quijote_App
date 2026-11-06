@@ -1,0 +1,20 @@
+{
+ "id": "DQ.PER.0019",
+ "contract_version": "1.0.0",
+ "class": "ficticio",
+ "canonical_name": "Dulcinea del Toboso (Aldonza Lorenzo)",
+ "variants": [
+  "Aldonza Lorenzo"
+ ],
+ "relations": [],
+ "appearances": [
+  "DQ.P1.C01.E01",
+  "DQ.P2.C10.E01"
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-06"
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "id": "DQ.PER.0017",
+ "contract_version": "1.0.0",
+ "class": "ficticio",
+ "canonical_name": "Las tres labradoras del Toboso",
+ "variants": [
+  "tres aldeanas",
+  "las tres labradoras"
+ ],
+ "relations": [],
+ "appearances": [
+  "DQ.P2.C10.E01"
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-06"
+ }
+}

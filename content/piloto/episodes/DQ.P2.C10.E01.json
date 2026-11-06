@@ -1,0 +1,27 @@
+{
+ "id": "DQ.P2.C10.E01",
+ "contract_version": "1.0.0",
+ "title": "El encanto de Dulcinea",
+ "chapters": [
+  "DQ.P2.C10"
+ ],
+ "narrative_order": 62,
+ "synopsis": "Tres labradoras en sus pollinos: Sancho proclama a Dulcinea; la réplica campesina y la perplexidad de don Quijote componen el mayor engaño de la obra.",
+ "actors": [
+  "DQ.PER.0001",
+  "DQ.PER.0002",
+  "DQ.PER.0017",
+  "DQ.PER.0019"
+ ],
+ "places": [
+  "DQ.LOC.0001"
+ ],
+ "passages": [
+  "DQ.P2.C10.P0001",
+  "DQ.P2.C10.P0002",
+  "DQ.P2.C10.P0003"
+ ],
+ "spoiler_flags": {
+  "reveals_future_events": false
+ }
+}

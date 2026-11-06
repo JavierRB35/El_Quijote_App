@@ -1,0 +1,34 @@
+{
+ "id": "DQ.MA.900025",
+ "contract_version": "1.0.0",
+ "function": "pre_pregunta",
+ "media_class": "RECREACION_IA",
+ "logical_uri": "assets://scenes/part_1/chapter_21/p1_c21_mambrino_pre.webp",
+ "derivatives": [
+  {
+   "variant": "original",
+   "format": "webp",
+   "width": 1672,
+   "height": 941,
+   "size_bytes": 289698,
+   "sha256": "sha256:0aff62109b754d338b877f8003c6ed1c7fbc5d15404060975c555b40a1e82f8d"
+  }
+ ],
+ "alt": "Don Quijote y Sancho observan a un barbero que cabalga con una bacía metálica sobre la cabeza en un camino húmedo.",
+ "source_id": "DQ.SRC.0003",
+ "license_id": "DQ.LIC.0002",
+ "author": "Equipo de arte El_Quijote_App (recreación IA)",
+ "date": "2026-11-05",
+ "allowed_uses": [
+  "uso_personal_app",
+  "almacenamiento_repo_git"
+ ],
+ "license_status": "verificada",
+ "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA.",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "spoiler_level": "ninguno"
+}

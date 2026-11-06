@@ -1,0 +1,34 @@
+{
+ "id": "DQ.MA.000006",
+ "contract_version": "1.0.0",
+ "function": "museo",
+ "media_class": "ACUARELA_HISTORICA",
+ "logical_uri": "assets://ilustraciones_tusell/acuarelas/006.jpg",
+ "derivatives": [
+  {
+   "variant": "original",
+   "format": "jpg",
+   "width": 743,
+   "height": 987,
+   "size_bytes": 63989,
+   "sha256": "sha256:b1c1b63ee094786558f270e2ef37b120debae7c827c3a7ac13fc37e5c07a87a3"
+  }
+ ],
+ "alt": "Don Quijote se prepara para ser caballero",
+ "source_id": "DQ.SRC.0001",
+ "license_id": "DQ.LIC.0001",
+ "author": "Salvador Tusell (sobre composición de Gustave Doré)",
+ "date": "1905",
+ "allowed_uses": [
+  "uso_personal_app",
+  "almacenamiento_repo_git"
+ ],
+ "license_status": "verificada",
+ "provenance": "EPUB Epublibre/Titivillus 2024; ed. Barcelona, Luis Tasso, 1905 (BVPB registro 463832).",
+ "review": {
+  "state": "documentada",
+  "reviewer_role": "editorial",
+  "date": "2026-11-06"
+ },
+ "spoiler_level": "ninguno"
+}

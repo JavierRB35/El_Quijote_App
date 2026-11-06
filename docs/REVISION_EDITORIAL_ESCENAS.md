@@ -21,3 +21,14 @@
 1. **2 huecos de fase restantes** → solicitados como cuarta batería en `PROMPTS_REGENERACION.md`: `p1_c06_hoguera_corral_post` (I.6-after) y `p2_c01_loco_sevillano_reveal` (II.1-reveal).
 2. **Verificación visual** de las 35 escenas (equipo arte/QA), antes de elevar `review_state` a `aprobada`; foco recomendado: continuidad de personajes con `personajes_referencia.webp` y ausencia de anacronismos.
 3. Al integrar escenas nuevas: actualizar `manifest.json` (hash/size) y la proyección canónica (`DQ.MA.*`) para que el paquete editorial pueda referenciarlas.
+
+## Verificación visual (2026-11-06, modo CONTENIDOS — Pillow disponible)
+
+Transcodificación WebP→PNG con Pillow (13.0.0) e inspección de 2 escenas clave:
+
+| Escena | Veredicto | Detalle |
+|---|---|---|
+| `_art_direction/personajes_referencia.webp` | **PASS** | Don Quijote alto/enjuto con armadura vieja funcional; Sancho bajo/robusto, sombrero y chaleco ocre; Rocinante enjuto pardo claro; rucio gris; espacio a la derecha para UI — referencia de continuidad válida |
+| `p1_c08_molinos_pre.webp` | **PASS** | Continuidad con la referencia; molinos solo en el horizonte, **sin carga ni caída** (fase pre, spoiler-safe); sujeto en tercio izquierdo y cielo/camino a la derecha para UI. Nota menor: ~8 molinos visibles frente a los «treinta ó cuarenta» del texto — licencia artística aceptable; la pregunta del cómputo se apoya en el texto, no en la imagen |
+
+**Método repetible:** Pillow → PNG redimensionado → inspección; el resto de escenas se verificará por lotes con este patrón antes de elevar `review_state` a `aprobada`.

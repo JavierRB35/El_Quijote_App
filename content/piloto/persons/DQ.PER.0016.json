@@ -1,0 +1,19 @@
+{
+ "id": "DQ.PER.0016",
+ "contract_version": "1.0.0",
+ "class": "ficticio",
+ "canonical_name": "El barbero de Mambrino",
+ "variants": [
+  "un barbero"
+ ],
+ "relations": [],
+ "appearances": [
+  "DQ.P1.C21.E01"
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-06"
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "id": "DQ.PER.0018",
+ "contract_version": "1.0.0",
+ "class": "ficticio",
+ "canonical_name": "El ventero",
+ "variants": [
+  "Juan Palomeque el zurdo (nombre en I,16)"
+ ],
+ "relations": [],
+ "appearances": [
+  "DQ.P1.C16.E01"
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": "2026-11-06"
+ }
+}

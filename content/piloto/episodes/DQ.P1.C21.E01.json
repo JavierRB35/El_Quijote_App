@@ -1,0 +1,27 @@
+{
+ "id": "DQ.P1.C21.E01",
+ "contract_version": "1.0.0",
+ "title": "El yelmo de Mambrino",
+ "chapters": [
+  "DQ.P1.C21"
+ ],
+ "narrative_order": 21,
+ "synopsis": "Bajo la llovizna, un barbero con su bacía de azófar se convierte en caballero con yelmo de oro; don Quijote la reclama como trofeo.",
+ "actors": [
+  "DQ.PER.0001",
+  "DQ.PER.0002",
+  "DQ.PER.0016"
+ ],
+ "places": [
+  "DQ.LOC.0001"
+ ],
+ "passages": [
+  "DQ.P1.C21.P0001",
+  "DQ.P1.C21.P0002",
+  "DQ.P1.C21.P0003",
+  "DQ.P1.C21.P0004"
+ ],
+ "spoiler_flags": {
+  "reveals_future_events": false
+ }
+}

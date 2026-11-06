@@ -1,0 +1,73 @@
+{
+ "id": "DQ.Q.000324",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P2.C10.E01",
+ "chapter_ids": [
+  "DQ.P2.C10"
+ ],
+ "passage_ids": [
+  "DQ.P2.C10.P0001",
+  "DQ.P2.C10.P0002",
+  "DQ.P2.C10.P0003"
+ ],
+ "prompt": "Ordena los pasos del «encanto» de Dulcinea.",
+ "interaction": {
+  "type": "ordering",
+  "options": [
+   {
+    "id": "DQ.Q.000324.O01",
+    "label": "Sancho avista las tres aldeanas desde lejos y prepara a su amo"
+   },
+   {
+    "id": "DQ.Q.000324.O02",
+    "label": "Don Quijote corre a arrodillarse ante «la más alta princesa»"
+   },
+   {
+    "id": "DQ.Q.000324.O03",
+    "label": "La aldeana responde con la pulla de la «burra de mi suegro»"
+   },
+   {
+    "id": "DQ.Q.000324.O04",
+    "label": "Don Quijote interpreta la huida como obra de encantadores"
+   }
+  ],
+  "correct_order": [
+   "DQ.Q.000324.O01",
+   "DQ.Q.000324.O02",
+   "DQ.Q.000324.O03",
+   "DQ.Q.000324.O04"
+  ],
+  "shuffle_options": false
+ },
+ "rationale": "Secuencia canónica del «encanto» (II, 10): avistamiento, arrodillamiento, réplica, interpretación.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P2.C10.P0002",
+   "quote": "que\nalgún mal encantador de estos que él dice que le quieren mal la habrá\nmudado la figura por hacerle mal y daño.\n\nCon esto que pensó Sancho Panza quedó sosegado su espíritu, y tuvo por bien\nacabado su negocio, y deteniéndose allí hasta la tarde, por dar lugar a que\ndon Quijote pensase que le había tenido para ir y volver del Toboso; y\nsucedióle todo tan bien que, cuando se levantó para subir en el rucio, vio\nque del Toboso hacia donde él estaba venían tres labradoras sobre tres\npollinos, o pollinas, que el autor no lo declara, aunque más se puede creer\nque eran borricas, por ser ordinaria caballería de las aldeanas; pero, como\nno va mucho en esto, no hay para qué detenernos en averiguarlo. En\nresolución: así como Sancho vio a las labradoras, a paso tirado volvió a\nbuscar a su señor don Quijote, y hallóle suspirando y diciendo mil amorosas\nlamentaciones. Como don Quijote le vio, le dijo:\n\n— ¿Qué hay, Sancho amigo? ¿Podré señalar este día con piedra blanca, o con\nnegra?\n\n— Mejor será —respondió Sancho— que vuesa merced le señale con almagre, como\nrétulos de cátedras, porque le echen bien de ver los que le vieren.\n\n— De ese modo —replicó don Quijote—, buenas nuevas traes.\n\n— Tan buenas —respondió Sancho—, que no tiene más que hacer vuesa merced\nsino picar a Rocinante y salir a lo raso a ver a la señora Dulcinea del\nToboso, que con otras dos doncellas suyas viene a ver a vuesa merced.\n\n— ¡Santo Dios! ¿Qué es lo que dices, Sancho amigo? —dijo don Quijote—. Mira\nno me engañes, ni quieras con falsas alegrías alegrar mis verdaderas\ntristezas.\n\n— ¿Qué sacaría yo de engañar a vuesa merced —respondió Sancho—, y más\nestando tan cerca de descubrir mi verdad? Pique, señor, y venga, y verá\nvenir a la princesa, nuestra ama, vestida y adornada, en fin, como quien\nella es. Sus doncellas y ella todas son una ascua de oro, todas mazorcas de\nperlas, todas son diamantes, todas rubíes, todas telas de brocado de más de\ndiez altos; los cabellos, sueltos por las espaldas, que son otros tantos\nrayos del sol que andan jugando con el viento; y, sobre todo, vienen a\ncaballo sobre tres cananeas remendadas, que no hay más que ver.\n\n— Hacaneas querrás decir, Sancho.\n\n— Poca diferencia hay —respondió Sancho— de cananeas a hacaneas; pero,\nvengan sobre lo que vinieren, ellas vienen las más galanas señoras que se\npuedan desear, especialmente la princesa Dulcinea, mi señora, que pasma los\nsentidos.\n\n— Vamos, Sancho hijo —respondió don Quijote—; y, en albricias destas no\nesperadas como buenas nuevas, te mando el mejor despojo que ganare en la\nprimera aventura que tuviere, y si esto no te contenta, te mando las crías\nque este año me dieren las tres yeguas mías, que tú sabes que quedan para\nparir en el prado concejil de nuestro pueblo.\n\n— A las crías me atengo —respondió Sancho—, porque de ser buenos los\ndespojos de la primera aventura no está muy cierto.\n\nYa en"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "secuencia",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P2.C10.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900019"
+ },
+ "language": "es",
+ "tags": [
+  "banco",
+  "dulcinea"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "dulcinea orden encanto arrodilla pulla encantadores"
+}

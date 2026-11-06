@@ -1,0 +1,64 @@
+{
+ "id": "DQ.Q.000306",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C01.E01",
+ "chapter_ids": [
+  "DQ.P1.C01"
+ ],
+ "passage_ids": [
+  "DQ.P1.C01.P0005"
+ ],
+ "prompt": "¿Por qué, según don Quijote, resultaba adecuada la talla de la labradora para ser su dama?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000306.O01",
+    "label": "Porque su fama y hermosura merecían una corona de reina; y el nombre, Dulcinea del Toboso, por ser del Toboso"
+   },
+   {
+    "id": "DQ.Q.000306.O02",
+    "label": "Porque era nobleza de sangre y de apellido real"
+   },
+   {
+    "id": "DQ.Q.000306.O03",
+    "label": "Porque llevaba el mismo nombre que la princesa de Micomicona"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000306.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "La construcción deliberada del nombre-poema culmina el bautizo imaginativo (I, 1).",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C01.P0005",
+   "quote": "ncuentro, o le parto por mitad del cuerpo, o, finalmente, le venzo y le rindo, ¿no será bien tener a quien enviarle presentado y que entre y se hinque de rodillas ante mi dulce señora, y diga con voz humilde y rendido: ''Yo, señora, soy el gigante Caraculiambro, señor de la ínsula Malindrania, a quien venció en singular batalla el jamás como se debe alabado caballero don Quijote de la Mancha, el cual me mandó que me presentase ante vuestra merced, para que la vuestra grandeza disponga de mí a su talante''? ¡Oh, cómo se holgó nuestro buen caballero cuando hubo hecho este halló a quien dar nombre de su dama ! Y fue, a lo que se cree, que en un lugar cerca del suyo había una moza labradora de muy buen parecer, de quien él un tiempo anduvo enamorado, aunque, según se entiende, ella jamás lo supo, ni le dio cata dello. Llamábase Aldonza Lorenzo, y a ésta le pareció ser bien darle título de señora de sus pensamientos; y, buscándole nombre que no desdijese mucho del suyo, y que tirase y se encaminase al de princesa y gran señora, vino a llamarla Dulcinea del Toboso, porque era natural del Toboso; nombre, a su"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "actitud_reaccion",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C01.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900002"
+ },
+ "language": "es",
+ "tags": [
+  "banco",
+  "inicio"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "inicio dulcinea nombre talla reina toboso"
+}

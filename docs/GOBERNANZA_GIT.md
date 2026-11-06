@@ -59,6 +59,22 @@ No se difieren pushes «para más tarde». Si un bloque está a medias, se commi
 - El historial de `main` es evidencia de auditoría: cada entrega debe poder rastrearse a un commit con fecha, autor y contenido.
 - Los hitos GO/NO-GO se etiquetan y se referencian desde `VISION_Y_DECISIONES.md`.
 
+## 8. Integración continua del contrato (activo desde 2026-11-06)
+
+Autorizada por el propietario («validen el contrato técnico antes de integrarlo definitivamente, en GitHub»). Ambos equipos implementaron CI en paralelo; se **consolidó en un único workflow** por eficiencia (los runners de Windows consumen el doble de minutos y la cuenta ya agotó su cuota de almacenamiento de Actions).
+
+**Workflow único `validar-contrato`** (`.github/workflows/validar-contrato.yml`, ubuntu-latest — la validación es multiplataforma; el «sobre Windows» del encargo §5.2 aplica a las pruebas de la aplicación, no a los datos) que se ejecuta **en cada Pull Request y en cada push a `main`**:
+
+1. Suite canónica de contrato (fixtures válidos + casos negativos §6.3.7) — exige PASS.
+2. Meta-validación de esquemas (`check_schema` draft 2020-12, 16/16).
+3. **Todos** los paquetes editoriales reales de `content/` contra los esquemas canónicos.
+4. Cotejo textual de la batería contra el texto de referencia almacenado.
+5. Criterio ADR-0001.1 (FTS5 con castellano áureo).
+
+El veredicto de cada paso queda como evidencia en el log del job. No se suben artefactos: la cuota de almacenamiento de Actions de la cuenta está agotada y un fallo de cuota no debe poder tumbar la compuerta del contrato.
+
+**Protección de `main`:** el check «Validación del contrato editorial-técnico» es **obligatorio para fusionar cualquier PR**; force-push y borrado de la rama quedan prohibidos técnicamente. Las integraciones directas a `main` expresamente autorizadas por el propietario (baterías artísticas documentadas más abajo) siguen permitidas y quedan validadas a posteriori por el mismo workflow en el push. Elevar a «PR obligatoria para todo» (incluido el propietario) es un cambio de un comando que queda a decisión expresa del propietario.
+
 **Ampliación de excepción (2026-11-06, batería visual 06):** a petición expresa del propietario, se incorporan seis WebP optimizados de nuevas escenas originales IA al árbol por parte/capítulo en `main`, alcanzando **65 activos**. Se mantienen las restricciones generales para medios de terceros y los controles de integridad del manifiesto; los PNG maestros permanecen fuera de Git.
 
 **Ampliación de excepción (2026-11-06, batería visual 07):** se incorporan seis WebP optimizados de capítulos previamente sin recreaciones (I.10, I.13, I.15, II.12, II.31, II.51), elevando el inventario a **71 activos**. El propietario ha solicitado de nuevo la colocación en `main`. Conservación de PNG maestros fuera del repositorio, documentación de derechos, hashes y revisión editorial pendientes como en tandas previas.

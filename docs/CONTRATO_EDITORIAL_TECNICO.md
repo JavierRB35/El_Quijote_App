@@ -227,6 +227,17 @@ Batería completa documentada en `docs/VALIDACION_CONTRATO_INTEGRACION.md`. **Ve
 3. **Clasificación:** corrección de defecto (PATCH de esquema, sin cambio de comportamiento para instancias válidas) — **contrafirma técnica requerida** para el cierre definitivo de integración.
 4. **Validación continua:** workflow `.github/workflows/validar-contrato.yml` ejecuta suite + meta-validación + paquetes + cotejo en cada push/PR; el estado verde en Actions es parte de la puerta de integración.
 
+### Contrafirma técnica (2026-11-06, modo DESARROLLO) — INTEGRACIÓN DEFINITIVA CERRADA
+
+Verificada de forma independiente y en local la batería completa tras los fixes de esquema:
+
+1. `check_schema` draft 2020-12: **16/16 OK** — confirmado que los defectos (`$comment_order`/`$comment_id` como pseudo-propiedades) eran defectos de autoría técnica original y que su corrección es **PATCH puro**: mismas restricciones (`order` 1–126, `$ref` de ID), textos conservados como `$comment`, sin cambio de comportamiento para instancias válidas.
+2. Suite canónica: **42/42 PASS** · paquetes reales de `content/`: **VÁLIDO** · cotejo textual: **130/130** · FTS5 (ADR-0001.1): **9/9**.
+3. El cotejo confirma la **hipótesis de abreviación** del EPUB Tusell («Frestón» y el loco de Sevilla presentes en PG 2000, ausentes en el EPUB): la edición de referencia para DC-06 debe ser el texto completo; se registra como condición crítica de PEND-01.
+4. CI consolidada en el workflow único `validar-contrato` (+ paso FTS5 añadido por DESARROLLO); el duplicado `contrato.yml` se retira. Protección de `main` con este check obligatorio (ver `GOBERNANZA_GIT.md` §8).
+
+**El contrato editorial-técnico queda firmado por ambas partes y validado pre-integración: integración definitiva aprobada.**
+
 ## 13. Qué DEBE y NO DEBE hacer cada equipo
 
 | | Equipo editorial (CONTENIDOS) | Equipo técnico (DESARROLLO) |

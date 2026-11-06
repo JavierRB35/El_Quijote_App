@@ -24,3 +24,10 @@ Documento rector: **`docs/ENCARGO_MAESTRO.md`** — léelo íntegro antes de act
 ## Idioma
 
 Trabajo y documentación en español. El castellano de las citas de Cervantes nunca se mezcla con traducciones ni parafraseos (encargo §2.6).
+
+
+## Hoja de ruta narrativa común (Modo Historia)
+
+Al asumir un trabajo relativo al **Modo Historia**, leer también `docs/BIBLIA_NARRATIVA_MODO_HISTORIA_HOJA_RUTA_ROLES.md` (sección R01–R16 correspondiente al perfil), y `docs/HOJA_RUTA_MODOS_HISTORIA_E_HISTORICO.md`. Las decisiones DC-21/DC-22 de `docs/VISION_Y_DECISIONES.md` son vinculantes.
+
+**TS-001:** el texto de cada intervención hablada de narrador o personaje se verá **siempre** en pantalla, con y sin audio; no se puede ocultar, truncar ni omitir por avanzar. Contratos y validadores compartidos requieren revisión editorial y técnica; la hoja de ruta no significa que el juego ya implemente TS-001. La documentación del Modo Historia no autoriza Fase 2.

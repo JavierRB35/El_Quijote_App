@@ -12,20 +12,20 @@ Fuente: `docs/data/propuesta_correcciones_visuales_pre_r15.csv` (13 `RETIRAR_PRE
 
 | # | Pregunta | Episodio | Pre-imagen actual | Condición temporal (safe_after) | Propuesta PR #30 | Visados |
 |---|---|---|---|---|---|---|
-| A-01 | Q.217 | DQ.P1.C18.E01 | `DQ.MA.900008` | C18.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-02 | Q.232 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-03 | Q.233 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-04 | Q.234 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-05 | Q.235 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | **R05-CC** · **R06-NC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-06 | Q.236 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-07 | Q.237 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-08 | Q.238 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-09 | Q.313 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-10 | Q.314 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | **R05-CC** · **R06-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-11 | Q.315 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R05-CC** · **R06-NC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-12 | Q.316 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | **mantener condicional** | **R05-PEND** · **R06-PEND** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-13 | Q.317 | DQ.P1.C21.E01 | `DQ.MA.900037` | C21.E01 | retirar pre | **R05-CC** · **R06-NC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-14 | Q.318 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R05-CC** · **R06-NC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-01 | Q.217 | DQ.P1.C18.E01 | `DQ.MA.900008` | C18.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-02 | Q.232 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-03 | Q.233 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-04 | Q.234 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-05 | Q.235 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-NC ⚠ cuestionada por discrepancia de identidad canónica DQ.MA/DQ.MED — contrarrevisión R06 pendiente (instrucción 2, dictamen R14); no es rechazo artístico definitivo — registro histórico preservado · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-06 | Q.236 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-07 | Q.237 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-08 | Q.238 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-09 | Q.313 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-10 | Q.314 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-11 | Q.315 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | ☑ R06-NC ⚠ cuestionada por discrepancia de identidad canónica DQ.MA/DQ.MED — contrarrevisión R06 pendiente (instrucción 2, dictamen R14); no es rechazo artístico definitivo — registro histórico preservado · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-12 | Q.316 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | **mantener condicional** | ☑ R06-PEND (cronología intrapregunta) · **R05-PEND** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-13 | Q.317 | DQ.P1.C21.E01 | `DQ.MA.900037` | C21.E01 | retirar pre | ☑ R06-NC ⚠ cuestionada por discrepancia de identidad canónica DQ.MA/DQ.MED — contrarrevisión R06 pendiente (instrucción 2, dictamen R14); no es rechazo artístico definitivo — registro histórico preservado · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-14 | Q.318 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | ☑ R06-NC ⚠ cuestionada por discrepancia de identidad canónica DQ.MA/DQ.MED — contrarrevisión R06 pendiente (instrucción 2, dictamen R14); no es rechazo artístico definitivo — registro histórico preservado · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
 
 Nota técnica para el visado (R09/R12): la pre-imagen actual de todas ellas es una recreación `pre_pregunta` con `spoiler_level: ninguno` en el dato; la propuesta de PR #30 obedece a riesgos contextuales específicos (no al spoiler_level del catálogo). Retirar la pre en una pregunta no modifica su registro salvo en `visual_requirements.pre_image_media_id` (baja opcional del campo), y el gating temporal ya declarado sigue aplicando.
 
@@ -166,8 +166,10 @@ Fuentes: `content/piloto/media_assets/DQ.MA.900042.json`, `DQ.MA.900036.json`, `
 2. Ejecutar suite de contrato (49→51+) y paquetes reales tras cualquier alta.
 3. Registrar el resultado de esta tabla en `VISION_Y_DECISIONES` (o el acta de hito que corresponda).
 
-## Estado
+## Estado (actualizado tras el dictamen R14 — cierre R06)
 
-- ☑ **R05: pronunciamiento 26/26 (25 CC / 1 PEND)**; R06 conserva sus estados (cuatro NC requieren reauditoría de identidad); ☐ R12 pendiente. No hay aprobación conjunta.
-- ☐ Visado editorial R01/R02 — **pendiente** (puede ejecutarse en la misma pasada que la contrafirma de ADR-0005, H5)
-- ☐ Comprobación técnica R09 — la realizará DESARROLLO cuando la tabla vuelva con los visados
+- ☑ **Visado R06 — COMPLETADO**: 26 pronunciamientos (21 CC · 4 NC · 1 PEND), PR #40 fusionada `cabe1cd`, **ratificado por R14** (A-05/A-11/A-13/A-14: retirada procedente pero destinos NO aceptados; A-12 exige cronología intrapregunta; 021/025 condicionadas; 900157 excluido). **Reauditoría (dictamen R14 posterior): las 4 R06-NC están CUESTIONADAS por discrepancia de identidad canónica DQ.MA/DQ.MED (resolución por logical_uri + SHA-256 en PR #42); la rectificación corresponde exclusivamente a Dirección Artística — registro histórico preservado.**
+- ☑ **R05: visado documental ratificado por R14**, 26/26 pronunciamientos (25 CC condicionadas y A-12 PEND). Se mantienen los estados R06 ya ratificados; las cuatro NC requieren contrarrevisión de identidad.
+- ☐ Visado R12 — pendiente
+- ☐ Visado editorial R01/R02 — pendiente (ejecutable en la misma pasada que la contrafirma de ADR-0005, H5)
+- ☐ Comprobación técnica R09 — DESARROLLO la ejecutará **después** de los visados restantes, fila a fila, sobre las decisiones conjuntamente aprobadas

@@ -2,12 +2,12 @@
  "id": "DQ.P1.C18.P0001",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C18",
- "anchor": "EPUB 1.18.xhtml; extracto verbatim",
- "text_original": "el grande emperador Alifanfarón, señor de la grande isla Trapobana; este otro que á mis espaldas marcha es el de su enemigo, el rey de los garamantas, Pentapolín del Arremangado Brazo, porque siempre entra en las batallas con el brazo derecho desnudo",
- "text_indexable": "el grande emperador alifanfarón señor de la grande isla trapobana este otro que á mis espaldas marcha es el de su enemigo el rey de los garamantas pentapolín del arremangado brazo porque siempre entra en las batallas con el brazo derecho desnudo",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 274593-274844; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1.18.xhtml; extracto verbatim",
+ "text_original": "el grande emperador Alifanfarón, señor de la grande isla\nTrapobana; este otro que a mis espaldas marcha es el de su enemigo, el rey\nde los garamantas, Pentapolén del Arremangado Brazo, porque siempre entra\nen las batallas con el brazo derecho desnudo.",
+ "text_indexable": "el grande emperador alifanfarón señor de la grande isla trapobana este otro que a mis espaldas marcha es el de su enemigo el rey de los garamantas pentapolén del arremangado brazo porque siempre entra en las batallas con el brazo derecho desnudo",
  "position": {
-  "start_char": 5763,
-  "end_char": 5833
+  "start_char": 274593,
+  "end_char": 274844
  },
- "sha256": "sha256:14c0a161abae232d573c6bb2e993e3837220bd33b256320620d9af865cc7f345"
+ "sha256": "sha256:7ae0e2cd174d4c15c8f829e35bd37d9a17fc2342aab0f42d8a3611c946378432"
 }

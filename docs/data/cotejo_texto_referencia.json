@@ -18,7 +18,7 @@
    "tipo": "pasaje",
    "id": "DQ.P1.C08.P0001",
    "contexto": "DQ.P1.C08",
-   "palabras_ok": 1,
+   "palabras_ok": 14,
    "palabras_totales": 14,
    "estado": "OK"
   },
@@ -50,8 +50,8 @@
    "tipo": "pasaje",
    "id": "DQ.P1.C08.P0005",
    "contexto": "DQ.P1.C08",
-   "palabras_ok": 18,
-   "palabras_totales": 58,
+   "palabras_ok": 53,
+   "palabras_totales": 53,
    "estado": "OK"
   },
   {
@@ -146,7 +146,7 @@
    "tipo": "pasaje",
    "id": "DQ.P1.C18.P0001",
    "contexto": "DQ.P1.C18",
-   "palabras_ok": 27,
+   "palabras_ok": 42,
    "palabras_totales": 42,
    "estado": "OK"
   },
@@ -186,7 +186,7 @@
    "tipo": "pasaje",
    "id": "DQ.P2.C74.P0003",
    "contexto": "DQ.P2.C74",
-   "palabras_ok": 8,
+   "palabras_ok": 26,
    "palabras_totales": 26,
    "estado": "OK"
   },
@@ -202,7 +202,7 @@
    "tipo": "pasaje",
    "id": "DQ.P1.C06.P0004",
    "contexto": "DQ.P1.C06",
-   "palabras_ok": 25,
+   "palabras_ok": 28,
    "palabras_totales": 28,
    "estado": "OK"
   },
@@ -218,7 +218,7 @@
    "tipo": "pasaje",
    "id": "DQ.P1.C06.P0006",
    "contexto": "DQ.P1.C06",
-   "palabras_ok": 8,
+   "palabras_ok": 42,
    "palabras_totales": 42,
    "estado": "OK"
   },
@@ -250,7 +250,7 @@
    "tipo": "pasaje",
    "id": "DQ.P1.C11.P0005",
    "contexto": "DQ.P1.C11",
-   "palabras_ok": 6,
+   "palabras_ok": 30,
    "palabras_totales": 30,
    "estado": "OK"
   },
@@ -290,7 +290,7 @@
    "tipo": "pasaje",
    "id": "DQ.P2.C01.P0002",
    "contexto": "DQ.P2.C01",
-   "palabras_ok": 3,
+   "palabras_ok": 38,
    "palabras_totales": 38,
    "estado": "OK"
   },
@@ -323,7 +323,7 @@
    "id": "DQ.P2.C74.P0006",
    "contexto": "DQ.P2.C74",
    "palabras_ok": 34,
-   "palabras_totales": 38,
+   "palabras_totales": 34,
    "estado": "OK"
   },
   {
@@ -418,8 +418,8 @@
    "tipo": "evidencia",
    "id": "DQ.Q.000112",
    "contexto": "DQ.P1.C08.E01",
-   "palabras_ok": 13,
-   "palabras_totales": 17,
+   "palabras_ok": 12,
+   "palabras_totales": 12,
    "estado": "OK"
   },
   {
@@ -442,7 +442,7 @@
    "tipo": "evidencia",
    "id": "DQ.Q.000203",
    "contexto": "DQ.P1.C06.E01",
-   "palabras_ok": 18,
+   "palabras_ok": 21,
    "palabras_totales": 21,
    "estado": "OK"
   },
@@ -466,7 +466,7 @@
    "tipo": "evidencia",
    "id": "DQ.Q.000206",
    "contexto": "DQ.P1.C06.E01",
-   "palabras_ok": 1,
+   "palabras_ok": 25,
    "palabras_totales": 25,
    "estado": "OK"
   },
@@ -474,7 +474,7 @@
    "tipo": "evidencia",
    "id": "DQ.Q.000207",
    "contexto": "DQ.P1.C06.E01",
-   "palabras_ok": 1,
+   "palabras_ok": 15,
    "palabras_totales": 15,
    "estado": "OK"
   },
@@ -530,7 +530,7 @@
    "tipo": "evidencia",
    "id": "DQ.Q.000213",
    "contexto": "DQ.P1.C11.E01",
-   "palabras_ok": 6,
+   "palabras_ok": 22,
    "palabras_totales": 22,
    "estado": "OK"
   },
@@ -546,7 +546,7 @@
    "tipo": "evidencia",
    "id": "DQ.Q.000215",
    "contexto": "DQ.P1.C11.E01",
-   "palabras_ok": 14,
+   "palabras_ok": 22,
    "palabras_totales": 22,
    "estado": "OK"
   },
@@ -562,7 +562,7 @@
    "tipo": "evidencia",
    "id": "DQ.Q.000217",
    "contexto": "DQ.P1.C18.E01",
-   "palabras_ok": 10,
+   "palabras_ok": 17,
    "palabras_totales": 17,
    "estado": "OK"
   },
@@ -578,7 +578,7 @@
    "tipo": "evidencia",
    "id": "DQ.Q.000219",
    "contexto": "DQ.P1.C18.E01",
-   "palabras_ok": 4,
+   "palabras_ok": 15,
    "palabras_totales": 15,
    "estado": "OK"
   },
@@ -586,7 +586,7 @@
    "tipo": "evidencia",
    "id": "DQ.Q.000220",
    "contexto": "DQ.P1.C18.E01",
-   "palabras_ok": 1,
+   "palabras_ok": 26,
    "palabras_totales": 26,
    "estado": "OK"
   },
@@ -650,7 +650,7 @@
    "tipo": "evidencia",
    "id": "DQ.Q.000228",
    "contexto": "DQ.P2.C01.E01",
-   "palabras_ok": 3,
+   "palabras_ok": 24,
    "palabras_totales": 24,
    "estado": "OK"
   },
@@ -706,7 +706,7 @@
    "tipo": "evidencia",
    "id": "DQ.Q.000235",
    "contexto": "DQ.P2.C74.E01",
-   "palabras_ok": 6,
+   "palabras_ok": 18,
    "palabras_totales": 18,
    "estado": "OK"
   },
@@ -722,7 +722,7 @@
    "tipo": "evidencia",
    "id": "DQ.Q.000237",
    "contexto": "DQ.P2.C74.E01",
-   "palabras_ok": 8,
+   "palabras_ok": 26,
    "palabras_totales": 26,
    "estado": "OK"
   },

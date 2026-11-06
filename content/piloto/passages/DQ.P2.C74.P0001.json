@@ -2,12 +2,12 @@
  "id": "DQ.P2.C74.P0001",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P2.C74",
- "anchor": "EPUB 2.74.xhtml; extracto verbatim",
- "text_original": "Verdaderamente se muere, y verdaderamente está cuerdo Alonso Quijano el Bueno; bien podemos entrar para que haga su testamento",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 2103451-2103578; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 2.74.xhtml; extracto verbatim",
+ "text_original": "Verdaderamente se muere, y verdaderamente está cuerdo Alonso Quijano el\nBueno; bien podemos entrar para que haga su testamento.",
  "text_indexable": "verdaderamente se muere y verdaderamente está cuerdo alonso quijano el bueno bien podemos entrar para que haga su testamento",
  "position": {
-  "start_char": 5624,
-  "end_char": 5694
+  "start_char": 2103451,
+  "end_char": 2103578
  },
- "sha256": "sha256:d7f3bd8aaf4b26fb3525103ce45a0d45f05aa2656f63ce26a587ad69a0725566"
+ "sha256": "sha256:fa00a2b045d22ef1563fc217fb30f5baf992987312251f8dfc2a6e4ede4320a2"
 }

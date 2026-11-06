@@ -2,12 +2,12 @@
  "id": "DQ.P2.C74.P0003",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P2.C74",
- "anchor": "EPUB 2.74.xhtml; extracto verbatim",
- "text_original": "Yace aquí el hidalgo fuerte, que á tanto extremo llegó de valiente, que se advierte que la muerte no triunfó de su vida con su muerte",
- "text_indexable": "yace aquí el hidalgo fuerte que á tanto extremo llegó de valiente que se advierte que la muerte no triunfó de su vida con su muerte",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 2109450-2109583; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 2.74.xhtml; extracto verbatim",
+ "text_original": "Yace aquí el Hidalgo fuerte\nque a tanto estremo llegó\nde valiente, que se advierte\nque la muerte no triunfó\nde su vida con su muerte.",
+ "text_indexable": "yace aquí el hidalgo fuerte que a tanto estremo llegó de valiente que se advierte que la muerte no triunfó de su vida con su muerte",
  "position": {
-  "start_char": 11607,
-  "end_char": 11677
+  "start_char": 2109450,
+  "end_char": 2109583
  },
- "sha256": "sha256:7ddba2cfcbd4f5b1e1bc55324ed4b8d864e87be48652de23d851731cdbf0d113"
+ "sha256": "sha256:8f71182f0eff6e9de9d1029761061772aeabd2323c7e01cc2c257da07683dec3"
 }

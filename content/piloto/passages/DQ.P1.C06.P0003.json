@@ -2,12 +2,12 @@
  "id": "DQ.P1.C06.P0003",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C06",
- "anchor": "EPUB 1006.xhtml; extracto verbatim",
- "text_original": "como á único en su arte, se debe perdonar. —Así es verdad, dijo el cura, y por esa razón se le otorga la vida por ahora",
- "text_indexable": "como á único en su arte se debe perdonar así es verdad dijo el cura y por esa razón se le otorga la vida por ahora",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 100043-100166; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1006.xhtml; extracto verbatim",
+ "text_original": "como a único\nen su arte, se debe perdonar.\n\n— Así es verdad —dijo el cura—, y por esa razón se le otorga la vida por\nahora.",
+ "text_indexable": "como a único en su arte se debe perdonar así es verdad dijo el cura y por esa razón se le otorga la vida por ahora",
  "position": {
-  "start_char": 1942,
-  "end_char": 2061
+  "start_char": 100043,
+  "end_char": 100166
  },
- "sha256": "sha256:b5cadbcd81486668a3e10880822a208c13f468c15726d9045e80b1ae16739ab8"
+ "sha256": "sha256:c4b20fd22d72c67a01536217d6cccd1262b4b969b50b3ce2b2420f5b4a503e52"
 }

@@ -182,7 +182,7 @@ for pid, (fich, cita, nota) in CITAS.items():
         idx, _ = find_pos(fich, frag)
         start = max(0, idx - 2)
         end = start + len("En esto descubrieron treinta ó cuarenta molinos de viento que hay en aquel campo")
-        text_orig = "E" + cita
+        text_orig = cita  # la capitular «E» es la primera letra de «En»: no duplicar
     files["passages"].append(w("passages/%s.json" % passage_id, {
         "id": passage_id, "contract_version": CV, "chapter_id": cid,
         "anchor": "EPUB %s; %s" % (fich, nota or "extracto verbatim"),

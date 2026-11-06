@@ -2,12 +2,12 @@
  "id": "DQ.P1.C18.P0002",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C18",
- "anchor": "EPUB 1.18.xhtml; extracto verbatim",
- "text_original": "llégate á mí y mira cuántas muelas y dientes me faltan, que me parece que no me ha quedado ninguno en la boca",
- "text_indexable": "llégate á mí y mira cuántas muelas y dientes me faltan que me parece que no me ha quedado ninguno en la boca",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 284694-284804; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1.18.xhtml; extracto verbatim",
+ "text_original": "llégate a mí y mira cuántas muelas y dientes me faltan, que\nme parece que no me ha quedado ninguno en la boca.",
+ "text_indexable": "llégate a mí y mira cuántas muelas y dientes me faltan que me parece que no me ha quedado ninguno en la boca",
  "position": {
-  "start_char": 15851,
-  "end_char": 15921
+  "start_char": 284694,
+  "end_char": 284804
  },
- "sha256": "sha256:6cbce1ab6d1e34c4003ef6cfe50e8d2ab50f7b5dc15192a595826862e99b73f8"
+ "sha256": "sha256:9d5c5a02c716851575a5432b9aa333c000b74a38cf406d504d63de9f24f48538"
 }

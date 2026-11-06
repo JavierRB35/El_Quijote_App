@@ -2,12 +2,12 @@
  "id": "DQ.P1.C08.P0002",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C08",
- "anchor": "EPUB 1008.xhtml; extracto verbatim",
- "text_original": "porque ves allí, amigo Sancho Panza, donde se descubren treinta ó pocos más desaforados gigantes, con quien pienso hacer batalla y quitarles á todos las vidas, con cuyos despojos comenzaremos á enriquecer; que ésta es buena guerra, y es gran servicio de Dios quitar tan mala simiente de sobre la faz de la tierra",
- "text_indexable": "porque ves allí amigo sancho panza donde se descubren treinta ó pocos más desaforados gigantes con quien pienso hacer batalla y quitarles á todos las vidas con cuyos despojos comenzaremos á enriquecer que ésta es buena guerra y es gran servicio de dios quitar tan mala simiente de sobre la faz de la tierra",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 122639-122954; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1008.xhtml; extracto verbatim",
+ "text_original": "porque ves allí, amigo Sancho Panza, donde se descubren treinta, o pocos\nmás, desaforados gigantes, con quien pienso hacer batalla y quitarles a\ntodos las vidas, con cuyos despojos comenzaremos a enriquecer; que ésta es\nbuena guerra, y es gran servicio de Dios quitar tan mala simiente de sobre\nla faz de la tierra.",
+ "text_indexable": "porque ves allí amigo sancho panza donde se descubren treinta o pocos más desaforados gigantes con quien pienso hacer batalla y quitarles a todos las vidas con cuyos despojos comenzaremos a enriquecer que ésta es buena guerra y es gran servicio de dios quitar tan mala simiente de sobre la faz de la tierra",
  "position": {
-  "start_char": 412,
-  "end_char": 482
+  "start_char": 122639,
+  "end_char": 122954
  },
- "sha256": "sha256:accc260cd2c220b438659e495228ea516d50899f64e402ecf91e4db45357e744"
+ "sha256": "sha256:2488af1ca98330ace7c86d46866913e8ea521dd4af8563d17b4783d2a07213a3"
 }

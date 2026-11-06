@@ -2,12 +2,12 @@
  "id": "DQ.P1.C11.P0004",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C11",
- "anchor": "EPUB 2011.xhtml; extracto verbatim",
- "text_original": "alzar la mano, y alcanzarle de las robustas encinas, que liberalmente les estaban convidando con su dulce y sazonado fruto",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 164080-164202; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 2011.xhtml; extracto verbatim",
+ "text_original": "alzar la mano y alcanzarle de las robustas encinas, que\nliberalmente les estaban convidando con su dulce y sazonado fruto.",
  "text_indexable": "alzar la mano y alcanzarle de las robustas encinas que liberalmente les estaban convidando con su dulce y sazonado fruto",
  "position": {
-  "start_char": 3732,
-  "end_char": 3854
+  "start_char": 164080,
+  "end_char": 164202
  },
- "sha256": "sha256:bede9d3b5d36d035aaf06bcd74825c122f2bf90edf3d106ff83c6595a534e99a"
+ "sha256": "sha256:b53eb561ef70520c002a851a8ce9ac6d9a7836d7d8ec1e32b5f2dfa84070d840"
 }

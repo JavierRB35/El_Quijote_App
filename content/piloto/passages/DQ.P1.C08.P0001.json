@@ -2,12 +2,12 @@
  "id": "DQ.P1.C08.P0001",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C08",
- "anchor": "EPUB 1008.xhtml; capitular «E» en PNG (A.png); fragmento localizado sobre texto plano del EPUB",
- "text_original": "EEn esto descubrieron treinta ó cuarenta molinos de viento que hay en aquel campo",
- "text_indexable": "een esto descubrieron treinta ó cuarenta molinos de viento que hay en aquel campo",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 122425-122507; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1008.xhtml; capitular «E» en PNG (A.png); fragmento localizado sobre texto plano del EPUB",
+ "text_original": "En esto, descubrieron treinta o cuarenta molinos de viento que hay en aquel\ncampo",
+ "text_indexable": "en esto descubrieron treinta o cuarenta molinos de viento que hay en aquel campo",
  "position": {
-  "start_char": 203,
-  "end_char": 283
+  "start_char": 122425,
+  "end_char": 122507
  },
- "sha256": "sha256:57c192428766d447bc094e51acce94706a516afa07de209868eff965b1f300e0"
+ "sha256": "sha256:607d4ac9a043ed4dd690438ff51627782c9eee24d59a07e8693fabd197d4026e"
 }

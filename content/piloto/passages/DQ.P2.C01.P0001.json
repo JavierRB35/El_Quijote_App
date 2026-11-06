@@ -2,12 +2,12 @@
  "id": "DQ.P2.C01.P0001",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P2.C01",
- "anchor": "EPUB 2.1.xhtml; extracto verbatim",
- "text_original": "el cura y el barbero se estuvieron casi un mes sin verle, por no renovarle y traerle á la memoria las cosas pasadas",
- "text_indexable": "el cura y el barbero se estuvieron casi un mes sin verle por no renovarle y traerle á la memoria las cosas pasadas",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 1053362-1053478; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 2.1.xhtml; extracto verbatim",
+ "text_original": "el cura y el barbero se estuvieron casi un mes\nsin verle, por no renovarle y traerle a la memoria las cosas pasadas",
+ "text_indexable": "el cura y el barbero se estuvieron casi un mes sin verle por no renovarle y traerle a la memoria las cosas pasadas",
  "position": {
-  "start_char": 247,
-  "end_char": 317
+  "start_char": 1053362,
+  "end_char": 1053478
  },
- "sha256": "sha256:10abe06bd9e8c593d733d614dfdde08db564a656dfcd02c37d169e7b0bf66114"
+ "sha256": "sha256:1a6376c3feccce96c2c7fdf0a1d393722db76e1113ffb2c1ca93bf29f047b971"
 }

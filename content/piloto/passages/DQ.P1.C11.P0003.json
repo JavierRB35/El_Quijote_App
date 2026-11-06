@@ -2,12 +2,12 @@
  "id": "DQ.P1.C11.P0003",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C11",
- "anchor": "EPUB 2011.xhtml; extracto verbatim",
- "text_original": "tendieron sobre las zaleas gran cantidad de bellotas avellanadas, y juntamente pusieron un medio queso, más duro que si fuera hecho de argamasa",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 163137-163281; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 2011.xhtml; extracto verbatim",
+ "text_original": "tendieron sobre las zaleas gran cantidad de\nbellotas avellanadas, y juntamente pusieron un medio queso, más duro que si\nfuera hecho de argamasa.",
  "text_indexable": "tendieron sobre las zaleas gran cantidad de bellotas avellanadas y juntamente pusieron un medio queso más duro que si fuera hecho de argamasa",
  "position": {
-  "start_char": 2747,
-  "end_char": 2890
+  "start_char": 163137,
+  "end_char": 163281
  },
- "sha256": "sha256:d89af503d15fba3f44372ee189e6a0369a8590b55cece49997572ef5f42dbf6e"
+ "sha256": "sha256:c9ba64c4836a0848d04ba36bde2802d29fdfa3668545120e9d7696635a785081"
 }

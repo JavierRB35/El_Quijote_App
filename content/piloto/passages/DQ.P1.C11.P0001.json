@@ -2,12 +2,12 @@
  "id": "DQ.P1.C11.P0001",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C11",
- "anchor": "EPUB 2011.xhtml; extracto verbatim",
- "text_original": "¡Dichosa edad y siglos dichosos aquellos á quien los antiguos pusieron nombre de dorados!",
- "text_indexable": "dichosa edad y siglos dichosos aquellos á quien los antiguos pusieron nombre de dorados",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 163631-163719; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 2011.xhtml; extracto verbatim",
+ "text_original": "Dichosa edad y siglos dichosos aquéllos a quien los antiguos pusieron\nnombre de dorados",
+ "text_indexable": "dichosa edad y siglos dichosos aquéllos a quien los antiguos pusieron nombre de dorados",
  "position": {
-  "start_char": 3282,
-  "end_char": 3352
+  "start_char": 163631,
+  "end_char": 163719
  },
- "sha256": "sha256:2b163f263550b321bc7e010c6c2106a6fe7e843e828ca64669a5aa9e29b1a575"
+ "sha256": "sha256:a0d2c0f77c8dbede2b41cb370ae3e3e1cd907ae5dfedcf555624fc8e1e6513f7"
 }

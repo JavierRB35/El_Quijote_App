@@ -2,12 +2,12 @@
  "id": "DQ.P1.C08.P0010",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C08",
- "anchor": "EPUB 1008.xhtml; extracto verbatim",
- "text_original": "la soberbia de vuestros robadores yace por el suelo, derribada por este mi fuerte brazo; y porque no penéis por saber el nombre de vuestro libertador, sabed que yo me llamo don Quijote de la Mancha, caballero andante y aventurero, y cautivo de la sin par y hermosa doña Dulcinea del Toboso",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 134287-134578; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1008.xhtml; extracto verbatim",
+ "text_original": "la soberbia de vuestros robadores yace por el\nsuelo, derribada por este mi fuerte brazo; y, porque no penéis por saber el\nnombre de vuestro libertador, sabed que yo me llamo don Quijote de la\nMancha, caballero andante y aventurero, y cautivo de la sin par y hermosa\ndoña Dulcinea del Toboso",
  "text_indexable": "la soberbia de vuestros robadores yace por el suelo derribada por este mi fuerte brazo y porque no penéis por saber el nombre de vuestro libertador sabed que yo me llamo don quijote de la mancha caballero andante y aventurero y cautivo de la sin par y hermosa doña dulcinea del toboso",
  "position": {
-  "start_char": 12037,
-  "end_char": 12107
+  "start_char": 134287,
+  "end_char": 134578
  },
- "sha256": "sha256:75f99de6da5bdc9bd80d0e9546a3a90b01eba0d7d5d1a0ce33cc682a16071416"
+ "sha256": "sha256:07a4ec2ef09d52caaf4155a24c35a587f1009b55661cd33bb4a2111560816508"
 }

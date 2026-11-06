@@ -19,13 +19,13 @@ El cotejo de integridad detectó **variantes reales entre ediciones**: el EPUB T
 
 Fuentes verificadas: [Instituto Cervantes — ed. 2004](https://cervantes.org/es/sobre-nosotros/publicaciones/don-quijote-mancha-2004) · [ed. revisada 2015](https://cervantes.org/es/sobre-nosotros/publicaciones/don-quijote-mancha-2015) · [Portal Quijotes de la BNE](https://www.bne.es/es/quijote) · [BVMC — Colección Cervantina IV Centenario](https://www.cervantesvirtual.com/obra/iv-centenario-de-don-quijote-de-la-mancha-contenidos-coleccion-cervantina). Condiciones BVMC: consulta pública y difusión no comercial citando la fuente; explotación con ánimo de lucro requiere autorización — coherente con DC-11 (proyecto personal no comercial).
 
-## 3. Política de citas (vinculante para el banco)
+## 3. Política de citas (vinculante para el banco — ACTUALIZADA 2026-11-06 por orden del propietario)
 
-1. Toda cita literal del juego proviene del **texto de trabajo** (lo que lee el jugador) y su `evidence.quote` coincide con él, byte a byte.
-2. **Ninguna pregunta pasa a `review_state: revisada` sin cotejo contra la edición de referencia.** Si el EPUB abrevia o altera un pasaje, la cita se ajusta o se marca con la variante documentada.
-3. Los localizadores son **universales** (parte, capítulo) + localizador del pasaje del EPUB; nunca dependen de paginación.
-4. Pasajes ausentes en el EPUB (caso 171): la acuarela puede mostrarse, con nota de lector «pasaje completo en la edición de referencia», y las preguntas sobre él se verifican contra la referencia antes de aprobarse.
-5. La edición de referencia nunca se sube al repositorio ni al instalador.
+1. **Base literal de la batería de preguntas: el texto íntegro PG 2000 (`DQ.ED.0003`/`DQ.SRC.0005`)** — toda `evidence.quote` y todo `text_original` de pasaje de la batería está extraído VERBATIM del fichero almacenado, con offsets reales (`position`) y hash propio (migración `migrar_bateria_a_gutenberg.py`, alineación tolerante Damerau-1/2).
+2. **El lector sigue mostrando el EPUB Tusell (`DQ.ED.0001`)**; la correspondencia EPUB↔PG queda registrada en el campo `anchor` de cada pasaje. Si el jugador compara cita y lector, las diferencias son variantes de edición documentadas (Fristón/Frestón, primer/primero, Pentapolín/Pentapolen, echalde/echadle, quemara/quemare, pintiquinestra/pintiquiniestra, interes/interese, propios/proprios, distraída/destraida — registro en `docs/data/cotejo_texto_referencia.json`).
+3. **Cotejo final contra la edición académica (Rico/IC, `DQ.ED.0002`)**: requisito para pasar a `revisada`; las variantes de PG frente al texto crítico se anotarán en `evidence` cuando sean relevantes para la respuesta.
+4. Los localizadores son **universales** (parte, capítulo) + offset del pasaje en PG + correspondencia del EPUB; nunca dependen de paginación.
+5. La edición académica nunca se sube al repositorio ni al instalador; PG 2000 conserva su cabecera de licencia íntegra.
 
 ## 4. Registro formal
 

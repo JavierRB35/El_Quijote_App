@@ -2,12 +2,12 @@
  "id": "DQ.P1.C06.P0007",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C06",
- "anchor": "EPUB 1006.xhtml; extracto verbatim",
- "text_original": "propone algo y no concluye nada",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 110900-110933; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1006.xhtml; extracto verbatim",
+ "text_original": "propone algo, y no concluye nada",
  "text_indexable": "propone algo y no concluye nada",
  "position": {
-  "start_char": 12693,
-  "end_char": 12724
+  "start_char": 110900,
+  "end_char": 110933
  },
- "sha256": "sha256:aa496ec2b647513a94db9fb653eb6df5a4cbcadbb0cb2afa2116bf746773dd90"
+ "sha256": "sha256:3ced0e136f154cc154c6cd11c03498d609baafcf364d9b3942d5bc72dfeef19e"
 }

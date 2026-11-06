@@ -1,0 +1,19 @@
+{
+ "id": "DQ.ED.0003",
+ "contract_version": "1.0.0",
+ "title": "Don Quijote de la Mancha — texto íntegro Project Gutenberg eBook #2000",
+ "editor": "Project Gutenberg (voluntariado anónimo y Joaquin Cuenca Abela, créditos de digitalización)",
+ "year": 2026,
+ "source_id": "DQ.SRC.0005",
+ "digital_version": "content/textos/gutenberg_2000/El_Quijote.txt (copia íntegra almacenada)",
+ "rights_status": "verificada",
+ "orthographic_rules": "modernizada",
+ "checksum": "sha256:afa1a638df7a27c343ee2d786036f5b52a0669fb75c09ac3ae594ff04fb6e239",
+ "provenance": "Copia sin alteraciones con cabecera PG License (feature/cont-fuente-gutenberg-2000-20261105).",
+ "notes": "Base textual de la BATERÍA DE PREGUNTAS por orden del propietario (2026-11-05). El lector sigue mostrando DQ.ED.0001 (EPUB Tusell).",
+ "review": {
+  "state": "documentada",
+  "reviewer_role": "editorial",
+  "date": "2026-11-06"
+ }
+}

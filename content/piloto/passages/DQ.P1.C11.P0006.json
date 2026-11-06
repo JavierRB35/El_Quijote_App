@@ -2,12 +2,12 @@
  "id": "DQ.P1.C11.P0006",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C11",
- "anchor": "EPUB 2011.xhtml; extracto verbatim",
- "text_original": "La ley del encaje aun no se había sentado en el entendimiento del juez, porque entonces no había qué juzgar",
- "text_indexable": "la ley del encaje aun no se había sentado en el entendimiento del juez porque entonces no había qué juzgar",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 166153-166261; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 2011.xhtml; extracto verbatim",
+ "text_original": "La ley del encaje aún no se había\nsentado en el entendimiento del juez, porque entonces no había qué juzgar",
+ "text_indexable": "la ley del encaje aún no se había sentado en el entendimiento del juez porque entonces no había qué juzgar",
  "position": {
-  "start_char": 5805,
-  "end_char": 5912
+  "start_char": 166153,
+  "end_char": 166261
  },
- "sha256": "sha256:497e96e2ed109a4bf3a08f87798f856496a63bd3b52d9d0ef66cc751a469ccf1"
+ "sha256": "sha256:b2c274c827ecc1cb940a45ad903ab0b54bec8ea1ad00ebc5bf0243a51be6baf5"
 }

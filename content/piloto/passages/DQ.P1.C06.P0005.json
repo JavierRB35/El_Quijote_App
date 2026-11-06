@@ -2,12 +2,12 @@
  "id": "DQ.P1.C06.P0005",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C06",
- "anchor": "EPUB 1006.xhtml; extracto verbatim",
- "text_original": "Esa Oliva se haga luego rajas y se queme, que aun no queden della las cenizas; y esa Palma de Ingalaterra se guarde y se conserve como á cosa única",
- "text_indexable": "esa oliva se haga luego rajas y se queme que aun no queden della las cenizas y esa palma de ingalaterra se guarde y se conserve como á cosa única",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 104355-104503; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1006.xhtml; extracto verbatim",
+ "text_original": "Esa oliva se haga luego rajas y se queme, que aun no queden della las\ncenizas; y esa palma de Ingalaterra se guarde y se conserve como a cosa\núnica",
+ "text_indexable": "esa oliva se haga luego rajas y se queme que aun no queden della las cenizas y esa palma de ingalaterra se guarde y se conserve como a cosa única",
  "position": {
-  "start_char": 6206,
-  "end_char": 6353
+  "start_char": 104355,
+  "end_char": 104503
  },
- "sha256": "sha256:14b5143cdb86d26b550c3562931c1d1e7cb66ff6e4ef053f549d2bc6e61485dc"
+ "sha256": "sha256:f4fb5cfd6b16b2ab010ab4ba67d427db4100f1e85ece23cfd9485d82c9aa31e6"
 }

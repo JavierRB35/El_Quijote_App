@@ -2,12 +2,12 @@
  "id": "DQ.P1.C08.P0007",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C08",
- "anchor": "EPUB 1008.xhtml; extracto verbatim",
- "text_original": "Estando en estas razones, asomaron por el camino dos frailes de la orden de San Benito, caballeros sobre dos dromedarios; que no eran más pequeñas dos mulas en que venían",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 130490-130661; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1008.xhtml; extracto verbatim",
+ "text_original": "Estando en estas razones, asomaron por el camino dos frailes de la orden de\nSan Benito, caballeros sobre dos dromedarios: que no eran más pequeñas dos\nmulas en que venían.",
  "text_indexable": "estando en estas razones asomaron por el camino dos frailes de la orden de san benito caballeros sobre dos dromedarios que no eran más pequeñas dos mulas en que venían",
  "position": {
-  "start_char": 8271,
-  "end_char": 8341
+  "start_char": 130490,
+  "end_char": 130661
  },
- "sha256": "sha256:70fc1549affec97512349dcbe284e816a2446dee9d15e330cd6dc9821b4fa02e"
+ "sha256": "sha256:63dc3965d3021558ba0228ddc4f51c1cf44b39bf37e2a79ee12dd88745fa141c"
 }

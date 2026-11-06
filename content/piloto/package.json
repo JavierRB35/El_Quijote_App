@@ -6,7 +6,8 @@
  "files": {
   "editions": [
    "editions/DQ.ED.0001.json",
-   "editions/DQ.ED.0002.json"
+   "editions/DQ.ED.0002.json",
+   "editions/DQ.ED.0003.json"
   ],
   "chapters": [
    "chapters/DQ.P1.C06.json",
@@ -211,6 +212,6 @@
   "discoveries": 14,
   "passages": 39,
   "museum_items": 7,
-  "editions": 2
+  "editions": 3
  }
 }

@@ -2,12 +2,12 @@
  "id": "DQ.P1.C18.P0003",
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C18",
- "anchor": "EPUB 1.18.xhtml; extracto verbatim",
- "text_original": "el poderoso duque de Nerbia, Espartafilardo del Bosque, que trae por empresa en el escudo una esparraguera, con una letra en castellano que dice así: Rastrea mi suerte",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 278039-278207; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1.18.xhtml; extracto verbatim",
+ "text_original": "el poderoso duque de\nNerbia, Espartafilardo del Bosque, que trae por empresa en el escudo una\nesparraguera, con una letra en castellano que dice así: Rastrea mi suerte.",
  "text_indexable": "el poderoso duque de nerbia espartafilardo del bosque que trae por empresa en el escudo una esparraguera con una letra en castellano que dice así rastrea mi suerte",
  "position": {
-  "start_char": 9182,
-  "end_char": 9349
+  "start_char": 278039,
+  "end_char": 278207
  },
- "sha256": "sha256:0cddd20586ee287ca51f0878f1faf7feaabb22fa21facb6de7dbe1044d7aa5f5"
+ "sha256": "sha256:7ee75412245e5ea3daeea25c6c6d71abff19cb69afb2368866c7c7fbf8ec390e"
 }

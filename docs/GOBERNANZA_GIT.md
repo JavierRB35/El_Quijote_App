@@ -61,15 +61,19 @@ No se difieren pushes «para más tarde». Si un bloque está a medias, se commi
 
 ## 8. Integración continua del contrato (activo desde 2026-11-06)
 
-Autorizada por el propietario («validen el contrato técnico antes de integrarlo definitivamente, en GitHub»). Workflow **`contrato`** (`.github/workflows/contrato.yml`, windows-latest, encargo §5.2) que se ejecuta **en cada Pull Request y en cada push a `main`**:
+Autorizada por el propietario («validen el contrato técnico antes de integrarlo definitivamente, en GitHub»). Ambos equipos implementaron CI en paralelo; se **consolidó en un único workflow** por eficiencia (los runners de Windows consumen el doble de minutos y la cuenta ya agotó su cuota de almacenamiento de Actions).
 
-1. Suite de contrato completa (fixtures válidos + casos negativos §6.3.7) — exige PASS.
-2. Paquete real del piloto (`content/piloto`) contra los esquemas canónicos.
-3. Criterio ADR-0001.1 (FTS5 con castellano áureo).
+**Workflow único `validar-contrato`** (`.github/workflows/validar-contrato.yml`, ubuntu-latest — la validación es multiplataforma; el «sobre Windows» del encargo §5.2 aplica a las pruebas de la aplicación, no a los datos) que se ejecuta **en cada Pull Request y en cada push a `main`**:
 
-El veredicto de cada paso queda como evidencia en el log del job (los informes JSON se generan también en el runner). No se suben artefactos: la cuota de almacenamiento de Actions de la cuenta está agotada y un fallo de cuota no debe poder tumbar la compuerta del contrato.
+1. Suite canónica de contrato (fixtures válidos + casos negativos §6.3.7) — exige PASS.
+2. Meta-validación de esquemas (`check_schema` draft 2020-12, 16/16).
+3. **Todos** los paquetes editoriales reales de `content/` contra los esquemas canónicos.
+4. Cotejo textual de la batería contra el texto de referencia almacenado.
+5. Criterio ADR-0001.1 (FTS5 con castellano áureo).
 
-**Protección de `main`:** el check `contrato` es **obligatorio para fusionar cualquier PR**; force-push y borrado de la rama quedan prohibidos técnicamente. Las integraciones directas a `main` expresamente autorizadas por el propietario (baterías artísticas documentadas más abajo) siguen permitidas y quedan validadas a posteriori por el mismo workflow en el push. Elevar a «PR obligatoria para todo» (incluido el propietario) es un cambio de un comando que queda a decisión expresa del propietario.
+El veredicto de cada paso queda como evidencia en el log del job. No se suben artefactos: la cuota de almacenamiento de Actions de la cuenta está agotada y un fallo de cuota no debe poder tumbar la compuerta del contrato.
+
+**Protección de `main`:** el check «Validación del contrato editorial-técnico» es **obligatorio para fusionar cualquier PR**; force-push y borrado de la rama quedan prohibidos técnicamente. Las integraciones directas a `main` expresamente autorizadas por el propietario (baterías artísticas documentadas más abajo) siguen permitidas y quedan validadas a posteriori por el mismo workflow en el push. Elevar a «PR obligatoria para todo» (incluido el propietario) es un cambio de un comando que queda a decisión expresa del propietario.
 
 **Ampliación de excepción (2026-11-06, batería visual 06):** a petición expresa del propietario, se incorporan seis WebP optimizados de nuevas escenas originales IA al árbol por parte/capítulo en `main`, alcanzando **65 activos**. Se mantienen las restricciones generales para medios de terceros y los controles de integridad del manifiesto; los PNG maestros permanecen fuera de Git.
 

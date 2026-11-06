@@ -53,3 +53,15 @@
 **Dependencias críticas:** no convertir el lector íntegro en una narración interminable; no exigir el empleo de cada imagen sin criterio editorial; no crear texto histórico sin fuentes; no presentar arte generado por IA como prueba documental; no introducir respuestas escritas; no iniciar producción masiva de estos modos antes de las validaciones y autorización de fase.
 
 **Decisiones de diseño aún abiertas (no bloquean su incorporación a la hoja de ruta):** duración objetivo de la experiencia una vez medido el piloto; estructura final de las unidades narrativas y temáticas; voz y densidad audiovisual definitiva; cobertura temática y profundidad histórica tras curaduría; versión final de los esquemas. Son propuestas para los equipos, no decisiones del propietario ya cerradas.
+
+
+## 4. Actualización de coordinación — Biblia Narrativa y TS-001 (2026-11-06)
+
+**Referencias vinculantes:** DC-21, DC-22 en `VISION_Y_DECISIONES.md` y [Biblia Narrativa por profesionales](BIBLIA_NARRATIVA_MODO_HISTORIA_HOJA_RUTA_ROLES.md). El texto de este epígrafe complementa el §1 sin modificar el alcance independiente del Modo Histórico (§2).
+
+- **Adaptación integral selectiva en un modo condensado:** inventario fuente de 126/126 capítulos; guion audiovisual selecciona y condensa con justificación, preservando trama, evolución, humor significativo, marcos de relato y desenlaces. No es lectura audiovisual literal del libro completo.
+- **Narración y puesta en escena:** aventura cinematográfica dramatizada 2.5D, narrador cervantino adaptado, citas originales cotejadas, relatos intercalados de tratamiento mixto, avance automático con controles flexibles.
+- **TS-001 obligatorio:** toda intervención verbal del narrador o personajes tendrá texto escrito siempre visible, legible y vinculado a su voz y hablante, también con audio desactivado, ausente o fallido. No permitir desactivación de la transcripción. Pausa, repetición, retroceso y preferencias de tamaño/contraste sin omitir texto. El texto escrito parte del registro editorial de la intervención y no de una transcripción secundaria divergente.
+- **Recursos:** auditar ilustraciones/recreaciones existentes, derechos, perspectiva y valor expresivo antes de pedir nuevas imágenes; nunca eliminar escena importante por falta de imagen.
+- **Integración:** schema y validador para beats/intervenciones/TS-001 requieren aprobación conjunta CONTENIDOS + DESARROLLO y pruebas QA, sin afirmar implementación previa. Roles R01–R16, hitos H0–H7 y responsabilidades están en la Biblia Narrativa.
+- **Estado:** decisiones de producto cerradas; diseño de esquema, duración y producción audiovisual sujetos a piloto y revisión; Fase 2 no autorizada.

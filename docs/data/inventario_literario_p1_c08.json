@@ -1,0 +1,1272 @@
+{
+  "id": "DQ.P1.C08",
+  "edition_id": "DQ.ED.0001",
+  "part": 1,
+  "chapter": 8,
+  "titulo_fuente": "Capítulo VIII. Del buen suceso que el valeroso don Quijote tuvo en la\nespantable y jamás imaginada aventura de los molinos de viento, con otros\nsucesos dignos de felice recordación",
+  "localizacion_capitulo": {
+    "cap8_cabecera": {
+      "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+      "start_char": 122243,
+      "end_char": 122423,
+      "lineas": "2556-2558"
+    },
+    "nota": "Cabecera del cap. VIII en líneas 2556-2558; el cap. IX arranca en la línea 2864. La línea 2859 («Segunda parte del ingenioso hidalgo…») es subdivisión interna del TXT, no inicio de la Parte II (ver docs/FUENTE_TEXTO_PLANO_GUTENBERG.md)."
+  },
+  "verificacion": {
+    "metodo": "script de verificación: cada localizador se valida contra el TXT normalizado (coincidencia exacta del rango) y contra el catálogo de pasajes",
+    "estado": "PASS",
+    "detalle": "docs/MODELO_INVENTARIO_LITERARIO.md §5; informe de verificación al final de este fichero"
+  },
+  "unidades": [
+    {
+      "unit_id": "DQ.UN.P1.C08.U01",
+      "orden_canonico": 1,
+      "titulo": "Avistamiento de los molinos y discurso del botín",
+      "literary_kind": "HECHO",
+      "segmento_refs": [
+        "DQ.P1.C08.SG01"
+      ],
+      "passage_ids": [
+        "DQ.P1.C08.P0001",
+        "DQ.P1.C08.P0002"
+      ],
+      "pasajes_propuestos": [],
+      "actores": [
+        "DQ.PER.0001",
+        "DQ.PER.0002"
+      ],
+      "hechos": [
+        "Los dos descubren 30-40 molinos de viento en el campo (realidad diegética).",
+        "Don Quijote los percibe como gigantes desaforados y proyecta batalla para quitarles las vidas.",
+        "Justificación doble: enriquecerse con los despojos y servir a Dios quitando «tan mala simiente»."
+      ],
+      "humor": {
+        "presencia": true,
+        "preparacion": "El narrador deja ver la realidad («molinos de viento») antes de la interpretación del hidalgo; el lector sabe desde la primera línea.",
+        "mecanismo": "Equívoco perceptivo con lógica interna impecable: el delirio no es caótico, economiza (despojos) y se justifica en la ética caballeresca (servicio de Dios).",
+        "reaccion": "Aún sin reacción de Sancho (llega en U02); risa del lector por la distancia narrador/personaje.",
+        "registro": "equívoco perceptivo + solemnización paródica"
+      },
+      "dialogos_literales": [
+        {
+          "speaker_id": null,
+          "passage_id": "DQ.P1.C08.P0002",
+          "texto": "porque ves allí, amigo Sancho Panza, donde se descubren treinta, o pocos\nmás, desaforados gigantes, con quien pienso hacer batalla y quitarles a\ntodos las vidas, con cuyos despojos comenzaremos a enriquecer; que ésta es\nbuena guerra, y es gran servicio de Dios quitar tan mala simiente de sobre\nla faz de la tierra.",
+          "motivo_conservacion": "Voz hipergénica del hidalgo; punto exacto de la percepción desviada («treinta, o pocos más, desaforados gigantes») y doble motivación (botín y servicio divino).",
+          "locador": {
+            "anchor": "PG 2000 (DQ.SRC.0005) offset 122639-122954; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1008.xhtml; extracto verbatim",
+            "start_char": 122639,
+            "end_char": 122954
+          }
+        }
+      ],
+      "relato_intercalado": null,
+      "condensacion": null,
+      "arco_emocional": {
+        "DQ.PER.0001": "euforia expansionista: la aventura «va guiando» sus cosas; proyecto de riqueza rápida.",
+        "DQ.PER.0002": "expectante, pendiente de su ínsula prometida (contexto del final de I, 7)."
+      },
+      "relevancia": "ESENCIAL",
+      "spoiler_risk": "NINGUNO",
+      "tratamiento_propuesto": "DRAMATIZACION",
+      "localizacion_verificada": {
+        "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+        "start_char": 122243,
+        "end_char": 122423,
+        "lineas": "2556-2558",
+        "cobertura": "líneas 2560-2568 (P0001-P0002)"
+      },
+      "review_state": "INVENTARIADA"
+    },
+    {
+      "unit_id": "DQ.UN.P1.C08.U02",
+      "orden_canonico": 2,
+      "titulo": "Diálogo de percepciones: gigantes o molinos",
+      "literary_kind": "DIALOGO",
+      "segmento_refs": [
+        "DQ.P1.C08.SG02"
+      ],
+      "passage_ids": [
+        "DQ.P1.C08.P0003"
+      ],
+      "pasajes_propuestos": [
+        {
+          "id_propuesto": "DQ.P1.C08.P0013",
+          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "fragmentos": [
+            {
+              "fragmento": "que_gigantes",
+              "texto": "— ¿Qué gigantes? —dijo Sancho Panza.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 122956,
+                "end_char": 122992,
+                "lineas": "2570-2570"
+              }
+            },
+            {
+              "fragmento": "aquellos_que_alli_ves",
+              "texto": "— Aquellos que allí ves —respondió su amo— de los brazos largos, que los\nsuelen tener algunos de casi dos leguas.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 122994,
+                "end_char": 123107,
+                "lineas": "2572-2573"
+              }
+            }
+          ]
+        },
+        {
+          "id_propuesto": "DQ.P1.C08.P0014",
+          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "fragmentos": [
+            {
+              "fragmento": "bien_parece",
+              "texto": "— Bien parece —respondió don Quijote— que no estás cursado en esto de las\naventuras: ellos son gigantes; y si tienes miedo, quítate de ahí, y ponte\nen oración en el espacio que yo voy a entrar con ellos en fiera y desigual\nbatalla.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 123334,
+                "end_char": 123565,
+                "lineas": "2579-2582"
+              }
+            }
+          ]
+        }
+      ],
+      "actores": [
+        "DQ.PER.0001",
+        "DQ.PER.0002"
+      ],
+      "hechos": [
+        "Sancho pregunta qué gigantes; don Quijote precisa su visión («brazos largos… de casi dos leguas»).",
+        "Sancho corrige con técnica de molinero: aspas volteadas por el viento que mueven la piedra.",
+        "Don Quijote invalida la corrección por no estar Sancho «cursado en esto de las aventuras» y lo despacha a orar."
+      ],
+      "humor": {
+        "presencia": true,
+        "preparacion": "El intercambio se estructura como lección técnica: pregunta, precisión del «caballero», refutación empírica de Sancho.",
+        "mecanismo": "Colisión de dos epistemologías: la evidencia material (aspas, viento, piedra) contra la autoridad del género; la respuesta no discute datos, descalifica la competencia del testigo.",
+        "reaccion": "Sancho no cede; «si tienes miedo, quítate de ahí» invierte la cobardía y prepara la caída de U04.",
+        "registro": "equívoco perceptivo + desacuerdo de registros"
+      },
+      "dialogos_literales": [
+        {
+          "speaker_id": null,
+          "passage_id": "DQ.P1.C08.P0003",
+          "texto": "Mire vuestra merced —respondió Sancho— que aquellos que allí se parecen no\nson gigantes, sino molinos de viento, y lo que en ellos parecen brazos son\nlas aspas, que, volteadas del viento, hacen andar la piedra del molino.",
+          "motivo_conservacion": "Definición de voz de Sancho (humildad del «mire vuestra merced» + precisión técnica del molino) y punto exacto del equívoco: brazos=aspas.",
+          "locador": {
+            "anchor": "PG 2000 (DQ.SRC.0005) offset 123111-123332; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1008.xhtml; extracto verbatim",
+            "start_char": 123111,
+            "end_char": 123332
+          }
+        },
+        {
+          "speaker_id": "DQ.PER.0002",
+          "id_propuesto": "DQ.P1.C08.P0013",
+          "texto": "— ¿Qué gigantes? —dijo Sancho Panza.",
+          "motivo_conservacion": "Pregunta naïf que activa la explicación delirante; humor de ecuación simple.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 122956,
+            "end_char": 122992,
+            "lineas": "2570-2570"
+          }
+        },
+        {
+          "speaker_id": "DQ.PER.0001",
+          "id_propuesto": "DQ.P1.C08.P0013",
+          "texto": "— Aquellos que allí ves —respondió su amo— de los brazos largos, que los\nsuelen tener algunos de casi dos leguas.",
+          "motivo_conservacion": "La hipérbole «de casi dos leguas» materializa el delirio; imagen citada por la tradición ilustrativa (Doré/Tusell).",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 122994,
+            "end_char": 123107,
+            "lineas": "2572-2573"
+          }
+        },
+        {
+          "speaker_id": "DQ.PER.0001",
+          "id_propuesto": "DQ.P1.C08.P0014",
+          "texto": "— Bien parece —respondió don Quijote— que no estás cursado en esto de las\naventuras: ellos son gigantes; y si tienes miedo, quítate de ahí, y ponte\nen oración en el espacio que yo voy a entrar con ellos en fiera y desigual\nbatalla.",
+          "motivo_conservacion": "El «ponte en oración» antes de la batalla condensa la cosmología caballeresca; indispensable para el mecanismo del lance.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 123334,
+            "end_char": 123565,
+            "lineas": "2579-2582"
+          }
+        }
+      ],
+      "relato_intercalado": null,
+      "condensacion": null,
+      "arco_emocional": {
+        "DQ.PER.0001": "seguridad magisterial: instruye, no duda.",
+        "DQ.PER.0002": "incredulidad práctica que todavía confía en la palabra de su amo («mire vuestra merced»)."
+      },
+      "relevancia": "ESENCIAL",
+      "spoiler_risk": "NINGUNO",
+      "tratamiento_propuesto": "DRAMATIZACION",
+      "localizacion_verificada": {
+        "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+        "start_char": 122956,
+        "end_char": 122992,
+        "lineas": "2570-2570",
+        "cobertura": "líneas 2570-2582 (P0003 + P0013-P0014 propuestos)"
+      },
+      "review_state": "INVENTARIADA"
+    },
+    {
+      "unit_id": "DQ.UN.P1.C08.U03",
+      "orden_canonico": 3,
+      "titulo": "Carga inicial y arenga «Non fuyades»",
+      "literary_kind": "ARENGA",
+      "segmento_refs": [
+        "DQ.P1.C08.SG02"
+      ],
+      "passage_ids": [
+        "DQ.P1.C08.P0012"
+      ],
+      "pasajes_propuestos": [
+        {
+          "id_propuesto": "DQ.P1.C08.P0015",
+          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "fragmentos": [
+            {
+              "fragmento": "dio_espuelas",
+              "texto": "Y, diciendo esto, dio de espuelas a su caballo Rocinante, sin atender a las\nvoces que su escudero Sancho le daba, advirtiéndole que, sin duda alguna,\neran molinos de viento, y no gigantes, aquellos que iba a acometer. Pero él\niba tan puesto en que eran gigantes, que ni oía las voces de su escudero\nSancho ni echaba de ver, aunque estaba ya bien cerca, lo que eran; antes,\niba diciendo en voces altas:",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 123567,
+                "end_char": 123968,
+                "lineas": "2584-2589"
+              }
+            }
+          ]
+        }
+      ],
+      "actores": [
+        "DQ.PER.0001",
+        "DQ.PER.0002",
+        "DQ.PER.0003"
+      ],
+      "hechos": [
+        "Don Quijote espolea a Rocinante sin atender las voces de Sancho.",
+        "El narrador explicita la sordera del caballero: va «tan puesto en que eran gigantes» que ni oye ni ve.",
+        "Arenga de duelo en latín macarrónico al enemigo imaginado."
+      ],
+      "humor": {
+        "presencia": true,
+        "preparacion": "Las voces de advertencia de Sancho acumulan tensión real (peligro físico).",
+        "mecanismo": "Ironía del narrador (sordera selectiva certificada por la omnisciencia) + parodia de arenga épica: el latinazo «Non fuyades» contra unas aspas.",
+        "reaccion": "El narrador no ríe: deja correr al caballero hacia el golpe; la comicidad se congela antes del impacto (preparación de U04).",
+        "registro": "ironía narratorial + parodia genérica"
+      },
+      "dialogos_literales": [
+        {
+          "speaker_id": null,
+          "passage_id": "DQ.P1.C08.P0012",
+          "texto": "Non fuyades, cobardes y viles criaturas, que un solo caballero es el que\nos acomete.",
+          "motivo_conservacion": "Parodia de arenga batalla en latín; frase icónica del episodio en la tradición iconográfica.",
+          "locador": {
+            "anchor": "PG 2000 (DQ.SRC.0005) offset 123972-124056; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1008.xhtml; extracto verbatim",
+            "start_char": 123972,
+            "end_char": 124056
+          }
+        }
+      ],
+      "relato_intercalado": null,
+      "condensacion": {
+        "que_se_condensa": "La narración de espuelas y sordera selectiva (P0015 propuesto) puede fundirse en un solo beat de acción con la arenga.",
+        "motivo": "ritmo",
+        "que_se_pierde": "el matiz de «ni oía las voces» si se omite la narración",
+        "riesgo": "que el espectador lea el arrojo como valentía y no como sordera delirante",
+        "compensacion": "gestual del beat (Sancho gritando en primer término) + narración breve en pantalla",
+        "aprobacion": "PROPUESTA",
+        "alternativa_acceso": "lector íntegro"
+      },
+      "arco_emocional": {
+        "DQ.PER.0001": "furia belicosa ascendente: de la instrucción al ataque.",
+        "DQ.PER.0002": "impotencia alarmada: grita y no es oído."
+      },
+      "relevancia": "ALTA",
+      "spoiler_risk": "NINGUNO",
+      "tratamiento_propuesto": "DRAMATIZACION",
+      "localizacion_verificada": {
+        "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+        "start_char": 123567,
+        "end_char": 123968,
+        "lineas": "2584-2589",
+        "cobertura": "líneas 2584-2592 (P0015 propuesto + P0012)"
+      },
+      "review_state": "INVENTARIADA"
+    },
+    {
+      "unit_id": "DQ.UN.P1.C08.U04",
+      "orden_canonico": 4,
+      "titulo": "El viento mueve las aspas: Briareo, la embestida y la caída",
+      "literary_kind": "HECHO",
+      "segmento_refs": [
+        "DQ.P1.C08.SG03"
+      ],
+      "passage_ids": [
+        "DQ.P1.C08.P0004",
+        "DQ.P1.C08.P0005",
+        "DQ.P1.C08.P0006"
+      ],
+      "pasajes_propuestos": [],
+      "actores": [
+        "DQ.PER.0001",
+        "DQ.PER.0002",
+        "DQ.PER.0003"
+      ],
+      "hechos": [
+        "Se alza un poco de viento y las aspas comienzan a moverse (causa física real).",
+        "Don Quijote lo lee como hostilidad creciente y evoca al gigante Briareo.",
+        "Se encomienda a Dulcinea y embiste con la lanza en ristre.",
+        "El viento vuelve el aspa, hace pedazos la lanza y arrastra caballo y caballero, que cae «muy maltrecho».",
+        "Sancho acude al socorro «a todo el correr de su asno» y lo halla sin poderse menear."
+      ],
+      "humor": {
+        "presencia": true,
+        "preparacion": "Briareo (cien brazos) justifica por anticipado cualquier número de aspas; la invocación a Dulcinea solemneza el trance.",
+        "mecanismo": "Choque material entre realidad (fuerza del viento sobre el aspa) y marco caballeresco (combate singular); la física gana sin discusión. Ironía suprema: el «enemigo» ni siquiera registra el ataque.",
+        "reaccion": "La caída física («rodando muy maltrecho por el campo») como burla aplastante del solemnizante «me lo habéis de pagar».",
+        "registro": "choque material + solemnización paródica"
+      },
+      "dialogos_literales": [
+        {
+          "speaker_id": null,
+          "passage_id": "DQ.P1.C08.P0004",
+          "texto": "Levantóse en esto un poco de viento y las grandes aspas comenzaron a\nmoverse, lo cual visto por don Quijote, dijo:\n\n— Pues, aunque mováis más brazos que los del gigante Briareo, me lo habéis\nde pagar.",
+          "motivo_conservacion": "Culminación cómica de la erudición mitológica del hidalgo (Briareo) y desencadenante directo de la embestida.",
+          "locador": {
+            "anchor": "PG 2000 (DQ.SRC.0005) offset 124058-124258; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1008.xhtml; extracto verbatim",
+            "start_char": 124058,
+            "end_char": 124258
+          }
+        }
+      ],
+      "relato_intercalado": null,
+      "condensacion": null,
+      "arco_emocional": {
+        "DQ.PER.0001": "fervor devoto y determinación total → derrota física sin registro mental (el giro se procesa en U05).",
+        "DQ.PER.0002": "impotencia que se convierte en acción: acude al socorro."
+      },
+      "relevancia": "ESENCIAL",
+      "spoiler_risk": "NINGUNO",
+      "tratamiento_propuesto": "DRAMATIZACION",
+      "localizacion_verificada": {
+        "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+        "start_char": 122994,
+        "end_char": 123107,
+        "lineas": "2572-2573",
+        "cobertura": "líneas 2594-2608 (P0004-P0006)"
+      },
+      "review_state": "INVENTARIADA"
+    },
+    {
+      "unit_id": "DQ.UN.P1.C08.U05",
+      "orden_canonico": 5,
+      "titulo": "Post-caída: la regañina de Sancho y la teoría de Frestón",
+      "literary_kind": "DIALOGO",
+      "segmento_refs": [
+        "DQ.P1.C08.SG03"
+      ],
+      "passage_ids": [],
+      "pasajes_propuestos": [
+        {
+          "id_propuesto": "DQ.P1.C08.P0016",
+          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "fragmentos": [
+            {
+              "fragmento": "valame_dios",
+              "texto": "— ¡Válame Dios! —dijo Sancho—. ¿No le dije yo a vuestra merced que mirase\nbien lo que hacía, que no eran sino molinos de viento, y no lo podía\nignorar sino quien llevase otros tales en la cabeza?",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 124868,
+                "end_char": 125063,
+                "lineas": "2610-2612"
+              }
+            },
+            {
+              "fragmento": "calla_freston",
+              "texto": "— Calla, amigo Sancho —respondió don Quijote—, que las cosas de la guerra,\nmás que otras, están sujetas a continua mudanza; cuanto más, que yo pienso,\ny es así verdad, que aquel sabio Frestón que me robó el aposento y los\nlibros ha vuelto estos gigantes en molinos por quitarme la gloria de su\nvencimiento: tal es la enemistad que me tiene; mas, al cabo al cabo, han de\npoder poco sus malas artes contra la bondad de mi espada.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 125065,
+                "end_char": 125492,
+                "lineas": "2614-2619"
+              }
+            },
+            {
+              "fragmento": "dios_lo_haga",
+              "texto": "— Dios lo haga como puede —respondió Sancho Panza.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 125494,
+                "end_char": 125544,
+                "lineas": "2621-2621"
+              }
+            }
+          ]
+        }
+      ],
+      "actores": [
+        "DQ.PER.0001",
+        "DQ.PER.0002"
+      ],
+      "hechos": [
+        "Sancho reprocha al caído: le avisó y «no lo podía ignorar sino quien llevase otros tales en la cabeza».",
+        "Don Quijote reinterpreta la derrota: el sabio Frestón le robó el aposento y los libros y ha «vuelto estos gigantes en molinos» para quitarle la gloria.",
+        "Sancho se rinde prudencialmente: «Dios lo haga como puede»."
+      ],
+      "humor": {
+        "presencia": true,
+        "preparacion": "El cuerpo maltrecho del caballero tras el tono solemne de la embestida.",
+        "mecanismo": "Contraste de registros tras el golpe: la factura doméstica de Sancho contra la inmunidad psicológica del delirio — la derrota se convierte por decreto en victoria saboteada (Frestón), de modo que ninguna evidencia puede corregir al héroe.",
+        "reaccion": "Sancho capitula sin convencerse: la risa deja paso a la ternura; ahí empieza la sociedad verdadera.",
+        "registro": "desacuerdo de registros + lógica interna impecable sobre premisa falsa"
+      },
+      "dialogos_literales": [
+        {
+          "speaker_id": "DQ.PER.0002",
+          "id_propuesto": "DQ.P1.C08.P0016",
+          "texto": "— ¡Válame Dios! —dijo Sancho—. ¿No le dije yo a vuestra merced que mirase\nbien lo que hacía, que no eran sino molinos de viento, y no lo podía\nignorar sino quien llevase otros tales en la cabeza?",
+          "motivo_conservacion": "La voz más «popular» de Sancho del capítulo; su imagen («quien llevase otros tales en la cabeza») es el contrapunto exacto del delirio.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 124868,
+            "end_char": 125063,
+            "lineas": "2610-2612"
+          }
+        },
+        {
+          "speaker_id": "DQ.PER.0001",
+          "id_propuesto": "DQ.P1.C08.P0016",
+          "texto": "— Calla, amigo Sancho —respondió don Quijote—, que las cosas de la guerra,\nmás que otras, están sujetas a continua mudanza; cuanto más, que yo pienso,\ny es así verdad, que aquel sabio Frestón que me robó el aposento y los\nlibros ha vuelto estos gigantes en molinos por quitarme la gloria de su\nvencimiento: tal es la enemistad que me tiene; mas, al cabo al cabo, han de\npoder poco sus malas artes contra la bondad de mi espada.",
+          "motivo_conservacion": "El mecanismo de re-significación (Frestón) es la clave de la psicología quijotesca y de toda la novela; valor literario mayor.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 125065,
+            "end_char": 125492,
+            "lineas": "2614-2619"
+          }
+        },
+        {
+          "speaker_id": "DQ.PER.0002",
+          "id_propuesto": "DQ.P1.C08.P0016",
+          "texto": "— Dios lo haga como puede —respondió Sancho Panza.",
+          "motivo_conservacion": "Cierre rítmico del lance y definición del escudero prudencial; brevísimo, irremplazable.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 125494,
+            "end_char": 125544,
+            "lineas": "2621-2621"
+          }
+        }
+      ],
+      "relato_intercalado": null,
+      "condensacion": null,
+      "arco_emocional": {
+        "DQ.PER.0001": "del golpe físico a la re-interpretación sistemática: cero abatimiento; la teoría protege la identidad.",
+        "DQ.PER.0002": "regañina triunfal → resignación cariñosa; primer acto de coexistencia con la locura del amo."
+      },
+      "relevancia": "ESENCIAL",
+      "spoiler_risk": "NINGUNO",
+      "tratamiento_propuesto": "DRAMATIZACION",
+      "localizacion_verificada": {
+        "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+        "start_char": 124868,
+        "end_char": 125063,
+        "lineas": "2610-2612",
+        "cobertura": "líneas 2610-2621 (P0016 propuesto)"
+      },
+      "review_state": "INVENTARIADA"
+    },
+    {
+      "unit_id": "DQ.UN.P1.C08.U06",
+      "orden_canonico": 6,
+      "titulo": "La lanza rota: Vargas Machuca y el código del dolor",
+      "literary_kind": "DIALOGO",
+      "segmento_refs": [],
+      "passage_ids": [],
+      "pasajes_propuestos": [
+        {
+          "id_propuesto": "DQ.P1.C08.P0017",
+          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "fragmentos": [
+            {
+              "fragmento": "transicion_puertolapice",
+              "texto": "Y, ayudándole a levantar, tornó a subir sobre Rocinante, que medio\ndespaldado estaba. Y, hablando en la pasada aventura, siguieron el camino\ndel Puerto Lápice,",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 125546,
+                "end_char": 125705,
+                "lineas": "2623-2625"
+              }
+            }
+          ]
+        },
+        {
+          "id_propuesto": "DQ.P1.C08.P0018",
+          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "fragmentos": [
+            {
+              "fragmento": "vargas_machuca",
+              "texto": "— Yo me acuerdo haber leído que un caballero español, llamado Diego Pérez de\nVargas, habiéndosele en una batalla roto la espada, desgajó de una encina\nun pesado ramo o tronco, y con él hizo tales cosas aquel día, y machacó\ntantos moros, que le quedó por sobrenombre Machuca, y así él como sus\ndecendientes se llamaron, desde aquel día en adelante, Vargas y Machuca.\nHete dicho esto, porque de la primera encina o roble que se me depare\npienso desgajar otro tronco tal y tan bueno como aquél, que me imagino y\npienso hacer con él tales hazañas, que tú te tengas por bien afortunado de\nhaber merecido venir a vellas y a ser testigo de cosas que apenas podrán\nser creídas.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 125927,
+                "end_char": 126596,
+                "lineas": "2630-2639"
+              }
+            }
+          ]
+        },
+        {
+          "id_propuesto": "DQ.P1.C08.P0019",
+          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "fragmentos": [
+            {
+              "fragmento": "codigo_dolor",
+              "texto": "— A la mano de Dios —dijo Sancho—; yo lo creo todo así como vuestra merced\nlo dice; pero enderécese un poco, que parece que va de medio lado, y debe\nde ser del molimiento de la caída.\n\n— Así es la verdad —respondió don Quijote—; y si no me quejo del dolor, es\nporque no es dado a los caballeros andantes quejarse de herida alguna,\naunque se le salgan las tripas por ella.\n\n— Si eso es así, no tengo yo qué replicar —respondió Sancho—, pero sabe Dios\nsi yo me holgara que vuestra merced se quejara cuando alguna cosa le\ndoliera. De mí sé decir que me he de quejar del más pequeño dolor que\ntenga, si ya no se entiende también con los escuderos de los caballeros\nandantes eso del no quejarse.\n\nNo se dejó de reír don Quijote de la simplicidad de su escudero; y así, le\ndeclaró que podía muy bien quejarse, como y cuando quisiese, sin gana o con\nella; que hasta entonces no había leído cosa en contrario en la orden de\ncaballería.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 126598,
+                "end_char": 127525,
+                "lineas": "2641-2658"
+              }
+            }
+          ]
+        }
+      ],
+      "actores": [
+        "DQ.PER.0001",
+        "DQ.PER.0002"
+      ],
+      "hechos": [
+        "Repliegue tras la caída; Rocinante «medio despaldado»; camino del Puerto Lápice (P0017).",
+        "Don Quijote lamenta la lanza perdida y cita el exemplar de Diego Pérez de Vargas («Machuca»), que desgajó un tronco de encina: piensa hacer lo propio.",
+        "Sancho constata que el amo va torcido («va de medio lado… del molimiento de la caída»).",
+        "Código del dolor: el caballero andante no se queja «aunque se le salgan las tripas»; Sancho anuncia que se quejará «del más pequeño dolor»; don Quijote sonríe («no se dejó de reír de la simplicidad de su escudero») y le autoriza a quejarse."
+      ],
+      "humor": {
+        "presencia": true,
+        "preparacion": "El cuerpo dolorido de ambos tras el lance; la erudición del amo como consuelo.",
+        "mecanismo": "Parodia de exemplar caballeresco (la erudición al servicio de una lanza improvisada) + contraste de códigos de dolor (epicidad insensible vs. hedonismo práctico de Sancho) + el fisioterapeuta involuntario («va de medio lado»).",
+        "reaccion": "La risa del amo ante la «simplicidad» del escudero: primer humor compartido de la pareja; funde los registros en complicidad.",
+        "registro": "parodia genérica + desacuerdo de registros"
+      },
+      "dialogos_literales": [
+        {
+          "speaker_id": "DQ.PER.0001",
+          "id_propuesto": "DQ.P1.C08.P0018",
+          "texto": "— Yo me acuerdo haber leído que un caballero español, llamado Diego Pérez de\nVargas, habiéndosele en una batalla roto la espada, desgajó de una encina\nun pesado ramo o tronco, y con él hizo tales cosas aquel día, y machacó\ntantos moros, que le quedó por sobrenombre Machuca, y así él como sus\ndecendientes se llamaron, desde aquel día en adelante, Vargas y Machuca.\nHete dicho esto, porque de la primera encina o roble que se me depare\npienso desgajar otro tronco tal y tan bueno como aquél, que me imagino y\npienso hacer con él tales hazañas, que tú te tengas por bien afortunado de\nhaber merecido venir a vellas y a ser testigo de cosas que apenas podrán\nser creídas.",
+          "motivo_conservacion": "El exemplar erudito aplicado a la necesidad material (lanza-roble); voz hipergénica en estado puro; «Vargas y Machuca» se cita en la tradición crítica.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 125927,
+            "end_char": 126596,
+            "lineas": "2630-2639"
+          }
+        },
+        {
+          "speaker_id": "DQ.PER.0002",
+          "id_propuesto": "DQ.P1.C08.P0019",
+          "texto": "— A la mano de Dios —dijo Sancho—; yo lo creo todo así como vuestra merced\nlo dice; pero enderécese un poco, que parece que va de medio lado, y debe\nde ser del molimiento de la caída.\n\n— Así es la verdad —respondió don Quijote—; y si no me quejo del dolor, es\nporque no es dado a los caballeros andantes quejarse de herida alguna,\naunque se le salgan las tripas por ella.\n\n— Si eso es así, no tengo yo qué replicar —respondió Sancho—, pero sabe Dios\nsi yo me holgara que vuestra merced se quejara cuando alguna cosa le\ndoliera. De mí sé decir que me he de quejar del más pequeño dolor que\ntenga, si ya no se entiende también con los escuderos de los caballeros\nandantes eso del no quejarse.\n\nNo se dejó de reír don Quijote de la simplicidad de su escudero; y así, le\ndeclaró que podía muy bien quejarse, como y cuando quisiese, sin gana o con\nella; que hasta entonces no había leído cosa en contrario en la orden de\ncaballería.",
+          "motivo_conservacion": "Definición por contraste de ambas voces: el «aunque se le salgan las tripas» del héroe contra el «me he de quejar del más pequeño dolor» del escudero; clave de caracterización y humor.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 126598,
+            "end_char": 127525,
+            "lineas": "2641-2658"
+          }
+        }
+      ],
+      "relato_intercalado": null,
+      "condensacion": null,
+      "arco_emocional": {
+        "DQ.PER.0001": "estoicismo de código (el dolor no se nombra) suavizado por la primera risa compartida.",
+        "DQ.PER.0002": "pragmatismo corporal: duele, se dice; gana la primera concesión del amo."
+      },
+      "relevancia": "ALTA",
+      "spoiler_risk": "NINGUNO",
+      "tratamiento_propuesto": "DRAMATIZACION",
+      "localizacion_verificada": {
+        "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+        "start_char": 125546,
+        "end_char": 125705,
+        "lineas": "2623-2625",
+        "cobertura": "líneas 2623-2658 (P0017-P0019 propuestos)"
+      },
+      "review_state": "INVENTARIADA"
+    },
+    {
+      "unit_id": "DQ.UN.P1.C08.U07",
+      "orden_canonico": 7,
+      "titulo": "Picaresca de Sancho: la merienda, la noche y la bota flaca",
+      "literary_kind": "HECHO",
+      "segmento_refs": [],
+      "passage_ids": [],
+      "pasajes_propuestos": [
+        {
+          "id_propuesto": "DQ.P1.C08.P0020",
+          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "fragmentos": [
+            {
+              "fragmento": "sancho_comilon",
+              "texto": "Díjole Sancho que mirase que era hora de comer. Respondióle su\namo que por entonces no le hacía menester; que comiese él cuando se le\nantojase. Con esta licencia, se acomodó Sancho lo mejor que pudo sobre su\njumento, y, sacando de las alforjas lo que en ellas había puesto, iba\ncaminando y comiendo detrás de su amo muy de su espacio, y de cuando en\ncuando empinaba la bota, con tanto gusto, que le pudiera envidiar el más\nregalado bodegonero de Málaga. Y, en tanto que él iba de aquella manera\nmenudeando tragos, no se le acordaba de ninguna promesa que su amo le\nhubiese hecho, ni tenía por ningún trabajo, sino por mucho descanso, andar\nbuscando las aventuras, por peligrosas que fuesen.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 127526,
+                "end_char": 128216,
+                "lineas": "2658-2667"
+              }
+            },
+            {
+              "fragmento": "noche_arboles",
+              "texto": "En resolución, aquella noche la pasaron entre unos árboles, y del uno\ndellos desgajó don Quijote un ramo seco que casi le podía servir de lanza,\ny puso en él el hierro que quitó de la que se le había quebrado. Toda\naquella noche no durmió don Quijote, pensando en su señora Dulcinea, por\nacomodarse a lo que había leído en sus libros, cuando los caballeros\npasaban sin dormir muchas noches en las florestas y despoblados,\nentretenidos con las memorias de sus señoras. No la pasó ansí Sancho Panza,\nque, como tenía el estómago lleno, y no de agua de chicoria, de un sueño se\nla llevó toda; y no fueran parte para despertarle, si su amo no lo llamara,\nlos rayos del sol, que le daban en el rostro, ni el canto de las aves, que,\nmuchas y muy regocijadamente, la venida del nuevo día saludaban. Al\nlevantarse dio un tiento a la bota, y hallóla algo más flaca que la noche\nantes; y afligiósele el corazón, por parecerle que no llevaban camino de\nremediar tan presto su falta.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 128218,
+                "end_char": 129188,
+                "lineas": "2669-2682"
+              }
+            }
+          ]
+        }
+      ],
+      "actores": [
+        "DQ.PER.0001",
+        "DQ.PER.0002"
+      ],
+      "hechos": [
+        "Sancho pide la hora de comer; el amo lo autoriza; come por el camino «muy de su espacio» y empina la bota «con tanto gusto que le pudiera envidiar el más regalado bodegonero de Málaga».",
+        "Al comer no recuerda ninguna promesa del amo: buscar aventuras le parece «mucho descanso».",
+        "Noche entre árboles: don Quijote desgaja el ramo-lanza y no duerme, pensando en Dulcinea (imitación de sus libros).",
+        "Sancho, «el estómago lleno y no de agua de chicoria», duerme todo el sueño; ni sol ni pájaros lo despiertan.",
+        "Amanece: la bota «algo más flaca»; Sancho se aflige por el abastecimiento."
+      ],
+      "humor": {
+        "presencia": true,
+        "preparacion": "El esquema novelesco (noche de vigilancia amorosa del caballero) montado con escrupulosidad por don Quijote.",
+        "mecanismo": "Contraste estructural de registros: insomnio épico de Dulcinea contra sueño digestivo de Sancho («no de agua de chicoria»); la economía material del escudero (bota flaca como única preocupación) contra la metafísica del amo.",
+        "reaccion": "La risa del contraste paralelo; el narrador no juzga: deja que las dos lógicas duerman una junto a otra.",
+        "registro": "desacuerdo de registros + ironía narratorial"
+      },
+      "dialogos_literales": [],
+      "relato_intercalado": null,
+      "condensacion": null,
+      "arco_emocional": {
+        "DQ.PER.0001": "devoción nocturna: la imitación libresca como identidad.",
+        "DQ.PER.0002": "felicidad material plena; la política de la ínsula pospuesta al estómago."
+      },
+      "relevancia": "ALTA",
+      "spoiler_risk": "NINGUNO",
+      "tratamiento_propuesto": "NARRACION_ILUSTRADA",
+      "localizacion_verificada": {
+        "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+        "start_char": 127526,
+        "end_char": 128216,
+        "lineas": "2658-2667",
+        "cobertura": "líneas 2658-2682 (P0020 propuesto)"
+      },
+      "review_state": "INVENTARIADA"
+    },
+    {
+      "unit_id": "DQ.UN.P1.C08.U08",
+      "orden_canonico": 8,
+      "titulo": "Puerto Lápice y la regla de la ayuda prohibida",
+      "literary_kind": "DIALOGO",
+      "segmento_refs": [],
+      "passage_ids": [],
+      "pasajes_propuestos": [
+        {
+          "id_propuesto": "DQ.P1.C08.P0021",
+          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "fragmentos": [
+            {
+              "fragmento": "puerto_lapice_regla",
+              "texto": "Tornaron a su\ncomenzado camino del Puerto Lápice, y a obra de las tres del día le\ndescubrieron.\n\n— Aquí —dijo, en viéndole, don Quijote— podemos, hermano Sancho Panza, meter\nlas manos hasta los codos en esto que llaman aventuras. Mas advierte que,\naunque me veas en los mayores peligros del mundo, no has de poner mano a tu\nespada para defenderme, si ya no vieres que los que me ofenden es canalla y\ngente baja, que en tal caso bien puedes ayudarme; pero si fueren\ncaballeros, en ninguna manera te es lícito ni concedido por las leyes de\ncaballería que me ayudes, hasta que seas armado caballero.\n\n— Por cierto, señor —respondió Sancho—, que vuestra merced sea muy bien\nobedicido en esto; y más, que yo de mío me soy pacífico y enemigo de\nmeterme en ruidos ni pendencias. Bien es verdad que, en lo que tocare a\ndefender mi persona, no tendré mucha cuenta con esas leyes, pues las\ndivinas y humanas permiten que cada uno se defienda de quien quisiere\nagraviarle.\n\n— No digo yo menos —respondió don Quijote—; pero, en esto de ayudarme contra\ncaballeros, has de tener a raya tus naturales ímpetus.\n\n— Digo que así lo haré —respondió Sancho—, y que guardaré ese preceto tan\nbien como el día del domingo.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 129289,
+                "end_char": 130488,
+                "lineas": "2683-2706"
+              }
+            }
+          ]
+        }
+      ],
+      "actores": [
+        "DQ.PER.0001",
+        "DQ.PER.0002"
+      ],
+      "hechos": [
+        "A las tres del día descubren el Puerto Lápice; don Quijote promete «meter las manos hasta los codos» en aventuras.",
+        "Prohíbe a Sancho ayudarle contra caballeros: solo contra «canalla y gente baja»; leyes de caballería.",
+        "Sancho acepta «como el día del domingo» pero se reserva la legítima defensa («las divinas y humanas permiten…»).",
+        "Don Quijote le pide «tener a raya tus naturales ímpetus»."
+      ],
+      "humor": {
+        "presencia": true,
+        "preparacion": "La promesa de aventuras a bocado de rey («hasta los codos») tras la bota flaca de la noche.",
+        "mecanismo": "Ficción jurídica minuciosa (qué puedo hacer por ti según leyes de caballería) contra negociación práctica de Sancho (cláusula de autodefensa); remate litúrgico («tan bien como el día del domingo»).",
+        "reaccion": "El pacto queda firmado en clave cómica… y es una bomba de relojería: esta regla impedirá a Sancho intervenir en el duelo con el vizcaíno (resolución en I, 10).",
+        "registro": "parodia genérica + ironía estructural"
+      },
+      "dialogos_literales": [
+        {
+          "speaker_id": null,
+          "id_propuesto": "DQ.P1.C08.P0021",
+          "texto": "Tornaron a su\ncomenzado camino del Puerto Lápice, y a obra de las tres del día le\ndescubrieron.\n\n— Aquí —dijo, en viéndole, don Quijote— podemos, hermano Sancho Panza, meter\nlas manos hasta los codos en esto que llaman aventuras. Mas advierte que,\naunque me veas en los mayores peligros del mundo, no has de poner mano a tu\nespada para defenderme, si ya no vieres que los que me ofenden es canalla y\ngente baja, que en tal caso bien puedes ayudarme; pero si fueren\ncaballeros, en ninguna manera te es lícito ni concedido por las leyes de\ncaballería que me ayudes, hasta que seas armado caballero.\n\n— Por cierto, señor —respondió Sancho—, que vuestra merced sea muy bien\nobedicido en esto; y más, que yo de mío me soy pacífico y enemigo de\nmeterme en ruidos ni pendencias. Bien es verdad que, en lo que tocare a\ndefender mi persona, no tendré mucha cuenta con esas leyes, pues las\ndivinas y humanas permiten que cada uno se defienda de quien quisiere\nagraviarle.\n\n— No digo yo menos —respondió don Quijote—; pero, en esto de ayudarme contra\ncaballeros, has de tener a raya tus naturales ímpetus.\n\n— Digo que así lo haré —respondió Sancho—, y que guardaré ese preceto tan\nbien como el día del domingo.",
+          "motivo_conservacion": "El pacto de no intervención (gag estructural del vizcaíno) con la fórmula litúrgica de Sancho; conserva la negociación completa.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 129289,
+            "end_char": 130488,
+            "lineas": "2683-2706"
+          }
+        }
+      ],
+      "relato_intercalado": null,
+      "condensacion": null,
+      "arco_emocional": {
+        "DQ.PER.0001": "poder normativo: dicta las reglas del juego compartido.",
+        "DQ.PER.0002": "negociador de su seguridad: obedece con letra pequeña."
+      },
+      "relevancia": "ALTA",
+      "spoiler_risk": "NINGUNO",
+      "tratamiento_propuesto": "DRAMATIZACION",
+      "localizacion_verificada": {
+        "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+        "start_char": 129289,
+        "end_char": 130488,
+        "lineas": "2683-2706",
+        "cobertura": "líneas 2683-2706 (P0021 propuesto)"
+      },
+      "review_state": "INVENTARIADA"
+    },
+    {
+      "unit_id": "DQ.UN.P1.C08.U09",
+      "orden_canonico": 9,
+      "titulo": "Frailes por encantadores: el tuerto del coche",
+      "literary_kind": "HECHO",
+      "segmento_refs": [
+        "DQ.P1.C08.SG04"
+      ],
+      "passage_ids": [
+        "DQ.P1.C08.P0007",
+        "DQ.P1.C08.P0008",
+        "DQ.P1.C08.P0009"
+      ],
+      "pasajes_propuestos": [
+        {
+          "id_propuesto": "DQ.P1.C08.P0022",
+          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "fragmentos": [
+            {
+              "fragmento": "ya_te_he_dicho",
+              "texto": "— Ya te he dicho, Sancho —respondió don Quijote—, que sabes poco de achaque\nde aventuras; lo que yo digo es verdad, y ahora lo verás.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 131613,
+                "end_char": 131746,
+                "lineas": "2728-2729"
+              }
+            },
+            {
+              "fragmento": "gente_endiablada",
+              "texto": "— Gente endiablada y descomunal, dejad luego al punto las altas princesas\nque en ese coche lleváis forzadas; si no, aparejaos a recebir presta\nmuerte, por justo castigo de vuestras malas obras.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 131939,
+                "end_char": 132132,
+                "lineas": "2735-2737"
+              }
+            },
+            {
+              "fragmento": "senor_caballero_frailes",
+              "texto": "— Señor caballero, nosotros no somos endiablados ni descomunales, sino dos\nreligiosos de San Benito que vamos nuestro camino, y no sabemos si en este\ncoche vienen, o no, ningunas forzadas princesas.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 132273,
+                "end_char": 132471,
+                "lineas": "2742-2744"
+              }
+            },
+            {
+              "fragmento": "para_conmigo",
+              "texto": "— Para conmigo no hay palabras blandas, que ya yo os conozco, fementida\ncanalla —dijo don Quijote.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 132473,
+                "end_char": 132571,
+                "lineas": "2746-2747"
+              }
+            }
+          ]
+        },
+        {
+          "id_propuesto": "DQ.P1.C08.P0023",
+          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "fragmentos": [
+            {
+              "fragmento": "carga_frailes_sancho",
+              "texto": "Y, sin esperar más respuesta, picó a Rocinante y, la lanza baja, arremetió\ncontra el primero fraile, con tanta furia y denuedo que, si el fraile no se\ndejara caer de la mula, él le hiciera venir al suelo mal de su grado, y aun\nmalferido, si no cayera muerto. El segundo religioso, que vio del modo que\ntrataban a su compañero, puso piernas al castillo de su buena mula, y\ncomenzó a correr por aquella campaña, más ligero que el mesmo viento.\n\nSancho Panza, que vio en el suelo al fraile, apeándose ligeramente de su\nasno, arremetió a él y le comenzó a quitar los hábitos. Llegaron en esto\ndos mozos de los frailes y preguntáronle que por qué le desnudaba.\nRespondióles Sancho que aquello le tocaba a él ligítimamente, como despojos\nde la batalla que su señor don Quijote había ganado. Los mozos, que no\nsabían de burlas, ni entendían aquello de despojos ni batallas, viendo que\nya don Quijote estaba desviado de allí, hablando con las que en el coche\nvenían, arremetieron con Sancho y dieron con él en el suelo; y, sin dejarle\npelo en las barbas, le molieron a coces y le dejaron tendido en el suelo\nsin aliento ni sentido. Y, sin detenerse un punto, tornó a subir el fraile,\ntodo temeroso y acobardado y sin color en el rostro; y, cuando se vio a\ncaballo, picó tras su compañero, que un buen espacio de allí le estaba\naguardando, y esperando en qué paraba aquel sobresalto; y, sin querer\naguardar el fin de todo aquel comenzado suceso, siguieron su camino,\nhaciéndose más cruces que si llevaran al diablo a las espaldas.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 132573,
+                "end_char": 134094,
+                "lineas": "2749-2770"
+              }
+            }
+          ]
+        }
+      ],
+      "actores": [
+        "DQ.PER.0001",
+        "DQ.PER.0002"
+      ],
+      "hechos": [
+        "Asoman dos frailes benitos «sobre dos dromedarios» (mulas) con antojos y quitasoles; detrás, un coche con una señora vizcaína que va a Sevilla con su marido pasajero a Indias.",
+        "Don Quijote los declara encantadores que llevan una princesa hurtada.",
+        "Sancho rectifica con datos visuales («aquéllos son frailes de San Benito») y pide prudencia («no sea el diablo que le engañe»).",
+        "Don Quijote intima rendición («Gente endiablada…»); los frailes se explican; «Para conmigo no hay palabras blandas»: carga, derriba al primero y persigue al segundo.",
+        "Sancho, a pie de despojos («aquello le tocaba a él ligítimamente»), es derribado y apaleado por los mozos; los frailes huyen «haciéndose más cruces»."
+      ],
+      "humor": {
+        "presencia": true,
+        "preparacion": "Descripción materialista del narrador (mulas, antojos, quitasoles) contra la lectura delirante; «dromedarios» anticipa el equívoco.",
+        "mecanismo": "Equívoco religioso-grotesco (religiosos=encantadores) + doble suelo: la acción produce efectos reales (fraile caído, hábitos en manos de Sancho) y la factura mundana llega en forma de paliza; humor del despojo: la teoría del botín aplicada literalmente a hábitos ajenos.",
+        "reaccion": "El terror cómico de los frailes («como si llevaran al diablo a las espaldas») y Sancho tendido «sin aliento ni sentido»: el costo social del proyecto del amo.",
+        "registro": "equívoco perceptivo + materialismo literal"
+      },
+      "dialogos_literales": [
+        {
+          "speaker_id": null,
+          "passage_id": "DQ.P1.C08.P0009",
+          "texto": "Peor será esto que los molinos de viento —dijo Sancho—.",
+          "motivo_conservacion": "Autoconciencia cómica de Sancho: encadena los desatinos del amo; refranero en miniatura.",
+          "locador": {
+            "anchor": "PG 2000 (DQ.SRC.0005) offset 131381-131436; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1008.xhtml; extracto verbatim",
+            "start_char": 131381,
+            "end_char": 131436
+          }
+        },
+        {
+          "speaker_id": null,
+          "passage_id": "DQ.P1.C08.P0008",
+          "texto": "aquellos bultos negros que allí parecen deben de ser, y son sin\nduda, algunos encantadores que llevan hurtada alguna princesa en aquel\ncoche",
+          "motivo_conservacion": "La fórmula «deben de ser, y son sin duda» exhibe el mecanismo del delirio (hipótesis=certeza).",
+          "locador": {
+            "anchor": "PG 2000 (DQ.SRC.0005) offset 131182-131323; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1008.xhtml; extracto verbatim",
+            "start_char": 131182,
+            "end_char": 131323
+          }
+        },
+        {
+          "speaker_id": "DQ.PER.0001",
+          "id_propuesto": "DQ.P1.C08.P0022",
+          "texto": "— Ya te he dicho, Sancho —respondió don Quijote—, que sabes poco de achaque\nde aventuras; lo que yo digo es verdad, y ahora lo verás.",
+          "motivo_conservacion": "Respuesta-tipo del caballero a toda evidencia; eco estructural de U02.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 131613,
+            "end_char": 131746,
+            "lineas": "2728-2729"
+          }
+        },
+        {
+          "speaker_id": "DQ.PER.0001",
+          "id_propuesto": "DQ.P1.C08.P0022",
+          "texto": "— Gente endiablada y descomunal, dejad luego al punto las altas princesas\nque en ese coche lleváis forzadas; si no, aparejaos a recebir presta\nmuerte, por justo castigo de vuestras malas obras.",
+          "motivo_conservacion": "Reto cantarinesco; parodia de desafío caballeresco contra religiosos reales: núcleo del equívoco.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 131939,
+            "end_char": 132132,
+            "lineas": "2735-2737"
+          }
+        },
+        {
+          "speaker_id": "SECUNDARIO_FRAILES",
+          "id_propuesto": "DQ.P1.C08.P0022",
+          "texto": "— Señor caballero, nosotros no somos endiablados ni descomunales, sino dos\nreligiosos de San Benito que vamos nuestro camino, y no sabemos si en este\ncoche vienen, o no, ningunas forzadas princesas.",
+          "motivo_conservacion": "La realidad contesta con su propio registro burocrático-religioso; contrapunto exacto del delirio.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 132273,
+            "end_char": 132471,
+            "lineas": "2742-2744"
+          }
+        },
+        {
+          "speaker_id": "DQ.PER.0001",
+          "id_propuesto": "DQ.P1.C08.P0022",
+          "texto": "— Para conmigo no hay palabras blandas, que ya yo os conozco, fementida\ncanalla —dijo don Quijote.",
+          "motivo_conservacion": "«Fementida canalla»: la cláusula de no escucha que dispara la carga.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 132473,
+            "end_char": 132571,
+            "lineas": "2746-2747"
+          }
+        }
+      ],
+      "relato_intercalado": null,
+      "condensacion": {
+        "que_se_condensa": "El intercambio con los frailes (señor caballero / para conmigo) y la narración de la carga con la paliza de Sancho pueden comprimirse en un beat de acción + 1 réplica.",
+        "motivo": "duración",
+        "que_se_pierde": "el matiz burocrático-legítimo del despojo («ligítimamente»)",
+        "riesgo": "medio: la paliza de Sancho es consecuencia social del delirio; no omitir el hecho",
+        "compensacion": "narración en pantalla con el término «despojos» + beat físico breve",
+        "aprobacion": "PROPUESTA",
+        "alternativa_acceso": "lector íntegro"
+      },
+      "arco_emocional": {
+        "DQ.PER.0001": "expansión combativa: el proyecto vuelve a funcionar (derriba al «encantador»).",
+        "DQ.PER.0002": "pragmatismo (despojos) castigado por la realidad: primera sangre social del oficio de escudero."
+      },
+      "relevancia": "ALTA",
+      "spoiler_risk": "NINGUNO",
+      "tratamiento_propuesto": "DRAMATIZACION",
+      "localizacion_verificada": {
+        "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+        "start_char": 131613,
+        "end_char": 131746,
+        "lineas": "2728-2729",
+        "cobertura": "líneas 2708-2770 (P0007-P0009 + P0022-P0023 propuestos)"
+      },
+      "review_state": "INVENTARIADA"
+    },
+    {
+      "unit_id": "DQ.UN.P1.C08.U10",
+      "orden_canonico": 10,
+      "titulo": "Presentación ante la supuesta princesa liberada",
+      "literary_kind": "DIALOGO",
+      "segmento_refs": [
+        "DQ.P1.C08.SG04"
+      ],
+      "passage_ids": [
+        "DQ.P1.C08.P0010"
+      ],
+      "pasajes_propuestos": [],
+      "actores": [
+        "DQ.PER.0001"
+      ],
+      "hechos": [
+        "Don Quijote se dirige a la señora del coche en lenguaje arcaizante («facer», «penéis»).",
+        "Se presenta como don Quijote de la Mancha, «cautivo de la sin par y hermosa doña Dulcinea del Toboso».",
+        "Exige como pago viajar al Toboso y presentarse ante Dulcinea."
+      ],
+      "humor": {
+        "presencia": true,
+        "preparacion": "La victoria imaginada exige la ceremonia cortés completa.",
+        "mecanismo": "Anacronismo lingüístico deliberado (arcaísmos de pliego de caballería) dirigido a una burguesa vizcaína en viaje de negocios a Indias — el narrador lo ha aclarado antes (P0007), y esa doble contabilidad alimenta la ironía.",
+        "reaccion": "La señora no llega a responder: la interrumpe el escudero vizcaíno (gancho de U11).",
+        "registro": "parodia genérica + ironía narratorial"
+      },
+      "dialogos_literales": [
+        {
+          "speaker_id": null,
+          "passage_id": "DQ.P1.C08.P0010",
+          "texto": "la soberbia de vuestros robadores yace por el\nsuelo, derribada por este mi fuerte brazo; y, porque no penéis por saber el\nnombre de vuestro libertador, sabed que yo me llamo don Quijote de la\nMancha, caballero andante y aventurero, y cautivo de la sin par y hermosa\ndoña Dulcinea del Toboso",
+          "motivo_conservacion": "Cumbre del pastiche cortés; el «facermé» y la firma («cautivo de la sin par… Dulcinea») definen la voz pública del hidalgo.",
+          "locador": {
+            "anchor": "PG 2000 (DQ.SRC.0005) offset 134287-134578; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1008.xhtml; extracto verbatim",
+            "start_char": 134287,
+            "end_char": 134578
+          }
+        }
+      ],
+      "relato_intercalado": null,
+      "condensacion": null,
+      "arco_emocional": {
+        "DQ.PER.0001": "orgullo caballeresco en acto de cortesía; el nombre de Dulcinea como sello de identidad.",
+        "DQ.PER.0002": "ausente de la unidad (recuperándose de la paliza)."
+      },
+      "relevancia": "ALTA",
+      "spoiler_risk": "NINGUNO",
+      "tratamiento_propuesto": "DRAMATIZACION",
+      "localizacion_verificada": {
+        "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+        "start_char": 131939,
+        "end_char": 132132,
+        "lineas": "2735-2737",
+        "cobertura": "líneas 2772-2783 (P0010)"
+      },
+      "review_state": "INVENTARIADA"
+    },
+    {
+      "unit_id": "DQ.UN.P1.C08.U11",
+      "orden_canonico": 11,
+      "titulo": "El desafío del vizcaíno",
+      "literary_kind": "DIALOGO",
+      "segmento_refs": [
+        "DQ.P1.C08.SG05"
+      ],
+      "passage_ids": [
+        "DQ.P1.C08.P0011"
+      ],
+      "pasajes_propuestos": [
+        {
+          "id_propuesto": "DQ.P1.C08.P0024",
+          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "fragmentos": [
+            {
+              "fragmento": "anda_caballero",
+              "texto": "— Anda, caballero que mal andes; por el Dios que crióme, que, si no dejas\ncoche, así te matas como estás ahí vizcaíno.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 135121,
+                "end_char": 135239,
+                "lineas": "2791-2792"
+              }
+            },
+            {
+              "fragmento": "entendiole_si_fueras",
+              "texto": "Entendióle muy bien don Quijote, y con mucho sosiego le respondió:\n\n— Si fueras caballero, como no lo eres, ya yo hubiera castigado tu sandez y\natrevimiento, cautiva criatura.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 135241,
+                "end_char": 135416,
+                "lineas": "2794-2797"
+              }
+            },
+            {
+              "fragmento": "yo_no_caballero",
+              "texto": "— ¿Yo no caballero? Juro a Dios tan mientes como cristiano. Si lanza\narrojas y espada sacas, ¡el agua cuán presto verás que al gato llevas!\nVizcaíno por tierra, hidalgo por mar, hidalgo por el diablo; y mientes que\nmira si otra dices cosa.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 135450,
+                "end_char": 135689,
+                "lineas": "2801-2804"
+              }
+            },
+            {
+              "fragmento": "ahora_lo_veredes",
+              "texto": "— ¡Ahora lo veredes, dijo Agrajes! —respondió don Quijote.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 135691,
+                "end_char": 135749,
+                "lineas": "2806-2806"
+              }
+            }
+          ]
+        }
+      ],
+      "actores": [
+        "DQ.PER.0001"
+      ],
+      "hechos": [
+        "El escudero vizcaíno del coche, en «mala lengua castellana y peor vizcaína», exige que el coche siga su camino.",
+        "Don Quijote responde con sosiego pero lo llama «cautiva criatura» por no ser caballero.",
+        "El vizcaíno desafía en refrán («Si lanza arrojas y espada sacas…»).",
+        "Don Quijote cita a Agrajes, arroja la lanza y saca espada; el vizcaíno se escuda con una almohada del coche."
+      ],
+      "humor": {
+        "presencia": true,
+        "preparacion": "La cortesía arcaizante de U10 pende de un hilo: el mundo moderno (un coche que va a Sevilla) no piensa detenerse por ceremonias.",
+        "mecanismo": "Choque de registros verbales: amenaza prosaica de carretera contra cortesía de armas; réplica por refranero vizcaíno; el clímax materialista del «escudo» de almohada.",
+        "reaccion": "La gente del coche intenta poner paz y fracasa; la contienda se vuelve «rigurosa» (cierre en tensión).",
+        "registro": "desacuerdo de registros + materialismo literal"
+      },
+      "dialogos_literales": [
+        {
+          "speaker_id": "SECUNDARIO_VIZCAINO",
+          "id_propuesto": "DQ.P1.C08.P0024",
+          "texto": "— Anda, caballero que mal andes; por el Dios que crióme, que, si no dejas\ncoche, así te matas como estás ahí vizcaíno.",
+          "motivo_conservacion": "La «mala lengua castellana y peor vizcaína» es un número cómico lingüístico que el encargo exige conservar (voz y humor).",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 135121,
+            "end_char": 135239,
+            "lineas": "2791-2792"
+          }
+        },
+        {
+          "speaker_id": "DQ.PER.0001",
+          "id_propuesto": "DQ.P1.C08.P0024",
+          "texto": "Entendióle muy bien don Quijote, y con mucho sosiego le respondió:\n\n— Si fueras caballero, como no lo eres, ya yo hubiera castigado tu sandez y\natrevimiento, cautiva criatura.",
+          "motivo_conservacion": "La condición de caballero como único pasaporte de respeto; clave de todo el código quijotesco.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 135241,
+            "end_char": 135416,
+            "lineas": "2794-2797"
+          }
+        },
+        {
+          "speaker_id": "SECUNDARIO_VIZCAINO",
+          "id_propuesto": "DQ.P1.C08.P0024",
+          "texto": "— ¿Yo no caballero? Juro a Dios tan mientes como cristiano. Si lanza\narrojas y espada sacas, ¡el agua cuán presto verás que al gato llevas!\nVizcaíno por tierra, hidalgo por mar, hidalgo por el diablo; y mientes que\nmira si otra dices cosa.",
+          "motivo_conservacion": "Réplica por refranero: cita icónica del episodio; conservación literal por valor literario.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 135450,
+            "end_char": 135689,
+            "lineas": "2801-2804"
+          }
+        },
+        {
+          "speaker_id": "DQ.PER.0001",
+          "id_propuesto": "DQ.P1.C08.P0024",
+          "texto": "— ¡Ahora lo veredes, dijo Agrajes! —respondió don Quijote.",
+          "motivo_conservacion": "La erudición de romance viejo como detonante inmediato del duelo; frase célebre.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 135691,
+            "end_char": 135749,
+            "lineas": "2806-2806"
+          }
+        }
+      ],
+      "relato_intercalado": null,
+      "condensacion": null,
+      "arco_emocional": {
+        "DQ.PER.0001": "de la cortesía a la furia protocolaria: el duelo restaura su mundo.",
+        "DQ.PER.0002": "ausente de la unidad (en el suelo)."
+      },
+      "relevancia": "ESENCIAL",
+      "spoiler_risk": "NINGUNO",
+      "tratamiento_propuesto": "DRAMATIZACION",
+      "localizacion_verificada": {
+        "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+        "start_char": 135241,
+        "end_char": 135416,
+        "lineas": "2794-2797",
+        "cobertura": "líneas 2785-2806 (P0011 + P0024 propuesto)"
+      },
+      "review_state": "INVENTARIADA"
+    },
+    {
+      "unit_id": "DQ.UN.P1.C08.U12",
+      "orden_canonico": 12,
+      "titulo": "Combate con almohada y suspensión del autor",
+      "literary_kind": "MARCO_NARRATIVO",
+      "segmento_refs": [
+        "DQ.P1.C08.SG05"
+      ],
+      "passage_ids": [],
+      "pasajes_propuestos": [
+        {
+          "id_propuesto": "DQ.P1.C08.P0025",
+          "estado": "ALTA_PENDIENTE_APROBACION_EDITORIAL",
+          "fragmentos": [
+            {
+              "fragmento": "combate_suspension",
+              "texto": "Y, arrojando la lanza en el suelo, sacó su espada y embrazó su rodela, y\narremetió al vizcaíno con determinación de quitarle la vida. El vizcaíno,\nque así le vio venir, aunque quisiera apearse de la mula, que, por ser de\nlas malas de alquiler, no había que fiar en ella, no pudo hacer otra cosa\nsino sacar su espada; pero avínole bien que se halló junto al coche, de\ndonde pudo tomar una almohada que le sirvió de escudo, y luego se fueron el\nuno para el otro, como si fueran dos mortales enemigos. La demás gente\nquisiera ponerlos en paz, mas no pudo, porque decía el vizcaíno en sus mal\ntrabadas razones que si no le dejaban acabar su batalla, que él mismo había\nde matar a su ama y a toda la gente que se lo estorbase. La señora del\ncoche, admirada y temerosa de lo que veía, hizo al cochero que se desviase\nde allí algún poco, y desde lejos se puso a mirar la rigurosa contienda, en\nel discurso de la cual dio el vizcaíno una gran cuchillada a don Quijote\nencima de un hombro, por encima de la rodela, que, a dársela sin defensa,\nle abriera hasta la cintura. Don Quijote, que sintió la pesadumbre de aquel\ndesaforado golpe, dio una gran voz, diciendo:\n\n— ¡Oh señora de mi alma, Dulcinea, flor de la fermosura, socorred a este\nvuestro caballero, que, por satisfacer a la vuestra mucha bondad, en este\nriguroso trance se halla!\n\nEl decir esto, y el apretar la espada, y el cubrirse bien de su rodela, y\nel arremeter al vizcaíno, todo fue en un tiempo, llevando determinación de\naventurarlo todo a la de un golpe solo.\n\nEl vizcaíno, que así le vio venir contra él, bien entendió por su denuedo\nsu coraje, y determinó de hacer lo mesmo que don Quijote; y así, le aguardó\nbien cubierto de su almohada, sin poder rodear la mula a una ni a otra\nparte; que ya, de puro cansada y no hecha a semejantes niñerías, no podía\ndar un paso.\n\nVenía, pues, como se ha dicho, don Quijote contra el cauto vizcaíno, con la\nespada en alto, con determinación de abrirle por medio, y el vizcaíno le\naguardaba ansimesmo levantada la espada y aforrado con su almohada, y todos\nlos circunstantes estaban temerosos y colgados de lo que había de suceder\nde aquellos tamaños golpes con que se amenazaban; y la señora del coche y\nlas demás criadas suyas estaban haciendo mil votos y ofrecimientos a todas\nlas imágenes y casas de devoción de España, porque Dios librase a su\nescudero y a ellas de aquel tan grande peligro en que se hallaban.\n\nPero está el daño de todo esto que en este punto y término deja pendiente\nel autor desta historia esta batalla, disculpándose que no halló más\nescrito destas hazañas de don Quijote de las que deja referidas. Bien es\nverdad que el segundo autor desta obra no quiso creer que tan curiosa\nhistoria estuviese entregada a las leyes del olvido, ni que hubiesen sido\ntan poco curiosos los ingenios de la Mancha que no tuviesen en sus archivos\no en sus escritorios algunos papeles que deste famoso caballero tratasen; y\nasí, con esta imaginación, no se desesperó de hallar el fin desta apacible\nhistoria, el cual, siéndole el cielo favorable, le halló del modo que se\ncontará en la segunda parte.",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 135751,
+                "end_char": 138854,
+                "lineas": "2808-2857"
+              }
+            },
+            {
+              "fragmento": "invocacion_dulcinea",
+              "texto": "— ¡Oh señora de mi alma, Dulcinea, flor de la fermosura, socorred a este\nvuestro caballero, que, por satisfacer a la vuestra mucha bondad, en este\nriguroso trance se halla!",
+              "locador": {
+                "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+                "start_char": 136908,
+                "end_char": 137080,
+                "lineas": "2825-2827"
+              }
+            }
+          ]
+        }
+      ],
+      "actores": [
+        "DQ.PER.0001"
+      ],
+      "hechos": [
+        "Duelo con espada contra almohada; cuchillada sobre el hombro «por encima de la rodela».",
+        "Don Quijote invoca a Dulcinea («socorred a este vuestro caballero…») y decide aventurarlo todo «a la de un golpe solo».",
+        "El narrador detiene la acción en el momento culminante: el «autor desta historia» no halló más escrito; el «segundo autor» no se desespera y promete el fin «en la segunda parte» (enganche con I, 9 y la irrupción de Cide Hamete)."
+      ],
+      "humor": {
+        "presencia": true,
+        "preparacion": "La contienda narrada con plena solemnidad de armas («dos mortales enemigos»); los votos de las damas por «todas las imágenes y casas de devoción de España».",
+        "mecanismo": "Parodia de suspense caballeresco interrumpida por un golpe de metaficción editorial: el combate queda congelado por un trámite de biblioteca (falta de manuscrito). El materialismo de la almohada y el arreo de la mula («niñerías») bajan el registro justo antes del salto.",
+        "reaccion": "Curiosidad por el engaño del narrador: el cliffhanger enseña al espectador que esta historia también es un objeto escrito — semilla de todo el dispositivo cervantino.",
+        "registro": "parodia genérica + metaficción de autorías"
+      },
+      "dialogos_literales": [
+        {
+          "speaker_id": "DQ.PER.0001",
+          "id_propuesto": "DQ.P1.C08.P0025",
+          "texto": "— ¡Oh señora de mi alma, Dulcinea, flor de la fermosura, socorred a este\nvuestro caballero, que, por satisfacer a la vuestra mucha bondad, en este\nriguroso trance se halla!",
+          "motivo_conservacion": "La invocación de trance duplica la de U04: patrón conductual del héroe; solemnidad y vulnerabilidad a la vez.",
+          "locador": {
+            "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+            "start_char": 136908,
+            "end_char": 137080,
+            "lineas": "2825-2827"
+          }
+        }
+      ],
+      "relato_intercalado": null,
+      "condensacion": {
+        "que_se_condensa": "La narración del combate (almohada, cuchillada, votos) se comprime; la suspensión del autor se conserva SIEMPRE (es la llave de I, 9).",
+        "motivo": "duración",
+        "que_se_pierde": "detalle de los votos de las criadas",
+        "riesgo": "medio: perder el tono de suspense paródico",
+        "compensacion": "imagen de combate + narrador suspendiendo con la frase «no halló más escrito»",
+        "aprobacion": "PROPUESTA",
+        "alternativa_acceso": "lector íntegro"
+      },
+      "arco_emocional": {
+        "DQ.PER.0001": "tensión máxima y fe absoluta en la intercesión de Dulcinea; el capítulo lo deja en el aire.",
+        "DQ.PER.0002": "ausente de la unidad (en el suelo)."
+      },
+      "relevancia": "ESENCIAL",
+      "spoiler_risk": "NINGUNO",
+      "tratamiento_propuesto": "MIXTO",
+      "localizacion_verificada": {
+        "fuente": "DQ.SRC.0005 (PG 2000, texto LF-normalizado)",
+        "start_char": 135751,
+        "end_char": 138854,
+        "lineas": "2808-2857",
+        "cobertura": "líneas 2808-2857 (P0025 propuesto)"
+      },
+      "review_state": "INVENTARIADA"
+    }
+  ],
+  "relatos_intercalados_del_capitulo": {
+    "hay_relato_insertado": false,
+    "nota": "I, 8 no contiene relato insertado; contiene el MARCO de autorías ficcionales (U12): primer autor que «no halló más escrito» y segundo autor que encuentra el fin — umbral de Cide Hamete (I, 9). El modelo registra el tipo RELATO_INTERCALADO con el ejemplo de referencia de I, 12 (Marcela y Grisóstomo, narrado por un cabrero), ver docs/MODELO_INVENTARIO_LITERARIO.md §3.5."
+  },
+  "arcos_del_capitulo": {
+    "DQ.PER.0001": {
+      "trayectoria": "euforia expansionista (U01) → seguridad magisterial (U02) → furia belicosa (U03) → fervor devoto y derrota física (U04) → re-significación inmune (Frestón, U05) → estoicismo de código con primera risa compartida (U06) → devoción nocturna (U07) → poder normativo (U08) → expansión combativa y galante (U09-U10) → furia protocolaria (U11) → tensión máxima suspendida (U12)",
+      "invariante": "ninguna evidencia corrige al héroe: la derrota se absorbe por decreto (Frestón) o se difiere (I, 9)"
+    },
+    "DQ.PER.0002": {
+      "trayectoria": "expectante y pendiente de la ínsula (U01) → incredulidad práctica que aún obedece (U02) → advertencia impotente (U03) → acción socorredora (U04) → regañina triunfal y resignación cariñosa (U05) → pragmatismo corporal y primera concesión ganada (U06) → felicidad material (U07) → negociador con letra pequeña (U08) → despojos y primera paliza social (U09)",
+      "invariante": "Sancho se opone con datos y acaba obedeciendo con condición («Dios lo haga como puede»): ahí nace la sociedad"
+    }
+  },
+  "cobertura": {
+    "lineas_fuente": "2556-2857 (cabecera del VIII incluida; el IX arranca en la 2864)",
+    "unidades": [
+      "DQ.UN.P1.C08.U01",
+      "DQ.UN.P1.C08.U02",
+      "DQ.UN.P1.C08.U03",
+      "DQ.UN.P1.C08.U04",
+      "DQ.UN.P1.C08.U05",
+      "DQ.UN.P1.C08.U06",
+      "DQ.UN.P1.C08.U07",
+      "DQ.UN.P1.C08.U08",
+      "DQ.UN.P1.C08.U09",
+      "DQ.UN.P1.C08.U10",
+      "DQ.UN.P1.C08.U11",
+      "DQ.UN.P1.C08.U12"
+    ],
+    "fragmentos_sin_unidad_propia": [],
+    "nota": "Cobertura continua: U01-U05 (2560-2621), U06 (2623-2658), U07 (2658-2682), U08 (2683-2706), U09 (2708-2770), U10 (2772-2783), U11 (2785-2806), U12 (2808-2857). Sin huecos narrativos."
+  }
+}

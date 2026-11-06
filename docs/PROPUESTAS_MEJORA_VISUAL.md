@@ -87,7 +87,7 @@ La diferencia entre `025.jpg` y la quema nocturna/corral, así como la ausencia 
 
 1. **P0:** bloquear el uso completo de `900157` en I,6 y probar recorte/herramienta de composición sin modificar activo.
 2. **P1 rápido:** actualizar la tabla de roles de 021 (alegoría) y 025 (quema interior), mantener Q.112 ya correctamente enlazada a 026 y probar hotspot con resolución real.
-3. **P1 narrativo:** confirmar fase de frailes, rebaños y cuento sevillano por pregunta, no por `spoiler_risk` aislado. Emplear 056, 028, 029, 030, 057, 058, 170–173 conforme a escena y orden; la 171 es simbólica.
+3. **P1 narrativo:** confirmar fase de frailes, rebaños y cuento sevillano por pregunta, no por `spoiler_risk` aislado. Emplear 056, 028, 029, 030, 057, 058, 170–171 y 371–373 conforme a escena y orden; la 171 es simbólica.
 4. **P1 artístico:** revisión R06 de la continuidad visual entre escenas y closeups, máscaras TS-001 y diversidad de perspectivas; ningún acuerdo se finge realizado.
 5. **P2 global:** abrir las **625** imágenes restantes, verificar SHA-256 binario y duplicados perceptuales, comprobar zoom/corrupción, registrar observaciones individuales, mantener criterios de aceptación de cada contexto.
 

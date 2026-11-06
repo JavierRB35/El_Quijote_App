@@ -14,31 +14,41 @@ type Progreso = Record<string, { acierto: boolean; seleccion: string[] }>;
 
 const EPISODIO_INICIAL = 'DQ.P1.C08.E01'; // Los molinos de viento
 
-function useImagen(logicalUri: string | undefined, catalogo: Catalogo | null): string | null {
+function useImagen(
+  logicalUri: string | undefined,
+  catalogo: Catalogo | null,
+): { src: string | null; fallo: string | null } {
   const [src, setSrc] = useState<string | null>(null);
+  const [fallo, setFallo] = useState<string | null>(null);
   useEffect(() => {
     let viva = true;
     setSrc(null);
+    setFallo(null);
     if (!catalogo || !logicalUri) return;
     invoke<string>('leer_asset', { uri: logicalUri })
       .then((data) => viva && setSrc(data))
-      .catch((e) => console.error('asset', logicalUri, e));
+      .catch((e) => {
+        console.error('asset', logicalUri, e);
+        if (viva) setFallo(`${logicalUri} → ${e}`);
+      });
     return () => {
       viva = false;
     };
   }, [logicalUri, catalogo]);
-  return src;
+  return { src, fallo };
 }
 
 function Escena({ medio, catalogo }: { medio?: MediaAsset; catalogo: Catalogo | null }) {
-  const src = useImagen(medio?.logical_uri, catalogo);
+  const { src, fallo } = useImagen(medio?.logical_uri, catalogo);
   if (!medio) return null;
   return (
     <figure className="escena">
       {src ? (
         <img src={src} alt={medio.alt} />
       ) : (
-        <div className="escena-cargando">cargando escena…</div>
+        <div className="escena-cargando">
+          {fallo ? `escena no disponible (${fallo})` : 'cargando escena…'}
+        </div>
       )}
       <figcaption>
         <span className={`rotulo rotulo-${medio.media_class}`}>{medio.media_class}</span>{' '}

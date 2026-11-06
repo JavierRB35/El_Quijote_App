@@ -12,13 +12,20 @@ use std::io::Read;
 use std::path::{Path, PathBuf};
 use tauri::Manager;
 
-/// Raíz del repositorio en desarrollo: sube dos niveles desde src-tauri.
-fn raiz_repo() -> PathBuf {
-    std::env::current_dir()
-        .unwrap_or_else(|_| PathBuf::from("."))
-        .canonicalize()
-        .map(|p| p.ancestors().nth(2).map(Path::to_path_buf).unwrap_or(p))
-        .unwrap_or_else(|_| PathBuf::from(".."))
+/// Raíz del repositorio en desarrollo: sube desde el directorio actual hasta
+/// encontrar el paquete del piloto (robusto ante variaciones de cwd del
+/// proceso: src-tauri, target/debug, etc.).
+fn raiz_repo() -> Result<PathBuf, String> {
+    let mut dir = std::env::current_dir().map_err(|e| format!("sin cwd: {e}"))?;
+    for _ in 0..6 {
+        if dir.join("content").join("piloto").join("package.json").exists() {
+            return Ok(dir);
+        }
+        if !dir.pop() {
+            break;
+        }
+    }
+    Err("raíz del repositorio no encontrada (falta content/piloto/package.json)".into())
 }
 
 fn leer_json(path: &Path) -> Result<Value, String> {
@@ -30,7 +37,7 @@ fn leer_json(path: &Path) -> Result<Value, String> {
 /// listados en `files`, indexados por categoría e ID.
 #[tauri::command]
 fn cargar_paquete(raiz: Option<String>) -> Result<Value, String> {
-    let raiz = raiz.map(PathBuf::from).unwrap_or_else(raiz_repo);
+    let raiz = raiz.map(PathBuf::from).map(Ok).unwrap_or_else(raiz_repo)?;
     let dir_paquete = raiz.join("content/piloto");
     let manifest = leer_json(&dir_paquete.join("package.json"))?;
     let version = manifest
@@ -78,13 +85,21 @@ fn cargar_paquete(raiz: Option<String>) -> Result<Value, String> {
 /// raíz del repo en dev; en producción será el directorio de recursos firmados.
 #[tauri::command]
 fn leer_asset(uri: String, raiz: Option<String>) -> Result<String, String> {
-    let permitido = uri.starts_with("assets://") || uri.starts_with("content://");
-    if !permitido || uri.contains("..") {
+    // El esquema de la URI lógica se materializa como carpeta de primer nivel
+    // del paquete de recursos: assets://X → <raíz>/assets/X; content://X → <raíz>/content/X.
+    let (carpeta, relativa) = if let Some(resto) = uri.strip_prefix("assets://") {
+        ("assets", resto)
+    } else if let Some(resto) = uri.strip_prefix("content://") {
+        ("content", resto)
+    } else {
         return Err(format!("URI lógica fuera de ámbito: {uri}"));
+    };
+    if relativa.contains("..") || relativa.is_empty() {
+        return Err(format!("URI lógica inválida: {uri}"));
     }
-    let relativa = uri.split("://").nth(1).unwrap_or_default();
-    let raiz = raiz.map(PathBuf::from).unwrap_or_else(raiz_repo);
-    let path = raiz.join(relativa.replace('/', std::path::MAIN_SEPARATOR_STR));
+    let raiz = raiz.map(PathBuf::from).map(Ok).unwrap_or_else(raiz_repo)?;
+    let ruta = relativa.replace('/', std::path::MAIN_SEPARATOR_STR);
+    let path = raiz.join(carpeta).join(ruta);
     let mime = match path.extension().and_then(|e| e.to_str()).unwrap_or("") {
         "webp" => "image/webp",
         "jpg" | "jpeg" => "image/jpeg",

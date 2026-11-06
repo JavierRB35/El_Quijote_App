@@ -313,7 +313,12 @@
         "que_se_pierde": "el matiz de «ni oía las voces» si se omite la narración",
         "riesgo": "que el espectador lea el arrojo como valentía y no como sordera delirante",
         "compensacion": "gestual del beat (Sancho gritando en primer término) + narración breve en pantalla",
-        "aprobacion": "PROPUESTA",
+        "aprobacion": "R01_APROBADA_CON_CONDICION_2026-11-06",
+        "aprobacion_historico": "PROPUESTA (entrega 1.0 del mismo día, antes de la resolución R01; se conserva como registro)",
+        "condiciones_obligatorias": [
+          "El texto narrativo P0015 permanece íntegro y visible, incluida la causa del mecanismo («ni oía las voces de su escudero Sancho»)",
+          "La fusión afecta solo a la puesta en beats, nunca al texto"
+        ],
         "alternativa_acceso": "lector íntegro",
         "resolucion_r01": {
           "dictamen": "APROBADA CON CONDICION",
@@ -1023,7 +1028,13 @@
         "que_se_pierde": "el matiz burocrático-legítimo del despojo («ligítimamente»)",
         "riesgo": "medio: la paliza de Sancho es consecuencia social del delirio; no omitir el hecho",
         "compensacion": "narración en pantalla con el término «despojos» + beat físico breve",
-        "aprobacion": "PROPUESTA",
+        "aprobacion": "R01_APROBADA_CON_CONDICION_2026-11-06",
+        "aprobacion_historico": "PROPUESTA (entrega 1.0 del mismo día, antes de la resolución R01; se conserva como registro)",
+        "condiciones_obligatorias": [
+          "Réplicas íntegras y visibles: «Peor será esto que los molinos de viento», «deben de ser, y son sin duda», «Gente endiablada y descomunal…», «Para conmigo no hay palabras blandas»",
+          "El hecho completo de la paliza de Sancho no se omite (consecuencia social del delirio)",
+          "Solo se comprime la narración de la carga (P0023)"
+        ],
         "alternativa_acceso": "lector íntegro",
         "resolucion_r01": {
           "dictamen": "APROBADA CON CONDICION",
@@ -1338,7 +1349,12 @@
         "que_se_pierde": "detalle de los votos de las criadas",
         "riesgo": "medio: perder el tono de suspense paródico",
         "compensacion": "imagen de combate + narrador suspendiendo con la frase «no halló más escrito»",
-        "aprobacion": "PROPUESTA",
+        "aprobacion": "R01_APROBADA_CON_CONDICION_2026-11-06",
+        "aprobacion_historico": "PROPUESTA (entrega 1.0 del mismo día, antes de la resolución R01; se conserva como registro)",
+        "condiciones_obligatorias": [
+          "La suspensión del autor (P0025, «no halló más escrito… el segundo autor…») nunca se condensa ni se resume: llave estructural de I, 9",
+          "Solo se comprimen los votos de las criadas"
+        ],
         "alternativa_acceso": "lector íntegro",
         "resolucion_r01": {
           "dictamen": "APROBADA CON CONDICION",

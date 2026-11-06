@@ -109,10 +109,14 @@ Toda condensación u omisión relevante se registra **en la unidad, no en el gui
   "que_se_pierde": "… (con honestidad: si se pierde humor o matiz, se dice)",
   "riesgo": "…",
   "compensacion": "… (qué se conserva del mecanismo)",
-  "aprobacion": "PROPUESTA | R01_FIRMADA",
-  "alternativa_acceso": "lector íntegro / ficha (DC-19)"
+  "aprobacion": "PROPUESTA | R01_APROBADA_CON_CONDICION_<fecha> | R01_FIRMADA",
+  "aprobacion_historico": "estado anterior, si lo hubo (nunca contradice al vigente)",
+  "condiciones_obligatorias": ["… lista explícita de condiciones cuando el dictamen es CON CONDICION …"],
+  "alternativa_acceso": "lector íntegro (DC-19)"
 }
 ```
+
+Regla de univocidad de estados (dictamen de coordinación, 2026-11-06): el campo `aprobacion` expresa **el estado vigente** y no puede contradecir a `resolucion_r01`; cuando una propuesta se eleva por resolución R01, el estado anterior se conserva en `aprobacion_historico` y las condiciones de la aprobación se listan en `condiciones_obligatorias`.
 
 Regla DC-19: el hecho, el orden canónico, las causas, los desenlaces y el humor significativo permanecen comprensibles. Una unidad `ESENCIAL` no puede terminar en `OMISION_CONDENSADA` sin firma de R01 y decisión expresa de coordinación.
 

@@ -41,3 +41,15 @@ Script de verificación (localización v1.1) sobre `content/textos/gutenberg_200
 - Correcciones aplicadas sobre las mismas rutas de los tres entregables (sin ficheros duplicados).
 - Commits: rama `feature/cont-h1-subsanacion-h1-h3-i8` → merge a `main` (ver historial); este informe acompaña a la versión corregida.
 - Método de verificación documentado en `docs/MODELO_INVENTARIO_LITERARIO.md` §5; tabla de localización de la ficha en su §8.
+
+## 5. Anexo — corrección adicional tras el dictamen «SUBSANACIÓN ACEPTADA» (2026-11-06)
+
+**Incidencia:** en el inventario JSON, las condensaciones U03, U09 y U12 mantenían `aprobacion: PROPUESTA` junto a un `resolucion_r01` con dictamen «APROBADA CON CONDICION» — estados contradictorios.
+
+**Resolución aplicada:**
+- `aprobacion` expresa ahora el **estado vigente**: `R01_APROBADA_CON_CONDICION_2026-11-06` en las tres.
+- El estado original se conserva como histórico en el nuevo campo `aprobacion_historico` («PROPUESTA, entrega 1.0 del mismo día, antes de la resolución R01»).
+- Las condiciones que siguen siendo obligatorias se explicitan en el nuevo campo `condiciones_obligatorias` (U03: 2; U09: 3; U12: 2), derivadas literalmente del dictamen de resolución.
+- La rúbrica del modelo (§3.6) se actualiza con la regla de univocidad de estados: `aprobacion` no puede contradecir a `resolucion_r01`; el estado anterior se preserva en `aprobacion_historico`.
+
+**Verificación:** re-generación del inventario y re-ejecución del verificador de localización (79 PASS / 0 FAIL en el estado final; el campo añadido no altera citas ni localizadores).

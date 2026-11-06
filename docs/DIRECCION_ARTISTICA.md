@@ -1,6 +1,6 @@
 # DIRECCIÓN ARTÍSTICA — EL QUIJOTE
 
-**Versión:** propuesta 0.2 · **Fecha:** 2026-11-06 · **Estado:** especificación de Fase 0, pendiente de pruebas de usabilidad y aceptación final.
+**Versión:** propuesta 0.3 · **Fecha:** 2026-11-06 · **Estado:** especificación de Fase 0, pendiente de pruebas de usabilidad y aceptación final.
 **Responsabilidad compartida:** Dirección artística/entornos + Diseño UX/UI/accesibilidad + Contenidos/iconografía + QA.
 **Documentos relacionados:** [Piloto de escenas](DIRECCION_ARTISTICA_PILOTO.md) · [UX y accesibilidad](UX_ACCESIBILIDAD.md) · [Encargo maestro](ENCARGO_MAESTRO.md).
 
@@ -89,3 +89,96 @@ Cada recurso visual entregado por Contenidos incluirá función (`before/questio
 ## 8. Estado y límites
 
 La dirección estética de base y el uso de **respuestas seleccionadas** son decisiones cerradas del encargo. El énfasis en personas mayores es una orientación adicional solicitada el 2026-11-06. Los valores de tamaño, espaciado, contraste reforzado y flujos aquí propuestos deberán verificarse y pueden ajustarse tras pruebas de usuario. La ejecución de la aplicación sigue supeditada al punto de control GO/NO-GO del proyecto.
+
+
+---
+
+## 9. Directriz reforzada de experiencia cinematográfica premium (2026-11-06)
+
+**Esta sección es el pliego artístico prioritario para diseñar y evaluar todas las escenas y pantallas.** Desarrolla las decisiones anteriores, sin modificar el orden narrativo, el formato de respuestas seleccionadas ni la obligación de funcionamiento offline. El resultado debe parecer una obra audiovisual interactiva realizada con criterio de dirección de cine y diseño editorial, no una sucesión de ilustraciones estáticas con menús superpuestos.
+
+### 9.1. Dirección de escena y movimiento vivo pero sutil
+
+Cada episodio tendrá una **imagen maestra cinematográfica**, con perspectivas alternativas cuando cambie el foco dramático o el tipo de pregunta. Su puesta en escena debe comunicar el lugar, la acción, el estado emocional y la época: encuadre intencional, profundidad en primer término/plano medio/fondo, escala verosímil, iluminación motivada, materiales creíbles, continuidad de personajes, vestuario y utilería, y una paleta coherente entre episodios.
+
+La escena puede adquirir vida mediante capas 2.5D, ligero desplazamiento de cámara, parallax de profundidad, respiración de la luz, viento sobre vegetación y ropa, movimiento de nubes, polvo o humo, y pequeños gestos **cuando el recurso disponible los soporte**. No convertir una sola imagen plana en un falso vídeo: los recortes, máscaras, capas y animaciones deberán producirse y revisarse sin halos, desgarros, deformaciones o movimientos físicamente incoherentes.
+
+**Normas de movimiento:**
+
+1. La cámara se comporta como un observador sereno: paneos y acercamientos muy contenidos, sin sacudidas, zooms bruscos, desplazamiento continuo innecesario ni bucles perceptibles.
+2. Los efectos ambientales enriquecen la atmósfera, pero nunca compiten con la pregunta, la voz, los subtítulos o la acción relevante.
+3. Durante lectura, selección de respuesta, interacción por hotspot y consulta de pistas, el movimiento se detiene o reduce si afecta a estabilidad visual, comprensión o precisión.
+4. Debe haber una versión equivalente **sin animaciones**, que conserve toda la información narrativa y todos los controles.
+5. Transiciones entre escena, pregunta, revelación y descubrimiento sobrias, coherentes y omisibles; sonido y animación nunca son la única vía para entender qué ha sucedido.
+6. Priorizar fluidez y estabilidad en el hardware objetivo antes que la cantidad de partículas, capas o efectos. Los límites concretos de duración, desplazamiento y rendimiento se calibrarán mediante prototipos y pruebas, no mediante cifras arbitrarias presentadas como validadas.
+
+### 9.2. Composición protegida: la imagen manda, los textos se adaptan
+
+**Regla innegociable: ningún texto, botón, tarjeta, subtítulo o panel puede ocultar rostros, gestos, objetos que deban reconocerse, relaciones espaciales, acciones, pistas o información narrativa importante.**
+
+Los elementos textuales no se ubicarán automáticamente en el centro de cualquier imagen. La **composición de escena y de interfaz se diseña como un único sistema**: antes de aprobar la imagen, Contenidos y Dirección Artística identificarán sus zonas de interés y de reserva; UX decidirá dónde puede situarse la interfaz con tamaños legibles.
+
+Establecer por escena:
+
+- **Zonas críticas protegidas:** máscaras/polígonos normalizados para personajes, rostros, manos/gestos, objetos significativos, puntos de atención, hotspots y elementos que fundamenten la pregunta.
+- **Zonas candidatas de interfaz:** áreas de fondo relativamente vacío y con continuidad cromática apropiada, registradas para cada perspectiva y estado de la escena.
+- **Variantes de encuadre:** recorte, plano alternativo o desplazamiento de cámara que cree espacio sin perder una acción o un personaje.
+- **Estados de pantalla:** imagen libre en narración; pregunta; pista; explicación; revelación; subtítulos; menús y accesibilidad ampliada. La zona apta para texto puede cambiar entre estados.
+
+**Orden de resolución cuando no cabe un panel legible sin tapar la imagen:**
+
+1. Reencuadrar o seleccionar otro plano sin alterar ni anticipar la narración.
+2. Ubicar el texto en una franja lateral o inferior **reservada en la composición**, fuera de las zonas críticas y sin reducir tamaño.
+3. Reorganizar la pantalla en **vista dividida** (escena en un área propia y panel de preguntas en otra), conservando el fotograma esencial.
+4. Utilizar una **pantalla de pregunta dedicada** con fondo atenuado o imagen contextual reducida, siempre que la escena pueda consultarse de nuevo y el usuario no necesite observar detalles ocultos para responder.
+
+**Prohibido resolverlo** reduciendo la letra hasta resultar difícil de leer, acumulando tarjetas sobre protagonistas, aplicando transparencias de contraste dudoso o colocando botones sobre elementos interactivos. Las superposiciones sobre áreas no críticas son admisibles solo cuando mantienen legibilidad y no interfieren en la escena. En ejercicios de identificación visual, la imagen y los hotspots tendrán prioridad: enunciado y opciones deben trasladarse a un área separada si es necesario.
+
+El marco de diseño principal será escritorio **16:9**, con comprobación a 1920×1080 y adaptación a 1440p/4K y ventanas más pequeñas admisibles. No extrapolar directamente a 16:9 el póster vertical del episodio de los molinos: es una **lámina conceptual, no una maqueta definitiva**.
+
+### 9.3. Jerarquía editorial y legibilidad sin concesiones
+
+Las pantallas deben ser visualmente ricas en lo cinematográfico y **extraordinariamente simples en lo interactivo**:
+
+- Una intención principal por pantalla; enunciados breves y visibles, alternativas separadas y controles secundarios discretos pero identificables.
+- Texto funcional **grande, nítido y escalable**: mantener como punto de partida los 20–22 px orientativos del §3, con tamaño superior donde el enunciado lo exija y con ajustes individuales. No convertir ese intervalo en tope ni sacrificarlo por motivos estéticos.
+- Contraste sostenido entre letras y superficies; cuando haya fotografía o escena debajo, colocar panel opaco o suficientemente sólido, no letras flotantes sobre fondos cambiantes. Comprobar contraste en **todos los fotogramas** de las animaciones, no solo en una captura.
+- Anchura de línea moderada, interlineado y espaciado generosos; alineación consistente; evitar texto justificado con huecos irregulares, mayúsculas sostenidas para párrafos, ornamentos que compitan con el contenido y serif históricas de baja lectura en controles.
+- Botones amplios, activables con ratón y teclado, estados de foco/selección evidentes sin depender exclusivamente del color; el diseño debe aceptar ampliación de texto y traducciones futuras.
+- Subtítulos fuera de las zonas narrativas protegidas; si no existe espacio, reservar una banda propia y adaptar el encuadre. Permitir repetir o pausar la narración.
+- Los marcos, filetes, dorados, texturas de papel, iconos y motivos cervantinos son **acentos de identidad**, no una excusa para saturar. Evitar aspecto de plantilla de juego móvil, botones brillantes gigantes o interfaz barroca recargada.
+
+### 9.4. Qué significa «premium» en este proyecto
+
+La calidad no se define por cantidad de efectos ni por ornamento. Se exigirá **consistencia de producción en todos los estados**:
+
+1. **Dirección cinematográfica:** variedad de planos y ritmos, intención narrativa, iluminación, color y atmósfera; evitar imágenes genéricas repetidas y personajes desproporcionados.
+2. **Dirección editorial:** títulos, capítulos, voces, preguntas y explicaciones con jerarquía tipográfica estable; lectura cómoda y materiales culturales atribuidos correctamente.
+3. **Microinteracciones:** cambios de estado pulidos, discretos, previsibles y reversibles; no usar celebraciones estridentes, parpadeos o castigos visuales.
+4. **Acabado audiovisual:** voces claras, ambientes discretos, música no invasiva, niveles de audio regulables, subtítulos cuidados y transiciones sonoras suaves.
+5. **Continuidad visual:** mismos personajes, textura de materiales, sistema de botones, marcos, iconos, espaciados y reglas de contraste en aventuras, lector, atlas, museo y cuaderno, sin uniformar artificialmente sus funciones.
+6. **Estados de excepción cuidados:** carga, ausencia de datos, fallo de copia, desconexión, ayuda y configuración deben mantener la misma dignidad visual que la portada, con información clara y sin impedir el uso offline.
+7. **Respeto histórico:** la apariencia realista no autoriza anacronismos ni convierte recreaciones IA en documentos históricos. Todas las imágenes siguen sujetas a procedencia, derechos, revisión y contrato editorial.
+
+### 9.5. Instrucción operativa compartida entre equipos
+
+**Contenidos / Dirección artística** debe entregar por escena: propósito narrativo, fase pre/pregunta/revelación/post, imagen o capas, plano y variantes, personajes/objetos protegidos, áreas candidatas para UI, elementos animables, restricciones de spoiler, texto alternativo, procedencia y derechos. **Desarrollo / UX** debe transformar esas zonas y restricciones en distribuciones adaptables para texto normal/ampliado, subtítulos, preguntas, teclado y reducción de movimiento, sin introducir texto editorial directamente en el código. **QA** debe evaluar las composiciones resultantes, no únicamente los recursos aislados.
+
+Se recomienda formalizar estas regiones como coordenadas normalizadas y metadatos asociados a cada escena en el contrato editorial-técnico. **No se declara creado ni aprobado un esquema nuevo** por esta directriz: cualquier cambio de contrato requiere versión y revisión conjunta.
+
+### 9.6. Pruebas de aceptación específicas de calidad cinematográfica y composición
+
+En un piloto representativo y en cada plantilla de pantalla se verificará:
+
+- **Cero oclusiones de información narrativa esencial** por preguntas, subtítulos, barras, mensajes o botones en los estados probados, incluidos texto ampliado y paneles de ayuda.
+- **Cero pérdida de respuesta por la composición:** la imagen previa no revela la respuesta, pero tampoco oculta información necesaria para formularla de manera justa.
+- **Legibilidad estable durante el movimiento:** color, cámara y ambiente no alteran el contraste de los textos ni provocan distracciones que impidan contestar.
+- **Equivalencia con movimiento reducido:** puede completarse el mismo flujo y comprenderse la misma información sin parallax ni efectos ambientales.
+- **Diseño responsivo real:** validar 1080p, 1440p, 4K y escalado de interfaz, con puntos de interés protegidos, botones utilizables y sin recortes de textos.
+- **Continuidad premium:** comprobar consistencia de protagonistas, color, composición, botones, transiciones, sonido, subtítulos y estados de excepción mediante una checklist conjunta de dirección artística y UX.
+- **Prueba con personas mayores sin entrenamiento previo:** identificar voluntariamente la pregunta, localizar opciones, completarla con comodidad, repetir audio y regresar a la aventura sin instrucciones externas; registrar observaciones y corregir.
+- **Evidencia trazable:** capturas y vídeo de los estados de escena en movimiento, versión estática accesible, mapa de zonas protegidas y resultados de accesibilidad asociados al ID de escena.
+
+**Condición de rechazo:** si para preservar la imagen hay que disminuir la legibilidad, o para mostrar texto hay que ocultar la acción, la composición **no está terminada**. Se rediseñan el plano, la interfaz o la transición; no se traslada el problema al jugador.
+
+> **Prompt maestro para los equipos:** «Diseñad EL QUIJOTE como una aventura literaria cinematográfica de acabado premium: escenas realistas de composición deliberada, enriquecidas con movimiento ambiental 2.5D y cámara apenas perceptible; dirección de arte rigurosa, continuidad de personajes y una interfaz editorial elegante. Cada texto, subtítulo, pregunta y botón ha de ser grande, legible, accesible y ubicarse fuera de los rostros, acciones, pistas y objetos narrativamente importantes. Definid zonas protegidas y zonas seguras de UI para cada escena y cada estado, adaptando el encuadre o usando un panel separado cuando no exista espacio. Nunca resolváis un conflicto reduciendo tipografía ni tapando la imagen esencial. Priorizad el confort de las personas mayores, sin infantilizarlas, con navegación sencilla, respuestas exclusivamente seleccionadas, ritmo sin presión, narración y subtítulos opcionales, control total del movimiento y funcionamiento offline. Buscad un nivel de detalle y cohesión propio de una producción cultural premium, y someted cada decisión a pruebas de legibilidad, coherencia histórica, accesibilidad y experiencia real de usuario». 

@@ -130,3 +130,16 @@ Recreaciones IA originales, no fuentes históricas; pendiente cotejo con el text
 | `p2_c38_duena_dolorida_pre` | Presentación teatral de la Dueña Dolorida en palacio, acompañantes veladas, mascarada humana sin magia real. | Entrada de personaje. |
 
 Todas son recreaciones originales con IA, de uso contextual previo y pendientes de cotejo filológico y validación editorial.
+
+## Novena batería — nuevos capítulos (2026-11-06)
+
+| ID | Variación narrativa del prompt base | Uso |
+|---|---|---|
+| `p1_c29_dorotea_encuentro_pre` | Dorotea en Sierra Morena conversa con cura, barbero y Sancho junto a un arroyo; sin castillo fantástico. | Preparativos de la estrategia. |
+| `p1_c34_curioso_impertinente_pre` | Camila y Lotario hablan con tensión en un interior florentino; **novela intercalada, no aventura de Don Quijote**. | Relato dentro del relato. |
+| `p1_c43_clara_don_luis_pre` | Don Luis canta desde el patio nocturno de la venta y doña Clara escucha desde una ventana; sin letra visible. | Episodio de Clara. |
+| `p2_c19_preparativos_boda_pre` | Los viajeros contemplan preparativos para las bodas de Camacho y Quiteria en aldea, sin revelar ardid de Basilio. | Camino a las bodas. |
+| `p2_c34_monteria_duques_pre` | Don Quijote y Sancho acompañan a duques y cazadores con perros en un bosque, antes de encantamientos fingidos. | Cacería. |
+| `p2_c48_duena_rodriguez_noche_pre` | Doña Rodríguez entra con vela al aposento de Don Quijote para conversar, tono discreto y no erotizado. | Conversación nocturna. |
+
+Recreaciones de IA originales y pendientes de cotejo filológico y editorial; no son documentación histórica.

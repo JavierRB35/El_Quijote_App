@@ -16,16 +16,16 @@ Fuente: `docs/data/propuesta_correcciones_visuales_pre_r15.csv` (13 `RETIRAR_PRE
 | A-02 | Q.232 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
 | A-03 | Q.233 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
 | A-04 | Q.234 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-05 | Q.235 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-NC ⚠ cuestionada por discrepancia de identidad canónica DQ.MA/DQ.MED — contrarrevisión R06 pendiente (instrucción 2, dictamen R14); no es rechazo artístico definitivo — registro histórico preservado · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-05 | Q.235 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
 | A-06 | Q.236 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
 | A-07 | Q.237 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
 | A-08 | Q.238 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
 | A-09 | Q.313 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
 | A-10 | Q.314 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-11 | Q.315 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | ☑ R06-NC ⚠ cuestionada por discrepancia de identidad canónica DQ.MA/DQ.MED — contrarrevisión R06 pendiente (instrucción 2, dictamen R14); no es rechazo artístico definitivo — registro histórico preservado · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-11 | Q.315 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
 | A-12 | Q.316 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | **mantener condicional** | ☑ R06-PEND (cronología intrapregunta) · **R05-PEND** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-13 | Q.317 | DQ.P1.C21.E01 | `DQ.MA.900037` | C21.E01 | retirar pre | ☑ R06-NC ⚠ cuestionada por discrepancia de identidad canónica DQ.MA/DQ.MED — contrarrevisión R06 pendiente (instrucción 2, dictamen R14); no es rechazo artístico definitivo — registro histórico preservado · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-14 | Q.318 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | ☑ R06-NC ⚠ cuestionada por discrepancia de identidad canónica DQ.MA/DQ.MED — contrarrevisión R06 pendiente (instrucción 2, dictamen R14); no es rechazo artístico definitivo — registro histórico preservado · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-13 | Q.317 | DQ.P1.C21.E01 | `DQ.MA.900037` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-14 | Q.318 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
 
 Nota técnica para el visado (R09/R12): la pre-imagen actual de todas ellas es una recreación `pre_pregunta` con `spoiler_level: ninguno` en el dato; la propuesta de PR #30 obedece a riesgos contextuales específicos (no al spoiler_level del catálogo). Retirar la pre en una pregunta no modifica su registro salvo en `visual_requirements.pre_image_media_id` (baja opcional del campo), y el gating temporal ya declarado sigue aplicando.
 
@@ -56,6 +56,9 @@ Fuente: `INFORME_QA_PATRIMONIO_VISUAL.md` (2.ª auditoría R12) y `PROPUESTAS_ME
 | C-01 | Retirar 900157 del uso completo en I,6 y evaluar rescate por recorte | R12 2.ª auditoría | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
 
 ## D0. Pronunciamiento verificable R06 sobre A/B/C — 2026-11-06
+
+> **Trazabilidad:** §D0 es el registro histórico de la PR #40; los cuatro antiguos R06-NC y la incorrecta equiparación por sufijo DQ.MA/DQ.MED se preservan solo como antecedente. Para A-05, A-11, A-13 y A-14 prevalecen las cuatro contrarrevisiones de §D2 y el estado vigente de la tabla A. Los otros 22 pronunciamientos y todas las firmas R05 de §D1 permanecen inalterados.
+
 
 **Modo:** DIRECCIÓN ARTÍSTICA R06 · **Sólo visado artístico documental**. La marca de esta columna no constituye aprobación de otro rol, integración, prueba de runtime, nueva inspección píxel a píxel ni autorización para modificar recursos. Se respeta el único expediente de visados de la PR #37 y la fe de erratas R06 aceptada por R14 en PR #38.
 
@@ -160,6 +163,37 @@ Fuentes: `content/piloto/media_assets/DQ.MA.900042.json`, `DQ.MA.900036.json`, `
 
 ---
 
+## D2. Rectificación extraordinaria R06 P0 — cuatro MediaAsset canónicos
+
+**Origen:** encargo R14 posterior a la PR #40 (merge cabe1cdfd5bed8dd496a4aec9e9e78de2aa8a721), con evidencia de Curaduría R05 en PR #42. **Alcance único:** A-05, A-11, A-13 y A-14. La equivalencia por sufijo entre DQ.MA (ficha canónica de preguntas) y DQ.MED (inventario visual) **es falsa**. El antiguo rechazo de uso posterior por «imagen de otro capítulo» queda retirado, sin borrar su trazabilidad en §D0.
+
+### Identidad verificada con URI real de cada MediaAsset
+
+| MediaAsset en el JSON de pregunta | URI canónica real y SHA-256 declarado | Correspondencia y QA vigente |
+|---|---|---|
+| **DQ.MA.900042** | assets://scenes/part_2/chapter_74/p2_c74_testamento_quijano_post.webp — fc3fbcf60ff3312091805654ef1053ac07cf23eb9023c8688395fc7d859f2f26 | **DQ.MED.900202, II,74**; R12 abrió el WebP: testamento, figuras, escribiente; **PENDIENTE** continuidad e identificación de personajes |
+| **DQ.MA.900036** | assets://scenes/part_1/chapter_21/p1_c21_bacia_lluvia_pre.webp — 67601cff8d6be75649ea0db578fc631efbc0cc2ade9122e5a6a1762742bd67d0 | **DQ.MED.900237, I,21**; R12 **PENDIENTE, sin inspección ocular**; ficha describe bacía bajo lluvia |
+| **DQ.MA.900037** | assets://scenes/part_1/chapter_21/p1_c21_sancho_bacia_examen_post.webp — 54d78b8f56748bbf8cf693facf9e0a5228c72be08c4c475db58c96683083159b | **DQ.MED.900167, I,21**; R12 **PENDIENTE, sin inspección ocular**; ficha y manifiesto describen examen posterior de la bacía |
+
+**Fuentes inspeccionadas documentalmente:** content/piloto/media_assets/DQ.MA.900042.json, DQ.MA.900036.json y DQ.MA.900037.json; content/piloto/questions/DQ.Q.000235.json, 000315.json, 000317.json y 000318.json; docs/data/propuesta_correcciones_visuales_pre_r15.csv; assets/scenes/manifest.json; docs/data/registro_revision_visual.csv (R12 v0.2); §D1 (R05, PR #42). Los SHA citados son **declarados**, no recalculados. El conector GitHub no permite decodificar esos WebP binarios en esta revisión: **no se declara inspección ocular nueva ni PASS de continuidad**. El campo function=pre_pregunta en las fichas es el estado actual, no autorización artística para anticipar la escena; spoiler_level=ninguno tampoco valida el instante intrapregunta.
+
+### Veredictos artísticos R06 rectificados — dos decisiones separadas por fila
+
+| Fila | Retirada antiespoiler | Posible imagen posterior | **Veredicto R06 vigente** y evidencia/condición |
+|---|---|---|---|
+| **A-05 / Q.235**: destinatarios convocados para confesar y testar (II,74) | **SÍ, RETIRAR_PRE**: mostrar el testamento desde el inicio anticipa convocatoria y acto. | **DQ.MA.900042 en post_answer** tras convocar a los testigos y **después de narrar el acto de testar**, no solo tras marcar respuesta. | **CONFORME CONDICIONADO (R06-CC)**. El recurso **sí es testamento II,74**, no Sansón II,3. R12 lo abrió pero lo mantiene PENDIENTE: comprobar rostros/roles del cura, barbero, bachiller, Sancho y escribiente; evitar superponer texto sobre escribiente, firmas o caras. Sin cronología R01 y TS-001 no se aprueba el montaje. |
+| **A-11 / Q.315**: por qué el barbero lleva bacía sobre la cabeza (I,21) | **SÍ, RETIRAR_PRE**: la bacía expuesta bajo la lluvia adelanta la solución visual. | **DQ.MA.900036 en post_answer** solo tras explicación textual de la **lluvia y protección del sombrero**. | **CONFORME CONDICIONADO (R06-CC)**. La URI real corresponde a **bacía y lluvia I,21**, no a segunda salida I,7. El título/alt hacen plausible el apoyo visual pero **no demuestran por sí solos la causa del sombrero**; nunca presentar la imagen como prueba de esa intención. R12 debe abrir el recurso y revisar gesto, objeto, lluvia, anatomía, personajes y zona TS-001, antes de aprobarlo como post. |
+| **A-13 / Q.317**: Sancho y el supuesto yelmo de oro desde el principio (I,21) | **SÍ, RETIRAR_PRE**: mostrar examen posterior anticipa fase y objeto. | **DQ.MA.900037 en reveal** únicamente tras responder «Falso», contrastar percepciones y alcanzar la escena de examen. | **CONFORME CONDICIONADO (R06-CC)**. La URI real corresponde al **examen posterior de la bacía I,21**, no manuscrito de Toledo I,9. No implica que Sancho creyera al principio en un yelmo de oro; texto y encuadre deben preservar la ironía. R12 aún **no** abrió el WebP: revisar gesto, identificación del objeto y coherencia de la fase reveal antes de dar conformidad visual. |
+| **A-14 / Q.318**: ordenar lluvia → avistamiento → carga → huida y bacía (I,21) | **SÍ, RETIRAR_PRE** de DQ.MA.900036: anticipa la imagen intermedia de la aventura y puede sesgar la ordenación. | **DQ.MA.900037 en post_answer** **después de completar** correctamente el orden, como epílogo de examen, **no** como imagen que «prueba» los cuatro lances. | **CONFORME CONDICIONADO (R06-CC)**. Ambos MediaAsset son de I,21: 900036 corresponde a DQ.MED.900237 y 900037 a DQ.MED.900167. La escena de examen es una consecuencia y no una secuencia completa. R12 debe abrir ambas imágenes y contrastar cronología, actitud de Sancho, objeto, luz y reserva para TS-001; R01 valida el instante de aparición. |
+
+**Condición transversal:** el safe_after_episodes del JSON únicamente cierra la puerta por episodio; **no valida el instante del beat ni el post_answer/reveal**. Toda presentación posterior requiere: hecho ya narrado, respuesta emitida, ausencia de spoiler retrospectivo, texto completo TS-001 y prueba visual/funcional R12/R08/R15. **Las cuatro R06-CC son criterios de aptitud artística potencial, no PASS de integración.** No se cambian recursos, bindings, preguntas, relaciones de medios, datos productivos ni estados QA.
+
+**Precedencia y recuento:** PR #40 documenta históricamente **21 R06-CC / 4 R06-NC / 1 R06-PEND**. Tras esta **única** rectificación, el balance R06 vigente pasa a **25 R06-CC / 0 R06-NC / 1 R06-PEND**; las restantes 22 filas se mantienen sin revisión. §D1 y la columna R05 conservan **íntegros** los dictámenes R05 (25 CC, 1 PEND) y sus notas antiguas de «R06-NC a revisar», que son anteriores a §D2.
+
+**NO-GO integración y producción:** R01/R02 deben validar hechos/instantes, R12 verificar continuidad ocular (solo 900202 consta abierto), R08/R12/R15 validar TS-001 y antiespoiler, R09 comprobar técnica únicamente tras los visados y R14 aceptar el cierre. Ningún alta de imágenes, generación artística ni modificación de MediaAsset está autorizada por esta rectificación.
+
+---
+
 ## D. Comprobación técnica (R09) — tras los visados
 
 1. Verificar que toda fila «conforme» tiene su condición registrada en el dato (o su alta tramitada por PR documental, sin retroeditar CSVs).
@@ -167,6 +201,9 @@ Fuentes: `content/piloto/media_assets/DQ.MA.900042.json`, `DQ.MA.900036.json`, `
 3. Registrar el resultado de esta tabla en `VISION_Y_DECISIONES` (o el acta de hito que corresponda).
 
 ## Estado (actualizado tras el dictamen R14 — cierre R06)
+
+> **Rectificación P0 R06 posterior al histórico PR #40 y al visado R05 PR #42:** **4 R06-NC pasan a R06-CC condicionadas** solo para A-05/A-11/A-13/A-14, con evidencia de URI en §D2. **Balance R06 actual: 25 CC / 0 NC / 1 PEND**. El texto histórico de los cierres anteriores se mantiene abajo como registro, pero **no debe usarse para atribuir rechazo vigente a las cuatro filas**. No cambia ningún estado de R05, R12, R01/R02 o R09.
+
 
 - ☑ **Visado R06 — COMPLETADO**: 26 pronunciamientos (21 CC · 4 NC · 1 PEND), PR #40 fusionada `cabe1cd`, **ratificado por R14** (A-05/A-11/A-13/A-14: retirada procedente pero destinos NO aceptados; A-12 exige cronología intrapregunta; 021/025 condicionadas; 900157 excluido). **Reauditoría (dictamen R14 posterior): las 4 R06-NC están CUESTIONADAS por discrepancia de identidad canónica DQ.MA/DQ.MED (resolución por logical_uri + SHA-256 en PR #42); la rectificación corresponde exclusivamente a Dirección Artística — registro histórico preservado.**
 - ☑ **R05: visado documental ratificado por R14**, 26/26 pronunciamientos (25 CC condicionadas y A-12 PEND). Se mantienen los estados R06 ya ratificados; las cuatro NC requieren contrarrevisión de identidad.

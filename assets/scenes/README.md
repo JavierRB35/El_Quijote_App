@@ -38,3 +38,5 @@ Todos los archivos quedan en `editorial_review_pending` hasta que se cotejen los
 **Batería novena (2026-11-06):** seis escenas `pre` de I.29, I.34, I.43, II.19, II.34 y II.48, todos capítulos sin recreación propia anterior. Se conservan los 77 recursos previos; inventario 83. I.34 pertenece a la novela intercalada *El curioso impertinente*, no a la trama de los protagonistas. Revisión editorial pendiente.
 
 **Décima batería (2026-11-06):** 20 nuevas escenas en capítulos sin recreación propia previa: I.28, 31, 37, 39, 42, 44, 47, 48, 49, 50, 51; II.2, 5, 6, 7, 9, 15, 23, 24, 25. Total: **103 activos** (83 anteriores conservados). I.39 representa el relato intercalado del cautivo; II.15 y II.23 se catalogan `post` con spoiler alto. Pendiente de cotejo editorial individual.
+
+**Duodécima batería (2026-11-06):** 50 nuevas recreaciones WebP de momentos narrativos diferentes, alternando estados `pre` y `post` y perspectivas complementarias; total **203 recursos visuales** (202 escenas y referencia). Las 153 entradas previas se conservan. Todas las nuevas escenas quedan pendientes de cotejo editorial individual.

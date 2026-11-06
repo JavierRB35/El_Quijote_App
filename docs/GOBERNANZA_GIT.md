@@ -66,7 +66,8 @@ Autorizada por el propietario («validen el contrato técnico antes de integrarl
 1. Suite de contrato completa (fixtures válidos + casos negativos §6.3.7) — exige PASS.
 2. Paquete real del piloto (`content/piloto`) contra los esquemas canónicos.
 3. Criterio ADR-0001.1 (FTS5 con castellano áureo).
-4. Informes JSON publicados como artefacto: evidencia de auditoría.
+
+El veredicto de cada paso queda como evidencia en el log del job (los informes JSON se generan también en el runner). No se suben artefactos: la cuota de almacenamiento de Actions de la cuenta está agotada y un fallo de cuota no debe poder tumbar la compuerta del contrato.
 
 **Protección de `main`:** el check `contrato` es **obligatorio para fusionar cualquier PR**; force-push y borrado de la rama quedan prohibidos técnicamente. Las integraciones directas a `main` expresamente autorizadas por el propietario (baterías artísticas documentadas más abajo) siguen permitidas y quedan validadas a posteriori por el mismo workflow en el push. Elevar a «PR obligatoria para todo» (incluido el propietario) es un cambio de un comando que queda a decisión expresa del propietario.
 

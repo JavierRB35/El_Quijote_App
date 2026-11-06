@@ -45,12 +45,8 @@ jobs:
       - name: '3. Criterio ADR-0001.1 — FTS5 castellano áureo'
         run: python -I tests/dev/fts5_castellano_aureo.py
 
-      - name: Informes de validación (evidencia)
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: informe-contrato
-          path: |
-            tests/contracts/last_validation_report.json
-            tests/dev/last_fts5_report.json
-          if-no-files-found: ignore
+      # Evidencia: el veredicto de cada paso queda en el log del job (§9);
+      # los informes JSON completos se generan igualmente en el runner.
+      # Nota: no se suben artefactos — la cuota de almacenamiento de Actions
+      # de esta cuenta está agotada y un fallo de cuota no debe poder tumbar
+      # la compuerta del contrato.

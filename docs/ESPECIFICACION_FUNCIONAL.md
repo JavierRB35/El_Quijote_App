@@ -3,7 +3,7 @@
 **Estado:** COMPLETA (v1.0, borrador para GO/NO-GO) — entregable FASE 0 (encargo §8); los requisitos se citan como `EF-<subsistema>-<nn>` y son **verificables** (prueba de aceptación incluida o referida al plan de QA).
 **Modo responsable:** DESARROLLO, con validación de COORDINACIÓN.
 **Fuente normativa:** encargo §3, §5.4, §7.2; decisiones cerradas DC-01…DC-17 (`VISION_Y_DECISIONES.md`); contrato editorial-técnico v0.2.0 (firmado por ambos lados).
-**Última actualización:** 2026-11-05.
+**Última actualización:** 2026-11-06 (ampliación modos Historia e Histórico; resto de la especificación conserva su estado previo).
 
 Convenciones: los datos editoriales provienen SIEMPRE del catálogo versionado (contrato), nunca de componentes con textos incrustados (encargo §5.3, §9 criterio de excelencia). «Piloto I.8» = `content/piloto/package.json` (12 preguntas reales, 21 medios, VÁLIDO).
 
@@ -13,7 +13,7 @@ Convenciones: los datos editoriales provienen SIEMPRE del catálogo versionado (
 
 **Propósito:** entrada simple e inmersiva; nada administrativo delante.
 
-- `EF-INI-01` Ofrecer: continuar, nueva partida, aventura aleatoria opcional, atlas, museo, cuaderno, lector, perfiles, ajustes (§5.4).
+- `EF-INI-01` Ofrecer: continuar, nueva partida, aventura aleatoria opcional, **Modo Historia**, **Modo Histórico**, atlas, museo, cuaderno, lector, perfiles, ajustes (§5.4 y DC-19/DC-20).
 - `EF-INI-02` El tutorial es breve, **cancelable y recuperable**; su estado vive por perfil.
 - `EF-INI-03` En primera partida, la introducción es breve y opcional (DC-05).
 - `EF-INI-04` La pantalla de inicio no muestra avisos de actualización ni paneles de telemetría; lo relativo a red vive en ajustes.
@@ -148,3 +148,20 @@ Convenciones: los datos editoriales provienen SIEMPRE del catálogo versionado (
 - Con CONTENIDOS: todo consumo es vía contrato v0.2.0 (firmado); cambios = versión + doble revisión (§10 del contrato).
 - Con ADR-0001/0002: FTS5, almacenamiento y resolución de URIs lógicas se concretan en arquitectura tras la aprobación GO/NO-GO.
 - Criterios de aceptación detallados y perfiles de prueba de caja negra: `PLAN_QA_Y_ACEPTACION.md`.
+
+## EF-HIS — Modo Historia (incorporado a la hoja de ruta; pendiente de implementación)
+
+- `EF-HIS-01` Narración condensada y suficiente de ambas partes, secuencia canónica y continuidad editorial revisada; sin obligar a recorrer los 126 capítulos íntegros.
+- `EF-HIS-02` Utiliza recursos visuales disponibles pertinentes y aprobados, variedad contextual de planos, texto narrativo, audio/subtítulos cuando estén disponibles y distinción entre cita literal y adaptación.
+- `EF-HIS-03` Flujo continuo sin preguntas obligatorias; pausa, reanudación, posición por perfil y acceso voluntario a lector, museo, atlas y cuaderno.
+- `EF-HIS-04` La extensión final se determina tras piloto midiendo comprensión, ritmo y duración; nunca por acumulación artificial de escenas o ilustraciones.
+- **Prueba:** guion de continuidad trazable + recorrido piloto con enlaces y QA de fidelidad, comprensión, accesibilidad y offline (DC-19).
+
+## EF-HCT — Modo Histórico-cultural (incorporado a la hoja de ruta; pendiente de implementación)
+
+- `EF-HCT-01` Recorridos explicativos sobre el contexto real de la época, organizados por temas y vinculados a obra, atlas y museo, sin sustituirse por una mera lista de fichas.
+- `EF-HCT-02` Toda afirmación factual tiene fuentes y grado de certeza; distinguir expresamente hecho, interpretación, hipótesis, ficción y recreación.
+- `EF-HCT-03` Acceso desde inicio, sin progreso obligatorio, soporte offline, licencias, atribuciones, accesibilidad y avisos de spoiler al enlazar con la narración.
+- **Prueba:** tema piloto con fuentes verificadas, medios etiquetados y navegación completa offline (DC-20).
+
+**Plan por fases y responsabilidades:** ver `docs/HOJA_RUTA_MODOS_HISTORIA_E_HISTORICO.md`. Cualquier ampliación de los esquemas compartidos requiere coordinación con CONTENIDOS y DESARROLLO; **no hay implementación aprobada por el mero registro documental**.

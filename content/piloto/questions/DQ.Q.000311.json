@@ -1,59 +1,60 @@
 {
- "id": "DQ.Q.000311",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P1.C16.E01",
- "chapter_ids": [
-  "DQ.P1.C16"
- ],
- "passage_ids": [
-  "DQ.P1.C16.P0002"
- ],
- "prompt": "¿Verdadero o falso: el texto dice que la cama «parecían golpes de rey»?",
- "interaction": {
-  "type": "true_false",
-  "options": [
-   {
-    "id": "DQ.Q.000311.O01",
-    "label": "Verdadero"
-   },
-   {
-    "id": "DQ.Q.000311.O02",
-    "label": "Falso"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000311.O02"
-  ],
-  "shuffle_options": false
- },
- "rationale": "La ventera dice que «aquello más parecían golpes de silla» — la opción con «rey» altera la cita (I, 16).",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C16.P0002",
-   "quote": "esto, Sancho, y acaba, antes que suceda otra desgracia al\njumento, como a Rocinante.\n\n— Aun ahí sería el diablo —dijo Sancho.\n\nY, despidiendo treinta ayes, y sesenta sospiros, y ciento y veinte pésetes\ny reniegos de quien allí le había traído, se levantó, quedándose agobiado\nen la mitad del camino, como arco turquesco, sin poder acabar de\nenderezarse; y con todo este trabajo aparejó su asno, que también había\nandado algo destraído con la demasiada libertad de aquel día. Levantó luego\na Rocinante, el cual, si tuviera lengua con que quejarse, a buen seguro que\nSancho ni su amo no le fueran en zaga.\n\nEn resolución, Sancho acomodó a don Quijote sobre el asno y puso de reata a\nRocinante; y, llevando al asno de cabestro, se encaminó, poco más a menos,\nhacia donde le pareció que podía estar el camino real. Y la suerte, que sus\ncosas de bien en mejor iba guiando, aún no hubo andado una pequeña legua,\ncuando le deparó el camino, en el cual descubrió una venta que, a pesar\nsuyo y gusto de don Quijote, había de ser castillo. Porfiaba Sancho que era\nventa, y su amo que no, sino castillo; y tanto duró la porfía, que tuvieron\nlugar, sin acabarla, de llegar a ella, en la cual Sancho se entró, sin más\naveriguación, con toda su recua.\n\n\n\n\nCapítulo XVI. De lo que le sucedió al ingenioso hidalgo en la venta que él\nimaginaba ser castillo\n\nEl ventero, que vio a don Quijote atravesado en el asno, preguntó a Sancho\nqué mal traía. Sancho le respondió que no era nada, sino que había dado una\ncaída de una peña abajo, y que venía algo brumadas las costillas. Tenía el\nventero por mujer a una, no de la condición que suelen tener las de\nsemejante trato, porque naturalmente era caritativa y se dolía de las\ncalamidades de sus prójimos; y así, acudió luego a curar a don Quijote y\nhizo que una hija suya, doncella, muchacha y de muy buen parecer, la\nayudase a curar a su huésped. Servía en la venta, asimesmo, una moza\nasturiana, ancha de cara, llana de cogote, de nariz roma, del un ojo tuerta\ny del otro no muy sana. Verdad es que la gallardía del cuerpo suplía las\ndemás faltas: no tenía siete palmos de los pies a la cabeza, y las\nespaldas, que algún tanto le cargaban, la hacían mirar al suelo más de lo\nque ella quisiera. Esta gentil moza, pues, ayudó a la doncella, y las dos\nhicieron una muy mala cama a don Quijote en un camaranchón que, en otros\ntiempos, daba manifiestos indicios que había servido de pajar muchos años.\nEn la cual también alojaba un arriero, que tenía su cama hecha un poco más\nallá de la de nuestro don Quijote. Y, aunque era de las enjalmas y mantas\nde sus machos, hacía mucha ventaja a la de don Quijote, que sólo contenía\ncuatro mal lisas tablas, sobre dos no muy iguales bancos, y un colchón que\nen lo sutil parecía colcha, lleno de bodoques, que, a no mostrar que eran\nde lana por algunas roturas, al tiento, en la dureza, semejaban de\nguijarro, y"
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "cita",
- "difficulty": 2,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P1.C16.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true
- },
- "language": "es",
- "tags": [
-  "banco",
-  "venta"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "venta golpes silla cita exacta"
+    "id": "DQ.Q.000311",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P1.C16.E01",
+    "chapter_ids": [
+        "DQ.P1.C16"
+    ],
+    "passage_ids": [
+        "DQ.P1.C16.P0002"
+    ],
+    "prompt": "¿Verdadero o falso: el texto dice que la cama «parecían golpes de rey»?",
+    "interaction": {
+        "type": "true_false",
+        "options": [
+            {
+                "id": "DQ.Q.000311.O01",
+                "label": "Verdadero"
+            },
+            {
+                "id": "DQ.Q.000311.O02",
+                "label": "Falso"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000311.O02"
+        ],
+        "shuffle_options": false
+    },
+    "rationale": "La ventera dice que «aquello más parecían golpes de silla» — la opción con «rey» altera la cita (I, 16).",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C16.P0002",
+            "quote": "esto, Sancho, y acaba, antes que suceda otra desgracia al\njumento, como a Rocinante.\n\n— Aun ahí sería el diablo —dijo Sancho.\n\nY, despidiendo treinta ayes, y sesenta sospiros, y ciento y veinte pésetes\ny reniegos de quien allí le había traído, se levantó, quedándose agobiado\nen la mitad del camino, como arco turquesco, sin poder acabar de\nenderezarse; y con todo este trabajo aparejó su asno, que también había\nandado algo destraído con la demasiada libertad de aquel día. Levantó luego\na Rocinante, el cual, si tuviera lengua con que quejarse, a buen seguro que\nSancho ni su amo no le fueran en zaga.\n\nEn resolución, Sancho acomodó a don Quijote sobre el asno y puso de reata a\nRocinante; y, llevando al asno de cabestro, se encaminó, poco más a menos,\nhacia donde le pareció que podía estar el camino real. Y la suerte, que sus\ncosas de bien en mejor iba guiando, aún no hubo andado una pequeña legua,\ncuando le deparó el camino, en el cual descubrió una venta que, a pesar\nsuyo y gusto de don Quijote, había de ser castillo. Porfiaba Sancho que era\nventa, y su amo que no, sino castillo; y tanto duró la porfía, que tuvieron\nlugar, sin acabarla, de llegar a ella, en la cual Sancho se entró, sin más\naveriguación, con toda su recua.\n\n\n\n\nCapítulo XVI. De lo que le sucedió al ingenioso hidalgo en la venta que él\nimaginaba ser castillo\n\nEl ventero, que vio a don Quijote atravesado en el asno, preguntó a Sancho\nqué mal traía. Sancho le respondió que no era nada, sino que había dado una\ncaída de una peña abajo, y que venía algo brumadas las costillas. Tenía el\nventero por mujer a una, no de la condición que suelen tener las de\nsemejante trato, porque naturalmente era caritativa y se dolía de las\ncalamidades de sus prójimos; y así, acudió luego a curar a don Quijote y\nhizo que una hija suya, doncella, muchacha y de muy buen parecer, la\nayudase a curar a su huésped. Servía en la venta, asimesmo, una moza\nasturiana, ancha de cara, llana de cogote, de nariz roma, del un ojo tuerta\ny del otro no muy sana. Verdad es que la gallardía del cuerpo suplía las\ndemás faltas: no tenía siete palmos de los pies a la cabeza, y las\nespaldas, que algún tanto le cargaban, la hacían mirar al suelo más de lo\nque ella quisiera. Esta gentil moza, pues, ayudó a la doncella, y las dos\nhicieron una muy mala cama a don Quijote en un camaranchón que, en otros\ntiempos, daba manifiestos indicios que había servido de pajar muchos años.\nEn la cual también alojaba un arriero, que tenía su cama hecha un poco más\nallá de la de nuestro don Quijote. Y, aunque era de las enjalmas y mantas\nde sus machos, hacía mucha ventaja a la de don Quijote, que sólo contenía\ncuatro mal lisas tablas, sobre dos no muy iguales bancos, y un colchón que\nen lo sutil parecía colcha, lleno de bodoques, que, a no mostrar que eran\nde lana por algunas roturas, al tiento, en la dureza, semejaban de\nguijarro, y"
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "cita",
+    "difficulty": 2,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P1.C16.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900034"
+    },
+    "language": "es",
+    "tags": [
+        "banco",
+        "venta"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "venta golpes silla cita exacta"
 }

@@ -1,63 +1,64 @@
 {
- "id": "DQ.Q.000216",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P1.C11.E01",
- "chapter_ids": [
-  "DQ.P1.C11"
- ],
- "passage_ids": [
-  "DQ.P1.C11.P0001"
- ],
- "prompt": "¿A quiénes dirige don Quijote el discurso de la Edad de Oro?",
- "interaction": {
-  "type": "single_choice",
-  "options": [
-   {
-    "id": "DQ.Q.000216.O01",
-    "label": "A los cabreros que les han acogido y cenan con ellos"
-   },
-   {
-    "id": "DQ.Q.000216.O02",
-    "label": "A los pastores de la Sierra Morena que escucharon a Grisóstomo"
-   },
-   {
-    "id": "DQ.Q.000216.O03",
-    "label": "Al cura y al barbero en la venta"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000216.O01"
-  ],
-  "shuffle_options": true
- },
- "rationale": "El discurso se pronuncia ante los cabreros de la noche (I, 11); los pastores de Grisóstomo son otro episodio.",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C11.P0001",
-   "quote": "tomó un puño de\nbellotas en la mano, y, mirándolas atentamente, soltó la voz a semejantes\nrazones"
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "dialogo",
- "difficulty": 1,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P1.C11.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true
- },
- "language": "es",
- "tags": [
-  "piloto",
-  "edad-oro"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "edad-oro auditores cabreros discurso"
+    "id": "DQ.Q.000216",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P1.C11.E01",
+    "chapter_ids": [
+        "DQ.P1.C11"
+    ],
+    "passage_ids": [
+        "DQ.P1.C11.P0001"
+    ],
+    "prompt": "¿A quiénes dirige don Quijote el discurso de la Edad de Oro?",
+    "interaction": {
+        "type": "single_choice",
+        "options": [
+            {
+                "id": "DQ.Q.000216.O01",
+                "label": "A los cabreros que les han acogido y cenan con ellos"
+            },
+            {
+                "id": "DQ.Q.000216.O02",
+                "label": "A los pastores de la Sierra Morena que escucharon a Grisóstomo"
+            },
+            {
+                "id": "DQ.Q.000216.O03",
+                "label": "Al cura y al barbero en la venta"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000216.O01"
+        ],
+        "shuffle_options": true
+    },
+    "rationale": "El discurso se pronuncia ante los cabreros de la noche (I, 11); los pastores de Grisóstomo son otro episodio.",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C11.P0001",
+            "quote": "tomó un puño de\nbellotas en la mano, y, mirándolas atentamente, soltó la voz a semejantes\nrazones"
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "dialogo",
+    "difficulty": 1,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P1.C11.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900007"
+    },
+    "language": "es",
+    "tags": [
+        "piloto",
+        "edad-oro"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "edad-oro auditores cabreros discurso"
 }

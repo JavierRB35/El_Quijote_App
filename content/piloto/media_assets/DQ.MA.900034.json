@@ -1,0 +1,34 @@
+{
+    "id": "DQ.MA.900034",
+    "contract_version": "1.0.0",
+    "function": "pre_pregunta",
+    "media_class": "RECREACION_IA",
+    "logical_uri": "assets://scenes/part_1/chapter_16/p1_c16_venta_cama_quijote_pre.webp",
+    "derivatives": [
+        {
+            "variant": "original",
+            "format": "webp",
+            "width": 1672,
+            "height": 941,
+            "size_bytes": 169950,
+            "sha256": "sha256:38d020d8d12e1a5097b123c80f9dee7864cef2ea1089a4c5f926304349375bfd"
+        }
+    ],
+    "alt": "Recreación cinematográfica del episodio «venta cama quijote» en el capítulo 16 de la parte 1.",
+    "source_id": "DQ.SRC.0003",
+    "license_id": "DQ.LIC.0002",
+    "author": "Equipo de arte El_Quijote_App (recreación IA)",
+    "date": "2026-11-06",
+    "allowed_uses": [
+        "uso_personal_app",
+        "almacenamiento_repo_git"
+    ],
+    "license_status": "verificada",
+    "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA (nunca evidencia histórica).",
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "spoiler_level": "ninguno"
+}

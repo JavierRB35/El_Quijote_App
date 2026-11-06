@@ -1,64 +1,64 @@
 {
- "id": "DQ.Q.000209",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P1.C11.E01",
- "chapter_ids": [
-  "DQ.P1.C11"
- ],
- "passage_ids": [
-  "DQ.P1.C11.P0003"
- ],
- "prompt": "¿Qué componen la cena que los cabreros ofrecen a don Quijote y a Sancho?",
- "interaction": {
-  "type": "single_choice",
-  "options": [
-   {
-    "id": "DQ.Q.000209.O01",
-    "label": "Tasajos de cabra hirviendo en caldero, bellotas avellanadas y un medio queso durísimo"
-   },
-   {
-    "id": "DQ.Q.000209.O02",
-    "label": "Truchas del Guadiana con pan y vino de la venta"
-   },
-   {
-    "id": "DQ.Q.000209.O03",
-    "label": "Gallina cocida con alcachofas del huerto"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000209.O01"
-  ],
-  "shuffle_options": true
- },
- "rationale": "La cena es humilde y descrita con ironía: el queso «más duro que si fuera hecho de argamasa».",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C11.P0003",
-   "quote": "gran cantidad de\nbellotas avellanadas, y juntamente pusieron un medio queso, más duro que si\nfuera hecho de argamasa."
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "hecho",
- "difficulty": 1,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P1.C11.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true,
-  "pre_image_media_id": "DQ.MA.900007"
- },
- "language": "es",
- "tags": [
-  "piloto",
-  "edad-oro"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "cabreros cena bellotas queso argamasa"
+    "id": "DQ.Q.000209",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P1.C11.E01",
+    "chapter_ids": [
+        "DQ.P1.C11"
+    ],
+    "passage_ids": [
+        "DQ.P1.C11.P0003"
+    ],
+    "prompt": "¿Qué componen la cena que los cabreros ofrecen a don Quijote y a Sancho?",
+    "interaction": {
+        "type": "single_choice",
+        "options": [
+            {
+                "id": "DQ.Q.000209.O01",
+                "label": "Tasajos de cabra hirviendo en caldero, bellotas avellanadas y un medio queso durísimo"
+            },
+            {
+                "id": "DQ.Q.000209.O02",
+                "label": "Truchas del Guadiana con pan y vino de la venta"
+            },
+            {
+                "id": "DQ.Q.000209.O03",
+                "label": "Gallina cocida con alcachofas del huerto"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000209.O01"
+        ],
+        "shuffle_options": true
+    },
+    "rationale": "La cena es humilde y descrita con ironía: el queso «más duro que si fuera hecho de argamasa».",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C11.P0003",
+            "quote": "gran cantidad de\nbellotas avellanadas, y juntamente pusieron un medio queso, más duro que si\nfuera hecho de argamasa."
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "hecho",
+    "difficulty": 1,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P1.C11.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900007"
+    },
+    "language": "es",
+    "tags": [
+        "piloto",
+        "edad-oro"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "cabreros cena bellotas queso argamasa"
 }

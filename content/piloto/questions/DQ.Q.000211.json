@@ -1,64 +1,64 @@
 {
- "id": "DQ.Q.000211",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P1.C11.E01",
- "chapter_ids": [
-  "DQ.P1.C11"
- ],
- "passage_ids": [
-  "DQ.P1.C11.P0001"
- ],
- "prompt": "¿Con qué palabras arranca el discurso de la Edad de Oro?",
- "interaction": {
-  "type": "single_choice",
-  "options": [
-   {
-    "id": "DQ.Q.000211.O01",
-    "label": "«¡Dichosa edad y siglos dichosos aquellos á quien los antiguos pusieron nombre de dorados!»"
-   },
-   {
-    "id": "DQ.Q.000211.O02",
-    "label": "«Bienhay aquellos que nacieron bajo el signo de la Justicia»"
-   },
-   {
-    "id": "DQ.Q.000211.O03",
-    "label": "«Felice aquel siglo que llamaron de oro los poetas griegos»"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000211.O01"
-  ],
-  "shuffle_options": true
- },
- "rationale": "Arranque literal del discurso (I, 11).",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C11.P0001",
-   "quote": "Dichosa edad y siglos dichosos aquéllos a quien los antiguos pusieron\nnombre de dorados"
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "cita",
- "difficulty": 1,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P1.C11.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true,
-  "pre_image_media_id": "DQ.MA.900007"
- },
- "language": "es",
- "tags": [
-  "piloto",
-  "edad-oro"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "edad-oro arranque cita dichosa"
+    "id": "DQ.Q.000211",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P1.C11.E01",
+    "chapter_ids": [
+        "DQ.P1.C11"
+    ],
+    "passage_ids": [
+        "DQ.P1.C11.P0001"
+    ],
+    "prompt": "¿Con qué palabras arranca el discurso de la Edad de Oro?",
+    "interaction": {
+        "type": "single_choice",
+        "options": [
+            {
+                "id": "DQ.Q.000211.O01",
+                "label": "«¡Dichosa edad y siglos dichosos aquellos á quien los antiguos pusieron nombre de dorados!»"
+            },
+            {
+                "id": "DQ.Q.000211.O02",
+                "label": "«Bienhay aquellos que nacieron bajo el signo de la Justicia»"
+            },
+            {
+                "id": "DQ.Q.000211.O03",
+                "label": "«Felice aquel siglo que llamaron de oro los poetas griegos»"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000211.O01"
+        ],
+        "shuffle_options": true
+    },
+    "rationale": "Arranque literal del discurso (I, 11).",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C11.P0001",
+            "quote": "Dichosa edad y siglos dichosos aquéllos a quien los antiguos pusieron\nnombre de dorados"
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "cita",
+    "difficulty": 1,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P1.C11.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900032"
+    },
+    "language": "es",
+    "tags": [
+        "piloto",
+        "edad-oro"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "edad-oro arranque cita dichosa"
 }

@@ -1,0 +1,34 @@
+{
+    "id": "DQ.MA.900029",
+    "contract_version": "1.0.0",
+    "function": "pre_pregunta",
+    "media_class": "RECREACION_IA",
+    "logical_uri": "assets://scenes/part_1/chapter_08/p1_c08_frailes_carreta_pre.webp",
+    "derivatives": [
+        {
+            "variant": "original",
+            "format": "webp",
+            "width": 1672,
+            "height": 941,
+            "size_bytes": 289418,
+            "sha256": "sha256:c69a9c35047e60655ea9a607ac0db28cef2447748c998950fbeea8ac97a21d35"
+        }
+    ],
+    "alt": "Recreación cinematográfica del episodio «frailes carreta» en el capítulo 8 de la parte 1.",
+    "source_id": "DQ.SRC.0003",
+    "license_id": "DQ.LIC.0002",
+    "author": "Equipo de arte El_Quijote_App (recreación IA)",
+    "date": "2026-11-06",
+    "allowed_uses": [
+        "uso_personal_app",
+        "almacenamiento_repo_git"
+    ],
+    "license_status": "verificada",
+    "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA (nunca evidencia histórica).",
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "spoiler_level": "ninguno"
+}

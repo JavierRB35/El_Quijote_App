@@ -1,71 +1,71 @@
 {
- "id": "DQ.Q.000106",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P1.C08.E01",
- "chapter_ids": [
-  "DQ.P1.C08"
- ],
- "passage_ids": [
-  "DQ.P1.C08.P0005",
-  "DQ.P1.C08.P0006"
- ],
- "prompt": "¿Cuáles de estos sucesos ocurren en este capítulo? (puede haber varias correctas)",
- "interaction": {
-  "type": "multi_choice",
-  "multi_declared": true,
-  "options": [
-   {
-    "id": "DQ.Q.000106.O01",
-    "label": "La lanza queda hecha pedazos tras la lanzada en el aspa"
-   },
-   {
-    "id": "DQ.Q.000106.O02",
-    "label": "Sancho acude a socorrerle «á todo el correr de su asno»"
-   },
-   {
-    "id": "DQ.Q.000106.O03",
-    "label": "Don Quijote queda tendido sin poder moverse y culpa a los encantadores"
-   },
-   {
-    "id": "DQ.Q.000106.O04",
-    "label": "Sancho pierde también él el conocimiento junto al rucio"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000106.O01",
-   "DQ.Q.000106.O02"
-  ],
-  "shuffle_options": true
- },
- "rationale": "Los dos primeros sucesos constan en I, 8; la mención de encantadores sobre los molinos y la caída de Sancho no pertenecen a este episodio.",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C08.P0006",
-   "quote": "Acudió Sancho Panza a socorrerle, a todo el correr de su\nasno"
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "secuencia",
- "difficulty": 2,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P1.C08.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true,
-  "pre_image_media_id": "DQ.MA.900005"
- },
- "language": "es",
- "tags": [
-  "piloto",
-  "molinos"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "molinos sucesos lanza pedazos sancho acude"
+    "id": "DQ.Q.000106",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P1.C08.E01",
+    "chapter_ids": [
+        "DQ.P1.C08"
+    ],
+    "passage_ids": [
+        "DQ.P1.C08.P0005",
+        "DQ.P1.C08.P0006"
+    ],
+    "prompt": "¿Cuáles de estos sucesos ocurren en este capítulo? (puede haber varias correctas)",
+    "interaction": {
+        "type": "multi_choice",
+        "multi_declared": true,
+        "options": [
+            {
+                "id": "DQ.Q.000106.O01",
+                "label": "La lanza queda hecha pedazos tras la lanzada en el aspa"
+            },
+            {
+                "id": "DQ.Q.000106.O02",
+                "label": "Sancho acude a socorrerle «á todo el correr de su asno»"
+            },
+            {
+                "id": "DQ.Q.000106.O03",
+                "label": "Don Quijote queda tendido sin poder moverse y culpa a los encantadores"
+            },
+            {
+                "id": "DQ.Q.000106.O04",
+                "label": "Sancho pierde también él el conocimiento junto al rucio"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000106.O01",
+            "DQ.Q.000106.O02"
+        ],
+        "shuffle_options": true
+    },
+    "rationale": "Los dos primeros sucesos constan en I, 8; la mención de encantadores sobre los molinos y la caída de Sancho no pertenecen a este episodio.",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C08.P0006",
+            "quote": "Acudió Sancho Panza a socorrerle, a todo el correr de su\nasno"
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "secuencia",
+    "difficulty": 2,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P1.C08.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900029"
+    },
+    "language": "es",
+    "tags": [
+        "piloto",
+        "molinos"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "molinos sucesos lanza pedazos sancho acude"
 }

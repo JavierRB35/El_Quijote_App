@@ -1,0 +1,34 @@
+{
+    "id": "DQ.MA.900040",
+    "contract_version": "1.0.0",
+    "function": "pre_pregunta",
+    "media_class": "RECREACION_IA",
+    "logical_uri": "assets://scenes/part_2/chapter_10/p2_c10_labradoras_camino_pre.webp",
+    "derivatives": [
+        {
+            "variant": "original",
+            "format": "webp",
+            "width": 1672,
+            "height": 941,
+            "size_bytes": 373112,
+            "sha256": "sha256:4048d1b07502bb3e8f0217632baf373c625e711853b8b89f5fad9083598e245c"
+        }
+    ],
+    "alt": "Recreación artística: Sancho se aproxima a tres labradoras que vuelven del campo en sus asnos, antes de hablarles.",
+    "source_id": "DQ.SRC.0003",
+    "license_id": "DQ.LIC.0002",
+    "author": "Equipo de arte El_Quijote_App (recreación IA)",
+    "date": "2026-11-06",
+    "allowed_uses": [
+        "uso_personal_app",
+        "almacenamiento_repo_git"
+    ],
+    "license_status": "verificada",
+    "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA (nunca evidencia histórica).",
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "spoiler_level": "ninguno"
+}

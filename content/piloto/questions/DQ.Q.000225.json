@@ -1,73 +1,73 @@
 {
- "id": "DQ.Q.000225",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P1.C18.E01",
- "chapter_ids": [
-  "DQ.P1.C18"
- ],
- "passage_ids": [
-  "DQ.P1.C18.P0001",
-  "DQ.P1.C18.P0004",
-  "DQ.P1.C18.P0005"
- ],
- "prompt": "Ordena los lances de la aventura de los rebaños.",
- "interaction": {
-  "type": "ordering",
-  "options": [
-   {
-    "id": "DQ.Q.000225.O01",
-    "label": "Aparece la polvareda y comienza el catálogo de caballeros"
-   },
-   {
-    "id": "DQ.Q.000225.O02",
-    "label": "Don Quijote se entra «por medio del escuadrón de ovejas»"
-   },
-   {
-    "id": "DQ.Q.000225.O03",
-    "label": "Las pedradas lo derriban y los pastores huyen con el ganado"
-   },
-   {
-    "id": "DQ.Q.000225.O04",
-    "label": "Recuento de muelas y vómito del bálsamo sobre Sancho"
-   }
-  ],
-  "correct_order": [
-   "DQ.Q.000225.O01",
-   "DQ.Q.000225.O02",
-   "DQ.Q.000225.O03",
-   "DQ.Q.000225.O04"
-  ],
-  "shuffle_options": false
- },
- "rationale": "Secuencia canónica del capítulo: avistamiento, catálogo, carga con pedradas, desenlace físico.",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C18.P0004",
-   "quote": "Tal fue el golpe primero, y tal el segundo, que le fue forzoso al pobre\ncaballero dar consigo del caballo abajo."
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "secuencia",
- "difficulty": 2,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P1.C18.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true,
-  "pre_image_media_id": "DQ.MA.900008"
- },
- "language": "es",
- "tags": [
-  "piloto",
-  "rebaños"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "rebaños orden polvareda carga pedradas bálsamo"
+    "id": "DQ.Q.000225",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P1.C18.E01",
+    "chapter_ids": [
+        "DQ.P1.C18"
+    ],
+    "passage_ids": [
+        "DQ.P1.C18.P0001",
+        "DQ.P1.C18.P0004",
+        "DQ.P1.C18.P0005"
+    ],
+    "prompt": "Ordena los lances de la aventura de los rebaños.",
+    "interaction": {
+        "type": "ordering",
+        "options": [
+            {
+                "id": "DQ.Q.000225.O01",
+                "label": "Aparece la polvareda y comienza el catálogo de caballeros"
+            },
+            {
+                "id": "DQ.Q.000225.O02",
+                "label": "Don Quijote se entra «por medio del escuadrón de ovejas»"
+            },
+            {
+                "id": "DQ.Q.000225.O03",
+                "label": "Las pedradas lo derriban y los pastores huyen con el ganado"
+            },
+            {
+                "id": "DQ.Q.000225.O04",
+                "label": "Recuento de muelas y vómito del bálsamo sobre Sancho"
+            }
+        ],
+        "correct_order": [
+            "DQ.Q.000225.O01",
+            "DQ.Q.000225.O02",
+            "DQ.Q.000225.O03",
+            "DQ.Q.000225.O04"
+        ],
+        "shuffle_options": false
+    },
+    "rationale": "Secuencia canónica del capítulo: avistamiento, catálogo, carga con pedradas, desenlace físico.",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C18.P0004",
+            "quote": "Tal fue el golpe primero, y tal el segundo, que le fue forzoso al pobre\ncaballero dar consigo del caballo abajo."
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "secuencia",
+    "difficulty": 2,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P1.C18.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900008"
+    },
+    "language": "es",
+    "tags": [
+        "piloto",
+        "rebaños"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "rebaños orden polvareda carga pedradas bálsamo"
 }

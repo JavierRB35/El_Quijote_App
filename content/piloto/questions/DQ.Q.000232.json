@@ -1,64 +1,65 @@
 {
- "id": "DQ.Q.000232",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P2.C74.E01",
- "chapter_ids": [
-  "DQ.P2.C74"
- ],
- "passage_ids": [
-  "DQ.P2.C74.P0004",
-  "DQ.P2.C74.P0005"
- ],
- "prompt": "¿Qué anuncia don Quijote tras seis días de cama?",
- "interaction": {
-  "type": "single_choice",
-  "options": [
-   {
-    "id": "DQ.Q.000232.O01",
-    "label": "«Siento que me voy muriendo á toda priesa» y pide confesor y escribano"
-   },
-   {
-    "id": "DQ.Q.000232.O02",
-    "label": "Que quiere armar caballero a un vecino nuevo"
-   },
-   {
-    "id": "DQ.Q.000232.O03",
-    "label": "Que parte al anochecer a su tercera salida"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000232.O01"
-  ],
-  "shuffle_options": true
- },
- "rationale": "La lucidez del anuncio sorprende a los presentes; «no se ha de burlar el hombre con el alma».",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P2.C74.P0005",
-   "quote": "déjense burlas aparte, y\ntraíganme un confesor que me confiese y un escribano que haga mi\ntestamento"
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "hecho",
- "difficulty": 1,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P2.C74.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true
- },
- "language": "es",
- "tags": [
-  "piloto",
-  "final"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "final seis días confesor escribano"
+    "id": "DQ.Q.000232",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P2.C74.E01",
+    "chapter_ids": [
+        "DQ.P2.C74"
+    ],
+    "passage_ids": [
+        "DQ.P2.C74.P0004",
+        "DQ.P2.C74.P0005"
+    ],
+    "prompt": "¿Qué anuncia don Quijote tras seis días de cama?",
+    "interaction": {
+        "type": "single_choice",
+        "options": [
+            {
+                "id": "DQ.Q.000232.O01",
+                "label": "«Siento que me voy muriendo á toda priesa» y pide confesor y escribano"
+            },
+            {
+                "id": "DQ.Q.000232.O02",
+                "label": "Que quiere armar caballero a un vecino nuevo"
+            },
+            {
+                "id": "DQ.Q.000232.O03",
+                "label": "Que parte al anochecer a su tercera salida"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000232.O01"
+        ],
+        "shuffle_options": true
+    },
+    "rationale": "La lucidez del anuncio sorprende a los presentes; «no se ha de burlar el hombre con el alma».",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P2.C74.P0005",
+            "quote": "déjense burlas aparte, y\ntraíganme un confesor que me confiese y un escribano que haga mi\ntestamento"
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "hecho",
+    "difficulty": 1,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P2.C74.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900011"
+    },
+    "language": "es",
+    "tags": [
+        "piloto",
+        "final"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "final seis días confesor escribano"
 }

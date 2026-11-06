@@ -1,64 +1,64 @@
 {
- "id": "DQ.Q.000101",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P1.C08.E01",
- "chapter_ids": [
-  "DQ.P1.C08"
- ],
- "passage_ids": [
-  "DQ.P1.C08.P0003"
- ],
- "prompt": "¿Qué son, según Sancho, los «brazos» de los supuestos gigantes que avistan?",
- "interaction": {
-  "type": "single_choice",
-  "options": [
-   {
-    "id": "DQ.Q.000101.O01",
-    "label": "Las aspas, que volteadas del viento hacen andar la piedra del molino"
-   },
-   {
-    "id": "DQ.Q.000101.O02",
-    "label": "Brazos de gigantes enterrados siglos atrás"
-   },
-   {
-    "id": "DQ.Q.000101.O03",
-    "label": "Mangos de antiguas máquinas de trapo"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000101.O01"
-  ],
-  "shuffle_options": true
- },
- "rationale": "Sancho corrige la percepción de su amo con una explicación técnica del molino (I, 8).",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C08.P0003",
-   "quote": "lo que en ellos parecen brazos son\nlas aspas, que, volteadas del viento, hacen andar la piedra del molino."
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "hecho",
- "difficulty": 1,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P1.C08.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true,
-  "pre_image_media_id": "DQ.MA.900005"
- },
- "language": "es",
- "tags": [
-  "piloto",
-  "molinos"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "molinos sancho aspas viento piedra molino"
+    "id": "DQ.Q.000101",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P1.C08.E01",
+    "chapter_ids": [
+        "DQ.P1.C08"
+    ],
+    "passage_ids": [
+        "DQ.P1.C08.P0003"
+    ],
+    "prompt": "¿Qué son, según Sancho, los «brazos» de los supuestos gigantes que avistan?",
+    "interaction": {
+        "type": "single_choice",
+        "options": [
+            {
+                "id": "DQ.Q.000101.O01",
+                "label": "Las aspas, que volteadas del viento hacen andar la piedra del molino"
+            },
+            {
+                "id": "DQ.Q.000101.O02",
+                "label": "Brazos de gigantes enterrados siglos atrás"
+            },
+            {
+                "id": "DQ.Q.000101.O03",
+                "label": "Mangos de antiguas máquinas de trapo"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000101.O01"
+        ],
+        "shuffle_options": true
+    },
+    "rationale": "Sancho corrige la percepción de su amo con una explicación técnica del molino (I, 8).",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C08.P0003",
+            "quote": "lo que en ellos parecen brazos son\nlas aspas, que, volteadas del viento, hacen andar la piedra del molino."
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "hecho",
+    "difficulty": 1,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P1.C08.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900005"
+    },
+    "language": "es",
+    "tags": [
+        "piloto",
+        "molinos"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "molinos sancho aspas viento piedra molino"
 }

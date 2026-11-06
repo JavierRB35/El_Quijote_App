@@ -1,0 +1,34 @@
+{
+    "id": "DQ.MA.900038",
+    "contract_version": "1.0.0",
+    "function": "pre_pregunta",
+    "media_class": "RECREACION_IA",
+    "logical_uri": "assets://scenes/part_2/chapter_01/p2_c01_recuperacion_pre.webp",
+    "derivatives": [
+        {
+            "variant": "original",
+            "format": "webp",
+            "width": 1672,
+            "height": 941,
+            "size_bytes": 186216,
+            "sha256": "sha256:64e835970feffbd628b534b3fb5b72fb1496f9b7a542003ad11a13f427efaf68"
+        }
+    ],
+    "alt": "Alonso Quijano conversa desde una silla en su casa con el cura y el barbero mientras dos mujeres miran desde la puerta.",
+    "source_id": "DQ.SRC.0003",
+    "license_id": "DQ.LIC.0002",
+    "author": "Equipo de arte El_Quijote_App (recreación IA)",
+    "date": "2026-11-06",
+    "allowed_uses": [
+        "uso_personal_app",
+        "almacenamiento_repo_git"
+    ],
+    "license_status": "verificada",
+    "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA (nunca evidencia histórica).",
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "spoiler_level": "ninguno"
+}

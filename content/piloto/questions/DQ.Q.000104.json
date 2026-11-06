@@ -1,60 +1,60 @@
 {
- "id": "DQ.Q.000104",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P1.C08.E01",
- "chapter_ids": [
-  "DQ.P1.C08"
- ],
- "passage_ids": [
-  "DQ.P1.C08.P0004"
- ],
- "prompt": "¿Verdadero o falso: don Quijote invoca al gigante Briareo al ver moverse las aspas?",
- "interaction": {
-  "type": "true_false",
-  "options": [
-   {
-    "id": "DQ.Q.000104.O01",
-    "label": "Verdadero"
-   },
-   {
-    "id": "DQ.Q.000104.O02",
-    "label": "Falso"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000104.O01"
-  ],
-  "shuffle_options": false
- },
- "rationale": "«Pues aunque mováis más brazos que los del gigante Briareo, me lo habéis de pagar»: alusión clásica en plena embestida.",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C08.P0004",
-   "quote": "aunque mováis más brazos que los del gigante Briareo, me lo habéis\nde pagar."
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "cita",
- "difficulty": 1,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P1.C08.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true,
-  "pre_image_media_id": "DQ.MA.900005"
- },
- "language": "es",
- "tags": [
-  "piloto",
-  "molinos"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "molinos briareo cita clasica aspas"
+    "id": "DQ.Q.000104",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P1.C08.E01",
+    "chapter_ids": [
+        "DQ.P1.C08"
+    ],
+    "passage_ids": [
+        "DQ.P1.C08.P0004"
+    ],
+    "prompt": "¿Verdadero o falso: don Quijote invoca al gigante Briareo al ver moverse las aspas?",
+    "interaction": {
+        "type": "true_false",
+        "options": [
+            {
+                "id": "DQ.Q.000104.O01",
+                "label": "Verdadero"
+            },
+            {
+                "id": "DQ.Q.000104.O02",
+                "label": "Falso"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000104.O01"
+        ],
+        "shuffle_options": false
+    },
+    "rationale": "«Pues aunque mováis más brazos que los del gigante Briareo, me lo habéis de pagar»: alusión clásica en plena embestida.",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C08.P0004",
+            "quote": "aunque mováis más brazos que los del gigante Briareo, me lo habéis\nde pagar."
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "cita",
+    "difficulty": 1,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P1.C08.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900005"
+    },
+    "language": "es",
+    "tags": [
+        "piloto",
+        "molinos"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "molinos briareo cita clasica aspas"
 }

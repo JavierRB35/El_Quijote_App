@@ -1,63 +1,64 @@
 {
- "id": "DQ.Q.000309",
- "contract_version": "1.0.0",
- "episode_id": "DQ.P1.C16.E01",
- "chapter_ids": [
-  "DQ.P1.C16"
- ],
- "passage_ids": [
-  "DQ.P1.C16.P0003"
- ],
- "prompt": "¿Quién es Maritornes y cómo se presenta en el texto?",
- "interaction": {
-  "type": "single_choice",
-  "options": [
-   {
-    "id": "DQ.Q.000309.O01",
-    "label": "La asturiana de la venta, «que así se llamaba», que alumbra mientras emplastan a don Quijote"
-   },
-   {
-    "id": "DQ.Q.000309.O02",
-    "label": "La hija del ventero, doncella discreta enamorada del hidalgo"
-   },
-   {
-    "id": "DQ.Q.000309.O03",
-    "label": "Una princesa encantada que sirve en la venta"
-   }
-  ],
-  "correct_option_ids": [
-   "DQ.Q.000309.O01"
-  ],
-  "shuffle_options": true
- },
- "rationale": "La presentación literaria de Maritornes (I, 16).",
- "evidence": [
-  {
-   "kind": "cita_literal",
-   "passage_id": "DQ.P1.C16.P0003",
-   "quote": "asno de cabestro, se encaminó, poco más a menos,\nhacia donde le pareció que podía estar el camino real. Y la suerte, que sus\ncosas de bien en mejor iba guiando, aún no hubo andado una pequeña legua,\ncuando le deparó el camino, en el cual descubrió una venta que, a pesar\nsuyo y gusto de don Quijote, había de ser castillo. Porfiaba Sancho que era\nventa, y su amo que no, sino castillo; y tanto duró la porfía, que tuvieron\nlugar, sin acabarla, de llegar a ella, en la cual Sancho se entró, sin más\naveriguación, con toda su recua.\n\n\n\n\nCapítulo XVI. De lo que le sucedió al ingenioso hidalgo en la venta que él\nimaginaba ser castillo\n\nEl ventero, que vio a don Quijote atravesado en el asno, preguntó a Sancho\nqué mal traía. Sancho le respondió que no era nada, sino que había dado una\ncaída de una peña abajo, y que venía algo brumadas las costillas. Tenía el\nventero por mujer a una, no de la condición que suelen tener las de\nsemejante trato, porque naturalmente era caritativa y se dolía de las\ncalamidades de sus prójimos; y así, acudió luego a curar a don Quijote y\nhizo que una hija suya, doncella, muchacha y de muy buen parecer, la\nayudase a curar a su huésped. Servía en la venta, asimesmo, una moza\nasturiana, ancha de cara, llana de cogote, de nariz roma, del un ojo tuerta\ny del otro no muy sana. Verdad es que la gallardía del cuerpo suplía las\ndemás faltas: no tenía siete palmos de los pies a la cabeza, y las\nespaldas, que algún tanto le cargaban, la hacían mirar al suelo más de lo\nque ella quisiera. Esta gentil moza, pues, ayudó a la doncella, y las dos\nhicieron una muy mala cama a don Quijote en un camaranchón que, en otros\ntiempos, daba manifiestos indicios que había servido de pajar muchos años.\nEn la cual también alojaba un arriero, que tenía su cama hecha un poco más\nallá de la de nuestro don Quijote. Y, aunque era de las enjalmas y mantas\nde sus machos, hacía mucha ventaja a la de don Quijote, que sólo contenía\ncuatro mal lisas tablas, sobre dos no muy iguales bancos, y un colchón que\nen lo sutil parecía colcha, lleno de bodoques, que, a no mostrar que eran\nde lana por algunas roturas, al tiento, en la dureza, semejaban de\nguijarro, y dos sábanas hechas de cuero de adarga, y una frazada, cuyos\nhilos, si se quisieran contar, no se perdiera uno solo de la cuenta.\nEn"
-  }
- ],
- "certainty": "TEXTO_EXPLICITO",
- "cognitive_type": "hecho",
- "difficulty": 1,
- "spoiler_policy": {
-  "safe_after_episodes": [
-   "DQ.P1.C16.E01"
-  ]
- },
- "visual_requirements": {
-  "pre_image_must_not_reveal": true
- },
- "language": "es",
- "tags": [
-  "banco",
-  "venta"
- ],
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "semantic_key": "venta maritornes asturiana alumbra"
+    "id": "DQ.Q.000309",
+    "contract_version": "1.0.0",
+    "episode_id": "DQ.P1.C16.E01",
+    "chapter_ids": [
+        "DQ.P1.C16"
+    ],
+    "passage_ids": [
+        "DQ.P1.C16.P0003"
+    ],
+    "prompt": "¿Quién es Maritornes y cómo se presenta en el texto?",
+    "interaction": {
+        "type": "single_choice",
+        "options": [
+            {
+                "id": "DQ.Q.000309.O01",
+                "label": "La asturiana de la venta, «que así se llamaba», que alumbra mientras emplastan a don Quijote"
+            },
+            {
+                "id": "DQ.Q.000309.O02",
+                "label": "La hija del ventero, doncella discreta enamorada del hidalgo"
+            },
+            {
+                "id": "DQ.Q.000309.O03",
+                "label": "Una princesa encantada que sirve en la venta"
+            }
+        ],
+        "correct_option_ids": [
+            "DQ.Q.000309.O01"
+        ],
+        "shuffle_options": true
+    },
+    "rationale": "La presentación literaria de Maritornes (I, 16).",
+    "evidence": [
+        {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C16.P0003",
+            "quote": "asno de cabestro, se encaminó, poco más a menos,\nhacia donde le pareció que podía estar el camino real. Y la suerte, que sus\ncosas de bien en mejor iba guiando, aún no hubo andado una pequeña legua,\ncuando le deparó el camino, en el cual descubrió una venta que, a pesar\nsuyo y gusto de don Quijote, había de ser castillo. Porfiaba Sancho que era\nventa, y su amo que no, sino castillo; y tanto duró la porfía, que tuvieron\nlugar, sin acabarla, de llegar a ella, en la cual Sancho se entró, sin más\naveriguación, con toda su recua.\n\n\n\n\nCapítulo XVI. De lo que le sucedió al ingenioso hidalgo en la venta que él\nimaginaba ser castillo\n\nEl ventero, que vio a don Quijote atravesado en el asno, preguntó a Sancho\nqué mal traía. Sancho le respondió que no era nada, sino que había dado una\ncaída de una peña abajo, y que venía algo brumadas las costillas. Tenía el\nventero por mujer a una, no de la condición que suelen tener las de\nsemejante trato, porque naturalmente era caritativa y se dolía de las\ncalamidades de sus prójimos; y así, acudió luego a curar a don Quijote y\nhizo que una hija suya, doncella, muchacha y de muy buen parecer, la\nayudase a curar a su huésped. Servía en la venta, asimesmo, una moza\nasturiana, ancha de cara, llana de cogote, de nariz roma, del un ojo tuerta\ny del otro no muy sana. Verdad es que la gallardía del cuerpo suplía las\ndemás faltas: no tenía siete palmos de los pies a la cabeza, y las\nespaldas, que algún tanto le cargaban, la hacían mirar al suelo más de lo\nque ella quisiera. Esta gentil moza, pues, ayudó a la doncella, y las dos\nhicieron una muy mala cama a don Quijote en un camaranchón que, en otros\ntiempos, daba manifiestos indicios que había servido de pajar muchos años.\nEn la cual también alojaba un arriero, que tenía su cama hecha un poco más\nallá de la de nuestro don Quijote. Y, aunque era de las enjalmas y mantas\nde sus machos, hacía mucha ventaja a la de don Quijote, que sólo contenía\ncuatro mal lisas tablas, sobre dos no muy iguales bancos, y un colchón que\nen lo sutil parecía colcha, lleno de bodoques, que, a no mostrar que eran\nde lana por algunas roturas, al tiento, en la dureza, semejaban de\nguijarro, y dos sábanas hechas de cuero de adarga, y una frazada, cuyos\nhilos, si se quisieran contar, no se perdiera uno solo de la cuenta.\nEn"
+        }
+    ],
+    "certainty": "TEXTO_EXPLICITO",
+    "cognitive_type": "hecho",
+    "difficulty": 1,
+    "spoiler_policy": {
+        "safe_after_episodes": [
+            "DQ.P1.C16.E01"
+        ]
+    },
+    "visual_requirements": {
+        "pre_image_must_not_reveal": true,
+        "pre_image_media_id": "DQ.MA.900033"
+    },
+    "language": "es",
+    "tags": [
+        "banco",
+        "venta"
+    ],
+    "review": {
+        "state": "borrador",
+        "reviewer_role": null,
+        "date": null
+    },
+    "semantic_key": "venta maritornes asturiana alumbra"
 }

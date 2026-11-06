@@ -6,6 +6,8 @@
 
 **Nota de subsanación tras el dictamen de Coordinación en PR #32:** las PR #29, #30, #32 y #33 aparecen ya fusionadas en `main`. Las precisiones documentales de esta nota se tramitan en una PR de seguimiento sobre `main`; **se preserva la matriz CSV original de 2.805 filas**, sin recalcular claves, sin nuevos vínculos aprobados y sin retroeditar la PR #32 fusionada.
 
+> **⏳ AVISO DE INSTANTÁNEA QA (reauditoría H5 / coordinación, PR #36):** las columnas QA del CSV de 2.805 filas (`inspeccion_visual_r12`, `dictamen_r12`, `recomendacion_r12`, `estado_aprobacion_destino`) son una **instantánea anterior**, no el estado vigente. La 2.ª auditoría R12 dejó estados vigentes distintos en al menos 16 recursos (p. ej. 021 = FAIL contextual/alegoría; 025 = PENDIENTE para recreación literal; 027 = PASS para frailes) y **91 filas** resultan desactualizadas en el cruce. **Vista de conciliación vigente (derivada, por cruce por ruta): `docs/data/vinculos_consolidados_estado_qa_r12.csv`** — generada por `tools/editorial_validation/generar_vista_qa_r12.py`, regenerable. Los CSV origen permanecen congelados como histórico.
+
 ## 1. Modelo de consolidación y límites
 
 El CSV `docs/data/vinculos_visuales_consolidados.csv` tiene **una fila por combinación imagen–destino–fase–destinatario–acción**. Un mismo fichero puede tener diferentes vínculos a capítulos, pasajes, preguntas, lector, museo, descubrimientos, cuaderno o Historia. **No es un segundo inventario físico**: el único inventario de ficheros sigue siendo `docs/data/matriz_aprovechamiento_visual.csv` (678 rutas).

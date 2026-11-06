@@ -41,7 +41,8 @@ Ejercicio con la precarga editorial real (`docs/INTEGRACION_PRECARGA.md`): 73 re
 
 Pendiente de doble firma: el vocabulario de **producción** editorial (`humor` vs `humor_escena`, nombres de campo) se alineará con la canónica — o el contrato absorberá las variantes — al formalizar la batería de preguntas.
 
-- Versión del contrato: **semver**. Soportada actualmente: **`1.0.0`** (los borradores 0.x no fijan compatibilidad).
+- Versión del contrato: **semver**. Soportadas actualmente: **`1.0.0` y `1.1.0`** (los borradores 0.x no fijan compatibilidad).
+  - **v1.1.0 (2026-11-06, MINOR retrocompatible — R09/R11, DC-22/TS-001):** añade las entidades **Beat** (`DQ.BEAT.*`) e **Intervención** (anidada, ID global `DQ.INT.*`), `MediaFunction: voz`, `ContractVersion` como enum {1.0.0, 1.1.0} y la categoría opcional `beats` en el manifest de paquete. Ver §5 bis y ADR-0005. Registros 1.0.0 siguen siendo válidos sin cambios.
   - **MAJOR**: cambio incompatible (renombrar/eliminar campo, restringir enumeración, cambiar patrón de ID).
   - **MINOR**: añadido compatible (campo opcional nuevo, valor nuevo de enumeración, entidad nueva).
   - **PATCH**: correcciones de documentación o de validador sin efecto en datos.
@@ -70,6 +71,8 @@ Formato general `DQ.<TIPO>…`; separador `.`; ceros a la izquierda fijos. **Reg
 | Person | `^DQ\.PER\.\d{4}$` | `DQ.PER.0012` |
 | Place / Route | `^DQ\.LOC\.\d{4}$` / `^DQ\.RTE\.\d{4}$` | `DQ.LOC.0007` / `DQ.RTE.0002` |
 | MuseumItem | `^DQ\.MUS\.\d{4}$` | `DQ.MUS.0031` |
+| Beat narrativo | `^DQ\.BEAT\.\d{6}$` | `DQ.BEAT.000012` |
+| Intervención | `^DQ\.INT\.\d{6}$` (ID global único, anidada en su beat) | `DQ.INT.000045` |
 | MediaAsset | `^DQ\.MA\.\d{6}$` | `DQ.MA.000567` |
 | Source / License | `^DQ\.SRC\.\d{4}$` / `^DQ\.LIC\.\d{4}$` | `DQ.SRC.0014` / `DQ.LIC.0006` |
 | Profile (jugador) | `^prf_[0-9a-f]{8}-(…){12}$` | `prf_12345678-…` |
@@ -90,6 +93,7 @@ Los patrones de capítulo ya codifican la realidad textual (P1: 52 capítulos, P
 | Person | `schemas/content/person.schema.json` | Clase `ficticio/historico/debatido` |
 | Place/Route | `schemas/content/place.schema.json` | Ruta ⇒ `presented_as: hipotesis` **obligatorio** |
 | MuseumItem | `schemas/content/museum-item.schema.json` | `attribution_status` controla si `authorship` puede estar vacío |
+| Beat + Intervención | `schemas/content/beat.schema.json` | v1.1.0: unidad de reproducción con `utterances[]`; ver §5 bis y ADR-0005 |
 | MediaAsset | `schemas/media/media-asset.schema.json` | `alt` obligatorio; clases de evidencia siempre rotuladas |
 | Source / License | `schemas/media/source.schema.json`, `license.schema.json` | Fecha de consulta obligatoria |
 | Profile | `schemas/player/profile.schema.json` | Dominio C del jugador; intercambio/backup, no catálogo |
@@ -110,6 +114,31 @@ Definiciones compartidas (IDs, enumeraciones, Review, EvidenceItem, NormalizedAr
 - `spoiler_policy` estructurada con `safe_after_episodes[]`; equivalencia documental con la abreviatura editorial: `capitulo_actual` = `[]` + escena del capítulo; `episodios_anteriores` = lista de episodios previos; `siempre` = `[]`; `nunca` = episodios posteriores al suyo.
 - Estados de revisión (`review.state`): `borrador → documentada → revisada → aprobada` (o `descartada`). Solo `aprobada` es empaquetable; la puerta de publicación es editorial.
 - `difficulty` 1–5: 1–2 fácil, 3 media, 4–5 difícil (alimenta el selector adaptativo §5.4).
+
+## 5 bis. Intervenciones narrativas y beats (v1.1.0 — R09/R11, DC-22/TS-001)
+
+**Decisión de coordinación del propietario:** el **texto es el elemento principal del contrato** y el **audio un recurso asociado opcional**. Estructura de una intervención (tabla del propietario → campos del contrato):
+
+| Concepto (propietario) | Campo del contrato |
+|---|---|
+| Identificador: intervención única y estable | `utterance_id` (`DQ.INT.NNNNNN`, único global) dentro de su **Beat** (`DQ.BEAT.NNNNNN`) |
+| Personaje: Narrador, Don Quijote, Sancho u otro | `speaker: {tipo: narrador \| personaje, person_id?, label?}` — «personaje» exige `DQ.PER.*` |
+| Texto visible: obligatorio, íntegro, siempre disponible | `texto_visible` (obligatorio, `minLength` 1) — **nunca hay beat sin texto** |
+| Origen literario: cita, adaptación o narración de enlace | `text_kind: CITA_LITERAL \| ADAPTACION_FIEL \| NARRACION_ENLACE` — las dos primeras exigen `passage_ids` existentes |
+| Audio: opcional, asociado | `audio_asset_id` → MediaAsset de **función `voz`** (formato mp3/ogg); opcional o `null` |
+| Imagen: una o varias perspectivas | `visual_asset_ids` del beat (`minItems` 1) |
+| Controles: pausa, continuar, repetir y retroceder | `manual_advance_allowed`, `replay_allowed` + especificación de consumidor (`docs/COMPONENTES_NARRATIVOS_UX.md`) |
+
+Reglas vinculantes (validador activo, §8 CI):
+
+1. **TS-001 por construcción**: toda intervención exige `texto_visible`; un «audio sin texto visible» es estructuralmente imposible.
+2. Referencias rotas se rechazan (escena, perspectivas, hablante, pasajes, audio fantasma → `REFERENCE_ERROR`).
+3. El audio debe ser real: formato de voz (mp3/ogg) en el MediaAsset referenciado.
+4. `order` del beat único por escena; `utterance_id` único global.
+5. `reduced_motion_fallback: true` obligatorio en todo beat.
+6. Trazabilidad inversa a la fuente: `unit_ids[]` del inventario literario (biblia §3) y `localizador` por intervención.
+
+Mapeo desde el inventario editorial (`dialogos_literales[]` → intervención) documentado en ADR-0005. **El reproductor NO se implementa en este encargo (R10)**: su contrato de consumidor y matriz de pruebas están en `COMPONENTES_NARRATIVOS_UX.md`.
 
 ## 5. Enumeraciones formales (§6.3.4)
 

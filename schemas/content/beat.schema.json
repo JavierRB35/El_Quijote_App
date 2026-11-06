@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/JavierRB35/El_Quijote_App/schemas/content/beat.schema.json",
+  "title": "Beat narrativo con sus intervenciones",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "contract_version", "scene_id", "order", "kind", "utterances", "visual_asset_ids", "manual_advance_allowed", "replay_allowed", "reduced_motion_fallback"],
+  "properties": {
+    "id": { "$ref": "_definitions.schema.json#/$defs/beatId" },
+    "contract_version": { "$ref": "_definitions.schema.json#/$defs/ContractVersion" },
+    "scene_id": { "$ref": "_definitions.schema.json#/$defs/sceneId", "$comment": "Beat de una escena del contrato; la escena aporta el encuadre y las capas." },
+    "unit_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^DQ\\.UN\\.[A-Z0-9.]+$" },
+      "uniqueItems": true,
+      "$comment": "Trazabilidad inversa a las unidades literarias del inventario (biblia §3: unidad → episodio → escena → beat → intervención). Patrón amplio: el formato DQ.UN.* es del modelo editorial de CONTENIDOS."
+    },
+    "order": { "type": "integer", "minimum": 1, "$comment": "Posición del beat dentro de la escena; unicidad por escena en el validador semántico." },
+    "kind": { "type": "string", "enum": ["NARRACION", "DIALOGO", "ACCION", "SILENCIO"] },
+    "utterances": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/intervencion" },
+      "uniqueItems": true
+    },
+    "visual_asset_ids": {
+      "type": "array",
+      "items": { "$ref": "_definitions.schema.json#/$defs/mediaAssetId" },
+      "minItems": 1,
+      "uniqueItems": true,
+      "$comment": "DC-22/decisión del propietario: la intervención se representa con UNA o VARIAS perspectivas. Desviación deliberada del ejemplo de la biblia (array vacío): decidida en la conversión a esquema, sujeta a doble firma."
+    },
+    "manual_advance_allowed": { "type": "boolean", "$comment": "El jugador puede avanzar manualmente (controles del propietario: continuar/retroceder)." },
+    "replay_allowed": { "type": "boolean", "$comment": "Repetir intervención (reproduce de nuevo el audio si lo hay; el texto permanece)." },
+    "reduced_motion_fallback": { "type": "boolean", "enum": [true], "$comment": "Obligatorio: todo beat declara alternativa sin movimiento (encargo §4.7.7)." },
+    "entry_condition": { "type": "string", "minLength": 1 },
+    "exit_condition": { "type": "string", "minLength": 1 },
+    "review": { "$ref": "_definitions.schema.json#/$defs/Review" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "kind": { "enum": ["NARRACION", "DIALOGO", "ACCION"] } }, "required": ["kind"] },
+      "then": { "properties": { "utterances": { "minItems": 1 } } }
+    }
+  ],
+  "$defs": {
+    "intervencion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["utterance_id", "speaker", "texto_visible", "text_kind"],
+      "properties": {
+        "utterance_id": { "$ref": "_definitions.schema.json#/$defs/intervencionId" },
+        "speaker": { "$ref": "_definitions.schema.json#/$defs/Speaker" },
+        "texto_visible": {
+          "type": "string",
+          "minLength": 1,
+          "$comment": "DC-22 (TS-001): ELEMENTO PRINCIPAL del contrato — íntegro, obligatorio y siempre disponible; el audio es recurso opcional asociado. El jugador debe poder entender la escena con el sonido desactivado."
+        },
+        "text_kind": { "$ref": "_definitions.schema.json#/$defs/OrigenTexto" },
+        "passage_ids": {
+          "type": "array",
+          "items": { "$ref": "_definitions.schema.json#/$defs/passageId" },
+          "uniqueItems": true
+        },
+        "audio_asset_id": {
+          "anyOf": [ { "$ref": "_definitions.schema.json#/$defs/mediaAssetId" }, { "type": "null" } ],
+          "$comment": "Opcional. Si existe, referencia un MediaAsset de función 'voz'; el validador comprueba existencia y formato de audio, y que NUNCA sustituye al texto."
+        },
+        "localizador": {
+          "type": "string",
+          "minLength": 1,
+          "$comment": "Anclaje de fuente completo (edición + offset/anchor), p. ej. 'PG 2000 (DQ.SRC.0005) offset 122639-122954'."
+        },
+        "nota_editorial": { "type": "string", "$comment": "p. ej. motivo_conservacion del inventario literario." }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "text_kind": { "enum": ["CITA_LITERAL", "ADAPTACION_FIEL"] } }, "required": ["text_kind"] },
+          "then": { "required": ["passage_ids"], "properties": { "passage_ids": { "minItems": 1 } } }
+        }
+      ]
+    }
+  }
+}

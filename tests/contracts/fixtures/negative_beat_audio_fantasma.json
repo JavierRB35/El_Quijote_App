@@ -1,0 +1,20 @@
+{
+  "id": "DQ.BEAT.000104",
+  "contract_version": "1.1.0",
+  "scene_id": "DQ.P1.C01.E01.S01",
+  "order": 3,
+  "kind": "DIALOGO",
+  "utterances": [
+    {
+      "utterance_id": "DQ.INT.000104",
+      "speaker": { "tipo": "narrador" },
+      "texto_visible": "CASO NEGATIVO DE PAQUETE: el audio referencia un medio inexistente (R11: referencia rota se rechaza).",
+      "text_kind": "NARRACION_ENLACE",
+      "audio_asset_id": "DQ.MA.999997"
+    }
+  ],
+  "visual_asset_ids": ["DQ.MA.000001"],
+  "manual_advance_allowed": true,
+  "replay_allowed": true,
+  "reduced_motion_fallback": true
+}

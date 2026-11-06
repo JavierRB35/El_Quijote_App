@@ -64,3 +64,43 @@ Regla: el texto del EPUB nunca sustituye a la edición de referencia para afirma
 2. ≥ 20 preguntas publicables por capítulo de acción/diálogo y ≥ 12 en capítulos introspectivos, **o** justificación de por qué el capítulo no da más sin inflar.
 3. Contrato editorial-técnico ajustado con los hallazgos reales (entregable FASE 0.7).
 4. Estimación razonada con intervalo para el total del banco y del coste de validación.
+
+## 8. Dimensionamiento del banco de preguntas — acuerdo de producto (2026-11-06)
+
+**Decisión aprobada por el propietario (DC-07):** sustituir la antigua aspiración de 10.000 por **1.200 preguntas originales como objetivo de planificación**, con **rango orientativo de 900 a 1.500**. **No es una cuota mínima ni una autorización para inflar registros**: si el corpus verificado solo permite menos, prevalece la calidad. El objetivo se recalibrará con métricas del piloto y aprobación de alcance antes de producción masiva (encargo §4.8 y Fases 1→2).
+
+**Evidencia y límite de inferencia.** El paquete de los seis capítulos del piloto contiene 50 preguntas válidas para el contrato (I.8: 12; I.6: 8; I.11: 8; I.18: 9; II.1: 6; II.74: 7), equivalentes a 8,33 por capítulo. Multiplicar por 126 da **1.050**, únicamente como referencia aritmética: la muestra es intencional, no aleatoria, y la validación contractual no demuestra por sí sola revisión literaria o experiencia jugable completa. Los aproximadamente 87 episodios son agrupación editorial provisional, no denominador de cuota.
+
+### Reparto funcional orientativo del objetivo de 1.200
+
+| Uso principal de la pregunta | Propuesta | Observación |
+|---|---:|---|
+| Aventura narrativa | 700 | Acontecimientos, personajes, decisiones, diálogo, consecuencias, humor, observación |
+| Desafíos y profundización voluntarios | 350 | Comparaciones, citas, comprensión compleja, interpretaciones atribuidas y repaso |
+| Atlas, historia y museo | 150 | Geografía literaria, patrimonio, arte y contexto histórico documentado |
+| **Total** | **1.200** | **Reparto orientativo, no cupos rígidos ni tres bases de datos separadas** |
+
+Las categorías son **usos de presentación**, no clasificaciones temáticas excluyentes; una pregunta de aventura puede abordar historia o literatura. No deben mostrarse las 1.200 en una sola partida: selección contextual y adaptativa, sin repeticiones inmediatas ni spoilers, con desafíos voluntarios.
+
+### Bandas orientativas por capítulo, no requisitos de completitud
+
+| Tipología | Banda de preguntas posibles |
+|---|---:|
+| Transición narrativa o capítulo breve | 3–6 |
+| Diálogo / reflexión | 5–10 |
+| Narración convencional | 7–12 |
+| Gran aventura / capítulo rico en hechos | 12–20 |
+| Excepcionalmente complejo | Hasta 25, solo si se justifica |
+
+Para episodios multicapítulo se contará la **unidad semántica** de la pregunta sin forzar asignación artificial por capítulo. Las bandas nunca sustituyen el inventario real ni son objetivos de producción.
+
+### Puertas de calidad y seguimiento
+
+1. **Singularidad:** toda pregunta debe añadir un conocimiento o razonamiento diferente; sin clones semánticos y con `semantic_key`/revisión de duplicados.
+2. **Evidencia:** fuente exacta (pasaje, fuente histórica o interpretación atribuida), explicación verificable, certeza documentada y licencias de medios cuando correspondan.
+3. **Experiencia:** valor de descubrimiento, respuesta exclusivamente seleccionada y clara, sin spoilers ni interrupciones de ritmo innecesarias.
+4. **Métricas del piloto:** candidatas, aprobadas, rechazadas por motivo, esfuerzo por pregunta, diversidad por capítulo y tipo, uso real en la aventura y coste de integración visual/técnica.
+5. **Primer hito de producción controlada:** **300 preguntas realmente aprobadas e integradas**, sin fecha ni cuota por capítulo impuestas. Se trata de un hito de planificación posterior a la aceptación correspondiente; la decisión de tamaño **no autoriza por sí sola Fase 2**.
+6. **Revisión de alcance:** actualizar previsión global y mix funcional tras los seis capítulos y cada lote revisado; informar desvíos razonados respecto de 900–1.500 sin crear preguntas de relleno.
+
+**Compatibilidad con el encargo maestro:** queda intacto el principio «tantas preguntas realmente diferentes, útiles y verificables como permita un trabajo riguroso» (§2.3). Esta decisión concreta un **objetivo operativo flexible**, no modifica la exigencia de calidad ni la prohibición de números mínimos artificiales. Los umbrales previos de §7.2 de este plan son criterios exploratorios con cláusula de justificación, no cuotas por capítulo.

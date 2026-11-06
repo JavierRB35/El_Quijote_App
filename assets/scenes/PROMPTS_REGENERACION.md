@@ -143,3 +143,32 @@ Todas son recreaciones originales con IA, de uso contextual previo y pendientes 
 | `p2_c48_duena_rodriguez_noche_pre` | Doña Rodríguez entra con vela al aposento de Don Quijote para conversar, tono discreto y no erotizado. | Conversación nocturna. |
 
 Recreaciones de IA originales y pendientes de cotejo filológico y editorial; no son documentación histórica.
+
+## Décima batería — 20 capítulos adicionales (2026-11-06)
+
+Las siguientes variaciones usan el prompt base cinematográfico, con escenografía y vestuario del primer tercio del siglo XVII, sin letras, interfaces ni detalles fantásticos literales.
+
+| ID | Variación principal | Función |
+|---|---|---|
+| `p1_c28_dorotea_lavandera_pre` | Dorotea junto a arroyo de Sierra Morena, cura y barbero descubren su presencia. | Antes/contexto |
+| `p1_c31_sancho_mensaje_dulcinea_pre` | Don Quijote escucha el relato de Sancho sobre la embajada a Dulcinea. | Antes/contexto |
+| `p1_c37_zoraida_venta_pre` | Zoraida y el cautivo llegan a la venta entre huéspedes. | Antes/contexto |
+| `p1_c39_cautivo_relato_pre` | En el relato intercalado, el cautivo recuerda sus años militares junto a fortificación mediterránea. | Antes/contexto |
+| `p1_c42_juez_hija_venta_pre` | Juez y doña Clara llegan de viaje a venta de camino. | Antes/contexto |
+| `p1_c44_criados_don_luis_pre` | Cuatro criados buscan a don Luis en el patio de la venta. | Antes/contexto |
+| `p1_c47_canonigo_camino_pre` | Canónigo alcanza a los viajeros y conversa al lado del carro enjaulado. | Antes/contexto |
+| `p1_c48_canonigo_literatura_pre` | Canónigo y cura discuten libros junto al carro, con don Quijote presente. | Antes/contexto |
+| `p1_c49_quijote_jaula_debate_pre` | Don Quijote fuera de jaula dialoga con Sancho y el canónigo. | Antes/contexto |
+| `p1_c50_quijote_defensa_libros_pre` | Don Quijote argumenta en defensa de la ficción caballeresca. | Antes/contexto |
+| `p1_c51_eugenio_leandra_pre` | Cabrero Eugenio relata la historia de Leandra en campo abierto. | Antes/contexto |
+| `p2_c02_sancho_visita_pre` | Sancho visita a Don Quijote en casa; ama y sobrina observan. | Antes/contexto |
+| `p2_c05_sancho_teresa_dialogo_pre` | Sancho y Teresa conversan en su casa sobre aspiraciones. | Antes/contexto |
+| `p2_c06_sobrina_ama_quijote_pre` | Ama y sobrina intentan disuadir al hidalgo. | Antes/contexto |
+| `p2_c07_tercera_salida_pre` | Preparativos de tercera salida con Rocinante y rucio. | Antes/contexto |
+| `p2_c09_toboso_amanecer_pre` | Salida de calles reales del Toboso al alba, sin Dulcinea. | Antes/contexto |
+| `p2_c15_carrasco_revelacion_post` | Sansón Carrasco y Tomé Cecial tras duelo, identidad conocida. | Después/revelación (spoiler alto) |
+| `p2_c23_cueva_montesinos_salida_post` | Don Quijote rescatado de cueva de Montesinos por cuerda. | Después/revelación (spoiler alto) |
+| `p2_c24_ermita_camino_pre` | Encuentro con viajero cerca de una ermita. | Antes/contexto |
+| `p2_c25_rebuzno_titeres_pre` | Maese Pedro con retablo y mono llega a una venta. | Antes/contexto |
+
+Estas recreaciones quedan en estado editorial pendiente; la apariencia visual no constituye evidencia histórica. La misma estructura permite revisar cada recurso sin modificar el resto de la colección.

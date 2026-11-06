@@ -46,7 +46,7 @@ Alcance de «texto siempre visible»: el **texto íntegro de la intervención ac
 
 El Modo Historia avanza **ordinariamente en automático**, con lectura garantizada:
 
-1. **Duración mínima del beat** = `max(duración_de_voz, lectura_mínima)` donde `lectura_mínima = max(1500 ms, 800 ms + 35 ms/palabra de texto_visible)` — parámetros ajustables por el piloto (no segundos arbitrarios fijados a mano); un beat puede además fijar `lectura_minima_ms` propio.
+1. **Duración mínima del beat** = `max(duración_de_voz, lectura_mínima)` donde `lectura_mínima = max(1500 ms, 800 ms + 35 ms/palabra de texto_visible)` — parámetros ajustables por el piloto (no segundos arbitrarios fijados a mano). Un beat puede fijar `lectura_minima_ms` propio, que **solo puede ELEVAR** ese suelo (mínimo 1; nunca rebaja la política) — **el suelo de lectura garantizado aplica también sin audio** (reauditoría H5).
 2. El autoavance se dispara solo cuando `voz terminada (si la hay)` **y** `lectura_mínima cumplida`. **El fin de la voz por sí solo no avanza ni oculta nada**: si la voz termina antes, el texto permanece hasta cumplir su tiempo de lectura.
 3. La preferencia se define por perfil (`avance_automatico`: automático / manual / velocidad) y cada beat puede anularla (`avance_automatico: true|false`).
 4. **Pausa** detiene voz y temporizador; **Continuar** los reanuda; **Retroceder** relee el beat anterior íntegro; **Salto manual** siempre disponible salvo la única excepción del §2.1 (espera de voz), y siempre disponible sin voz.

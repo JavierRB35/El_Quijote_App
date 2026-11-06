@@ -1,8 +1,8 @@
 {
   "gate": "repo",
   "all_ok": true,
-  "total": 51,
-  "passed": 51,
+  "total": 53,
+  "passed": 53,
   "results": [
     {
       "file": "valid/beat_cita.json",
@@ -180,6 +180,22 @@
     },
     {
       "file": "invalid/invalid_beat_cita_sin_pasaje.json",
+      "expect": "FALLA con SCHEMA_ERROR",
+      "result": "PASS",
+      "codes": [
+        "SCHEMA_ERROR"
+      ]
+    },
+    {
+      "file": "invalid/invalid_beat_incisos_sin_oral.json",
+      "expect": "FALLA con SCHEMA_ERROR",
+      "result": "PASS",
+      "codes": [
+        "SCHEMA_ERROR"
+      ]
+    },
+    {
+      "file": "invalid/invalid_beat_lectura_cero.json",
       "expect": "FALLA con SCHEMA_ERROR",
       "result": "PASS",
       "codes": [

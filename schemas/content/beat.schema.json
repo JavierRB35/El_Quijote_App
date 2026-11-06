@@ -23,8 +23,8 @@
     },
     "lectura_minima_ms": {
       "type": "integer",
-      "minimum": 0,
-      "$comment": "P0-2: tiempo mínimo de lectura del beat antes de cualquier autoavance (anula el cálculo por palabra de la política general). El fin de la voz por sí solo nunca determina la desaparición del texto."
+      "minimum": 1,
+      "$comment": "P0-2/reauditoría H5: tiempo mínimo de lectura del beat. SOLO PUEDE ELEVAR el suelo de la política general (COMPONENTES_NARRATIVOS_UX §2.3: max(1500 ms, 800 ms + 35 ms/palabra)) — nunca rebajarlo. Ese suelo aplica siempre, con o sin audio; por eso no se admite 0."
     },
     "utterances": {
       "type": "array",
@@ -97,6 +97,13 @@
         {
           "if": { "properties": { "text_kind": { "enum": ["CITA_LITERAL", "ADAPTACION_FIEL"] } }, "required": ["text_kind"] },
           "then": { "required": ["passage_ids"], "properties": { "passage_ids": { "minItems": 1 } } }
+        },
+        {
+          "if": { "properties": { "incisos_narrador": { "minItems": 1 } }, "required": ["incisos_narrador"] },
+          "then": {
+            "required": ["texto_oral"],
+            "$comment": "Reauditoría H5: si hay incisos del narrador, la proyección oral es OBLIGATORIA — sin texto_oral explícito, la voz leería verbatim un texto que contiene los incisos ('—respondió Sancho—')."
+          }
         }
       ]
     }

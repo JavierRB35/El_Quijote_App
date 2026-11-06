@@ -404,6 +404,8 @@ EXPECTED_INVALID = {
     "invalid_beat_sin_texto.json": "SCHEMA_ERROR",
     "invalid_beat_cita_sin_pasaje.json": "SCHEMA_ERROR",
     "invalid_beat_texto_blanco.json": "SCHEMA_ERROR",
+    "invalid_beat_incisos_sin_oral.json": "SCHEMA_ERROR",
+    "invalid_beat_lectura_cero.json": "SCHEMA_ERROR",
 }
 
 EXPECTED_INVALID_PACKAGES = {

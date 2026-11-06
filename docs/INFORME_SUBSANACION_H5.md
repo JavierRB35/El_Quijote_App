@@ -61,3 +61,13 @@ Solicitud registrada en PR #19 y en este informe: se requiere la **revisión y c
 ## Estado resultante
 
 P0-1 y P0-2 resueltos; P1-1 a P1-4 resueltos; P1-5 en curso (solicitud formal registrada). H5 queda en las condiciones definidas por Coordinación: **aceptación definitiva condicionada a la aprobación compartida del contrato**. Ninguna otra acción de este encargo ha sido iniciada (ni reproductor ni conversión masiva).
+
+## Reauditoría H5 — tres precisiones (2026-11-06) → RESUELTAS
+
+| Precisión | Corrección aplicada | Prueba |
+|---|---|---|
+| **P1-a:** `texto_oral` podía omitirse con incisos presentes → la voz pronunciaría «—respondió Sancho—» | Esquema: `incisos_narrador` no vacío ⇒ `texto_oral` **obligatorio** (la proyección oral debe ser explícita; la regla «ningún inciso en texto_oral» ya activa impide divergencias) | `invalid_beat_incisos_sin_oral.json` → `SCHEMA_ERROR` |
+| **P1-b:** `lectura_minima_ms` admitía `0`, anulando el mínimo de lectura | Esquema: `minimum: 1` + semántica: el valor **solo eleva** el suelo de la política §2.3 (`max(1500 ms, 800 ms + 35 ms/palabra)`), que aplica siempre — con o sin audio | `invalid_beat_lectura_cero.json` → `SCHEMA_ERROR` |
+| **P1-c (documental):** ADR-0005 atribuía al propietario la obligatoriedad de imagen por beat | Corregida: «desviación de la biblia §4 **pendiente de doble firma editorial-técnica**» en la decisión 1 y addendum | Revisión textual del ADR |
+
+Evidencia: suite **53/53 PASS** (+2 fixtures negativos). La contrafirma editorial (R01/R02) sigue en curso en paralelo, según la propia reauditoría.

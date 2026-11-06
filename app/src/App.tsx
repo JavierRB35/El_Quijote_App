@@ -76,6 +76,54 @@ function Lienzo({
   );
 }
 
+/** Contador de diagnóstico (F9): FPS y memoria del WebView para la recogida
+ *  de evidencia del criterio ADR-0001.4 (benchmark de escena en hardware real). */
+function Diagnostico({ escena }: { escena: string | null }) {
+  const [visible, setVisible] = useState(false);
+  const [fps, setFps] = useState(0);
+  const [mem, setMem] = useState('—');
+
+  useEffect(() => {
+    const alPulsar = (e: KeyboardEvent) => {
+      if (e.key === 'F9') setVisible((v) => !v);
+    };
+    window.addEventListener('keydown', alPulsar);
+    return () => window.removeEventListener('keydown', alPulsar);
+  }, []);
+
+  useEffect(() => {
+    if (!visible) return;
+    let cuadros = 0;
+    let t0 = performance.now();
+    let raf = 0;
+    let vivo = true;
+    const tick = () => {
+      cuadros++;
+      const t = performance.now();
+      if (t - t0 >= 1000) {
+        setFps(Math.round((cuadros * 1000) / (t - t0)));
+        cuadros = 0;
+        t0 = t;
+        const m = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+        setMem(m ? `${Math.round(m.usedJSHeapSize / 1048576)} MB JS` : '—');
+      }
+      if (vivo) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => {
+      vivo = false;
+      cancelAnimationFrame(raf);
+    };
+  }, [visible]);
+
+  if (!visible) return null;
+  return (
+    <div className="diagnostico" role="status">
+      FPS {fps} · {mem} · {escena?.split('/').pop() ?? '—'}
+    </div>
+  );
+}
+
 function renderizadorRespuesta({
   pregunta,
   seleccion,
@@ -214,6 +262,34 @@ export default function App() {
       .catch((e) => setError(String(e)));
   }, []);
 
+  // Recuperación de partida (EF-AV-08/EF-PER): se restaura lo guardado y se
+  // retoma en la primera pregunta sin responder. Un progreso corrupto o de
+  // otro catálogo se ignora sin dar por buena la carga (§7.3).
+  useEffect(() => {
+    if (!catalogo || preguntas.length === 0) return;
+    invoke<string | null>('cargar_progreso')
+      .then((crudo) => {
+        if (!crudo) return;
+        let guardado: Progreso;
+        try {
+          guardado = JSON.parse(crudo) as Progreso;
+        } catch {
+          return; // progreso ilegible: comenzar de cero
+        }
+        const ids = new Set(preguntas.map((q) => q.id));
+        const valido = Object.fromEntries(
+          Object.entries(guardado).filter(([id, v]) => ids.has(id) && v && Array.isArray(v.seleccion)),
+        );
+        if (!Object.keys(valido).length) return;
+        setProgreso(valido);
+        const primeraLibre = preguntas.findIndex((q) => !(q.id in valido));
+        setIndice(primeraLibre === -1 ? preguntas.length - 1 : primeraLibre);
+        setAvisoGuardado(`partida recuperada · ${Object.keys(valido).length} respuestas`);
+      })
+      .catch(() => undefined);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [catalogo]);
+
   const preguntas: Pregunta[] = useMemo(
     () => (catalogo ? catalogo.preguntasDeEpisodio(EPISODIO_INICIAL) : []),
     [catalogo],
@@ -303,6 +379,14 @@ export default function App() {
         seleccion.length === correctas.length && correctas.every((id) => seleccion.includes(id));
     }
     setEstado({ fase: 'respondida', acierto: Boolean(acierto), seleccion });
+  }
+
+  function reiniciar() {
+    setProgreso({});
+    setIndice(0);
+    invoke('guardar_progreso', { datos: '{}' }).catch((e) =>
+      setAvisoGuardado(`fallo al limpiar el guardado: ${e}`),
+    );
   }
 
   // ---- escena activa: la pre-imagen vigente; el desenlace al cerrar episodio
@@ -407,6 +491,9 @@ export default function App() {
                   {aciertos} de {preguntas.length} aciertos. Los descubrimientos quedan anotados en
                   su cuaderno de investigador.
                 </p>
+                <button className="secundario" onClick={reiniciar}>
+                  Volver a pasar el episodio
+                </button>
               </div>
             )}
           </div>
@@ -421,6 +508,8 @@ export default function App() {
         </span>
         {escenaActiva?.author ? <span className="pie-autor">{escenaActiva.author}</span> : null}
       </footer>
+
+      <Diagnostico escena={escenaActiva?.logical_uri ?? null} />
     </main>
   );
 }

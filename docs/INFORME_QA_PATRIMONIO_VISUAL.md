@@ -22,7 +22,7 @@
 
 ## 2. Cobertura prioritaria del piloto: 37 imágenes abiertas
 
-Se revisaron **todas las 16 escenas cuya parte y capítulo son uno de los seis capítulos piloto**: I,6; I,8; I,11; I,18; II,1; II,74. Se observaron también **17 acuarelas vinculadas a esos capítulos o seleccionadas en H4**, y **4 alternativas de otros capítulos**. El subconjunto directo consta de **37 archivos distintos**, todos con observación individual en el CSV (13 de ellos ya estaban incluidos en inspecciones anteriores; 26 se incorporan ahora). La vinculación se basó en `docs/DOSSIER_ARTISTICO_H4.md`, `assets/scenes/manifest.json`, `assets/ilustraciones_tusell/manifests/manifest_ilustraciones.json` y las rutas del catálogo.
+Se revisaron **todas las 16 escenas cuya parte y capítulo son uno de los seis capítulos piloto**: I,6; I,8; I,11; I,18; II,1; II,74. Se observaron también **17 acuarelas vinculadas a esos capítulos o seleccionadas en H4**, y **4 alternativas de otros capítulos**. El subconjunto directo consta de **37 archivos distintos**, todos con observación individual en el CSV (11 de ellos ya estaban incluidos en inspecciones anteriores; 26 se incorporan ahora). La vinculación se basó en `docs/DOSSIER_ARTISTICO_H4.md`, `assets/scenes/manifest.json`, `assets/ilustraciones_tusell/manifests/manifest_ilustraciones.json` y las rutas del catálogo.
 
 ### I,6 — Escrutinio de libros
 

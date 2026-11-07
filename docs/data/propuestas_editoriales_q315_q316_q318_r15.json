@@ -1,0 +1,436 @@
+{
+  "artifact_kind": "PROPUESTA_EDITORIAL_NO_PRODUCTIVA",
+  "status": "RECTIFICACION_DOCUMENTAL_R15_3_CC_CONDICIONADAS_SIN_GO",
+  "basis": "JavierRB35/El_Quijote_App main (consulta 2026-11-07); PG #2000, DQ.ED.0003; lector DQ.ED.0001",
+  "no_implementation": true,
+  "source_excerpt_validation": "Citas reproducidas literalmente de content/textos/gutenberg_2000/El_Quijote.txt; comprobación programática de subcadenas exactas con saltos de línea normalizados.",
+  "proposed_passages": [
+    {
+      "id": "DQ.P1.C21.P0005",
+      "chapter_id": "DQ.P1.C21",
+      "status": "CANDIDATO_NO_EXISTE",
+      "role": "narración de identidad y motivo de la bacía",
+      "text_original": "Es, pues, el caso que el yelmo, y el caballo y caballero que don Quijote\nveía, era esto: que en aquel contorno había dos lugares, el uno tan pequeño\nque ni tenía botica ni barbero, y el otro, que estaba junto, sí; y\nasí, el barbero del mayor servía al menor, en el cual tuvo necesidad un\nenfermo de sangrarse y otro de hacerse la barba, para lo cual venía el\nbarbero, y traía una bacía de azófar; y quiso la suerte que, al tiempo que\nvenía, comenzó a llover, y, porque no se le manchase el sombrero, que debía\nde ser nuevo, se puso la bacía sobre la cabeza; y, como estaba limpia,\ndesde media legua relumbraba."
+    },
+    {
+      "id": "DQ.P1.C21.P0006",
+      "chapter_id": "DQ.P1.C21",
+      "status": "CANDIDATO_NO_EXISTE",
+      "role": "ataque, huida, bacía abandonada y recogida por Sancho",
+      "text_original": "Y cuando él vio que el pobre caballero llegaba cerca, sin\nponerse con él en razones, a todo correr de Rocinante le enristró con el\nlanzón bajo, llevando intención de pasarle de parte a parte; mas cuando a\nél llegaba, sin detener la furia de su carrera, le dijo:\n\n— ¡Defiéndete, cautiva criatura, o entriégame de tu voluntad lo que con\ntanta razón se me debe!\n\nEl barbero, que, tan sin pensarlo ni temerlo, vio venir aquella fantasma\nsobre sí, no tuvo otro remedio, para poder guardarse del golpe de la lanza,\nsi no fue el dejarse caer del asno abajo; y no hubo tocado al suelo, cuando\nse levantó más ligero que un gamo y comenzó a correr por aquel llano, que\nno le alcanzara el viento. Dejóse la bacía en el suelo, con la cual se\ncontentó don Quijote, y dijo que el pagano había andado discreto y que\nhabía imitado al castor, el cual, viéndose acosado de los cazadores, se\ntaraza y arpa con los dientes aquéllo por lo que él, por distinto natural,\nsabe que es perseguido. Mandó a Sancho que alzase el yelmo, el cual,\ntomándola en las manos, dijo:"
+    },
+    {
+      "id": "DQ.P1.C10.P0001",
+      "chapter_id": "DQ.P1.C10",
+      "status": "CANDIDATO_NO_EXISTE",
+      "role": "renovación del juramento y referencia a Mambrino/Sacripante en I,10",
+      "text_original": "— Has hablado y apuntado muy bien —respondió don Quijote—; y así, anulo el\njuramento en cuanto lo que toca a tomar dél nueva venganza; pero hágole y\nconfírmole de nuevo de hacer la vida que he dicho, hasta tanto que quite\npor fuerza otra celada tal y tan buena como ésta a algún caballero. Y no\npienses, Sancho, que así a humo de pajas hago esto, que bien tengo a quien\nimitar en ello; que esto mesmo pasó, al pie de la letra, sobre el yelmo de\nMambrino, que tan caro le costó a Sacripante."
+    }
+  ],
+  "proposals": [
+    {
+      "question_id": "DQ.Q.000315",
+      "recommendation": "CORREGIR_CON_PASAJE_C21_P0005_CANDIDATO",
+      "candidate": {
+        "id": "DQ.Q.000315",
+        "contract_version": "1.0.0",
+        "episode_id": "DQ.P1.C21.E01",
+        "chapter_ids": [
+          "DQ.P1.C21"
+        ],
+        "passage_ids": [
+          "DQ.P1.C21.P0003",
+          "DQ.P1.C21.P0005"
+        ],
+        "prompt": "Según el narrador, ¿por qué se puso el barbero la bacía sobre la cabeza?",
+        "interaction": {
+          "type": "single_choice",
+          "options": [
+            {
+              "id": "DQ.Q.000315.O01",
+              "label": "Porque empezó a llover y quería evitar que se manchase su sombrero, que debía de ser nuevo"
+            },
+            {
+              "id": "DQ.Q.000315.O02",
+              "label": "Porque quería transportar en la bacía el agua necesaria para afeitar a un cliente"
+            },
+            {
+              "id": "DQ.Q.000315.O03",
+              "label": "Porque pretendía hacerse pasar ante los viajeros por un caballero armado"
+            }
+          ],
+          "correct_option_ids": [
+            "DQ.Q.000315.O01"
+          ],
+          "shuffle_options": true
+        },
+        "rationale": "El narrador explica que llovía y que el barbero se cubrió con la bacía limpia para no manchar su sombrero, que debía de ser nuevo. La intención de parecer caballero es una interpretación equivocada de don Quijote, no la del barbero.",
+        "evidence": [
+          {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C21.P0005",
+            "quote": "y traía una bacía de azófar; y quiso la suerte que, al tiempo que\nvenía, comenzó a llover, y, porque no se le manchase el sombrero, que debía\nde ser nuevo, se puso la bacía sobre la cabeza; y, como estaba limpia,\ndesde media legua relumbraba."
+          }
+        ],
+        "certainty": "TEXTO_EXPLICITO",
+        "cognitive_type": "causa_consecuencia",
+        "difficulty": 1,
+        "spoiler_policy": {
+          "safe_after_episodes": [
+            "DQ.P1.C21.E01"
+          ]
+        },
+        "visual_requirements": {
+          "pre_image_must_not_reveal": true
+        },
+        "language": "es",
+        "tags": [
+          "banco",
+          "mambrino"
+        ],
+        "review": {
+          "state": "borrador",
+          "reviewer_role": null,
+          "date": null
+        },
+        "semantic_key": "mambrino bacia barbero lluvia sombrero motivo"
+      },
+      "qa_status": "BLOQUEADA_A11",
+      "editorial_decision": "R01/R02: CC CONDICIONADA; conservar ID, narrador y candidato P0005 sin alta; sin pre ni post literal DQ.MA.900036; solo preguntar después de narrar lluvia, bacía y motivo del sombrero; R09/R12 pendientes."
+    },
+    {
+      "question_id": "DQ.Q.000316",
+      "recommendation": "VARIANTE_B_I21_PRINCIPAL_CC_CONDICIONADA_SIN_GO",
+      "candidate": {
+        "id": "DQ.Q.000316",
+        "contract_version": "1.0.0",
+        "episode_id": "DQ.P1.C21.E01",
+        "chapter_ids": [
+          "DQ.P1.C21"
+        ],
+        "passage_ids": [
+          "DQ.P1.C21.P0003"
+        ],
+        "prompt": "Al divisar lo que cree el yelmo de Mambrino en I,21, ¿qué recuerda don Quijote haber hecho anteriormente?",
+        "interaction": {
+          "type": "single_choice",
+          "options": [
+            {
+              "id": "DQ.Q.000316.O01",
+              "label": "Haber hecho un juramento relacionado con ese yelmo"
+            },
+            {
+              "id": "DQ.Q.000316.O02",
+              "label": "Haber recibido ese yelmo como regalo de Sancho"
+            },
+            {
+              "id": "DQ.Q.000316.O03",
+              "label": "Haber pactado con el barbero su entrega sin combate"
+            }
+          ],
+          "correct_option_ids": [
+            "DQ.Q.000316.O01"
+          ],
+          "shuffle_options": true
+        },
+        "rationale": "Don Quijote señala al hombre que se aproxima y dice de su supuesto yelmo de Mambrino «sobre que yo hice el juramento que sabes». Esta formulación se limita a lo efectivamente enunciado en I,21: no atribuye a ese capítulo la referencia a Sacripante de I,10.",
+        "evidence": [
+          {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C21.P0003",
+            "quote": "Digo esto porque, si no me engaño,\nhacia nosotros viene uno que trae en su cabeza puesto el yelmo de Mambrino,\nsobre que yo hice el juramento que sabes."
+          }
+        ],
+        "certainty": "TEXTO_EXPLICITO",
+        "cognitive_type": "hecho",
+        "difficulty": 1,
+        "spoiler_policy": {
+          "safe_after_episodes": [
+            "DQ.P1.C21.E01"
+          ]
+        },
+        "visual_requirements": {
+          "pre_image_must_not_reveal": true
+        },
+        "language": "es",
+        "tags": [
+          "banco",
+          "mambrino"
+        ],
+        "review": {
+          "state": "borrador",
+          "reviewer_role": null,
+          "date": null
+        },
+        "semantic_key": "mambrino i21 alusion juramento previo sin sacripante"
+      },
+      "alternative_retire": "Retirar temporalmente DQ.Q.000316 del piloto si no pueden satisfacerse los requisitos de identidad, cronología, R09/R12 de la variante B seleccionada; mantener candidatura retrospectiva I,10 solo para fase futura.",
+      "qa_status": "BLOQUEADA_A12_PENDIENTE_R09_IDENTIDAD_PROGRESO_Y_R12_ANTISPOILER",
+      "alternative_retrospective_future": {
+        "id": "DQ.Q.000316",
+        "contract_version": "1.0.0",
+        "episode_id": "DQ.P1.C21.E01",
+        "chapter_ids": [
+          "DQ.P1.C10",
+          "DQ.P1.C21"
+        ],
+        "passage_ids": [
+          "DQ.P1.C10.P0001",
+          "DQ.P1.C21.P0003"
+        ],
+        "prompt": "En I,10, al renovar su juramento de conseguir otra celada, don Quijote recuerda un yelmo célebre. ¿Cuál es el mismo yelmo que cree divisar después, en I,21?",
+        "interaction": {
+          "type": "single_choice",
+          "options": [
+            {
+              "id": "DQ.Q.000316.O01",
+              "label": "El yelmo de Mambrino, que tan caro le costó a Sacripante"
+            },
+            {
+              "id": "DQ.Q.000316.O02",
+              "label": "La celada que se le rompió durante el combate con el vizcaíno"
+            },
+            {
+              "id": "DQ.Q.000316.O03",
+              "label": "Una armadura del marqués de Mantua, cuyo juramento había recordado"
+            }
+          ],
+          "correct_option_ids": [
+            "DQ.Q.000316.O01"
+          ],
+          "shuffle_options": true
+        },
+        "rationale": "En I,10, don Quijote evoca el yelmo de Mambrino y a Sacripante al reafirmar su intención de conseguir otra celada. En I,21 identifica imaginariamente como ese yelmo la bacía de un barbero y alude a un juramento previo. La comparación es retrospectiva: no pronuncia el nombre de Sacripante en I,21.",
+        "evidence": [
+          {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C10.P0001",
+            "quote": "— Has hablado y apuntado muy bien —respondió don Quijote—; y así, anulo el\njuramento en cuanto lo que toca a tomar dél nueva venganza; pero hágole y\nconfírmole de nuevo de hacer la vida que he dicho, hasta tanto que quite\npor fuerza otra celada tal y tan buena como ésta a algún caballero. Y no\npienses, Sancho, que así a humo de pajas hago esto, que bien tengo a quien\nimitar en ello; que esto mesmo pasó, al pie de la letra, sobre el yelmo de\nMambrino, que tan caro le costó a Sacripante."
+          },
+          {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C21.P0003",
+            "quote": "Digo esto porque, si no me engaño,\nhacia nosotros viene uno que trae en su cabeza puesto el yelmo de Mambrino,\nsobre que yo hice el juramento que sabes."
+          }
+        ],
+        "certainty": "TEXTO_EXPLICITO",
+        "cognitive_type": "hecho",
+        "difficulty": 2,
+        "spoiler_policy": {
+          "safe_after_episodes": [
+            "DQ.P1.C21.E01"
+          ]
+        },
+        "visual_requirements": {
+          "pre_image_must_not_reveal": true
+        },
+        "language": "es",
+        "tags": [
+          "banco",
+          "mambrino"
+        ],
+        "review": {
+          "state": "borrador",
+          "reviewer_role": null,
+          "date": null
+        },
+        "semantic_key": "mambrino sacripante referencia i10 retomada i21"
+      },
+      "future_variant_status": "FUTURA_NO_SELECCIONADA_I10_A_I21; sin capítulo/pasaje I,10 registrado ni prueba de exposición al jugador",
+      "semantic_identity_decision": "Conservar DQ.Q.000316 de forma condicionada: permanece el núcleo juramento previo/yelmo de Mambrino; se abandona expresamente el objetivo Sacripante/precedente I,10. R09 debe comprobar progreso, historial, métricas y colisiones de identidad antes de publicación.",
+      "narrative_gate": "Tras narrar en I,21 la alusión al juramento; safe_after_episodes por sí solo no verifica el beat ni libera publicación.",
+      "visual_gate": "SIN_IMAGEN editorial: omitir pre_image_media_id; DQ.MA.900025 no rehabilitada."
+    },
+    {
+      "question_id": "DQ.Q.000318",
+      "recommendation": "ORDERING_ELEGIDO_R14_CC_CONDICIONADA_SIN_GO",
+      "candidate": {
+        "id": "DQ.Q.000318",
+        "contract_version": "1.0.0",
+        "episode_id": "DQ.P1.C21.E01",
+        "chapter_ids": [
+          "DQ.P1.C21"
+        ],
+        "passage_ids": [
+          "DQ.P1.C21.P0001",
+          "DQ.P1.C21.P0003",
+          "DQ.P1.C21.P0006"
+        ],
+        "prompt": "Después de conocer la aventura del supuesto yelmo, ordena los hechos tal como suceden en I,21.",
+        "interaction": {
+          "type": "ordering",
+          "options": [
+            {
+              "id": "DQ.Q.000318.O01",
+              "label": "Comienza a llover; Sancho propone entrar en los batanes y don Quijote se niega"
+            },
+            {
+              "id": "DQ.Q.000318.O02",
+              "label": "Don Quijote divisa a un hombre con una cosa reluciente en la cabeza"
+            },
+            {
+              "id": "DQ.Q.000318.O03",
+              "label": "Don Quijote arremete; el barbero cae del asno y huye, dejando la bacía"
+            },
+            {
+              "id": "DQ.Q.000318.O04",
+              "label": "Por mandato de don Quijote, Sancho recoge la bacía del suelo"
+            }
+          ],
+          "correct_order": [
+            "DQ.Q.000318.O01",
+            "DQ.Q.000318.O02",
+            "DQ.Q.000318.O03",
+            "DQ.Q.000318.O04"
+          ],
+          "shuffle_options": false
+        },
+        "rationale": "El narrador cuenta primero la lluvia y el rechazo de entrar en los batanes; luego el avistamiento. Don Quijote acomete al barbero, que se deja caer del asno, huye y abandona la bacía; por mandato de don Quijote, Sancho la alza. Sancho, no don Quijote, es quien la recoge.",
+        "evidence": [
+          {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C21.P0001",
+            "quote": "En esto, comenzó a llover un poco, y quisiera Sancho que se entraran en el\nmolino de los batanes; mas habíales cobrado tal aborrecimiento don Quijote,\npor la pesada burla, que en ninguna manera quiso entrar dentro; y así,\ntorciendo el camino a la derecha mano, dieron en otro como el que habían\nllevado el día de antes."
+          },
+          {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C21.P0003",
+            "quote": "De allí a poco, descubrió don Quijote un hombre a caballo, que traía en la\ncabeza una cosa que relumbraba como si fuera de oro, y aún él apenas le\nhubo visto, cuando se volvió a Sancho y le dijo:"
+          },
+          {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C21.P0006",
+            "quote": "Y cuando él vio que el pobre caballero llegaba cerca, sin\nponerse con él en razones, a todo correr de Rocinante le enristró con el\nlanzón bajo, llevando intención de pasarle de parte a parte;"
+          },
+          {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C21.P0006",
+            "quote": "El barbero, que, tan sin pensarlo ni temerlo, vio venir aquella fantasma\nsobre sí, no tuvo otro remedio, para poder guardarse del golpe de la lanza,\nsi no fue el dejarse caer del asno abajo; y no hubo tocado al suelo, cuando\nse levantó más ligero que un gamo y comenzó a correr por aquel llano, que\nno le alcanzara el viento."
+          },
+          {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C21.P0006",
+            "quote": "Dejóse la bacía en el suelo, con la cual se\ncontentó don Quijote, y dijo que el pagano había andado discreto y que\nhabía imitado al castor, el cual, viéndose acosado de los cazadores, se\ntaraza y arpa con los dientes aquéllo por lo que él, por distinto natural,\nsabe que es perseguido. Mandó a Sancho que alzase el yelmo, el cual,\ntomándola en las manos, dijo:"
+          }
+        ],
+        "certainty": "TEXTO_EXPLICITO",
+        "cognitive_type": "secuencia",
+        "difficulty": 2,
+        "spoiler_policy": {
+          "safe_after_episodes": [
+            "DQ.P1.C21.E01"
+          ]
+        },
+        "visual_requirements": {
+          "pre_image_must_not_reveal": true
+        },
+        "language": "es",
+        "tags": [
+          "banco",
+          "mambrino"
+        ],
+        "review": {
+          "state": "borrador",
+          "reviewer_role": null,
+          "date": null
+        },
+        "semantic_key": "mambrino orden lluvia avistamiento acometida huida sancho recoge"
+      },
+      "qa_status": "BLOQUEADA_R09_ORDEN_INICIAL_NO_RESUELTO_Y_R12_TECLADO_FOCO_ANTISPOILER",
+      "alternative_mcq_not_selected": {
+        "id": "DQ.Q.000318",
+        "contract_version": "1.0.0",
+        "episode_id": "DQ.P1.C21.E01",
+        "chapter_ids": [
+          "DQ.P1.C21"
+        ],
+        "passage_ids": [
+          "DQ.P1.C21.P0001",
+          "DQ.P1.C21.P0003",
+          "DQ.P1.C21.P0006"
+        ],
+        "prompt": "¿Cuál es el orden correcto de estos hechos de la aventura del supuesto yelmo en I,21?",
+        "interaction": {
+          "type": "single_choice",
+          "options": [
+            {
+              "id": "DQ.Q.000318.O01",
+              "label": "Lluvia y rechazo de los batanes → avistamiento → arremetida y huida del barbero → Sancho recoge la bacía por orden de su amo"
+            },
+            {
+              "id": "DQ.Q.000318.O02",
+              "label": "Avistamiento → Sancho recoge la bacía → comienza a llover → arremetida del caballero"
+            },
+            {
+              "id": "DQ.Q.000318.O03",
+              "label": "Lluvia y rechazo de los batanes → huida del barbero → avistamiento → recogida de la bacía por Sancho"
+            },
+            {
+              "id": "DQ.Q.000318.O04",
+              "label": "Lluvia y rechazo de los batanes → avistamiento → Sancho recoge la bacía → arremetida y huida del barbero"
+            }
+          ],
+          "correct_option_ids": [
+            "DQ.Q.000318.O01"
+          ],
+          "shuffle_options": true
+        },
+        "rationale": "El narrador cuenta primero la lluvia y el rechazo de entrar en los batanes; luego el avistamiento. Don Quijote acomete al barbero, que se deja caer del asno, huye y abandona la bacía; por mandato de don Quijote, Sancho la alza. Sancho, no don Quijote, es quien la recoge.",
+        "evidence": [
+          {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C21.P0001",
+            "quote": "En esto, comenzó a llover un poco, y quisiera Sancho que se entraran en el\nmolino de los batanes; mas habíales cobrado tal aborrecimiento don Quijote,\npor la pesada burla, que en ninguna manera quiso entrar dentro; y así,\ntorciendo el camino a la derecha mano, dieron en otro como el que habían\nllevado el día de antes."
+          },
+          {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C21.P0003",
+            "quote": "De allí a poco, descubrió don Quijote un hombre a caballo, que traía en la\ncabeza una cosa que relumbraba como si fuera de oro, y aún él apenas le\nhubo visto, cuando se volvió a Sancho y le dijo:"
+          },
+          {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C21.P0006",
+            "quote": "Y cuando él vio que el pobre caballero llegaba cerca, sin\nponerse con él en razones, a todo correr de Rocinante le enristró con el\nlanzón bajo, llevando intención de pasarle de parte a parte;"
+          },
+          {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C21.P0006",
+            "quote": "El barbero, que, tan sin pensarlo ni temerlo, vio venir aquella fantasma\nsobre sí, no tuvo otro remedio, para poder guardarse del golpe de la lanza,\nsi no fue el dejarse caer del asno abajo; y no hubo tocado al suelo, cuando\nse levantó más ligero que un gamo y comenzó a correr por aquel llano, que\nno le alcanzara el viento."
+          },
+          {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C21.P0006",
+            "quote": "Dejóse la bacía en el suelo, con la cual se\ncontentó don Quijote, y dijo que el pagano había andado discreto y que\nhabía imitado al castor, el cual, viéndose acosado de los cazadores, se\ntaraza y arpa con los dientes aquéllo por lo que él, por distinto natural,\nsabe que es perseguido. Mandó a Sancho que alzase el yelmo, el cual,\ntomándola en las manos, dijo:"
+          }
+        ],
+        "certainty": "TEXTO_EXPLICITO",
+        "cognitive_type": "secuencia",
+        "difficulty": 2,
+        "spoiler_policy": {
+          "safe_after_episodes": [
+            "DQ.P1.C21.E01"
+          ]
+        },
+        "visual_requirements": {
+          "pre_image_must_not_reveal": true
+        },
+        "language": "es",
+        "tags": [
+          "banco",
+          "mambrino"
+        ],
+        "review": {
+          "state": "borrador",
+          "reviewer_role": null,
+          "date": null
+        },
+        "semantic_key": "mambrino mcq secuencia lluvia avistamiento huida sancho recoge"
+      },
+      "format_decision": "R14 autoriza ordering (encargo maestro §2.2). MCQ es alternativa documental NO SELECCIONADA; no hay decisión MCQ-only pendiente.",
+      "technical_blocker": "R09 debe demostrar orden inicial de presentación DESORDENADO aunque interaction.options esté en el mismo orden que correct_order y shuffle_options=false por contrato; no modificar correct_order ni esquema. Sin esa capacidad: publicación SIN GO. R12 debe probar teclado, foco, anunciación y movimiento accesible, ausencia de spoiler.",
+      "editorial_decision": "R01/R02 CC condicionada: Sancho recoge la bacía por mandato de don Quijote; P0006 candidato no registrado; sin pre DQ.MA.900036; presentar solo tras narrarse secuencia completa."
+    }
+  ],
+  "coordination_decision": "R14 2026-11-07: Q315 CC condicionada; Q316 variante B I,21 principal; Q318 ordering elegido. Ningún GO productivo ni fusión sin autorización.",
+  "editorial_review_reference": "https://github.com/JavierRB35/El_Quijote_App/pull/49#issuecomment-6704708899"
+}

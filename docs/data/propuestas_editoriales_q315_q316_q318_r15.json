@@ -1,6 +1,6 @@
 {
   "artifact_kind": "PROPUESTA_EDITORIAL_NO_PRODUCTIVA",
-  "status": "SIN_GO_REQUIERE_R01_R02_R12_R09",
+  "status": "RECTIFICACION_DOCUMENTAL_R15_3_CC_CONDICIONADAS_SIN_GO",
   "basis": "JavierRB35/El_Quijote_App main (consulta 2026-11-07); PG #2000, DQ.ED.0003; lector DQ.ED.0001",
   "no_implementation": true,
   "source_excerpt_validation": "Citas reproducidas literalmente de content/textos/gutenberg_2000/El_Quijote.txt; comprobación programática de subcadenas exactas con saltos de línea normalizados.",
@@ -95,12 +95,78 @@
         },
         "semantic_key": "mambrino bacia barbero lluvia sombrero motivo"
       },
-      "qa_status": "BLOQUEADA_A11"
+      "qa_status": "BLOQUEADA_A11",
+      "editorial_decision": "R01/R02: CC CONDICIONADA; conservar ID, narrador y candidato P0005 sin alta; sin pre ni post literal DQ.MA.900036; solo preguntar después de narrar lluvia, bacía y motivo del sombrero; R09/R12 pendientes."
     },
     {
       "question_id": "DQ.Q.000316",
-      "recommendation": "RETROSPECTIVA_CONDICIONADA_A_CREAR_CAPITULO_I10_Y_PASAJE",
+      "recommendation": "VARIANTE_B_I21_PRINCIPAL_CC_CONDICIONADA_SIN_GO",
       "candidate": {
+        "id": "DQ.Q.000316",
+        "contract_version": "1.0.0",
+        "episode_id": "DQ.P1.C21.E01",
+        "chapter_ids": [
+          "DQ.P1.C21"
+        ],
+        "passage_ids": [
+          "DQ.P1.C21.P0003"
+        ],
+        "prompt": "Al divisar lo que cree el yelmo de Mambrino en I,21, ¿qué recuerda don Quijote haber hecho anteriormente?",
+        "interaction": {
+          "type": "single_choice",
+          "options": [
+            {
+              "id": "DQ.Q.000316.O01",
+              "label": "Haber hecho un juramento relacionado con ese yelmo"
+            },
+            {
+              "id": "DQ.Q.000316.O02",
+              "label": "Haber recibido ese yelmo como regalo de Sancho"
+            },
+            {
+              "id": "DQ.Q.000316.O03",
+              "label": "Haber pactado con el barbero su entrega sin combate"
+            }
+          ],
+          "correct_option_ids": [
+            "DQ.Q.000316.O01"
+          ],
+          "shuffle_options": true
+        },
+        "rationale": "Don Quijote señala al hombre que se aproxima y dice de su supuesto yelmo de Mambrino «sobre que yo hice el juramento que sabes». Esta formulación se limita a lo efectivamente enunciado en I,21: no atribuye a ese capítulo la referencia a Sacripante de I,10.",
+        "evidence": [
+          {
+            "kind": "cita_literal",
+            "passage_id": "DQ.P1.C21.P0003",
+            "quote": "Digo esto porque, si no me engaño,\nhacia nosotros viene uno que trae en su cabeza puesto el yelmo de Mambrino,\nsobre que yo hice el juramento que sabes."
+          }
+        ],
+        "certainty": "TEXTO_EXPLICITO",
+        "cognitive_type": "hecho",
+        "difficulty": 1,
+        "spoiler_policy": {
+          "safe_after_episodes": [
+            "DQ.P1.C21.E01"
+          ]
+        },
+        "visual_requirements": {
+          "pre_image_must_not_reveal": true
+        },
+        "language": "es",
+        "tags": [
+          "banco",
+          "mambrino"
+        ],
+        "review": {
+          "state": "borrador",
+          "reviewer_role": null,
+          "date": null
+        },
+        "semantic_key": "mambrino i21 alusion juramento previo sin sacripante"
+      },
+      "alternative_retire": "Retirar temporalmente DQ.Q.000316 del piloto si no pueden satisfacerse los requisitos de identidad, cronología, R09/R12 de la variante B seleccionada; mantener candidatura retrospectiva I,10 solo para fase futura.",
+      "qa_status": "BLOQUEADA_A12_PENDIENTE_R09_IDENTIDAD_PROGRESO_Y_R12_ANTISPOILER",
+      "alternative_retrospective_future": {
         "id": "DQ.Q.000316",
         "contract_version": "1.0.0",
         "episode_id": "DQ.P1.C21.E01",
@@ -170,75 +236,14 @@
         },
         "semantic_key": "mambrino sacripante referencia i10 retomada i21"
       },
-      "alternative_current_pilot": {
-        "id": "DQ.Q.000316",
-        "contract_version": "1.0.0",
-        "episode_id": "DQ.P1.C21.E01",
-        "chapter_ids": [
-          "DQ.P1.C21"
-        ],
-        "passage_ids": [
-          "DQ.P1.C21.P0003"
-        ],
-        "prompt": "Al divisar lo que cree el yelmo de Mambrino en I,21, ¿qué recuerda don Quijote haber hecho anteriormente?",
-        "interaction": {
-          "type": "single_choice",
-          "options": [
-            {
-              "id": "DQ.Q.000316.O01",
-              "label": "Haber hecho un juramento relacionado con ese yelmo"
-            },
-            {
-              "id": "DQ.Q.000316.O02",
-              "label": "Haber recibido ese yelmo como regalo de Sancho"
-            },
-            {
-              "id": "DQ.Q.000316.O03",
-              "label": "Haber pactado con el barbero su entrega sin combate"
-            }
-          ],
-          "correct_option_ids": [
-            "DQ.Q.000316.O01"
-          ],
-          "shuffle_options": true
-        },
-        "rationale": "Don Quijote señala al hombre que se aproxima y dice de su supuesto yelmo de Mambrino «sobre que yo hice el juramento que sabes». Esta formulación se limita a lo efectivamente enunciado en I,21: no atribuye a ese capítulo la referencia a Sacripante de I,10.",
-        "evidence": [
-          {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P1.C21.P0003",
-            "quote": "Digo esto porque, si no me engaño,\nhacia nosotros viene uno que trae en su cabeza puesto el yelmo de Mambrino,\nsobre que yo hice el juramento que sabes."
-          }
-        ],
-        "certainty": "TEXTO_EXPLICITO",
-        "cognitive_type": "hecho",
-        "difficulty": 1,
-        "spoiler_policy": {
-          "safe_after_episodes": [
-            "DQ.P1.C21.E01"
-          ]
-        },
-        "visual_requirements": {
-          "pre_image_must_not_reveal": true
-        },
-        "language": "es",
-        "tags": [
-          "banco",
-          "mambrino"
-        ],
-        "review": {
-          "state": "borrador",
-          "reviewer_role": null,
-          "date": null
-        },
-        "semantic_key": "mambrino i21 alusion juramento previo"
-      },
-      "alternative_retire": "RETIRAR si no se incorpora I,10 ni R01/R02 aprueba el reemplazo local; no reutilizar atribución a Sacripante en I,21",
-      "qa_status": "BLOQUEADA_A12"
+      "future_variant_status": "FUTURA_NO_SELECCIONADA_I10_A_I21; sin capítulo/pasaje I,10 registrado ni prueba de exposición al jugador",
+      "semantic_identity_decision": "Conservar DQ.Q.000316 de forma condicionada: permanece el núcleo juramento previo/yelmo de Mambrino; se abandona expresamente el objetivo Sacripante/precedente I,10. R09 debe comprobar progreso, historial, métricas y colisiones de identidad antes de publicación.",
+      "narrative_gate": "Tras narrar en I,21 la alusión al juramento; safe_after_episodes por sí solo no verifica el beat ni libera publicación.",
+      "visual_gate": "SIN_IMAGEN editorial: omitir pre_image_media_id; DQ.MA.900025 no rehabilitada."
     },
     {
       "question_id": "DQ.Q.000318",
-      "recommendation": "MANTENER_ORDERING_SI_R14_CONFIRMA_ALCANCE_GENERAL",
+      "recommendation": "ORDERING_ELEGIDO_R14_CC_CONDICIONADA_SIN_GO",
       "candidate": {
         "id": "DQ.Q.000318",
         "contract_version": "1.0.0",
@@ -331,7 +336,8 @@
         },
         "semantic_key": "mambrino orden lluvia avistamiento acometida huida sancho recoge"
       },
-      "mcq_fallback_if_pilot_only_mcq": {
+      "qa_status": "BLOQUEADA_R09_ORDEN_INICIAL_NO_RESUELTO_Y_R12_TECLADO_FOCO_ANTISPOILER",
+      "alternative_mcq_not_selected": {
         "id": "DQ.Q.000318",
         "contract_version": "1.0.0",
         "episode_id": "DQ.P1.C21.E01",
@@ -420,7 +426,11 @@
         },
         "semantic_key": "mambrino mcq secuencia lluvia avistamiento huida sancho recoge"
       },
-      "qa_status": "PENDIENTE_R01_R02_Y_R09"
+      "format_decision": "R14 autoriza ordering (encargo maestro §2.2). MCQ es alternativa documental NO SELECCIONADA; no hay decisión MCQ-only pendiente.",
+      "technical_blocker": "R09 debe demostrar orden inicial de presentación DESORDENADO aunque interaction.options esté en el mismo orden que correct_order y shuffle_options=false por contrato; no modificar correct_order ni esquema. Sin esa capacidad: publicación SIN GO. R12 debe probar teclado, foco, anunciación y movimiento accesible, ausencia de spoiler.",
+      "editorial_decision": "R01/R02 CC condicionada: Sancho recoge la bacía por mandato de don Quijote; P0006 candidato no registrado; sin pre DQ.MA.900036; presentar solo tras narrarse secuencia completa."
     }
-  ]
+  ],
+  "coordination_decision": "R14 2026-11-07: Q315 CC condicionada; Q316 variante B I,21 principal; Q318 ordering elegido. Ningún GO productivo ni fusión sin autorización.",
+  "editorial_review_reference": "https://github.com/JavierRB35/El_Quijote_App/pull/49#issuecomment-6704708899"
 }

@@ -14,20 +14,20 @@ Fuente: `docs/data/propuesta_correcciones_visuales_pre_r15.csv` (13 `RETIRAR_PRE
 
 | # | Pregunta | Episodio | Pre-imagen actual | Condición temporal (safe_after) | Propuesta PR #30 | Visados |
 |---|---|---|---|---|---|---|
-| A-01 | Q.217 | DQ.P1.C18.E01 | `DQ.MA.900008` | C18.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-02 | Q.232 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-03 | Q.233 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-04 | Q.234 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-05 | Q.235 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-06 | Q.236 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-07 | Q.237 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-08 | Q.238 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-09 | Q.313 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-10 | Q.314 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-11 | Q.315 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-FAIL_CTX · ☐ R01/R02 · ☐ R09 |
-| A-12 | Q.316 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | **mantener condicional** | ☑ R06-PEND (cronología intrapregunta) · **R05-PEND** · ☑ R12-PEND · ☐ R01/R02 · ☐ R09 |
-| A-13 | Q.317 | DQ.P1.C21.E01 | `DQ.MA.900037` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-14 | Q.318 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
+| A-01 | Q.217 | DQ.P1.C18.E01 | `DQ.MA.900008` | C18.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-02 | Q.232 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-03 | Q.233 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-04 | Q.234 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-05 | Q.235 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-06 | Q.236 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-07 | Q.237 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-08 | Q.238 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-09 | Q.313 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-10 | Q.314 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-11 | Q.315 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-FAIL_CTX · ☑ R01/R02-NC (§D4) · ☐ R09 |
+| A-12 | Q.316 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | **mantener condicional** | ☑ R06-PEND (cronología intrapregunta) · **R05-PEND** · ☑ R12-PEND · ☑ R01/R02-NC (§D4) · ☐ R09 |
+| A-13 | Q.317 | DQ.P1.C21.E01 | `DQ.MA.900037` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-14 | Q.318 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
 
 Nota técnica para el visado (R09/R12): la pre-imagen actual de todas ellas es una recreación `pre_pregunta` con `spoiler_level: ninguno` en el dato; la propuesta de PR #30 obedece a riesgos contextuales específicos (no al spoiler_level del catálogo). Retirar la pre en una pregunta no modifica su registro salvo en `visual_requirements.pre_image_media_id` (baja opcional del campo), y el gating temporal ya declarado sigue aplicando.
 
@@ -37,17 +37,17 @@ Fuente: `docs/ADENDA_R12_TRATAMIENTO_ACUARELAS_021_025.md` + `INFORME_QA_PATRIMO
 
 | # | Vínculo | Destino/fase | Condición a visar | R05 | R06 | R12 | R01/R02 | R09 |
 |---|---|---|---|---|---|---|---|---|
-| B-01 | `R05C-000005` (021) | cuaderno · consulta | Rotulado «alegoría de expurgo» | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-02 | `R05C-000006` (021) | descubrimientos · discovery | Idem + sin uso como prueba del hecho | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-03 | `R05C-000007` (021) | lector · after | Idem, tras el desenlace | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-04 | `R05C-000008` (021) | lector · lectura contextual | Idem, anclada a su pasaje | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-05 | `R05C-000009` (021) | museo · after | Idem, ficha con atribución Tusell/Doré | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-06 | `R05C-000010` (021) | museo · consulta | Idem | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-07 | `R05C-000011` (021) | preguntas → discovery | Idem + `safe_after` del episodio | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-08 | `R05C-000505` (025) | cuaderno · consulta | Rotulado «apoyo ilustrado no literal» | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-09 | `R05C-000506` (025) | descubrimientos · discovery | Idem | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-10 | `R05C-000507` (025) | lector · lectura contextual | Idem (no recreación de la hoguera) | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-11 | `R05C-000508` (025) | museo · consulta | Idem, con atribución Tusell/Doré 1905 | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
+| B-01 | `R05C-000005` (021) | cuaderno · consulta | Rotulado «alegoría de expurgo» | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-02 | `R05C-000006` (021) | descubrimientos · discovery | Idem + sin uso como prueba del hecho | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-03 | `R05C-000007` (021) | lector · after | Idem, tras el desenlace | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-04 | `R05C-000008` (021) | lector · lectura contextual | Idem, anclada a su pasaje | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-05 | `R05C-000009` (021) | museo · after | Idem, ficha con atribución Tusell/Doré | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-06 | `R05C-000010` (021) | museo · consulta | Idem | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-07 | `R05C-000011` (021) | preguntas → discovery | Idem + `safe_after` del episodio | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-08 | `R05C-000505` (025) | cuaderno · consulta | Rotulado «apoyo ilustrado no literal» | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-09 | `R05C-000506` (025) | descubrimientos · discovery | Idem | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-10 | `R05C-000507` (025) | lector · lectura contextual | Idem (no recreación de la hoguera) | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-11 | `R05C-000508` (025) | museo · consulta | Idem, con atribución Tusell/Doré 1905 | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
 
 ## C. El fallo contextual de `900157` (I,6)
 
@@ -55,7 +55,7 @@ Fuente: `INFORME_QA_PATRIMONIO_VISUAL.md` (2.ª auditoría R12) y `PROPUESTAS_ME
 
 | # | Decisión | Evidencia | R05 | R06 | R12 | R01/R02 | R09 |
 |---|---|---|---|---|---|---|---|
-| C-01 | Retirar 900157 del uso completo en I,6 y evaluar rescate por recorte | R12 2.ª auditoría | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
+| C-01 | Retirar 900157 del uso completo en I,6 y evaluar rescate por recorte | R12 2.ª auditoría | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
 
 ## D0. Pronunciamiento verificable R06 sobre A/B/C — 2026-11-06
 
@@ -213,6 +213,8 @@ Fuentes: `content/piloto/media_assets/DQ.MA.900042.json`, `DQ.MA.900036.json`, `
 - ☐ Visado editorial R01/R02 — pendiente (ejecutable en la misma pasada que la contrafirma de ADR-0005, H5)
 - ☐ Comprobación técnica R09 — DESARROLLO la ejecutará **después** de los visados restantes, fila a fila, sobre las decisiones conjuntamente aprobadas
 
+> **Estado vigente tras dictamen R14 (2026-11-07, PR #47; pendiente de fusión):** **R01/R02 26/26 emitidos y aceptados documentalmente: 24 CC condicionadas y 2 NC (A-11/A-12)**, registrados en las celdas propias A/B/C y fundamentados en §D4. **R12 emitido** en §D3 (24 PASS_CTX, 1 FAIL_CTX, 1 PEND), sin alterar sus dictámenes; R05/R06 conservan los propios. **Contrafirma editorial integral ADR-0005/H5 PENDIENTE** hasta resolver `visual_asset_ids` conjuntamente con R09/R11 y responsables. **Comprobación técnica R09 e integración productiva SIN GO; RUNTIME SIN GO**. El bloque de estados previo se conserva arriba como **histórico** y no expresa el estado vigente de R01/R02/R12.
+
 ---
 
 ## D3. Visado independiente R12 — 26 decisiones P0 (2026-11-06)
@@ -262,3 +264,87 @@ Fuentes: `content/piloto/media_assets/DQ.MA.900042.json`, `DQ.MA.900036.json`, `
 - **Histórico y competencias**: R06-NC de A-05/A-11/A-13/A-14 se preservan íntegros; su rectificación es exclusiva de R06 (PR #44). No se cambian visados R05/R06/R01/R02/R09, las matrices congeladas, la vista de conciliación, preguntas, fichas, interfaces ni activos.
 
 **Bloqueos expresos:** A-11 destino post literal incongruente con huida del barbero, sujeto a R01; A-12 cronología intrapregunta; C-01 continuidad/recorte; Q.112 geometría/teclado/gating; todos los casos TS-001 y validación cruzada. **No generar imágenes nuevas.**
+---
+
+## D4. Visado editorial R01/R02 — 26 decisiones y contrafirma H5 (2026-11-07)
+
+**Alcance y autoría:** pronunciamiento documental desde las funciones R01 (dirección editorial) y R02 (filología/documentación textual), ejercidas por un **agente de IA**; no se hace pasar por revisión humana presencial ni sustituye la decisión final de R14. Rama editorial independiente nacida de `main`. **No se alteran ni se refrendan por representación** las firmas/estados de R05, R06, R12 o R09, las evidencias R12, las matrices CSV, los JSON de pregunta y MediaAsset, las imágenes ni el runtime. La sección D4 fundamenta los **26 visados R01/R02 consignados en sus celdas propias** de A/B/C; los estados y evidencias de R05/R06/R12 y las comprobaciones R09 permanecen intactos.
+
+**Convención:** `R01/R02-CC` = conforme con el *uso editorial y el momento* expresamente acotados, **no** aprobación productiva ni corrección automática de fallos del catálogo; `R01/R02-NC` = no conforme con la alternativa examinada, y se documenta salida segura. En todos los `CC`, el momento de `post_answer`, `reveal` o `discovery` significa **respuesta emitida + hecho ya narrado**; el mero paso de respuesta o `safe_after_episodes` no basta. Ante ausencia de beat confirmado, usar `SIN_IMAGEN` sin anticipar desenlaces. **Balance: 24 CC condicionadas y 2 NC (A-11, A-12); 0 GO runtime.** Esta cifra no debe sumarse a los visados de otras especialidades.
+
+### D4.1. Fila a fila — sección A, 14 propuestas antiespoiler
+
+| Fila | R01/R02 | Pronunciamiento narrativo, puerta de aparición y condición |
+|---|---|---|
+| **A-01 / Q.217** | **CC** | I,18: la imagen de rebaños resuelve la causa de la polvareda. **Retirar pre**; `DQ.MA.900008` solo en `reveal` tras contestar y explicar que son ovejas/carneros. |
+| **A-02 / Q.232** | **CC** | II,74: la despedida anticipa la muerte; **retirar pre** `900011`. En `discovery` después del fallecimiento y desenlace completo, no tras una simple alusión a la enfermedad. |
+| **A-03 / Q.233** | **CC** | II,74: no revelar visualmente la identidad recuperada antes de que Alonso Quijano se nombre. **Retirar pre** `900011`; por su contenido de despedida, mostrar como `discovery` tras el cierre, no inmediatamente tras la respuesta nominal. |
+| **A-04 / Q.234** | **CC** | II,74: el veredicto del cura se pronuncia **tras la confesión, antes del testamento y de la muerte**. Retirar `900011` de `pre`. La escena terminal solo puede aparecer cuando el desenlace pertinente se ha narrado; **no** autorizar post_answer inmediato tras el veredicto. Si el motor no puede aplazarlo, no mostrarla. |
+| **A-05 / Q.235** | **CC** | II,74: `DQ.MA.900042` corresponde al **testamento** (URI/identidad canónica de §D2), no a Sansón II,3. Retirar pre. En `post_answer` solo **después de la convocatoria, confesión y testamento efectivamente narrados**; identidades de figuras y reserva TS-001 siguen en R06/R12. |
+| **A-06 / Q.236** | **CC** | II,74: la autoría del epitafio se acredita **por texto** y pertenece al epílogo posterior a la muerte. Retirar la imagen de testamento como pre; `373.jpg` exclusivamente `discovery` alegórico y rotulado **tras epitafio/cierre**, no evidencia de quién lo escribió. |
+| **A-07 / Q.237** | **CC** | II,74: la paradoja del epitafio no debe anticiparse con una imagen de testamento ni acreditarse con la acuarela 373. Retirar pre; `373.jpg` en descubrimiento posterior a lectura/explicación del epitafio y cierre. |
+| **A-08 / Q.238** | **CC** | II,74: la advertencia metanarrativa contra resucitar al personaje/continuarlo pertenece al final. Retirar despedida `900011` pre; `373.jpg` alegórica solo **tras narrar la advertencia final**, nunca como prueba literal. |
+| **A-09 / Q.313** | **CC** | I,21: la pregunta de los batanes precede al avistamiento del barbero. Retirar `900025` pre; su posible aparición `post_answer` debe diferirse **hasta narrar el primer avistamiento**, aunque la pregunta ya esté respondida. No activar inmediatamente después de la respuesta. |
+| **A-10 / Q.314** | **CC** | I,21: pregunta por el **contraste entre lo visto por don Quijote y Sancho**; `900025` revela la bacía real. Retirar pre; `post_answer` después de elegir opciones **y** de que se expliquen ambas percepciones; la imagen no reemplaza el texto. |
+| **A-11 / Q.315** | **NC** | **Retirar pre: SÍ. Destino `900036` como `post_answer` literal: NO.** El texto de I,21 presenta al barbero **con bacía sobre su propia cabeza**; al verse embestido, **cae del asno, huye y deja la bacía**; después Sancho la levanta por orden de don Quijote. La imagen realmente asociada a `DQ.MA.900036` (`DQ.MED.900237`) muestra, según apertura directa R12 D3, un **cara a cara con don Quijote examinando la bacía que sostiene el barbero**, situación no narrada ni justificada por un momento posterior de I,21. Ni el cambio de fase ni una etiqueta `RECREACION_IA` legitiman hacer pasar ese encuentro por hecho cervantino. **Descartar este asset para ese uso**; explicar verbalmente lluvia/sombrero y, si se propone alternativa fiel, abrir revisión R06/R12/R09 separada. No borrar el archivo ni revocar los dictámenes R06-CC/R12-FAIL_CTX ya emitidos. |
+| **A-12 / Q.316** | **NC** | **No mantener la pre `900025` en el registro actual.** El antecedente del **yelmo de Mambrino que costó a Sacripante** se menciona en **I,10**, al prometer sustituir la celada rota, **no** como justificación pronunciada ante el barbero en I,21. El JSON `DQ.Q.000316` declara `DQ.P1.C21.P0004` pero su evidencia transcribe el diálogo de **I,10** y se corta antes de la frase clave. Son defectos de **atribución, pasaje y formulación temporal**, además de faltar un beat verificado que garantice que el encuentro y la bacía ya se conocen antes del foco de pregunta. **Salida segura: SIN_IMAGEN + inmovilizar publicación de Q.316** hasta reanclar evidencia a I,10, reformular el enunciado o documentar explícitamente el recuerdo intercapitular, y revalidar con R15/R09. No basta afirmar `safe_after` de I,21. |
+| **A-13 / Q.317** | **CC** | I,21: Sancho describe un hombre/asno/objeto reluciente, no reconoce un yelmo de oro. Retirar `900037` pre; solo `reveal` después de la respuesta «Falso» **y** de la huida, recogida y examen de la bacía. `DQ.MA.900037` es examen posterior de I,21 por URI (no manuscrito de Toledo); no mostrarlo como creencia inicial de Sancho. |
+| **A-14 / Q.318** | **CC, con incidencia P0 de contenido** | I,21: retirar `900036` pre. `900037` puede servir como **epílogo** en `post_answer` tras completar los cuatro lances y **narrar huida/recogida**, no como representación de todos. **Corregir antes de publicar** la opción `DQ.Q.000318.O04`: el JSON dice «don Quijote la recoge», pero en el texto **Sancho recoge la bacía por mandato de don Quijote**. Las citas actuales del JSON no cubren íntegramente el orden. Este CC solo avala la secuencia visual condicionada, **no** la redacción de Q.318 ni el runtime. |
+
+### D4.2. Fila a fila — sección B, once vínculos 021/025
+
+| Fila | R01/R02 | Anclaje filológico y aparición autorizable |
+|---|---|---|
+| **B-01 / 021 / cuaderno** | **CC** | Consulta relativa al escrutinio **I,6** tras conocer su naturaleza; rótulo obligatorio **«alegoría de expurgo»**, nunca escena literal de personajes. |
+| **B-02 / 021 / descubrimientos** | **CC** | `discovery` tras explicar el escrutinio y su selección/discusión de libros **I,6**; interpretación simbólica atribuida, sin afirmar gesto físico documentado. |
+| **B-03 / 021 / lector after** | **CC** | `after` del tramo del escrutinio **I,6**, después de narrar el juicio de los libros; texto literario íntegro fuera del área ilustrada. |
+| **B-04 / 021 / lector contextual** | **CC** | Anclar en **I,6** al pasaje donde cura y barbero **examinan los libros uno a uno** y resuelven su suerte, no a un supuesto gigante del texto; abrirlo como alegoría **después** del pasaje, no como prueba de un acto visual. Localizador estable exacto pendiente R02/dato; no inventarlo. |
+| **B-05 / 021 / museo after** | **CC** | Ficha de **iconografía alegórica del escrutinio I,6** con atribución explícita; aparición automática solo tras contexto. **La consulta voluntaria del museo sigue abierta desde el inicio**, con aviso de contexto si conviene. |
+| **B-06 / 021 / museo consulta** | **CC** | Consulta libre; diferenciar la sátira/representación alegórica de los actos del cura y el barbero. Procedencia/derechos R13 no sustituidos. |
+| **B-07 / 021 / pregunta→discovery** | **CC** | Después de responder la pregunta de I,6 **y** de explicar el escrutinio, nunca en `pre` ni para deducir el título/veredicto de un libro. |
+| **B-08 / 025 / cuaderno** | **CC** | **Origen textual I,7:** la narración informa de la **quema nocturna** que ejecuta el ama; la imagen observada R12 muestra un **interior**, no el corral: «apoyo ilustrado no literal». |
+| **B-09 / 025 / descubrimientos** | **CC** | `discovery` **tras** el pasaje «Aquella noche quemó y abrasó el ama...», en **I,7**, con aviso de libertad compositiva. No anticipar ese desenlace en I,6. |
+| **B-10 / 025 / lector contextual** | **CC** | **Anclaje correcto I,7**, tras la mención de la quema, no en I,6. **No** validar `after` inmediato de I,6 ni presentarla como imagen literal de hoguera en corral. Cualquier montaje anticipatorio requiere revisión aparte R01/R06. |
+| **B-11 / 025 / museo consulta** | **CC** | Consulta libre vinculada **a I,7** como representación posterior/no literal; sin afirmar hogar real, corral representado, nocturnidad visual ni soledad del ama. La ficha debe conservar atribución y procedencia sujetas a R13. |
+
+**Distinción canónica:** **I,6** incluye el escrutinio y la propuesta de arrojar libros al patio/corral; el **acto de quemarlos** se cuenta retrospectivamente **al inicio de I,7** («Aquella noche...»). No trasladar a I,6 la consumación del fuego, aunque la propuesta del fuego ya aparezca allí. Los museos abiertos no se convierten en recursos bloqueados por progreso; las restricciones se aplican a su **presentación dramática automática** y a las advertencias de spoilers.
+
+### D4.3. Sección C — uso completo de 900157
+
+| Fila | R01/R02 | Pronunciamiento |
+|---|---|---|
+| **C-01 / I,6 / 900157** | **CC de retirada, NO de recorte** | Durante el escrutinio de **I,6**, don Quijote **duerme** y Sancho no participa en la reunión de cura, barbero, ama y sobrina. El plano `DQ.MED.900157`, con don Quijote armado y Sancho como observadores, no puede emplearse **entero** como representación literal de ese episodio. Retirarlo de ese destino sin borrar archivo. `900013` y `900230` son alternativas **separadas** pertinentes para I,6, pero R12 D3 documenta discontinuidad de facciones/edad/atuendo al montarlas juntas: **no visadas en secuencia continua**. Un recorte izquierdo de `900157` es hipótesis artística **sin ensayo ni aprobación**; no se autoriza derivado, recorte ni cambio del original. |
+
+### D4.4. Incidencias filológicas P0 de la documentación de preguntas
+
+1. **Q.316:** discordancia entre `passage_id=DQ.P1.C21.P0004`, fragmento de evidencia textual **I,10** y enunciado que sitúa la invocación de Sacripante como justificación de la toma efectiva en I,21. No editar la pregunta desde este visado; abrir corrección editorial específica R15/R02 y revalidar fuente/edición/localizador.
+2. **Q.315:** `DQ.P1.C21.P0003` y la cita literal almacenada en su JSON **se interrumpen antes** de la explicación del barbero «por que no se le manchase el sombrero». La respuesta coincide con I,21, pero **la evidencia registrada es insuficiente**: ampliar/reanclar al pasaje exacto antes de aprobarla.
+3. **Q.318:** la opción ordenada O04 atribuye la recogida a don Quijote, pero el texto la encomienda a **Sancho**. Corregir sujeto y completar evidencia de huida y recogida; no asumir que la aprobación de `post_answer` sanea ese error.
+4. **Referencias compartidas:** revisar los registros de I,21 que apuntan a `P0004` como respaldo de hechos posteriores al encuentro; la evidencia que figura en Q.316 apunta en realidad a **I,10**. Los recortes de cita que terminan antes del hecho probado no satisfacen los mínimos de la auditoría textual.
+
+**No se ha aprobado ni reparado ningún JSON aquí.** Estos defectos afectan la **publicabilidad de contenido**, no cambian retroactivamente los visados visuales y no autorizan que R09 modifique el contrato sin acuerdo.
+
+### D4.5. Contrafirma editorial ADR-0005 / H5 (TS-001)
+
+**Dictamen editorial R01/R02: CONFORMIDAD PARCIAL CON SALVEDAD BLOQUEANTE; contrafirma integral PENDIENTE.** Se valida documentalmente la semántica de `Beat` e `Intervención` (ADR-0005, contrato 1.1.0) **solo** bajo estos invariantes vinculantes:
+
+- `texto_visible` íntegro, no ocultable, ligado al hablante, trazado a edición/pasaje y distinguir `CITA_LITERAL`, `ADAPTACION_FIEL`, `NARRACION_ENLACE`. Ninguna voz sin texto; audio facultativo y no bloqueante. Los incisos que en el original son narrador siguen **visibles**; `texto_oral` de personaje no los interpreta como propios, y requiere revisión R02/R07 del desglose.
+- La política de lectura con y sin audio mantiene el **suelo** `max(1500 ms, 800 ms + 35 ms/palabra)`; `lectura_minima_ms` solo lo puede elevar. Pausa, repetición, retroceso y avance manual no pueden perder el acceso al texto.
+- **Salvedad H5:** el requisito de esquema actual `visual_asset_ids` **obligatorio y `minItems:1` en cada beat** no se considera firmado editorialmente. La biblia prescribe escenas con perspectivas, pero admite intervenciones o transiciones con plano persistente, silencio, texto sin activo nuevo y fallback. Forzar un MediaAsset exclusivo/referenciado en todos los beats genera duplicación o obliga a inventar imágenes para narrar. **Propuesta a R09/R11/R10/R06**: permitir `visual_asset_ids: []` o ausente a nivel de beat, con **persistencia del plano de escena/beat anterior**; validar cobertura visual **a nivel de escena** y nunca bloquear texto/audio por error visual. Un cambio de schema requiere coaprobación editorial-técnica y pruebas de consumidor; **no se cambia desde esta rama**.
+- `SILENCIO` sin intervención hablada no contraviene TS-001; `DIALOGO/NARRACION/ACCION` con intervención deberán tener texto cuando haya voz. Exigir integridad de cita antes de considerar publicada cualquier conversión de inventario literario a intervenciones.
+- No se emite **contrafirma humana** ni aceptación conjunta R09; queda pendiente que el equipo técnico tramite la salvedad y R14 documente el acuerdo. Esta firma documental del agente significa **pronunciamiento editorial motivado**, no certificación profesional presencial.
+
+### D4.6. Evidencias, límites y entrega a Coordinación
+
+**Fuentes internas cotejadas:** tabla A/B/C y precedencia D0–D3 de este expediente; `docs/data/propuesta_correcciones_visuales_pre_r15.csv`; las 14 preguntas `content/piloto/questions/DQ.Q.*.json`; fichas `DQ.MA.900025` y `DQ.MA.900036`, identidades canónicas de §D2; `docs/ADENDA_R12_TRATAMIENTO_ACUARELAS_021_025.md`; `docs/ARQUITECTURA_Y_ADR.md` (ADR-0005), `schemas/content/beat.schema.json`, `docs/COMPONENTES_NARRATIVOS_UX.md` y biblia narrativa R01/R02/H5. **No** se declaran nuevas aperturas de WebP/JPG; la observación visual de cara a cara, acuarelas 021/025 y discontinuidad I,6 procede de **R12 D3**, no de inspección ocular independiente.
+
+**Fuentes primarias de contraste textual consultadas (ediciones de consulta, no reemplazan la edición canónica del proyecto):**
+- I,6: https://es.wikisource.org/wiki/El_ingenioso_hidalgo_Don_Quijote_de_la_Mancha_(1905)/Tomo_I/Cap%C3%ADtulo_VI
+- I,7: https://es.wikisource.org/wiki/El_ingenioso_hidalgo_Don_Quijote_de_la_Mancha_(1905)/Tomo_I/Cap%C3%ADtulo_VII
+- I,10: https://es.wikisource.org/wiki/El_ingenioso_hidalgo_Don_Quijote_de_la_Mancha_(1905)/Tomo_I/Cap%C3%ADtulo_X
+- I,21: https://es.wikisource.org/wiki/El_ingenioso_hidalgo_Don_Quijote_de_la_Mancha_(1905)/Tomo_I/Cap%C3%ADtulo_XXI
+- II,74: https://www.cervantesvirtual.com/obra-visor/el-ingenioso-hidalgo-don-quijote-de-la-mancha-de-como-don-quijote-cayo-malo-y-del-testamento-que-hizo-y-su-muerte/html/30f4d320-487c-4eaa-be8d-86103deb270d_2.html
+
+**Límites y pruebas no ejecutadas:** sin lectura del EPUB privado; sin hash binario propio; sin ejecución de validadores locales, UI, audio, teclado, TS-001, zoom o controles antiespoiler; no se afirma autorización jurídica de acuarelas ni conformidad de R13. El cotejo es textual, documental y de lógica narrativa. **Runtime SIN GO** y R09 CI/subsanación técnica independiente: no anticipar resultados.
+
+**Entrega solicitada a R14:** conciliar **A-11 NC editorial** con R06-CC artístico y R12-FAIL_CTX; corregir/reescribir **Q.316** antes de reconsiderar A-12; resolver P0 textual de Q.315/Q.318; mantener la 025 anclada a **I,7**, la 021 a **I,6**, y `900157` completo fuera de I,6; arbitrar H5 `visual_asset_ids` con R09/R11 antes de contrafirma integral. **Ninguna fila se declara cerrada conjuntamente** sin las firmas restantes y comprobación de consumo. La PR editorial se eleva a Coordinación sin fusión unilateral.

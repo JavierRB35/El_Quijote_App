@@ -14,20 +14,20 @@ Fuente: `docs/data/propuesta_correcciones_visuales_pre_r15.csv` (13 `RETIRAR_PRE
 
 | # | Pregunta | Episodio | Pre-imagen actual | Condición temporal (safe_after) | Propuesta PR #30 | Visados |
 |---|---|---|---|---|---|---|
-| A-01 | Q.217 | DQ.P1.C18.E01 | `DQ.MA.900008` | C18.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-02 | Q.232 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-03 | Q.233 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-04 | Q.234 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-05 | Q.235 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-06 | Q.236 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-07 | Q.237 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-08 | Q.238 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-09 | Q.313 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-10 | Q.314 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-11 | Q.315 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-12 | Q.316 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | **mantener condicional** | ☑ R06-PEND (cronología intrapregunta) · **R05-PEND** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-13 | Q.317 | DQ.P1.C21.E01 | `DQ.MA.900037` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
-| A-14 | Q.318 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☐ R12 · ☐ R01/R02 · ☐ R09 |
+| A-01 | Q.217 | DQ.P1.C18.E01 | `DQ.MA.900008` | C18.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
+| A-02 | Q.232 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
+| A-03 | Q.233 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
+| A-04 | Q.234 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
+| A-05 | Q.235 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
+| A-06 | Q.236 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
+| A-07 | Q.237 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
+| A-08 | Q.238 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
+| A-09 | Q.313 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
+| A-10 | Q.314 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
+| A-11 | Q.315 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-FAIL_CTX · ☐ R01/R02 · ☐ R09 |
+| A-12 | Q.316 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | **mantener condicional** | ☑ R06-PEND (cronología intrapregunta) · **R05-PEND** · ☑ R12-PEND · ☐ R01/R02 · ☐ R09 |
+| A-13 | Q.317 | DQ.P1.C21.E01 | `DQ.MA.900037` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
+| A-14 | Q.318 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
 
 Nota técnica para el visado (R09/R12): la pre-imagen actual de todas ellas es una recreación `pre_pregunta` con `spoiler_level: ninguno` en el dato; la propuesta de PR #30 obedece a riesgos contextuales específicos (no al spoiler_level del catálogo). Retirar la pre en una pregunta no modifica su registro salvo en `visual_requirements.pre_image_media_id` (baja opcional del campo), y el gating temporal ya declarado sigue aplicando.
 
@@ -37,17 +37,17 @@ Fuente: `docs/ADENDA_R12_TRATAMIENTO_ACUARELAS_021_025.md` + `INFORME_QA_PATRIMO
 
 | # | Vínculo | Destino/fase | Condición a visar | R05 | R06 | R12 | R01/R02 | R09 |
 |---|---|---|---|---|---|---|---|---|
-| B-01 | `R05C-000005` (021) | cuaderno · consulta | Rotulado «alegoría de expurgo» | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
-| B-02 | `R05C-000006` (021) | descubrimientos · discovery | Idem + sin uso como prueba del hecho | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
-| B-03 | `R05C-000007` (021) | lector · after | Idem, tras el desenlace | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
-| B-04 | `R05C-000008` (021) | lector · lectura contextual | Idem, anclada a su pasaje | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
-| B-05 | `R05C-000009` (021) | museo · after | Idem, ficha con atribución Tusell/Doré | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
-| B-06 | `R05C-000010` (021) | museo · consulta | Idem | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
-| B-07 | `R05C-000011` (021) | preguntas → discovery | Idem + `safe_after` del episodio | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
-| B-08 | `R05C-000505` (025) | cuaderno · consulta | Rotulado «apoyo ilustrado no literal» | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
-| B-09 | `R05C-000506` (025) | descubrimientos · discovery | Idem | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
-| B-10 | `R05C-000507` (025) | lector · lectura contextual | Idem (no recreación de la hoguera) | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
-| B-11 | `R05C-000508` (025) | museo · consulta | Idem, con atribución Tusell/Doré 1905 | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
+| B-01 | `R05C-000005` (021) | cuaderno · consulta | Rotulado «alegoría de expurgo» | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
+| B-02 | `R05C-000006` (021) | descubrimientos · discovery | Idem + sin uso como prueba del hecho | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
+| B-03 | `R05C-000007` (021) | lector · after | Idem, tras el desenlace | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
+| B-04 | `R05C-000008` (021) | lector · lectura contextual | Idem, anclada a su pasaje | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
+| B-05 | `R05C-000009` (021) | museo · after | Idem, ficha con atribución Tusell/Doré | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
+| B-06 | `R05C-000010` (021) | museo · consulta | Idem | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
+| B-07 | `R05C-000011` (021) | preguntas → discovery | Idem + `safe_after` del episodio | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
+| B-08 | `R05C-000505` (025) | cuaderno · consulta | Rotulado «apoyo ilustrado no literal» | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
+| B-09 | `R05C-000506` (025) | descubrimientos · discovery | Idem | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
+| B-10 | `R05C-000507` (025) | lector · lectura contextual | Idem (no recreación de la hoguera) | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
+| B-11 | `R05C-000508` (025) | museo · consulta | Idem, con atribución Tusell/Doré 1905 | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
 
 ## C. El fallo contextual de `900157` (I,6)
 
@@ -55,7 +55,7 @@ Fuente: `INFORME_QA_PATRIMONIO_VISUAL.md` (2.ª auditoría R12) y `PROPUESTAS_ME
 
 | # | Decisión | Evidencia | R05 | R06 | R12 | R01/R02 | R09 |
 |---|---|---|---|---|---|---|---|
-| C-01 | Retirar 900157 del uso completo en I,6 y evaluar rescate por recorte | R12 2.ª auditoría | **R05-CC** | **R06-CC** | ☐ | ☐ | ☐ |
+| C-01 | Retirar 900157 del uso completo en I,6 y evaluar rescate por recorte | R12 2.ª auditoría | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
 
 ## D0. Pronunciamiento verificable R06 sobre A/B/C — 2026-11-06
 
@@ -212,3 +212,53 @@ Fuentes: `content/piloto/media_assets/DQ.MA.900042.json`, `DQ.MA.900036.json`, `
 - ☐ Visado R12 — pendiente
 - ☐ Visado editorial R01/R02 — pendiente (ejecutable en la misma pasada que la contrafirma de ADR-0005, H5)
 - ☐ Comprobación técnica R09 — DESARROLLO la ejecutará **después** de los visados restantes, fila a fila, sobre las decisiones conjuntamente aprobadas
+
+---
+
+## D3. Visado independiente R12 — 26 decisiones P0 (2026-11-06)
+
+**Estados:** `R12-PASS_CTX` = PASS de idoneidad **contextual y condicionada**, no de runtime; `R12-FAIL_CTX` = FAIL de una modalidad de uso visual (no archivo corrupto); `R12-PEND` = no hay prueba decisiva. **24 PASS contextuales, 1 FAIL contextual (A-11), 1 PENDIENTE (A-12); cero aprobaciones conjuntas.** Retirada de `pre` y autorización de destino `post_answer` son decisiones independientes.
+
+**Trazabilidad del registro visual:** esta fase añadió **3 aperturas** de recursos distintos en I,21 (DQ.MED.900025/900237/900167), pasando de **53 a 56 inspecciones directas de 678**; **622 continúan sin abrir**. Los estados del inventario **18 PASS / 2 FAIL / 658 PENDIENTE** no cambian, porque las tres nuevas imágenes siguen PENDIENTE de validación integral. Los 26 estados de la tabla son **dictámenes de vínculo/contexto**, no sustituyen los estados del activo. Se corrigió la nota obsoleta de Q.112 en el mismo registro original, sin tocar su asociación.
+
+**Prueba y trazabilidad:** se cotejaron las 14 preguntas `content/piloto/questions/DQ.Q.*.json`, las 14 propuestas en `docs/data/propuesta_correcciones_visuales_pre_r15.csv`, fichas `DQ.MA`, `assets/scenes/manifest.json` y aperturas visuales efectivas de los WebP del capítulo I,21 y II,74. Las acuarelas 021/025 y las escenas I,6/I,8 constan inspeccionadas visualmente; se reabrieron 900013/900230 y secuencia molinos. **La identidad se resuelve con MediaAsset ID + URI + SHA-256 declarado**, no igualdad del número de `DQ.MA` y `DQ.MED`. No se recalcularon SHA-256 binarios.
+
+| Fila | Dictamen R12 | Evidencia canónica y apertura visual | Condición, prueba y bloqueo |
+|---|---|---|---|
+| **A-01** | **R12-PASS_CTX** | MA.900008 = p1_c18_rebanos_pre.webp; ovejas visibles en apertura directa R12. | PASS retirar pre Q.217, porque la respuesta a la polvareda aparece a derecha; reveal después de responder; tiempo runtime pendiente. |
+| **A-02** | **R12-PASS_CTX** | MA.900011 = p2_c74_despedida_post.webp; Alonso en cama y Sancho enlazando su mano. | PASS retirar pre Q.232: anuncia muerte; discovery tras desenlace II,74; R01 y TS-001 pendientes. |
+| **A-03** | **R12-PASS_CTX** | MA.900011; rostro de Alonso y despedida visible. | PASS retirar pre Q.233, pues anticipa recuperación de identidad final; usar después de renuncia al nombre; gating no probado. |
+| **A-04** | **R12-PASS_CTX** | MA.900011; despedida terminal y manos entrelazadas. | PASS retirar pre Q.234; post_answer sólo tras confesión, veredicto y sucesos ya narrados; texto externo TS-001. |
+| **A-05** | **R12-PASS_CTX** | **MA.900042** = **MED.900202**, `assets/scenes/part_2/chapter_74/p2_c74_testamento_quijano_post.webp`; SHA256 declarado `fc3fbcf60f...`. WebP abierta: Alonso postrado, Sancho llorando y escribiente. | PASS retirar pre Q.235 y posible post_answer únicamente después de llamar a testigos/testar. No se han verificado todas las identidades de figurantes; R01 fase y R06 decisión pendientes. |
+| **A-06** | **R12-PASS_CTX** | MA.900042 testamento abierto no representa autor del epitafio; acuarela 373 abierta = alegoría pluma/libro. | PASS retirar pre Q.236; 373 sólo discovery posterior, rotulada como alegoría, nunca prueba del autor. |
+| **A-07** | **R12-PASS_CTX** | MA.900042 testamento y 373 alegoría, ambos observados. | PASS retirar pre Q.237; respuesta epitafio es textual, 373 epílogo simbólico posterior. |
+| **A-08** | **R12-PASS_CTX** | MA.900011 despedida y 373 alegoría de cierre previamente visualizadas. | PASS retirar pre Q.238; descubrir alegoría sólo después de advertencia contra tercera parte. |
+| **A-09** | **R12-PASS_CTX** | MA.900025 = p1_c21_mambrino_pre.webp; WebP abierta, barbero con bacía al fondo. | PASS retirar pre Q.313: pregunta inicialmente por batanes, imagen anticipa el encuentro con barbero; after condicionado. |
+| **A-10** | **R12-PASS_CTX** | MA.900025; bacía metálica visible sobre cabeza del barbero. | PASS retirar pre Q.314: la imagen revela el objeto real antes de responder contraste de percepciones. |
+| **A-11** | **R12-FAIL_CTX** | **MA.900036** = **MED.900237**, `assets/scenes/part_1/chapter_21/p1_c21_bacia_lluvia_pre.webp`; SHA256 declarado `67601cff8d...`. WebP abierta: DQ examina bacía sostenida por el barbero bajo lluvia. | FAIL del destino **post_answer como representación literal** en Q.315: no muestra bacía llevada sobre cabeza y escenifica cara a cara mientras el relato de Q.318 afirma huida y abandono. **Retirar pre sí procede**. R01 debe cotejar si hay justificación artística; R12 no cambia R06. |
+| **A-12** | **R12-PEND** | MA.900025 abierta muestra barbero y bacía, no al Sacripante preguntado. | PENDIENTE mantener pre Q.316 hasta confirmar que encuentro y objeto se narraron antes de la pregunta; fallback SIN_IMAGEN y R01/R15. |
+| **A-13** | **R12-PASS_CTX** | **MA.900037** = **MED.900167**, `assets/scenes/part_1/chapter_21/p1_c21_sancho_bacia_examen_post.webp`; SHA256 declarado `54d78b8f...`. WebP abierta: Sancho sostiene bacía ante DQ. | PASS retirar pre Q.317; reveal sólo después de responder que Sancho no reconoció yelmo de oro; R01 secuencia. |
+| **A-14** | **R12-PASS_CTX** | PRE MA.900036 (DQ y barbero con bacía) y POST MA.900037 (Sancho con bacía), ambas WebP abiertas. | PASS retirar 036 pre Q.318, pues adelanta secuencia; 037 post_answer sólo tras ordenar los cuatro hechos; sin aprobar invención de escena de 036. |
+| **B-01** | **R12-PASS_CTX** | 021.jpg JPEG abierta: figura gigante barre diminutos caballeros, no aparecen cura/barbero. | PASS cuaderno consulta sólo rotulada «alegoría de expurgo»; nunca documentación literal. |
+| **B-02** | **R12-PASS_CTX** | 021.jpg, composición alegórica constatada. | PASS discovery tras relato con etiqueta alegórica; nunca pista fáctica. |
+| **B-03** | **R12-PASS_CTX** | 021.jpg, figura simbólica en acuarela vertical. | PASS lector after con rótulo y texto externo; TS-001 no ejecutado. |
+| **B-04** | **R12-PASS_CTX** | 021.jpg alegoría del espurgo, no una acción física de personajes. | PASS lector contextual si R01 fija pasaje I,6 y se indica alegoría. |
+| **B-05** | **R12-PASS_CTX** | 021.jpg con figura gigante y caballeros miniatura. | PASS museo after sólo como símbolo literario rotulado; presentación no probada. |
+| **B-06** | **R12-PASS_CTX** | 021.jpg; alegoría y no escena del cura/barbero. | PASS museo consulta con contexto interpretativo no literal; validación de ficha pendiente. |
+| **B-07** | **R12-PASS_CTX** | 021.jpg no muestra veredictos concretos de libros. | PASS preguntas→discovery tras responder/desbloquear; nunca como material para contestar. |
+| **B-08** | **R12-PASS_CTX** | 025.jpg JPEG abierta: mujer arroja libros al fuego **en interior**, no corral nocturno. | PASS cuaderno consulta como «apoyo ilustrado no literal»; no aceptable como documento literal. |
+| **B-09** | **R12-PASS_CTX** | 025.jpg quema en hogar interior, directa. | PASS discovery sólo tras narración y nota de libertad artística; cronología R01. |
+| **B-10** | **R12-PASS_CTX** | 025.jpg lugar y luz no coinciden con corral nocturno. | PASS lector contextual de I,7 con advertencia no literal; montaje after I,6 pendiente de R01/R06. |
+| **B-11** | **R12-PASS_CTX** | 025.jpg mujer junto a fuego doméstico. | PASS museo consulta con ficha artística no literal; no atribuir corral/nocturnidad. |
+| **C-01** | **R12-PASS_CTX** | MED.900157 abierta: DQ armado y Sancho observan escrutinio I,6, fallo cronológico. 900013 y 900230 reabiertas: cura con capelo/barba vs casquete/cabeza más calva y barbero con edad/cabello distintos. | PASS retirar plano completo 900157 (FAIL de uso literal). Alternativas 900013/900230 son pertinentes por separado, pero **continuidad entre ambas PENDIENTE**; recorte izquierdo no ejecutado; R06/TS-001 pendientes. |
+
+### P0 transversal sin visado de integración
+
+- **Q.112**: la asociación actual ya es `DQ.MA.000026` como hotspot y `DQ.MA.900005` como pre, `safe_after_episodes=[DQ.P1.C08.E01]`. **No reasignar 026**. Acuarela 026 observada, **833×1041 px**. Rectángulo normalizado `x=.30,y=.22,w=.45,h=.50` equivale aprox. a x=250–625 px, y=229–749 px; abarca caballo y caballero y **solo parte del aspa** que se extiende hacia esquina superior izquierda. **PENDIENTE precisión geométrica**, zoom, escalado, teclado, alternativa accesible y momento efectivo de presentación; nada de esto se probó en runtime.
+- **I,6:** `MED.900013 ↔ MED.900230` reabiertas: hay **discrepancia de fisonomía/edad del cura y del barbero** entre planos; continuidad en montaje PENDIENTE. No se ejecutó recorte de 900157. Conservar un plano por diálogo o buscar transición validada con R06.
+- **Molinos:** secuencia `MED.900231 → MED.900005 → MED.900006` abierta: plano distante, señalamiento/advertencia, desenlace con lanza rota. **PASS contextual de orden**; no mostrar 900006 antes de conocer la caída, no ocultar molinos (derecha) por TS-001.
+- **Primeros planos:** los 10 se observaron en primera revisión, de lenguaje más pictórico que escenas. Solo candidatos para **insertos diferenciados**; integración y proporciones pendientes de R06.
+- **TS-001 y accesibilidad**: **NO EJECUTADO** con texto narrativo real, letra ampliada, subtítulos, audio apagado, teclado ni movimiento reducido; por tanto todas las 26 filas **SIN GO runtime**. Proteger rostro/manos en despedida, escribiente en MA.900042, bacía y rostros de MA.900036/037. Sin caja derecha universal. R01/R02 define la fase exacta y R08/R09 verifican la puesta en escena.
+- **Histórico y competencias**: R06-NC de A-05/A-11/A-13/A-14 se preservan íntegros; su rectificación es exclusiva de R06 (PR #44). No se cambian visados R05/R06/R01/R02/R09, las matrices congeladas, la vista de conciliación, preguntas, fichas, interfaces ni activos.
+
+**Bloqueos expresos:** A-11 destino post literal incongruente con huida del barbero, sujeto a R01; A-12 cronología intrapregunta; C-01 continuidad/recorte; Q.112 geometría/teclado/gating; todos los casos TS-001 y validación cruzada. **No generar imágenes nuevas.**

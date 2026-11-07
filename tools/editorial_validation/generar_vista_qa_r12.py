@@ -17,9 +17,17 @@ Reglas (dictamen de la reauditoría, verificado empíricamente):
      Nunca se etiquetan como «imágenes sin inspeccionar».
   4. Los CSV origen NO se modifican (precedente PR #35).
 
-Recuentos esperados (verificados — ver tests/dev/test_vista_qa_r12.py):
-  2.805: 168 desactualizadas / 28 recursos · 759: 44 desactualizadas /
-  28 recursos · 43 decisiones sin imagen + 1 referencia externa.
+Recuentos por versión de la fuente QA (informativos, no aserciones — la
+prueba verifica invariantes y recomputación independiente, ver
+tests/dev/test_vista_qa_r12.py):
+  v1 (registro previo a los 26 visados R12): 2.805: 168 desactualizadas /
+  28 recursos · 759: 44 / 28 recursos · 43 decisiones sin imagen + 1
+  referencia externa.
+  v2 (registro con las 3 aperturas I,21 — DQ.MED.900025/900237/900167,
+  PR #45): 2.805: 188 / 31 recursos · 759: 48 / 31 recursos · mismas
+  43 decisiones + 1 referencia externa. El delta v1→v2 (+20/+4/+3)
+  proviene íntegramente del indicador inspeccion_visual_efectiva NO→SI
+  en esos 3 recursos; ningún estado QA cambió.
 """
 from __future__ import annotations
 

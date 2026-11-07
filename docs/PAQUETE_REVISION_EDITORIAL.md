@@ -14,20 +14,20 @@ Fuente: `docs/data/propuesta_correcciones_visuales_pre_r15.csv` (13 `RETIRAR_PRE
 
 | # | Pregunta | Episodio | Pre-imagen actual | Condición temporal (safe_after) | Propuesta PR #30 | Visados |
 |---|---|---|---|---|---|---|
-| A-01 | Q.217 | DQ.P1.C18.E01 | `DQ.MA.900008` | C18.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-02 | Q.232 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-03 | Q.233 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-04 | Q.234 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-05 | Q.235 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-06 | Q.236 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-07 | Q.237 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-08 | Q.238 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-09 | Q.313 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-10 | Q.314 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-11 | Q.315 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-FAIL_CTX · ☐ R01/R02 · ☐ R09 |
-| A-12 | Q.316 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | **mantener condicional** | ☑ R06-PEND (cronología intrapregunta) · **R05-PEND** · ☑ R12-PEND · ☐ R01/R02 · ☐ R09 |
-| A-13 | Q.317 | DQ.P1.C21.E01 | `DQ.MA.900037` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
-| A-14 | Q.318 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-PASS_CTX · ☐ R01/R02 · ☐ R09 |
+| A-01 | Q.217 | DQ.P1.C18.E01 | `DQ.MA.900008` | C18.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-02 | Q.232 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-03 | Q.233 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-04 | Q.234 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-05 | Q.235 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-06 | Q.236 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-07 | Q.237 | DQ.P2.C74.E01 | `DQ.MA.900042` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-08 | Q.238 | DQ.P2.C74.E01 | `DQ.MA.900011` | C74.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-09 | Q.313 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-10 | Q.314 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | retirar pre | ☑ R06-CC · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-11 | Q.315 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-FAIL_CTX · ☑ R01/R02-NC (§D4) · ☐ R09 |
+| A-12 | Q.316 | DQ.P1.C21.E01 | `DQ.MA.900025` | C21.E01 | **mantener condicional** | ☑ R06-PEND (cronología intrapregunta) · **R05-PEND** · ☑ R12-PEND · ☑ R01/R02-NC (§D4) · ☐ R09 |
+| A-13 | Q.317 | DQ.P1.C21.E01 | `DQ.MA.900037` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
+| A-14 | Q.318 | DQ.P1.C21.E01 | `DQ.MA.900036` | C21.E01 | retirar pre | **R06-CC** (rectificación P0, §D2) · **R05-CC** · ☑ R12-PASS_CTX · ☑ R01/R02-CC (§D4) · ☐ R09 |
 
 Nota técnica para el visado (R09/R12): la pre-imagen actual de todas ellas es una recreación `pre_pregunta` con `spoiler_level: ninguno` en el dato; la propuesta de PR #30 obedece a riesgos contextuales específicos (no al spoiler_level del catálogo). Retirar la pre en una pregunta no modifica su registro salvo en `visual_requirements.pre_image_media_id` (baja opcional del campo), y el gating temporal ya declarado sigue aplicando.
 
@@ -37,17 +37,17 @@ Fuente: `docs/ADENDA_R12_TRATAMIENTO_ACUARELAS_021_025.md` + `INFORME_QA_PATRIMO
 
 | # | Vínculo | Destino/fase | Condición a visar | R05 | R06 | R12 | R01/R02 | R09 |
 |---|---|---|---|---|---|---|---|---|
-| B-01 | `R05C-000005` (021) | cuaderno · consulta | Rotulado «alegoría de expurgo» | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-02 | `R05C-000006` (021) | descubrimientos · discovery | Idem + sin uso como prueba del hecho | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-03 | `R05C-000007` (021) | lector · after | Idem, tras el desenlace | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-04 | `R05C-000008` (021) | lector · lectura contextual | Idem, anclada a su pasaje | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-05 | `R05C-000009` (021) | museo · after | Idem, ficha con atribución Tusell/Doré | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-06 | `R05C-000010` (021) | museo · consulta | Idem | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-07 | `R05C-000011` (021) | preguntas → discovery | Idem + `safe_after` del episodio | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-08 | `R05C-000505` (025) | cuaderno · consulta | Rotulado «apoyo ilustrado no literal» | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-09 | `R05C-000506` (025) | descubrimientos · discovery | Idem | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-10 | `R05C-000507` (025) | lector · lectura contextual | Idem (no recreación de la hoguera) | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
-| B-11 | `R05C-000508` (025) | museo · consulta | Idem, con atribución Tusell/Doré 1905 | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
+| B-01 | `R05C-000005` (021) | cuaderno · consulta | Rotulado «alegoría de expurgo» | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-02 | `R05C-000006` (021) | descubrimientos · discovery | Idem + sin uso como prueba del hecho | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-03 | `R05C-000007` (021) | lector · after | Idem, tras el desenlace | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-04 | `R05C-000008` (021) | lector · lectura contextual | Idem, anclada a su pasaje | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-05 | `R05C-000009` (021) | museo · after | Idem, ficha con atribución Tusell/Doré | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-06 | `R05C-000010` (021) | museo · consulta | Idem | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-07 | `R05C-000011` (021) | preguntas → discovery | Idem + `safe_after` del episodio | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-08 | `R05C-000505` (025) | cuaderno · consulta | Rotulado «apoyo ilustrado no literal» | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-09 | `R05C-000506` (025) | descubrimientos · discovery | Idem | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-10 | `R05C-000507` (025) | lector · lectura contextual | Idem (no recreación de la hoguera) | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
+| B-11 | `R05C-000508` (025) | museo · consulta | Idem, con atribución Tusell/Doré 1905 | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
 
 ## C. El fallo contextual de `900157` (I,6)
 
@@ -55,7 +55,7 @@ Fuente: `INFORME_QA_PATRIMONIO_VISUAL.md` (2.ª auditoría R12) y `PROPUESTAS_ME
 
 | # | Decisión | Evidencia | R05 | R06 | R12 | R01/R02 | R09 |
 |---|---|---|---|---|---|---|---|
-| C-01 | Retirar 900157 del uso completo en I,6 y evaluar rescate por recorte | R12 2.ª auditoría | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☐ | ☐ |
+| C-01 | Retirar 900157 del uso completo en I,6 y evaluar rescate por recorte | R12 2.ª auditoría | **R05-CC** | **R06-CC** | **R12-PASS_CTX** | ☑ R01/R02-CC (§D4) | ☐ |
 
 ## D0. Pronunciamiento verificable R06 sobre A/B/C — 2026-11-06
 
@@ -213,6 +213,8 @@ Fuentes: `content/piloto/media_assets/DQ.MA.900042.json`, `DQ.MA.900036.json`, `
 - ☐ Visado editorial R01/R02 — pendiente (ejecutable en la misma pasada que la contrafirma de ADR-0005, H5)
 - ☐ Comprobación técnica R09 — DESARROLLO la ejecutará **después** de los visados restantes, fila a fila, sobre las decisiones conjuntamente aprobadas
 
+> **Estado vigente tras dictamen R14 (2026-11-07, PR #47; pendiente de fusión):** **R01/R02 26/26 emitidos y aceptados documentalmente: 24 CC condicionadas y 2 NC (A-11/A-12)**, registrados en las celdas propias A/B/C y fundamentados en §D4. **R12 emitido** en §D3 (24 PASS_CTX, 1 FAIL_CTX, 1 PEND), sin alterar sus dictámenes; R05/R06 conservan los propios. **Contrafirma editorial integral ADR-0005/H5 PENDIENTE** hasta resolver `visual_asset_ids` conjuntamente con R09/R11 y responsables. **Comprobación técnica R09 e integración productiva SIN GO; RUNTIME SIN GO**. El bloque de estados previo se conserva arriba como **histórico** y no expresa el estado vigente de R01/R02/R12.
+
 ---
 
 ## D3. Visado independiente R12 — 26 decisiones P0 (2026-11-06)
@@ -266,7 +268,7 @@ Fuentes: `content/piloto/media_assets/DQ.MA.900042.json`, `DQ.MA.900036.json`, `
 
 ## D4. Visado editorial R01/R02 — 26 decisiones y contrafirma H5 (2026-11-07)
 
-**Alcance y autoría:** pronunciamiento documental desde las funciones R01 (dirección editorial) y R02 (filología/documentación textual), ejercidas por un **agente de IA**; no se hace pasar por revisión humana presencial ni sustituye la decisión final de R14. Rama editorial independiente nacida de `main`. **No se alteran ni se refrendan por representación** las firmas/estados de R05, R06, R12 o R09, las evidencias R12, las matrices CSV, los JSON de pregunta y MediaAsset, las imágenes ni el runtime. La anotación D4 funciona como **columna de visado editorial complementaria** a la tabla única A/B/C, sin reescribir sus celdas mientras otros equipos trabajan en paralelo.
+**Alcance y autoría:** pronunciamiento documental desde las funciones R01 (dirección editorial) y R02 (filología/documentación textual), ejercidas por un **agente de IA**; no se hace pasar por revisión humana presencial ni sustituye la decisión final de R14. Rama editorial independiente nacida de `main`. **No se alteran ni se refrendan por representación** las firmas/estados de R05, R06, R12 o R09, las evidencias R12, las matrices CSV, los JSON de pregunta y MediaAsset, las imágenes ni el runtime. La sección D4 fundamenta los **26 visados R01/R02 consignados en sus celdas propias** de A/B/C; los estados y evidencias de R05/R06/R12 y las comprobaciones R09 permanecen intactos.
 
 **Convención:** `R01/R02-CC` = conforme con el *uso editorial y el momento* expresamente acotados, **no** aprobación productiva ni corrección automática de fallos del catálogo; `R01/R02-NC` = no conforme con la alternativa examinada, y se documenta salida segura. En todos los `CC`, el momento de `post_answer`, `reveal` o `discovery` significa **respuesta emitida + hecho ya narrado**; el mero paso de respuesta o `safe_after_episodes` no basta. Ante ausencia de beat confirmado, usar `SIN_IMAGEN` sin anticipar desenlaces. **Balance: 24 CC condicionadas y 2 NC (A-11, A-12); 0 GO runtime.** Esta cifra no debe sumarse a los visados de otras especialidades.
 

@@ -168,6 +168,41 @@ def estructurar_segmento(fuente_lf: str, inicio: int, fin: int) -> str:
     return restaurar_estructura(plano(fuente_lf[inicio:fin]), fuente_lf, inicio, fin)
 
 
+def _es_bloque_verso(lineas: list[str]) -> bool:
+    """True si las líneas forman un bloque de verso legítimo (todas cortas y
+    con todas sus adyacencias de edición: parlamento o corte estrecho)."""
+    if len(lineas) < 3 or any(len(l) >= UMBRAL_VERSO for l in lineas):
+        return False
+    for i in range(len(lineas) - 1):
+        l1, l2 = lineas[i], lineas[i + 1]
+        p2 = _PALABRA.match(l2)
+        if not p2:
+            return False
+        cabe = l2.startswith("—") or len(l1) + 1 + len(p2.group(0)) < ANCHO_LINEA
+        if not cabe:
+            return False
+    return True
+
+
+def cortes_mecanicos_residuales(texto: str) -> list[str]:
+    """Saltos \\n simples que NO pertenecen a un bloque de verso legítimo.
+
+    Detector de residuos para el control de presentación (encargo P1):
+    tras la restauración de estructura o la presentación en runtime, todo
+    salto simple debe ser verso; los que no lo son son cortes mecánicos de
+    maquetación que deben unirse. Devuelve fragmentos descriptivos
+    («…final de línea ⏎ inicio de la siguiente…») para el informe.
+    """
+    residuos: list[str] = []
+    for parrafo in texto.replace("\r\n", "\n").split("\n\n"):
+        lineas = [l.strip() for l in parrafo.split("\n") if l.strip()]
+        if len(lineas) < 2 or _es_bloque_verso(lineas):
+            continue
+        for i in range(len(lineas) - 1):
+            residuos.append(f"…{lineas[i][-32:]} ⏎ {lineas[i + 1][:32]}…")
+    return residuos
+
+
 def _parrafos_de(texto_lf: str, inicio: int, fin: int) -> tuple[int, int]:
     """Expande [inicio, fin) hasta los límites de párrafo del fichero."""
     p0 = texto_lf.rfind("\n\n", 0, max(inicio, 0))

@@ -23,7 +23,7 @@ Uso: python -I migrar_bateria_a_gutenberg.py <raiz_repo>
 import sys, os, re, json, hashlib, unicodedata
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from estructura_texto import estructurar_segmento  # noqa: E402
+from estructura_texto import estructurar_segmento, cortes_mecanicos_residuales  # noqa: E402
 from limites_capitulo import dentro, rango_de_capitulo  # noqa: E402
 
 REPO = sys.argv[1] if len(sys.argv) > 1 else "."
@@ -215,3 +215,24 @@ with open(os.path.join(PKG, "package.json"), "w", encoding="utf-8") as f:
 print("MIGRACION OK: pasajes=%d evidencias=%d fallos=%s" % (migrados, evid_migradas, no_encontrados or "-"))
 for v in var_log:
     print("  VARIANTE:", v)
+
+# VALIDACIÓN AUTOMÁTICA DE PRESENTACIÓN (encargo P1): ningún pasaje ni cita
+# producida por la migración puede contener saltos mecánicos residuales (los
+# saltos legítimos —verso, párrafo, parlamento— los preserva la extracción
+# estructurada). Fail-closed: la migración termina en error si algo escapa.
+residuos = []
+for rel in files["passages"]:
+    p = json.load(open(os.path.join(PKG, rel.replace("/", os.sep)), encoding="utf-8"))
+    for r in cortes_mecanicos_residuales(p.get("text_original", "")):
+        residuos.append((p["id"], r))
+for rel in files["questions"]:
+    q = json.load(open(os.path.join(PKG, rel.replace("/", os.sep)), encoding="utf-8"))
+    for e in q.get("evidence", []):
+        for r in cortes_mecanicos_residuales(e.get("quote", "") or ""):
+            residuos.append((q["id"], r))
+if residuos:
+    print("MIGRACION CON RESIDUOS DE MAQUETACIÓN (fail-closed):")
+    for pid, r in residuos:
+        print("  -", pid, r)
+    sys.exit(1)
+print("VALIDACIÓN DE PRESENTACIÓN OK: 0 saltos mecánicos residuales en pasajes y citas")

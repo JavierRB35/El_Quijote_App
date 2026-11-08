@@ -8,7 +8,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { textoParaPantalla } from '../src/historia/presentacion.ts';
+import { textoParaPantalla } from '../src/presentacion.ts';
 
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const DIR_BEATS = join(RAIZ, 'content', 'piloto', 'beats');
@@ -120,4 +120,31 @@ test('idempotencia: presentar dos veces no cambia nada', () => {
   const sintetico = 'bloque uno\ncontinuación del bloque uno\n\nbloque dos\n— Réplica breve.';
   const una = textoParaPantalla(sintetico);
   assert.equal(textoParaPantalla(una), una);
+});
+
+test('poema de arte menor (estrofa octosilábica) conserva cada verso', () => {
+  const romance = 'En un lugar de la Mancha,\nde cuyo nombre no quiero acordarme,\nno ha mucho tiempo que vivía\nun hidalgo de los de lanza\nen astillero, adarga antigua.';
+  const presentado = textoParaPantalla(romance);
+  assert.equal(presentado.split('\n').length, 5,
+    'la estrofa debe conservar sus 5 versos');
+  assert.equal(presentado.includes('\n\n'), false,
+    'la estrofa no debe partirse en párrafos');
+});
+
+test('un encabezado de capítulo incrustado se respeta como bloque propio', () => {
+  const conEncabezado = 'Capítulo XXI. Que trata de la alta aventura y rica ganancia del yelmo de Mambrino\n\nEn esto, comenzó a llover un poco, y quisiera Sancho que se entraran en el molino de los batanes.';
+  const presentado = textoParaPantalla(conEncabezado);
+  assert.equal(presentado.split('\n\n').length, 2,
+    'el encabezado debe quedar como bloque separado del narrativo');
+  assert.equal(presentado.includes('Capítulo XXI. Que trata de la alta aventura y rica ganancia del yelmo de Mambrino\n\nEn esto'), true);
+});
+
+test('evidencia de pregunta (Aventura) con párrafos y parlamentos se presenta intacta', () => {
+  // caso real del paquete: cita con salto de parlamento (DQ.P1.C06.P0003)
+  const cita = 'como a único\nen su arte, se debe perdonar.\n\n— Así es verdad —dijo el cura—, y por esa razón se le otorga la vida por\nahora.';
+  const presentado = textoParaPantalla(cita);
+  assert.equal(presentado.split('\n\n').length, 2, 'el parlamento conserva su párrafo');
+  assert.equal(presentado.includes('\n— Así es verdad'), true);
+  assert.equal(presentado.includes('vida por\nahora.'), false,
+    'el corte mecánico interno del parlamento se une');
 });

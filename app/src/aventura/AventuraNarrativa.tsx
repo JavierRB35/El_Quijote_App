@@ -8,7 +8,6 @@ import { AjustesBoton, movimientoReducido, useAjustes } from '../cine/ajustes';
 import {
   EPISODIO_AVENTURA,
   PUNTOS_MAXIMOS,
-  PUNTOS_INICIALES,
   VERSION_PARTIDA,
   continuar,
   nuevaPartida,

@@ -63,10 +63,12 @@ Limitación declarada: PG #2000 procede de una edición decimonónica completa; 
 | pasaje | DQ.P1.C18.P0003 | DQ.P1.C18 | 28/28 | OK |
 | pasaje | DQ.P1.C18.P0004 | DQ.P1.C18 | 36/36 | OK |
 | pasaje | DQ.P1.C18.P0005 | DQ.P1.C18 | 22/22 | OK |
-| pasaje | DQ.P1.C21.P0001 | DQ.P1.C21 | 82/82 | OK |
-| pasaje | DQ.P1.C21.P0002 | DQ.P1.C21 | 631/631 | OK |
-| pasaje | DQ.P1.C21.P0003 | DQ.P1.C21 | 533/533 | OK |
-| pasaje | DQ.P1.C21.P0004 | DQ.P1.C21 | 638/638 | OK |
+| pasaje | DQ.P1.C21.P0001 | DQ.P1.C21 | 58/58 | OK |
+| pasaje | DQ.P1.C21.P0002 | DQ.P1.C21 | 169/169 | OK |
+| pasaje | DQ.P1.C21.P0003 | DQ.P1.C21 | 255/255 | OK |
+| pasaje | DQ.P1.C21.P0004 | DQ.P1.C21 | 47/47 | OK |
+| pasaje | DQ.P1.C21.P0005 | DQ.P1.C21 | 118/118 | OK |
+| pasaje | DQ.P1.C21.P0006 | DQ.P1.C21 | 194/194 | OK |
 | pasaje | DQ.P2.C01.P0001 | DQ.P2.C01 | 23/23 | OK |
 | pasaje | DQ.P2.C01.P0002 | DQ.P2.C01 | 38/38 | OK |
 | pasaje | DQ.P2.C01.P0003 | DQ.P2.C01 | 24/24 | OK |
@@ -143,12 +145,17 @@ Limitación declarada: PG #2000 procede de una edición decimonónica completa; 
 | evidencia | DQ.Q.000311 | DQ.P1.C16.E01 | 532/532 | OK |
 | evidencia | DQ.Q.000312 | DQ.P1.C16.E01 | 532/532 | OK |
 | evidencia | DQ.Q.000313 | DQ.P1.C21.E01 | 58/58 | OK |
-| evidencia | DQ.Q.000314 | DQ.P1.C21.E01 | 631/631 | OK |
-| evidencia | DQ.Q.000314 | DQ.P1.C21.E01 | 533/533 | OK |
-| evidencia | DQ.Q.000315 | DQ.P1.C21.E01 | 533/533 | OK |
-| evidencia | DQ.Q.000316 | DQ.P1.C21.E01 | 638/638 | OK |
-| evidencia | DQ.Q.000317 | DQ.P1.C21.E01 | 631/631 | OK |
+| evidencia | DQ.Q.000314 | DQ.P1.C21.E01 | 29/29 | OK |
+| evidencia | DQ.Q.000314 | DQ.P1.C21.E01 | 37/37 | OK |
+| evidencia | DQ.Q.000314 | DQ.P1.C21.E01 | 29/29 | OK |
+| evidencia | DQ.Q.000315 | DQ.P1.C21.E01 | 46/46 | OK |
+| evidencia | DQ.Q.000316 | DQ.P1.C21.E01 | 29/29 | OK |
+| evidencia | DQ.Q.000317 | DQ.P1.C21.E01 | 29/29 | OK |
 | evidencia | DQ.Q.000318 | DQ.P1.C21.E01 | 58/58 | OK |
+| evidencia | DQ.Q.000318 | DQ.P1.C21.E01 | 40/40 | OK |
+| evidencia | DQ.Q.000318 | DQ.P1.C21.E01 | 35/35 | OK |
+| evidencia | DQ.Q.000318 | DQ.P1.C21.E01 | 62/62 | OK |
+| evidencia | DQ.Q.000318 | DQ.P1.C21.E01 | 67/67 | OK |
 | evidencia | DQ.Q.000319 | DQ.P2.C10.E01 | 551/551 | OK |
 | evidencia | DQ.Q.000320 | DQ.P2.C10.E01 | 504/504 | OK |
 | evidencia | DQ.Q.000321 | DQ.P2.C10.E01 | 596/596 | OK |
@@ -156,4 +163,4 @@ Limitación declarada: PG #2000 procede de una edición decimonónica completa; 
 | evidencia | DQ.Q.000323 | DQ.P2.C10.E01 | 504/504 | OK |
 | evidencia | DQ.Q.000324 | DQ.P2.C10.E01 | 504/504 | OK |
 
-**Resumen: 135/135 coinciden íntegramente; 0 con variante.**
+**Resumen: 142/142 coinciden íntegramente; 0 con variante.**

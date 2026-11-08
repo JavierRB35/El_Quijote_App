@@ -1,13 +1,13 @@
 {
  "id": "DQ.P1.C21.P0001",
- "contract_version": "1.0.0",
+ "contract_version": "1.2.0",
  "chapter_id": "DQ.P1.C21",
- "anchor": "PG 2000 (DQ.SRC.0005) offset 333819-334262 (indexación LF); extracto verbatim",
- "text_original": "En esto, comenzó a llover un poco, y quisiera Sancho que se entraran en el molino de los batanes; mas habíales cobrado tal aborrecimiento don Quijote, por la pesada burla, que en ninguna manera quiso entrar dentro; y así, torciendo el camino a la derecha mano, dieron en otro como el que habían llevado el día de antes.\n\nDe allí a poco, descubrió don Quijote un hombre a caballo, que traía en la cabeza una cosa que relumbraba como si fuera de",
- "text_indexable": "en esto comenzó a llover un poco y quisiera sancho que se entraran en el molino de los batanes mas habíales cobrado tal aborrecimiento don quijote por la pesada burla que en ninguna manera quiso entrar dentro y así torciendo el camino a la derecha mano dieron en otro como el que habían llevado el día de antes de allí a poco descubrió don quijote un hombre a caballo que traía en la cabeza una cosa que relumbraba como si fuera de",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 333819-334138 (indexación LF); extracto verbatim",
+ "text_original": "En esto, comenzó a llover un poco, y quisiera Sancho que se entraran en el molino de los batanes; mas habíales cobrado tal aborrecimiento don Quijote, por la pesada burla, que en ninguna manera quiso entrar dentro; y así, torciendo el camino a la derecha mano, dieron en otro como el que habían llevado el día de antes.",
+ "text_indexable": "en esto comenzó a llover un poco y quisiera sancho que se entraran en el molino de los batanes mas habíales cobrado tal aborrecimiento don quijote por la pesada burla que en ninguna manera quiso entrar dentro y así torciendo el camino a la derecha mano dieron en otro como el que habían llevado el día de antes",
  "position": {
   "start_char": 333819,
-  "end_char": 334262
+  "end_char": 334138
  },
- "sha256": "sha256:09ad2cd5d018225bd05a869836a29e6611666f4923fc4d276aa832da6fb0f6fe"
+ "sha256": "sha256:8547e893084ebb0cc6c37e24fc8046cb4716686223f2794751560fd8ba5151e5"
 }

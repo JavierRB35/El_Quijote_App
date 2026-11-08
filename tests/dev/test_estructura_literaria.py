@@ -234,14 +234,21 @@ comprobar("\n" not in p["text_original"],
 
 # 7e. globo: todas las citas estructuradas son palabra a palabra iguales al
 # estado plano previo de la PR (solo-estructura) y todos los sha256 son válidos.
-# EXCEPCIONES autorizadas por la subsanación P1 (límites de capítulo, PR
-# independiente): DQ.P1.C21.P0001 pierde la cola de I,20 y el encabezado
-# (posición y contenido corregidos) y Q.313/Q.318 sustituyen la cita
-# contaminada. La integridad de esas palabras la garantizan el test
+# EXCEPCIONES autorizadas por las subsanaciones P1 (sangrado I,20→I,21 y
+# cierre editorial de I,21, PRs independientes): los pasajes y preguntas de
+# I,21 fueron REGENERADOS con contenido literal del fuente por decisión de
+# Dirección (issues #63). La integridad de esas palabras la garantizan
 # test_limites_capitulo.py y el cotejo contra el fuente.
 PALABRAS_AUTORIZADAS_A_CAMBIAR = {
     os.path.join("passages", "DQ.P1.C21.P0001.json"),
+    os.path.join("passages", "DQ.P1.C21.P0002.json"),
+    os.path.join("passages", "DQ.P1.C21.P0003.json"),
+    os.path.join("passages", "DQ.P1.C21.P0004.json"),
     os.path.join("questions", "DQ.Q.000313.json"),
+    os.path.join("questions", "DQ.Q.000314.json"),
+    os.path.join("questions", "DQ.Q.000315.json"),
+    os.path.join("questions", "DQ.Q.000316.json"),
+    os.path.join("questions", "DQ.Q.000317.json"),
     os.path.join("questions", "DQ.Q.000318.json"),
 }
 n_estructura = 0

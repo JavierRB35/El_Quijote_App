@@ -1,0 +1,13 @@
+{
+ "id": "DQ.P1.C21.P0005",
+ "chapter_id": "DQ.P1.C21",
+ "contract_version": "1.2.0",
+ "text_original": "Es, pues, el caso que el yelmo, y el caballo y caballero que don Quijote veía, era esto: que en aquel contorno había dos lugares, el uno tan pequeño que ni tenía botica ni barbero, y el otro, que estaba junto, sí; y así, el barbero del mayor servía al menor, en el cual tuvo necesidad un enfermo de sangrarse y otro de hacerse la barba, para lo cual venía el barbero, y traía una bacía de azófar; y quiso la suerte que, al tiempo que venía, comenzó a llover, y, porque no se le manchase el sombrero, que debía de ser nuevo, se puso la bacía sobre la cabeza; y, como estaba limpia, desde media legua relumbraba.",
+ "text_indexable": "es pues el caso que el yelmo y el caballo y caballero que don quijote veía era esto que en aquel contorno había dos lugares el uno tan pequeño que ni tenía botica ni barbero y el otro que estaba junto sí y así el barbero del mayor servía al menor en el cual tuvo necesidad un enfermo de sangrarse y otro de hacerse la barba para lo cual venía el barbero y traía una bacía de azófar y quiso la suerte que al tiempo que venía comenzó a llover y porque no se le manchase el sombrero que debía de ser nuevo se puso la bacía sobre la cabeza y como estaba limpia desde media legua relumbraba",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 336432-337042 (indexación LF); extracto verbatim",
+ "position": {
+  "start_char": 336432,
+  "end_char": 337042
+ },
+ "sha256": "sha256:a0b0b086dd3d88f8fda23b373cac277ad54fc02b7c2465ee35a295144fd83238"
+}

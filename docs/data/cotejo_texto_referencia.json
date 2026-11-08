@@ -10,8 +10,8 @@
   "Briareo": "presente",
   "Maritornes": "presente"
  },
- "total": 135,
- "coinciden": 135,
+ "total": 142,
+ "coinciden": 142,
  "no_coinciden": 0,
  "detalles": [
   {
@@ -362,32 +362,48 @@
    "tipo": "pasaje",
    "id": "DQ.P1.C21.P0001",
    "contexto": "DQ.P1.C21",
-   "palabras_ok": 82,
-   "palabras_totales": 82,
+   "palabras_ok": 58,
+   "palabras_totales": 58,
    "estado": "OK"
   },
   {
    "tipo": "pasaje",
    "id": "DQ.P1.C21.P0002",
    "contexto": "DQ.P1.C21",
-   "palabras_ok": 631,
-   "palabras_totales": 631,
+   "palabras_ok": 169,
+   "palabras_totales": 169,
    "estado": "OK"
   },
   {
    "tipo": "pasaje",
    "id": "DQ.P1.C21.P0003",
    "contexto": "DQ.P1.C21",
-   "palabras_ok": 533,
-   "palabras_totales": 533,
+   "palabras_ok": 255,
+   "palabras_totales": 255,
    "estado": "OK"
   },
   {
    "tipo": "pasaje",
    "id": "DQ.P1.C21.P0004",
    "contexto": "DQ.P1.C21",
-   "palabras_ok": 638,
-   "palabras_totales": 638,
+   "palabras_ok": 47,
+   "palabras_totales": 47,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C21.P0005",
+   "contexto": "DQ.P1.C21",
+   "palabras_ok": 118,
+   "palabras_totales": 118,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C21.P0006",
+   "contexto": "DQ.P1.C21",
+   "palabras_ok": 194,
+   "palabras_totales": 194,
    "estado": "OK"
   },
   {
@@ -1002,40 +1018,48 @@
    "tipo": "evidencia",
    "id": "DQ.Q.000314",
    "contexto": "DQ.P1.C21.E01",
-   "palabras_ok": 631,
-   "palabras_totales": 631,
+   "palabras_ok": 29,
+   "palabras_totales": 29,
    "estado": "OK"
   },
   {
    "tipo": "evidencia",
    "id": "DQ.Q.000314",
    "contexto": "DQ.P1.C21.E01",
-   "palabras_ok": 533,
-   "palabras_totales": 533,
+   "palabras_ok": 37,
+   "palabras_totales": 37,
+   "estado": "OK"
+  },
+  {
+   "tipo": "evidencia",
+   "id": "DQ.Q.000314",
+   "contexto": "DQ.P1.C21.E01",
+   "palabras_ok": 29,
+   "palabras_totales": 29,
    "estado": "OK"
   },
   {
    "tipo": "evidencia",
    "id": "DQ.Q.000315",
    "contexto": "DQ.P1.C21.E01",
-   "palabras_ok": 533,
-   "palabras_totales": 533,
+   "palabras_ok": 46,
+   "palabras_totales": 46,
    "estado": "OK"
   },
   {
    "tipo": "evidencia",
    "id": "DQ.Q.000316",
    "contexto": "DQ.P1.C21.E01",
-   "palabras_ok": 638,
-   "palabras_totales": 638,
+   "palabras_ok": 29,
+   "palabras_totales": 29,
    "estado": "OK"
   },
   {
    "tipo": "evidencia",
    "id": "DQ.Q.000317",
    "contexto": "DQ.P1.C21.E01",
-   "palabras_ok": 631,
-   "palabras_totales": 631,
+   "palabras_ok": 29,
+   "palabras_totales": 29,
    "estado": "OK"
   },
   {
@@ -1044,6 +1068,38 @@
    "contexto": "DQ.P1.C21.E01",
    "palabras_ok": 58,
    "palabras_totales": 58,
+   "estado": "OK"
+  },
+  {
+   "tipo": "evidencia",
+   "id": "DQ.Q.000318",
+   "contexto": "DQ.P1.C21.E01",
+   "palabras_ok": 40,
+   "palabras_totales": 40,
+   "estado": "OK"
+  },
+  {
+   "tipo": "evidencia",
+   "id": "DQ.Q.000318",
+   "contexto": "DQ.P1.C21.E01",
+   "palabras_ok": 35,
+   "palabras_totales": 35,
+   "estado": "OK"
+  },
+  {
+   "tipo": "evidencia",
+   "id": "DQ.Q.000318",
+   "contexto": "DQ.P1.C21.E01",
+   "palabras_ok": 62,
+   "palabras_totales": 62,
+   "estado": "OK"
+  },
+  {
+   "tipo": "evidencia",
+   "id": "DQ.Q.000318",
+   "contexto": "DQ.P1.C21.E01",
+   "palabras_ok": 67,
+   "palabras_totales": 67,
    "estado": "OK"
   },
   {

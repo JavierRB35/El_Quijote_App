@@ -70,6 +70,8 @@
             "passages/DQ.P1.C21.P0002.json",
             "passages/DQ.P1.C21.P0003.json",
             "passages/DQ.P1.C21.P0004.json",
+            "passages/DQ.P1.C21.P0005.json",
+            "passages/DQ.P1.C21.P0006.json",
             "passages/DQ.P2.C01.P0001.json",
             "passages/DQ.P2.C01.P0002.json",
             "passages/DQ.P2.C01.P0003.json",
@@ -310,7 +312,7 @@
     "counts": {
         "editions": 3,
         "chapters": 11,
-        "passages": 59,
+        "passages": 61,
         "episodes": 10,
         "questions": 74,
         "discoveries": 14,

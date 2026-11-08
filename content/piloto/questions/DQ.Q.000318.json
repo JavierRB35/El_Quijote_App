@@ -8,27 +8,28 @@
  "passage_ids": [
   "DQ.P1.C21.P0001",
   "DQ.P1.C21.P0002",
-  "DQ.P1.C21.P0004"
+  "DQ.P1.C21.P0003",
+  "DQ.P1.C21.P0006"
  ],
- "prompt": "Ordena los lances de la aventura del yelmo.",
+ "prompt": "Después de conocer la aventura del supuesto yelmo, ordena los hechos tal como suceden en I,21.",
  "interaction": {
   "type": "ordering",
   "options": [
    {
-    "id": "DQ.Q.000318.O01",
-    "label": "Llueve; Sancho propone refugiarse en los batanes y don Quijote lo rechaza"
-   },
-   {
-    "id": "DQ.Q.000318.O02",
-    "label": "Don Quijote señala al jinete con «yelmo de oro» bajo la lluvia"
-   },
-   {
     "id": "DQ.Q.000318.O03",
-    "label": "Don Quijote ordena «Apártate» y embiste al barbero"
+    "label": "Don Quijote arremete; el barbero cae del asno y huye, dejando la bacía"
+   },
+   {
+    "id": "DQ.Q.000318.O01",
+    "label": "Comienza a llover; Sancho propone entrar en los batanes y don Quijote se niega"
    },
    {
     "id": "DQ.Q.000318.O04",
-    "label": "El barbero deja la bacía y huye; don Quijote la recoge como trofeo"
+    "label": "Por mandato de don Quijote, Sancho recoge la bacía del suelo"
+   },
+   {
+    "id": "DQ.Q.000318.O02",
+    "label": "Don Quijote divisa a un hombre con una cosa reluciente en la cabeza"
    }
   ],
   "correct_order": [
@@ -39,12 +40,32 @@
   ],
   "shuffle_options": false
  },
- "rationale": "Secuencia canónica de I, 21: lluvia, avistamiento, carga, conquista de la bacía-yelmo.",
+ "rationale": "El narrador cuenta primero la lluvia y el rechazo de entrar en los batanes; luego el avistamiento. Don Quijote acomete al barbero, que se deja caer del asno, huye y abandona la bacía; por mandato de don Quijote, Sancho la alza. Sancho, no don Quijote, es quien la recoge.",
  "evidence": [
   {
    "kind": "cita_literal",
    "passage_id": "DQ.P1.C21.P0001",
    "quote": "En esto, comenzó a llover un poco, y quisiera Sancho que se entraran en el molino de los batanes; mas habíales cobrado tal aborrecimiento don Quijote, por la pesada burla, que en ninguna manera quiso entrar dentro; y así, torciendo el camino a la derecha mano, dieron en otro como el que habían llevado el día de antes."
+  },
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C21.P0002",
+   "quote": "De allí a poco, descubrió don Quijote un hombre a caballo, que traía en la cabeza una cosa que relumbraba como si fuera de oro, y aún él apenas le hubo visto, cuando se volvió a Sancho y le dijo:"
+  },
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C21.P0006",
+   "quote": "Y cuando él vio que el pobre caballero llegaba cerca, sin ponerse con él en razones, a todo correr de Rocinante le enristró con el lanzón bajo, llevando intención de pasarle de parte a parte;"
+  },
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C21.P0006",
+   "quote": "El barbero, que, tan sin pensarlo ni temerlo, vio venir aquella fantasma sobre sí, no tuvo otro remedio, para poder guardarse del golpe de la lanza, si no fue el dejarse caer del asno abajo; y no hubo tocado al suelo, cuando se levantó más ligero que un gamo y comenzó a correr por aquel llano, que no le alcanzara el viento."
+  },
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C21.P0006",
+   "quote": "Dejóse la bacía en el suelo, con la cual se contentó don Quijote, y dijo que el pagano había andado discreto y que había imitado al castor, el cual, viéndose acosado de los cazadores, se taraza y arpa con los dientes aquéllo por lo que él, por distinto natural, sabe que es perseguido. Mandó a Sancho que alzase el yelmo, el cual, tomándola en las manos, dijo:"
   }
  ],
  "certainty": "TEXTO_EXPLICITO",

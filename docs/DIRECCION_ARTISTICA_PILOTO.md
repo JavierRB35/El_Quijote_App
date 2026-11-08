@@ -2,6 +2,17 @@
 
 **Estado:** piloto visual para revisión, v0.5, 5 de noviembre de 2026. Cinco baterías, 59 imágenes en conjunto (58 escenas y una referencia de personajes).
 
+## Política visual vigente (DC-24–DC-27, decisión del propietario 2026-11-08)
+
+- **Preguntas:** cada pregunta de una entrega final tendrá **imagen propia, exclusiva y específica**, elegida o producida para su enunciado; no basta reutilizar en varias preguntas una escena genérica. Todas las imágenes previas respetan el momento narrativo y no adelantan la respuesta.
+- **Modo Historia:** montaje suficientemente ilustrado, cinematográfico e interesante; variedad de planos de establecimiento, acción y reacción/continuidad según necesidad. Una secuencia extensa de fondo neutro puede servir para desarrollar y probar, **no como aprobación artística final del capítulo**.
+- **Orden de recursos:** `assets/scenes/` primero, `assets/closeups/` si complementan una escena, acuarelas solo como recurso secundario dentro del juego; nuevas imágenes mediante **prompt exacto de Dirección** si ninguna opción existente es apta. No mezclar estilos sin razón editorial.
+- **Galería/Sección artística:** acuarelas Tusell/Doré y tradición ilustrativa como contenido principal de una sección dedicada, con contexto, fuente, autoría y comparación opcional con escenas, respetando derechos.
+- **Producción y entrega:** Dirección (ChatGPT) hace selección, define y revisa prompts; el director artístico crea imágenes solo cuando el propietario lo encarga; el desarrollador único incorpora archivos, manifiestos, IDs, SHA, alt, fase, licencias y pruebas al repositorio **GitHub**. No declarar `review.state` ni redistribución autorizados sin evidencia.
+- **Conservar TS-001:** el texto permanece íntegro, accesible y legible con fondos o imágenes; neutro es fallback seguro y transición puntual, nunca una justificación para omitir el arte definitivo.
+
+Referencias vinculantes: `docs/VISION_Y_DECISIONES.md` DC-23–DC-27 y `docs/DECISIONES_OPERATIVAS_Y_POLITICA_VISUAL_2026-11-08.md`.
+
 ## Identidad
 
 **Realismo cinematográfico con matiz pictórico.** Los encuadres deben parecer fotogramas de una producción de época de alta calidad: piel y materiales naturales, arquitectura verosímil, polvo, luz rasante, niebla suave y color contenido. Evitar caricatura, ilustración infantil, fantasía heroica, saturación estridente, escenas de guerra desproporcionadas y exceso de ornamentos.

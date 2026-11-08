@@ -240,9 +240,14 @@ comprobar("\n" not in p["text_original"],
 # contaminada. La integridad de esas palabras la garantizan el test
 # test_limites_capitulo.py y el cotejo contra el fuente.
 PALABRAS_AUTORIZADAS_A_CAMBIAR = {
+    # subsanación P1 (sangrado I,20→I,21, PR #62 fusionada): fragmento
+    # recortado al inicio narrativo válido de I,21 y citas sustituidas
     os.path.join("passages", "DQ.P1.C21.P0001.json"),
     os.path.join("questions", "DQ.Q.000313.json"),
     os.path.join("questions", "DQ.Q.000318.json"),
+    # integración #65 (fusionada): DQ.Q.000107 recibe imagen propia DC-24 y
+    # su cita de evidencia se sustituye por la documentada en P0007
+    os.path.join("questions", "DQ.Q.000107.json"),
 }
 n_estructura = 0
 for dir_nombre in ("passages", "questions"):

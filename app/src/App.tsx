@@ -8,9 +8,10 @@ import type { Catalogo } from './contrato';
 import { cargarCatalogo } from './entorno';
 import ReproductorHistoria from './historia/ReproductorHistoria';
 import ModoAventura from './aventura/ModoAventura';
+import Museo from './museo/Museo';
 import './App.css';
 
-type Modo = 'menu' | 'historia' | 'aventura';
+type Modo = 'menu' | 'historia' | 'aventura' | 'museo';
 
 export default function App() {
   const [catalogo, setCatalogo] = useState<Catalogo | null>(null);
@@ -31,6 +32,10 @@ export default function App() {
   }
   if (modo === 'aventura') {
     return <ModoAventura catalogo={catalogo} onSalir={() => setModo('menu')} />;
+  }
+  if (modo === 'museo') {
+    // El Museo no depende del catálogo editorial: accesible sin progreso.
+    return <Museo onSalir={() => setModo('menu')} />;
   }
 
   return (
@@ -61,6 +66,14 @@ export default function App() {
             </span>
           </button>
         </div>
+        <button className="tarjeta-modo museo-entrada" onClick={() => setModo('museo')}>
+          <span className="tarjeta-modo-nombre">Museo · Galería artística</span>
+          <span className="tarjeta-modo-detalle">
+            Las acuarelas históricas de la edición Tusell: primera colección con
+            las cinco obras del episodio de los molinos y el vizcaíno. Abierto a
+            todos, sin requisitos de progreso.
+          </span>
+        </button>
         <p className="menu-nota">Historia guarda aparte la lectura; Aventura guarda aparte tus respuestas.</p>
       </section>
     </main>

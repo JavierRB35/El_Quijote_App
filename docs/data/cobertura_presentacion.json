@@ -10,7 +10,7 @@
   },
   "questions.evidence[].quote": {
    "capa": "datos (restaurar_estructura, PR #59)",
-   "citas": 76,
+   "citas": 78,
    "questions_con_residuos": {}
   },
   "beats.utterances[].texto_visible": {
@@ -109,25 +109,25 @@
      "cortes_que_presentacion_une": 2,
      "saltos_literarios": 0
     },
+    "DQ.INT.000016": {
+     "beat": "DQ.BEAT.000009",
+     "capitulo": "DQ.P1.C08",
+     "saltos_totales": 2,
+     "cortes_que_presentacion_une": 2,
+     "saltos_literarios": 0
+    },
     "DQ.INT.000014": {
-     "beat": "DQ.BEAT.000008",
+     "beat": "DQ.BEAT.000010",
      "capitulo": "DQ.P1.C08",
      "saltos_totales": 5,
      "cortes_que_presentacion_une": 5,
      "saltos_literarios": 0
     },
     "DQ.INT.000015": {
-     "beat": "DQ.BEAT.000008",
+     "beat": "DQ.BEAT.000010",
      "capitulo": "DQ.P1.C08",
      "saltos_totales": 0,
      "cortes_que_presentacion_une": 0,
-     "saltos_literarios": 0
-    },
-    "DQ.INT.000016": {
-     "beat": "DQ.BEAT.000009",
-     "capitulo": "DQ.P1.C08",
-     "saltos_totales": 2,
-     "cortes_que_presentacion_une": 2,
      "saltos_literarios": 0
     }
    }

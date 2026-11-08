@@ -130,6 +130,12 @@ export default defineConfig(() => ({
           port: 1421,
         }
       : undefined,
+    // El Museo importa dinámicamente el manifiesto de ilustraciones, que
+    // vive fuera de app/ (assets/ilustraciones_tusell/): permitir servirlo
+    // desde la raíz del repositorio en desarrollo.
+    fs: {
+      allow: [RAIZ_REPO],
+    },
     watch: {
       // 3. tell Vite to ignore watching `src-tauri`
       ignored: ["**/src-tauri/**"],

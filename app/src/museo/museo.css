@@ -1,0 +1,426 @@
+/* Museo — Galería artística (issue #73). Estilos autocontenidos en su
+   propio fichero para no acoplar el módulo cultural a App.css; usa las
+   variables de paleta globales (:root en App.css). La acuarela NUNCA se
+   recorta (object-fit: contain) ni queda tapada por paneles opacos. */
+
+.museo {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background:
+    radial-gradient(100% 50% at 50% 0%, rgba(201, 151, 63, 0.12), transparent 55%),
+    var(--noche);
+  color: var(--lino);
+  display: flex;
+  flex-direction: column;
+}
+
+.museo-cabecera {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 2.4rem 0.9rem;
+  border-bottom: 1px solid rgba(201, 151, 63, 0.25);
+  background: linear-gradient(180deg, rgba(6, 5, 4, 0.7), transparent);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  backdrop-filter: blur(8px);
+}
+
+.museo-cabecera h1 {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.museo-kicker {
+  margin: 0 0 0.15rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--ambar-claro);
+}
+
+.museo-boton {
+  font: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--lino);
+  padding: 0.5rem 1rem;
+  background: rgba(243, 234, 214, 0.06);
+  border: 1px solid rgba(243, 234, 214, 0.22);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+  white-space: nowrap;
+}
+
+.museo-boton:hover:not(:disabled) {
+  background: rgba(201, 151, 63, 0.14);
+  border-color: rgba(201, 151, 63, 0.55);
+}
+
+.museo-boton:focus-visible {
+  outline: 2px solid var(--ambar-claro);
+  outline-offset: 2px;
+}
+
+.museo-boton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.museo-primario {
+  color: var(--ambar-claro);
+  border-color: var(--ambar);
+  background: linear-gradient(180deg, rgba(201, 151, 63, 0.28), rgba(201, 151, 63, 0.12));
+}
+
+.museo-error {
+  margin: 2rem auto;
+  color: var(--terraco, #c26b4f);
+  font-size: 0.95rem;
+}
+
+.museo-cargando {
+  color: var(--lino-apagado);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.museo-cargando-central {
+  margin: 4rem auto;
+}
+
+/* ---------- portada ---------- */
+
+.museo-portada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 2rem 2.4rem 1rem;
+}
+
+.museo-entradilla {
+  max-width: 46rem;
+  margin: 0;
+  text-align: center;
+  line-height: 1.65;
+  color: var(--lino-apagado);
+  font-size: 1rem;
+}
+
+.museo-destacadas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1rem;
+  width: min(64rem, 94vw);
+}
+
+.museo-destacada {
+  font: inherit;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.6rem;
+  background: var(--panel, rgba(17, 13, 9, 0.82));
+  border: 1px solid rgba(243, 234, 214, 0.16);
+  border-radius: 4px;
+  color: var(--lino);
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.museo-destacada:hover {
+  background: rgba(201, 151, 63, 0.1);
+  border-color: rgba(201, 151, 63, 0.5);
+}
+
+.museo-destacada:focus-visible {
+  outline: 2px solid var(--ambar-claro);
+  outline-offset: 2px;
+}
+
+.museo-destacada img {
+  width: 100%;
+  height: 12rem;
+  object-fit: contain; /* la acuarela completa, sin recortes */
+  background: #060504;
+  border-radius: 2px;
+}
+
+.museo-destacada-titulo {
+  font-size: 0.98rem;
+  color: var(--lino);
+  line-height: 1.35;
+}
+
+.museo-destacada-id {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  color: var(--ambar-claro);
+}
+
+/* ---------- galería ---------- */
+
+.museo-galeria {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 1.4rem 2.4rem 1rem;
+}
+
+.museo-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 1rem;
+}
+
+.museo-filtros label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ambar-claro);
+}
+
+.museo-filtros select {
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--lino);
+  background: rgba(243, 234, 214, 0.06);
+  border: 1px solid rgba(243, 234, 214, 0.25);
+  border-radius: 3px;
+  padding: 0.4rem 0.6rem;
+  min-width: 13rem;
+}
+
+.museo-filtros select:focus-visible {
+  outline: 2px solid var(--ambar-claro);
+  outline-offset: 2px;
+}
+
+.museo-contador {
+  font-size: 0.85rem;
+  color: var(--lino-apagado);
+  padding-bottom: 0.5rem;
+}
+
+.museo-rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 0.8rem;
+}
+
+.museo-mini {
+  font: inherit;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.45rem;
+  background: rgba(243, 234, 214, 0.04);
+  border: 1px solid rgba(243, 234, 214, 0.14);
+  border-radius: 3px;
+  color: var(--lino);
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.museo-mini:hover {
+  background: rgba(201, 151, 63, 0.1);
+  border-color: rgba(201, 151, 63, 0.45);
+}
+
+.museo-mini:focus-visible {
+  outline: 2px solid var(--ambar-claro);
+  outline-offset: 2px;
+}
+
+.museo-mini img {
+  width: 100%;
+  height: 9rem;
+  object-fit: contain; /* miniatura sin recorte */
+  background: #060504;
+  border-radius: 2px;
+}
+
+.museo-mini.en-coleccion {
+  border-color: rgba(201, 151, 63, 0.65);
+}
+
+.museo-mini-pie {
+  font-size: 0.74rem;
+  line-height: 1.3;
+  color: var(--lino-apagado);
+}
+
+.museo-mini-vacia {
+  height: 9rem;
+  display: grid;
+  place-items: center;
+  background: #060504;
+  border-radius: 2px;
+  color: rgba(243, 234, 214, 0.35);
+}
+
+.museo-paginacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--lino-apagado);
+}
+
+/* ---------- visor ---------- */
+
+.museo-visor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.2rem 2.4rem 1rem;
+  outline: none;
+}
+
+.museo-visor:focus-visible {
+  outline: 2px solid var(--ambar-claro);
+  outline-offset: -4px;
+}
+
+.museo-marco {
+  overflow: auto;
+  background: #060504;
+  border: 1px solid rgba(201, 151, 63, 0.35);
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  min-height: 45vh;
+  max-height: 66vh;
+}
+
+.museo-marco img {
+  display: block;
+  max-width: 100%;
+  max-height: 66vh;
+  object-fit: contain; /* la obra completa, jamás recortada */
+  transform-origin: center center;
+  transition: transform 0.25s ease;
+}
+
+.museo-marco[data-zoom='1'] img {
+  transition: transform 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .museo-marco img {
+    transition: none;
+  }
+}
+
+.museo-controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.museo-posicion {
+  font-size: 0.82rem;
+  color: var(--lino-apagado);
+  min-width: 5rem;
+  text-align: center;
+}
+
+.museo-zoom {
+  font-size: 0.82rem;
+  color: var(--ambar-claro);
+  min-width: 4.5rem;
+  text-align: center;
+}
+
+/* ---------- ficha (documentada, sin inventar) ---------- */
+
+.museo-ficha {
+  align-self: stretch;
+  background: rgba(6, 5, 4, 0.55);
+  border: 1px solid rgba(201, 151, 63, 0.3);
+  border-radius: 4px;
+  padding: 1rem 1.3rem;
+}
+
+.museo-ficha dl {
+  display: grid;
+  grid-template-columns: minmax(9rem, max-content) 1fr;
+  gap: 0.35rem 1.2rem;
+  margin: 0;
+}
+
+.museo-ficha dt {
+  font-size: 0.66rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ambar-claro);
+  padding-top: 0.15rem;
+}
+
+.museo-ficha dd {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--lino);
+}
+
+.museo-alt {
+  font-style: italic;
+  color: var(--lino-apagado);
+}
+
+.museo-nota {
+  margin: 0.8rem 0 0;
+  font-size: 0.72rem;
+  color: rgba(243, 234, 214, 0.5);
+  font-family: 'Cascadia Mono', Consolas, monospace;
+}
+
+/* ---------- derechos (aviso permanente) ---------- */
+
+.museo-derechos {
+  margin-top: auto;
+  padding: 0.7rem 2.4rem 0.9rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: rgba(243, 234, 214, 0.55);
+  border-top: 1px solid rgba(243, 234, 214, 0.12);
+}
+
+/* ---------- pantallas estrechas ---------- */
+
+@media (max-width: 760px) {
+  .museo-cabecera,
+  .museo-portada,
+  .museo-galeria,
+  .museo-visor,
+  .museo-derechos {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .museo-ficha dl {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+
+  .museo-ficha dt {
+    margin-top: 0.5rem;
+  }
+}

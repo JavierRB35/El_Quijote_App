@@ -123,6 +123,12 @@ export default defineConfig(() => ({
     port: 1420,
     strictPort: true,
     host: host || false,
+    // El Museo importa dinámicamente el manifiesto de ilustraciones, que
+    // vive fuera de app/ (assets/ilustraciones_tusell/): permitir servirlo
+    // desde la raíz del repositorio en desarrollo.
+    fs: {
+      allow: [RAIZ_REPO],
+    },
     hmr: host
       ? {
           protocol: "ws",

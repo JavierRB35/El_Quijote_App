@@ -1,34 +1,34 @@
 {
- "id": "DQ.MA.901008",
- "contract_version": "1.0.0",
- "function": "pre_pregunta",
- "media_class": "RECREACION_IA",
- "logical_uri": "assets://scenes/part_1/chapter_08/p1_c08_question_000109.webp",
- "derivatives": [
-  {
-   "variant": "original",
-   "format": "webp",
-   "width": 2560,
-   "height": 1440,
-   "size_bytes": 448406,
-   "sha256": "sha256:9655e7ed39da59981901b3b286c713d8251e7457096783763794b5505695920e"
-  }
- ],
- "alt": "Don Quijote, erguido en su caballo con la adarga al brazo, mira hacia arriba mientras Sancho, montado en su rucio, le observa en direcciones opuestas; molinos lejanos al fondo.",
- "source_id": "DQ.SRC.0003",
- "license_id": "DQ.LIC.0002",
- "author": "Equipo de arte El_Quijote_App (recreación IA)",
- "date": "2026-11-08",
- "allowed_uses": [
-  "uso_personal_app",
-  "almacenamiento_repo_git"
- ],
- "license_status": "verificada",
- "provenance": "Recreación IA del proyecto (OpenAI ImageGen, 2026-11-08, encargo artístico A01 — PR #67); referencias encadenadas de continuidad del propio lote y del repositorio (personajes_referencia, molinos_pre, frailes_carreta_pre); rotulada RECREACION_ARTISTICA (nunca evidencia histórica). Pregunta DQ.Q.000109 (desacuerdo Quijote/Sancho, sin parejas resueltas). sha256, dimensiones (2560×1440) y tamaño verificados contra el fichero en la catalogación. Revisión editorial de Dirección del lote A01 pendiente (PR #67: control de producción, no aprobación definitiva); permisos acreditados: uso_personal_app y almacenamiento_repo_git — redistribución no acreditada.",
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "spoiler_level": "ninguno"
+  "id": "DQ.MA.901008",
+  "contract_version": "1.0.0",
+  "function": "pre_pregunta",
+  "media_class": "RECREACION_IA",
+  "logical_uri": "assets://scenes/part_1/chapter_08/p1_c08_question_000109_safe_right_v2.webp",
+  "derivatives": [
+    {
+      "variant": "original",
+      "format": "webp",
+      "width": 1672,
+      "height": 941,
+      "size_bytes": 175938,
+      "sha256": "sha256:3419259b14b0f122a99b27cdfaac2f1419831f13a9d73c3838ff632fae4500d4"
+    }
+  ],
+  "alt": "Don Quijote y Sancho conversan sobre un camino de la Mancha, sin representar visualmente las correspondencias que debe elegir el jugador.",
+  "source_id": "DQ.SRC.0003",
+  "license_id": "DQ.LIC.0002",
+  "author": "Equipo de arte El_Quijote_App (recreación IA)",
+  "date": "2026-11-08",
+  "allowed_uses": [
+    "uso_personal_app",
+    "almacenamiento_repo_git"
+  ],
+  "license_status": "verificada",
+  "provenance": "Recreación IA del proyecto (OpenAI ImageGen, 2026-11-08, encargo artístico A01 — PR #67); referencias encadenadas de continuidad del propio lote y del repositorio (personajes_referencia, molinos_pre, frailes_carreta_pre); rotulada RECREACION_ARTISTICA (nunca evidencia histórica). Pregunta DQ.Q.000109 (desacuerdo Quijote/Sancho, sin parejas resueltas). sha256, dimensiones (2560×1440) y tamaño verificados contra el fichero en la catalogación. Revisión editorial de Dirección del lote A01 pendiente (PR #67: control de producción, no aprobación definitiva); permisos acreditados: uso_personal_app y almacenamiento_repo_git — redistribución no acreditada. Nueva variante 2026-11-08: dirección artística con zona segura natural en el 30 % derecho; original anterior preservado. Validación editorial y de superposición en dispositivos pendiente.",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "spoiler_level": "ninguno"
 }

@@ -30,7 +30,7 @@ test('imágenes: 9 preimágenes distintas y consecuencias reales de Aventura/His
   assert.ok(fuentes.some((m) => !m.medioId && m.uri.includes('story_')));
   for (const img of fuentes) {
     assert.ok(img.uri.startsWith('assets://scenes/part_1/chapter_08/'));
-    assert.ok(existsSync(resolve('..', img.uri.replace('assets://', ''))), img.uri);
+    assert.ok(existsSync(resolve('..', 'assets', img.uri.replace('assets://', ''))), img.uri);
     assert.ok(img.alt.length > 15);
   }
   for (const ronda of R) {

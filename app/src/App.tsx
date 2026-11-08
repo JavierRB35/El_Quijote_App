@@ -69,8 +69,8 @@ export default function App() {
           <button className="tarjeta-modo" onClick={() => setModo('aventura')}>
             <span className="tarjeta-modo-nombre">Modo Aventura</span>
             <span className="tarjeta-modo-detalle">
-              Preguntas sobre el episodio: hechos, causas y sentido del equívoco.
-              Tu progreso de respuestas se conserva tal como lo dejaste.
+              Anticipa lo que harán los personajes: cada respuesta puede hacerte ganar o perder puntos.
+              Supera hazañas, consigue bonificaciones y guarda el avance en checkpoints.
             </span>
           </button>
         </div>

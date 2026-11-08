@@ -52,6 +52,18 @@ def plano(texto: str) -> str:
     return re.sub(r"\s+", " ", texto).strip()
 
 
+_FRASE_TERMINA = re.compile(r"[.!?…»\"]\s*$")
+_MAYUSCULA_INICIA = re.compile(r"^[A-ZÁÉÍÓÚÜÑ¿¡«(\u2014]")
+
+
+def _es_frontera_de_bloque(linea_1: str, linea_2: str) -> bool:
+    """True si el corte es frontera de frase/bloque: la línea anterior acaba
+    con puntuación de cierre de frase y la siguiente arranca por mayúscula.
+    Los cortes estrechos a mitad de frase (composición tipográfica) no son
+    estructura literaria: se unen."""
+    return bool(_FRASE_TERMINA.search(linea_1) and _MAYUSCULA_INICIA.match(linea_2))
+
+
 def clasificar_parrafo(parrafo: str) -> dict[int, str]:
     """Saltos semánticos de un párrafo completo → {índice de línea: separador}.
 
@@ -72,19 +84,26 @@ def clasificar_parrafo(parrafo: str) -> dict[int, str]:
         if l2.startswith("—"):
             cortes[i] = PAR          # parlamento nuevo
             no_mecanicos += 1
+        elif cabe and _es_frontera_de_bloque(l1, l2):
+            # corte estrecho que además es frontera de frase/bloque: en el
+            # txt de PG hay límites de párrafo del original comprimidos a
+            # un solo \n (p. ej. «…de la cuenta.\nEn esto…»).
+            cortes[i] = PAR
+            no_mecanicos += 1
         elif cabe:
             cortes[i] = VERSO        # candidata a verso
             no_mecanicos += 1
     # Bloque de verso: TODAS las líneas cortas y NINGÚN corte mecánico que
     # atraviese la estrofa. En caso contrario el párrafo es prosa y solo se
-    # conservan los parlamentos.
+    # conservan los parlamentos y las fronteras de bloque — nunca un corte
+    # estrecho a mitad de frase (eso es composición tipográfica, no verso).
     if (
         len(lineas) >= 3
         and all(len(l) < UMBRAL_VERSO for l in lineas)
         and no_mecanicos == len(lineas) - 1
     ):
         return {i: VERSO for i in range(len(lineas) - 1)}
-    return cortes
+    return {i: sep for i, sep in cortes.items() if sep == PAR}
 
 
 def restaurar_estructura(texto_dado: str, fuente_lf: str, inicio: int, fin: int) -> str:

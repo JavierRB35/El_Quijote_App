@@ -66,6 +66,9 @@ jobs:
       - name: 'Verificación P0 del Modo Historia (molinos, I, 8): 16 intervenciones verbatim'
         run: python -I tests/dev/verificar_modo_historia_c08.py .
 
+      - name: 'Regresión P0 PR #59 — estructura literaria de saltos (versos, párrafos, parlamentos)'
+        run: python -I tests/dev/test_estructura_literaria.py .
+
   frontend:
     name: Construcción React/TypeScript y pruebas de lógica
     runs-on: ubuntu-latest

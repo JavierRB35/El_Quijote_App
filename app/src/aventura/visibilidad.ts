@@ -72,8 +72,15 @@ export function respuestasGuardadas(
   for (const [id, valor] of Object.entries(guardado as Record<string, unknown>)) {
     if (!idsConocidos.has(id)) continue;
     const r = valor as Partial<RespuestaGuardada> | null;
-    if (r && typeof r === 'object' && Array.isArray(r.seleccion)) {
-      guardadas[id] = { acierto: Boolean(r.acierto), seleccion: r.seleccion.map(String) };
+    // No convertir valores malformados: Boolean('false') sería true y podría
+    // inflar el marcador de una partida corrupta al restaurarla.
+    if (
+      r && typeof r === 'object' &&
+      typeof r.acierto === 'boolean' &&
+      Array.isArray(r.seleccion) &&
+      r.seleccion.every((s) => typeof s === 'string')
+    ) {
+      guardadas[id] = { acierto: r.acierto, seleccion: [...r.seleccion] };
     }
   }
   return guardadas;

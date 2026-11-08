@@ -12,7 +12,7 @@
 - **Dimensiones:** 1672 × 941 px, PNG, orientación horizontal.
 - **SHA-256 exacto:** `edc1afebf58f88a25ed249fe5cd288d1f24e2202195cceb288e6a414146994a7`.
 - **Ubicación persistente actual:** Biblioteca del proyecto `/EL_QUIJOTE/MUSEO_REFERENCIA_VISUAL_OFICIAL.png`; una copia descargable de la imagen se entregó al propietario en ChatGPT.
-- **Ubicación canónica que debe adquirir en ESTE repositorio en la PR de Museo:** `docs/referencias/museo/MUSEO_REFERENCIA_VISUAL_OFICIAL.png`. **ADVERTENCIA DE TRAZABILIDAD:** esta especificación en GitHub **no acredita aún que el PNG esté subido al repositorio**. Se requiere añadir el archivo binario idéntico y verificar exactamente el SHA-256 anterior ANTES del desarrollo/QA del Museo; si no, informar del bloqueo. No sustituir por captura regenerada, render distinto, JPG comprimido o mockup aproximado. No falsear su presencia en GitHub.
+- **Ubicación canónica en ESTE repositorio (ya guardada y verificada):** [`docs/referencias/museo/MUSEO_REFERENCIA_VISUAL_OFICIAL.png`](../docs/referencias/museo/MUSEO_REFERENCIA_VISUAL_OFICIAL.png). Blob Git exacto: `1355c6018e5d878cc14bf0cdbddd3e63accbf467`; commit de alta `54826cd41a9b5341e73ba35dc0242c270ef875d2`. Coinciden el blob Git y el SHA-256 del PNG original, **sin recrear ni comprimir la imagen**. Esta es la referencia obligatoria que debe usarse para implementación y QA.
 
 ### Preservación de la composición aprobada
 
@@ -54,5 +54,5 @@ La fuente, metadatos y texto se muestran **fuera** de la obra. En pantallas estr
 ## 5. Estado del artefacto
 
 - **Aprobado:** concepto compositivo exacto y texto pequeño de fuente.
-- **Guardado:** archivo PNG oficial en Biblioteca del proyecto con la huella arriba indicada; especificación canónica en GitHub.
-- **Pendiente en GitHub:** importar **exactamente el mismo PNG** a `docs/referencias/museo/MUSEO_REFERENCIA_VISUAL_OFICIAL.png`, verificando SHA-256. Este pendiente es de transferencia del binario, no autoriza generar otro diseño ni supone que el fichero ya exista en GitHub.
+- **Guardado:** PNG oficial idéntico en Biblioteca del proyecto **y en GitHub**, con huellas verificadas; especificación canónica en GitHub.
+- **Binario guardado en GitHub:** [`docs/referencias/museo/MUSEO_REFERENCIA_VISUAL_OFICIAL.png`](../docs/referencias/museo/MUSEO_REFERENCIA_VISUAL_OFICIAL.png), blob `1355c6018e5d878cc14bf0cdbddd3e63accbf467`, SHA-256 `edc1afebf58f88a25ed249fe5cd288d1f24e2202195cceb288e6a414146994a7`. **Sin pendientes de transferencia**; sí queda pendiente desarrollar y validar el Museo.

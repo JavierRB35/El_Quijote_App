@@ -1,26 +1,41 @@
 /* ============================================================================
-   El Quijote — Sistema vertical FASE 1
-   Composición cinematográfica según docs/DIRECCION_ARTISTICA_PILOTO.md:
-   paleta de tierras/ámbar/índigo, fotograma a sangre, sujeto en tercio
-   izquierdo y UI discreta a la derecha. Movimiento sutil salvo preferencia
-   de movimiento reducido (encargo §4.7.7, EF-ACC-02).
+   El Quijote — Sistema visual inmersivo (encargo P1)
+   Estética cinematográfica del Siglo de Oro: azul oscuro, dorado y pergamino
+   (referencia del propietario; propuesta visual, no especificación literal).
+   Textos grandes y escenas protagonistas: la imagen ocupa la mayor superficie
+   y los paneles respetan el lado seguro del encuadre. Tamaño de texto por
+   ajustes (html[data-ajuste-texto]) y movimiento reducido por preferencia
+   (html[data-ajuste-movimiento]) además de prefers-reduced-motion del sistema.
+   Requisitos de tamaño a 1920×1080 (encargo P1, requisitos UX):
+   enunciado de pregunta 34–40 px · opciones y narración 26–30 px, con clamp()
+   para 1366×768 y escalado de Windows 125 %/150 % (viewport CSS menor).
    ========================================================================== */
 
 :root {
-  /* Paleta de la dirección artística */
-  --lino: #f3ead6;        /* texto principal sobre oscuro */
-  --lino-apagado: #cfc3a6;
-  --ambar: #c9973f;       /* acento (ámbar de vela) */
-  --ambar-claro: #e3b96a;
-  --oliva: #8aa46b;       /* acierto (oliva seco) */
-  --terraco: #c26b4f;     /* fallo (terracota) */
-  --panel: rgba(17, 13, 9, 0.82);
-  --panel-borde: rgba(201, 151, 63, 0.35);
-  --noche: #0e0b08;
+  /* Paleta Siglo de Oro */
+  --noche: #0c1220;          /* azul oscuro de la noche castellana */
+  --noche-media: #131a2c;
+  --panel: rgba(13, 19, 34, 0.87);   /* azul oscuro de alto contraste */
+  --panel-solido: #111827;   /* panel de pregunta opaco (contraste estable) */
+  --panel-borde: rgba(212, 175, 106, 0.42);
+  --pergamino: #f2e8d5;      /* texto principal */
+  --pergamino-apagado: #c6bda6;
+  --dorado: #d4af6a;         /* acento (oro viejo) */
+  --dorado-claro: #e8c98a;
+  --oliva: #8aa46b;          /* acierto */
+  --terraco: #c26b4f;        /* fallo */
+
+  /* Escala tipográfica por ajustes (decisiones de producto 6). */
+  --escala-texto: 1;
 
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
   color-scheme: dark;
 }
+
+html[data-ajuste-texto='pequeno'] { --escala-texto: 0.88; }
+html[data-ajuste-texto='medio'] { --escala-texto: 1; }
+html[data-ajuste-texto='grande'] { --escala-texto: 1.15; }
+html[data-ajuste-texto='muy_grande'] { --escala-texto: 1.32; }
 
 * {
   box-sizing: border-box;
@@ -35,11 +50,23 @@ body,
 body {
   margin: 0;
   background: var(--noche);
-  color: var(--lino);
+  color: var(--pergamino);
   overflow: hidden;
 }
 
-/* ---------- lienzo (escena a sangre) ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- capa de escena (a sangre) ---------- */
 
 .cine {
   position: relative;
@@ -50,7 +77,7 @@ body {
 .lienzo {
   position: absolute;
   inset: 0;
-  background: #060504;
+  background: var(--noche);
 }
 
 .plano {
@@ -60,14 +87,20 @@ body {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1.6s ease;
-  /* Deriva sutil (Ken Burns): paneos discretos previstos por la dirección
-     artística; respeta prefers-reduced-motion más abajo. */
+  transition: opacity 1.4s ease;
+  /* Deriva sutil (Ken Burns) prevista por la dirección artística; se apaga
+     con movimiento reducido (más abajo) — encargo P1, decisión 9. */
   animation: deriva 42s ease-in-out infinite alternate;
 }
 
 .plano.activo {
   opacity: 1;
+}
+
+/* Con movimiento reducido: corte sin deriva, sin transición reveladora. */
+.plano.sin-deriva {
+  animation: none;
+  transform: none;
 }
 
 @keyframes deriva {
@@ -79,20 +112,34 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .plano {
-    animation: none;
-    transform: none;
-    transition: opacity 0.3s ease;
-  }
+/* Fondo neutro editorial: superficie del sistema visual (azul noche con
+   brasa dorada), decisión de diseño — nunca un estado de error ni de carga. */
+.neutro {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(110% 70% at 50% 0%, rgba(212, 175, 106, 0.16), transparent 55%),
+    radial-gradient(140% 90% at 50% 115%, rgba(19, 26, 44, 0.95), transparent 60%),
+    linear-gradient(180deg, #10192e 0%, var(--noche) 65%);
+  transition: opacity 1s ease;
+}
+
+.neutro-filete {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: min(38rem, 70vw);
+  height: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 106, 0.6), transparent);
 }
 
 .vineta {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(6, 5, 4, 0.62) 0%, transparent 22%, transparent 55%, rgba(6, 5, 4, 0.78) 100%),
-    radial-gradient(120% 90% at 30% 40%, transparent 55%, rgba(6, 5, 4, 0.5) 100%);
+    linear-gradient(180deg, rgba(7, 10, 18, 0.62) 0%, transparent 22%, transparent 55%, rgba(7, 10, 18, 0.8) 100%),
+    radial-gradient(120% 90% at 30% 40%, transparent 55%, rgba(7, 10, 18, 0.5) 100%);
   pointer-events: none;
 }
 
@@ -105,18 +152,19 @@ body {
   font-size: 0.85rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--lino-apagado);
+  color: var(--pergamino-apagado);
 }
 
-/* ---------- cabecera ---------- */
+/* ---------- cabecera compacta (menú siempre accesible) ---------- */
 
 .cabecera {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  padding: 1.6rem 2.4rem 1rem;
-  background: linear-gradient(180deg, rgba(6, 5, 4, 0.7), transparent);
+  z-index: 5;
+  padding: 1.2rem 2rem 0.9rem;
+  background: linear-gradient(180deg, rgba(7, 10, 18, 0.78), transparent);
   pointer-events: none;
 }
 
@@ -125,15 +173,15 @@ body {
   font-size: 0.72rem;
   letter-spacing: 0.42em;
   text-transform: uppercase;
-  color: var(--ambar-claro);
+  color: var(--dorado-claro);
 }
 
 .cabecera h1 {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  color: var(--lino);
+  color: var(--pergamino);
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.65);
 }
 
@@ -141,111 +189,274 @@ body {
   display: flex;
   align-items: center;
   gap: 0.9rem;
-  margin-top: 0.7rem;
+  margin-top: 0.6rem;
 }
 
 .progreso-texto {
   font-size: 0.78rem;
   letter-spacing: 0.18em;
-  color: var(--lino-apagado);
+  color: var(--pergamino-apagado);
   min-width: 3.2rem;
 }
 
 .progreso-barra {
-  flex: 0 1 220px;
+  flex: 0 1 200px;
   height: 2px;
-  background: rgba(243, 234, 214, 0.22);
+  background: rgba(242, 232, 213, 0.22);
   border-radius: 1px;
   overflow: hidden;
 }
 
 .progreso-relleno {
   height: 100%;
-  background: var(--ambar);
+  background: var(--dorado);
   transition: width 0.5s ease;
 }
 
 .guardado {
   font-size: 0.68rem;
   letter-spacing: 0.12em;
-  color: rgba(243, 234, 214, 0.5);
-  margin-left: auto;
+  color: rgba(242, 232, 213, 0.55);
 }
 
-/* ---------- panel de pregunta ---------- */
+.cabecera-acciones {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  pointer-events: auto;
+  position: relative;
+}
 
-.panel {
+/* ---------- banda de narración (lado seguro del encuadre) ---------- */
+
+.banda-texto {
   position: absolute;
-  right: 2.2rem;
   top: 50%;
   transform: translateY(-50%);
+  /* Reserva superior: el contenido nunca sube bajo la cabecera compacta,
+     tampoco con el panel ampliado en ventanas bajas (768p). */
+  padding-top: 7rem;
   width: min(30rem, 34vw);
-  max-height: min(78vh, 46rem);
+  max-height: min(94vh, 56rem);
   overflow-y: auto;
-  background: var(--panel);
-  border: 1px solid var(--panel-borde);
-  border-top: 2px solid var(--ambar);
-  border-radius: 4px;
-  padding: 1.5rem 1.6rem 1.4rem;
-  backdrop-filter: blur(14px) saturate(0.9);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.45s ease;
   scrollbar-width: thin;
-  scrollbar-color: rgba(201, 151, 63, 0.4) transparent;
+  scrollbar-color: rgba(212, 175, 106, 0.4) transparent;
 }
 
-/* En pantallas estrechas el panel baja al pie; la escena respira encima. */
-@media (max-width: 1100px) {
-  .panel {
-    right: 0;
-    left: 0;
-    top: auto;
-    bottom: 0;
-    transform: none;
-    width: auto;
-    max-height: 52vh;
-    border-radius: 10px 10px 0 0;
-    border-top-width: 2px;
+.banda-texto.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* El texto entra por el lado reservado del encuadre (encuadreDe: lado_texto). */
+.banda-texto.lado-derecha { right: 2.2rem; }
+.banda-texto.lado-izquierda { left: 2.2rem; }
+
+/* Sin plano (fondo neutro editorial deliberado): la banda se centra y
+   respira — no hay imagen que proteger, pero nada anuncia «falta». */
+.cine.sin-plano .banda-texto {
+  left: 50%;
+  right: auto;
+  transform: translate(-50%, -50%);
+  width: min(46rem, 92vw);
+}
+
+/* Panel de lectura: texto íntegro, visible desde el primer instante. */
+.lectura {
+  position: relative;
+  padding: 1.5rem 1.9rem 1.3rem;
+  background: var(--panel);
+  border: 1px solid var(--panel-borde);
+  border-top: 2px solid var(--dorado);
+  border-radius: 6px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px) saturate(0.9);
+  max-height: min(60vh, 42rem);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 175, 106, 0.4) transparent;
+}
+
+/* Panel ampliable sin perder contenido (requisitos UX, TS-001). */
+.lectura.amplia {
+  max-height: min(84vh, calc(100vh - 16rem));
+}
+
+.hablante {
+  margin: 0 0 0.15rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.hablante-narrador {
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  color: var(--pergamino-apagado);
+}
+
+.hablante-personaje {
+  color: var(--dorado-claro);
+}
+
+.beat-info {
+  margin: 0 0 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(242, 232, 213, 0.45);
+}
+
+/* Narración 26–30 px a 1080p (clamp para 768p y escalado Windows). */
+.texto {
+  margin: 0;
+  font-size: calc(clamp(1.45rem, 0.55vw + 1.1rem, 1.875rem) * var(--escala-texto));
+  line-height: 1.7;
+  color: var(--pergamino);
+  white-space: pre-line;
+  animation: aparecer 0.5s ease;
+}
+
+.escena-alt {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: rgba(242, 232, 213, 0.55);
+}
+
+.ampliar-lectura,
+.ampliar-panel {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+/* ---------- panel de pregunta (estado «pregunta»: inferior y ampliable) --- */
+
+.panel-pregunta {
+  position: absolute;
+  left: 50%;
+  bottom: 1.1rem;
+  transform: translateX(-50%);
+  z-index: 6;
+  width: min(58rem, 96vw);
+  /* Altura inicial acotada (refinamiento P1 de Dirección): enunciado completo,
+     indicación y ~2,5–3 opciones visibles; el resto, en scroll interno siempre
+     accesible (ratón, teclado y táctil). «Ampliar panel» sube el techo. */
+  max-height: min(52vh, 32rem);
+  overflow-y: auto;
+  /* Semitransparente con desenfoque: la escena se percibe detrás y el texto
+     conserva contraste AAA (pergamino #f2e8d5 ≈ 10–12:1 sobre el respaldo
+     azulado incluso con la imagen más clara detrás). Respaldo @supports para
+     motores sin backdrop-filter: sin desenfoque, respaldo más opaco. */
+  background: var(--panel); /* rgba(13, 19, 34, 0.87) */
+  backdrop-filter: blur(12px) saturate(0.85);
+  -webkit-backdrop-filter: blur(12px) saturate(0.85);
+  border: 1px solid var(--panel-borde);
+  border-top: 2px solid var(--dorado);
+  border-radius: 10px;
+  padding: 1.1rem 1.5rem 1rem;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 175, 106, 0.4) transparent;
+  animation: subir-panel 0.45s ease;
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .panel-pregunta {
+    background: rgba(13, 19, 34, 0.95);
   }
 }
 
+.panel-pregunta-cuerpo.amplio .panel-pregunta,
+.panel-pregunta:has(.panel-pregunta-cuerpo.amplio) {
+  max-height: 88vh;
+}
+
+/* En pantallas estrechas: el panel baja al pie a sangre y la escena respira. */
+@media (max-width: 1100px) {
+  .panel-pregunta {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: none;
+    width: auto;
+    max-height: 62vh;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .banda-texto,
+  .cine.sin-plano .banda-texto {
+    top: auto;
+    bottom: 0.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(46rem, 94vw);
+    max-height: 46vh;
+  }
+}
+
+@keyframes subir-panel {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) none;
+  }
+}
+
+/* Enunciado 34–40 px a 1080p; opciones 26–30 px (requisitos UX del encargo).
+   Las opciones largas reorganizan el panel y lo hacen crecer: nunca se
+   reduce la tipografía para caber (dirección artística). */
 .enunciado {
-  margin: 0 0 0.9rem;
-  font-size: 1.08rem;
-  line-height: 1.5;
-  color: var(--lino);
+  margin: 0 0 1rem;
+  font-size: calc(clamp(1.9rem, 0.75vw + 1.55rem, 2.5rem) * var(--escala-texto));
+  line-height: 1.4;
+  color: var(--pergamino);
 }
 
 .opciones {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
-  margin: 0.4rem 0 0.7rem;
+  gap: 0.6rem;
+  margin: 0.4rem 0 0.8rem;
 }
 
 .opcion {
   text-align: left;
   font: inherit;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: var(--lino);
-  padding: 0.6rem 0.85rem;
-  background: rgba(243, 234, 214, 0.05);
-  border: 1px solid rgba(243, 234, 214, 0.16);
-  border-left: 2px solid transparent;
-  border-radius: 3px;
+  font-size: calc(clamp(1.45rem, 0.5vw + 1.15rem, 1.875rem) * var(--escala-texto));
+  line-height: 1.45;
+  color: var(--pergamino);
+  padding: 0.75rem 1.1rem;
+  min-height: 48px;
+  background: rgba(242, 232, 213, 0.05);
+  border: 1px solid rgba(242, 232, 213, 0.18);
+  border-left: 3px solid transparent;
+  border-radius: 4px;
   cursor: pointer;
   transition: background 0.18s ease, border-color 0.18s ease;
 }
 
 .opcion:hover:not(:disabled) {
-  background: rgba(201, 151, 63, 0.12);
-  border-color: rgba(201, 151, 63, 0.45);
+  background: rgba(212, 175, 106, 0.12);
+  border-color: rgba(212, 175, 106, 0.5);
 }
 
 .opcion.elegida {
-  background: rgba(201, 151, 63, 0.16);
-  border-color: rgba(201, 151, 63, 0.65);
-  border-left-color: var(--ambar);
+  background: rgba(212, 175, 106, 0.16);
+  border-color: rgba(212, 175, 106, 0.7);
+  border-left-color: var(--dorado);
 }
 
 .opcion:disabled {
@@ -255,28 +466,32 @@ body {
 
 .opcion:focus-visible,
 .primario:focus-visible,
-.secundario:focus-visible {
-  outline: 2px solid var(--ambar-claro);
+.secundario:focus-visible,
+.control:focus-visible,
+.nota-cerrar:focus-visible,
+.descubrir-boton:focus-visible {
+  outline: 2px solid var(--dorado-claro);
   outline-offset: 2px;
 }
 
 .primario {
   font: inherit;
-  font-size: 0.92rem;
-  letter-spacing: 0.14em;
+  font-size: calc(clamp(1.3rem, 0.45vw + 1.05rem, 1.65rem) * var(--escala-texto));
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 0.65rem 1.5rem;
-  border: 1px solid var(--ambar);
-  border-radius: 2px;
-  background: linear-gradient(180deg, rgba(201, 151, 63, 0.28), rgba(201, 151, 63, 0.12));
-  color: var(--ambar-claro);
+  padding: 0.75rem 1.8rem;
+  min-height: 48px;
+  border: 1px solid var(--dorado);
+  border-radius: 3px;
+  background: linear-gradient(180deg, rgba(212, 175, 106, 0.28), rgba(212, 175, 106, 0.12));
+  color: var(--dorado-claro);
   cursor: pointer;
   margin-top: 0.7rem;
   transition: background 0.18s ease;
 }
 
 .primario:hover:not(:disabled) {
-  background: linear-gradient(180deg, rgba(201, 151, 63, 0.42), rgba(201, 151, 63, 0.2));
+  background: linear-gradient(180deg, rgba(212, 175, 106, 0.42), rgba(212, 175, 106, 0.2));
 }
 
 .primario:disabled {
@@ -286,21 +501,23 @@ body {
 
 .secundario {
   font: inherit;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   background: none;
   border: none;
-  color: var(--lino-apagado);
+  color: var(--pergamino-apagado);
   text-decoration: underline dotted;
   cursor: pointer;
   padding: 0.3rem 0;
+  min-height: 48px;
 }
 
+/* ---------- feedback (estado «narración» de Aventura) ---------- */
+
 .feedback {
-  margin-top: 0.9rem;
-  padding: 0.8rem 1rem;
-  border-left: 3px solid var(--ambar);
-  background: rgba(6, 5, 4, 0.45);
-  border-radius: 2px;
+  padding: 0.9rem 1.1rem;
+  border-left: 3px solid var(--dorado);
+  background: rgba(7, 10, 18, 0.5);
+  border-radius: 3px;
   animation: aparecer 0.5s ease;
 }
 
@@ -323,39 +540,32 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .feedback {
-    animation: none;
-  }
-}
-
 .veredicto {
   margin: 0 0 0.4rem;
-  font-size: 0.98rem;
-  line-height: 1.45;
+  font-size: calc(clamp(1.35rem, 0.45vw + 1.05rem, 1.7rem) * var(--escala-texto));
+  line-height: 1.5;
 }
 
 .ampliacion {
   margin: 0.3rem 0;
-  font-size: 0.88rem;
-  color: var(--lino-apagado);
+  font-size: calc(clamp(1.15rem, 0.4vw + 0.9rem, 1.4rem) * var(--escala-texto));
+  color: var(--pergamino-apagado);
 }
 
 .evidencia {
   margin: 0.45rem 0 0;
   font-style: italic;
-  font-size: 0.88rem;
-  line-height: 1.45;
-  color: var(--lino-apagado);
+  font-size: calc(clamp(1.1rem, 0.4vw + 0.85rem, 1.35rem) * var(--escala-texto));
+  line-height: 1.5;
+  color: var(--pergamino-apagado);
   /* Las citas llegan con su estructura literaria (PR #59): párrafos (\n\n),
-     parlamentos y versos (\n). pre-line los muestra sin alterar la cita;
-     con movimiento reducido no procede animación alguna aquí. */
+     parlamentos y versos (\n). pre-line los muestra sin alterar la cita. */
   white-space: pre-line;
 }
 
 .evidencia::before {
   content: '— ';
-  color: var(--ambar);
+  color: var(--dorado);
 }
 
 /* ordenación y emparejamiento */
@@ -370,17 +580,17 @@ body {
 }
 
 .orden-lista li {
-  font-size: 0.92rem;
-  line-height: 1.35;
+  font-size: calc(clamp(1.2rem, 0.45vw + 0.95rem, 1.5rem) * var(--escala-texto));
+  line-height: 1.4;
   padding: 0.35rem 0;
-  border-bottom: 1px dotted rgba(243, 234, 214, 0.18);
+  border-bottom: 1px dotted rgba(242, 232, 213, 0.18);
 }
 
 .orden-num {
   display: inline-block;
   min-width: 1.4rem;
-  color: var(--ambar-claro);
-  font-size: 0.8rem;
+  color: var(--dorado-claro);
+  font-size: 0.85em;
 }
 
 .matching {
@@ -391,16 +601,16 @@ body {
 
 .matching h4 {
   margin: 0.1rem 0 0.4rem;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   font-weight: 400;
-  color: var(--ambar-claro);
+  color: var(--dorado-claro);
 }
 
 .pista {
-  font-size: 0.82rem;
-  color: var(--lino-apagado);
+  font-size: calc(clamp(1.05rem, 0.35vw + 0.85rem, 1.25rem) * var(--escala-texto));
+  color: var(--pergamino-apagado);
   margin: 0.2rem 0 0.5rem;
 }
 
@@ -411,8 +621,8 @@ body {
 .resumen-titulo {
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-size: 0.85rem;
-  color: var(--ambar-claro);
+  font-size: 0.95rem;
+  color: var(--dorado-claro);
   margin: 0 0 0.3rem;
 }
 
@@ -420,8 +630,9 @@ body {
 
 .pie {
   position: absolute;
-  left: 2.4rem;
-  bottom: 1.4rem;
+  left: 2rem;
+  bottom: 1.2rem;
+  z-index: 5;
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -433,42 +644,243 @@ body {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   padding: 0.18rem 0.55rem;
-  border: 1px solid rgba(201, 151, 63, 0.55);
+  border: 1px solid rgba(212, 175, 106, 0.55);
   border-radius: 2px;
-  color: var(--ambar-claro);
-  background: rgba(6, 5, 4, 0.55);
+  color: var(--dorado-claro);
+  background: rgba(7, 10, 18, 0.6);
+}
+
+.rotulo-neutro {
+  color: var(--pergamino-apagado);
+  border-color: rgba(242, 232, 213, 0.4);
+  background: rgba(7, 10, 18, 0.45);
 }
 
 .pie-autor {
   font-size: 0.72rem;
   letter-spacing: 0.1em;
-  color: rgba(243, 234, 214, 0.65);
+  color: rgba(242, 232, 213, 0.65);
 }
 
-/* ---------- diagnóstico (F9) — evidencia ADR-0001.4 ---------- */
+/* ---------- controles del reproductor ---------- */
 
-.diagnostico {
-  position: absolute;
-  top: 0.8rem;
-  right: 0.9rem;
-  z-index: 10;
-  font-family: 'Cascadia Mono', Consolas, monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.05em;
-  color: var(--lino);
-  background: rgba(6, 5, 4, 0.75);
-  border: 1px solid rgba(201, 151, 63, 0.5);
+.controles {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.control {
+  font: inherit;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  color: var(--pergamino);
+  padding: 0.55rem 1.1rem;
+  min-height: 48px;
+  background: rgba(242, 232, 213, 0.06);
+  border: 1px solid rgba(242, 232, 213, 0.22);
   border-radius: 3px;
-  padding: 0.3rem 0.6rem;
-  pointer-events: none;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
 }
 
-/* ============================================================================
-   Modo Historia (P0): reproductor de narración continua con fondo neutro
-   editorial (v1.2.0: escena con media_ids: [] — decisión de diseño, no error
-   de carga). Texto íntegro como elemento principal (DC-22/TS-001); controles
-   siempre operables (DC-21); movimiento reducido respetado.
-   ========================================================================== */
+.control:hover:not(:disabled) {
+  background: rgba(212, 175, 106, 0.14);
+  border-color: rgba(212, 175, 106, 0.55);
+}
+
+.control:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.control-primario {
+  color: var(--dorado-claro);
+  border-color: var(--dorado);
+  background: linear-gradient(180deg, rgba(212, 175, 106, 0.28), rgba(212, 175, 106, 0.12));
+}
+
+.control-primario:hover:not(:disabled) {
+  background: linear-gradient(180deg, rgba(212, 175, 106, 0.42), rgba(212, 175, 106, 0.2));
+}
+
+.control-estado {
+  font-size: 0.8rem;
+  color: var(--pergamino-apagado);
+  min-height: 40px;
+}
+
+.control-estado[aria-pressed='true'] {
+  color: var(--dorado-claro);
+  border-color: rgba(212, 175, 106, 0.7);
+}
+
+/* ---------- ajustes (tamaño de texto y movimiento) ---------- */
+
+.ajustes {
+  position: relative;
+  display: inline-block;
+}
+
+.ajustes-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5rem);
+  z-index: 40;
+  width: 17rem;
+  background: var(--panel-solido);
+  border: 1px solid var(--panel-borde);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.ajustes-grupo {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ajustes-grupo legend {
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--dorado-claro);
+  padding: 0;
+  margin-bottom: 0.35rem;
+}
+
+.ajustes-opcion {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.98rem;
+  padding: 0.25rem 0;
+  cursor: pointer;
+}
+
+.ajustes-opcion input {
+  accent-color: var(--dorado);
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+/* ---------- panel lateral «Descubrir más» (plegado por defecto) ---------- */
+
+.descubrir {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  width: min(26rem, 90vw);
+  background: var(--panel-solido);
+  border-left: 2px solid var(--dorado);
+  box-shadow: -18px 0 50px rgba(0, 0, 0, 0.55);
+  padding: 1.1rem 1.3rem;
+  overflow-y: auto;
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: transform 0.28s ease, visibility 0.28s;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 175, 106, 0.4) transparent;
+}
+
+.descubrir.abierto {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.descubrir-cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.descubrir-titulo {
+  margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dorado-claro);
+}
+
+.descubrir-vacio {
+  color: var(--pergamino-apagado);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.descubrir-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.descubrir-item {
+  border: 1px solid rgba(242, 232, 213, 0.14);
+  border-left: 2px solid var(--dorado);
+  border-radius: 4px;
+  padding: 0.65rem 0.85rem;
+  background: rgba(242, 232, 213, 0.04);
+}
+
+.descubrir-etiqueta {
+  margin: 0 0 0.25rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dorado-claro);
+}
+
+.descubrir-texto {
+  margin: 0;
+  font-size: calc(clamp(1.05rem, 0.35vw + 0.85rem, 1.25rem) * var(--escala-texto));
+  line-height: 1.55;
+  color: var(--pergamino);
+  white-space: pre-line;
+}
+
+/* ---------- nota de fallo real de carga (única, cerrable, no bloquea) ----- */
+
+.nota-fallo {
+  position: absolute;
+  left: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  max-width: min(30rem, 80vw);
+  background: var(--panel-solido);
+  border: 1px solid var(--panel-borde);
+  border-radius: 4px;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--pergamino);
+}
+
+.nota-cerrar {
+  font: inherit;
+  background: none;
+  border: none;
+  color: var(--pergamino-apagado);
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
 
 /* ---------- menú de modos ---------- */
 
@@ -482,8 +894,8 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(90% 60% at 50% 8%, rgba(201, 151, 63, 0.16), transparent 60%),
-    radial-gradient(120% 80% at 50% 110%, rgba(138, 164, 107, 0.1), transparent 55%),
+    radial-gradient(90% 60% at 50% 8%, rgba(212, 175, 106, 0.18), transparent 60%),
+    radial-gradient(120% 80% at 50% 110%, rgba(26, 38, 66, 0.55), transparent 55%),
     var(--noche);
 }
 
@@ -492,7 +904,7 @@ body {
   width: min(56rem, 92vw);
   background: var(--panel);
   border: 1px solid var(--panel-borde);
-  border-top: 2px solid var(--ambar);
+  border-top: 2px solid var(--dorado);
   border-radius: 6px;
   padding: 2.4rem 2.6rem;
   backdrop-filter: blur(12px) saturate(0.9);
@@ -504,12 +916,12 @@ body {
   font-size: 2.3rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  color: var(--lino);
+  color: var(--pergamino);
 }
 
 .menu-entradilla {
   margin: 0 0 1.6rem;
-  color: var(--lino-apagado);
+  color: var(--pergamino-apagado);
   line-height: 1.55;
   max-width: 44rem;
 }
@@ -527,43 +939,44 @@ body {
   flex-direction: column;
   gap: 0.6rem;
   padding: 1.3rem 1.4rem;
-  background: rgba(243, 234, 214, 0.04);
-  border: 1px solid rgba(243, 234, 214, 0.16);
+  background: rgba(242, 232, 213, 0.04);
+  border: 1px solid rgba(242, 232, 213, 0.16);
   border-left: 2px solid transparent;
   border-radius: 4px;
-  color: var(--lino);
+  color: var(--pergamino);
   cursor: pointer;
   transition: background 0.18s ease, border-color 0.18s ease;
+  min-height: 48px;
 }
 
 .tarjeta-modo:hover {
-  background: rgba(201, 151, 63, 0.1);
-  border-color: rgba(201, 151, 63, 0.5);
-  border-left-color: var(--ambar);
+  background: rgba(212, 175, 106, 0.1);
+  border-color: rgba(212, 175, 106, 0.5);
+  border-left-color: var(--dorado);
 }
 
 .tarjeta-modo:focus-visible {
-  outline: 2px solid var(--ambar-claro);
+  outline: 2px solid var(--dorado-claro);
   outline-offset: 2px;
 }
 
 .tarjeta-modo-nombre {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   letter-spacing: 0.08em;
-  color: var(--ambar-claro);
+  color: var(--dorado-claro);
 }
 
 .tarjeta-modo-detalle {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.5;
-  color: var(--lino-apagado);
+  color: var(--pergamino-apagado);
 }
 
 .menu-nota {
   margin: 1.4rem 0 0;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   letter-spacing: 0.1em;
-  color: rgba(243, 234, 214, 0.5);
+  color: rgba(242, 232, 213, 0.55);
 }
 
 @media (max-width: 900px) {
@@ -572,218 +985,79 @@ body {
   }
 }
 
-/* ---------- reproductor de historia ---------- */
+/* ---------- diagnóstico (F9) — evidencia ADR-0001.4 ---------- */
+
+.diagnostico {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.9rem;
+  z-index: 10;
+  font-family: 'Cascadia Mono', Consolas, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: var(--pergamino);
+  background: rgba(7, 10, 18, 0.78);
+  border: 1px solid rgba(212, 175, 106, 0.5);
+  border-radius: 3px;
+  padding: 0.3rem 0.6rem;
+  pointer-events: none;
+}
 
 .historia {
   position: relative;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  place-items: center;
   overflow: hidden;
 }
 
 .historia-estado {
-  margin: auto;
+  margin: 0;
   font-size: 0.85rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--lino-apagado);
+  color: var(--pergamino-apagado);
 }
 
-/* Fondo neutro editorial: superficie tipográfica en la paleta del proyecto
-   (noche con brasa ámbar). No es un estado de error ni de carga. */
-.historia-fondo {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(110% 70% at 50% 0%, rgba(201, 151, 63, 0.14), transparent 55%),
-    radial-gradient(140% 90% at 50% 115%, rgba(44, 32, 18, 0.9), transparent 60%),
-    linear-gradient(180deg, #171008 0%, var(--noche) 65%);
-}
-
-.historia-filete {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: min(38rem, 70vw);
-  height: 2px;
-  transform: translateX(-50%);
-  background: linear-gradient(90deg, transparent, rgba(201, 151, 63, 0.55), transparent);
-}
-
-/* Panel de lectura: texto íntegro, visible desde el primer instante. */
-.lectura {
-  position: relative;
-  margin: auto;
-  width: min(42rem, 88vw);
-  max-height: min(56vh, 40rem);
-  overflow-y: auto;
-  padding: 1.6rem 2rem 1.4rem;
-  background: var(--panel);
-  border: 1px solid var(--panel-borde);
-  border-top: 2px solid var(--ambar);
-  border-radius: 6px;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
-  scrollbar-width: thin;
-  scrollbar-color: rgba(201, 151, 63, 0.4) transparent;
-}
-
-.hablante {
-  margin: 0 0 0.15rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-}
-
-.hablante-narrador {
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: 0.22em;
-  color: var(--lino-apagado);
-}
-
-.hablante-personaje {
-  color: var(--ambar-claro);
-}
-
-.beat-info {
-  margin: 0 0 1rem;
-  font-size: 0.68rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(243, 234, 214, 0.45);
-}
-
-.texto {
-  margin: 0;
-  font-size: 1.22rem;
-  line-height: 1.75;
-  color: var(--lino);
-  white-space: pre-line;
-  animation: aparecer 0.5s ease;
-}
+/* ---------- movimiento reducido (preferencia del sistema o de ajustes) ---- */
 
 @media (prefers-reduced-motion: reduce) {
-  .texto {
+  .plano,
+  .plano.sin-deriva {
+    animation: none;
+    transform: none;
+    transition: opacity 0.01s linear;
+  }
+
+  .texto,
+  .feedback,
+  .panel-pregunta {
     animation: none;
   }
-}
 
-.escena-alt {
-  margin: 1.1rem 0 0;
-  font-size: 0.8rem;
-  font-style: italic;
-  line-height: 1.5;
-  color: rgba(243, 234, 214, 0.55);
-}
-
-/* Rótulo de presentación neutra: decisión editorial, no fallo. */
-.rotulo-neutro {
-  color: var(--lino-apagado);
-  border-color: rgba(243, 234, 214, 0.4);
-  background: rgba(6, 5, 4, 0.45);
-}
-
-/* ---------- cierre del episodio ---------- */
-
-.cierre {
-  position: relative;
-  width: min(42rem, 88vw);
-  margin: 0 auto 1rem;
-  padding: 1.1rem 1.5rem;
-  text-align: center;
-  background: rgba(6, 5, 4, 0.55);
-  border: 1px solid var(--panel-borde);
-  border-radius: 6px;
-}
-
-.cierre-titulo {
-  margin: 0 0 0.3rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  color: var(--ambar-claro);
-}
-
-.cierre-texto {
-  margin: 0 auto 0.9rem;
-  max-width: 34rem;
-  line-height: 1.55;
-  color: var(--lino-apagado);
-}
-
-/* ---------- controles del reproductor ---------- */
-
-.controles {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.55rem;
-  padding: 0.9rem 1rem 1.2rem;
-}
-
-.control {
-  font: inherit;
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  color: var(--lino);
-  padding: 0.55rem 1.1rem;
-  background: rgba(243, 234, 214, 0.06);
-  border: 1px solid rgba(243, 234, 214, 0.22);
-  border-radius: 3px;
-  cursor: pointer;
-  transition: background 0.18s ease, border-color 0.18s ease;
-}
-
-.control:hover:not(:disabled) {
-  background: rgba(201, 151, 63, 0.14);
-  border-color: rgba(201, 151, 63, 0.55);
-}
-
-.control:focus-visible {
-  outline: 2px solid var(--ambar-claro);
-  outline-offset: 2px;
-}
-
-.control:disabled {
-  opacity: 0.4;
-  cursor: default;
-}
-
-.control-primario {
-  color: var(--ambar-claro);
-  border-color: var(--ambar);
-  background: linear-gradient(180deg, rgba(201, 151, 63, 0.28), rgba(201, 151, 63, 0.12));
-}
-
-.control-primario:hover:not(:disabled) {
-  background: linear-gradient(180deg, rgba(201, 151, 63, 0.42), rgba(201, 151, 63, 0.2));
-}
-
-.control-estado {
-  font-size: 0.75rem;
-  color: var(--lino-apagado);
-}
-
-.control-estado[aria-pressed='true'] {
-  color: var(--ambar-claro);
-  border-color: rgba(201, 151, 63, 0.7);
-}
-
-/* Botón de salida del Modo Aventura (cabecera). */
-.secundario.salir {
-  margin-left: auto;
-  pointer-events: auto;
-}
-
-@media (max-width: 1100px) {
-  .lectura {
-    margin-top: 12rem;
-    max-height: 44vh;
+  .neutro,
+  .banda-texto,
+  .descubrir,
+  .progreso-relleno {
+    transition: none;
   }
+}
 
-  .controles {
-    padding-bottom: 1rem;
-  }
+html[data-ajuste-movimiento='reducido'] .plano {
+  animation: none;
+  transform: none;
+  transition: opacity 0.01s linear;
+}
+
+html[data-ajuste-movimiento='reducido'] .texto,
+html[data-ajuste-movimiento='reducido'] .feedback,
+html[data-ajuste-movimiento='reducido'] .panel-pregunta {
+  animation: none;
+}
+
+html[data-ajuste-movimiento='reducido'] .neutro,
+html[data-ajuste-movimiento='reducido'] .banda-texto,
+html[data-ajuste-movimiento='reducido'] .descubrir,
+html[data-ajuste-movimiento='reducido'] .progreso-relleno {
+  transition: none;
 }

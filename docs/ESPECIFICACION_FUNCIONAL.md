@@ -24,7 +24,7 @@ Convenciones: los datos editoriales provienen SIEMPRE del catálogo versionado (
 **Propósito:** recorrer los episodios en orden canónico (DC-01) con etapas: situación previa → interacción opcional → pregunta → respuesta amable → desenlace → descubrimiento opcional → continuación (§3).
 
 - `EF-AV-01` La secuencia canónica se lee del catálogo (`Episode.narrative_order`); la app no codifica el orden.
-- `EF-AV-02` Cada escena se compone desde `Scene` (fases before/question/reveal/after, capas, hotspots); sin imagen, la fase muestra el fallback de accesibilidad (nunca un hueco).
+- `EF-AV-02` Cada escena se compone desde `Scene` (fases before/question/reveal/after, capas, hotspots). Sin imagen elegible se muestra fallback seguro para **prototipo/fallo/transición**, nunca hueco; esto no satisface la exigencia **visual definitiva** de capítulos suficientemente ilustrados (DC-25).
 - `EF-AV-03` Los puntos interactivos son SIEMPRE opcionales y accesibles por teclado (contrato `hotspots[]`); ignorarlos no bloquea nada.
 - `EF-AV-04` Las preguntas se presentan en momentos significativos con ritmo adaptativo (EF-SEL); su frecuencia es ajustable por perfil.
 - `EF-AV-05` Fallo una pregunta: explicación siempre visible, sin bloqueo narrativo, con nuevo intento o continuación (DC-05, §3.4).
@@ -41,8 +41,9 @@ Convenciones: los datos editoriales provienen SIEMPRE del catálogo versionado (
 - `EF-PRE-02` `multi_choice` muestra el aviso de «puede haber varias correctas» solo con `multi_declared: true`; el juego no lo añade por su cuenta.
 - `EF-PRE-03` La corrección es local y determinista desde `correct_option_ids`/`correct_order`/`pairs`/`hotspot_area`; la aleatorización del orden visual (`shuffle_options`) nunca altera la identidad de la respuesta.
 - `EF-PRE-04` Toda pregunta muestra tras responder `rationale` (breve) y, si existe, `rationale_extended`, con enlace a pasaje/cita (§4.3.8).
-- `EF-PRE-05` La imagen previa de una pregunta (`visual_requirements.pre_image_media_id`) nunca revela la respuesta: garantizado por contrato (`spoiler_level: ninguno`) y verificable en pantalla (§7.2).
+- `EF-PRE-05` La imagen previa de una pregunta (`visual_requirements.pre_image_media_id`) **no puede revelar la respuesta ni hechos futuros**; `spoiler_level: ninguno` es insuficiente por sí solo y debe verificarse en contexto. La prueba del contrato no sustituye la auditoría de pantalla.
 - `EF-PRE-06` La interacción se completa sin puntería precisa; todo control responde a teclado (§3, §7.2).
+- **`EF-PRE-07` (DC-24):** **cada pregunta definitivamente aprobada tiene imagen propia, específica y diferenciada**, asignada por ID, con momento visual correcto, alt, origen/licencia, integridad y QA. Preguntas sin imagen pueden permanecer en el **prototipo técnico**, pero se clasifican como cobertura pendiente y **no** se aceptan como experiencia final.
 - **Prueba:** los 6 tipos del piloto I.8 en pantalla; casos negativos del contrato como pruebas de UI (respuesta imposible de escribir).
 
 ## EF-SEL — Selector adaptativo
@@ -152,10 +153,12 @@ Convenciones: los datos editoriales provienen SIEMPRE del catálogo versionado (
 ## EF-HIS — Modo Historia (incorporado a la hoja de ruta; pendiente de implementación)
 
 - `EF-HIS-01` Narración condensada y suficiente de ambas partes, secuencia canónica y continuidad editorial revisada; sin obligar a recorrer los 126 capítulos íntegros.
-- `EF-HIS-02` Utiliza recursos visuales disponibles pertinentes y aprobados, variedad contextual de planos, texto narrativo, audio/subtítulos cuando estén disponibles y distinción entre cita literal y adaptación.
+- `EF-HIS-02` Debe mantener **ritmo visual cinematográfico con suficientes escenas y planos relevantes**; priorizar recursos `assets/scenes/` y primeros planos aptos; acuarelas secundarias en gameplay y protagonistas de sección artística propia. Audio opcional, texto TS-001 íntegro y distinción entre cita/adaptación. Neutro solo como prototipo/fallback o transición justificable, **no aceptación final de capítulo sin imágenes suficientes** (DC-25/26).
 - `EF-HIS-03` Flujo continuo sin preguntas obligatorias; pausa, reanudación, posición por perfil y acceso voluntario a lector, museo, atlas y cuaderno.
-- `EF-HIS-04` La extensión final se determina tras piloto midiendo comprensión, ritmo y duración; nunca por acumulación artificial de escenas o ilustraciones.
+- `EF-HIS-04` La extensión final se determina tras piloto midiendo comprensión, ritmo y duración; no imponer cuotas fijas de escenas, pero sí verificar **suficiencia visual y enganche** frente a tramos estáticos injustificados.
 - **Prueba:** guion de continuidad trazable + recorrido piloto con enlaces y QA de fidelidad, comprensión, accesibilidad y offline (DC-19).
+
+- **`EF-HIS-05` (DC-26):** la galería artística de acuarelas se ofrece como sección propia y opcional, con autoría, fuentes, licencias y enlace a episodios; la navegación contextual desde Historia respeta spoilers y no mezcla arte con evidencia histórica.
 
 ## EF-HCT — Modo Histórico-cultural (incorporado a la hoja de ruta; pendiente de implementación)
 
@@ -164,4 +167,4 @@ Convenciones: los datos editoriales provienen SIEMPRE del catálogo versionado (
 - `EF-HCT-03` Acceso desde inicio, sin progreso obligatorio, soporte offline, licencias, atribuciones, accesibilidad y avisos de spoiler al enlazar con la narración.
 - **Prueba:** tema piloto con fuentes verificadas, medios etiquetados y navegación completa offline (DC-20).
 
-**Plan por fases y responsabilidades:** ver `docs/HOJA_RUTA_MODOS_HISTORIA_E_HISTORICO.md`. Cualquier ampliación de los esquemas compartidos requiere coordinación con CONTENIDOS y DESARROLLO; **no hay implementación aprobada por el mero registro documental**.
+**Plan por fases y responsabilidades:** ver `docs/HOJA_RUTA_MODOS_HISTORIA_E_HISTORICO.md` y DC-23–DC-27. Dirección integral fija contenido, arte, producto, QA y aceptación; desarrollador único implementa/versiona/prueba en GitHub; el director artístico solo produce recursos bajo prompt encargado por el propietario. Un documento no demuestra implementación. La Fase 1 tiene autorización; Fase 2/distribución no.

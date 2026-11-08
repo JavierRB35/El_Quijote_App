@@ -19,7 +19,7 @@ No se difieren pushes «para más tarde». Si un bloque está a medias, se commi
 ## 3. Ramas y revisión
 
 - **FASE 0 (documentación):** commits directos a `main` permitidos. Justificación: agente único, sin código ejecutable, historial limpio como evidencia de auditoría.
-- **FASE 1+ (código y contenido):** ramas de trabajo `feature/<área>-<tema>` (p. ej. `feature/dev-lector`, `feature/cont-c08-preguntas`) + Pull Request con checklist según encargo §6.5 (PR editorial vs. PR técnico). Revisión obligatoria del responsable del área afectada; los esquemas (`/schemas`) son propiedad conjunta y exigen revisión de ambos responsables.
+- **FASE 1+ (código, contenido y decisiones):** ramas de trabajo `feature/<área>-<tema>` + Pull Request con checklist del encargo §6.5. **Revisión y aceptación por Dirección integral**, con comprobación técnica/pruebas ejecutadas por el desarrollador; cambios de esquema y datos requieren coherencia editorial y técnica verificable. La obligación antigua de convocar dos equipos o firmas de R01–R16 **queda sustituida por DC-23**. El director artístico solo recibe encargos puntuales de imágenes a través del propietario.
 - **Prohibido siempre:** force-push, reescritura del historial de `main`, `git push --force`, borrado de `main`.
 - Colisiones: rebase local antes de push; nunca «merge a ciegas» sobre `main`.
 
@@ -56,12 +56,12 @@ No se difieren pushes «para más tarde». Si un bloque está a medias, se commi
 
 ## 7. Evidencia y trazabilidad
 
-- El historial de `main` es evidencia de auditoría: cada entrega debe poder rastrearse a un commit con fecha, autor y contenido.
+- El historial de `main` es evidencia de auditoría: cada entrega debe poder rastrearse a un commit con fecha, autor y contenido. **Todas las tareas del desarrollador nacen de esta fuente GitHub y regresan a este mismo repositorio**; cada prompt cita el enlace, `main`, SHA remoto verificado, rama/PR, pruebas y SHA final. Nunca se da por entregado código solo local.
 - Los hitos GO/NO-GO se etiquetan y se referencian desde `VISION_Y_DECISIONES.md`.
 
 ## 8. Integración continua del contrato (activo desde 2026-11-06)
 
-Autorizada por el propietario («validen el contrato técnico antes de integrarlo definitivamente, en GitHub»). Ambos equipos implementaron CI en paralelo; se **consolidó en un único workflow** por eficiencia (los runners de Windows consumen el doble de minutos y la cuenta ya agotó su cuota de almacenamiento de Actions).
+Autorizada por el propietario («validen el contrato técnico antes de integrarlo definitivamente, en GitHub»). **Históricamente** dos equipos implementaron CI en paralelo; se consolidó en un único workflow. Desde DC-23 ya no existen equipos separados para nuevas tareas.
 
 **Workflow único `validar-contrato`** (`.github/workflows/validar-contrato.yml`, ubuntu-latest — la validación es multiplataforma; el «sobre Windows» del encargo §5.2 aplica a las pruebas de la aplicación, no a los datos) que se ejecuta **en cada Pull Request y en cada push a `main`**:
 

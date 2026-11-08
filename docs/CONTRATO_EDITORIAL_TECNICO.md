@@ -1,8 +1,8 @@
 # CONTRATO EDITORIAL-TÉCNICO — v0.2.0 (borrador integrado)
 
-**Estado:** BORRADOR v0.2.0 — **integración de los dos borradores paralelos del 2026-11-05** (borrador 0.1 editorial + v0.1.0 técnico). Esquemas implementados y **verificados con validador automático (42/42 pruebas de contrato en PASS)**. Propiedad conjunta: cambios exigen revisión de los responsables editorial y técnico (encargo §6, §6.5.3). Pendiente de aprobación en el GO/NO-GO de FASE 0.
+**Estado histórico:** consolidación editorial/técnica v0.2.0 de 2026-11-05, con contrafirma registrada en §12. La versión contractual real vigente debe verificarse **en los esquemas de GitHub**, no deducirse del título. **Actualización operativa 2026-11-08 (DC-23–DC-27):** Dirección integral decide requisitos editoriales y revisa; un desarrollador implementa/valida. No hay nuevas firmas de equipos R01–R16. Preguntas finales con imagen propia, Historia visualmente rica, escenas prioritarias y acuarelas secundarias; la relajación de listas vacías de Scene/Beat requiere PR técnica versionada y pruebas, no se declara ya implementada.
 **Fuente normativa:** `docs/ENCARGO_MAESTRO.md` §2.2, §4.3, §6.1–§6.3, Anexo A.
-**Última actualización:** 2026-11-05.
+**Última actualización normativa:** 2026-11-08 (DC-23–DC-27); los hitos de reconciliación anteriores permanecen históricos.
 
 ---
 
@@ -109,7 +109,7 @@ Definiciones compartidas (IDs, enumeraciones, Review, EvidenceItem, NormalizedAr
 - `hotspot`: `hotspot_area` normalizada 0..1 con `x+w ≤ 1`, `y+h ≤ 1` (comprobado por el validador).
 - `shuffle_options` puede reordenar el **texto** de las opciones; **nunca** altera el ID de la correcta ni la cita asociada.
 - `evidence`: mínimo 1 elemento. `cita_literal` ⇒ `passage_id` + `quote`; `parrafo_localizado` ⇒ `passage_id`; `fuente_historica`/`estudio_academico` ⇒ `source_id` + `locator`. **Regla anti-fábrica-de-verdades:** si alguna evidencia es `interpretacion_editorial`, `certainty` no puede ser `TEXTO_EXPLICITO` ni `HECHO_HISTORICO_DOCUMENTADO`.
-- `visual_requirements.pre_image_must_not_reveal` es siempre `true`; además, el activo usado como **imagen previa** debe tener `spoiler_level: ninguno` (comprobado en paquete; el medio de hotspot se rige por su fase `question`).
+- `visual_requirements.pre_image_must_not_reveal` es siempre `true`; la imagen previa **nunca adelanta la respuesta ni un hecho futuro**, aunque el metadato `spoiler_level` sea permisivo. **Nueva condición de acabado visual DC-24:** cada pregunta definitiva debe tener **imagen propia, exclusiva y apta para ella**; el contrato actual puede admitir campos visuales opcionales para el prototipo técnico, lo que **no equivale a cobertura editorial aprobada**. La exigencia de cobertura se incorporará a validación de publicación/versionado cuando proceda.
 - `semantic_key`: **único entre todas las preguntas del paquete** (detector de duplicados semánticos, §4.3.13).
 - `spoiler_policy` estructurada con `safe_after_episodes[]`; equivalencia documental con la abreviatura editorial: `capitulo_actual` = `[]` + escena del capítulo; `episodios_anteriores` = lista de episodios previos; `siempre` = `[]`; `nunca` = episodios posteriores al suyo.
 - Estados de revisión (`review.state`): `borrador → documentada → revisada → aprobada` (o `descartada`). Solo `aprobada` es empaquetable; la puerta de publicación es editorial.
@@ -224,7 +224,7 @@ Casos negativos definidos por el equipo editorial aún **sin automatizar** (requ
 
 ## 10. Evolución, migraciones y protocolo de cambio
 
-1. **Propuesta:** PR que modifique `/schemas` y este documento; etiqueta `schema`; revisión obligatoria de ambos responsables (CODEOWNERS cuando se habilite).
+1. **Propuesta:** el desarrollador único presenta PR versionada que modifique `/schemas` y documentación/consumidor/validadores; **Dirección integral** verifica requisitos editoriales, UX, QA y producto. Se reemplaza la revisión obligatoria por dos equipos externos (DC-23), sin renunciar a pruebas técnicas reales.
 2. **Registro:** nueva versión en §1 con lista de cambios y compatibilidad; si es MAJOR, calendario de adaptación y pruebas de consumidor antes de fusionar.
 3. **Migración de datos:** nunca renumerar en masa; `aliases.json` registra `id_viejo → id_nuevo` con motivo y versión.
 4. **Retirada de IDs:** los retirados quedan en `aliases.json` como `estado: retirado` y jamás se reasignan.
@@ -281,11 +281,13 @@ Verificada de forma independiente y en local la batería completa tras los fixes
 
 **El contrato editorial-técnico queda firmado por ambas partes y validado pre-integración: integración definitiva aprobada.**
 
-## 13. Qué DEBE y NO DEBE hacer cada equipo
+## 13. Qué DEBEN hacer Dirección integral y desarrollador único (DC-23)
 
-| | Equipo editorial (CONTENIDOS) | Equipo técnico (DESARROLLO) |
+| | Dirección integral (ChatGPT) | Desarrollador único |
 |---|---|---|
-| Debe | Producir registros conformes; verificar referencias y licencias; declarar certeza y spoilers | Consumir esquemas sin hardcodear contenido; validar paquetes antes de integrar; mantener el validador |
-| No debe | Alterar esquemas sin PR conjunta; suponer campos de UI | Alterar criterios editoriales; añadir campos sin versión MINOR/MAJOR |
+| Debe | Decidir contenido, fidelidad, imágenes propias por pregunta, suficiencia audiovisual, elegibilidad visual y criterios de aceptación; documentar fuentes/derechos y límites | Consumir contratos sin hardcodear contenido, implementar esquemas/datos/validadores/UI y pruebas en rama/PR, registrar evidencias y regresar a GitHub |
+| No debe | Declarar pruebas, permisos o visados humanos no realizados; convertir una auditoría en autorización de distribución | Cambiar decisiones editoriales o inventar recursos/IDs/contratos sin versión y aprobación de Dirección; entregar solo archivos locales |
+
+**Intervención artística puntual:** Dirección redacta el prompt exacto; el propietario lo envía al director artístico; el desarrollador integra activos revisados. `assets/scenes/` es prioritario, acuarelas secundarias en gameplay y principales en galería (DC-24–DC-27).
 
 **Regla de oro (§6.2):** un elemento editorial nunca se publica si apunta a un ID inexistente o si su imagen/cita/licencia requerida está pendiente.

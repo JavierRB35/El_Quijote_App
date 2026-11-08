@@ -6,13 +6,13 @@ Documento rector: **`docs/ENCARGO_MAESTRO.md`** — léelo íntegro antes de act
 ## Al comenzar cada sesión
 
 1. `git pull --rebase` sobre `main` antes de tocar nada.
-2. Declarar **modo** (DESARROLLO / CONTENIDOS / COORDINACIÓN-AUDITORÍA) y perfiles profesionales asumidos.
-3. Consultar `docs/VISION_Y_DECISIONES.md`: **no reabrir decisiones cerradas**.
+2. Ejecutar como **único desarrollador** cuando se reciba un encargo técnico. **Dirección integral (ChatGPT)** decide producto, contenido, UX, calidad y aprobación. Las etiquetas R01–R16 identifican trabajos históricos, no responsables operativos.
+3. Consultar `docs/VISION_Y_DECISIONES.md` y **DC-23–DC-27 (2026-11-08)**: prevalecen sobre instrucciones anteriores incompatibles. Leer también `docs/DECISIONES_OPERATIVAS_Y_POLITICA_VISUAL_2026-11-08.md`.
 4. Verificar estado real de repositorio, rutas y ficheros antes de suponer nada.
 
 ## Git
 
-- `origin/main` (GitHub, privado) es la **única fuente de verdad** y debe estar **siempre actualizado**: reglas completas en `docs/GOBERNANZA_GIT.md`.
+- **ÚNICA FUENTE DE VERDAD Y DESTINO:** `origin/main` de GitHub `JavierRB35/El_Quijote_App` (privado). **Cada prompt al desarrollador deberá recordarlo expresamente**: verificar SHA remoto antes de empezar, desarrollar en rama, devolver cambios al **mismo GitHub** mediante PR y reportar SHA inicial/final. Reglas completas en `docs/GOBERNANZA_GIT.md`.
 - Nunca forzar pushes, nunca reescribir historial de `main`.
 - FASE 0: commits directos a `main` permitidos para documentación. FASE 1+: ramas `feature/*` + Pull Request.
 - **Prohibido commitear**: secretos, claves de IA, `*.epub`, medios pesados, datos personales de jugadores (`.gitignore`).
@@ -28,6 +28,6 @@ Trabajo y documentación en español. El castellano de las citas de Cervantes nu
 
 ## Hoja de ruta narrativa común (Modo Historia)
 
-Al asumir un trabajo relativo al **Modo Historia**, leer también `docs/BIBLIA_NARRATIVA_MODO_HISTORIA_HOJA_RUTA_ROLES.md` (sección R01–R16 correspondiente al perfil), y `docs/HOJA_RUTA_MODOS_HISTORIA_E_HISTORICO.md`. Las decisiones DC-21/DC-22 de `docs/VISION_Y_DECISIONES.md` son vinculantes.
+En tareas del **Modo Historia**, leer `docs/BIBLIA_NARRATIVA_MODO_HISTORIA_HOJA_RUTA_ROLES.md` (organización operativa vigente en §3), `docs/HOJA_RUTA_MODOS_HISTORIA_E_HISTORICO.md` y las decisiones **DC-19, DC-21 a DC-27**. **Cada pregunta final tendrá imagen propia específica**; la narración tendrá cobertura visual atractiva, priorizando `assets/scenes/`, con acuarelas secundarias en gameplay y sección artística propia. Un fondo neutro puede servir de prototipo/fallback pero no cierra la calidad visual final.
 
-**TS-001:** el texto de cada intervención hablada de narrador o personaje se verá **siempre** en pantalla, con y sin audio; no se puede ocultar, truncar ni omitir por avanzar. Contratos y validadores compartidos requieren revisión editorial y técnica; la hoja de ruta no significa que el juego ya implemente TS-001. La documentación del Modo Historia no autoriza Fase 2.
+**TS-001:** el texto de cada intervención hablada de narrador o personaje se verá **siempre** en pantalla, con y sin audio; no se puede ocultar, truncar ni omitir por avanzar. Los cambios de contratos y validadores requieren **decisión editorial/funcional de Dirección** y verificación técnica del **desarrollador único**. No se atribuirán firmas ni pruebas a antiguos roles. La documentación del Modo Historia no autoriza Fase 2.

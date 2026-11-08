@@ -39,12 +39,12 @@ No declarar cumplimiento técnico sin auditoría automatizada y manual. Los tama
 
 ## 4. Estructura de pantalla de pregunta
 
-- Mantener escena visible, pero priorizar contraste del panel.
+- **Cada pregunta final tendrá su propia imagen específica y elegible**, preferentemente una escena cinematográfica existente; si no existe, acuarela secundaria o encargo nuevo. El fallback neutro es válido en prototipos/fallos, no completa la imagen exigida (DC-24). Mantener escena visible, pero priorizar contraste del panel.
 - Enunciado de lectura cómoda, una única pregunta por vez; una breve referencia de contexto si es útil.
 - Dos a cuatro alternativas por ejemplo; el catálogo determinará la cantidad real según contenido, sin forzar siempre cuatro.
 - Botones amplios, orden visual y de foco coherentes, selección marcada por algo más que color.
 - Controles de «Repetir narración», «Pista» y «Continuar» donde correspondan; evitar saturación simultánea.
-- La imagen **anterior** nunca revela una respuesta y el desenlace permanece oculto hasta la resolución.
+- La imagen **anterior** propia de cada pregunta nunca revela una respuesta ni un hecho todavía no presentado; el desenlace permanece oculto hasta la resolución. Verificar elegibilidad y vigencia en UI, no solo `spoiler_level`.
 - El resultado presenta explicación breve con opción de ampliar al fragmento exacto del libro.
 - Pantallas de evaluación nunca confunden rapidez con competencia cognitiva; historial y repaso son personales y locales.
 
@@ -60,4 +60,4 @@ Ensayos sin formación previa con personas mayores y, para mantener alcance inte
 
 Los componentes consumen preguntas, imágenes, hotspots, textos alternativos, narración, ubicación de focos y restricciones de spoiler desde manifiestos/contratos versionados. No incorporar preguntas literarias como constantes de React. Cualquier decisión que modifique IDs, estados o esquemas debe pasar por el contrato editorial-técnico compartido.
 
-La implementación sigue sin estar autorizada por este documento. Solo se documentan criterios y recorridos de Fase 0.
+**Vigencia:** la Fase 1 y el vertical técnico están autorizados por DC-18; **este documento por sí solo no demuestra una implementación**. Dirección integral decide UX y acepta resultados, el desarrollador único los implementa y verifica con pruebas; una galería de acuarelas formará sección artística propia, diferenciada del gameplay. Fase 2/distribución sin autorización (DC-23–DC-27).

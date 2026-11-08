@@ -37,7 +37,7 @@ Regla: el texto del EPUB nunca sustituye a la edición de referencia para afirma
 
 ## 4. Criterios de revisión y deduplicación
 
-- Revisión cruzada filológica + histórica por cada pregunta (dos roles del modo, firmados en el registro).
+- **Dirección integral** revisa directamente la exactitud filológica, histórica, visual, cognitiva y antiespoiler de cada pregunta, documentando fuentes y límites. No exigir firmas de roles separados R01–R16 (DC-23).
 - `semantic_key`: normalización (minúsculas, sin signos, lemas de protagonista) + comparación de pares (enunciado, opciones); colisión → fusión o descarte con motivo.
 - Rechazos documentados con motivo taxonomizado: duplicado, trivial, ambigua, spoiler incontrolado, no verificable, respuesta múltiple indebida.
 
@@ -54,16 +54,17 @@ Regla: el texto del EPUB nunca sustituye a la edición de referencia para afirma
 
 - Preguntas candidatas → aprobadas → publicables, con motivos de rechazo.
 - Minutos/hora de investigación+validación por pregunta aprobada, separando tipos de capítulo.
-- Recursos visuales por episodio/fase: histórica disponible vs recreación necesaria.
+- Cobertura por pregunta: número de preguntas con **imagen propia específica, distinta y elegible** frente al total; recursos sin derechos o visado y encargos artísticos pendientes. Por episodio/beat: planos de escenas existentes, recursos secundarios, cambios visuales, transición y carencias; separar vertical técnico de aceptación visual final.
 - Tamaño en disco por capítulo y tiempo de integración con el contrato técnico.
 - **No se publicará estimación global sin intervalo y supuestos** (encargo §4.8).
 
 ## 7. Criterios de salida del piloto
 
-1. Seis capítulos con expediente completo y validado por los dos roles.
+1. Seis capítulos con expediente completo, fuentes cotejadas y revisión registrada por **Dirección integral** (DC-23); el desarrollador valida datos/contratos y materializa la experiencia.
 2. ≥ 20 preguntas publicables por capítulo de acción/diálogo y ≥ 12 en capítulos introspectivos, **o** justificación de por qué el capítulo no da más sin inflar.
 3. Contrato editorial-técnico ajustado con los hallazgos reales (entregable FASE 0.7).
 4. Estimación razonada con intervalo para el total del banco y del coste de validación.
+5. **Cobertura visual obligatoria antes de declarar terminado el contenido final:** imagen propia por pregunta; escenas cinematográficas prioritarias y suficientes en narración, sin spoilers, con derechos y accesibilidad. Acuarelas secundarias en gameplay y galería artística propia (DC-24–DC-26). Se permite prototipo técnico sin imágenes, pero no equivale a aceptación visual.
 
 ## 8. Dimensionamiento del banco de preguntas — acuerdo de producto (2026-11-06)
 

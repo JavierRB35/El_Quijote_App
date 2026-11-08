@@ -15,20 +15,20 @@
   "type": "ordering",
   "options": [
    {
-    "id": "DQ.Q.000318.O01",
-    "label": "Llueve; Sancho propone refugiarse en los batanes y don Quijote lo rechaza"
-   },
-   {
-    "id": "DQ.Q.000318.O02",
-    "label": "Don Quijote señala al jinete con «yelmo de oro» bajo la lluvia"
-   },
-   {
     "id": "DQ.Q.000318.O03",
     "label": "Don Quijote ordena «Apártate» y embiste al barbero"
    },
    {
     "id": "DQ.Q.000318.O04",
     "label": "El barbero deja la bacía y huye; don Quijote la recoge como trofeo"
+   },
+   {
+    "id": "DQ.Q.000318.O02",
+    "label": "Don Quijote señala al jinete con «yelmo de oro» bajo la lluvia"
+   },
+   {
+    "id": "DQ.Q.000318.O01",
+    "label": "Llueve; Sancho propone refugiarse en los batanes y don Quijote lo rechaza"
    }
   ],
   "correct_order": [

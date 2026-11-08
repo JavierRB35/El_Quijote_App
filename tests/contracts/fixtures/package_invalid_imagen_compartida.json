@@ -1,0 +1,20 @@
+{
+  "package_id": "sintetico-negativo-imagen-compartida",
+  "contract_version": "1.0.0",
+  "catalog_version": "0.1.0",
+  "created": "2026-11-08",
+  "files": {
+    "editions": ["valid/edition.json"],
+    "chapters": ["valid/chapter.json"],
+    "passages": ["valid/passage.json"],
+    "episodes": ["valid/episode_c08_imagen_propia.json"],
+    "scenes": [],
+    "questions": ["valid/question_c08_imagen_propia_a.json", "negative_question_c08_imagen_repetida.json"],
+    "persons": ["valid/person_ficticio.json", "valid/person_historico.json"],
+    "places": ["valid/place_lugar.json"],
+    "media_assets": ["valid/media_asset_recreacion.json"],
+    "sources": ["valid/source_edicion.json", "valid/source_estudio.json", "valid/source_produccion.json"],
+    "licenses": ["valid/license.json"]
+  },
+  "counts": { "questions": 2, "episodes": 1, "media_assets": 1 }
+}

@@ -10,8 +10,8 @@
   "Briareo": "presente",
   "Maritornes": "presente"
  },
- "total": 135,
- "coinciden": 135,
+ "total": 137,
+ "coinciden": 137,
  "no_coinciden": 0,
  "detalles": [
   {
@@ -532,6 +532,22 @@
    "contexto": "DQ.P1.C08.E01",
    "palabras_ok": 12,
    "palabras_totales": 12,
+   "estado": "OK"
+  },
+  {
+   "tipo": "evidencia",
+   "id": "DQ.Q.000106",
+   "contexto": "DQ.P1.C08.E01",
+   "palabras_ok": 12,
+   "palabras_totales": 12,
+   "estado": "OK"
+  },
+  {
+   "tipo": "evidencia",
+   "id": "DQ.Q.000107",
+   "contexto": "DQ.P1.C08.E01",
+   "palabras_ok": 8,
+   "palabras_totales": 8,
    "estado": "OK"
   },
   {

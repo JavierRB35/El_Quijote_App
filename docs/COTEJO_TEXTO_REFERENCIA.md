@@ -85,6 +85,8 @@ Limitación declarada: PG #2000 procede de una edición decimonónica completa; 
 | evidencia | DQ.Q.000104 | DQ.P1.C08.E01 | 14/14 | OK |
 | evidencia | DQ.Q.000105 | DQ.P1.C08.E01 | 26/26 | OK |
 | evidencia | DQ.Q.000106 | DQ.P1.C08.E01 | 12/12 | OK |
+| evidencia | DQ.Q.000106 | DQ.P1.C08.E01 | 12/12 | OK |
+| evidencia | DQ.Q.000107 | DQ.P1.C08.E01 | 8/8 | OK |
 | evidencia | DQ.Q.000107 | DQ.P1.C08.E01 | 22/22 | OK |
 | evidencia | DQ.Q.000108 | DQ.P1.C08.E01 | 16/16 | OK |
 | evidencia | DQ.Q.000109 | DQ.P1.C08.E01 | 10/10 | OK |
@@ -156,4 +158,4 @@ Limitación declarada: PG #2000 procede de una edición decimonónica completa; 
 | evidencia | DQ.Q.000323 | DQ.P2.C10.E01 | 504/504 | OK |
 | evidencia | DQ.Q.000324 | DQ.P2.C10.E01 | 504/504 | OK |
 
-**Resumen: 135/135 coinciden íntegramente; 0 con variante.**
+**Resumen: 137/137 coinciden íntegramente; 0 con variante.**

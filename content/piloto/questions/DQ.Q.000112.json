@@ -6,7 +6,7 @@
         "DQ.P1.C08"
     ],
     "passage_ids": [
-        "DQ.P1.C08.P0010"
+        "DQ.P1.C08.P0005"
     ],
     "prompt": "Sobre la acuarela de la embestida, señale la zona donde el aspa arrastra a caballo y caballero.",
     "interaction": {
@@ -54,8 +54,7 @@
     },
     "visual_requirements": {
         "pre_image_must_not_reveal": true,
-        "hotspot_media_id": "DQ.MA.000026",
-        "pre_image_media_id": "DQ.MA.900005"
+        "hotspot_media_id": "DQ.MA.000026"
     },
     "language": "es",
     "tags": [

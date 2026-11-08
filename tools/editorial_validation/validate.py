@@ -33,6 +33,11 @@ REPO_GATE_USES = {"uso_personal_app", "almacenamiento_repo_git"}
 
 FORMATOS_AUDIO = {"mp3", "ogg"}
 
+# Episodios con la regla DC-24 de imagen propia por pregunta ya aplicada a sus
+# datos reales (la ausencia de imagen es válida mientras llega el encargo
+# artístico; lo que no es válido es reutilizar un activo entre dos preguntas).
+EPISODIOS_CON_IMAGEN_PROPIA = {"DQ.P1.C08.E01"}
+
 SCHEMA_BY_CATEGORY = {
     "edition": "content/edition.schema.json",
     "chapter": "content/chapter.schema.json",
@@ -147,6 +152,12 @@ def question_semantic_errors(q: dict) -> list[str]:
         order = inter.get("correct_order", [])
         if set(order) != set(ids) or len(order) != len(ids):
             errs.append("correct_order debe contener TODAS las opciones, una sola vez cada una")
+        elif ids == order:
+            errs.append(
+                "la presentación inicial (orden del array de opciones) coincide con correct_order: "
+                "las opciones no deben mostrarse ya resueltas ni depender del azar para aparecer "
+                "desordenadas (encargo §4.3; corrección P1 de ordenación)"
+            )
     if t == "matching":
         lefts = [p["left"] for p in inter.get("pairs", [])]
         rights = [p["right"] for p in inter.get("pairs", [])]
@@ -350,6 +361,29 @@ def validate_package(manifest_path: Path, gate: str = "repo") -> list[dict]:
                            "message": f"imagen previa de {qid} ({pre}) tiene spoiler_level "
                                       f"'{asset.get('spoiler_level')}': revelaría la respuesta (§4.3.4)"})
 
+    # DC-24 (2026-11-08): una imagen propia por cada pregunta; la misma imagen
+    # para dos preguntas no satisface la obligación. Se aplica por episodio a
+    # medida que Dirección cierra su asignación visual (primera aplicación:
+    # DQ.P1.C08.E01, corrección P1); los demás episodios migrarán con sus
+    # propios encargos y se añadirán aquí, nunca antes de sus datos reales.
+    for episodio in sorted(EPISODIOS_CON_IMAGEN_PROPIA):
+        asignacion: dict[str, list[str]] = {}
+        for qid in sorted(questions):
+            q = questions[qid]
+            if q.get("episode_id") != episodio:
+                continue
+            vr = q.get("visual_requirements", {})
+            for campo in ("pre_image_media_id", "hotspot_media_id"):
+                medio = vr.get(campo)
+                if medio:
+                    asignacion.setdefault(medio, []).append(f"{qid} ({campo})")
+        for medio, qids in sorted(asignacion.items()):
+            if len(qids) > 1:
+                errors.append({"code": "SEMANTIC_ERROR",
+                               "message": f"DC-24: el activo '{medio}' es imagen de varias "
+                                          f"preguntas de {episodio}: {', '.join(qids)}; cada "
+                                          f"pregunta exige imagen propia exclusiva"})
+
     # Reglas de beats/intervenciones (v1.1.0, R11): orden único por escena,
     # utterance_id único global, audio existente y con formato de voz.
     beats = objects.get("beat", {})
@@ -417,6 +451,7 @@ EXPECTED_INVALID = {
     "invalid_question_option_ids_mismatch.json": "SEMANTIC_ERROR",
     "invalid_question_bad_chapter.json": "SCHEMA_ERROR",
     "invalid_question_certainty_mismatch.json": "SEMANTIC_ERROR",
+    "invalid_question_ordering_resuelta.json": "SEMANTIC_ERROR",
     "invalid_discovery_cita_without_passage.json": "SCHEMA_ERROR",
     "invalid_media_unknown_license.json": "LICENSE_NOT_VERIFIED",
     "invalid_media_repo_only.json": "ALLOWED_USE_MISSING",
@@ -439,6 +474,7 @@ EXPECTED_INVALID_PACKAGES = {
     "package_invalid_revealing_preimage.json": "SEMANTIC_ERROR",
     "package_invalid_beats_orden_duplicado.json": "SEMANTIC_ERROR",
     "package_invalid_beats_audio_fantasma.json": "REFERENCE_ERROR",
+    "package_invalid_imagen_compartida.json": "SEMANTIC_ERROR",
 }
 
 

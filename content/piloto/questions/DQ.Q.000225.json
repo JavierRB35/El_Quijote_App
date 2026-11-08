@@ -15,20 +15,20 @@
   "type": "ordering",
   "options": [
    {
-    "id": "DQ.Q.000225.O01",
-    "label": "Aparece la polvareda y comienza el catálogo de caballeros"
-   },
-   {
     "id": "DQ.Q.000225.O02",
     "label": "Don Quijote se entra «por medio del escuadrón de ovejas»"
    },
    {
-    "id": "DQ.Q.000225.O03",
-    "label": "Las pedradas lo derriban y los pastores huyen con el ganado"
-   },
-   {
     "id": "DQ.Q.000225.O04",
     "label": "Recuento de muelas y vómito del bálsamo sobre Sancho"
+   },
+   {
+    "id": "DQ.Q.000225.O01",
+    "label": "Aparece la polvareda y comienza el catálogo de caballeros"
+   },
+   {
+    "id": "DQ.Q.000225.O03",
+    "label": "Las pedradas lo derriban y los pastores huyen con el ganado"
    }
   ],
   "correct_order": [

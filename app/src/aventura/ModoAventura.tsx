@@ -1,11 +1,10 @@
 // Modo Aventura (FASE 1, DC-18): episodio de los molinos (I, 8) jugable con
-// el sistema de preguntas existente. La lógica y el progreso (progreso.json)
-// no cambian (encargo P1, decisión de producto 10); la presentación se
-// compone sobre el contenedor cinematográfico reutilizable (src/cine):
-//  - estado «pregunta»: panel inferior de alto contraste, ampliable según
-//    contenido — las opciones grandes nunca se reducen a letra diminuta;
-//  - estado «narración» (explicación tras responder): la escena protagonista
-//    respira y la explicación ocupa la banda segura del encuadre.
+// el sistema de preguntas existente. Integración de dos líneas de trabajo:
+//  - arquitectura del contenedor cinematográfico (PR #66: src/cine, estados
+//    narración/pregunta, ajustes, panel inferior ampliable);
+//  - subsanación editorial de I,8 (PR #65: imagen propia por pregunta DC-24
+//    sin herencia, visibilidad narrativa por pasajes, conservación de
+//    progreso P0 y presentación de ordenación no resuelta).
 // Interacción 100 % seleccionada (DC-04) y operable por teclado (EF-ACC-01).
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { cargarProgreso, guardarProgreso } from '../historia/persistencia';
@@ -16,6 +15,8 @@ import { encuadreDe } from '../cine/resolverPlano';
 import { AjustesBoton, movimientoReducido, useAjustes } from '../cine/ajustes';
 import PanelDescubrir from '../cine/PanelDescubrir';
 import { textoParaPantalla } from '../presentacion';
+import { ordenPresentacion } from './presentacion';
+import { pasajesNarrados, respuestasGuardadas, respuestasVisibles, separarVisibles } from './visibilidad';
 
 type EstadoPregunta =
   | { fase: 'sin_responder' }
@@ -88,7 +89,14 @@ function renderizadorRespuesta({
 
   if (inter.type === 'ordering') {
     const ordenHecho = seleccion;
-    const restantes = inter.options.filter((o) => !ordenHecho.includes(o.id));
+    // Presentación garantizada no resuelta (corrección P1): el orden visible
+    // nunca coincide con correct_order ni depende del azar (presentacion.ts).
+    // La operabilidad por teclado se conserva: cada opción sigue siendo un
+    // <button> focusable (EF-ACC-01).
+    const opcionesVisibles = ordenPresentacion(pregunta)
+      .map((id) => inter.options.find((o) => o.id === id))
+      .filter((o) => o !== undefined);
+    const restantes = opcionesVisibles.filter((o) => !ordenHecho.includes(o.id));
     return (
       <div>
         <ol className="orden-lista">
@@ -214,40 +222,52 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
   const { ajustes, fijarTexto, fijarMovimiento } = useAjustes();
   const reducirMovimiento = movimientoReducido(ajustes.movimiento);
 
-  // Recuperación de partida (EF-AV-08/EF-PER): se restaura lo guardado y se
-  // retoma en la primera pregunta sin responder. Un progreso corrupto o de
-  // otro catálogo se ignora sin dar por buena la carga (§7.3).
   const preguntas: Pregunta[] = useMemo(
     () => catalogo.preguntasDeEpisodio(EPISODIO_INICIAL),
     [catalogo],
   );
 
+  // Visibilidad narrativa (encargo P1 §D): la cobertura de pasajes de los
+  // beats indica qué lances están IMPLEMENTADOS en la narración del episodio
+  // (estado del catálogo), no qué ha leído personalmente el jugador; el Modo
+  // Aventura permanece como modalidad independiente y aquí no hay bloqueo por
+  // progreso individual. Lo aún no narrado se lista como pendiente. La
+  // relación es por identificadores de pasaje, no por posición de fichero: al
+  // ampliar la narración, las bloqueadas se desbloquean solas.
+  const { visibles, bloqueadas } = useMemo(() => {
+    const beats = catalogo
+      .escenasDeEpisodio(EPISODIO_INICIAL)
+      .flatMap((escena) => catalogo.beatsDeEscena(escena.id));
+    return separarVisibles(preguntas, pasajesNarrados(beats));
+  }, [catalogo, preguntas]);
+
+  // Recuperación de partida (EF-AV-08/EF-PER) sin pérdida de progreso: se
+  // conservan en almacenamiento TODAS las respuestas válidas guardadas,
+  // incluidas las de preguntas hoy bloqueadas por cobertura narrativa; solo
+  // se muestran y contabilizan las de preguntas accesibles. Un progreso
+  // corrupto, de otro catálogo o malformado se ignora sin dar por buena la
+  // carga (§7.3). Al desbloquearse una pregunta, su respuesta anterior vuelve
+  // a contabilizarse automáticamente.
+  const idsConocidos = useMemo(() => new Set(preguntas.map((q) => q.id)), [preguntas]);
+  const idsVisibles = useMemo(() => new Set(visibles.map((q) => q.id)), [visibles]);
+
   useEffect(() => {
-    if (!catalogo || preguntas.length === 0) return;
+    if (!catalogo || visibles.length === 0) return;
     cargarProgreso()
       .then((crudo) => {
-        if (!crudo) return;
-        let guardado: Progreso;
-        try {
-          guardado = JSON.parse(crudo) as Progreso;
-        } catch {
-          return; // progreso ilegible: comenzar de cero
-        }
-        const ids = new Set(preguntas.map((q) => q.id));
-        const valido = Object.fromEntries(
-          Object.entries(guardado).filter(([id, v]) => ids.has(id) && v && Array.isArray(v.seleccion)),
-        );
-        if (!Object.keys(valido).length) return;
-        setProgreso(valido);
-        const primeraLibre = preguntas.findIndex((q) => !(q.id in valido));
-        setIndice(primeraLibre === -1 ? preguntas.length - 1 : primeraLibre);
-        setAvisoGuardado(`partida recuperada · ${Object.keys(valido).length} respuestas`);
+        const guardadas = respuestasGuardadas(crudo, idsConocidos);
+        if (!Object.keys(guardadas).length) return;
+        setProgreso(guardadas);
+        const primeraLibre = visibles.findIndex((q) => !(q.id in guardadas));
+        setIndice(primeraLibre === -1 ? visibles.length - 1 : primeraLibre);
+        const hoy = Object.keys(respuestasVisibles(guardadas, idsVisibles)).length;
+        setAvisoGuardado(`partida recuperada · ${hoy} respuestas`);
       })
       .catch(() => undefined);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [catalogo]);
 
-  const pregunta = preguntas[indice];
+  const pregunta = visibles[indice];
 
   useEffect(() => {
     setSeleccion([]);
@@ -344,9 +364,9 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
 
   // ---- teclado: Comprobar/Seguir con Enter fuera de botones; Esc vuelve al
   // menú (si el cajón de descubrimientos está abierto, lo cierra primero).
-  const puedeComprobar = pregunta && seleccion.length > 0;
   const respondidaGlobal = estado.fase === 'respondida';
-  const puedeSeguir = respondidaGlobal && pregunta && indice + 1 < preguntas.length;
+  const puedeComprobar = pregunta && seleccion.length > 0;
+  const puedeSeguir = respondidaGlobal && pregunta && indice + 1 < visibles.length;
   const seguir = useCallback(
     () => setIndice((i) => i + 1),
     [],
@@ -386,7 +406,9 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
     [catalogo],
   );
 
-  // ---- escena activa: la pre-imagen vigente; el desenlace al cerrar episodio
+  // ---- escena activa: la imagen propia de la pregunta (DC-24), sin herencia
+  // de la pregunta anterior. Un hotspot muestra su propia imagen de ejercicio;
+  // el resto, su pre-imagen exclusiva. El desenlace al cerrar el episodio.
   const medioPost = useMemo(
     () =>
       Object.values(catalogo.medios?.() ?? {}).find(
@@ -395,24 +417,32 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
     [catalogo],
   );
   const medioEscena = useMemo(() => {
-    // Última pre-imagen no nula desde la pregunta actual hacia atrás (persistente).
-    for (let i = indice; i >= 0; i--) {
-      const pre = preguntas[i]?.visual_requirements?.pre_image_media_id;
-      if (pre) return catalogo.medio(pre);
-    }
-    return undefined;
-  }, [catalogo, preguntas, indice]);
+    const vr = pregunta?.visual_requirements;
+    const propio =
+      pregunta?.interaction.type === 'hotspot'
+        ? (vr?.hotspot_media_id ?? vr?.pre_image_media_id)
+        : vr?.pre_image_media_id;
+    return propio ? catalogo.medio(propio) : undefined;
+  }, [catalogo, pregunta]);
 
   const finDeEpisodio =
-    estado.fase === 'respondida' && indice + 1 === preguntas.length && preguntas.length > 0;
+    estado.fase === 'respondida' && indice + 1 === visibles.length && visibles.length > 0;
   const escenaActiva: MediaAsset | undefined = finDeEpisodio ? medioPost : medioEscena;
 
+  // Marcador y avance solo con preguntas accesibles hoy; las respuestas
+  // conservadas de preguntas bloqueadas no contabilizan (corrección P0).
+  const respuestasHoy = useMemo(
+    () => respuestasVisibles(progreso, idsVisibles),
+    [progreso, idsVisibles],
+  );
+  const aciertos = Object.values(respuestasHoy).filter((p) => p.acierto).length;
+  const respondidasHoy = Object.keys(respuestasHoy).length;
+
   if (!pregunta)
-    return <main className="cine solo-estado">No hay preguntas del episodio {EPISODIO_INICIAL}.</main>;
+    return <main className="cine solo-estado">No hay preguntas disponibles del episodio {EPISODIO_INICIAL}.</main>;
 
   const episodio = catalogo.episodio(EPISODIO_INICIAL);
   const respondida = estado.fase === 'respondida';
-  const aciertos = Object.values(progreso).filter((p) => p.acierto).length;
   const requiereBoton = ['multi_choice', 'ordering', 'matching'].includes(
     pregunta.interaction.type,
   );
@@ -437,12 +467,12 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
       <h1>{episodio.title}</h1>
       <div className="cabecera-linea">
         <span className="progreso-texto">
-          {indice + 1} / {preguntas.length}
+          {indice + 1} / {visibles.length}
         </span>
         <div className="progreso-barra" role="presentation">
           <div
             className="progreso-relleno"
-            style={{ width: `${(Object.keys(progreso).length / preguntas.length) * 100}%` }}
+            style={{ width: `${(respondidasHoy / visibles.length) * 100}%` }}
           />
         </div>
         {avisoGuardado && <span className="guardado">{avisoGuardado}</span>}
@@ -509,9 +539,15 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
           <div className="resumen">
             <p className="resumen-titulo">Fin del paso por los molinos</p>
             <p>
-              {aciertos} de {preguntas.length} aciertos. Los descubrimientos quedan anotados en
+              {aciertos} de {visibles.length} aciertos. Los descubrimientos quedan anotados en
               su cuaderno de investigador.
             </p>
+            {bloqueadas.length > 0 && (
+              <p>
+                Otras {bloqueadas.length} preguntas de este capítulo llegarán cuando la
+                narración del Modo Historia alcance sus lances.
+              </p>
+            )}
             <button className="secundario" onClick={reiniciar}>
               Volver a pasar el episodio
             </button>

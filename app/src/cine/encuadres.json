@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "actualizado": "2026-11-08",
+  "fuente": "assets/scenes/manifest.json (preferred_overlay_side) + docs/DIRECCION_ARTISTICA.md (sujeto en tercio izquierdo); hipótesis de layout pendiente de validación de legibilidad (DOSSIER_H4 §3.5)",
+  "nota": "region_critica en tanto por uno del fotograma 1672×941; los paneles no la cubren. Entradas ausentes usan el encuadre por defecto (texto a la derecha).",
+  "encuadres": [
+    {
+      "media_id": "DQ.MA.000026",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900002",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900005",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900007",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900008",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900011",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900013",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900019",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900025",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900026",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900027",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900028",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900029",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900030",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900031",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900032",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900033",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900034",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900035",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900036",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900037",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900038",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900039",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900040",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900041",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    },
+    {
+      "media_id": "DQ.MA.900042",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.6,
+        "h": 1.0
+      }
+    }
+  ]
+}

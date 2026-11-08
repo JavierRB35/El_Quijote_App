@@ -1,0 +1,34 @@
+{
+ "id": "DQ.MA.901007",
+ "contract_version": "1.0.0",
+ "function": "pre_pregunta",
+ "media_class": "RECREACION_IA",
+ "logical_uri": "assets://scenes/part_1/chapter_08/p1_c08_question_000108.webp",
+ "derivatives": [
+  {
+   "variant": "original",
+   "format": "webp",
+   "width": 2560,
+   "height": 1440,
+   "size_bytes": 680534,
+   "sha256": "sha256:d0c08fabf558949b0f99fc1c17769d7b2424cd9734c33230527405cc344b933e"
+  }
+ ],
+ "alt": "Don Quijote y Sancho cabalgan en fila por el camino manchego, él a caballo y Sancho sobre su asno, mirando hacia el horizonte.",
+ "source_id": "DQ.SRC.0003",
+ "license_id": "DQ.LIC.0002",
+ "author": "Equipo de arte El_Quijote_App (recreación IA)",
+ "date": "2026-11-08",
+ "allowed_uses": [
+  "uso_personal_app",
+  "almacenamiento_repo_git"
+ ],
+ "license_status": "verificada",
+ "provenance": "Recreación IA del proyecto (OpenAI ImageGen, 2026-11-08, encargo artístico A01 — PR #67); referencias encadenadas de continuidad del propio lote y del repositorio (personajes_referencia, molinos_pre, frailes_carreta_pre); rotulada RECREACION_ARTISTICA (nunca evidencia histórica). Pregunta DQ.Q.000108 (ordenación): un único instante de viaje, sin viñetas ni interfaz que dibuje la respuesta. sha256, dimensiones (2560×1440) y tamaño verificados contra el fichero en la catalogación. Revisión editorial de Dirección del lote A01 pendiente (PR #67: control de producción, no aprobación definitiva); permisos acreditados: uso_personal_app y almacenamiento_repo_git — redistribución no acreditada.",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "spoiler_level": "ninguno"
+}

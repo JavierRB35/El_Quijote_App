@@ -274,7 +274,9 @@ export default function ReproductorHistoria({ catalogo, onSalir }: Props) {
               {esInicioBeat ? ' · inicio del beat' : ''}
             </p>
             <p className="texto">{textoParaPantalla(intervencion.texto_visible)}</p>
-            {item.escena.accessibility?.alt && (
+            {/* El alt de la escena describe el fallback neutro: solo aplica
+                cuando no hay plano elegible visible. */}
+            {!activo && item.escena.accessibility?.alt && (
               <p className="escena-alt">{item.escena.accessibility.alt}</p>
             )}
             <button

@@ -229,3 +229,15 @@ Verificación automática 2026-11-06: las 16 citas cotejadas carácter a caráct
 2. Alta física de los pasajes propuestos validados `DQ.P1.C08.P0013–P0017` en `content/piloto/passages/` + `package.json` (requiere el contrato de beats R09/R11 para no divergir del catálogo).
 3. Storyboard de planos por beat sobre los 3 assets existentes (R06); huecos (B05 carga, B08 diálogo post-caída) a la matriz escena→plano→asset.
 4. Cue sheet de las 16 intervenciones con los `texto_oral` ya fijos (R07).
+
+---
+
+## ADENDA MONTAJE A01 (PR #72 — decisión de Dirección, 2026-11-08)
+
+El montaje cinematográfico del episodio queda así en datos (v1.2.0): B07
+(I12) muestra N11 caída tras I11; **B08 queda con únicamente I13** y muestra
+N12 socorro; **beat nuevo (order 9) con I14+I15** muestra N13 diálogo; B09
+(I16, order 10) muestra N16 camino (simultaneidad autorizada). IDs de
+intervención, textos verbatim, pasajes y hashes sin alteración. Los beats
+B01–B06 permanecen en neutro editorial deliberado. Ver
+`docs/ASIGNACION_VISUAL_P1_C08.md` §2b.

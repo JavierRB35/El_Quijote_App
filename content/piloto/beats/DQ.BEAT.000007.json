@@ -1,37 +1,39 @@
 {
-  "id": "DQ.BEAT.000007",
-  "contract_version": "1.2.0",
-  "scene_id": "DQ.P1.C08.E01.S02",
-  "unit_ids": [
-    "DQ.UN.P1.C08.U04"
-  ],
-  "order": 7,
-  "kind": "ACCION",
-  "avance_automatico": null,
-  "utterances": [
-    {
-      "utterance_id": "DQ.INT.000012",
-      "speaker": {
-        "tipo": "narrador"
-      },
-      "texto_visible": "Acudió Sancho Panza a socorrerle, a todo el correr de su\nasno, y cuando llegó halló que no se podía menear: tal fue el golpe que dio\ncon él Rocinante.",
-      "text_kind": "CITA_LITERAL",
-      "passage_ids": [
-        "DQ.P1.C08.P0006"
-      ],
-      "localizador": "PG 2000 (DQ.SRC.0005) offset 124716-124866 (indexación LF); líneas 2606-2608 del fichero",
-      "nota_editorial": "FICHA_ESCENA_P1_C08_MOLINOS §3 (propuesta 1.1); texto literal PG #2000."
-    }
-  ],
-  "visual_asset_ids": [],
-  "manual_advance_allowed": true,
-  "replay_allowed": true,
-  "reduced_motion_fallback": true,
-  "entry_condition": "SECUENCIA_CANONICA",
-  "exit_condition": "FIN_DE_BEAT_O_AVANCE_MANUAL",
-  "review": {
-    "state": "borrador",
-    "reviewer_role": null,
-    "date": null
+ "id": "DQ.BEAT.000007",
+ "contract_version": "1.2.0",
+ "scene_id": "DQ.P1.C08.E01.S02",
+ "unit_ids": [
+  "DQ.UN.P1.C08.U04"
+ ],
+ "order": 7,
+ "kind": "ACCION",
+ "avance_automatico": null,
+ "utterances": [
+  {
+   "utterance_id": "DQ.INT.000012",
+   "speaker": {
+    "tipo": "narrador"
+   },
+   "texto_visible": "Acudió Sancho Panza a socorrerle, a todo el correr de su\nasno, y cuando llegó halló que no se podía menear: tal fue el golpe que dio\ncon él Rocinante.",
+   "text_kind": "CITA_LITERAL",
+   "passage_ids": [
+    "DQ.P1.C08.P0006"
+   ],
+   "localizador": "PG 2000 (DQ.SRC.0005) offset 124716-124866 (indexación LF); líneas 2606-2608 del fichero",
+   "nota_editorial": "FICHA_ESCENA_P1_C08_MOLINOS §3 (propuesta 1.1); texto literal PG #2000."
   }
+ ],
+ "visual_asset_ids": [
+  "DQ.MA.901010"
+ ],
+ "manual_advance_allowed": true,
+ "replay_allowed": true,
+ "reduced_motion_fallback": true,
+ "entry_condition": "SECUENCIA_CANONICA",
+ "exit_condition": "FIN_DE_BEAT_O_AVANCE_MANUAL",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ }
 }

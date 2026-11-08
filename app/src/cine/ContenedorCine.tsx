@@ -12,6 +12,7 @@
 //    fallo real de carga muestra la nota discreta única (cerrable, no bloquea).
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
+import { rectaContenido, type Recta } from './hotspot';
 
 export interface PlanoCine {
   /** URI lógica del activo visible; null = fondo neutro editorial. */
@@ -22,6 +23,11 @@ export interface PlanoCine {
   mediaClass?: string;
   /** Lado reservado al texto según el encuadre del activo. */
   ladoTexto: 'derecha' | 'izquierda';
+  /** Presentación del fotograma: 'cover' (defecto, a sangre) o 'contain'
+   *  (fotograma íntegro con letterbox y SIN deriva — p. ej. el señalamiento
+   *  de hotspot exige la imagen quieta y completa). Regla genérica por tipo
+   *  de interacción; nunca CSS por imagen. */
+  ajuste?: 'cover' | 'contain';
 }
 
 interface Props {
@@ -39,6 +45,11 @@ interface Props {
   pregunta?: ReactNode;
   /** Acciones flotantes del contenedor (Descubrir más, etc.). */
   lateral?: ReactNode;
+  /** Capa interactiva sobre la imagen DIBUJADA (p. ej. el señalamiento de
+   *  hotspot). Recibe la recta medida de la imagen contenida (null mientras
+   *  no haya imagen medible). La capa no es enfocable: la alternativa
+   *  accesible vive en el panel de la pregunta (teclado y lector de pantalla). */
+  zona?: (recta: Recta | null) => ReactNode;
 }
 
 /** Nota discreta de fallo real de carga (una por URI, cerrable, no bloquea). */
@@ -63,6 +74,7 @@ export default function ContenedorCine({
   texto,
   pregunta,
   lateral,
+  zona,
 }: Props) {
   // Caché de imágenes por URI con cross-fade entre planos (el plano saliente
   // persiste hasta que el entrante tiene píxeles: nunca se vacía el fotograma).
@@ -70,6 +82,55 @@ export default function ContenedorCine({
   const [fallos, setFallos] = useState<Record<string, string>>({});
   const [notaCerrada, setNotaCerrada] = useState<string | null>(null);
   const pedidas = useRef<Set<string>>(new Set());
+  const refPlano = useRef<HTMLImageElement | null>(null);
+  const contain = plano.ajuste === 'contain';
+
+  // Recta de la imagen dibujada (solo con capa de zona): se mide al cargar el
+  // plano y en cada redimensionado del viewport. Con 'contain' y sin deriva
+  // la recta es estable, lo que mantiene honesto el hit-testing del hotspot.
+  const [recta, setRecta] = useState<Recta | null>(null);
+  useEffect(() => {
+    if (!zona || !contain) {
+      setRecta(null);
+      return;
+    }
+    // El letterbox se alinea al lado opuesto del panel (lado_texto del
+    // encuadre): la obra queda entera fuera de la columna.
+    const alinear = plano.ladoTexto === 'izquierda' ? 'fin' : 'inicio';
+    const medir = () => {
+      const img = refPlano.current;
+      if (!img || !img.complete || !img.naturalWidth) {
+        setRecta(null);
+        return;
+      }
+      const caja = img.getBoundingClientRect();
+      const nueva = rectaContenido(
+        img.naturalWidth,
+        img.naturalHeight,
+        caja.width,
+        caja.height,
+        'contain',
+        alinear,
+      );
+      setRecta((previa) =>
+        previa &&
+        previa.x === nueva.x && previa.y === nueva.y &&
+        previa.w === nueva.w && previa.h === nueva.h
+          ? previa
+          : nueva,
+      );
+    };
+    const img = refPlano.current;
+    // La decodificación puede terminar después del render: escuchar la carga
+    // real además de medir al montar y en cada redimensionado.
+    img?.addEventListener('load', medir);
+    medir();
+    window.addEventListener('resize', medir);
+    return () => {
+      img?.removeEventListener('load', medir);
+      window.removeEventListener('resize', medir);
+    };
+  }, [zona, contain, plano.uri, plano.ladoTexto, cargadas]);
 
   useEffect(() => {
     const uri = plano.uri;
@@ -104,22 +165,32 @@ export default function ContenedorCine({
   const hayImagen = plano.uri !== null && plano.uri in cargadas;
 
   return (
-    <main className={`cine cine-${estado} ${hayImagen ? '' : 'sin-plano'}`}>
+    <main className={`cine cine-${estado} lado-${plano.ladoTexto} ${hayImagen ? '' : 'sin-plano'}`}>
       <div className="lienzo" aria-hidden="true">
         {Object.entries(cargadas).map(([uri, src]) => (
           <img
             key={uri}
+            ref={uri === plano.uri ? refPlano : undefined}
             src={src}
             alt=""
             className={`plano ${uri === plano.uri ? 'activo' : ''} ${
-              reducirMovimiento ? 'sin-deriva' : ''
-            }`}
+              reducirMovimiento || contain ? 'sin-deriva' : ''
+            } ${contain ? 'ajuste-contain' : ''}`}
           />
         ))}
         <div className="neutro" style={{ opacity: hayImagen ? 0 : 1 }} aria-hidden="true">
           <div className="neutro-filete" />
         </div>
         <div className="vineta" />
+        {zona && recta && (
+          <div
+            className="zona-plano"
+            style={{ left: recta.x, top: recta.y, width: recta.w, height: recta.h }}
+            aria-hidden="true"
+          >
+            {zona(recta)}
+          </div>
+        )}
       </div>
 
       {/* Descripción accesible del plano (alt) fuera de la capa decorativa. */}
@@ -132,7 +203,7 @@ export default function ContenedorCine({
       </div>
 
       {pregunta && (
-        <section className="panel-pregunta" aria-label="Pregunta">
+        <section className={`panel-pregunta lado-${plano.ladoTexto}`} aria-label="Pregunta">
           {pregunta}
         </section>
       )}

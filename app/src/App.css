@@ -103,6 +103,25 @@ body {
   transform: none;
 }
 
+/* Presentación 'contain' (fotograma íntegro con letterbox): regla genérica
+   por tipo de interacción (p. ej. hotspot: señalar exige la imagen quieta,
+   completa y sin deriva que falsee el hit-testing). Nunca CSS por imagen.
+   El letterbox se alinea al lado opuesto del panel de pregunta (lado_texto
+   del encuadre): la obra queda entera fuera de la columna. */
+.plano.ajuste-contain {
+  object-fit: contain;
+  animation: none;
+  transform: none;
+}
+
+.cine.lado-derecha .plano.ajuste-contain {
+  object-position: left center;
+}
+
+.cine.lado-izquierda .plano.ajuste-contain {
+  object-position: right center;
+}
+
 @keyframes deriva {
   from {
     transform: scale(1.06) translate(0.6%, 0.4%);
@@ -339,24 +358,43 @@ body {
   margin-top: 0.5rem;
 }
 
-/* ---------- panel de pregunta (estado «pregunta»: inferior y ampliable) --- */
+/* Contemplar la imagen íntegra (P0): retira el panel sin tocar el progreso. */
+.contemplar-panel {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+/* Botón flotante de retorno del modo contemplar (encima del fotograma). */
+.volver-pregunta {
+  position: absolute;
+  right: 2.2rem;
+  bottom: 1.2rem;
+  z-index: 7;
+  background: var(--panel);
+  backdrop-filter: blur(10px) saturate(0.85);
+  border: 1px solid var(--panel-borde);
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  min-height: 48px;
+}
+
+/* ---------- panel de pregunta (P0, Issue #75): columna lateral en el lado
+   seguro del encuadre (encuadreDe → lado_texto), igual que la banda de
+   narración. Ya no es una caja central: el fotograma queda íntegro visible
+   (≥65 % del área libre) y la región crítica del activo jamás se cubre. ---- */
 
 .panel-pregunta {
   position: absolute;
-  left: 50%;
-  bottom: 1.1rem;
-  transform: translateX(-50%);
+  /* Bajo la cabecera compacta (sus controles quedan operables) y sobre el pie. */
+  top: calc(50% + 2.4rem);
+  transform: translateY(-50%);
   z-index: 6;
-  width: min(58rem, 96vw);
-  /* Altura inicial acotada (refinamiento P1 de Dirección): enunciado completo,
-     indicación y ~2,5–3 opciones visibles; el resto, en scroll interno siempre
-     accesible (ratón, teclado y táctil). «Ampliar panel» sube el techo. */
-  max-height: min(52vh, 32rem);
+  width: min(25rem, 30vw);
+  /* Columna compacta: el enunciado y las opciones fluyen en scroll interno;
+     «Ampliar panel» la ensancha, «Contemplar la imagen» la retira por
+     completo sin tocar el progreso. */
+  max-height: min(66vh, 40rem);
   overflow-y: auto;
-  /* Semitransparente con desenfoque: la escena se percibe detrás y el texto
-     conserva contraste AAA (pergamino #f2e8d5 ≈ 10–12:1 sobre el respaldo
-     azulado incluso con la imagen más clara detrás). Respaldo @supports para
-     motores sin backdrop-filter: sin desenfoque, respaldo más opaco. */
   background: var(--panel); /* rgba(13, 19, 34, 0.87) */
   backdrop-filter: blur(12px) saturate(0.85);
   -webkit-backdrop-filter: blur(12px) saturate(0.85);
@@ -376,21 +414,72 @@ body {
   }
 }
 
+/* El lado lo fija el encuadre del activo (nunca CSS por imagen). */
+.panel-pregunta.lado-derecha { right: 2.2rem; }
+.panel-pregunta.lado-izquierda { left: 2.2rem; }
+
+/* Sin plano (pendiente de imagen propia): columna centrada, sin lado. */
+.cine.sin-plano .panel-pregunta {
+  left: 50%;
+  right: auto;
+  transform: translate(-50%, -50%);
+  width: min(30rem, 92vw);
+}
+
+/* Capa de señalamiento del hotspot: viva sobre la imagen dibujada que mide
+   ContenedorCine (contain, sin deriva). No es enfocable: la alternativa
+   accesible es la lista de opciones del panel (teclado y lector de pantalla). */
+.zona-plano {
+  position: absolute;
+  pointer-events: none;
+}
+
+.zona-plano > * {
+  pointer-events: auto;
+}
+
+.capa-senal {
+  position: absolute;
+  inset: 0;
+  cursor: crosshair;
+}
+
+.zona-marca {
+  position: absolute;
+  border: 2px dashed var(--dorado-claro);
+  border-radius: 4px;
+  box-shadow: 0 0 14px rgba(212, 175, 106, 0.4);
+  pointer-events: none;
+}
+
 .panel-pregunta-cuerpo.amplio .panel-pregunta,
 .panel-pregunta:has(.panel-pregunta-cuerpo.amplio) {
   max-height: 88vh;
 }
 
-/* En pantallas estrechas: el panel baja al pie a sangre y la escena respira. */
+/* En pantallas estrechas: la columna baja al pie a sangre (sábana compacta,
+   máx. 48vh) y la escena respira encima; sin pérdida de controles. */
 @media (max-width: 1100px) {
-  .panel-pregunta {
-    left: 0;
-    right: 0;
+  .panel-pregunta,
+  .panel-pregunta.lado-derecha,
+  .panel-pregunta.lado-izquierda {
+    top: auto;
     bottom: 0;
     transform: none;
+    left: 0;
+    right: 0;
     width: auto;
-    max-height: 62vh;
+    max-height: 48vh;
     border-radius: 10px 10px 0 0;
+  }
+
+  .cine.sin-plano .panel-pregunta {
+    top: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    right: auto;
+    width: min(30rem, 92vw);
   }
 
   .banda-texto,
@@ -405,13 +494,13 @@ body {
 }
 
 @keyframes subir-panel {
+  /* Solo fundido: la transform del panel la fija su geometría (columna
+     lateral o sábana inferior) y no debe pisarla la animación. */
   from {
     opacity: 0;
-    transform: translateX(-50%) translateY(18px);
   }
   to {
     opacity: 1;
-    transform: translateX(-50%) none;
   }
 }
 

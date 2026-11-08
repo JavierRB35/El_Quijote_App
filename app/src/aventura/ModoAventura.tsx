@@ -12,6 +12,7 @@ import { leerAsset } from '../entorno';
 import { Catalogo, type MediaAsset, type Pregunta } from '../contrato';
 import ContenedorCine, { type PlanoCine } from '../cine/ContenedorCine';
 import { encuadreDe } from '../cine/resolverPlano';
+import { coordenadasImagen, puntoEnZona, rectaZonaEnPantalla, type Recta } from '../cine/hotspot';
 import { AjustesBoton, movimientoReducido, useAjustes } from '../cine/ajustes';
 import PanelDescubrir from '../cine/PanelDescubrir';
 import { textoParaPantalla } from '../presentacion';
@@ -171,7 +172,10 @@ function renderizadorRespuesta({
   if (inter.type === 'hotspot') {
     return (
       <div className="opciones">
-        <p className="pista">Localice en la escena:</p>
+        <p className="pista">
+          Señale la zona sobre la imagen; esta lista es la alternativa accesible
+          (teclado y lector de pantalla):
+        </p>
         {inter.options.map((o) => (
           <button
             key={o.id}
@@ -217,6 +221,9 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
   const [avisoGuardado, setAvisoGuardado] = useState<string>('');
   const [panelAmplio, setPanelAmplio] = useState(false);
   const [descubrirAbierto, setDescubrirAbierto] = useState(false);
+  // Contemplar la imagen íntegra (P0, Issue #75): oculta el panel y la capa
+  // de señalamiento sin tocar el progreso; vuelve con el botón flotante o Esc.
+  const [contemplando, setContemplando] = useState(false);
 
   // Ajustes de presentación (texto/movimiento) con persistencia propia.
   const { ajustes, fijarTexto, fijarMovimiento } = useAjustes();
@@ -272,6 +279,7 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
   useEffect(() => {
     setSeleccion([]);
     setEstado({ fase: 'sin_responder' });
+    setContemplando(false);
   }, [indice]);
 
   // Autoguardado (EF-AV-08): cada respuesta persiste de forma atómica.
@@ -374,6 +382,8 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
   const cerrarDescubrir = useCallback(() => setDescubrirAbierto(false), []);
   const descubrirRef = useRef(descubrirAbierto);
   descubrirRef.current = descubrirAbierto;
+  const contemplandoRef = useRef(contemplando);
+  contemplandoRef.current = contemplando;
   useEffect(() => {
     const alPulsar = (e: KeyboardEvent) => {
       const destino = e.target as HTMLElement | null;
@@ -385,7 +395,11 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
           else if (!esBoton && puedeSeguir) { seguir(); e.preventDefault(); }
           break;
         case 'Escape':
-          if (descubrirRef.current) {
+          // Precedencia: contemplar → descubrimientos → salir al menú.
+          if (contemplandoRef.current) {
+            setContemplando(false);
+            e.preventDefault();
+          } else if (descubrirRef.current) {
             setDescubrirAbierto(false);
             e.preventDefault();
           } else {
@@ -447,6 +461,53 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
     pregunta.interaction.type,
   );
 
+  // Hotspot visual (P0, Issue #75): la zona normalizada del contrato se
+  // señala sobre la imagen íntegra (presentación 'contain', fotograma
+  // estático); la lista textual queda como alternativa accesible explícita.
+  // El hit-test usa la recta de imagen dibujada que mide ContenedorCine:
+  // dentro de hotspot_area = opción correcta; sobre la imagen pero fuera =
+  // señalamiento erróneo (primer distractor); sobre las bandas = sin efecto.
+  // Tras responder, la marca de la zona correcta solo se dibuja mientras la
+  // imagen visible siga siendo la del propio hotspot (si el episodio pasa al
+  // desenlace, la marca no se proyecta sobre otra imagen).
+  const interaccion = pregunta.interaction;
+  const esImagenHotspot =
+    interaccion.type === 'hotspot' &&
+    Boolean(interaccion.hotspot_area) &&
+    escenaActiva?.id === pregunta.visual_requirements?.hotspot_media_id;
+  const esHotspot = esImagenHotspot && !respondida && !contemplando;
+  const marcaHotspot = respondida && esImagenHotspot && !contemplando;
+  const zonaHotspot = marcaHotspot
+    ? (recta: Recta | null) => {
+        if (!recta) return null;
+        const marca = rectaZonaEnPantalla(interaccion.hotspot_area!, recta);
+        return <div className="zona-marca" style={{ left: marca.x, top: marca.y, width: marca.w, height: marca.h }} />;
+      }
+    : esHotspot
+      ? () => (
+          <div
+            className="capa-senal"
+            onClick={(e) => {
+              const caja = e.currentTarget.getBoundingClientRect();
+              const uv = coordenadasImagen(e.clientX, e.clientY, {
+                x: caja.left,
+                y: caja.top,
+                w: caja.width,
+                h: caja.height,
+              });
+              if (!uv) return; // bandas de letterbox: fuera del cuadro
+              const correctas = interaccion.correct_option_ids ?? [];
+              if (puntoEnZona(uv.u, uv.v, interaccion.hotspot_area!) && correctas[0]) {
+                alternar(correctas[0]);
+                return;
+              }
+              const distractor = interaccion.options.find((o) => !correctas.includes(o.id));
+              if (distractor) alternar(distractor.id);
+            }}
+          />
+        )
+      : undefined;
+
   const plano: PlanoCine = escenaActiva
     ? {
         uri: escenaActiva.logical_uri,
@@ -454,6 +515,7 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
         autor: escenaActiva.author,
         mediaClass: escenaActiva.media_class,
         ladoTexto: encuadreDe(escenaActiva.id).lado_texto,
+        ajuste: esImagenHotspot ? 'contain' : 'cover',
       }
     : {
         uri: null,
@@ -500,6 +562,16 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
       {!respondida && requiereBoton && (
         <button className="primario" onClick={verificar} disabled={seleccion.length === 0}>
           Comprobar
+        </button>
+      )}
+      {!respondida && (
+        // Contemplar la imagen íntegra (P0): oculta el panel sin tocar el
+        // progreso; vuelve con el botón flotante o Esc.
+        <button
+          className="control control-estado contemplar-panel"
+          onClick={() => setContemplando(true)}
+        >
+          Contemplar la imagen
         </button>
       )}
       {!respondida && (
@@ -565,9 +637,22 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
       cargar={leerAsset}
       cabecera={cabecera}
       texto={cuerpoNarracion}
-      lateral={<Diagnostico escena={plano.uri} />}
+      lateral={
+        <>
+          <Diagnostico escena={plano.uri} />
+          {contemplando && (
+            <button
+              className="control control-estado volver-pregunta"
+              onClick={() => setContemplando(false)}
+            >
+              Volver a la pregunta (escape)
+            </button>
+          )}
+        </>
+      }
+      zona={zonaHotspot}
       pregunta={
-        respondida ? undefined : (
+        respondida || contemplando ? undefined : (
           <div className={`panel-pregunta-cuerpo ${panelAmplio ? 'amplio' : ''}`}>
             {cuerpoPregunta}
           </div>

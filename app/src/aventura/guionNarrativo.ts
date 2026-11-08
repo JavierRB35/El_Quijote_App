@@ -84,13 +84,13 @@ export const RONDAS_AVENTURA: RondaNarrativa[] = [
     ], correcta: 'a',
     consecuencia: 'Don Quijote acomete a uno de los frailes y lo derriba de su montura.',
     explicacion: 'Su decisión sigue la lógica de liberar a una supuesta cautiva.',
-    pasajeId: 'DQ.P1.C08.P0008',
+    pasajeId: null, // ataque documentado en I,8, sin pasaje fraccionado específico
     imagenPrevia: imagen('p1_c08_question_000109_safe_right_v2.webp', 'Don Quijote y Sancho discrepan sobre lo que ven.', 'DQ.MA.901008'),
     imagenConsecuencia: imagen('p1_c08_story_a02_nf1_fraile_caido_safe_right_v2.webp', 'Un fraile ha caído tras la arremetida del caballero.'),
   },
   {
     id: 'AV2-I8-06', tramo: 'Los frailes y el coche',
-    contexto: 'El fraile ha caído. Sancho recuerda que las hazañas de los caballeros suelen ir acompañadas de despojos.',
+    contexto: 'Un fraile ha caído. Sancho observa al vencido y piensa en su propia recompensa como escudero.',
     personaje: 'Sancho Panza', pregunta: '¿Qué intentará hacer Sancho ahora?',
     opciones: [
       { id: 'a', texto: 'Esconderse hasta que el coche se aleje.' },
@@ -99,7 +99,7 @@ export const RONDAS_AVENTURA: RondaNarrativa[] = [
     ], correcta: 'b',
     consecuencia: 'Sancho trata de aprovechar los despojos del fraile, pero los criados se lo impiden y lo maltratan.',
     explicacion: 'El deseo de recompensa de Sancho choca con la reacción del séquito.',
-    pasajeId: 'DQ.P1.C08.P0009',
+    pasajeId: null, // despojos y criados: texto completo I,8, no P0009
     imagenPrevia: imagen('p1_c08_story_a02_nf1_fraile_caido_safe_right_v2.webp', 'El fraile yace junto al camino después de ser derribado.'),
     imagenConsecuencia: imagen('p1_c08_story_a02_nf2_sancho_criados_safe_right_v2.webp', 'Los criados se enfrentan con Sancho en el camino.'),
     checkpoint: { id: 'frailes', titulo: 'La comitiva de los frailes', mayor: true },
@@ -115,7 +115,7 @@ export const RONDAS_AVENTURA: RondaNarrativa[] = [
     ], correcta: 'a',
     consecuencia: 'Don Quijote se presenta como caballero de Dulcinea y exige que la dama vaya al Toboso.',
     explicacion: 'El encargo a la dama desencadena la resistencia del acompañante vizcaíno.',
-    pasajeId: 'DQ.P1.C08.P0010',
+    pasajeId: 'DQ.P1.C08.P0011',
     imagenPrevia: imagen('p1_c08_question_000111_safe_right_v2.webp', 'El caballero se dirige a la dama junto a la carroza.', 'DQ.MA.901009'),
     imagenConsecuencia: imagen('p1_c08_vizcaino_camino_pre.webp', 'El acompañante vizcaíno se aproxima en el camino.', 'DQ.MA.900031'),
   },
@@ -139,13 +139,13 @@ export const RONDAS_AVENTURA: RondaNarrativa[] = [
     contexto: 'El vizcaíno ha desafiado al caballero; ninguno parece dispuesto a ceder. La tensión llega a su punto máximo.',
     personaje: 'Don Quijote', pregunta: '¿Qué hará don Quijote ante el desafío?',
     opciones: [
-      { id: 'a', texto: 'Se rendirá y permitirá marchar al coche.' },
+      { id: 'a', texto: 'Aceptará tratar la disputa sin combatir.' },
       { id: 'b', texto: 'Responderá con las armas, dispuesto al combate.' },
-      { id: 'c', texto: 'Pedirá a Sancho que luche en su lugar.' },
+      { id: 'c', texto: 'Esperará a que intervengan los criados del coche.' },
     ], correcta: 'b',
     consecuencia: 'Ambos se disponen a combatir. El relato interrumpe aquí la batalla y deja su conclusión para el capítulo siguiente.',
     explicacion: 'La aventura conserva el corte narrativo de Cervantes: el desenlace no se anticipa.',
-    pasajeId: 'DQ.P1.C08.P0011',
+    pasajeId: null, // el duelo y la suspensión se cotejarán en texto completo I,8
     imagenPrevia: imagen('p1_c08_question_000108.webp', 'Los viajeros cabalgan por un camino de La Mancha.', 'DQ.MA.901007'),
     imagenConsecuencia: imagen('p1_c08_story_a02_nv1_duelo_suspendido_safe_right_v2.webp', 'Los dos contendientes alzan sus armas, antes de conocerse el resultado.'),
     checkpoint: { id: 'vizcaino', titulo: 'El desafío del vizcaíno', mayor: true },

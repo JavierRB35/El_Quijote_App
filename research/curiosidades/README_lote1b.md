@@ -1,28 +1,24 @@
-# Investigación El Quijote oculto — LOTE 1B (P2.C01 y P2.C74)
+# Investigación «El Quijote oculto» — lote 1B (II,1 y II,74)
 
-Lote complementario al primer lote en curso en la PR #82 (`research/curiosidades-primer-lote`), coordinado según issue #83: este lote cubre **exclusivamente** los capítulos **Segunda Parte, capítulo I** y **Segunda Parte, capítulo 74**, no incluidos en la PR #82, y añade **descargas reales de imágenes de dominio público** con SHA-256 y procedencia verificada.
+**Repositorio oficial:** `JavierRB35/El_Quijote_App`. **Rama existente:** `research/curiosidades-lote1b-p2c01-p2c74` (PR #84). Complementa documentalmente PR #82 sin modificar ninguno de sus archivos.
 
-## Principios operados
+## Inventario preservado
 
-- **Base textual:** `content/textos/gutenberg_2000/El_Quijote.txt` (fuente canónica del proyecto, `DQ.SRC.0005`). Todas las citas literales están localizadas y verificadas en ese fichero. No se sustituyó la edición textual del proyecto.
-- **IDs de investigación, no productivos:** `CUR-L1B-*`, `SRC-L1B-*`, `IMG-L1B-*`. No crean `DQ.DIS.*` ni modifican `content/piloto/**`. Nombres de fichero con sufijo `_lote1b` para no colisionar con los ficheros del primer lote (PR #82).
-- **Trazabilidad de afirmaciones:** cada afirmación factual lleva fuente y grado de certeza (`CONFIRMADO`, `INTERPRETACIÓN ACADÉMICA`, `HIPÓTESIS PLAUSIBLE`, `DISCUTIDO`, `SIN VERIFICAR`, `DESCARTADO`). Lo no publicable queda marcado como tal.
-- **Imágenes:** solo se han incorporado ficheros realmente descargados (3), con SHA-256, dimensiones verificadas y página de ficha en Wikimedia Commons; dominio público declarado en la ficha de origen. Una candidata adicional (portada del *Segundo tomo* de Avellaneda, 1614) queda registrada **sin descarga** por ser un PDF de libro completo.
-- **Honestidad de fuentes:** no se declara ninguna consulta, lectura o verificación no realizada. Véanse limitaciones en `registro_busquedas_lote1b.md` y `VALIDACION_lote1b.md`.
-- Sin revisión humana especializada; investigador automatizado, fecha de trabajo 2026-11-08.
+- **9 curiosidades** (`CUR-L1B-001` a `CUR-L1B-009`), 4 de II,1 y 5 de II,74; todas con `publishable: false`.
+- **17 fuentes** (`SRC-L1B-001` a `SRC-L1B-017`), incluidas BNE, textos primarios, estudios identificados y fuentes pendientes de cotejo.
+- **4 fichas visuales**: 3 binarios históricos descargados y preservados **sin modificación** (portada 1615, escena de muerte 1885, retrato tradicional de Cervantes) y candidata sin descarga (portada de Avellaneda 1614).
+- **5 relaciones** con IDs locales y referencias explicativas a la PR #82, **sin duplicar** las imágenes.
 
-## Contenido de este lote
+## Subsanación de Dirección (2026-11-08)
 
-| Fichero | Contenido |
-|---|---|
-| `catalogo_curiosidades_lote1b.jsonl` | 9 curiosidades (4 de P2.C01, 5 de P2.C74) |
-| `fuentes_lote1b.jsonl` | 9 fuentes registradas |
-| `catalogo_imagenes_lote1b.jsonl` | 3 imágenes descargadas + 1 candidata |
-| `relaciones_lote1b.jsonl` | relaciones entre curiosidades y con el primer lote |
-| `cobertura_lote1b.csv` | estado de los 2 capítulos cubiertos |
-| `registro_busquedas_lote1b.md` | búsquedas realizadas, infructuosas y pendientes |
-| `hallazgos_descartados_lote1b.md` | identificaciones desestimadas y observaciones textuales |
-| `VALIDACION_lote1b.md` | comprobaciones ejecutadas |
-| `informe_ejecutivo_lote1b.md` | resumen, estadísticas y SHA inicial/final |
+1. `CUR-L1B-001`: se registra la coincidencia literal «tercera salida» de la portada de Avellaneda (1614) y el comienzo de II,1 (1615), sin inferir que Cervantes redactó ese inicio como respuesta a la portada. Las hipótesis críticas sobre revisiones se atribuyen a Gonzalo Pontón y Felipe B. Pedraza.
+2. `CUR-L1B-009`: la transcripción del asiento del Libro 4.º de difuntos de San Sebastián, fol. 270r, contiene la fórmula registral del **23 de abril de 1616**, pero la BNE explica que corresponde al **entierro**; el fallecimiento fue el **22 de abril**. El rescate de 1580 por Juan Gil y el entierro entre las Trinitarias se consignan como hechos distintos, sin causalidad biográfica.
+3. `IMG-L1B-003`: anónimo atribuido tradicionalmente a Jáuregui, pero la BNE cataloga el óleo como **«¿siglo XIX?»** y data su aparición pública en **1911**. La inscripción «anno 1600» no autentifica la pintura. Categoría: `REPRESENTACION_DE_AUTENTICIDAD_NO_DEMOSTRADA`.
+4. `CUR-L1B-008.C4`: reformulado como correspondencia explícita de palabras entre II,70, II,74 y la portada del apócrifo, no «consenso crítico» sin fuente.
+5. `CUR-L1B-002`: se elimina «jokes» y se atribuye la lectura arbitrista a un estudio académico consultado directamente. `CUR-L1B-003`: se identifica a los poetas con fuente crítica concreta y se mantiene como no verificada la posible ironía contra Lope. `CUR-L1B-004`: refranero pendiente y estado de ficha `candidato`.
+6. `CUR-L1B-009.C3/C4`: comparaciones calendáricas y noticia arqueológica de 2015 degradadas a `SIN VERIFICAR`; excluidas del texto divulgativo, no fundamentadas en Wikipedia.
+7. Todos los registros permanecen no publicables; no se autorizan cambios en código, contratos, `content/piloto/**` ni archivos de PR #82.
 
-Los IDs `CUR-0001…0007`, `SRC-001…009` e `IMG-001…008` del primer lote (PR #82) no se alteran. La consolidación futura de ambos lotes en ficheros únicos corresponde a un encargo posterior bajo decisión de Dirección.
+**Garantías:** Las fechas, licencias, dimensiones y SHA-256 originalmente registrados para los 3 archivos binarios no han sido modificados. Los Git blob SHA-1 de las imágenes se conservan y se comparan en `VALIDACION_lote1b.md`.
+
+**Precaución:** Una fuente citada no significa que se haya leído su texto completo; los resúmenes académicos y fragmentos de resultados se declaran expresamente como tales. La publicación futura necesita revisión editorial especializada y autorización de Dirección.

@@ -1,330 +1,443 @@
-// Museo — primera Galería artística del Quijote (issue #73, fase MVP).
-// Módulo cultural independiente de Historia/Aventura: accesible desde el
-// menú sin exigir progreso previo, 100 % offline (activos locales vía
-// entorno.leerAsset), con la acuarela siempre completa (object-fit: contain,
-// nunca recortada), zoom controlado, navegación y ficha documentada sin
-// inventar atribuciones. Derechos: uso interno en desarrollo mientras
-// DQ.LIC.0001.redistribution = 'condicionada' — aviso visible y permanente.
+// Museo — Galería artística del Quijote (issue #73 + maqueta oficial
+// docs/referencias/museo/MUSEO_REFERENCIA_VISUAL_OFICIAL.png, especificación
+// docs/MUSEO_REFERENCIA_VISUAL_APROBADA.md).
+//
+// Composición EXACTA de la maqueta V1 (irrevocable salvo nueva autorización):
+//  - Cabecera azul noche: logotipo dorado «El Quijote», navegación
+//    Historia · Aventura · Museo · Atlas · Lector con Museo resaltado,
+//    ajustes/ayuda a la derecha, filete dorado fino.
+//  - Obra protagonista a la IZQUIERDA (~69 % del ancho), íntegra
+//    (object-fit: contain), con flechas laterales y botón discreto de ampliar.
+//  - Ficha editorial a la DERECHA (~28 %): sobreencabezado/colección, título,
+//    pastilla «Parte I · Capítulo VIII», Explicación, Texto original (cita
+//    verificada o pendiente), «Ver la obra completa», «Ficha de la imagen»,
+//    fuente pequeña al pie. Fuera del rectángulo de la obra.
+//  - Carrusel horizontal inferior de cinco miniaturas, obra activa con
+//    filete dorado, navegación anterior/siguiente a los extremos.
+// Derechos: uso interno en desarrollo; DQ.LIC.0001/0002 redistribution
+// condicionada — el aviso permanece visible. No es autorización de publicación.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   COLECCION_INICIAL,
-  cargarGaleria,
+  cargarMuseo,
   filtrar,
   opcionesFiltro,
   tituloDe,
+  type CitaObra,
   type Obra,
 } from './obras';
 import { leerAsset } from '../entorno';
 import './museo.css';
 
-const ZOOM_NIVELES = [1, 1.5, 2, 3];
-const OBRAS_POR_PAGINA = 24;
-
 /** Caché de imágenes resueltas por URI lógica (offline, sin servicios). */
 function useImagenes() {
   const [imagenes, setImagenes] = useState<Record<string, string>>({});
-  const [fallos, setFallos] = useState<Record<string, string>>({});
   const pedidas = useRef(new Set<string>());
   const pedir = useCallback((uri: string) => {
     if (pedidas.current.has(uri)) return;
     pedidas.current.add(uri);
     leerAsset(uri)
       .then((data) => setImagenes((m) => ({ ...m, [uri]: data })))
-      .catch((e) => setFallos((f) => ({ ...f, [uri]: String(e) })));
+      .catch(() => setImagenes((m) => ({ ...m, [uri]: '' }))); // fallo: reintento al volver a la vista
   }, []);
-  return { imagenes, fallos, pedir };
+  return { imagenes, pedir };
 }
 
-export default function Museo({ onSalir }: { onSalir: () => void }) {
-  // el manifiesto (chunk propio) se descarga solo al abrir el Museo
-  const [galeria, setGaleria] = useState<{ acuarelas: Obra[]; avisos: string[] } | null>(null);
+type VistaObra = 'ficha' | 'completa' | null;
+
+interface Props {
+  onSalir: () => void;
+  onNavegar?: (modo: 'historia' | 'aventura') => void;
+}
+
+export default function Museo({ onSalir, onNavegar }: Props) {
+  const [cargado, setCargado] = useState<{ obras: Obra[]; citas: Record<string, CitaObra>; avisos: string[] } | null>(null);
   const [error, setError] = useState<string | null>(null);
-  useEffect(() => {
-    cargarGaleria()
-      .then((g) => setGaleria({ acuarelas: g.acuarelas, avisos: g.avisos }))
-      .catch((e) => setError(String(e)));
-  }, []);
-  const acuarelas = galeria?.acuarelas ?? [];
-  const avisos = galeria?.avisos ?? [];
-  const { imagenes, fallos, pedir } = useImagenes();
-  const [vista, setVista] = useState<'portada' | 'galeria'>('portada');
+  const { imagenes, pedir } = useImagenes();
+  const [ambito, setAmbito] = useState<'coleccion' | 'catalogo'>('coleccion');
   const [parte, setParte] = useState<string | null>(null);
   const [capitulo, setCapitulo] = useState<string | null>(null);
-  const [pagina, setPagina] = useState(0);
-  const [seleccion, setSeleccion] = useState<number | null>(null); // índice en la lista filtrada
+  const [filtrosAbiertos, setFiltrosAbiertos] = useState(false);
+  const [seleccion, setSeleccion] = useState(0); // índice en la lista visible
+  const [vistaObra, setVistaObra] = useState<VistaObra>(null);
   const [zoom, setZoom] = useState(1);
+  const [ayudaAbierta, setAyudaAbierta] = useState(false);
+  const [fichaDetallada, setFichaDetallada] = useState(false);
   const refVisor = useRef<HTMLElement>(null);
 
-  const { partes, capitulos } = useMemo(() => opcionesFiltro(acuarelas), [acuarelas]);
-  const filtradas = useMemo(() => filtrar(acuarelas, parte, capitulo), [acuarelas, parte, capitulo]);
-
-  // la selección guarda un índice estable en la lista filtrada y se resuelve
-  // contra la lista actual para sobrevivir a cambios de filtro
-  const obraActual = seleccion !== null ? filtradas[seleccion] ?? null : null;
-
-  const destacadas = useMemo(
-    () => acuarelas.filter((o) => o.esColeccionInicial).slice(0, 5),
-    [acuarelas],
-  );
-  const paginaLista = useMemo(
-    () => filtradas.slice(pagina * OBRAS_POR_PAGINA, (pagina + 1) * OBRAS_POR_PAGINA),
-    [filtradas, pagina],
-  );
-  const totalPaginas = Math.max(1, Math.ceil(filtradas.length / OBRAS_POR_PAGINA));
-
-  const abrir = useCallback((indice: number) => {
-    setSeleccion(indice);
-    setZoom(1);
+  useEffect(() => {
+    cargarMuseo()
+      .then(setCargado)
+      .catch((e) => setError(String(e)));
   }, []);
 
-  const cerrarObra = useCallback(() => {
-    setSeleccion(null);
-    setZoom(1);
-  }, []);
+  const obras = cargado?.obras ?? [];
+  const citas = cargado?.citas ?? {};
+  const avisos = cargado?.avisos ?? [];
 
-  const mover = useCallback(
-    (delta: number) => {
-      setSeleccion((s) => {
-        if (s === null) return s;
-        const n = s + delta;
-        return n >= 0 && n < filtradas.length ? n : s;
-      });
-      setZoom(1);
-    },
-    [filtradas.length],
+  const { partes, capitulos } = useMemo(() => opcionesFiltro(obras), [obras]);
+  const lista = useMemo(() => {
+    const ambitoLista = ambito === 'coleccion' ? obras.filter((o) => o.esColeccionInicial) : obras;
+    return filtrar(ambitoLista, parte, capitulo);
+  }, [obras, ambito, parte, capitulo]);
+
+  const obra = lista[Math.min(seleccion, Math.max(0, lista.length - 1))] ?? null;
+
+  const irA = useCallback((indice: number) => {
+    setSeleccion(Math.max(0, Math.min(indice, lista.length - 1)));
+    setZoom(1);
+  }, [lista.length]);
+
+  const mover = useCallback((delta: number) => {
+    setSeleccion((s) => Math.max(0, Math.min(s + delta, lista.length - 1)));
+    setZoom(1);
+  }, [lista.length]);
+
+  // ventana del carrusel: cinco miniaturas visibles centradas en la activa
+  const ventana = useMemo(
+    () => lista.slice(
+      Math.max(0, Math.min(seleccion - 2, Math.max(0, lista.length - 5))),
+      Math.max(0, Math.min(seleccion - 2, Math.max(0, lista.length - 5))) + 5,
+    ),
+    [lista, seleccion],
   );
 
-  // ---- carga diferida: solo las URIs de la vista activa
+  // ---- carga diferida de las imágenes visibles
   const urisNecesarias = useMemo(() => {
-    if (obraActual) return [obraActual.uri];
-    if (vista === 'portada') return destacadas.map((o) => o.uri);
-    return paginaLista.map((o) => o.uri);
-  }, [obraActual, vista, destacadas, paginaLista]);
+    if (vistaObra === 'completa' && obra) return [obra.uri];
+    return ventana.map((o) => o.uri);
+  }, [vistaObra, obra, ventana]);
   useEffect(() => {
     urisNecesarias.forEach(pedir);
   }, [urisNecesarias, pedir]);
 
-  // ---- teclado del visor: ←/→ navega, +/− zoom, 0 restablece, Esc cierra
+  // ---- teclado
   useEffect(() => {
-    if (obraActual === null) return;
     const alPulsar = (e: KeyboardEvent) => {
+      if (vistaObra === 'completa') {
+        if (e.key === 'Escape') { setVistaObra('ficha'); e.preventDefault(); }
+        if (e.key === 'ArrowRight') { mover(1); e.preventDefault(); }
+        if (e.key === 'ArrowLeft') { mover(-1); e.preventDefault(); }
+        if (e.key === '+') { setZoom((z) => Math.min(4, Math.round((z + 0.5) * 2) / 2)); e.preventDefault(); }
+        if (e.key === '-') { setZoom((z) => Math.max(1, Math.round((z - 0.5) * 2) / 2)); e.preventDefault(); }
+        if (e.key === '0') { setZoom(1); e.preventDefault(); }
+        return;
+      }
+      if (obra === null) return;
       switch (e.key) {
-        case 'ArrowRight': mover(1); break;
-        case 'ArrowLeft': mover(-1); break;
-        case '+': case '=':
-          setZoom((z) => ZOOM_NIVELES[Math.min(ZOOM_NIVELES.indexOf(z) + 1, ZOOM_NIVELES.length - 1)]);
-          break;
-        case '-':
-          setZoom((z) => ZOOM_NIVELES[Math.max(ZOOM_NIVELES.indexOf(z) - 1, 0)]);
-          break;
-        case '0': setZoom(1); break;
-        case 'Escape': cerrarObra(); break;
+        case 'ArrowRight': mover(1); e.preventDefault(); break;
+        case 'ArrowLeft': mover(-1); e.preventDefault(); break;
+        case 'Escape': setFiltrosAbiertos(false); setAyudaAbierta(false); setFichaDetallada(false); break;
         default: return;
       }
-      e.preventDefault();
     };
     window.addEventListener('keydown', alPulsar);
     return () => window.removeEventListener('keydown', alPulsar);
-  }, [obraActual, mover, cerrarObra]);
+  }, [obra, vistaObra, mover]);
 
-  // foco visible al abrir el visor
   useEffect(() => {
-    if (obraActual !== null) refVisor.current?.focus();
-  }, [obraActual]);
+    if (obra !== null && vistaObra !== null) refVisor.current?.focus();
+  }, [obra, vistaObra]);
 
   if (error) {
     return (
       <main className="museo">
-        <header className="museo-cabecera">
-          <button className="museo-boton" onClick={onSalir}>← Menú</button>
-          <h1>Museo</h1>
-        </header>
-        <p className="museo-error">El manifiesto de ilustraciones no está disponible: {error}</p>
+        <Cabecera onSalir={onSalir} onNavegar={onNavegar} ayudaAbierta={false} onAyuda={() => {}} />
+        <p className="museo-error">El catálogo del Museo no está disponible: {error}</p>
       </main>
     );
   }
-
-  if (!galeria) {
+  if (!cargado) {
     return (
       <main className="museo">
-        <header className="museo-cabecera">
-          <button className="museo-boton" onClick={onSalir}>← Menú</button>
-          <h1>Museo</h1>
-        </header>
+        <Cabecera onSalir={onSalir} onNavegar={onNavegar} ayudaAbierta={false} onAyuda={() => {}} />
         <p className="museo-cargando museo-cargando-central">Abriendo el Museo…</p>
       </main>
     );
   }
 
+  const cita: CitaObra | undefined = obra ? citas[obra.citaId] : undefined;
+  const enColeccion = obra?.esColeccionInicial ?? false;
+
   return (
     <main className="museo">
-      <header className="museo-cabecera">
-        <button className="museo-boton" onClick={obraActual ? cerrarObra : onSalir}>
-          {obraActual ? '← Galería' : '← Menú'}
-        </button>
-        <div>
-          <p className="museo-kicker">Museo del Quijote</p>
-          <h1>
-            {obraActual
-              ? tituloDe(obraActual)
-              : vista === 'portada'
-                ? 'Galería artística'
-                : 'Ilustraciones del Quijote'}
-          </h1>
-        </div>
-      </header>
+      <Cabecera
+        onSalir={onSalir}
+        onNavegar={onNavegar}
+        ayudaAbierta={ayudaAbierta}
+        onAyuda={() => setAyudaAbierta((v) => !v)}
+      />
 
-      {obraActual ? (
-        <section
-          className="museo-visor"
-          ref={refVisor}
-          tabIndex={-1}
-          role="region"
-          aria-label={`Visor de obra: ${tituloDe(obraActual)}`}
-        >
-          <div className="museo-marco" data-zoom={zoom}>
-            {imagenes[obraActual.uri] ? (
-              <img
-                src={imagenes[obraActual.uri]}
-                alt={obraActual.alt}
-                style={{ transform: `scale(${zoom})` }}
-              />
-            ) : fallos[obraActual.uri] ? (
-              <p className="museo-error">La obra no está disponible: {obraActual.id}</p>
+      {/* obra protagonista (izquierda ~69 %) + ficha editorial (derecha ~28 %) */}
+      <div className="museo-escena">
+        {obra === null && (
+          <p className="museo-error">Ninguna obra coincide con los filtros aplicados.</p>
+        )}
+        {obra && (
+          <section
+            className="museo-obra"
+            ref={refVisor}
+            tabIndex={-1}
+            role="region"
+            aria-label={`Obra: ${tituloDe(obra)}`}
+          >
+            {imagenes[obra.uri] ? (
+              <img src={imagenes[obra.uri]} alt={obra.alt} />
             ) : (
               <p className="museo-cargando">Abriendo la obra…</p>
             )}
-          </div>
 
-          <div className="museo-controles" role="toolbar" aria-label="Controles del visor">
-            <button className="museo-boton" onClick={() => mover(-1)} disabled={seleccion === 0} aria-label="Obra anterior (flecha izquierda)">◂ Anterior</button>
-            <button className="museo-boton" onClick={() => mover(1)} disabled={seleccion === filtradas.length - 1} aria-label="Obra siguiente (flecha derecha)">Siguiente ▸</button>
-            <span className="museo-posicion">{seleccion !== null ? `${seleccion + 1} / ${filtradas.length}` : ''}</span>
-            <button className="museo-boton" onClick={() => setZoom(ZOOM_NIVELES[Math.max(ZOOM_NIVELES.indexOf(zoom) - 1, 0)])} disabled={zoom === ZOOM_NIVELES[0]} aria-label="Reducir zoom (tecla menos)">−</button>
-            <span className="museo-zoom" aria-live="polite">zoom ×{zoom}</span>
-            <button className="museo-boton" onClick={() => setZoom(ZOOM_NIVELES[Math.min(ZOOM_NIVELES.indexOf(zoom) + 1, ZOOM_NIVELES.length - 1)])} disabled={zoom === ZOOM_NIVELES[ZOOM_NIVELES.length - 1]} aria-label="Ampliar zoom (tecla más)">+</button>
-            <button className="museo-boton" onClick={() => setZoom(1)} aria-label="Restablecer zoom (tecla cero)">Restablecer</button>
-          </div>
+            <button className="museo-flecha museo-flecha-izq" onClick={() => mover(-1)} disabled={seleccion === 0} aria-label="Obra anterior">
+              ‹
+            </button>
+            <button className="museo-flecha museo-flecha-der" onClick={() => mover(1)} disabled={seleccion >= lista.length - 1} aria-label="Obra siguiente">
+              ›
+            </button>
+            <button
+              className="museo-ampliar"
+              onClick={() => { setVistaObra('completa'); setZoom(1); }}
+              aria-label="Ver la obra completa a pantalla completa"
+              title="Ver la obra completa"
+            >
+              ⤢
+            </button>
+          </section>
+        )}
 
-          <aside className="museo-ficha" aria-label="Ficha de la obra">
-            <dl>
-              <dt>Identificador</dt>
-              <dd>{obraActual.id}</dd>
-              <dt>Obra</dt>
-              <dd>Acuarela de Salvador Tusell (atribución según la edición referida en el manifiesto)</dd>
-              <dt>Edición de procedencia</dt>
-              <dd>Barcelona, Luis Tasso, 1905 · reproducción digital: Epublibre (Titivillus), base r2.1</dd>
-              <dt>Archivo</dt>
-              <dd>{obraActual.archivo} · {obraActual.ancho} × {obraActual.alto} px</dd>
-              <dt>Parte / capítulo</dt>
-              <dd>
-                {obraActual.parte ? `Parte ${obraActual.parte}` : '—'}
-                {obraActual.capitulos.length ? ` · ${obraActual.capitulos.join(' · ')}` : ''}
-              </dd>
-              <dt>Descripción de la edición (alt)</dt>
-              <dd className="museo-alt">«{obraActual.alt}»</dd>
-              <dt>Enlace al texto</dt>
-              <dd>
-                Mapeo obra→pasaje no documentado en el catálogo: sin enlace de texto
-                (se añadirá solo cuando exista mapeo fiable).
-              </dd>
-            </dl>
-            <p className="museo-nota">
-              Huella de integridad: sha256 {obraActual.sha256.slice(0, 16)}…
+        {obra && (
+          <aside className="museo-ficha" aria-label="Ficha editorial de la obra">
+            <p className="museo-sobreencabezado">
+              {enColeccion ? COLECCION_INICIAL.sobreEncabezado : 'Catálogo · Ilustraciones del Quijote (ed. Tusell)'}
+            </p>
+            <h1 className="museo-titulo">{tituloDe(obra)}</h1>
+            <p className="museo-pastilla">
+              {obra.referencias[0]
+                ? `Parte ${obra.referencias[0].parte} · ${obra.referencias[0].capitulo ?? 'Capítulo no documentado'}`
+                : 'Capítulo no documentado'}
+            </p>
+            {obra.estado === 'pendiente' && (
+              <p className="museo-pendiente">Pendiente de ficha editorial</p>
+            )}
+
+            <div className="museo-bloque">
+              <h2 className="museo-bloque-titulo"><span className="museo-icono">📖</span> Explicación</h2>
+              <p className="museo-explicacion">
+                {obra.contexto ?? `Descripción de la edición: «${obra.alt}»`}
+              </p>
+            </div>
+
+            <div className="museo-separador" />
+
+            <div className="museo-bloque">
+              <h2 className="museo-bloque-titulo"><span className="museo-icono museo-comillas">❝</span> Texto original</h2>
+              {cita?.verificada ? (
+                <>
+                  <blockquote className="museo-cita">«{cita.cita}»</blockquote>
+                  <p className="museo-cita-fuente">
+                    Cotejada con PG #2000 (offset {cita.offset?.[0]}–{cita.offset?.[1]}, LF)
+                    {cita.variante_manifiesto ? ` · ${cita.variante_manifiesto}` : ''}.
+                  </p>
+                </>
+              ) : (
+                <p className="museo-cita-pendiente">
+                  Texto original pendiente de verificación editorial (sin mapeo
+                  obra→pasaje documentado en el catálogo).
+                </p>
+              )}
+            </div>
+
+            <div className="museo-acciones">
+              <button className="museo-accion" onClick={() => { setVistaObra('completa'); setZoom(1); }}>
+                🔍 Ver la obra completa
+              </button>
+              <button className="museo-accion" onClick={() => setFichaDetallada((v) => !v)} aria-expanded={fichaDetallada}>
+                ⓘ Ficha de la imagen
+              </button>
+            </div>
+
+            {fichaDetallada && obra && (
+              <dl className="museo-ficha-detallada">
+                <dt>Identificador</dt><dd>{obra.id}{obra.musId ? ` · ficha editorial ${obra.musId}` : ''}</dd>
+                <dt>Atribución</dt><dd>{obra.atribucion ?? 'Procedencia pendiente de verificar'}{obra.atribucionEstado ? ` (${obra.atribucionEstado})` : ''}</dd>
+                <dt>Técnica</dt><dd>{obra.tecnica ?? 'Pendiente de verificar'}</dd>
+                <dt>Procedencia</dt><dd>{obra.procedencia ?? 'Procedencia pendiente de verificar'}</dd>
+                <dt>Archivo</dt><dd>{obra.numAcuarela !== null ? `${String(obra.numAcuarela).padStart(3, '0')}.jpg` : '—'}{obra.ancho && obra.alto ? ` · ${obra.ancho} × ${obra.alto} px` : ''}</dd>
+                <dt>Licencia</dt><dd>{obra.licenciaId ?? '—'} · estado {obra.licenciaEstado ?? 'pendiente'} · redistribución condicionada</dd>
+                <dt>Usos permitidos</dt><dd>{obra.allowedUses.length ? obra.allowedUses.join(', ') : 'pendiente'}</dd>
+                <dt>Referencias documentales</dt>
+                <dd>
+                  {obra.referencias.length
+                    ? obra.referencias.map((r, i) => (
+                        <span key={i}>
+                          {r.parte ? `Parte ${r.parte}` : '—'} · {r.capitulo ?? 'sin capítulo'} · orden {r.ordenLectura}
+                          {i < obra.referencias.length - 1 ? '; ' : ''}
+                        </span>
+                      ))
+                    : 'Pendiente'}
+                </dd>
+                <dt>Huella</dt><dd className="museo-mono">{obra.sha256 ?? 'pendiente'}</dd>
+              </dl>
+            )}
+
+            <div className="museo-separador" />
+            <p className="museo-fuente">
+              Fuente: {obra.atribucion ?? 'Procedencia pendiente de verificar'} ·
+              {' '}ed. Barcelona, Luis Tasso, 1905 · digitalización BVPB reg. 463832 /
+              Epublibre (Titivillus) 2024 · {obra.id}
             </p>
           </aside>
-        </section>
-      ) : vista === 'portada' ? (
-        <section className="museo-portada" aria-label="Obras destacadas">
-          <p className="museo-entradilla">{COLECCION_INICIAL.descripcion}</p>
-          <div className="museo-destacadas">
-            {destacadas.map((obra) => {
-              const indice = filtradas.findIndex((o) => o.id === obra.id);
-              return (
+        )}
+      </div>
+
+      {/* carrusel horizontal inferior de cinco miniaturas */}
+      <nav className="museo-carrusel" aria-label="Carrusel de obras">
+        <button className="museo-carrusel-flecha" onClick={() => mover(-1)} disabled={seleccion === 0} aria-label="Obra anterior del carrusel">‹</button>
+        <ul className="museo-carrusel-pistas">
+          {ventana.map((o) => {
+            const indice = lista.findIndex((x) => x.id === o.id);
+            const activa = obra !== null && o.id === obra.id;
+            return (
+              <li key={o.id}>
                 <button
-                  key={obra.id}
-                  className="museo-destacada"
-                  onClick={() => indice >= 0 && abrir(indice)}
+                  className={`museo-miniatura ${activa ? 'activa' : ''}`}
+                  onClick={() => irA(indice)}
+                  aria-label={`${tituloDe(o)}${activa ? ' (obra activa)' : ''}`}
+                  aria-current={activa ? 'true' : undefined}
                 >
-                  {imagenes[obra.uri] ? (
-                    <img src={imagenes[obra.uri]} alt={obra.alt} loading="lazy" decoding="async" />
+                  {imagenes[o.uri] ? (
+                    <img src={imagenes[o.uri]} alt={o.alt} loading="lazy" decoding="async" />
                   ) : (
-                    <span className="museo-mini-vacia" aria-hidden="true" />
+                    <span className="museo-mini-carga" aria-hidden="true" />
                   )}
-                  <span className="museo-destacada-titulo">{tituloDe(obra)}</span>
-                  <span className="museo-destacada-id">{obra.id}</span>
                 </button>
-              );
-            })}
-          </div>
-          <button className="museo-boton museo-primario" onClick={() => setVista('galeria')}>
-            Ver las Ilustraciones del Quijote ({acuarelas.length} acuarelas)
+              </li>
+            );
+          })}
+        </ul>
+        <button className="museo-carrusel-flecha" onClick={() => mover(1)} disabled={seleccion >= lista.length - 1} aria-label="Obra siguiente del carrusel">›</button>
+        <div className="museo-ambito">
+          <button
+            className={`museo-ambito-opcion ${ambito === 'coleccion' ? 'activa' : ''}`}
+            onClick={() => { setAmbito('coleccion'); setSeleccion(0); }}
+          >
+            Colección ({obras.filter((o) => o.esColeccionInicial).length})
           </button>
-        </section>
-      ) : (
-        <section className="museo-galeria" aria-label="Galería de ilustraciones">
-          <div className="museo-filtros">
+          <button
+            className={`museo-ambito-opcion ${ambito === 'catalogo' ? 'activa' : ''}`}
+            onClick={() => { setAmbito('catalogo'); setSeleccion(0); }}
+          >
+            Catálogo completo ({obras.length})
+          </button>
+          <button className="museo-ambito-opcion" onClick={() => setFiltrosAbiertos((v) => !v)} aria-expanded={filtrosAbiertos}>
+            Filtrar
+          </button>
+        </div>
+        {filtrosAbiertos && (
+          <div className="museo-popover-filtros">
             <label>
               Parte
-              <select
-                value={parte ?? ''}
-                onChange={(e) => { setParte(e.target.value || null); setPagina(0); }}
-              >
+              <select value={parte ?? ''} onChange={(e) => { setParte(e.target.value || null); setSeleccion(0); }}>
                 <option value="">Todas</option>
                 {partes.map((p) => <option key={p} value={p}>Parte {p}</option>)}
               </select>
             </label>
             <label>
               Capítulo
-              <select
-                value={capitulo ?? ''}
-                onChange={(e) => { setCapitulo(e.target.value || null); setPagina(0); }}
-              >
+              <select value={capitulo ?? ''} onChange={(e) => { setCapitulo(e.target.value || null); setSeleccion(0); }}>
                 <option value="">Todos</option>
                 {capitulos.map((c) => <option key={c.valor} value={c.valor}>{c.etiqueta}</option>)}
               </select>
             </label>
-            <output className="museo-contador" aria-live="polite">
-              {filtradas.length} obra{filtradas.length === 1 ? '' : 's'}
-            </output>
+            <output aria-live="polite">{lista.length} obra{lista.length === 1 ? '' : 's'}</output>
           </div>
-
-          <div className="museo-rejilla">
-            {paginaLista.map((obra) => {
-              const indice = filtradas.findIndex((o) => o.id === obra.id);
-              return (
-                <button
-                  key={obra.id}
-                  className={`museo-mini ${obra.esColeccionInicial ? 'en-coleccion' : ''}`}
-                  onClick={() => abrir(indice)}
-                  aria-label={`${tituloDe(obra)} — abrir en el visor`}
-                >
-                  {imagenes[obra.uri] ? (
-                    <img src={imagenes[obra.uri]} alt={obra.alt} loading="lazy" decoding="async" />
-                  ) : (
-                    <span className="museo-mini-vacia" aria-hidden="true">…</span>
-                  )}
-                  <span className="museo-mini-pie">{tituloDe(obra)}</span>
-                </button>
-              );
-            })}
-          </div>
-
-          {totalPaginas > 1 && (
-            <nav className="museo-paginacion" aria-label="Páginas de la galería">
-              <button className="museo-boton" onClick={() => setPagina((p) => Math.max(0, p - 1))} disabled={pagina === 0}>◂</button>
-              <span>página {pagina + 1} de {totalPaginas}</span>
-              <button className="museo-boton" onClick={() => setPagina((p) => Math.min(totalPaginas - 1, p + 1))} disabled={pagina >= totalPaginas - 1}>▸</button>
-            </nav>
-          )}
-        </section>
-      )}
+        )}
+      </nav>
 
       <footer className="museo-derechos">
-        Uso interno en desarrollo · Acuarelas de la edición Tusell: redistribución condicionada (DQ.LIC.0001) ·
-        No constituye autorización de publicación ni comercialización
-        {avisos.length > 0 && <> · {avisos.length} registro(s) del manifiesto requieren revisión</>}
+        Uso interno en desarrollo · Acuarelas de la edición Tusell: DQ.LIC.0001 y DQ.LIC.0002 con
+        redistribución condicionada · No constituye autorización de publicación ni comercialización
+        {avisos.length > 0 && <> · {avisos.length} registro(s) del catálogo requieren revisión</>}
       </footer>
+
+      {/* vista de obra completa: sin texto encima, retorno sin perder posición */}
+      {obra && vistaObra === 'completa' && (
+        <div className="museo-completa" role="dialog" aria-modal="true" aria-label={`Obra completa: ${tituloDe(obra)}`}>
+          <div className="museo-completa-marco" data-zoom={zoom}>
+            {imagenes[obra.uri] && (
+              <img src={imagenes[obra.uri]} alt={obra.alt} style={{ transform: `scale(${zoom})` }} />
+            )}
+          </div>
+          <div className="museo-completa-controles">
+            <button className="museo-boton" onClick={() => mover(-1)} aria-label="Obra anterior">◂</button>
+            <span>{`${seleccion + 1} / ${lista.length}`}</span>
+            <button className="museo-boton" onClick={() => setZoom((z) => Math.min(4, Math.round((z + 0.5) * 2) / 2))} aria-label="Ampliar">+</button>
+            <span className="museo-zoom">zoom ×{zoom}</span>
+            <button className="museo-boton" onClick={() => setZoom((z) => Math.max(1, Math.round((z - 0.5) * 2) / 2))} aria-label="Reducir">−</button>
+            <button className="museo-boton" onClick={() => setZoom(1)} aria-label="Restablecer zoom">1:1</button>
+            <button className="museo-boton museo-primario" onClick={() => setVistaObra('ficha')} aria-label="Volver a la ficha (Escape)">Volver a la ficha</button>
+          </div>
+        </div>
+      )}
     </main>
+  );
+}
+
+/** Cabecera exacta de la maqueta: logotipo dorado, navegación de módulos con
+ *  Museo resaltado, ajustes y ayuda. */
+function Cabecera({
+  onSalir,
+  onNavegar,
+  ayudaAbierta,
+  onAyuda,
+}: {
+  onSalir: () => void;
+  onNavegar?: (modo: 'historia' | 'aventura') => void;
+  ayudaAbierta: boolean;
+  onAyuda: () => void;
+}) {
+  return (
+    <header className="museo-topbar">
+      <div className="museo-logo">
+        <svg className="museo-logo-molino" viewBox="0 0 24 24" aria-hidden="true">
+          <g fill="none" stroke="currentColor" strokeWidth="1.6">
+            <path d="M12 13 L12 3 M12 13 L20.5 8 M12 13 L3.5 8" />
+            <circle cx="12" cy="13" r="1.6" fill="currentColor" stroke="none" />
+          </g>
+        </svg>
+        <span>El Quijote</span>
+      </div>
+      <nav className="museo-nav" aria-label="Módulos">
+        <button className="museo-nav-item" onClick={() => onNavegar?.('historia')} disabled={!onNavegar}>
+          <span className="museo-nav-icono" aria-hidden="true">🏠</span> Historia
+        </button>
+        <button className="museo-nav-item" onClick={() => onNavegar?.('aventura')} disabled={!onNavegar}>
+          <span className="museo-nav-icono" aria-hidden="true">🎮</span> Aventura
+        </button>
+        <button className="museo-nav-item activa" aria-current="page">
+          <span className="museo-nav-icono" aria-hidden="true">🏛</span> Museo
+        </button>
+        <button className="museo-nav-item" disabled title="Pendiente de implementación">
+          <span className="museo-nav-icono" aria-hidden="true">🧭</span> Atlas
+        </button>
+        <button className="museo-nav-item" disabled title="Pendiente de implementación">
+          <span className="museo-nav-icono" aria-hidden="true">📖</span> Lector
+        </button>
+      </nav>
+      <div className="museo-topbar-extra">
+        <button className="museo-icono-boton" disabled title="Ajustes pendientes en el Museo">⚙</button>
+        <button className="museo-icono-boton" onClick={onAyuda} aria-expanded={ayudaAbierta} aria-label="Ayuda y derechos">?</button>
+        <button className="museo-icono-boton" onClick={onSalir} aria-label="Cerrar el Museo y volver al menú">✕</button>
+      </div>
+      {ayudaAbierta && (
+        <div className="museo-ayuda" role="note">
+          <p><strong>El Quijote · Museo</strong> — módulo cultural con las acuarelas de la
+          edición ilustrada por Salvador Tusell (Barcelona, Luis Tasso, 1905).</p>
+          <p>Uso interno en desarrollo: las acuarelas tienen <strong>redistribución
+          condicionada</strong> (DQ.LIC.0001); esto no constituye autorización de
+          publicación ni comercialización. Teclado: ←/→ cambia de obra, Esc vuelve.</p>
+          <button className="museo-boton" onClick={onAyuda}>Cerrar</button>
+        </div>
+      )}
+    </header>
   );
 }

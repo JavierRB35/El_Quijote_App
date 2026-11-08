@@ -35,7 +35,12 @@ export default function App() {
   }
   if (modo === 'museo') {
     // El Museo no depende del catálogo editorial: accesible sin progreso.
-    return <Museo onSalir={() => setModo('menu')} />;
+    return (
+      <Museo
+        onSalir={() => setModo('menu')}
+        onNavegar={(m) => setModo(m)}
+      />
+    );
   }
 
   return (

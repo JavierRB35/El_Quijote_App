@@ -1,0 +1,42 @@
+{
+ "derivado_de": "assets/ilustraciones_tusell/manifests/manifest_ilustraciones.json",
+ "fuente_cotejo": "content/textos/gutenberg_2000/El_Quijote.txt (DQ.SRC.0005, indexación LF)",
+ "nota": "Citas verificadas programáticamente contra PG #2000. Las obras con alt descriptivo (sin correspondencia literal) quedan marcadas verificada=false y la ficha las presenta como pendientes.",
+ "obras": {
+  "DQ.IL.0026": {
+   "verificada": true,
+   "cita": "Y, en diciendo esto, y encomendándose de todo corazón a su señora Dulcinea, pidiéndole que en tal trance le socorriese, bien cubierto de su rodela, con la lanza en el ristre, arremetió a todo el galope de Rocinante y embistió con el primero molino que estaba delante; y, dándole una lanzada en el aspa, la volvió el viento con tanta furia que hizo la lanza pedazos, llevándose tras sí al caballo y al caballero, que fue rodando muy maltrecho por el campo.",
+   "offset": [
+    124260,
+    124716
+   ],
+   "variante_manifiesto": null
+  },
+  "DQ.IL.0027": {
+   "verificada": false,
+   "motivo": "alt descriptivo sin correspondencia literal localizada en PG #2000"
+  },
+  "DQ.IL.0028": {
+   "verificada": true,
+   "cita": "— ¡Válame Dios! —dijo Sancho—.",
+   "offset": [
+    124868,
+    124899
+   ],
+   "variante_manifiesto": null
+  },
+  "DQ.IL.0029": {
+   "verificada": false,
+   "motivo": "alt descriptivo sin correspondencia literal localizada en PG #2000"
+  },
+  "DQ.IL.0030": {
+   "verificada": true,
+   "cita": "Estaba en el primero cartapacio, pintada muy al natural, la batalla de don Quijote con el vizcaíno, puestos en la mesma postura que la historia cuenta, levantadas las espadas, el uno cubierto de su rodela, el otro de la almohada, y la mula del vizcaíno tan al vivo, que estaba mostrando ser de alquiler a tiro de ballesta.",
+   "offset": [
+    144508,
+    144831
+   ],
+   "variante_manifiesto": "el manifiesto usa «Batalla de don Quijote contra el vizcaíno»; el texto PG difiere en 1 palabra(s)"
+  }
+ }
+}

@@ -6,11 +6,12 @@
   "DQ.P1.C08"
  ],
  "passage_ids": [
+  "DQ.P1.C08.P0002",
   "DQ.P1.C08.P0007",
   "DQ.P1.C08.P0008",
   "DQ.P1.C08.P0009"
  ],
- "prompt": "¿A qué identifica equivocadamente don Quijote en la segunda parte del capítulo? (varias)",
+ "prompt": "¿Cuáles de estas cosas identifica equivocadamente don Quijote a lo largo del capítulo? (varias)",
  "interaction": {
   "type": "multi_choice",
   "multi_declared": true,
@@ -38,8 +39,13 @@
   ],
   "shuffle_options": true
  },
- "rationale": "La broma de los «dromedarios» es del narrador («no eran más pequeñas dos mulas en que venían»), no identificación de don Quijote; la carroza fúnebre no aparece.",
+ "rationale": "Don Quijote toma los molinos de viento por «desaforados gigantes» (P0002) y a los frailes por encantadores que llevan hurtada una princesa (P0008). La frase de los «dromedarios» es del narrador («no eran más pequeñas dos mulas en que venían»), no identificación de don Quijote, y la carroza fúnebre no aparece en el texto.",
  "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C08.P0002",
+   "quote": "se descubren treinta, o pocos más, desaforados gigantes"
+  },
   {
    "kind": "cita_literal",
    "passage_id": "DQ.P1.C08.P0007",

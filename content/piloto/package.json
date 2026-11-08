@@ -1,7 +1,7 @@
 {
     "package_id": "piloto-editorial-i8",
     "contract_version": "1.2.0",
-    "catalog_version": "0.2.0",
+    "catalog_version": "0.3.0",
     "created": "2026-11-05",
     "files": {
         "editions": [
@@ -268,7 +268,8 @@
             "media_assets/DQ.MA.900039.json",
             "media_assets/DQ.MA.900040.json",
             "media_assets/DQ.MA.900041.json",
-            "media_assets/DQ.MA.900042.json"
+            "media_assets/DQ.MA.900042.json",
+            "media_assets/DQ.MA.901003.json"
         ],
         "sources": [
             "sources/DQ.SRC.0001.json",
@@ -316,7 +317,7 @@
         "discoveries": 14,
         "persons": 19,
         "places": 5,
-        "media_assets": 53,
+        "media_assets": 54,
         "sources": 4,
         "licenses": 4,
         "museum_items": 7,

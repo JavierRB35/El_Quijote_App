@@ -8,9 +8,9 @@
   "interaction": {
     "type": "ordering",
     "options": [
+      { "id": "DQ.Q.000004.O03", "label": "Paso sintético tres" },
       { "id": "DQ.Q.000004.O01", "label": "Paso sintético uno" },
-      { "id": "DQ.Q.000004.O02", "label": "Paso sintético dos" },
-      { "id": "DQ.Q.000004.O03", "label": "Paso sintético tres" }
+      { "id": "DQ.Q.000004.O02", "label": "Paso sintético dos" }
     ],
     "correct_order": ["DQ.Q.000004.O01", "DQ.Q.000004.O02", "DQ.Q.000004.O03"],
     "shuffle_options": false

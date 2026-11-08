@@ -24,7 +24,7 @@
    },
    {
     "id": "DQ.Q.000106.O03",
-    "label": "Don Quijote queda tendido sin poder moverse y culpa a los encantadores"
+    "label": "El molino embestido queda derribado y destruido por la lanzada"
    },
    {
     "id": "DQ.Q.000106.O04",
@@ -37,12 +37,17 @@
   ],
   "shuffle_options": true
  },
- "rationale": "Los dos primeros sucesos constan en I, 8; la mención de encantadores sobre los molinos y la caída de Sancho no pertenecen a este episodio.",
+ "rationale": "En I, 8 la lanza queda hecha pedazos tras la lanzada en el aspa y Sancho acude «a todo el correr de su asno». El molino no cae: quien queda hecho pedazos es la lanza, y el molino sigue en pie movido por el viento. Sancho tampoco pierde el conocimiento junto al rucio en este capítulo.",
  "evidence": [
   {
    "kind": "cita_literal",
    "passage_id": "DQ.P1.C08.P0006",
    "quote": "Acudió Sancho Panza a socorrerle, a todo el correr de su asno"
+  },
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C08.P0005",
+   "quote": "hizo la lanza pedazos, llevándose tras sí al caballo y al caballero"
   }
  ],
  "certainty": "TEXTO_EXPLICITO",
@@ -54,8 +59,7 @@
   ]
  },
  "visual_requirements": {
-  "pre_image_must_not_reveal": true,
-  "pre_image_media_id": "DQ.MA.900029"
+  "pre_image_must_not_reveal": true
  },
  "language": "es",
  "tags": [

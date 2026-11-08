@@ -15,20 +15,20 @@
   "type": "ordering",
   "options": [
    {
-    "id": "DQ.Q.000108.O01",
-    "label": "La embestida y caída en el molino"
-   },
-   {
-    "id": "DQ.Q.000108.O02",
-    "label": "El socorro de Sancho al correr de su asno"
-   },
-   {
     "id": "DQ.Q.000108.O03",
     "label": "El avistamiento de los frailes de San Benito"
    },
    {
+    "id": "DQ.Q.000108.O01",
+    "label": "La embestida y caída en el molino"
+   },
+   {
     "id": "DQ.Q.000108.O04",
     "label": "El desafío del escudero vizcaíno"
+   },
+   {
+    "id": "DQ.Q.000108.O02",
+    "label": "El socorro de Sancho al correr de su asno"
    }
   ],
   "correct_order": [
@@ -56,8 +56,7 @@
   ]
  },
  "visual_requirements": {
-  "pre_image_must_not_reveal": true,
-  "pre_image_media_id": "DQ.MA.900030"
+  "pre_image_must_not_reveal": true
  },
  "language": "es",
  "tags": [

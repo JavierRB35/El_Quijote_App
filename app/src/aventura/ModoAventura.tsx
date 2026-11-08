@@ -9,6 +9,8 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { cargarProgreso, guardarProgreso } from '../historia/persistencia';
 import { leerAsset } from '../entorno';
 import { Catalogo, type MediaAsset, type Pregunta } from '../contrato';
+import { ordenPresentacion } from './presentacion';
+import { pasajesNarrados, respuestasValidas, separarVisibles } from './visibilidad';
 
 type EstadoPregunta =
   | { fase: 'sin_responder' }
@@ -45,12 +47,16 @@ function Lienzo({
   fallos,
   pedir,
   alt,
+  notaNeutra,
 }: {
   activa: string | null;
   imagenes: Record<string, string>;
   fallos: Record<string, string>;
   pedir: (uri: string) => void;
   alt: string;
+  /** Texto para la pregunta sin imagen propia: presentación neutra deliberada
+   *  (DC-24/DC-25), no un error de carga. */
+  notaNeutra?: string;
 }) {
   useEffect(() => {
     if (activa) pedir(activa);
@@ -71,7 +77,7 @@ function Lienzo({
         <div className="lienzo-estado">
           {activa && activa in fallos
             ? `escena no disponible (${activa} → ${fallos[activa]})`
-            : 'preparando la escena…'}
+            : (activa ? 'preparando la escena…' : (notaNeutra ?? 'preparando la escena…'))}
         </div>
       )}
     </div>
@@ -141,7 +147,14 @@ function renderizadorRespuesta({
 
   if (inter.type === 'ordering') {
     const ordenHecho = seleccion;
-    const restantes = inter.options.filter((o) => !ordenHecho.includes(o.id));
+    // Presentación garantizada no resuelta (corrección P1): el orden visible
+    // nunca coincide con correct_order ni depende del azar (presentacion.ts).
+    // La operabilidad por teclado se conserva: cada opción sigue siendo un
+    // <button> focusable (EF-ACC-01).
+    const opcionesVisibles = ordenPresentacion(pregunta)
+      .map((id) => inter.options.find((o) => o.id === id))
+      .filter((o) => o !== undefined);
+    const restantes = opcionesVisibles.filter((o) => !ordenHecho.includes(o.id));
     return (
       <div>
         <ol className="orden-lista">
@@ -261,40 +274,45 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
   const [progreso, setProgreso] = useState<Progreso>({});
   const [avisoGuardado, setAvisoGuardado] = useState<string>('');
 
-  // Recuperación de partida (EF-AV-08/EF-PER): se restaura lo guardado y se
-  // retoma en la primera pregunta sin responder. Un progreso corrupto o de
-  // otro catálogo se ignora sin dar por buena la carga (§7.3).
   const preguntas: Pregunta[] = useMemo(
     () => catalogo.preguntasDeEpisodio(EPISODIO_INICIAL),
     [catalogo],
   );
 
+  // Visibilidad narrativa (encargo P1 §D): solo se ofrecen preguntas cuyos
+  // pasajes de apoyo ya están narrados en los beats del episodio; las demás se
+  // listan como pendientes de narración sin desbloquear lances no vividos por
+  // el jugador. La relación es por identificadores de pasaje, no por posición
+  // de fichero: al ampliar la narración, las bloqueadas se desbloquean solas.
+  const { visibles, bloqueadas } = useMemo(() => {
+    const beats = catalogo
+      .escenasDeEpisodio(EPISODIO_INICIAL)
+      .flatMap((escena) => catalogo.beatsDeEscena(escena.id));
+    return separarVisibles(preguntas, pasajesNarrados(beats));
+  }, [catalogo, preguntas]);
+
+  // Recuperación de partida (EF-AV-08/EF-PER): se restaura lo guardado y se
+  // retoma en la primera pregunta sin responder. Un progreso corrupto, de otro
+  // catálogo o de preguntas hoy bloqueadas se ignora sin dar por buena la
+  // carga (§7.3); las respuestas de preguntas visibles se conservan intactas.
+  const idsVisibles = useMemo(() => new Set(visibles.map((q) => q.id)), [visibles]);
+
   useEffect(() => {
-    if (!catalogo || preguntas.length === 0) return;
+    if (!catalogo || visibles.length === 0) return;
     cargarProgreso()
       .then((crudo) => {
-        if (!crudo) return;
-        let guardado: Progreso;
-        try {
-          guardado = JSON.parse(crudo) as Progreso;
-        } catch {
-          return; // progreso ilegible: comenzar de cero
-        }
-        const ids = new Set(preguntas.map((q) => q.id));
-        const valido = Object.fromEntries(
-          Object.entries(guardado).filter(([id, v]) => ids.has(id) && v && Array.isArray(v.seleccion)),
-        );
+        const valido = respuestasValidas(crudo, idsVisibles);
         if (!Object.keys(valido).length) return;
         setProgreso(valido);
-        const primeraLibre = preguntas.findIndex((q) => !(q.id in valido));
-        setIndice(primeraLibre === -1 ? preguntas.length - 1 : primeraLibre);
+        const primeraLibre = visibles.findIndex((q) => !(q.id in valido));
+        setIndice(primeraLibre === -1 ? visibles.length - 1 : primeraLibre);
         setAvisoGuardado(`partida recuperada · ${Object.keys(valido).length} respuestas`);
       })
       .catch(() => undefined);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [catalogo]);
 
-  const pregunta = preguntas[indice];
+  const pregunta = visibles[indice];
 
   useEffect(() => {
     setSeleccion([]);
@@ -398,22 +416,27 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
     [catalogo],
   );
   const medioEscena = useMemo(() => {
-    // Última pre-imagen no nula desde la pregunta actual hacia atrás (persistente).
-    for (let i = indice; i >= 0; i--) {
-      const pre = preguntas[i]?.visual_requirements?.pre_image_media_id;
-      if (pre) return catalogo.medio(pre);
-    }
-    return undefined;
-  }, [catalogo, preguntas, indice]);
+    // Imagen propia de la pregunta (DC-24): sin herencia de la pregunta
+    // anterior. Un hotspot muestra su propia imagen de ejercicio; el resto, su
+    // pre-imagen exclusiva. Sin imagen propia → presentación neutra (fallback
+    // técnico permitido mientras llega el encargo artístico A01; no declara la
+    // pregunta visualmente terminada).
+    const vr = pregunta?.visual_requirements;
+    const propio =
+      pregunta?.interaction.type === 'hotspot'
+        ? (vr?.hotspot_media_id ?? vr?.pre_image_media_id)
+        : vr?.pre_image_media_id;
+    return propio ? catalogo.medio(propio) : undefined;
+  }, [catalogo, pregunta]);
 
   const finDeEpisodio =
-    estado.fase === 'respondida' && indice + 1 === preguntas.length && preguntas.length > 0;
+    estado.fase === 'respondida' && indice + 1 === visibles.length && visibles.length > 0;
   const escenaActiva: MediaAsset | undefined = finDeEpisodio ? medioPost : medioEscena;
 
   const { imagenes, fallos, pedir } = useLienzo(catalogo);
 
   if (!pregunta)
-    return <main className="cine solo-estado">No hay preguntas del episodio {EPISODIO_INICIAL}.</main>;
+    return <main className="cine solo-estado">No hay preguntas disponibles del episodio {EPISODIO_INICIAL}.</main>;
 
   const episodio = catalogo.episodio(EPISODIO_INICIAL);
   const respondida = estado.fase === 'respondida';
@@ -430,6 +453,9 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
         fallos={fallos}
         pedir={pedir}
         alt={escenaActiva?.alt ?? ''}
+        notaNeutra={
+          escenaActiva ? undefined : 'presentación neutra · imagen propia pendiente del lote artístico'
+        }
       />
 
       <header className="cabecera">
@@ -437,12 +463,12 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
         <h1>{episodio.title}</h1>
         <div className="cabecera-linea">
           <span className="progreso-texto">
-            {indice + 1} / {preguntas.length}
+            {indice + 1} / {visibles.length}
           </span>
           <div className="progreso-barra" role="presentation">
             <div
               className="progreso-relleno"
-              style={{ width: `${(Object.keys(progreso).length / preguntas.length) * 100}%` }}
+              style={{ width: `${(Object.keys(progreso).length / visibles.length) * 100}%` }}
             />
           </div>
           {avisoGuardado && <span className="guardado">{avisoGuardado}</span>}
@@ -477,7 +503,7 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
                   : `Evidencia: ${ev.kind}`}
               </p>
             ))}
-            {indice + 1 < preguntas.length && (
+            {indice + 1 < visibles.length && (
               <button className="primario" onClick={() => setIndice(indice + 1)}>
                 Seguir adelante
               </button>
@@ -486,9 +512,15 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
               <div className="resumen">
                 <p className="resumen-titulo">Fin del paso por los molinos</p>
                 <p>
-                  {aciertos} de {preguntas.length} aciertos. Los descubrimientos quedan anotados en
+                  {aciertos} de {visibles.length} aciertos. Los descubrimientos quedan anotados en
                   su cuaderno de investigador.
                 </p>
+                {bloqueadas.length > 0 && (
+                  <p>
+                    Otras {bloqueadas.length} preguntas de este capítulo llegarán cuando la
+                    narración del Modo Historia alcance sus lances.
+                  </p>
+                )}
                 <button className="secundario" onClick={reiniciar}>
                   Volver a pasar el episodio
                 </button>
@@ -499,11 +531,15 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
       </section>
 
       <footer className="pie">
-        <span className={`rotulo rotulo-${escenaActiva?.media_class ?? 'SIN'}`}>
-          {escenaActiva?.media_class === 'RECREACION_IA'
-            ? 'recreación — no evidencia histórica'
-            : (escenaActiva?.media_class ?? '')}
-        </span>
+        {escenaActiva ? (
+          <span className={`rotulo rotulo-${escenaActiva.media_class}`}>
+            {escenaActiva.media_class === 'RECREACION_IA'
+              ? 'recreación — no evidencia histórica'
+              : escenaActiva.media_class}
+          </span>
+        ) : (
+          <span className="rotulo rotulo-neutro">presentación neutra</span>
+        )}
         {escenaActiva?.author ? <span className="pie-autor">{escenaActiva.author}</span> : null}
       </footer>
 

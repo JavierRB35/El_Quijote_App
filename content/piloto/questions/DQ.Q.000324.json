@@ -15,20 +15,20 @@
   "type": "ordering",
   "options": [
    {
-    "id": "DQ.Q.000324.O01",
-    "label": "Sancho avista las tres aldeanas desde lejos y prepara a su amo"
+    "id": "DQ.Q.000324.O04",
+    "label": "Don Quijote interpreta la huida como obra de encantadores"
    },
    {
-    "id": "DQ.Q.000324.O02",
-    "label": "Don Quijote corre a arrodillarse ante «la más alta princesa»"
+    "id": "DQ.Q.000324.O01",
+    "label": "Sancho avista las tres aldeanas desde lejos y prepara a su amo"
    },
    {
     "id": "DQ.Q.000324.O03",
     "label": "La aldeana responde con la pulla de la «burra de mi suegro»"
    },
    {
-    "id": "DQ.Q.000324.O04",
-    "label": "Don Quijote interpreta la huida como obra de encantadores"
+    "id": "DQ.Q.000324.O02",
+    "label": "Don Quijote corre a arrodillarse ante «la más alta princesa»"
    }
   ],
   "correct_order": [

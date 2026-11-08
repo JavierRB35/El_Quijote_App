@@ -1,22 +1,22 @@
-# Hallazgos descartados y desestimados — LOTE 1B (2026-11-08)
+# Hallazgos descartados o sometidos a cautela — Lote 1B
 
-## Identificaciones desestimadas durante la investigación
+## Hipótesis no publicables como hechos
 
-1. **«Poeta andaluz» de II,1 ≠ Cristóbal de Mesa.** Hipótesis inicial del investigador (Mesa, de Ronda, autor de *Las lágrimas de Angélica*, 1588) fue **desestimada**: las fuentes críticas consultadas vía búsqueda identifican de forma mayoritaria al «poeta andaluz» con **Luis Barahona de Soto** (*Lágrimas de Angélica*, 1586), autor ya presente en la tradición cervantina del escrutinio. Registrado como INTERPRETACIÓN ACADÉMICA con esa atribución y como pista no verificada cualquier otra.
+1. **Cervantes escribió II,1 para contestar la portada de Avellaneda:** **NO DEMOSTRADO**. Se conservan coincidencia de «tercera salida» (1614–1615) y estudios académicos sobre posibles revisiones, pero no el nexo causal concreto. Ver `CUR-L1B-001`, Pontón 2016, Pedraza 2015.
+2. **El entierro de Cervantes entre trinitarias fue elegido por agradecimiento por su rescate:** **NO DEMOSTRADO**. BNE documenta ambos hechos, no esa motivación. El sujeto es Miguel de Cervantes, nunca don Quijote.
+3. **El retrato atribuido a Jáuregui data de 1600 y representa fielmente a Cervantes:** **ATRIBUCIÓN Y FECHA NO ACREDITADAS**. La BNE lo registra como anónimo, «¿siglo XIX?», con inscripción «anno 1600», y aparición pública en 1911.
+4. **«Famoso y único poeta castellano» es sin duda un sarcasmo de Cervantes contra Lope:** lectura debatida y no suficientemente documentada en este lote; se conserva solo como hipótesis pendiente.
+5. **«Tordesillesco» acredita un consenso sobre la identidad histórica del autor anónimo:** corregido. La correspondencia textual de lugar en el apócrifo y II,70/II,74 no revela identidad civil.
+6. **Paralelismo Cervantes–Shakespeare–Inca Garcilaso, restos de 2015:** no incluir como hechos divulgativos hasta comprobar fuentes institucionales/arqueológicas; C3 y C4 siguen SIN VERIFICAR.
+7. **El refrán «las comparaciones son odiosas» aparece probado en un repertorio de la época:** verificación primaria pendiente (`CUR-L1B-004.C4`).
 
-## Observaciones textuales que NO se catalogan como curiosidad (pendientes de decisión editorial)
+## Hallazgos conservados con fuentes precisas
 
-2. **El texto de referencia del proyecto no contiene las interpolaciones de 1608 de la Primera Parte** (p. ej., la nota de continuidad del rucio «Han de saber los que aquí llegan» no aparece en ninguna parte del fichero). En cambio, SÍ contiene los parches de la Segunda Parte (II,4: el relato del robo por Ginés de Pasamonte con petición al autor; II,27: la nota que atribuye la falta a «la culpa de los impresores»). Esto indica que la edición de referencia deriva de testimonios tempranos y **debe tenerse en cuenta en cualquier cotejo editorial** antes de publicar citas de I,25/I,46. No se cataloga como curiosidad: es una decisión editorial sobre la edición textual, no un hallazgo documental.
+- **Poeta andaluz:** Fernández de Navarrete §186 propone Barahona de Soto y Lope; el estudio de Marcella Trambaioli cita la salvación de la obra de Barahona en I,6 según la edición Rico 1998. Una atribución a Cristóbal de Mesa formulada como tanteo inicial fue descartada.
+- **La hermosura de Angélica:** Madrid, Pedro Madrigal, **1602** (registro SILEM/UCO); la datación 1604 en una síntesis histórica del siglo XIX no prevalece sobre este registro editorial.
+- **Portada de Avellaneda:** una imagen de la portada de 1614 se consultó en BNE, pero la candidata PDF de Commons no se descargó; no se añade binario.
+- **Edición textual interna:** persisten las precauciones sobre interpolaciones y localizadores del texto de referencia. No se modifica el corpus original ni se declara concluida la crítica textual.
 
-3. **Numeración de capítulos de la Segunda Parte en el texto de referencia:** el II,1 aparece encabezado «Capítulo Primero» y la numeración reinicia tras la Primera Parte; los cotejos de localizadores con la edición canónica de proyecto deben normalizarse antes de publicar.
+## Limitación sobre imágenes
 
-## Contenido no incorporado por derechos o formato
-
-4. **Portada del Segundo tomo de Avellaneda (1614):** dominio público, pero solo disponible como PDF de libro completo; registrada como candidata (IMG-L1B-004) sin descarga ni extracción de página. No se incorporó binario alguno.
-5. **Imágenes sin descripción fiable en Commons** (p. ej., ficheros sin metadatos de autoría/escena): descartadas por imposibilidad de trazabilidad, conforme al criterio de no usar atribuciones indeterminadas.
-
-## Afirmaciones conscientemente NO emitidas
-
-- No se afirma que Cervantes escribiera II,1 «para responder» a Avellaneda en sentido causal demostrable: la influencia del apócrifo en la redacción de la Segunda Parte es interpretación académica registrada como tal.
-- No se atribuye al retrato de Jáuregui carácter de retrato auténtico de Cervantes (la propia ficha de origen advierte que ninguna atribución de retrato es aceptada por la crítica moderna).
-- No se declara el paralelo muerte del caballero / muerte del autor como intención cervantina.
+Se mantienen los 3 archivos de imágenes originales y sus metadatos de integridad (SHA-256 y bytes). La actualización es **solo catalográfica**. Ninguna modificación, edición, deformación ni reemplazo de los binarios está autorizada en esta PR.

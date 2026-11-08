@@ -1,34 +1,34 @@
 {
-    "id": "DQ.MA.900030",
-    "contract_version": "1.0.0",
-    "function": "pre_pregunta",
-    "media_class": "RECREACION_IA",
-    "logical_uri": "assets://scenes/part_1/chapter_08/p1_c08_molinos_siluetas_pre.webp",
-    "derivatives": [
-        {
-            "variant": "original",
-            "format": "webp",
-            "width": 1672,
-            "height": 941,
-            "size_bytes": 291882,
-            "sha256": "sha256:7fbb9e371c78443ba68b80fd343d82f533ce5c539d9ee75fdfd1b0a79c4a3fac"
-        }
-    ],
-    "alt": "Recreación artística: Rocinante y el rucio recortados contra los molinos desde una loma lejana antes del ataque.",
-    "source_id": "DQ.SRC.0003",
-    "license_id": "DQ.LIC.0002",
-    "author": "Equipo de arte El_Quijote_App (recreación IA)",
-    "date": "2026-11-06",
-    "allowed_uses": [
-        "uso_personal_app",
-        "almacenamiento_repo_git"
-    ],
-    "license_status": "verificada",
-    "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA (nunca evidencia histórica).",
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "spoiler_level": "ninguno"
+  "id": "DQ.MA.900030",
+  "contract_version": "1.0.0",
+  "function": "pre_pregunta",
+  "media_class": "RECREACION_IA",
+  "logical_uri": "assets://scenes/part_1/chapter_08/p1_c08_molinos_siluetas_pre_safe_right_v2.webp",
+  "derivatives": [
+    {
+      "variant": "original",
+      "format": "webp",
+      "width": 1672,
+      "height": 941,
+      "size_bytes": 235884,
+      "sha256": "sha256:8bf4c3dbed26a07d8547bcda5e6b939dbe1270363ffbd855f033546c561d4342"
+    }
+  ],
+  "alt": "Recreación artística: Rocinante y el rucio recortados contra los molinos desde una loma lejana antes del ataque.",
+  "source_id": "DQ.SRC.0003",
+  "license_id": "DQ.LIC.0002",
+  "author": "Equipo de arte El_Quijote_App (recreación IA)",
+  "date": "2026-11-06",
+  "allowed_uses": [
+    "uso_personal_app",
+    "almacenamiento_repo_git"
+  ],
+  "license_status": "verificada",
+  "provenance": "Recreación IA del proyecto; rotulada RECREACION_ARTISTICA (nunca evidencia histórica). Nueva variante 2026-11-08: dirección artística con zona segura natural en el 30 % derecho; original anterior preservado. Validación editorial y de superposición en dispositivos pendiente.",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "spoiler_level": "ninguno"
 }

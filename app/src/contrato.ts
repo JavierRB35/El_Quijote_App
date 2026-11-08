@@ -103,6 +103,51 @@ export interface Passage {
   text_indexable: string;
 }
 
+/** v1.x — ficha museística (schemas/content/museum-item.schema.json; el
+ *  esquema es la fuente de verdad, este es el subconjunto que consume el
+ *  Museo). authorship vacío solo si attribution_status = 'anonima'. */
+export interface MuseumItem {
+  id: string;
+  contract_version: string;
+  title: string;
+  authorship?: string;
+  attribution_status: 'confirmada' | 'atribuida' | 'anonima' | 'debatida';
+  date?: string;
+  provenance?: string;
+  technique?: string;
+  owner_entity?: string;
+  context: string;
+  relation_to_quixote: string;
+  chapters: string[];
+  media_ids: string[];
+  source_id: string;
+  license_id: string;
+  certainty: string;
+  review?: { state: string; reviewer_role?: string | null; date?: string | null };
+  notes?: string;
+}
+
+/** v1.x — licencia de medios (schemas/media/license.schema.json). */
+export interface License {
+  id: string;
+  title: string;
+  holder?: string;
+  url?: string;
+  attribution_required?: boolean;
+  redistribution?: string;
+  evidence_documental?: string;
+  notes?: string;
+}
+
+/** v1.x — fuente documental (schemas/media/source.schema.json). */
+export interface Source {
+  id: string;
+  title?: string;
+  url?: string;
+  consulted_date?: string;
+  [clave: string]: unknown;
+}
+
 export interface Paquete {
   package_id: string;
   contract_version: string;
@@ -207,6 +252,23 @@ export class Catalogo {
 
   medios(): Record<string, MediaAsset> {
     return this.categoria<MediaAsset>('media_assets');
+  }
+
+  /** Fichas museísticas del paquete (DQ.MUS.*), en orden canónico por id. */
+  piezasMuseo(): MuseumItem[] {
+    return Object.values(this.categoria<MuseumItem>('museum_items')).sort((a, b) =>
+      a.id.localeCompare(b.id),
+    );
+  }
+
+  /** Licencia de medios por id (DQ.LIC.*). */
+  licencia(id: string): License | undefined {
+    return this.categoria<License>('licenses')[id];
+  }
+
+  /** Fuente documental por id (DQ.SRC.*). */
+  fuente(id: string): Source | undefined {
+    return this.categoria<Source>('sources')[id];
   }
 
   descubrimientosDeEpisodio(episodeId: string): Discovery[] {

@@ -149,6 +149,7 @@ export default function ReproductorHistoria({ catalogo, onSalir }: Props) {
   useEffect(() => {
     const alPulsar = (e: KeyboardEvent) => {
       const destino = e.target as HTMLElement | null;
+      if (destino?.closest('.ajustes-panel')) return;
       const esBoton = destino?.tagName === 'BUTTON';
       switch (e.key) {
         case 'ArrowRight':

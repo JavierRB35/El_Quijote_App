@@ -10,7 +10,7 @@
 
 - **Fichero binario aprobado:** `MUSEO_REFERENCIA_VISUAL_OFICIAL.png`
 - **Dimensiones:** 1672 × 941 px, PNG, orientación horizontal.
-- **SHA-256 exacto:** `7c1e1f5159838750af90493f87ca7c305077c2dcee776483202d1ed3edbf4c1a`.
+- **SHA-256 exacto:** `edc1afebf58f88a25ed249fe5cd288d1f24e2202195cceb288e6a414146994a7`.
 - **Ubicación persistente actual:** Biblioteca del proyecto `/EL_QUIJOTE/MUSEO_REFERENCIA_VISUAL_OFICIAL.png`; una copia descargable de la imagen se entregó al propietario en ChatGPT.
 - **Ubicación canónica que debe adquirir en ESTE repositorio en la PR de Museo:** `docs/referencias/museo/MUSEO_REFERENCIA_VISUAL_OFICIAL.png`. **ADVERTENCIA DE TRAZABILIDAD:** esta especificación en GitHub **no acredita aún que el PNG esté subido al repositorio**. Se requiere añadir el archivo binario idéntico y verificar exactamente el SHA-256 anterior ANTES del desarrollo/QA del Museo; si no, informar del bloqueo. No sustituir por captura regenerada, render distinto, JPG comprimido o mockup aproximado. No falsear su presencia en GitHub.
 
@@ -35,7 +35,7 @@ No inventar autores, colecciones ni años. Si un dato no está acreditado, mostr
 
 **Caso de ejemplo de acuarelas del banco:** `assets/ilustraciones_tusell/manifests/manifest_ilustraciones.json` y `content/piloto/licenses/DQ.LIC.0001.json` apuntan a acuarelas de **Salvador Tusell**, edición **Luis Tasso, 1905**, con `redistribution=condicionada` y fallecimiento/derechos España aún no resueltos. Verificar individualmente antes de atribuir cada una. No extrapolar autoría a nuevas imágenes.
 
-**AVISO IMPORTANTE SOBRE LA IMAGEN MAQUETA:** el gran paisaje de molinos del PNG aprobado es una **ilustración conceptual generada con IA solo como patrón visual**, NO una acuarela de Salvador Tusell, ni de José Segrelles, ni una obra conservada en una colección privada. La maqueta oficial ya muestra al pie «Fuente de esta maqueta: recreación conceptual generada con IA». Sustituir la **obra representada** por el JPG real del catálogo en producción, **sin alterar la estructura compositiva aprobada**. No atribuir el placeholder a un artista real.
+**AVISO IMPORTANTE SOBRE LA IMAGEN MAQUETA:** el gran paisaje de molinos del PNG aprobado es una **ilustración conceptual generada con IA solo como patrón visual**, NO una acuarela de Salvador Tusell, ni de José Segrelles, ni una obra conservada en una colección privada. La maqueta oficial ya muestra al pie «Fuente de la maqueta: recreación conceptual creada con IA». Sustituir la **obra representada** por el JPG real del catálogo en producción, **sin alterar la estructura compositiva aprobada**. No atribuir el placeholder a un artista real.
 
 ## 3. Obra íntegra, nunca distorsionada
 

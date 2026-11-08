@@ -228,7 +228,11 @@ export default function AventuraNarrativa({ catalogo, onSalir }: Props) {
             <h1 className="an-revelacion-titulo">{ronda.personaje}</h1>
             <p className="an-consecuencia">{ronda.consecuencia}</p>
             <p className="an-explicacion">{ronda.explicacion}</p>
-            <p className="an-fuente">Referencia: {ronda.pasajeId} · edición del proyecto</p>
+            <p className="an-fuente">
+              {ronda.pasajeId
+                ? `Referencia: ${ronda.pasajeId} · edición del proyecto`
+                : 'Referencia: Primera Parte, capítulo VIII · DQ.SRC.0005'}
+            </p>
             <button className="an-primario" onClick={avanzar}>
               {partida.puntos === 0 ? 'Volver al checkpoint' : ronda.checkpoint ? 'Completar hazaña' : 'Siguiente decisión'}
             </button>

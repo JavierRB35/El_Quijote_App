@@ -136,6 +136,11 @@
    "capa": "pendiente de implementación; aplicará textoParaPantalla al pasar a existir UI"
   }
  },
+ "disticos": {
+  "regla": "2 líneas cortas + corte de edición + señal (L2 puntada, L1 sin cierre de frase ni frase interior)",
+  "conservados_para_revision": [],
+  "unidos_sin_señal_para_revision": []
+ },
  "cobertura": {
   "capitulos_total": 126,
   "capitulos_incorporados": [
@@ -280,6 +285,8 @@
    "DQ.P2.C10",
    "DQ.P2.C74"
   ],
-  "con_beats_historia": []
+  "con_beats_historia": [
+   "DQ.P1.C08"
+  ]
  }
 }

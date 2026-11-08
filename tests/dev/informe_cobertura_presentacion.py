@@ -31,7 +31,7 @@ import sys
 
 REPO = sys.argv[1] if len(sys.argv) > 1 else "."
 sys.path.insert(0, os.path.join(REPO, "tools", "editorial_validation"))
-from estructura_texto import cortes_mecanicos_residuales  # noqa: E402
+from estructura_texto import cortes_mecanicos_residuales, _es_distico  # noqa: E402
 
 PKG = os.path.join(REPO, "content", "piloto")
 
@@ -48,8 +48,17 @@ def cargar(categoria):
 
 
 def capitulo_de(pid):
+    """Capítulo contractual de un ID que lo porta en su prefijo
+    (pasajes DQ.P1.C08.P0001, escenas DQ.P1.C08.E01.S01)."""
     m = re.match(r"DQ\.P([12])\.C(\d{1,2})\.", pid + ".")
     return f"DQ.P{m.group(1)}.C{int(m.group(2)):02d}" if m else None
+
+
+def capitulo_de_escena(scene_id):
+    """Capítulo de un beat a través de su SCENE_ID (corrección PR #68): el
+    patrón canónico de escena (DQ.P[12].C[NN].E[NN].S[NN]) porta el
+    capítulo; nunca se deriva del ID del beat (DQ.BEAT.* no lo contiene)."""
+    return capitulo_de(scene_id or "")
 
 
 pasajes = cargar("passages")
@@ -91,18 +100,62 @@ for bid, b in sorted(beats.items()):
         saltos_totales = texto.count("\n") - 2 * texto.count("\n\n")
         intervenciones[u["utterance_id"]] = {
             "beat": bid,
-            "capitulo": capitulo_de(b.get("scene_id", "") or bid),
+            "capitulo": capitulo_de_escena(b.get("scene_id", "")),
             "saltos_totales": saltos_totales,
             "cortes_que_presentacion_une": cortes_a_unir,
             "saltos_literarios": saltos_totales - cortes_a_unir,
         }
-        # invariante literario: la presentación NO debe eliminar saltos que
-        # el detector considera literarios (versos). Si un texto tiene solo
-        # versos, la presentación debe conservarlos — lo acredita el test node.
+
+# ------------------------------- dísticos: constancia para revisión editorial
+# Regla PR #68: los pares de 2 líneas cortas con corte estrecho se conservan
+# como pareado SOLO con la señal del dístico (L2 puntada, L1 sin cierre de
+# frase ni frase interior). Los que se unen por falta de señal quedan
+# registrados aquí para revisión editorial (casos ambiguos).
+def escanear_pareados(etiqueta, textos):
+    conservados, unidos = [], []
+    for clave, texto in textos:
+        for parrafo in texto.replace("\r\n", "\n").split("\n\n"):
+            lineas = [l.strip() for l in parrafo.split("\n") if l.strip()]
+            if len(lineas) != 2 or len(lineas[0]) >= 60 or len(lineas[1]) >= 60:
+                continue
+            m = re.match(r"\S+", lineas[1])
+            if not m or len(lineas[0]) + 1 + len(m.group(0)) >= 76:
+                continue  # corte mecánico: unión sin ambigüedad
+            destino = conservados if _es_distico(lineas[0], lineas[1]) else unidos
+            destino.append({"registro": clave,
+                            "par": f"{lineas[0][:40]} ⏎ {lineas[1][:40]}"})
+    return etiqueta, conservados, unidos
+
+
+pareados_conservados, pareados_unidos = [], []
+_pareados = [
+    escanear_pareados("passages.text_original",
+                      [(pid, p.get("text_original", "")) for pid, p in pasajes.items()]),
+    escanear_pareados("questions.evidence[].quote",
+                      [(qid, e.get("quote", ""))
+                       for qid, q in questions.items()
+                       for e in q.get("evidence", []) if e.get("quote")]),
+    escanear_pareados("beats.utterances[].texto_visible",
+                      [(uid, i["detalle"] if False else "")
+                       for uid, i in []] or
+                      [(u["utterance_id"], u.get("texto_visible", ""))
+                       for b in beats.values() for u in b.get("utterances", [])]),
+]
+for etiqueta, conservados, unidos in _pareados:
+    for d in conservados:
+        pareados_conservados.append({"campo": etiqueta, **d})
+    for d in unidos:
+        pareados_unidos.append({"campo": etiqueta, **d})
 
 # ---------------------------------------------------------------- cobertura
 capitulos_pasajes = sorted({capitulo_de(pid) for pid in pasajes} - {None})
-capitulos_beats = sorted({capitulo_de(bid) for bid in beats} - {None})
+# Los beats se atribuyen por scene_id (no por DQ.BEAT.*): corrección PR #68.
+capitulos_beats = sorted({capitulo_de_escena(b.get("scene_id", "")) for b in beats.values()} - {None})
+# Guardia de regresión: con beats en el paquete, su atribución por scene_id
+# debe producir al menos un capítulo (el patrón canónico de escena lo porta).
+if beats and not capitulos_beats:
+    FALLOS.append("regresión: hay beats pero con_beats_historia quedó vacío "
+                  "(el capítulo debe derivarse del scene_id, no de DQ.BEAT.*)")
 incorporados = sorted(set(capitulos_pasajes) | set(capitulos_beats))
 TODOS = [f"DQ.P1.C{n:02d}" for n in range(1, 53)] + \
         [f"DQ.P2.C{n:02d}" for n in range(1, 75)]
@@ -133,6 +186,11 @@ informe = {
             "capa": "pendiente de implementación; aplicará textoParaPantalla al pasar a existir UI",
         },
     },
+    "disticos": {
+        "regla": "2 líneas cortas + corte de edición + señal (L2 puntada, L1 sin cierre de frase ni frase interior)",
+        "conservados_para_revision": pareados_conservados,
+        "unidos_sin_señal_para_revision": pareados_unidos,
+    },
     "cobertura": {
         "capitulos_total": len(TODOS),
         "capitulos_incorporados": incorporados,
@@ -156,6 +214,8 @@ print(f"  intervenciones de Historia:       {n_interv} (presentación runtime; "
       f"{con_cortes} con cortes que la transformación une)")
 print(f"  capítulos incorporados:           {len(incorporados)}/{len(TODOS)} → {', '.join(incorporados)}")
 print(f"  capítulos no incorporados:        {len(no_incorporados)} (pendientes de importación)")
+print(f"  pareados conservados (señal de dístico):        {len(pareados_conservados)}")
+print(f"  pares 2 líneas unidos sin señal (revisar):      {len(pareados_unidos)}")
 print(f"  informe JSON: {os.path.relpath(salida, REPO)}")
 
 if FALLOS:

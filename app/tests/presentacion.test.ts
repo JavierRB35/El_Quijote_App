@@ -89,12 +89,16 @@ test('los párrafos auténticos (\n\n) se conservan', () => {
 });
 
 test('los cambios de interlocutor (—) conservan su salto', () => {
-  const dialogo = 'dijo a su escudero:\n\n— La ventura va guiando nuestras cosas\nmejor de lo que acertáramos a desear.\n\n— ¿Qué gigantes? —dijo Sancho Panza.';
+  // forma real del corpus: los parlamentos largos envuelven a ~76 col. y sus
+  // cortes son mecánicos (los pares 2×cortas×estrechos del fichero son solo
+  // encabezados y dísticos — población medida en PR #68)
+  const dialogo = 'dijo a su escudero:\n\n— La ventura va guiando nuestras cosas mejor de lo que\nacertáramos a desear, porque ves allí, amigo Sancho Panza, donde se\ndescubren treinta.\n\n— ¿Qué gigantes? —dijo Sancho Panza.';
   const presentado = textoParaPantalla(dialogo);
   assert.equal(presentado.includes('\n— La ventura va guiando'), true);
   assert.equal(presentado.includes('\n— ¿Qué gigantes?'), true);
-  // dentro del parlamento, el corte mecánico se une
-  assert.equal(presentado.includes('nuestras cosas\nmejor'), false);
+  // dentro del parlamento, los cortes mecánicos se unen
+  assert.equal(presentado.includes('de lo que\nacertáramos'), false);
+  assert.equal(presentado.includes('amigo Sancho Panza, donde se\ndescubren'), false);
 });
 
 test('versos y estrofas se preservan línea a línea', () => {
@@ -110,6 +114,36 @@ test('corte estrecho a mitad de frase en prosa se une (no es verso)', () => {
   const presentado = textoParaPantalla(prosa);
   assert.equal(presentado.includes('\n'), false,
     'el corte estrecho de un párrafo de prosa debe unirse');
+});
+
+test('pareado auténtico (dístico) conserva su separación', () => {
+  // señal verificable: L2 puntada, L1 sin cierre de frase ni frase interior
+  const pareado = 'Y como del Catay recibió el cetro,\nquizá otro cantará con mejor plectro.';
+  const presentado = textoParaPantalla(pareado);
+  assert.equal(presentado, pareado, 'el dístico debe conservar su salto');
+  // del fichero fuente: epitafio latino en cita
+  const latino = 'Pallida mors aequo pulsat pede pauperum tabernas,\nRegumque turres.';
+  assert.equal(textoParaPantalla(latino), latino);
+  // romance con rima
+  const romance = 'No rebuznaron en balde\nel uno y el otro alcalde.';
+  assert.equal(textoParaPantalla(romance), romance);
+});
+
+test('pareado ambiguo se une y los encabezados de dos líneas no son poesía', () => {
+  // L1 cierra una frase (punto final): no hay señal de verso
+  const frases = 'Terminó la primera frase. Y aquí seguía\ncon más contenido de la segunda.';
+  assert.equal(textoParaPantalla(frases).includes('\n'), false,
+    'un par con frase cerrada en la primera línea es prosa');
+  // frase cerrada DENTRO de la primera línea
+  const interior = 'Terminó la primera frase. Y aquí seguía, sin más\nremedio, hacia la venta.';
+  assert.equal(textoParaPantalla(interior).includes('\n'), false);
+  // encabezado de capítulo partido por el compositor: L2 sin puntuación
+  const encabezado = 'Que trata de la condición y ejercicio del famoso\nhidalgo don Quijote de la Mancha';
+  assert.equal(textoParaPantalla(encabezado).includes('\n'), false,
+    'el encabezado de dos líneas no es un pareado');
+  // prosa corta con corte MECÁNICO (la palabra no cabía): se une
+  const mecanico = 'un fragmento de prosa que continúa más allá del ancho disponible de la línea\nsiguiente corta.';
+  assert.equal(textoParaPantalla(mecanico).includes('\n'), false);
 });
 
 test('idempotencia: presentar dos veces no cambia nada', () => {
@@ -140,11 +174,13 @@ test('un encabezado de capítulo incrustado se respeta como bloque propio', () =
 });
 
 test('evidencia de pregunta (Aventura) con párrafos y parlamentos se presenta intacta', () => {
-  // caso real del paquete: cita con salto de parlamento (DQ.P1.C06.P0003)
   const cita = 'como a único\nen su arte, se debe perdonar.\n\n— Así es verdad —dijo el cura—, y por esa razón se le otorga la vida por\nahora.';
   const presentado = textoParaPantalla(cita);
   assert.equal(presentado.split('\n\n').length, 2, 'el parlamento conserva su párrafo');
   assert.equal(presentado.includes('\n— Así es verdad'), true);
   assert.equal(presentado.includes('vida por\nahora.'), false,
     'el corte mecánico interno del parlamento se une');
+  // el primer bloque cumple la señal del dístico (L2 puntada, L1 sin
+  // cierre): la presentación lo conserva para revisión editorial
+  assert.equal(presentado.includes('como a único\nen su arte'), true);
 });

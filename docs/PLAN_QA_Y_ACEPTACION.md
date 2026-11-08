@@ -43,14 +43,14 @@ Se verifican contra los requisitos `EF-*` de `ESPECIFICACION_FUNCIONAL.md` (cada
 - Lector: búsqueda en ambas partes, pregunta→pasaje→volver sin perder posición.
 - Los 6 tipos de pregunta; orden visual aleatorio sin alterar respuestas; **ningún campo de escritura**.
 - Atlas y museo completos sin red; IA opcional reporta sin conexión.
-- Imagen previa que no revela; hotspots teclado-amigables.
+- Imagen previa que no revela y **una imagen propia, exclusiva y elegible para cada pregunta de un capítulo final**; hotspots teclado-amigables. **Escenas cinematográficas suficientes** para que la narración no sea mayormente estática sin justificación; escenarios `sin imagen` se prueban como **fallback técnico**, no cobertura audiovisual aceptada.
 - Clases de evidencia siempre distinguidas (histórica/foto/recreación); rutas hipotéticas rotuladas.
 - Rendimiento medido en hardware objetivo (picos RAM/VRAM, tiempos de escena/atlas/búsqueda) — objetivos definitivos SOLO tras medir (DP-02).
 
 ## 4. Casos negativos editoriales aún sin automatizar (deuda declarada)
 
 1. Pasaje con hash distinto al del texto de la edición — requiere capa textual (PEND-01).
-2. Cobertura de fases de escena por episodio (sin huecos before/reveal) — requiere paquete de escenas completo.
+2. Cobertura visual real por episodio/beat, con cambios de plano significativos, y **cobertura exclusiva por pregunta**: `question_id → imagen propia → momento seguro → identidad/blob/hash → derechos → QA`. El paquete visual definitivo aún requiere completar; los fallbacks neutros siguen siendo funcionales pero no cierran esta deuda.
 3. Pasaje → «hash distinto» y duplicados semánticos entre paquetes distintos (el detector actual opera por paquete).
 Estas deudas viven en el backlog de QA y bloquean FASE 2, no el GO/NO-GO.
 
@@ -63,7 +63,7 @@ De la matriz completa en `docs/COMPONENTES_NARRATIVOS_UX.md` §4: **automáticas
 | Fase | Salida exige |
 |---|---|
 | **0 → GO/NO-GO** | Los 11 entregables presentados (ver `GO_NO_GO_FASE0.md`); contrato firmado por ambos lados (HECHO); suite de contrato verde (HECHO); ADR-0001 con criterios de validación definidos (HECHO — la validación empírica misma es de FASE 1). **Aprobación expresa del propietario.** |
-| **1 (piloto)** | I.8 end-to-end en instalador offline en VM limpia; los 7 perfiles de caja negra ejecutados y registrados; mediciones reales (RAM, tiempos, tamaño); replanificación de alcance con datos; sin deuda crítica abierta |
+| **1 (piloto)** | I.8 end-to-end en instalador offline en VM limpia; 7 perfiles de caja negra registrados; mediciones reales y replanificación. **Distinguir vertical técnico jugable (aceptable con neutro seguro) de capítulo visualmente terminado (imagen propia por pregunta y escenas suficientes)**. No declarar cierre de calidad audiovisual sin evidencia |
 | **2 (producción)** | CI con suite de contrato obligatoria; revisiones por lotes con manifiestos versionados; cero preguntas sin respuesta inequívoca; 0 duplicados semánticos aprobados; 100 % activos con licencia registrada |
 | **3 (entrega)** | Auditoría editorial y legal de cada recurso final; todas las rutas funcionales probadas; instalador autónomo documentado; lista de decisiones y limitaciones |
 

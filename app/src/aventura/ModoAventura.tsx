@@ -10,7 +10,7 @@ import { cargarProgreso, guardarProgreso } from '../historia/persistencia';
 import { leerAsset } from '../entorno';
 import { Catalogo, type MediaAsset, type Pregunta } from '../contrato';
 import { ordenPresentacion } from './presentacion';
-import { pasajesNarrados, respuestasValidas, separarVisibles } from './visibilidad';
+import { pasajesNarrados, respuestasGuardadas, respuestasVisibles, separarVisibles } from './visibilidad';
 
 type EstadoPregunta =
   | { fase: 'sin_responder' }
@@ -279,11 +279,13 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
     [catalogo],
   );
 
-  // Visibilidad narrativa (encargo P1 §D): solo se ofrecen preguntas cuyos
-  // pasajes de apoyo ya están narrados en los beats del episodio; las demás se
-  // listan como pendientes de narración sin desbloquear lances no vividos por
-  // el jugador. La relación es por identificadores de pasaje, no por posición
-  // de fichero: al ampliar la narración, las bloqueadas se desbloquean solas.
+  // Visibilidad narrativa (encargo P1 §D): la cobertura de pasajes de los
+  // beats indica qué lances están IMPLEMENTADOS en la narración del episodio
+  // (estado del catálogo), no qué ha leído personalmente el jugador; el Modo
+  // Aventura permanece como modalidad independiente y aquí no hay bloqueo por
+  // progreso individual. Lo aún no narrado se lista como pendiente. La
+  // relación es por identificadores de pasaje, no por posición de fichero: al
+  // ampliar la narración, las bloqueadas se desbloquean solas.
   const { visibles, bloqueadas } = useMemo(() => {
     const beats = catalogo
       .escenasDeEpisodio(EPISODIO_INICIAL)
@@ -291,22 +293,27 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
     return separarVisibles(preguntas, pasajesNarrados(beats));
   }, [catalogo, preguntas]);
 
-  // Recuperación de partida (EF-AV-08/EF-PER): se restaura lo guardado y se
-  // retoma en la primera pregunta sin responder. Un progreso corrupto, de otro
-  // catálogo o de preguntas hoy bloqueadas se ignora sin dar por buena la
-  // carga (§7.3); las respuestas de preguntas visibles se conservan intactas.
+  // Recuperación de partida (EF-AV-08/EF-PER) sin pérdida de progreso: se
+  // conservan en almacenamiento TODAS las respuestas válidas guardadas,
+  // incluidas las de preguntas hoy bloqueadas por cobertura narrativa; solo
+  // se muestran y contabilizan las de preguntas accesibles. Un progreso
+  // corrupto, de otro catálogo o malformado se ignora sin dar por buena la
+  // carga (§7.3). Al desbloquearse una pregunta, su respuesta anterior vuelve
+  // a contabilizarse automáticamente.
+  const idsConocidos = useMemo(() => new Set(preguntas.map((q) => q.id)), [preguntas]);
   const idsVisibles = useMemo(() => new Set(visibles.map((q) => q.id)), [visibles]);
 
   useEffect(() => {
     if (!catalogo || visibles.length === 0) return;
     cargarProgreso()
       .then((crudo) => {
-        const valido = respuestasValidas(crudo, idsVisibles);
-        if (!Object.keys(valido).length) return;
-        setProgreso(valido);
-        const primeraLibre = visibles.findIndex((q) => !(q.id in valido));
+        const guardadas = respuestasGuardadas(crudo, idsConocidos);
+        if (!Object.keys(guardadas).length) return;
+        setProgreso(guardadas);
+        const primeraLibre = visibles.findIndex((q) => !(q.id in guardadas));
         setIndice(primeraLibre === -1 ? visibles.length - 1 : primeraLibre);
-        setAvisoGuardado(`partida recuperada · ${Object.keys(valido).length} respuestas`);
+        const hoy = Object.keys(respuestasVisibles(guardadas, idsVisibles)).length;
+        setAvisoGuardado(`partida recuperada · ${hoy} respuestas`);
       })
       .catch(() => undefined);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -440,7 +447,14 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
 
   const episodio = catalogo.episodio(EPISODIO_INICIAL);
   const respondida = estado.fase === 'respondida';
-  const aciertos = Object.values(progreso).filter((p) => p.acierto).length;
+  // Marcador y avance solo con preguntas accesibles hoy; las respuestas
+  // conservadas de preguntas bloqueadas no contabilizan (corrección P0).
+  const respuestasHoy = useMemo(
+    () => respuestasVisibles(progreso, idsVisibles),
+    [progreso, idsVisibles],
+  );
+  const aciertos = Object.values(respuestasHoy).filter((p) => p.acierto).length;
+  const respondidasHoy = Object.keys(respuestasHoy).length;
   const requiereBoton = ['multi_choice', 'ordering', 'matching'].includes(
     pregunta.interaction.type,
   );
@@ -468,7 +482,7 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
           <div className="progreso-barra" role="presentation">
             <div
               className="progreso-relleno"
-              style={{ width: `${(Object.keys(progreso).length / visibles.length) * 100}%` }}
+              style={{ width: `${(respondidasHoy / visibles.length) * 100}%` }}
             />
           </div>
           {avisoGuardado && <span className="guardado">{avisoGuardado}</span>}

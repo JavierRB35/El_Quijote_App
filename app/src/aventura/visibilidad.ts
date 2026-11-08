@@ -1,10 +1,13 @@
-// Visibilidad narrativa (encargo P1 §D): una pregunta solo se ofrece cuando la
-// narración del Modo Historia ya ha presentado los pasajes en que se apoya.
-// La relación es por identificadores (question.passage_ids ↔ beat.utterances
-// .passage_ids), nunca por posición de fichero: cuando la narración incorpore
-// nuevos beats, las preguntas bloqueadas se desbloquean solas, sin cambios en
-// la UI ni simulación de contenido no implementado (p. ej., lances posteriores
-// a I16).
+// Visibilidad narrativa (encargo P1 §D): la comprobación de los pasajes
+// disponibles en los beats indica qué contenido ESTÁ IMPLEMENTADO en la
+// narración del episodio (cobertura del catálogo), no qué ha leído
+// personalmente el jugador. El Modo Aventura sigue siendo una modalidad
+// independiente y aquí no se introduce ningún bloqueo por progreso
+// individual. La relación es por identificadores (question.passage_ids ↔
+// beat.utterances.passage_ids), nunca por posición de fichero: cuando la
+// narración incorpore nuevos beats, las preguntas bloqueadas se desbloquean
+// solas, sin cambios en la UI ni simulación de contenido no implementado
+// (p. ej., lances posteriores a I16).
 import type { Beat, Pregunta } from '../contrato.ts';
 
 /** Pasajes ya narrados: los citados por alguna intervención de los beats. */
@@ -45,14 +48,17 @@ export interface RespuestaGuardada {
 }
 
 /**
- * Recuperación de partida (EF-AV-08/EF-PER) con compatibilidad de progreso:
- * solo se aceptan entradas legibles de preguntas visibles hoy. Las entradas de
- * preguntas bloqueadas, desconocidas o malformadas se ignoran sin dar por
- * buena la carga (§7.3); el resto del guardado se conserva.
+ * Recuperación de partida (EF-AV-08/EF-PER) con conservación de progreso:
+ * se aceptan TODAS las entradas bien formadas de preguntas conocidas del
+ * episodio, INCLUIDAS las de preguntas hoy bloqueadas — su respuesta anterior
+ * debe seguir almacenada para cuando se desbloqueen (corrección P0: el
+ * autoguardado nunca puede borrar respuestas válidas). Los IDs desconocidos y
+ * los datos malformados se descartan sin dar por buena la carga (§7.3).
+ * El marcador, el avance y la navegación usan solo respuestasVisibles().
  */
-export function respuestasValidas(
+export function respuestasGuardadas(
   crudo: string | null,
-  idsVisibles: ReadonlySet<string>,
+  idsConocidos: ReadonlySet<string>,
 ): Record<string, RespuestaGuardada> {
   if (!crudo) return {};
   let guardado: unknown;
@@ -62,13 +68,31 @@ export function respuestasValidas(
     return {};
   }
   if (!guardado || typeof guardado !== 'object') return {};
-  const valido: Record<string, RespuestaGuardada> = {};
+  const guardadas: Record<string, RespuestaGuardada> = {};
   for (const [id, valor] of Object.entries(guardado as Record<string, unknown>)) {
-    if (!idsVisibles.has(id)) continue;
+    if (!idsConocidos.has(id)) continue;
     const r = valor as Partial<RespuestaGuardada> | null;
     if (r && typeof r === 'object' && Array.isArray(r.seleccion)) {
-      valido[id] = { acierto: Boolean(r.acierto), seleccion: r.seleccion.map(String) };
+      guardadas[id] = { acierto: Boolean(r.acierto), seleccion: r.seleccion.map(String) };
     }
   }
-  return valido;
+  return guardadas;
+}
+
+/**
+ * Subconjunto de las respuestas almacenadas que corresponde a preguntas
+ * visibles hoy: lo único que se muestra y contabiliza en el marcador mientras
+ * haya preguntas bloqueadas. Las respuestas conservadas de preguntas
+ * bloqueadas reaparecen aquí automáticamente cuando la narración las
+ * desbloquea.
+ */
+export function respuestasVisibles(
+  guardadas: Record<string, RespuestaGuardada>,
+  idsVisibles: ReadonlySet<string>,
+): Record<string, RespuestaGuardada> {
+  const hoy: Record<string, RespuestaGuardada> = {};
+  for (const [id, respuesta] of Object.entries(guardadas)) {
+    if (idsVisibles.has(id)) hoy[id] = respuesta;
+  }
+  return hoy;
 }

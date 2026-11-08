@@ -35,7 +35,7 @@ no se asignaron activos ajenos para tapar el hueco.
 | DQ.Q.000101 | NUEVA Q101 — Sancho haciendo su advertencia | Sin primer plano que dibuje la respuesta |
 | DQ.Q.000105 | NUEVA Q105 — carga a caballo | No representa el mecanismo de la caída; tras I11 |
 | DQ.Q.000106 | NUEVA Q106 — campo después del combate | Sin mostrar pruebas de las opciones |
-| DQ.Q.000108 | NUEVA Q108 — mosaico de 4 sucesos desordenados | Sin números ni flechas; tras el vizcaíno |
+| DQ.Q.000108 | NUEVA Q108 — única imagen cinematográfica de un único instante | **Sin collage, viñetas, textos ni elementos de interfaz** (rectificación en Issue #61); las cuatro opciones del ejercicio de ordenación se muestran exclusivamente mediante componentes de la aplicación; tras el vizcaíno |
 | DQ.Q.000109 | NUEVA Q109 — desacuerdo Quijote/Sancho | Sin representar las parejas resueltas; tras frailes |
 | DQ.Q.000111 | NUEVA Q111 — Quijote ante coche y señora | Sin revelar la fórmula exacta; tras la presentación |
 
@@ -48,20 +48,25 @@ necesitará cambios: la asociación es por ID en los datos.
 ## 3. Secuencia narrativa y dependencias registradas
 
 La visibilidad se deriva por identificadores (`question.passage_ids` ⊆ pasajes
-citados por los beats del episodio), nunca por posición de fichero:
+citados por los beats del episodio), nunca por posición de fichero. La
+comprobación indica qué contenido **está implementado en la narración**
+(cobertura del catálogo del episodio), **no** qué ha leído personalmente el
+usuario: el Modo Aventura sigue siendo una modalidad independiente y en esta PR
+no se introduce ningún bloqueo por progreso individual del jugador.
 
-- **Desbloqueadas hoy (narración I01–I16, molinos):** Q.000101–Q.000106 y
-  Q.000112 (ejercicio visual de la embestida). El reproductor de Historia
-  termina en I16 y su cierre remite al Modo Aventura; esas 7 preguntas cubren
-  solo hechos narrados.
+- **Desbloqueadas hoy (narración implementada I01–I16, molinos):**
+  Q.000101–Q.000106 y Q.000112 (ejercicio visual de la embestida). El
+  reproductor de Historia termina en I16 y su cierre remite al Modo Aventura;
+  esas 7 preguntas cubren solo hechos narrados.
 - **Bloqueadas hoy:** Q.000107–Q.000111. **Dependencia registrada (no
   simulada):** requieren narración de los lances de frailes, señora del coche y
   vizcaíno — pasajes `DQ.P1.C08.P0007`–`P0011`, sin beats en el paquete
-  (Historia cubre P0001–P0006 y P0012–P0017). Cuando una PR futura amplíe los
-  beats más allá de I16, el desbloqueo será automático por la misma derivación
-  de IDs; no habrá que tocar la UI. Queda pendiente de decisión de Dirección
-  cualquier umbral adicional por jugador (p. ej., exigir progreso del Modo
-  Historia para abrir Aventura); esta PR no lo implementa ni lo simula.
+  (la narración implementada cubre P0001–P0006 y P0012–P0017). Cuando una PR
+  futura amplíe los beats más allá de I16, el desbloqueo será automático por la
+  misma derivación de IDs; no habrá que tocar la UI. Queda pendiente de
+  decisión de Dirección cualquier umbral adicional por jugador (p. ej., exigir
+  progreso del Modo Historia para abrir Aventura); esta PR no lo implementa ni
+  lo simula.
 - `DQ.P1.C08.E01` queda intacto; los datos de episodio, escenas y beats no se
   modificaron.
 - El resumen de fin de episodio informa honestamente: «Otras 5 preguntas de

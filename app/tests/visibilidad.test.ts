@@ -11,7 +11,8 @@ import type { Beat, Pregunta } from '../src/contrato.ts';
 import {
   pasajesNarrados,
   preguntaDesbloqueada,
-  respuestasValidas,
+  respuestasGuardadas,
+  respuestasVisibles,
   separarVisibles,
 } from '../src/aventura/visibilidad.ts';
 
@@ -92,18 +93,101 @@ test('secuencia narrativa real del episodio DQ.P1.C08.E01 (contrato encargo P1 �
   );
 });
 
-test('compatibilidad de progreso: guardado con preguntas hoy bloqueadas se recupera sin ellas', () => {
-  const guardado = JSON.stringify({
+test('conservación de progreso P0: Q.101 y Q.107 guardadas, Q.107 bloqueada, se responde Q.103', () => {
+  const { preguntas, beats } = episodioC08();
+  const { visibles } = separarVisibles(preguntas, pasajesNarrados(beats));
+  const idsVisibles = new Set(visibles.map((q) => q.id));
+  const idsConocidos = new Set(preguntas.map((q) => q.id));
+  // Q.107 sigue bloqueada en el paquete real
+  assert.equal(idsVisibles.has('DQ.Q.000107'), false, 'precondición: Q.107 bloqueada');
+
+  // 1) partida previa: Q.101 y Q.107 respondidas (Q.107 antes de su bloqueo)
+  const crudo = JSON.stringify({
     'DQ.Q.000101': { acierto: true, seleccion: ['DQ.Q.000101.O02'] },
-    'DQ.Q.000107': { acierto: true, seleccion: ['DQ.Q.000107.O01'] }, // hoy bloqueada
-    'DQ.Q.999999': { acierto: false, seleccion: ['x'] }, // inexistente
-    'DQ.Q.000103': { acierto: false, seleccion: 'roto' }, // malformada
+    'DQ.Q.000107': { acierto: true, seleccion: ['DQ.Q.000107.O01'] },
   });
-  const { visibles } = separarVisibles(episodioC08().preguntas, pasajesNarrados(episodioC08().beats));
-  const valido = respuestasValidas(guardado, new Set(visibles.map((q) => q.id)));
-  assert.deepEqual(Object.keys(valido).sort(), ['DQ.Q.000101']);
-  assert.deepEqual(valido['DQ.Q.000101'], { acierto: true, seleccion: ['DQ.Q.000101.O02'] });
-  // guardado corrupto o vacío → sin carga asumida
-  assert.deepEqual(respuestasValidas('{roto', new Set(['DQ.Q.000101'])), {});
-  assert.deepEqual(respuestasValidas(null, new Set(['DQ.Q.000101'])), {});
+  const guardadas = respuestasGuardadas(crudo, idsConocidos);
+  assert.deepEqual(
+    Object.keys(guardadas).sort(),
+    ['DQ.Q.000101', 'DQ.Q.000107'],
+    'la respuesta de la bloqueada Q.107 sigue ALMACENADA',
+  );
+
+  // 2) se muestra y contabiliza solo lo accesible
+  const hoy = respuestasVisibles(guardadas, idsVisibles);
+  assert.deepEqual(Object.keys(hoy), ['DQ.Q.000101']);
+  assert.equal(
+    Object.values(hoy).filter((r) => r.acierto).length,
+    1,
+    'Q.107 no incrementa el marcador',
+  );
+
+  // 3) se responde Q.103 y el autoguardado escribe el estado completo
+  const trasResponder = { ...guardadas, 'DQ.Q.000103': { acierto: true, seleccion: ['DQ.Q.000103.O01'] } };
+  const serializado = JSON.stringify(trasResponder);
+  assert.deepEqual(Object.keys(JSON.parse(serializado)).sort(), [
+    'DQ.Q.000101',
+    'DQ.Q.000103',
+    'DQ.Q.000107',
+  ], 'el guardado conserva Q.107 junto a la nueva respuesta');
+
+  // 4) restauración posterior: Q.107 sigue almacenada, sin mostrarse ni contar
+  const restauradas = respuestasGuardadas(serializado, idsConocidos);
+  assert.equal(restauradas['DQ.Q.000107'].acierto, true);
+  assert.equal('DQ.Q.000107' in respuestasVisibles(restauradas, idsVisibles), false);
+  assert.deepEqual(Object.keys(respuestasVisibles(restauradas, idsVisibles)).sort(), [
+    'DQ.Q.000101',
+    'DQ.Q.000103',
+  ]);
+});
+
+test('conservación de progreso P0: al desbloquearse Q.107 su respuesta anterior cuenta', () => {
+  const { preguntas } = episodioC08();
+  const guardadas = {
+    'DQ.Q.000101': { acierto: true, seleccion: ['x'] },
+    'DQ.Q.000107': { acierto: false, seleccion: ['y'] },
+  };
+  // narración ampliada: se añade cobertura de los pasajes de frailes (P0007)
+  const narradosAmpliados = new Set([
+    'DQ.P1.C08.P0001',
+    'DQ.P1.C08.P0002',
+    'DQ.P1.C08.P0003',
+    'DQ.P1.C08.P0004',
+    'DQ.P1.C08.P0005',
+    'DQ.P1.C08.P0006',
+    'DQ.P1.C08.P0012',
+    'DQ.P1.C08.P0013',
+    'DQ.P1.C08.P0014',
+    'DQ.P1.C08.P0015',
+    'DQ.P1.C08.P0016',
+    'DQ.P1.C08.P0017',
+    'DQ.P1.C08.P0007',
+    'DQ.P1.C08.P0008',
+    'DQ.P1.C08.P0009',
+  ]);
+  const { visibles } = separarVisibles(preguntas, narradosAmpliados);
+  assert.equal(visibles.some((q) => q.id === 'DQ.Q.000107'), true, 'Q.107 desbloqueada');
+  const hoy = respuestasVisibles(guardadas, new Set(visibles.map((q) => q.id)));
+  assert.equal('DQ.Q.000107' in hoy, true, 'su respuesta anterior se recupera');
+  assert.equal(Object.values(hoy).filter((r) => r.acierto).length, 1);
+});
+
+test('conservación de progreso P0: entradas desconocidas o malformadas no son respuestas válidas', () => {
+  const idsConocidos = new Set(['DQ.Q.000101', 'DQ.Q.000103']);
+  const guardadas = respuestasGuardadas(
+    JSON.stringify({
+      'DQ.Q.000101': { acierto: true, seleccion: ['a'] },
+      'DQ.Q.000103': { acierto: false, seleccion: 'roto' }, // malformada
+      'DQ.Q.999999': { acierto: true, seleccion: ['x'] }, // desconocida
+      basura: { acierto: true, seleccion: [] }, // id fuera del episodio
+    }),
+    idsConocidos,
+  );
+  assert.deepEqual(Object.keys(guardadas), ['DQ.Q.000101']);
+  // guardado corrupto, vacío o con JSON no-objeto → sin carga asumida
+  assert.deepEqual(respuestasGuardadas('{roto', idsConocidos), {});
+  assert.deepEqual(respuestasGuardadas(null, idsConocidos), {});
+  assert.deepEqual(respuestasGuardadas('null', idsConocidos), {});
+  // reinicio de partida: guardado limpio → sin respuestas
+  assert.deepEqual(respuestasGuardadas('{}', idsConocidos), {});
 });

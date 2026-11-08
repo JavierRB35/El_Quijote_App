@@ -46,6 +46,10 @@ Público objetivo: **todos los públicos desde la adolescencia**. Lenguaje claro
 
 ## 2. DECISIONES VINCULANTES YA CONFIRMADAS
 
+**Actualización del propietario — 2026-11-08 (DC-23–DC-27):** desde esta fecha la estructura operativa del proyecto es **Dirección integral (ChatGPT) + desarrollador único**, con **director artístico únicamente para encargos concretos de imágenes canalizados por el propietario**. La fuente y destino únicos del desarrollo son el repositorio GitHub `JavierRB35/El_Quijote_App`. Cada pregunta terminada requiere **imagen propia específica y no reutilizada genéricamente**, y Modo Historia requiere **cobertura visual cinematográfica suficiente** para sostener el interés. Priorizar `assets/scenes/` y primeros planos aptos, usar las acuarelas solo secundariamente en gameplay y como contenido principal de una **sección artística dedicada**. Los fondos neutros son válidos para prototipo/fallback, no aceptación visual final por defecto. Estas decisiones **reemplazan** cualquier asignación anterior a equipos o roles R01–R16 y cualquier política de preguntas finales sin imagen. Se registran en `docs/VISION_Y_DECISIONES.md` y `docs/DECISIONES_OPERATIVAS_Y_POLITICA_VISUAL_2026-11-08.md`. No implican Fase 2 ni derechos para distribución.
+
+
+
 ### 2.1 Experiencia de juego
 
 - Equilibrio entre **aventura, preguntas, atlas y museo**.
@@ -54,7 +58,7 @@ Público objetivo: **todos los públicos desde la adolescencia**. Lenguaje claro
 - Base visual: **aventura cinematográfica interactiva de tipo 2.5D**, NO mundo abierto ni exploración libre en 3D.
 - **Imágenes realistas con movimientos sutiles** de cámara y ambiente: parallax, profundidad, viento, luz, polvo y otros efectos discretos cuando convenga.
 - **Puntos interactivos discretos y opcionales** sobre la imagen; navegación sencilla con ratón y teclado.
-- **Varias perspectivas visuales por episodio**, seleccionadas según el momento y la pregunta; una sola imagen genérica por capítulo no es suficiente.
+- **Varias perspectivas visuales y cambios de plano suficientes por episodio**, seleccionadas según el momento y el atractivo narrativo; una sola imagen genérica por capítulo no es suficiente. **Cada pregunta final debe contar con una imagen exclusiva propia y pertinente**; escenas cinematográficas primero, acuarelas secundarias en gameplay, con galería artística propia (DC-24–DC-26).
 - Personalidad visual: **realismo cinematográfico con influencias pictóricas**; sistema mixto de fotografía patrimonial, reproducciones históricas y recreaciones IA según la escena, siempre identificadas por su naturaleza.
 - Imágenes de **alta calidad y tamaño optimizado**. No confundir máxima resolución con máxima experiencia.
 - Interfaz inmersiva, elegante y discreta; no tapar la escena con menús y avisos.
@@ -146,7 +150,7 @@ No introducir decisiones que reescriban el desenlace de la novela. Si en el futu
 
 **Aventuras aleatorias opcionales:** usar únicamente episodios ya compatibles con el conocimiento del jugador, o avisar claramente de posibles revelaciones si se permite explorar por adelantado. Mantener acceso abierto a atlas y museo, pero distinguir el material que podría revelar hechos de capítulos futuros.
 
-**Presentación de preguntas:** tarjetas discretas, paneles sobre fondo atenuado, selección sobre objetos, comparaciones de escenas u otros patrones, según la necesidad. La interacción siempre debe poder completarse sin puntería precisa, mediante teclado y lectores de pantalla cuando sea aplicable. No introducir campos de escritura como mecanismo de respuesta.
+**Presentación de preguntas:** cada pregunta final dispone de **imagen propia** que no anticipe la respuesta ni se reutilice genéricamente en otras preguntas. Tarjetas discretas, paneles sobre fondo atenuado, selección sobre objetos y comparaciones de escenas según la necesidad. La interacción siempre debe poder completarse sin puntería precisa, mediante teclado y lectores de pantalla cuando sea aplicable. No introducir campos de escritura como mecanismo de respuesta.
 
 **Dificultad adaptativa:** ajustar frecuencia, complejidad conceptual y variedad usando historial local; permitir cambios manuales, desactivar presión temporal y ofrecer repaso voluntario. No castigar el error ni ocultar explicaciones esenciales.
 
@@ -154,7 +158,9 @@ No introducir decisiones que reescriban el desenlace de la novela. Si en el futu
 
 ## 4. PLIEGO DEL EQUIPO DE CONTENIDOS
 
-### 4.1 Roles y responsabilidad profesional
+### 4.1 Competencias de Dirección integral (descripciones profesionales históricas, NO equipos activos)
+
+Las especialidades enumeradas a continuación expresan **controles de calidad asumidos directamente por Dirección integral**, no contratos separados de trabajo, personas convocables ni necesidad de firmas R01–R16 (DC-23). El director artístico solo ejecuta imágenes cuando el propietario recibe un prompt concreto de Dirección; el desarrollador integra datos/código.
 
 **Responsable editorial / director cervantista**
 - Decide la edición textual de referencia, controla variantes y firma la coherencia literaria.
@@ -285,15 +291,15 @@ Cada pieza: título, autor/atribución, fecha, procedencia, técnica, entidad pr
 
 ### 4.7 Procedimiento de imágenes y acuarelas
 
-1. Inventario de necesidades por **episodio, escena, perspectiva y función** (antes de pregunta / después / lector / museo / cuaderno / atlas).
-2. Buscar primero imágenes oficiales, instituciones, repositorios legítimos y obras de dominio público o licencias compatibles **comprobadas individualmente**.
+1. Inventario de necesidades por **episodio, escena, perspectiva y función** (antes de pregunta / después / lector / museo / cuaderno / atlas), con **una imagen propia obligatoria por pregunta final** y cobertura cinematográfica de Historia suficiente para sostener el interés (DC-24–DC-25).
+2. **Prioridad de gameplay:** buscar primero **escenas existentes** en `assets/scenes/` y primeros planos `assets/closeups/` cuando encajen de forma específica; después considerar **acuarelas como apoyo secundario**, siempre con licencia y momento válidos; si no basta, Dirección redacta el **prompt exacto** para que el propietario encargue una imagen nueva al director artístico. Para museo, patrimonio y la sección artística, consultar también fuentes institucionales y obras de derechos comprobados individualmente.
 3. Mantener hoja/manifiesto de procedencia y licencias; conservar original intacto y derivados optimizados con hash y metadatos.
 4. Cuando exista EPUB real y autorización, inventariar las imágenes internas sin manipular sistemas de protección ni vulnerar permisos; registrar número real y calidad técnica. Enlazar por capítulo mediante evidencias bibliográficas (incluido QBI cuando corresponda).
-5. Para escenas no cubiertas o que requieran una imagen anterior al desenlace, definir **recreación fotorrealista original** con composición histórica validada, continuidad de personajes y revisión artística.
+5. Para escenas o **preguntas concretas sin imagen propia** y adecuada, Dirección definirá **recreación original** mediante prompt con composición, momento, perspectiva, continuidad, iluminación, prohibiciones antiespoiler, formato y función. El artista la genera bajo encargo del propietario; el desarrollador posteriormente registra e integra los activos aptos en GitHub.
 6. No usar imágenes IA como «fotografía histórica», «retrato real» o prueba de la época.
 7. Optimizar formatos, dimensiones, niveles de detalle y empaquetado; definir texto alternativo, colorimetría, espacio para controles y opciones de movimiento reducido.
 8. Marcar fuente y estado de derechos por **cada archivo y derivado**; material de uso privado no autorizado para redistribución no se sube sin más a un Git remoto ni a un instalador público.
-9. Si falta autorización o hay dudas, usar metadatos y placeholders claramente marcados en los contratos, no sustituir sin avisar por una imagen no documentada.
+9. Si falta autorización o hay dudas, usar metadatos y fallback **neutro y seguro** en el **vertical técnico**, sin simular aprobación de imágenes; las preguntas sin imagen específica y capítulos de narración visualmente insuficientes **no cuentan como terminados en producto**, aunque compile la aplicación.
 
 ### 4.8 Piloto editorial obligatorio
 
@@ -311,7 +317,9 @@ Publicar **una estimación razonada con intervalo y supuestos**, no prometer 10.
 
 ## 5. PLIEGO DEL EQUIPO DE DESARROLLO
 
-### 5.1 Roles y responsabilidad profesional
+### 5.1 Capacidades técnicas a ejecutar por el desarrollador único
+
+Las funciones profesionales que siguen son **competencias del único desarrollador**, con decisiones UX, producto, arte y aceptación asumidas por Dirección; no se convocan como miembros de un segundo equipo técnico. El director artístico es una tercera intervención solo para nuevas imágenes (DC-23).
 
 **Director técnico / arquitecto principal**
 - Analiza requisitos, compara alternativas de stack, propone decisión documentada y define límites entre sistema, contenidos y perfiles.
@@ -428,9 +436,9 @@ Crear servicios explícitos para selección adaptativa, cita exacta, búsqueda, 
 
 **Accesibilidad y preferencias:** tamaño del texto, contraste legible, subtítulos, reducción de movimiento, controles con teclado, foco visible, alt en imágenes, opción de omitir animaciones/intros, equilibrio entre estética y comodidad. Guardar por perfil.
 
-## 6. CONTRATO DE INTEGRACIÓN ENTRE EQUIPOS (OBLIGATORIO)
+## 6. CONTRATO ENTRE DIRECCIÓN INTEGRAL Y DESARROLLADOR (OBLIGATORIO)
 
-El factor crítico del proyecto es que **los contenidos y el desarrollo se integren sin interpretación humana informal ni código ad hoc**. Antes de producir lotes, acordar y versionar un **CONTRATO_EDITORIAL_TECNICO.md** con esquemas revisables por ambos responsables, ejemplos válidos y casos negativos.
+El factor crítico es integrar **decisiones editoriales y producto fijadas por Dirección integral** con **implementación del desarrollador único**, sin contenido hardcodeado ni supuestas firmas de R01–R16. Mantener versionado `CONTRATO_EDITORIAL_TECNICO.md`, esquemas, ejemplos, tests y retrocompatibilidad; Dirección revisa editorial/funcionalmente y el desarrollador demuestra técnicamente el comportamiento. **GitHub es la única fuente de verdad de origen y destino de todo cambio**.
 
 ### 6.1 Identificadores, enlaces y semántica
 
@@ -518,19 +526,16 @@ No imponer ni crear carpetas ficticias antes de inspeccionar Git. Una estructura
 
 Si el repositorio existe con otro diseño, proponer adaptación y **mantener el historial y los archivos del usuario**. Para paquetes audiovisuales grandes, decidir Git LFS, releases privados o almacenamiento de medios trazable, sin romper la instalación offline ni enviar al Git remoto materiales que no se puedan alojar legalmente.
 
-### 6.5 Gobernanza Git y trabajo concurrente
+### 6.5 Gobernanza Git y flujo de entrega entre las dos entidades
 
-1. Verificar el repositorio exacto **JavierRB35/El_Quijote_App**. En la inspección inicial estaba privado, vacío y con **main** como rama predeterminada. Comprobar de nuevo antes de actuar; si sigue vacío, proponer estructura inicial y crearla únicamente tras autorización.
-2. Trabajar en **ramas de trabajo independientes** por equipo y tarea; no editar ambos simultáneamente la misma ruta sin acuerdo.
-3. **Los esquemas son propiedad conjunta**: cambios mediante propuesta/ADR y revisión obligatoria de responsables editorial y técnico.
-4. Contenido edita el catálogo y metadatos; desarrollo edita la aplicación, pipeline, validadores y estructuras; directrices artísticas, estándares y manifest se revisan conjuntamente.
-5. Definir CODEOWNERS o equivalente si el repositorio lo permite; PR pequeños con checklist, pruebas y referencias de decisiones; nunca forzar pushes ni fusionar a main por defecto.
-6. Un PR editorial debe indicar cantidades añadidas/descartadas, fuente, validación, activos, licencias, enlaces, spoilers y evidencia de revisión.
-7. Un PR técnico debe indicar comportamiento afectado, compatibilidad de esquemas, pruebas unitarias/de integración/UI/offline, migraciones, seguridad y rendimiento.
-8. Cuando cambie el contrato, establecer versión, calendario de adaptación y pruebas de consumidor; ningún equipo debe asumir que el otro ha actualizado silenciosamente.
-9. Resolver colisiones de IDs, duplicados y cambios de pasajes mediante migraciones/alias y revisión, no mediante renumeración masiva.
-10. **No dar una tarea por acabada sin integración real:** validar un paquete representativo de contenidos mediante el consumidor técnico y demostrar en UI sus referencias, preguntas e imágenes.
-11. Repositorio remoto público/privado y licencias de activos deben comprobarse antes de cualquier publicación. No subir secretos ni el EPUB privado por defecto.
+1. **Única fuente de verdad y destino del desarrollo: https://github.com/JavierRB35/El_Quijote_App**, rama `main` remota. Cada encargo al desarrollador debe exigir la consulta de SHA actual, inspección de dependencias y sincronización local antes de editar.
+2. El desarrollador único trabaja en **rama `feature/*`** por objetivo concreto, crea commits y abre PR en **el mismo repositorio GitHub**. Nada terminado solo localmente. Sin force-push, sin sobreescribir trabajo ajeno ni fusiones automáticas.
+3. **Dirección integral** define y revisa cambios de contenido, contratos, UX, QA y producto; el desarrollador implementa y prueba. No pedir visados a equipos CONTENIDOS/DESARROLLO/R01–R16 inexistentes. Guardar enlaces y evidencias que justifiquen decisiones.
+4. **Director artístico**, tercera entidad puntual, interviene **solo en creación/modificación de imágenes** mediante prompt exacto de Dirección canalizado por el propietario. El desarrollador integra los archivos aprobados y sus metadatos/hash/ID al catálogo.
+5. Una PR debe indicar alcance, rutas, versiones, compatibilidad, imágenes propias por pregunta, secuencia de escenas y cobertura, derechos, riesgos de spoiler, pruebas realmente ejecutadas, SHA base y head. CI verde **no sustituye** prueba de UI o instalación.
+6. Los IDs estables se preservan; cambios semánticos de preguntas/progreso requieren migración o tratamiento conservador. Los contratos, validadores, consumidor y registros se versionan juntos cuando una modificación lo exige.
+7. **Entregas por capítulos:** etapa 1 = vertical técnico jugable aunque use fondos neutros; etapa 2 = capítulo visualmente aprobado, con imagen propia por pregunta, narración suficientemente ilustrada, licencia y QA. Nunca confundir ambas.
+8. Dirección decide aceptación/fusión según reglas Git del repositorio. Una PR abierta o una auditoría documental **no equivale** a software funcionando ni a `main`. No habilita Fase 2, publicación o redistribución.
 
 ## 7. CRITERIOS DE CALIDAD Y PRUEBAS
 
@@ -576,7 +581,7 @@ El QA debe inventar desde cero perfiles de jugadores de prueba: adolescente sin 
 
 ## 8. PLAN POR FASES Y ENTREGABLES OBLIGATORIOS
 
-### FASE 0 — Auditoría y diseño (situación autorizada actualmente)
+### FASE 0 — Auditoría y diseño (hito histórico completado; FASE 1 autorizada por DC-18)
 
 **Responsable de coordinación** publica:
 
@@ -596,10 +601,10 @@ El QA debe inventar desde cero perfiles de jugadores de prueba: adolescente sin 
 
 ### FASE 1 — Piloto coordinado (solo tras autorización)
 
-- Contenidos: seis capítulos, preguntas y opciones rigurosas, imágenes autorizadas o recreaciones justificadas, citas, descubrimientos, atlas/museo vinculados, licencias y medios.
-- Desarrollo: el mínimo sistema vertical necesario para probar una experiencia representativa end-to-end; no construir módulos aislados imposibles de integrar.
-- QA conjunto valida datos, visuales, narración, pregunta seleccionada, respuesta/explicación, texto, mapas, museo, cuaderno, backup y offline.
-- El equipo presenta resultados, problemas, tiempo real por pregunta/escena, tamaño y memoria; **replanifica el alcance** con datos antes de escalar.
+- **Dirección integral:** decide los seis capítulos, contenido, preguntas sin duplicados, imágenes propias por pregunta, escenas suficientes, fuentes, derechos y criterios de aceptación.
+- **Desarrollador único:** implementa el vertical end-to-end, datos/contratos/validadores, interfaz y pruebas, con cada cambio originado y devuelto a GitHub vía PR.
+- **Director artístico puntual:** recibe, por conducto del propietario, los prompts exactos para imágenes necesarias tras revisar el banco existente.
+- Dirección verifica pruebas, narrativa, imágenes, accesibilidad, audio opcional, guardado y offline; el desarrollador registra evidencia medible y replanifica sin abrir rondas entre antiguos roles.
 
 ### FASE 2 — Producción completa (solo tras aceptación del piloto)
 
@@ -615,33 +620,19 @@ El QA debe inventar desde cero perfiles de jugadores de prueba: adolescente sin 
 - Instalador Windows 11 x64 completamente autónomo y documentación de instalación, respaldo, restauración, edición y actualización.
 - Entrega con lista de decisiones, limitaciones y evidencia de pruebas. Fusión a main/lanzamiento solo según la autorización y flujo Git acordado.
 
-## 9. COORDINACIÓN Y FORMATO DE INFORMES
+## 9. FLUJO OPERATIVO Y EVIDENCIA DE ENTREGA
 
-Cada agente debe comenzar por:
+Desde **DC-23–DC-27 (2026-11-08)** solo hay **Dirección integral (ChatGPT)** y **desarrollador único** como entidades operativas permanentes; el **director artístico** es tercero puntual para imágenes, a través del propietario. Las antiguas descripciones profesionales de §§4–5 son catálogo de competencias, no responsables externos ni agentes a convocar.
 
-1. Indicar su **modo y roles profesionales**.
-2. Leer esta especificación y el **repositorio real**, si se le ha dado acceso; revisar AGENTS.md y documentación vigente sin confundir instrucciones técnicas con decisiones editoriales del propietario.
-3. Publicar un resumen conciso de **lo que ya está cerrado**, **lo que es candidato** y **lo que requiere verificación real**.
-4. Inspeccionar trabajo existente y preservar cambios ajenos.
-5. Señalar explícitamente los contratos que espera del otro equipo y sus entregas propias.
-6. Elaborar plan por hitos con responsables, dependencias, métricas y evidencia objetiva.
-7. No suponer acceso a libros, imágenes, URLs, permisos, herramientas ni Git que no se haya comprobado.
+**Cada prompt al desarrollador debe decir explícitamente:**
 
-Cada entrega debe incluir:
+> La **única fuente de verdad de donde procede la información y a la que deberá volver el desarrollo** es el repositorio GitHub `https://github.com/JavierRB35/El_Quijote_App`, `main` remoto. Verifica el SHA, sincroniza, implementa en rama, prueba, publica la PR en este mismo repositorio y reporta el SHA final.
 
-- Qué se completó, por quién (rol), dónde está y bajo qué versión.
-- Qué fuentes se consultaron y cuáles requieren verificación.
-- Qué contratos/esquemas cambian y qué otro equipo debe aprobar.
-- Resultado de validadores, pruebas y revisión humana realmente efectuada.
-- Dependencias, riesgos, derechos pendientes y propuestas de resolución.
-- Qué no se hizo o no se pudo comprobar.
-- Solicitud puntual de aprobación **solo** si es imprescindible para la siguiente fase.
+Cada entrega técnica debe incluir cambios concretos, archivos/IDs, resultado ejecutable, pruebas reales y sus limitaciones, cobertura visual/antispoiler, derechos, SHA de base y HEAD/PR. Dirección acepta o rechaza y resuelve decisiones multidisciplinares sin dictámenes repetidos.
 
-**Criterio de excelencia:** al recibir un paquete de contenido aprobado, el equipo de desarrollo puede integrarlo siguiendo esquemas y manifiestos, sin preguntas improvisadas ni reescritura manual; al cambiar la interfaz o el almacenamiento, el equipo editorial puede seguir produciendo sin conocer componentes internos. Ambos equipos comparten fuentes, IDs, versiones, reglas de calidad y pruebas automáticas.
+Cada encargo de **imagen nueva** corresponde a un **prompt visual exacto** redactado por Dirección tras inventario de escenas, primeros planos y acuarelas. El propietario lo transmite al director artístico; el desarrollador solo integra los resultados que superan revisión.
 
-**Instrucción final para ambos:** no te limites a contestar con generalidades. Redacta especificaciones ejecutables, decisiones justificadas, contratos comprobables, ejemplos de registros, inventarios y criterios de aceptación. Señala honestamente lo que no puede saberse antes de inspeccionar el EPUB, validar las licencias, auditar seis capítulos o probar el stack. **Nunca sacrifiques fidelidad a Cervantes, claridad para el jugador ni estabilidad de la integración por una cifra llamativa o una entrega apresurada.**
-
----
+**Criterio final de calidad:** capítulo narrativo con imágenes cinematográficas suficientes, **una imagen propia por pregunta**, fidelidad literaria, TS-001, accesibilidad, derechos y continuidad. El neutro permite avanzar el prototipo, pero no sustituye el acabado artístico exigido por el propietario. Ninguna decisión técnica implica autorización de distribución o Fase 2.
 
 ## ANEXO A — POLÍTICA DE TRATAMIENTO DE INCERTIDUMBRES
 

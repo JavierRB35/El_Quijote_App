@@ -7,15 +7,20 @@ Alineación tolerante por palabras (Damerau-Levenshtein 1, o 2 en palabras
 largas) para absorber las VARIANTES entre ediciones (primer/primero,
 Pentapolín/Pentapolen, distraída/destraida, agora/ahora...) y extraer el
 fragmento VERBATIM de PG con offsets reales en el fichero almacenado.
-Los saltos de línea duros del txt de PG (líneas ~75 col., artefacto del
-formato plano) se colapsan en espacios: ni pasajes ni evidencias deben
-mostrarlos en la app (normalización por `plano()`, 2026-11-08).
+Los saltos de línea del txt de PG se distinguen por estructura literaria
+(`estructura_texto.py`): los cortes mecánicos de maquetación (~75 col.) se
+unen; párrafos (\n\n), parlamentos (línea que empieza por «—») y versos
+(bloques de líneas cortas) se PRESERVAN. Las palabras extraídas nunca se
+alteran (2026-11-08, corrección de Dirección sobre la primera versión).
 Crea la Edition DQ.ED.0003 y rehace passages + evidencias.
 El lector sigue mostrando el EPUB Tusell (DQ.ED.0001); la correspondencia
 queda en el campo anchor de cada pasaje.
 Uso: python -I migrar_bateria_a_gutenberg.py <raiz_repo>
 """
 import sys, os, re, json, hashlib, unicodedata
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from estructura_texto import estructurar_segmento  # noqa: E402
 
 REPO = sys.argv[1] if len(sys.argv) > 1 else "."
 PKG = os.path.join(REPO, "content", "piloto")
@@ -107,14 +112,18 @@ def localizar_fuzzy(quote):
         return j, i, variantes
     return None
 
-def plano(s):
-    """Colapsa los saltos duros del txt de PG (líneas cortadas ~75 columnas)
-    en espacios: los \n del fichero fuente son artefacto de formato plano,
-    no del texto de Cervantes, y no deben llegar al texto mostrado en la app."""
-    return re.sub(r"\s+", " ", s).strip()
-
-def recortar(s):
-    return re.sub(r"^[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ«(—]+|[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ»).!\?]+$", "", plano(s))
+def recortar_estructurado(inicio, fin):
+    """Fragmento verbatim [inicio, fin) del fichero con estructura literaria:
+    los cortes mecánicos de maquetación (~75 col.) se unen; párrafos (\n\n),
+    parlamentos (línea que empieza por «—») y versos (bloques de líneas
+    cortas) se conservan (estructura_texto.restaurar_estructura). Las
+    palabras son EXACTAMENTE las del fichero fuente; solo se recortan los
+    bordes no textuales del fragmento localizado."""
+    return re.sub(
+        r"^[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ«(—]+|[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ»).!\?]+$",
+        "",
+        estructurar_segmento(raw, inicio, fin),
+    ).strip()
 
 manifest = json.load(open(os.path.join(PKG, "package.json"), encoding="utf-8"))
 files = manifest["files"]
@@ -142,7 +151,7 @@ def migrar_pasaje(rel):
     if not loc:
         return None
     i0, i1, variantes = loc
-    nuevo = recortar(raw[toks[i0][0]:toks[i1 - 1][1]])
+    nuevo = recortar_estructurado(toks[i0][0], toks[i1 - 1][1])
     p["text_original"] = nuevo
     p.pop("edition_id", None)   # el esquema canónico no lo admite; lo porta el anchor
     p["anchor"] = "PG 2000 (DQ.SRC.0005) offset %d-%d; ed. lector: EPUB Tusell (DQ.ED.0001) — %s" % (
@@ -173,7 +182,7 @@ for rel in files["questions"]:
         loc = localizar_fuzzy(e["quote"])
         if loc:
             i0, i1, _ = loc
-            e["quote"] = recortar(raw[toks[i0][0]:toks[i1 - 1][1]])
+            e["quote"] = recortar_estructurado(toks[i0][0], toks[i1 - 1][1])
             cambio = True
             evid_migradas += 1
     if cambio:

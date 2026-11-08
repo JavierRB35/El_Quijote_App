@@ -1,6 +1,6 @@
-# COMPONENTES NARRATIVOS — Especificación de UX y contrato de consumidor (R08/R10)
+# COMPONENTES NARRATIVOS — Especificación de UX y contrato del consumidor (Dirección integral / desarrollador)
 
-**Estado:** v1.0 — entregable de documentación (R08: especificación de componentes y estados; R10: contrato de consumidor y tabla de eventos/estados). **Sin implementación en este encargo** (R10: «No implementar en este encargo»).
+**Estado:** especificación histórica v1.0, actualizada en decisiones de producto **DC-23–DC-27 (2026-11-08)**; **no es evidencia de implementación**. Dirección integral define y revisa; el desarrollador único implementa y prueba. Los anteriores informes R08/R10 son antecedentes, no equipos operativos.
 **Base normativa:** DC-22 (TS-001 — texto hablado siempre escrito y visible), decisión de coordinación del propietario (texto = elemento principal del contrato; audio = recurso opcional asociado), `schemas/content/beat.schema.json` (contrato v1.1.0), ADR-0005.
 **Fecha:** 2026-11-06.
 
@@ -39,8 +39,8 @@ Alcance de «texto siempre visible»: el **texto íntegro de la intervención ac
 ### 2.2 Carga de recursos (P1-4)
 
 1. El beat entra en `TEXTO_VISIBLE` cuando sus **datos** (texto, hablante) están listos: las imágenes se cargan **en paralelo** y nunca gatean el texto.
-2. Fallback visual en cascada: perspectivas del beat → perspectivas de la escena → fotograma del beat anterior → fondo neutro de la dirección artística. Si nada carga, se muestra nota discreta de error y **la narración continúa íntegra por texto**.
-3. La obligatoriedad editorial de `visual_asset_ids ≥ 1` se MANTIENE en el dato (calidad), **pendiente de doble firma** (dictamen H5 punto 4); la ejecución, en cambio, no depende de ella.
+2. Fallback visual **sujeto a elegibilidad temporal**: perspectivas aprobadas del beat → de la escena → fotograma anterior **solo si no ha caducado ni anticipa nada** → fondo neutro seguro. El neutro deliberado no es un error; el fallo de carga real puede notificarse discretamente. **La narración continúa íntegra por texto**. Esto sirve al vertical técnico, no demuestra suficiencia visual final.
+3. **Diferenciar versión ejecutada y decisión de producto:** el esquema actualmente integrado exige `visual_asset_ids.minItems:1` y `scene.media_ids.minItems:1`; el cambio **a arrays vacíos permitidos y obligatorios** pertenece al encargo técnico de v1.2.0 y **no se considera implementado hasta fusionar y probar la PR**. La revisión es de Dirección integral + desarrollador único, **no doble firma de roles antiguos**. `[]` de beat significa no solicitar nuevo plano; cambio a escena neutra reinicia imagen. La obligatoriedad de una imagen específica por pregunta final (DC-24) y la suficiencia visual narrativa (DC-25) son **criterios de producto distintos**, no cardinalidad por beat.
 
 ### 2.3 Política de autoavance (P0-2 — cinematografía DC-21)
 
@@ -92,4 +92,4 @@ Regla verificable en el validador (activa): **ningún inciso del narrador puede 
 | T10 | Política de autoavance (P0-2): el autoavance respeta `max(voz, lectura_mínima)`; fin de voz solo no oculta texto; pausa congela voz y temporizador | Automática (mock) + manual | Con reproductor (pendiente) |
 | T11 | Texto primero: con imágenes ausentes, lentas o erróneas, el texto aparece y la narración continúa (P1-4) | Automática (mock) + manual | Con reproductor (pendiente) |
 
-T5–T9 (y T10–T11 funcionales) **siguen pendientes de ejecución real**: alimentarán la batería de usabilidad del §7.4 (perfiles de caja negra, incluidas personas mayores) y las pruebas automáticas de componente cuando el reproductor entre en ejecución (R10/R12). Mantienen la separación exigida por el dictamen H5 respecto de las pruebas de contrato T1–T4b, ya activas en CI.
+T5–T9 (y T10–T11 funcionales) **siguen pendientes de ejecución real hasta nueva evidencia**: alimentarán pruebas de usabilidad y componentes del desarrollador único, con aceptación de Dirección. Las pruebas de contrato T1–T4b no constituyen prueba de visualización real. Añadir QA de imagen específica por pregunta, cobertura cinematográfica por capítulo y galería artística de acuarelas con fuente y derechos.

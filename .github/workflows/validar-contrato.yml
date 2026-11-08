@@ -16,6 +16,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Historia completa: el test de estructura literaria compara el
+          # estado corregido con el estado plano previo de esta PR (git show).
+          fetch-depth: 0
 
       - name: Python
         uses: actions/setup-python@v5

@@ -172,12 +172,21 @@ def leer_json(relativa):
 
 
 def texto_previo(relativa):
-    """Estado del fichero en el commit previo de esta PR (texto plano)."""
+    """Estado del fichero en el commit previo de esta PR (texto plano).
+
+    Requiere historia completa (checkout fetch-depth: 0 en CI). Si el commit
+    no está disponible, devuelve None y el globo solo-estructura se omite
+    con AVISO: el cotejo contra el fuente (paso propio de CI) sigue
+    garantizando las palabras."""
     bruto = subprocess.run(
         ["git", "show", f"49b5dbe:content/piloto/{relativa.replace(os.sep, '/')}"],
         capture_output=True, text=True, cwd=REPO,
     ).stdout
-    return json.loads(bruto) if bruto.strip() else None
+    if not bruto.strip():
+        print("AVISO: estado plano previo no disponible (checkout parcial); "
+              "se omite el globo solo-estructura para " + relativa)
+        return None
+    return json.loads(bruto)
 
 
 def cargar(texto, relativa):
@@ -233,6 +242,8 @@ for dir_nombre in ("passages", "questions"):
         relativa = os.path.join(dir_nombre, nombre)
         actual = leer_json(relativa)
         previo = texto_previo(relativa)
+        if previo is None:
+            continue
         if dir_nombre == "passages":
             t_actual = actual["text_original"]
             t_previo = normalizado(previo["text_original"])

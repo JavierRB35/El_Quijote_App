@@ -1090,3 +1090,10 @@ html[data-ajuste-movimiento='reducido'] .descubrir,
 html[data-ajuste-movimiento='reducido'] .progreso-relleno {
   transition: none;
 }
+
+/* Museo: entrada propia en el menú (módulo cultural, no compite con los
+   modos jugables). Sus estilos de galería viven en src/museo/museo.css. */
+.tarjeta-modo.museo-entrada {
+  width: 100%;
+  margin-top: 1rem;
+}

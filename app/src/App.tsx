@@ -1,16 +1,18 @@
 // EL QUIJOTE — sistema vertical FASE 1. App es la puerta de entrada: carga el
 // catálogo y ofrece la elección entre Modo Historia (narración continua del
-// episodio, nuevo en P0) y Modo Aventura (sistema de preguntas existente).
-// La implementación de cada modo vive en su módulo: src/historia y
-// src/aventura (encargo P0 §8: separar componentes, no engordar App).
+// episodio, nuevo en P0), Modo Aventura (sistema de preguntas existente) y
+// Museo (galería artística, abierto desde el inicio). La implementación de
+// cada modo vive en su módulo: src/historia, src/aventura y src/museo
+// (encargo P0 §8: separar componentes, no engordar App).
 import { useEffect, useState } from 'react';
 import type { Catalogo } from './contrato';
 import { cargarCatalogo } from './entorno';
 import ReproductorHistoria from './historia/ReproductorHistoria';
 import ModoAventura from './aventura/ModoAventura';
+import Museo from './museo/Museo';
 import './App.css';
 
-type Modo = 'menu' | 'historia' | 'aventura';
+type Modo = 'menu' | 'historia' | 'aventura' | 'museo';
 
 export default function App() {
   const [catalogo, setCatalogo] = useState<Catalogo | null>(null);
@@ -31,6 +33,17 @@ export default function App() {
   }
   if (modo === 'aventura') {
     return <ModoAventura catalogo={catalogo} onSalir={() => setModo('menu')} />;
+  }
+  if (modo === 'museo') {
+    // Museo abierto desde el inicio (DC-09): no depende del progreso; usa el
+    // catálogo del piloto para las fichas DQ.MUS y el manifiesto para las 376.
+    return (
+      <Museo
+        catalogo={catalogo}
+        onSalir={() => setModo('menu')}
+        onNavegar={(destino) => setModo(destino)}
+      />
+    );
   }
 
   return (
@@ -61,6 +74,14 @@ export default function App() {
             </span>
           </button>
         </div>
+        <button className="tarjeta-modo museo-entrada" onClick={() => setModo('museo')}>
+          <span className="tarjeta-modo-nombre">Museo · Galería artística</span>
+          <span className="tarjeta-modo-detalle">
+            Las acuarelas históricas de la edición Tusell (Luis Tasso, 1905): las 376
+            ilustraciones de la novela, abiertas desde el inicio y sin requisitos de
+            progreso.
+          </span>
+        </button>
         <p className="menu-nota">Historia guarda aparte la lectura; Aventura guarda aparte tus respuestas.</p>
       </section>
     </main>

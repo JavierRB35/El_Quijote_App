@@ -23,7 +23,7 @@ export interface RondaNarrativa {
   correcta: string;
   consecuencia: string;
   explicacion: string;
-  pasajeId: string;
+  pasajeId: string | null; // null cuando la acción no tiene ancla fraccionada validada
   imagenPrevia: ImagenNarrativa;
   imagenConsecuencia: ImagenNarrativa;
   checkpoint?: { id: string; titulo: string; mayor?: boolean };

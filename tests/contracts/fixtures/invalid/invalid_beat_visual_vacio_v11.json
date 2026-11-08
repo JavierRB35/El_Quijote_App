@@ -1,0 +1,20 @@
+{
+  "id": "DQ.BEAT.000043",
+  "contract_version": "1.1.0",
+  "scene_id": "DQ.P1.C01.E01.S01",
+  "order": 1,
+  "kind": "NARRACION",
+  "utterances": [
+    {
+      "utterance_id": "DQ.INT.000043",
+      "speaker": { "tipo": "narrador" },
+      "texto_visible": "TEXTO SINTÉTICO DE PRUEBA (no publicable): narración con visual_asset_ids vacío en 1.1.0.",
+      "text_kind": "CITA_LITERAL",
+      "passage_ids": ["DQ.P1.C01.P0001"]
+    }
+  ],
+  "visual_asset_ids": [],
+  "manual_advance_allowed": true,
+  "replay_allowed": true,
+  "reduced_motion_fallback": true
+}

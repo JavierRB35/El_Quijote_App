@@ -1,0 +1,13 @@
+{
+  "id": "DQ.P1.C08.P0013",
+  "contract_version": "1.2.0",
+  "chapter_id": "DQ.P1.C08",
+  "anchor": "PG 2000 (DQ.SRC.0005) offset 122956-123107 (indexación LF); extracto verbatim",
+  "text_original": "— ¿Qué gigantes? —dijo Sancho Panza.\n\n— Aquellos que allí ves —respondió su amo— de los brazos largos, que los\nsuelen tener algunos de casi dos leguas.",
+  "text_indexable": "qué gigantes dijo sancho panza aquellos que allí ves respondió su amo de los brazos largos que los suelen tener algunos de casi dos leguas",
+  "position": {
+    "start_char": 122956,
+    "end_char": 123107
+  },
+  "sha256": "sha256:2a6d0576f75412d29a12c0a76de046f6bea202f2a8e433bf26d42ca00509dd4c"
+}

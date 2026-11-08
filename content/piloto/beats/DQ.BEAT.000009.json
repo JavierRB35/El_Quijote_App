@@ -1,0 +1,37 @@
+{
+  "id": "DQ.BEAT.000009",
+  "contract_version": "1.2.0",
+  "scene_id": "DQ.P1.C08.E01.S02",
+  "unit_ids": [
+    "DQ.UN.P1.C08.U06"
+  ],
+  "order": 9,
+  "kind": "NARRACION",
+  "avance_automatico": null,
+  "utterances": [
+    {
+      "utterance_id": "DQ.INT.000016",
+      "speaker": {
+        "tipo": "narrador"
+      },
+      "texto_visible": "Y, ayudándole a levantar, tornó a subir sobre Rocinante, que medio\ndespaldado estaba. Y, hablando en la pasada aventura, siguieron el camino\ndel Puerto Lápice,",
+      "text_kind": "CITA_LITERAL",
+      "passage_ids": [
+        "DQ.P1.C08.P0017"
+      ],
+      "localizador": "PG 2000 (DQ.SRC.0005) offset 125546-125705 (indexación LF); líneas 2623-2625 del fichero",
+      "nota_editorial": "FICHA_ESCENA_P1_C08_MOLINOS §3 (propuesta 1.1); texto literal PG #2000."
+    }
+  ],
+  "visual_asset_ids": [],
+  "manual_advance_allowed": true,
+  "replay_allowed": true,
+  "reduced_motion_fallback": true,
+  "entry_condition": "SECUENCIA_CANONICA",
+  "exit_condition": "FIN_DE_BEAT_O_AVANCE_MANUAL",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  }
+}

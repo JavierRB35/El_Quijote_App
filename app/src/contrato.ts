@@ -1,4 +1,4 @@
-// Tipos del contrato editorial-técnico v1.0.0 (subconjunto consumido por el
+// Tipos del contrato editorial-técnico v1.2.0 (subconjunto consumido por el
 // sistema vertical). Espejo de /schemas — la fuente de verdad es el esquema,
 // no este fichero (contrato §11: la UI nunca hardcodea contenido).
 
@@ -111,6 +111,62 @@ export interface Paquete {
   counts: Record<string, number>;
 }
 
+/** v1.1.0 — intervención narrativa (Beat.utterances[]). */
+export interface Hablante {
+  tipo: 'narrador' | 'personaje';
+  person_id?: string;
+  label?: string;
+}
+
+export interface Intervencion {
+  utterance_id: string;
+  speaker: Hablante;
+  texto_visible: string;
+  text_kind: string;
+  passage_ids?: string[];
+  texto_oral?: string;
+  incisos_narrador?: string[];
+  audio_asset_id?: string | null;
+  localizador?: string;
+  nota_editorial?: string;
+}
+
+/** v1.1.0 — beat narrativo. v1.2.0: visual_asset_ids admite []. */
+export interface Beat {
+  id: string;
+  contract_version: string;
+  scene_id: string;
+  unit_ids?: string[];
+  order: number;
+  kind: 'NARRACION' | 'DIALOGO' | 'ACCION' | 'SILENCIO';
+  avance_automatico?: boolean | null;
+  lectura_minima_ms?: number;
+  utterances: Intervencion[];
+  visual_asset_ids: string[];
+  manual_advance_allowed: boolean;
+  replay_allowed: boolean;
+  reduced_motion_fallback: boolean;
+  entry_condition?: string;
+  exit_condition?: string;
+  review?: { state: string; reviewer_role?: string | null; date?: string | null };
+}
+
+/** v1.2.0 — escena; media_ids admite [] (escena neutra, fondo editorial). */
+export interface Escena {
+  id: string;
+  contract_version: string;
+  episode_id: string;
+  phase: string;
+  media_ids: string[];
+  layers?: { media_id: string; depth: string; parallax?: number }[];
+  hotspots?: unknown[];
+  subtitles_ref?: string;
+  audio_ref?: string;
+  entry_transition?: string;
+  exit_transition?: string;
+  accessibility: { reduced_motion_fallback: string; alt: string };
+}
+
 /** Accesores tipados sobre el paquete cargado por el backend. */
 export class Catalogo {
   constructor(private readonly paquete: Paquete) {}
@@ -161,5 +217,19 @@ export class Catalogo {
 
   pasaje(id: string): Passage | undefined {
     return this.categoria<Passage>('passages')[id];
+  }
+
+  /** v1.2.0 — escenas de un episodio, en orden canónico por id (S01, S02…). */
+  escenasDeEpisodio(episodeId: string): Escena[] {
+    return Object.values(this.categoria<Escena>('scenes'))
+      .filter((e) => e.episode_id === episodeId)
+      .sort((a, b) => a.id.localeCompare(b.id));
+  }
+
+  /** v1.1.0 — beats de una escena, ordenados por su campo `order`. */
+  beatsDeEscena(sceneId: string): Beat[] {
+    return Object.values(this.categoria<Beat>('beats'))
+      .filter((b) => b.scene_id === sceneId)
+      .sort((a, b) => a.order - b.order);
   }
 }

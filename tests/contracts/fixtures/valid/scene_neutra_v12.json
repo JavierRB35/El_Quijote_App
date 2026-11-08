@@ -1,0 +1,13 @@
+{
+  "id": "DQ.P1.C01.E01.S01",
+  "contract_version": "1.2.0",
+  "episode_id": "DQ.P1.C01.E01",
+  "phase": "before",
+  "media_ids": [],
+  "entry_transition": "fade",
+  "exit_transition": "fade",
+  "accessibility": {
+    "reduced_motion_fallback": "imagen_estatica",
+    "alt": "Escena neutra sintética de prueba (v1.2.0): fondo editorial sin recursos visuales."
+  }
+}

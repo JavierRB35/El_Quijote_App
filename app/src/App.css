@@ -458,3 +458,328 @@ body {
   padding: 0.3rem 0.6rem;
   pointer-events: none;
 }
+
+/* ============================================================================
+   Modo Historia (P0): reproductor de narración continua con fondo neutro
+   editorial (v1.2.0: escena con media_ids: [] — decisión de diseño, no error
+   de carga). Texto íntegro como elemento principal (DC-22/TS-001); controles
+   siempre operables (DC-21); movimiento reducido respetado.
+   ========================================================================== */
+
+/* ---------- menú de modos ---------- */
+
+.menu {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.menu-fondo {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(90% 60% at 50% 8%, rgba(201, 151, 63, 0.16), transparent 60%),
+    radial-gradient(120% 80% at 50% 110%, rgba(138, 164, 107, 0.1), transparent 55%),
+    var(--noche);
+}
+
+.menu-tarjeta {
+  position: relative;
+  width: min(56rem, 92vw);
+  background: var(--panel);
+  border: 1px solid var(--panel-borde);
+  border-top: 2px solid var(--ambar);
+  border-radius: 6px;
+  padding: 2.4rem 2.6rem;
+  backdrop-filter: blur(12px) saturate(0.9);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
+}
+
+.menu-tarjeta h1 {
+  margin: 0.2rem 0 0.6rem;
+  font-size: 2.3rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--lino);
+}
+
+.menu-entradilla {
+  margin: 0 0 1.6rem;
+  color: var(--lino-apagado);
+  line-height: 1.55;
+  max-width: 44rem;
+}
+
+.menu-modos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.tarjeta-modo {
+  font: inherit;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.3rem 1.4rem;
+  background: rgba(243, 234, 214, 0.04);
+  border: 1px solid rgba(243, 234, 214, 0.16);
+  border-left: 2px solid transparent;
+  border-radius: 4px;
+  color: var(--lino);
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.tarjeta-modo:hover {
+  background: rgba(201, 151, 63, 0.1);
+  border-color: rgba(201, 151, 63, 0.5);
+  border-left-color: var(--ambar);
+}
+
+.tarjeta-modo:focus-visible {
+  outline: 2px solid var(--ambar-claro);
+  outline-offset: 2px;
+}
+
+.tarjeta-modo-nombre {
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  color: var(--ambar-claro);
+}
+
+.tarjeta-modo-detalle {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--lino-apagado);
+}
+
+.menu-nota {
+  margin: 1.4rem 0 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: rgba(243, 234, 214, 0.5);
+}
+
+@media (max-width: 900px) {
+  .menu-modos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- reproductor de historia ---------- */
+
+.historia {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.historia-estado {
+  margin: auto;
+  font-size: 0.85rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--lino-apagado);
+}
+
+/* Fondo neutro editorial: superficie tipográfica en la paleta del proyecto
+   (noche con brasa ámbar). No es un estado de error ni de carga. */
+.historia-fondo {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(110% 70% at 50% 0%, rgba(201, 151, 63, 0.14), transparent 55%),
+    radial-gradient(140% 90% at 50% 115%, rgba(44, 32, 18, 0.9), transparent 60%),
+    linear-gradient(180deg, #171008 0%, var(--noche) 65%);
+}
+
+.historia-filete {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: min(38rem, 70vw);
+  height: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(201, 151, 63, 0.55), transparent);
+}
+
+/* Panel de lectura: texto íntegro, visible desde el primer instante. */
+.lectura {
+  position: relative;
+  margin: auto;
+  width: min(42rem, 88vw);
+  max-height: min(56vh, 40rem);
+  overflow-y: auto;
+  padding: 1.6rem 2rem 1.4rem;
+  background: var(--panel);
+  border: 1px solid var(--panel-borde);
+  border-top: 2px solid var(--ambar);
+  border-radius: 6px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(201, 151, 63, 0.4) transparent;
+}
+
+.hablante {
+  margin: 0 0 0.15rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.hablante-narrador {
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  color: var(--lino-apagado);
+}
+
+.hablante-personaje {
+  color: var(--ambar-claro);
+}
+
+.beat-info {
+  margin: 0 0 1rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(243, 234, 214, 0.45);
+}
+
+.texto {
+  margin: 0;
+  font-size: 1.22rem;
+  line-height: 1.75;
+  color: var(--lino);
+  white-space: pre-line;
+  animation: aparecer 0.5s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .texto {
+    animation: none;
+  }
+}
+
+.escena-alt {
+  margin: 1.1rem 0 0;
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: rgba(243, 234, 214, 0.55);
+}
+
+/* Rótulo de presentación neutra: decisión editorial, no fallo. */
+.rotulo-neutro {
+  color: var(--lino-apagado);
+  border-color: rgba(243, 234, 214, 0.4);
+  background: rgba(6, 5, 4, 0.45);
+}
+
+/* ---------- cierre del episodio ---------- */
+
+.cierre {
+  position: relative;
+  width: min(42rem, 88vw);
+  margin: 0 auto 1rem;
+  padding: 1.1rem 1.5rem;
+  text-align: center;
+  background: rgba(6, 5, 4, 0.55);
+  border: 1px solid var(--panel-borde);
+  border-radius: 6px;
+}
+
+.cierre-titulo {
+  margin: 0 0 0.3rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--ambar-claro);
+}
+
+.cierre-texto {
+  margin: 0 auto 0.9rem;
+  max-width: 34rem;
+  line-height: 1.55;
+  color: var(--lino-apagado);
+}
+
+/* ---------- controles del reproductor ---------- */
+
+.controles {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.9rem 1rem 1.2rem;
+}
+
+.control {
+  font: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--lino);
+  padding: 0.55rem 1.1rem;
+  background: rgba(243, 234, 214, 0.06);
+  border: 1px solid rgba(243, 234, 214, 0.22);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.control:hover:not(:disabled) {
+  background: rgba(201, 151, 63, 0.14);
+  border-color: rgba(201, 151, 63, 0.55);
+}
+
+.control:focus-visible {
+  outline: 2px solid var(--ambar-claro);
+  outline-offset: 2px;
+}
+
+.control:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.control-primario {
+  color: var(--ambar-claro);
+  border-color: var(--ambar);
+  background: linear-gradient(180deg, rgba(201, 151, 63, 0.28), rgba(201, 151, 63, 0.12));
+}
+
+.control-primario:hover:not(:disabled) {
+  background: linear-gradient(180deg, rgba(201, 151, 63, 0.42), rgba(201, 151, 63, 0.2));
+}
+
+.control-estado {
+  font-size: 0.75rem;
+  color: var(--lino-apagado);
+}
+
+.control-estado[aria-pressed='true'] {
+  color: var(--ambar-claro);
+  border-color: rgba(201, 151, 63, 0.7);
+}
+
+/* Botón de salida del Modo Aventura (cabecera). */
+.secundario.salir {
+  margin-left: auto;
+  pointer-events: auto;
+}
+
+@media (max-width: 1100px) {
+  .lectura {
+    margin-top: 12rem;
+    max-height: 44vh;
+  }
+
+  .controles {
+    padding-bottom: 1rem;
+  }
+}

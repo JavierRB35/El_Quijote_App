@@ -1,0 +1,65 @@
+{
+  "id": "DQ.BEAT.000006",
+  "contract_version": "1.2.0",
+  "scene_id": "DQ.P1.C08.E01.S01",
+  "unit_ids": [
+    "DQ.UN.P1.C08.U04"
+  ],
+  "order": 6,
+  "kind": "ACCION",
+  "avance_automatico": null,
+  "utterances": [
+    {
+      "utterance_id": "DQ.INT.000009",
+      "speaker": {
+        "tipo": "narrador"
+      },
+      "texto_visible": "Levantóse en esto un poco de viento y las grandes aspas comenzaron a\nmoverse, lo cual visto por don Quijote, dijo:",
+      "text_kind": "CITA_LITERAL",
+      "passage_ids": [
+        "DQ.P1.C08.P0004"
+      ],
+      "localizador": "PG 2000 (DQ.SRC.0005) offset 124058-124172 (indexación LF); líneas 2594-2595 del fichero",
+      "nota_editorial": "FICHA_ESCENA_P1_C08_MOLINOS §3 (propuesta 1.1); texto literal PG #2000."
+    },
+    {
+      "utterance_id": "DQ.INT.000010",
+      "speaker": {
+        "tipo": "personaje",
+        "person_id": "DQ.PER.0001",
+        "label": "Don Quijote"
+      },
+      "texto_visible": "— Pues, aunque mováis más brazos que los del gigante Briareo, me lo habéis\nde pagar.",
+      "text_kind": "CITA_LITERAL",
+      "passage_ids": [
+        "DQ.P1.C08.P0004"
+      ],
+      "localizador": "PG 2000 (DQ.SRC.0005) offset 124174-124258 (indexación LF); líneas 2597-2598 del fichero",
+      "nota_editorial": "FICHA_ESCENA_P1_C08_MOLINOS §3 (propuesta 1.1); texto literal PG #2000."
+    },
+    {
+      "utterance_id": "DQ.INT.000011",
+      "speaker": {
+        "tipo": "narrador"
+      },
+      "texto_visible": "Y, en diciendo esto, y encomendándose de todo corazón a su señora Dulcinea,\npidiéndole que en tal trance le socorriese, bien cubierto de su rodela, con\nla lanza en el ristre, arremetió a todo el galope de Rocinante y embistió\ncon el primero molino que estaba delante; y, dándole una lanzada en el\naspa, la volvió el viento con tanta furia que hizo la lanza pedazos,\nllevándose tras sí al caballo y al caballero, que fue rodando muy maltrecho\npor el campo.",
+      "text_kind": "CITA_LITERAL",
+      "passage_ids": [
+        "DQ.P1.C08.P0005"
+      ],
+      "localizador": "PG 2000 (DQ.SRC.0005) offset 124260-124715 (indexación LF); líneas 2600-2606 del fichero",
+      "nota_editorial": "FICHA_ESCENA_P1_C08_MOLINOS §3 (propuesta 1.1); texto literal PG #2000."
+    }
+  ],
+  "visual_asset_ids": [],
+  "manual_advance_allowed": true,
+  "replay_allowed": true,
+  "reduced_motion_fallback": true,
+  "entry_condition": "SECUENCIA_CANONICA",
+  "exit_condition": "FIN_DE_BEAT_O_AVANCE_MANUAL",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  }
+}

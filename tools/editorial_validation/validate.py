@@ -27,7 +27,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 REPO_ROOT = Path(__file__).resolve().parents[2]
 SCHEMA_ROOT = REPO_ROOT / "schemas"
 
-SUPPORTED_CONTRACT_VERSIONS = {"1.0.0", "1.1.0"}
+SUPPORTED_CONTRACT_VERSIONS = {"1.0.0", "1.1.0", "1.2.0"}
 APP_GATE_USES = {"uso_personal_app"}
 REPO_GATE_USES = {"uso_personal_app", "almacenamiento_repo_git"}
 
@@ -171,6 +171,26 @@ def question_semantic_errors(q: dict) -> list[str]:
     return errs
 
 
+def arrays_neutros_errors(entity: dict) -> list[str]:
+    """v1.2.0 (compatibilidad): los arrays de recursos visuales vacíos
+    (scene.media_ids: [], beat.visual_asset_ids: []) solo son válidos en
+    registros contract_version 1.2.0 o superiores; los registros 1.0.0/1.1.0
+    conservan la obligatoriedad de ≥1 recurso (encargo P0 molinos §5)."""
+    errs: list[str] = []
+    try:
+        version = tuple(int(p) for p in str(entity.get("contract_version", "")).split("."))
+    except ValueError:
+        return errs
+    if version >= (1, 2, 0):
+        return errs
+    for campo in ("media_ids", "visual_asset_ids"):
+        if entity.get(campo) == []:
+            errs.append(
+                f"{campo}: [] solo es válido en registros contract_version 1.2.0 o "
+                f"superiores; el registro declara '{entity.get('contract_version')}'")
+    return errs
+
+
 def media_gate_errors(m: dict, gate: str) -> list[str]:
     errs: list[str] = []
     required = REPO_GATE_USES if gate == "repo" else APP_GATE_USES
@@ -270,6 +290,8 @@ def validate_entity(instance: dict, category: str, gate: str = "repo",
         return errors
     if category == "question":
         errors += [{"code": "SEMANTIC_ERROR", "message": m} for m in question_semantic_errors(instance)]
+    if category in ("scene", "beat"):
+        errors += [{"code": "SEMANTIC_ERROR", "message": m} for m in arrays_neutros_errors(instance)]
     if category == "media_asset":
         errors += [{"code": c, "message": m} for c, m in
                    (e.split(": ", 1) for e in media_gate_errors(instance, gate))]
@@ -406,6 +428,8 @@ EXPECTED_INVALID = {
     "invalid_beat_texto_blanco.json": "SCHEMA_ERROR",
     "invalid_beat_incisos_sin_oral.json": "SCHEMA_ERROR",
     "invalid_beat_lectura_cero.json": "SCHEMA_ERROR",
+    "invalid_scene_media_vacio_v10.json": "SCHEMA_ERROR",
+    "invalid_beat_visual_vacio_v11.json": "SCHEMA_ERROR",
 }
 
 EXPECTED_INVALID_PACKAGES = {
@@ -455,7 +479,7 @@ def run_suite(fixtures_dir: Path, gate: str = "repo") -> dict:
     for path in sorted(fixtures_dir.glob("package_*.json")):
         errs = validate_package(path, gate=gate)
         codes = [e["code"] for e in errs]
-        if path.name == "package_valid.json":
+        if path.name == "package_valid.json" or path.name.startswith("package_valid_"):
             passed = not errs
             expect = "válido"
         else:
@@ -471,7 +495,7 @@ def run_suite(fixtures_dir: Path, gate: str = "repo") -> dict:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validador del contrato editorial-técnico v1.0.0")
+    parser = argparse.ArgumentParser(description="Validador del contrato editorial-técnico v1.2.0")
     sub = parser.add_subparsers(dest="cmd", required=True)
     p_file = sub.add_parser("file", help="valida un registro suelto")
     p_file.add_argument("path")

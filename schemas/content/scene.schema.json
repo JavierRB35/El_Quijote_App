@@ -10,7 +10,8 @@
     "contract_version": { "$ref": "_definitions.schema.json#/$defs/ContractVersion" },
     "episode_id": { "$ref": "_definitions.schema.json#/$defs/episodeId" },
     "phase": { "$ref": "_definitions.schema.json#/$defs/ScenePhase" },
-    "media_ids": { "type": "array", "items": { "$ref": "_definitions.schema.json#/$defs/mediaAssetId" }, "minItems": 1, "uniqueItems": true },
+    "media_ids": { "type": "array", "items": { "$ref": "_definitions.schema.json#/$defs/mediaAssetId" }, "uniqueItems": true,
+      "$comment": "Obligatorio (el campo no desaparece), pero en v1.2.0 admite []: escena sin recursos visuales propios (fondo neutro del modo Historia). En registros 1.0.0/1.1.0 la restricción minItems 1 se aplica vía allOf (compatibilidad preservada). El consumidor no trata [] como error de carga: es una escena deliberadamente neutra." },
     "layers": {
       "type": "array",
       "items": {
@@ -53,5 +54,14 @@
         "alt": { "type": "string", "minLength": 1 }
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "contract_version": { "enum": ["1.0.0", "1.1.0"] } }, "required": ["contract_version"] },
+      "then": {
+        "properties": { "media_ids": { "minItems": 1 } },
+        "$comment": "Compatibilidad: los arrays vacíos de media_ids solo están autorizados a partir de v1.2.0 (v1.2.0 §media_ids)."
+      }
+    }
+  ]
 }

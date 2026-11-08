@@ -1,0 +1,11 @@
+{
+  "id": "DQ.P1.C01.E01.S01",
+  "contract_version": "1.0.0",
+  "episode_id": "DQ.P1.C01.E01",
+  "phase": "before",
+  "media_ids": [],
+  "accessibility": {
+    "reduced_motion_fallback": "imagen_estatica",
+    "alt": "Escena sintética inválida: arrays vacíos no autorizados antes de v1.2.0."
+  }
+}

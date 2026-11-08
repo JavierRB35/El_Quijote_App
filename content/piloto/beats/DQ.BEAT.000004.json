@@ -1,0 +1,62 @@
+{
+  "id": "DQ.BEAT.000004",
+  "contract_version": "1.2.0",
+  "scene_id": "DQ.P1.C08.E01.S01",
+  "unit_ids": [
+    "DQ.UN.P1.C08.U02"
+  ],
+  "order": 4,
+  "kind": "DIALOGO",
+  "avance_automatico": null,
+  "utterances": [
+    {
+      "utterance_id": "DQ.INT.000005",
+      "speaker": {
+        "tipo": "personaje",
+        "person_id": "DQ.PER.0002",
+        "label": "Sancho Panza"
+      },
+      "texto_visible": "— Mire vuestra merced —respondió Sancho— que aquellos que allí se parecen no\nson gigantes, sino molinos de viento, y lo que en ellos parecen brazos son\nlas aspas, que, volteadas del viento, hacen andar la piedra del molino.",
+      "text_kind": "CITA_LITERAL",
+      "passage_ids": [
+        "DQ.P1.C08.P0003"
+      ],
+      "localizador": "PG 2000 (DQ.SRC.0005) offset 123109-123332 (indexación LF); líneas 2575-2577 del fichero",
+      "nota_editorial": "FICHA_ESCENA_P1_C08_MOLINOS §3 (propuesta 1.1); texto literal PG #2000.",
+      "incisos_narrador": [
+        "—respondió Sancho—"
+      ],
+      "texto_oral": "Mire vuestra merced que aquellos que allí se parecen no son gigantes, sino molinos de viento, y lo que en ellos parecen brazos son las aspas, que, volteadas del viento, hacen andar la piedra del molino."
+    },
+    {
+      "utterance_id": "DQ.INT.000006",
+      "speaker": {
+        "tipo": "personaje",
+        "person_id": "DQ.PER.0001",
+        "label": "Don Quijote"
+      },
+      "texto_visible": "— Bien parece —respondió don Quijote— que no estás cursado en esto de las\naventuras: ellos son gigantes; y si tienes miedo, quítate de ahí, y ponte\nen oración en el espacio que yo voy a entrar con ellos en fiera y desigual\nbatalla.",
+      "text_kind": "CITA_LITERAL",
+      "passage_ids": [
+        "DQ.P1.C08.P0014"
+      ],
+      "localizador": "PG 2000 (DQ.SRC.0005) offset 123334-123565 (indexación LF); líneas 2579-2582 del fichero",
+      "nota_editorial": "FICHA_ESCENA_P1_C08_MOLINOS §3 (propuesta 1.1); texto literal PG #2000.",
+      "incisos_narrador": [
+        "—respondió don Quijote—"
+      ],
+      "texto_oral": "Bien parece que no estás cursado en esto de las aventuras: ellos son gigantes; y si tienes miedo, quítate de ahí, y ponte en oración en el espacio que yo voy a entrar con ellos en fiera y desigual batalla."
+    }
+  ],
+  "visual_asset_ids": [],
+  "manual_advance_allowed": true,
+  "replay_allowed": true,
+  "reduced_motion_fallback": true,
+  "entry_condition": "SECUENCIA_CANONICA",
+  "exit_condition": "FIN_DE_BEAT_O_AVANCE_MANUAL",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  }
+}

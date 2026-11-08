@@ -1,0 +1,13 @@
+{
+  "id": "DQ.P1.C08.P0017",
+  "contract_version": "1.2.0",
+  "chapter_id": "DQ.P1.C08",
+  "anchor": "PG 2000 (DQ.SRC.0005) offset 125546-125705 (indexación LF); extracto verbatim",
+  "text_original": "Y, ayudándole a levantar, tornó a subir sobre Rocinante, que medio\ndespaldado estaba. Y, hablando en la pasada aventura, siguieron el camino\ndel Puerto Lápice,",
+  "text_indexable": "y ayudándole a levantar tornó a subir sobre rocinante que medio despaldado estaba y hablando en la pasada aventura siguieron el camino del puerto lápice",
+  "position": {
+    "start_char": 125546,
+    "end_char": 125705
+  },
+  "sha256": "sha256:64785ce63d8e89ae64d3424ca3ae322770ecdc4aa3d4746d26f1929b5588b685"
+}

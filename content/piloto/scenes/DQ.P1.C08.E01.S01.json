@@ -1,0 +1,13 @@
+{
+  "id": "DQ.P1.C08.E01.S01",
+  "contract_version": "1.2.0",
+  "episode_id": "DQ.P1.C08.E01",
+  "phase": "before",
+  "media_ids": [],
+  "entry_transition": "fade",
+  "exit_transition": "fade",
+  "accessibility": {
+    "reduced_motion_fallback": "imagen_estatica",
+    "alt": "Fondo neutro editorial, sin imagen: campo de Montiel a media mañana; don Quijote descubre la hilera de molinos, Sancho advierte que son aspas y el caballero embiste contra el primero."
+  }
+}

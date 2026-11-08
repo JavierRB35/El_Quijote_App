@@ -1,0 +1,24 @@
+{
+  "id": "DQ.BEAT.000042",
+  "contract_version": "1.2.0",
+  "scene_id": "DQ.P1.C01.E01.S01",
+  "order": 1,
+  "kind": "NARRACION",
+  "avance_automatico": null,
+  "utterances": [
+    {
+      "utterance_id": "DQ.INT.000042",
+      "speaker": { "tipo": "narrador" },
+      "texto_visible": "TEXTO SINTÉTICO DE PRUEBA (no publicable): narración que se ve siempre, con o sin imagen.",
+      "text_kind": "CITA_LITERAL",
+      "passage_ids": ["DQ.P1.C01.P0001"],
+      "localizador": "Fuente sintética (DQ.SRC.0001) offset 0-60; extracto de prueba"
+    }
+  ],
+  "visual_asset_ids": [],
+  "manual_advance_allowed": true,
+  "replay_allowed": true,
+  "reduced_motion_fallback": true,
+  "entry_condition": "SECUENCIA_CANONICA",
+  "exit_condition": "FIN_DE_BEAT_O_AVANCE_MANUAL"
+}

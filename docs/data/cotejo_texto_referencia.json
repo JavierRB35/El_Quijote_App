@@ -10,10 +10,106 @@
   "Briareo": "presente",
   "Maritornes": "presente"
  },
- "total": 130,
- "coinciden": 130,
+ "total": 135,
+ "coinciden": 135,
  "no_coinciden": 0,
  "detalles": [
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C01.P0001",
+   "contexto": "DQ.P1.C01",
+   "palabras_ok": 104,
+   "palabras_totales": 104,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C01.P0002",
+   "contexto": "DQ.P1.C01",
+   "palabras_ok": 317,
+   "palabras_totales": 317,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C01.P0003",
+   "contexto": "DQ.P1.C01",
+   "palabras_ok": 616,
+   "palabras_totales": 616,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C01.P0004",
+   "contexto": "DQ.P1.C01",
+   "palabras_ok": 254,
+   "palabras_totales": 254,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C01.P0005",
+   "contexto": "DQ.P1.C01",
+   "palabras_ok": 103,
+   "palabras_totales": 205,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C06.P0001",
+   "contexto": "DQ.P1.C06",
+   "palabras_ok": 21,
+   "palabras_totales": 21,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C06.P0002",
+   "contexto": "DQ.P1.C06",
+   "palabras_ok": 16,
+   "palabras_totales": 16,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C06.P0003",
+   "contexto": "DQ.P1.C06",
+   "palabras_ok": 26,
+   "palabras_totales": 26,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C06.P0004",
+   "contexto": "DQ.P1.C06",
+   "palabras_ok": 28,
+   "palabras_totales": 28,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C06.P0005",
+   "contexto": "DQ.P1.C06",
+   "palabras_ok": 30,
+   "palabras_totales": 30,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C06.P0006",
+   "contexto": "DQ.P1.C06",
+   "palabras_ok": 42,
+   "palabras_totales": 42,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C06.P0007",
+   "contexto": "DQ.P1.C06",
+   "palabras_ok": 6,
+   "palabras_totales": 6,
+   "estado": "OK"
+  },
   {
    "tipo": "pasaje",
    "id": "DQ.P1.C08.P0001",
@@ -112,18 +208,42 @@
   },
   {
    "tipo": "pasaje",
-   "id": "DQ.P1.C06.P0001",
-   "contexto": "DQ.P1.C06",
-   "palabras_ok": 21,
-   "palabras_totales": 21,
+   "id": "DQ.P1.C08.P0013",
+   "contexto": "DQ.P1.C08",
+   "palabras_ok": 25,
+   "palabras_totales": 25,
    "estado": "OK"
   },
   {
    "tipo": "pasaje",
-   "id": "DQ.P1.C06.P0002",
-   "contexto": "DQ.P1.C06",
-   "palabras_ok": 16,
-   "palabras_totales": 16,
+   "id": "DQ.P1.C08.P0014",
+   "contexto": "DQ.P1.C08",
+   "palabras_ok": 43,
+   "palabras_totales": 43,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C08.P0015",
+   "contexto": "DQ.P1.C08",
+   "palabras_ok": 74,
+   "palabras_totales": 74,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C08.P0016",
+   "contexto": "DQ.P1.C08",
+   "palabras_ok": 124,
+   "palabras_totales": 124,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C08.P0017",
+   "contexto": "DQ.P1.C08",
+   "palabras_ok": 25,
+   "palabras_totales": 25,
    "estado": "OK"
   },
   {
@@ -140,94 +260,6 @@
    "contexto": "DQ.P1.C11",
    "palabras_ok": 14,
    "palabras_totales": 14,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P1.C18.P0001",
-   "contexto": "DQ.P1.C18",
-   "palabras_ok": 42,
-   "palabras_totales": 42,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P1.C18.P0002",
-   "contexto": "DQ.P1.C18",
-   "palabras_ok": 23,
-   "palabras_totales": 23,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P2.C01.P0001",
-   "contexto": "DQ.P2.C01",
-   "palabras_ok": 23,
-   "palabras_totales": 23,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P2.C74.P0001",
-   "contexto": "DQ.P2.C74",
-   "palabras_ok": 19,
-   "palabras_totales": 19,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P2.C74.P0002",
-   "contexto": "DQ.P2.C74",
-   "palabras_ok": 18,
-   "palabras_totales": 18,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P2.C74.P0003",
-   "contexto": "DQ.P2.C74",
-   "palabras_ok": 26,
-   "palabras_totales": 26,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P1.C06.P0003",
-   "contexto": "DQ.P1.C06",
-   "palabras_ok": 26,
-   "palabras_totales": 26,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P1.C06.P0004",
-   "contexto": "DQ.P1.C06",
-   "palabras_ok": 28,
-   "palabras_totales": 28,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P1.C06.P0005",
-   "contexto": "DQ.P1.C06",
-   "palabras_ok": 30,
-   "palabras_totales": 30,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P1.C06.P0006",
-   "contexto": "DQ.P1.C06",
-   "palabras_ok": 42,
-   "palabras_totales": 42,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P1.C06.P0007",
-   "contexto": "DQ.P1.C06",
-   "palabras_ok": 6,
-   "palabras_totales": 6,
    "estado": "OK"
   },
   {
@@ -264,110 +296,6 @@
   },
   {
    "tipo": "pasaje",
-   "id": "DQ.P1.C18.P0003",
-   "contexto": "DQ.P1.C18",
-   "palabras_ok": 28,
-   "palabras_totales": 28,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P1.C18.P0004",
-   "contexto": "DQ.P1.C18",
-   "palabras_ok": 36,
-   "palabras_totales": 36,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P1.C18.P0005",
-   "contexto": "DQ.P1.C18",
-   "palabras_ok": 22,
-   "palabras_totales": 22,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P2.C01.P0002",
-   "contexto": "DQ.P2.C01",
-   "palabras_ok": 38,
-   "palabras_totales": 38,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P2.C01.P0003",
-   "contexto": "DQ.P2.C01",
-   "palabras_ok": 24,
-   "palabras_totales": 24,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P2.C74.P0004",
-   "contexto": "DQ.P2.C74",
-   "palabras_ok": 13,
-   "palabras_totales": 13,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P2.C74.P0005",
-   "contexto": "DQ.P2.C74",
-   "palabras_ok": 33,
-   "palabras_totales": 33,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P2.C74.P0006",
-   "contexto": "DQ.P2.C74",
-   "palabras_ok": 34,
-   "palabras_totales": 34,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P1.C01.P0001",
-   "contexto": "DQ.P1.C01",
-   "palabras_ok": 104,
-   "palabras_totales": 104,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P1.C01.P0002",
-   "contexto": "DQ.P1.C01",
-   "palabras_ok": 317,
-   "palabras_totales": 317,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P1.C01.P0003",
-   "contexto": "DQ.P1.C01",
-   "palabras_ok": 616,
-   "palabras_totales": 616,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P1.C01.P0004",
-   "contexto": "DQ.P1.C01",
-   "palabras_ok": 254,
-   "palabras_totales": 254,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
-   "id": "DQ.P1.C01.P0005",
-   "contexto": "DQ.P1.C01",
-   "palabras_ok": 103,
-   "palabras_totales": 205,
-   "estado": "OK"
-  },
-  {
-   "tipo": "pasaje",
    "id": "DQ.P1.C16.P0001",
    "contexto": "DQ.P1.C16",
    "palabras_ok": 86,
@@ -388,6 +316,46 @@
    "contexto": "DQ.P1.C16",
    "palabras_ok": 434,
    "palabras_totales": 434,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C18.P0001",
+   "contexto": "DQ.P1.C18",
+   "palabras_ok": 42,
+   "palabras_totales": 42,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C18.P0002",
+   "contexto": "DQ.P1.C18",
+   "palabras_ok": 23,
+   "palabras_totales": 23,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C18.P0003",
+   "contexto": "DQ.P1.C18",
+   "palabras_ok": 28,
+   "palabras_totales": 28,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C18.P0004",
+   "contexto": "DQ.P1.C18",
+   "palabras_ok": 36,
+   "palabras_totales": 36,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P1.C18.P0005",
+   "contexto": "DQ.P1.C18",
+   "palabras_ok": 22,
+   "palabras_totales": 22,
    "estado": "OK"
   },
   {
@@ -424,6 +392,30 @@
   },
   {
    "tipo": "pasaje",
+   "id": "DQ.P2.C01.P0001",
+   "contexto": "DQ.P2.C01",
+   "palabras_ok": 23,
+   "palabras_totales": 23,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P2.C01.P0002",
+   "contexto": "DQ.P2.C01",
+   "palabras_ok": 38,
+   "palabras_totales": 38,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P2.C01.P0003",
+   "contexto": "DQ.P2.C01",
+   "palabras_ok": 24,
+   "palabras_totales": 24,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
    "id": "DQ.P2.C10.P0001",
    "contexto": "DQ.P2.C10",
    "palabras_ok": 551,
@@ -444,6 +436,54 @@
    "contexto": "DQ.P2.C10",
    "palabras_ok": 596,
    "palabras_totales": 596,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P2.C74.P0001",
+   "contexto": "DQ.P2.C74",
+   "palabras_ok": 19,
+   "palabras_totales": 19,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P2.C74.P0002",
+   "contexto": "DQ.P2.C74",
+   "palabras_ok": 18,
+   "palabras_totales": 18,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P2.C74.P0003",
+   "contexto": "DQ.P2.C74",
+   "palabras_ok": 26,
+   "palabras_totales": 26,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P2.C74.P0004",
+   "contexto": "DQ.P2.C74",
+   "palabras_ok": 13,
+   "palabras_totales": 13,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P2.C74.P0005",
+   "contexto": "DQ.P2.C74",
+   "palabras_ok": 33,
+   "palabras_totales": 33,
+   "estado": "OK"
+  },
+  {
+   "tipo": "pasaje",
+   "id": "DQ.P2.C74.P0006",
+   "contexto": "DQ.P2.C74",
+   "palabras_ok": 34,
+   "palabras_totales": 34,
    "estado": "OK"
   },
   {

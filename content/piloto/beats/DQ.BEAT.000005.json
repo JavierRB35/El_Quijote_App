@@ -1,0 +1,52 @@
+{
+  "id": "DQ.BEAT.000005",
+  "contract_version": "1.2.0",
+  "scene_id": "DQ.P1.C08.E01.S01",
+  "unit_ids": [
+    "DQ.UN.P1.C08.U03"
+  ],
+  "order": 5,
+  "kind": "ACCION",
+  "avance_automatico": null,
+  "utterances": [
+    {
+      "utterance_id": "DQ.INT.000007",
+      "speaker": {
+        "tipo": "narrador"
+      },
+      "texto_visible": "Y, diciendo esto, dio de espuelas a su caballo Rocinante, sin atender a las\nvoces que su escudero Sancho le daba, advirtiéndole que, sin duda alguna,\neran molinos de viento, y no gigantes, aquellos que iba a acometer. Pero él\niba tan puesto en que eran gigantes, que ni oía las voces de su escudero\nSancho ni echaba de ver, aunque estaba ya bien cerca, lo que eran; antes,\niba diciendo en voces altas:",
+      "text_kind": "CITA_LITERAL",
+      "passage_ids": [
+        "DQ.P1.C08.P0015"
+      ],
+      "localizador": "PG 2000 (DQ.SRC.0005) offset 123567-123968 (indexación LF); líneas 2584-2589 del fichero",
+      "nota_editorial": "FICHA_ESCENA_P1_C08_MOLINOS §3 (propuesta 1.1); texto literal PG #2000."
+    },
+    {
+      "utterance_id": "DQ.INT.000008",
+      "speaker": {
+        "tipo": "personaje",
+        "person_id": "DQ.PER.0001",
+        "label": "Don Quijote"
+      },
+      "texto_visible": "— Non fuyades, cobardes y viles criaturas, que un solo caballero es el que\nos acomete.",
+      "text_kind": "CITA_LITERAL",
+      "passage_ids": [
+        "DQ.P1.C08.P0012"
+      ],
+      "localizador": "PG 2000 (DQ.SRC.0005) offset 123970-124056 (indexación LF); líneas 2591-2592 del fichero",
+      "nota_editorial": "FICHA_ESCENA_P1_C08_MOLINOS §3 (propuesta 1.1); texto literal PG #2000."
+    }
+  ],
+  "visual_asset_ids": [],
+  "manual_advance_allowed": true,
+  "replay_allowed": true,
+  "reduced_motion_fallback": true,
+  "entry_condition": "SECUENCIA_CANONICA",
+  "exit_condition": "FIN_DE_BEAT_O_AVANCE_MANUAL",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  }
+}

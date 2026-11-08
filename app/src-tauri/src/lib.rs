@@ -46,8 +46,10 @@ fn cargar_paquete(raiz: Option<String>) -> Result<Value, String> {
         .ok_or("manifest sin contract_version")?
         .to_string();
     // Versiones soportadas por el consumidor (§6.5.8): v1.1.0 añade beats/
-    // intervenciones; los paquetes 1.0.0 siguen siendo válidos (MINOR).
-    if !["1.0.0", "1.1.0"].contains(&version.as_str()) {
+    // intervenciones; v1.2.0 permite arrays de recursos visuales vacíos
+    // (escenas neutras del Modo Historia); los paquetes 1.0.0/1.1.0 siguen
+    // siendo válidos (MINOR, retrocompatible).
+    if !["1.0.0", "1.1.0", "1.2.0"].contains(&version.as_str()) {
         return Err(format!(
             "contract_version '{version}' no soportada por este consumidor (§6.5.8)"
         ));
@@ -119,30 +121,62 @@ fn leer_asset(uri: String, raiz: Option<String>) -> Result<String, String> {
     Ok(format!("data:{mime};base64,{}", B64.encode(bytes)))
 }
 
-fn ruta_progreso(app: &tauri::AppHandle) -> Result<PathBuf, String> {
+fn ruta_progreso_en(app: &tauri::AppHandle, nombre: &str) -> Result<PathBuf, String> {
     let dir = app
         .path()
         .app_data_dir()
         .map_err(|e| format!("sin directorio de datos: {e}"))?;
     std::fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
-    Ok(dir.join("progreso.json"))
+    Ok(dir.join(nombre))
 }
 
-/// Autoguardado del progreso de la sesión (EF-AV-08, FASE 1 slice).
-#[tauri::command]
-fn guardar_progreso(app: tauri::AppHandle, datos: String) -> Result<(), String> {
-    let destino = ruta_progreso(&app)?;
+fn ruta_progreso(app: &tauri::AppHandle) -> Result<PathBuf, String> {
+    ruta_progreso_en(app, "progreso.json")
+}
+
+fn ruta_progreso_historia(app: &tauri::AppHandle) -> Result<PathBuf, String> {
+    // Fichero independiente: el progreso del Modo Aventura (progreso.json)
+    // no se toca nunca desde el Modo Historia (encargo P0 molinos §7).
+    ruta_progreso_en(app, "progreso_historia.json")
+}
+
+fn guardar_json_atomico(destino: &Path, datos: &str) -> Result<(), String> {
     let tmp = destino.with_extension("json.tmp");
     // Sustitución atómica: escribir temporal → validar JSON → renombrar (§2.7).
     std::fs::write(&tmp, datos.as_bytes()).map_err(|e| e.to_string())?;
-    serde_json::from_str::<Value>(&datos).map_err(|e| format!("progreso no es JSON válido: {e}"))?;
-    std::fs::rename(&tmp, &destino).map_err(|e| e.to_string())?;
+    serde_json::from_str::<Value>(datos).map_err(|e| format!("progreso no es JSON válido: {e}"))?;
+    std::fs::rename(&tmp, destino).map_err(|e| e.to_string())?;
     Ok(())
+}
+
+/// Autoguardado del progreso de la sesión de Aventura (EF-AV-08, FASE 1 slice).
+#[tauri::command]
+fn guardar_progreso(app: tauri::AppHandle, datos: String) -> Result<(), String> {
+    let destino = ruta_progreso(&app)?;
+    guardar_json_atomico(&destino, &datos)
 }
 
 #[tauri::command]
 fn cargar_progreso(app: tauri::AppHandle) -> Result<Option<String>, String> {
     let destino = ruta_progreso(&app)?;
+    match std::fs::read_to_string(&destino) {
+        Ok(s) => Ok(Some(s)),
+        Err(_) => Ok(None),
+    }
+}
+
+/// Progreso de reproducción del Modo Historia: episodio, escena, beat,
+/// intervención actual y preferencia de autoavance. Persistencia separada de
+/// la de Aventura; al restaurar, el estado se reconstruye desde los datos.
+#[tauri::command]
+fn guardar_progreso_historia(app: tauri::AppHandle, datos: String) -> Result<(), String> {
+    let destino = ruta_progreso_historia(&app)?;
+    guardar_json_atomico(&destino, &datos)
+}
+
+#[tauri::command]
+fn cargar_progreso_historia(app: tauri::AppHandle) -> Result<Option<String>, String> {
+    let destino = ruta_progreso_historia(&app)?;
     match std::fs::read_to_string(&destino) {
         Ok(s) => Ok(Some(s)),
         Err(_) => Ok(None),
@@ -157,7 +191,9 @@ pub fn run() {
             cargar_paquete,
             leer_asset,
             guardar_progreso,
-            cargar_progreso
+            cargar_progreso,
+            guardar_progreso_historia,
+            cargar_progreso_historia
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

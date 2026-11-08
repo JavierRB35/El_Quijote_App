@@ -1,0 +1,13 @@
+{
+  "id": "DQ.P1.C08.P0016",
+  "contract_version": "1.2.0",
+  "chapter_id": "DQ.P1.C08",
+  "anchor": "PG 2000 (DQ.SRC.0005) offset 124868-125544 (indexación LF); extracto verbatim",
+  "text_original": "— ¡Válame Dios! —dijo Sancho—. ¿No le dije yo a vuestra merced que mirase\nbien lo que hacía, que no eran sino molinos de viento, y no lo podía\nignorar sino quien llevase otros tales en la cabeza?\n\n— Calla, amigo Sancho —respondió don Quijote—, que las cosas de la guerra,\nmás que otras, están sujetas a continua mudanza; cuanto más, que yo pienso,\ny es así verdad, que aquel sabio Frestón que me robó el aposento y los\nlibros ha vuelto estos gigantes en molinos por quitarme la gloria de su\nvencimiento: tal es la enemistad que me tiene; mas, al cabo al cabo, han de\npoder poco sus malas artes contra la bondad de mi espada.\n\n— Dios lo haga como puede —respondió Sancho Panza.",
+  "text_indexable": "válame dios dijo sancho no le dije yo a vuestra merced que mirase bien lo que hacía que no eran sino molinos de viento y no lo podía ignorar sino quien llevase otros tales en la cabeza calla amigo sancho respondió don quijote que las cosas de la guerra más que otras están sujetas a continua mudanza cuanto más que yo pienso y es así verdad que aquel sabio frestón que me robó el aposento y los libros ha vuelto estos gigantes en molinos por quitarme la gloria de su vencimiento tal es la enemistad que me tiene mas al cabo al cabo han de poder poco sus malas artes contra la bondad de mi espada dios lo haga como puede respondió sancho panza",
+  "position": {
+    "start_char": 124868,
+    "end_char": 125544
+  },
+  "sha256": "sha256:7dbe15dd033fc7cf830e600771f549da14b858234842051ba9f21a2ba6c896b3"
+}

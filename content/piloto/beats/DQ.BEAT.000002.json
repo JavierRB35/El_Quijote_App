@@ -1,0 +1,39 @@
+{
+  "id": "DQ.BEAT.000002",
+  "contract_version": "1.2.0",
+  "scene_id": "DQ.P1.C08.E01.S01",
+  "unit_ids": [
+    "DQ.UN.P1.C08.U01"
+  ],
+  "order": 2,
+  "kind": "DIALOGO",
+  "avance_automatico": null,
+  "utterances": [
+    {
+      "utterance_id": "DQ.INT.000002",
+      "speaker": {
+        "tipo": "personaje",
+        "person_id": "DQ.PER.0001",
+        "label": "Don Quijote"
+      },
+      "texto_visible": "— La ventura va guiando nuestras cosas mejor de lo que acertáramos a desear,\nporque ves allí, amigo Sancho Panza, donde se descubren treinta, o pocos\nmás, desaforados gigantes, con quien pienso hacer batalla y quitarles a\ntodos las vidas, con cuyos despojos comenzaremos a enriquecer; que ésta es\nbuena guerra, y es gran servicio de Dios quitar tan mala simiente de sobre\nla faz de la tierra.",
+      "text_kind": "CITA_LITERAL",
+      "passage_ids": [
+        "DQ.P1.C08.P0002"
+      ],
+      "localizador": "PG 2000 (DQ.SRC.0005) offset 122562-122954 (indexación LF); líneas 2563-2568 del fichero",
+      "nota_editorial": "FICHA_ESCENA_P1_C08_MOLINOS §3 (propuesta 1.1); texto literal PG #2000."
+    }
+  ],
+  "visual_asset_ids": [],
+  "manual_advance_allowed": true,
+  "replay_allowed": true,
+  "reduced_motion_fallback": true,
+  "entry_condition": "SECUENCIA_CANONICA",
+  "exit_condition": "FIN_DE_BEAT_O_AVANCE_MANUAL",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  }
+}

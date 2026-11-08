@@ -1,0 +1,26 @@
+{
+  "package_id": "sintetico-neutras-v12",
+  "contract_version": "1.2.0",
+  "catalog_version": "0.1.0",
+  "created": "2026-11-08",
+  "files": {
+    "editions": ["valid/edition.json"],
+    "chapters": ["valid/chapter.json"],
+    "passages": ["valid/passage.json"],
+    "episodes": ["valid/episode.json"],
+    "scenes": ["valid/scene_neutra_v12.json"],
+    "questions": [],
+    "persons": ["valid/person_ficticio.json", "valid/person_historico.json"],
+    "places": ["valid/place_lugar.json", "valid/place_ruta.json"],
+    "museum_items": [],
+    "media_assets": [],
+    "sources": ["valid/source_edicion.json", "valid/source_estudio.json"],
+    "licenses": ["valid/license.json"],
+    "beats": ["valid/beat_visual_vacio_v12.json"]
+  },
+  "counts": {
+    "episodes": 1,
+    "scenes": 1,
+    "beats": 1
+  }
+}

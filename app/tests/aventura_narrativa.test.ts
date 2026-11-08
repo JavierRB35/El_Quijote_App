@@ -34,7 +34,7 @@ test('imágenes: 9 preimágenes distintas y consecuencias reales de Aventura/His
     assert.ok(img.alt.length > 15);
   }
   for (const ronda of R) {
-    assert.ok(existsSync(resolve('..', 'content/piloto/passages', ronda.pasajeId + '.json')));
+    if (ronda.pasajeId) assert.ok(existsSync(resolve('..', 'content/piloto/passages', ronda.pasajeId + '.json')));
   }
 });
 

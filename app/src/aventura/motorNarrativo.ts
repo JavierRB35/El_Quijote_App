@@ -89,7 +89,7 @@ export function continuar(partida: Partida, rondas: readonly RondaNarrativa[]): 
   if (partida.fase === 'checkpoint') {
     return {
       ...partida,
-      indice: partida.checkpoint.indice,
+      indice: partida.checkpoint.indice >= rondas.length ? partida.indice : partida.checkpoint.indice,
       fase: partida.checkpoint.indice >= rondas.length ? 'completada' : 'pregunta',
       seleccion: null,
       aciertoActual: null,

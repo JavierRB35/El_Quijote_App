@@ -1,14 +1,20 @@
 // Modo Aventura (FASE 1, DC-18): episodio de los molinos (I, 8) jugable con
-// el sistema de preguntas existente. Extraído íntegro de App.tsx al separar
-// los modos (encargo P0 §8) — su lógica y su progreso (progreso.json) no cambian.
-// Composición cinematográfica según docs/DIRECCION_ARTISTICA_PILOTO.md:
-// escena 16:9 a sangre con deriva sutil (Ken Burns, desactivable), sujeto a la
-// izquierda y panel de pregunta anclado a la derecha en pantallas anchas.
+// el sistema de preguntas existente. La lógica y el progreso (progreso.json)
+// no cambian (encargo P1, decisión de producto 10); la presentación se
+// compone sobre el contenedor cinematográfico reutilizable (src/cine):
+//  - estado «pregunta»: panel inferior de alto contraste, ampliable según
+//    contenido — las opciones grandes nunca se reducen a letra diminuta;
+//  - estado «narración» (explicación tras responder): la escena protagonista
+//    respira y la explicación ocupa la banda segura del encuadre.
 // Interacción 100 % seleccionada (DC-04) y operable por teclado (EF-ACC-01).
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { cargarProgreso, guardarProgreso } from '../historia/persistencia';
 import { leerAsset } from '../entorno';
 import { Catalogo, type MediaAsset, type Pregunta } from '../contrato';
+import ContenedorCine, { type PlanoCine } from '../cine/ContenedorCine';
+import { encuadreDe } from '../cine/resolverPlano';
+import { AjustesBoton, movimientoReducido, useAjustes } from '../cine/ajustes';
+import PanelDescubrir from '../cine/PanelDescubrir';
 
 type EstadoPregunta =
   | { fase: 'sin_responder' }
@@ -17,66 +23,6 @@ type EstadoPregunta =
 type Progreso = Record<string, { acierto: boolean; seleccion: string[] }>;
 
 const EPISODIO_INICIAL = 'DQ.P1.C08.E01'; // Los molinos de viento
-
-/** Caché de imágenes cargadas por URI lógica, con cross-fade entre escenas. */
-function useLienzo(catalogo: Catalogo | null) {
-  const [imagenes, setImagenes] = useState<Record<string, string>>({});
-  const [fallos, setFallos] = useState<Record<string, string>>({});
-
-  const pedir = useCallback(
-    (uri: string) => {
-      if (!catalogo || uri in imagenes || uri in fallos) return;
-      leerAsset(uri)
-        .then((data) => setImagenes((m) => ({ ...m, [uri]: data })))
-        .catch((e) => {
-          console.error('asset', uri, e);
-          setFallos((f) => ({ ...f, [uri]: String(e) }));
-        });
-    },
-    [catalogo, imagenes, fallos],
-  );
-
-  return { imagenes, fallos, pedir };
-}
-
-function Lienzo({
-  activa,
-  imagenes,
-  fallos,
-  pedir,
-  alt,
-}: {
-  activa: string | null;
-  imagenes: Record<string, string>;
-  fallos: Record<string, string>;
-  pedir: (uri: string) => void;
-  alt: string;
-}) {
-  useEffect(() => {
-    if (activa) pedir(activa);
-  }, [activa, pedir]);
-
-  return (
-    <div className="lienzo" aria-hidden={false}>
-      {Object.entries(imagenes).map(([uri, src]) => (
-        <img
-          key={uri}
-          src={src}
-          alt={uri === activa ? alt : ''}
-          className={uri === activa ? 'plano activo' : 'plano'}
-        />
-      ))}
-      <div className="vineta" />
-      {(activa === null || !(activa in imagenes)) && (
-        <div className="lienzo-estado">
-          {activa && activa in fallos
-            ? `escena no disponible (${activa} → ${fallos[activa]})`
-            : 'preparando la escena…'}
-        </div>
-      )}
-    </div>
-  );
-}
 
 /** Contador de diagnóstico (F9): FPS y memoria del WebView para la recogida
  *  de evidencia del criterio ADR-0001.4 (benchmark de escena en hardware real). */
@@ -260,6 +206,12 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
   const [estado, setEstado] = useState<EstadoPregunta>({ fase: 'sin_responder' });
   const [progreso, setProgreso] = useState<Progreso>({});
   const [avisoGuardado, setAvisoGuardado] = useState<string>('');
+  const [panelAmplio, setPanelAmplio] = useState(false);
+  const [descubrirAbierto, setDescubrirAbierto] = useState(false);
+
+  // Ajustes de presentación (texto/movimiento) con persistencia propia.
+  const { ajustes, fijarTexto, fijarMovimiento } = useAjustes();
+  const reducirMovimiento = movimientoReducido(ajustes.movimiento);
 
   // Recuperación de partida (EF-AV-08/EF-PER): se restaura lo guardado y se
   // retoma en la primera pregunta sin responder. Un progreso corrupto o de
@@ -352,7 +304,7 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
     [estado, pregunta],
   );
 
-  function verificar() {
+  const verificar = useCallback(function verificar() {
     if (!pregunta) return;
     const inter = pregunta.interaction;
     let acierto = false;
@@ -379,7 +331,7 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
         seleccion.length === correctas.length && correctas.every((id) => seleccion.includes(id));
     }
     setEstado({ fase: 'respondida', acierto: Boolean(acierto), seleccion });
-  }
+  }, [pregunta, seleccion]);
 
   function reiniciar() {
     setProgreso({});
@@ -388,6 +340,50 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
       setAvisoGuardado(`fallo al limpiar el guardado: ${e}`),
     );
   }
+
+  // ---- teclado: Comprobar/Seguir con Enter fuera de botones; Esc vuelve al
+  // menú (si el cajón de descubrimientos está abierto, lo cierra primero).
+  const puedeComprobar = pregunta && seleccion.length > 0;
+  const respondidaGlobal = estado.fase === 'respondida';
+  const puedeSeguir = respondidaGlobal && pregunta && indice + 1 < preguntas.length;
+  const seguir = useCallback(
+    () => setIndice((i) => i + 1),
+    [],
+  );
+  const cerrarDescubrir = useCallback(() => setDescubrirAbierto(false), []);
+  const descubrirRef = useRef(descubrirAbierto);
+  descubrirRef.current = descubrirAbierto;
+  useEffect(() => {
+    const alPulsar = (e: KeyboardEvent) => {
+      const destino = e.target as HTMLElement | null;
+      const esBoton = destino?.tagName === 'BUTTON' || destino?.tagName === 'INPUT';
+      switch (e.key) {
+        case 'Enter':
+          if (!esBoton && descubrirRef.current) return;
+          if (!esBoton && puedeComprobar) { verificar(); e.preventDefault(); }
+          else if (!esBoton && puedeSeguir) { seguir(); e.preventDefault(); }
+          break;
+        case 'Escape':
+          if (descubrirRef.current) {
+            setDescubrirAbierto(false);
+            e.preventDefault();
+          } else {
+            onSalir();
+          }
+          break;
+        default:
+          break;
+      }
+    };
+    window.addEventListener('keydown', alPulsar);
+    return () => window.removeEventListener('keydown', alPulsar);
+  }, [puedeComprobar, puedeSeguir, verificar, seguir, onSalir]);
+
+  // Descubrimientos del episodio (panel lateral, plegado por defecto).
+  const descubrimientos = useMemo(
+    () => catalogo.descubrimientosDeEpisodio(EPISODIO_INICIAL),
+    [catalogo],
+  );
 
   // ---- escena activa: la pre-imagen vigente; el desenlace al cerrar episodio
   const medioPost = useMemo(
@@ -410,8 +406,6 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
     estado.fase === 'respondida' && indice + 1 === preguntas.length && preguntas.length > 0;
   const escenaActiva: MediaAsset | undefined = finDeEpisodio ? medioPost : medioEscena;
 
-  const { imagenes, fallos, pedir } = useLienzo(catalogo);
-
   if (!pregunta)
     return <main className="cine solo-estado">No hay preguntas del episodio {EPISODIO_INICIAL}.</main>;
 
@@ -422,92 +416,126 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
     pregunta.interaction.type,
   );
 
-  return (
-    <main className="cine">
-      <Lienzo
-        activa={escenaActiva?.logical_uri ?? null}
-        imagenes={imagenes}
-        fallos={fallos}
-        pedir={pedir}
-        alt={escenaActiva?.alt ?? ''}
-      />
+  const plano: PlanoCine = escenaActiva
+    ? {
+        uri: escenaActiva.logical_uri,
+        alt: escenaActiva.alt,
+        autor: escenaActiva.author,
+        mediaClass: escenaActiva.media_class,
+        ladoTexto: encuadreDe(escenaActiva.id).lado_texto,
+      }
+    : {
+        uri: null,
+        alt: 'Fondo neutro editorial, sin imagen disponible para esta pregunta.',
+        ladoTexto: 'derecha',
+      };
 
-      <header className="cabecera">
-        <p className="kicker">Parte I · Capítulo VIII · El Quijote · Modo Aventura</p>
-        <h1>{episodio.title}</h1>
-        <div className="cabecera-linea">
-          <span className="progreso-texto">
-            {indice + 1} / {preguntas.length}
-          </span>
-          <div className="progreso-barra" role="presentation">
-            <div
-              className="progreso-relleno"
-              style={{ width: `${(Object.keys(progreso).length / preguntas.length) * 100}%` }}
-            />
-          </div>
-          {avisoGuardado && <span className="guardado">{avisoGuardado}</span>}
-          <button className="secundario salir" onClick={onSalir}>
-            Volver al menú
-          </button>
-        </div>
-      </header>
-
-      <section className="panel" aria-live="polite">
-        <p className="enunciado">{pregunta.prompt}</p>
-        {renderizadorRespuesta({ pregunta, seleccion, respondida, onToggle: alternar })}
-
-        {!respondida && requiereBoton && (
-          <button className="primario" onClick={verificar} disabled={seleccion.length === 0}>
-            Comprobar
-          </button>
-        )}
-
-        {respondida && (
-          <div className={`feedback ${estado.acierto ? 'bien' : 'mal'}`}>
-            <p className="veredicto">
-              {estado.acierto ? 'Así es.' : 'No es exactamente eso.'} {pregunta.rationale}
-            </p>
-            {pregunta.rationale_extended && (
-              <p className="ampliacion">{pregunta.rationale_extended}</p>
-            )}
-            {pregunta.evidence.map((ev) => (
-              <p className="evidencia" key={ev.kind + (ev.passage_id ?? '')}>
-                {ev.kind === 'cita_literal' && ev.quote
-                  ? `«${ev.quote}»`
-                  : `Evidencia: ${ev.kind}`}
-              </p>
-            ))}
-            {indice + 1 < preguntas.length && (
-              <button className="primario" onClick={() => setIndice(indice + 1)}>
-                Seguir adelante
-              </button>
-            )}
-            {finDeEpisodio && (
-              <div className="resumen">
-                <p className="resumen-titulo">Fin del paso por los molinos</p>
-                <p>
-                  {aciertos} de {preguntas.length} aciertos. Los descubrimientos quedan anotados en
-                  su cuaderno de investigador.
-                </p>
-                <button className="secundario" onClick={reiniciar}>
-                  Volver a pasar el episodio
-                </button>
-              </div>
-            )}
-          </div>
-        )}
-      </section>
-
-      <footer className="pie">
-        <span className={`rotulo rotulo-${escenaActiva?.media_class ?? 'SIN'}`}>
-          {escenaActiva?.media_class === 'RECREACION_IA'
-            ? 'recreación — no evidencia histórica'
-            : (escenaActiva?.media_class ?? '')}
+  const cabecera = (
+    <header className="cabecera">
+      <p className="kicker">Parte I · Capítulo VIII · El Quijote · Modo Aventura</p>
+      <h1>{episodio.title}</h1>
+      <div className="cabecera-linea">
+        <span className="progreso-texto">
+          {indice + 1} / {preguntas.length}
         </span>
-        {escenaActiva?.author ? <span className="pie-autor">{escenaActiva.author}</span> : null}
-      </footer>
+        <div className="progreso-barra" role="presentation">
+          <div
+            className="progreso-relleno"
+            style={{ width: `${(Object.keys(progreso).length / preguntas.length) * 100}%` }}
+          />
+        </div>
+        {avisoGuardado && <span className="guardado">{avisoGuardado}</span>}
+        <span className="cabecera-acciones">
+          <AjustesBoton ajustes={ajustes} fijarTexto={fijarTexto} fijarMovimiento={fijarMovimiento} />
+          <PanelDescubrir
+            abierto={descubrirAbierto}
+            alternar={() => setDescubrirAbierto((v) => !v)}
+            onCerrar={cerrarDescubrir}
+            descubrimientos={descubrimientos}
+            nombreEpisodio={episodio.title}
+          />
+          <button className="control control-estado" onClick={onSalir} aria-label="Volver al menú (escape)">
+            Menú
+          </button>
+        </span>
+      </div>
+    </header>
+  );
 
-      <Diagnostico escena={escenaActiva?.logical_uri ?? null} />
-    </main>
+  const cuerpoPregunta = (
+    <>
+      <p className="enunciado">{pregunta.prompt}</p>
+      {renderizadorRespuesta({ pregunta, seleccion, respondida, onToggle: alternar })}
+      {!respondida && requiereBoton && (
+        <button className="primario" onClick={verificar} disabled={seleccion.length === 0}>
+          Comprobar
+        </button>
+      )}
+      {!respondida && (
+        <button
+          className="control control-estado ampliar-panel"
+          aria-expanded={panelAmplio}
+          onClick={() => setPanelAmplio((v) => !v)}
+        >
+          {panelAmplio ? 'Reducir panel' : 'Ampliar panel'}
+        </button>
+      )}
+    </>
+  );
+
+  const cuerpoNarracion = respondida && (
+    <section className="lectura feedback-lectura" aria-live="polite">
+      <div className={`feedback ${estado.acierto ? 'bien' : 'mal'}`}>
+        <p className="veredicto">
+          {estado.acierto ? 'Así es.' : 'No es exactamente eso.'} {pregunta.rationale}
+        </p>
+        {pregunta.rationale_extended && (
+          <p className="ampliacion">{pregunta.rationale_extended}</p>
+        )}
+        {pregunta.evidence.map((ev) => (
+          <p className="evidencia" key={ev.kind + (ev.passage_id ?? '')}>
+            {ev.kind === 'cita_literal' && ev.quote
+              ? `«${ev.quote}»`
+              : `Evidencia: ${ev.kind}`}
+          </p>
+        ))}
+        {puedeSeguir && (
+          <button className="primario" onClick={seguir}>
+            Seguir adelante
+          </button>
+        )}
+        {finDeEpisodio && (
+          <div className="resumen">
+            <p className="resumen-titulo">Fin del paso por los molinos</p>
+            <p>
+              {aciertos} de {preguntas.length} aciertos. Los descubrimientos quedan anotados en
+              su cuaderno de investigador.
+            </p>
+            <button className="secundario" onClick={reiniciar}>
+              Volver a pasar el episodio
+            </button>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+
+  return (
+    <ContenedorCine
+      plano={plano}
+      estado={respondida ? 'narracion' : 'pregunta'}
+      reducirMovimiento={reducirMovimiento}
+      cargar={leerAsset}
+      cabecera={cabecera}
+      texto={cuerpoNarracion}
+      lateral={<Diagnostico escena={plano.uri} />}
+      pregunta={
+        respondida ? undefined : (
+          <div className={`panel-pregunta-cuerpo ${panelAmplio ? 'amplio' : ''}`}>
+            {cuerpoPregunta}
+          </div>
+        )
+      }
+    />
   );
 }

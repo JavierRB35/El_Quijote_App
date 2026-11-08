@@ -3,11 +3,11 @@
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P2.C74",
  "anchor": "PG 2000 (DQ.SRC.0005) offset 2101344-2101443; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 2.74.xhtml; extracto verbatim",
- "text_original": "Dadme albricias, buenos señores, de que ya yo no soy don Quijote de la\nMancha, sino Alonso Quijano",
+ "text_original": "Dadme albricias, buenos señores, de que ya yo no soy don Quijote de la Mancha, sino Alonso Quijano",
  "text_indexable": "dadme albricias buenos señores de que ya yo no soy don quijote de la mancha sino alonso quijano",
  "position": {
   "start_char": 2101344,
   "end_char": 2101443
  },
- "sha256": "sha256:e1c0e1c72541fb62974eda4e2c942729550becf9471a45a8b5db4b5efe0b55bd"
+ "sha256": "sha256:db11e1cc7f611c4711017fb1b316af36caa09419610c072f7a2213d65a0bfd37"
 }

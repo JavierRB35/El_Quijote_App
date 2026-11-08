@@ -3,11 +3,11 @@
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C08",
  "anchor": "PG 2000 (DQ.SRC.0005) offset 134884-135105; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1008.xhtml; extracto verbatim",
- "text_original": "el cual, viendo que no quería dejar pasar el\ncoche adelante, sino que decía que luego había de dar la vuelta al Toboso,\nse fue para don Quijote y, asiéndole de la lanza, le dijo, en mala lengua\ncastellana y peor vizcaína",
+ "text_original": "el cual, viendo que no quería dejar pasar el coche adelante, sino que decía que luego había de dar la vuelta al Toboso, se fue para don Quijote y, asiéndole de la lanza, le dijo, en mala lengua castellana y peor vizcaína",
  "text_indexable": "el cual viendo que no quería dejar pasar el coche adelante sino que decía que luego había de dar la vuelta al toboso se fue para don quijote y asiéndole de la lanza le dijo en mala lengua castellana y peor vizcaína",
  "position": {
   "start_char": 134884,
   "end_char": 135105
  },
- "sha256": "sha256:d9d4455a15e5891005be6d0e27e16a1f98c4be75dd8ba0fc26ead9e889439a5b"
+ "sha256": "sha256:9ba3004bbf2979448e9ab82d31ca6dbf63e8abe36f485b88bf2ff0b5e1d80e60"
 }

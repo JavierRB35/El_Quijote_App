@@ -347,6 +347,10 @@ body {
   font-size: 0.88rem;
   line-height: 1.45;
   color: var(--lino-apagado);
+  /* Las citas llegan con su estructura literaria (PR #59): párrafos (\n\n),
+     parlamentos y versos (\n). pre-line los muestra sin alterar la cita;
+     con movimiento reducido no procede animación alguna aquí. */
+  white-space: pre-line;
 }
 
 .evidencia::before {

@@ -1,64 +1,64 @@
 {
-    "id": "DQ.Q.000218",
-    "contract_version": "1.0.0",
-    "episode_id": "DQ.P1.C18.E01",
-    "chapter_ids": [
-        "DQ.P1.C18"
-    ],
-    "passage_ids": [
-        "DQ.P1.C18.P0001"
-    ],
-    "prompt": "¿Qué título da don Quijote a Alifanfarón?",
-    "interaction": {
-        "type": "single_choice",
-        "options": [
-            {
-                "id": "DQ.Q.000218.O01",
-                "label": "«Grande emperador... señor de la grande isla Trapobana»"
-            },
-            {
-                "id": "DQ.Q.000218.O02",
-                "label": "«Rey de los garamantas, del Arremangado Brazo»"
-            },
-            {
-                "id": "DQ.Q.000218.O03",
-                "label": "«Gran soldán de Babilonia»"
-            }
-        ],
-        "correct_option_ids": [
-            "DQ.Q.000218.O01"
-        ],
-        "shuffle_options": true
-    },
-    "rationale": "El segundo título corresponde a Pentapolín, su enemigo imaginado.",
-    "evidence": [
-        {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P1.C18.P0001",
-            "quote": "el grande emperador Alifanfarón, señor de la grande isla\nTrapobana"
-        }
-    ],
-    "certainty": "TEXTO_EXPLICITO",
-    "cognitive_type": "hecho",
-    "difficulty": 2,
-    "spoiler_policy": {
-        "safe_after_episodes": [
-            "DQ.P1.C18.E01"
-        ]
-    },
-    "visual_requirements": {
-        "pre_image_must_not_reveal": true,
-        "pre_image_media_id": "DQ.MA.900008"
-    },
-    "language": "es",
-    "tags": [
-        "piloto",
-        "rebaños"
-    ],
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "semantic_key": "rebaños alifanfaron trapobana titulo"
+ "id": "DQ.Q.000218",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C18.E01",
+ "chapter_ids": [
+  "DQ.P1.C18"
+ ],
+ "passage_ids": [
+  "DQ.P1.C18.P0001"
+ ],
+ "prompt": "¿Qué título da don Quijote a Alifanfarón?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000218.O01",
+    "label": "«Grande emperador... señor de la grande isla Trapobana»"
+   },
+   {
+    "id": "DQ.Q.000218.O02",
+    "label": "«Rey de los garamantas, del Arremangado Brazo»"
+   },
+   {
+    "id": "DQ.Q.000218.O03",
+    "label": "«Gran soldán de Babilonia»"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000218.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "El segundo título corresponde a Pentapolín, su enemigo imaginado.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C18.P0001",
+   "quote": "el grande emperador Alifanfarón, señor de la grande isla Trapobana"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "hecho",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C18.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900008"
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "rebaños"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "rebaños alifanfaron trapobana titulo"
 }

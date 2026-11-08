@@ -1,13 +1,13 @@
 {
-  "id": "DQ.P1.C08.P0014",
-  "contract_version": "1.2.0",
-  "chapter_id": "DQ.P1.C08",
-  "anchor": "PG 2000 (DQ.SRC.0005) offset 123334-123565 (indexación LF); extracto verbatim",
-  "text_original": "— Bien parece —respondió don Quijote— que no estás cursado en esto de las\naventuras: ellos son gigantes; y si tienes miedo, quítate de ahí, y ponte\nen oración en el espacio que yo voy a entrar con ellos en fiera y desigual\nbatalla.",
-  "text_indexable": "bien parece respondió don quijote que no estás cursado en esto de las aventuras ellos son gigantes y si tienes miedo quítate de ahí y ponte en oración en el espacio que yo voy a entrar con ellos en fiera y desigual batalla",
-  "position": {
-    "start_char": 123334,
-    "end_char": 123565
-  },
-  "sha256": "sha256:fff563928672dc5e598774c84fcafc121c62951876609066cdefa2daae184cce"
+ "id": "DQ.P1.C08.P0014",
+ "contract_version": "1.2.0",
+ "chapter_id": "DQ.P1.C08",
+ "anchor": "PG 2000 (DQ.SRC.0005) offset 123334-123565 (indexación LF); extracto verbatim",
+ "text_original": "— Bien parece —respondió don Quijote— que no estás cursado en esto de las aventuras: ellos son gigantes; y si tienes miedo, quítate de ahí, y ponte en oración en el espacio que yo voy a entrar con ellos en fiera y desigual batalla.",
+ "text_indexable": "bien parece respondió don quijote que no estás cursado en esto de las aventuras ellos son gigantes y si tienes miedo quítate de ahí y ponte en oración en el espacio que yo voy a entrar con ellos en fiera y desigual batalla",
+ "position": {
+  "start_char": 123334,
+  "end_char": 123565
+ },
+ "sha256": "sha256:72d8606e9a044b5e1469fd1760c8c564f3bac5a06f05fe11a4edb4d095181084"
 }

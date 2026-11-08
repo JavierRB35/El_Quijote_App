@@ -1,64 +1,64 @@
 {
-    "id": "DQ.Q.000102",
-    "contract_version": "1.0.0",
-    "episode_id": "DQ.P1.C08.E01",
-    "chapter_ids": [
-        "DQ.P1.C08"
-    ],
-    "passage_ids": [
-        "DQ.P1.C08.P0001"
-    ],
-    "prompt": "¿Cuántos molinos de viento descubre el narrador en aquel campo?",
-    "interaction": {
-        "type": "single_choice",
-        "options": [
-            {
-                "id": "DQ.Q.000102.O01",
-                "label": "Treinta ó cuarenta"
-            },
-            {
-                "id": "DQ.Q.000102.O02",
-                "label": "Treinta ó pocos más"
-            },
-            {
-                "id": "DQ.Q.000102.O03",
-                "label": "Veinte y cinco"
-            }
-        ],
-        "correct_option_ids": [
-            "DQ.Q.000102.O01"
-        ],
-        "shuffle_options": true
-    },
-    "rationale": "El narrador dice «treinta ó cuarenta molinos»; la cifra «treinta ó pocos más» es la de gigantes según don Quijote: dos cómputos distintos.",
-    "evidence": [
-        {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P1.C08.P0001",
-            "quote": "En esto, descubrieron treinta o cuarenta molinos de viento que hay en aquel\ncampo"
-        }
-    ],
-    "certainty": "TEXTO_EXPLICITO",
-    "cognitive_type": "hecho",
-    "difficulty": 2,
-    "spoiler_policy": {
-        "safe_after_episodes": [
-            "DQ.P1.C08.E01"
-        ]
-    },
-    "visual_requirements": {
-        "pre_image_must_not_reveal": true,
-        "pre_image_media_id": "DQ.MA.900030"
-    },
-    "language": "es",
-    "tags": [
-        "piloto",
-        "molinos"
-    ],
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "semantic_key": "molinos cifra treinta cuarenta narrador"
+ "id": "DQ.Q.000102",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C08.E01",
+ "chapter_ids": [
+  "DQ.P1.C08"
+ ],
+ "passage_ids": [
+  "DQ.P1.C08.P0001"
+ ],
+ "prompt": "¿Cuántos molinos de viento descubre el narrador en aquel campo?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000102.O01",
+    "label": "Treinta ó cuarenta"
+   },
+   {
+    "id": "DQ.Q.000102.O02",
+    "label": "Treinta ó pocos más"
+   },
+   {
+    "id": "DQ.Q.000102.O03",
+    "label": "Veinte y cinco"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000102.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "El narrador dice «treinta ó cuarenta molinos»; la cifra «treinta ó pocos más» es la de gigantes según don Quijote: dos cómputos distintos.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C08.P0001",
+   "quote": "En esto, descubrieron treinta o cuarenta molinos de viento que hay en aquel campo"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "hecho",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C08.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900030"
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "molinos"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "molinos cifra treinta cuarenta narrador"
 }

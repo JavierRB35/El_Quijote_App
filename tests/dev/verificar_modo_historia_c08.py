@@ -138,14 +138,18 @@ def main() -> int:
                 comprobar(p.get("sha256") == f"sha256:{sha}",
                           f"{pid}: sha256 de text_original no coincide")
                 # Verbatim-offset exigido a los pasajes de alta física de este
-                # vertical (P0013–P0017). Algunos registros antiguos 1.0.0
-                # (p. ej. P0001, P0006) tienen un off-by-one legado en
-                # position.end_char (incluye la puntuación final que
-                # text_original omite); su integridad queda cubierta por el
-                # sha256 y el cotejo normalizado de cotejar_texto_referencia.py.
+                # vertical (P0013–P0017). La comparación colapsa espacios en
+                # blanco porque la normalización de la PR #59 une los cortes
+                # mecánicos de maquetación de PG (~75 col.) conservando los
+                # saltos literarios; las palabras deben seguir siendo
+                # verbatim. Registros antiguos 1.0.0 (p. ej. P0001, P0006)
+                # tienen un off-by-one legado en position.end_char (incluye
+                # la puntuación final que text_original omite); su integridad
+                # queda cubierta por el sha256 y el cotejo normalizado.
                 if pid in PASAJES_NUEVOS:
                     pos = p.get("position", {})
-                    comprobar(texto[pos.get("start_char", -1):pos.get("end_char", -1)] == p["text_original"],
+                    segmento = normalizar(texto[pos.get("start_char", -1):pos.get("end_char", -1)])
+                    comprobar(segmento == normalizar(p["text_original"]),
                               f"{pid}: text_original no es verbatim del offset declarado")
     i16 = intervenciones[-1] if len(intervenciones) == 16 else {}
     comprobar(i16.get("texto_visible", "").endswith("del Puerto Lápice,"),

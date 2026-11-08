@@ -1,64 +1,64 @@
 {
-    "id": "DQ.Q.000212",
-    "contract_version": "1.0.0",
-    "episode_id": "DQ.P1.C11.E01",
-    "chapter_ids": [
-        "DQ.P1.C11"
-    ],
-    "passage_ids": [
-        "DQ.P1.C11.P0002"
-    ],
-    "prompt": "¿Qué «dos palabras» ignoraban, según don Quijote, los hombres de aquella edad?",
-    "interaction": {
-        "type": "single_choice",
-        "options": [
-            {
-                "id": "DQ.Q.000212.O01",
-                "label": "«Tuyo» y «mío»"
-            },
-            {
-                "id": "DQ.Q.000212.O02",
-                "label": "«Guerra» y «paz»"
-            },
-            {
-                "id": "DQ.Q.000212.O03",
-                "label": "«Rey» y «ley»"
-            }
-        ],
-        "correct_option_ids": [
-            "DQ.Q.000212.O01"
-        ],
-        "shuffle_options": true
-    },
-    "rationale": "La propiedad privada como origen retórico de los males en el discurso.",
-    "evidence": [
-        {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P1.C11.P0002",
-            "quote": "ignoraban estas dos\npalabras de tuyo y mío."
-        }
-    ],
-    "certainty": "TEXTO_EXPLICITO",
-    "cognitive_type": "cita",
-    "difficulty": 1,
-    "spoiler_policy": {
-        "safe_after_episodes": [
-            "DQ.P1.C11.E01"
-        ]
-    },
-    "visual_requirements": {
-        "pre_image_must_not_reveal": true,
-        "pre_image_media_id": "DQ.MA.900032"
-    },
-    "language": "es",
-    "tags": [
-        "piloto",
-        "edad-oro"
-    ],
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "semantic_key": "edad-oro tuyo mio palabras"
+ "id": "DQ.Q.000212",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C11.E01",
+ "chapter_ids": [
+  "DQ.P1.C11"
+ ],
+ "passage_ids": [
+  "DQ.P1.C11.P0002"
+ ],
+ "prompt": "¿Qué «dos palabras» ignoraban, según don Quijote, los hombres de aquella edad?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000212.O01",
+    "label": "«Tuyo» y «mío»"
+   },
+   {
+    "id": "DQ.Q.000212.O02",
+    "label": "«Guerra» y «paz»"
+   },
+   {
+    "id": "DQ.Q.000212.O03",
+    "label": "«Rey» y «ley»"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000212.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "La propiedad privada como origen retórico de los males en el discurso.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C11.P0002",
+   "quote": "ignoraban estas dos palabras de tuyo y mío."
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "cita",
+ "difficulty": 1,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C11.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900032"
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "edad-oro"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "edad-oro tuyo mio palabras"
 }

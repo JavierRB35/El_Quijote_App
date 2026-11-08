@@ -3,11 +3,11 @@
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P2.C74",
  "anchor": "PG 2000 (DQ.SRC.0005) offset 2110690-2110889; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 2.74.xhtml; extracto verbatim",
- "text_original": "no le quiera\nllevar, contra todos los fueros de la muerte, a Castilla la Vieja,\nhaciéndole salir de la fuesa donde real y verdaderamente yace tendido de\nlargo a largo, imposibilitado de hacer tercera",
+ "text_original": "no le quiera llevar, contra todos los fueros de la muerte, a Castilla la Vieja, haciéndole salir de la fuesa donde real y verdaderamente yace tendido de largo a largo, imposibilitado de hacer tercera",
  "text_indexable": "no le quiera llevar contra todos los fueros de la muerte a castilla la vieja haciéndole salir de la fuesa donde real y verdaderamente yace tendido de largo a largo imposibilitado de hacer tercera",
  "position": {
   "start_char": 2110690,
   "end_char": 2110889
  },
- "sha256": "sha256:17658a23603f655c0cd85410d3548dc4c10adf6166f96fef31e5a489a802c795"
+ "sha256": "sha256:ab07d45a18d7950ee9ac94a3a360fd25970b0fb8477117e77c74eb87b174594a"
 }

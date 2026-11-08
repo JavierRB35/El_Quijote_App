@@ -3,11 +3,11 @@
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C06",
  "anchor": "PG 2000 (DQ.SRC.0005) offset 100836-101067; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1006.xhtml; extracto verbatim",
- "text_original": "que, a trueco de quemar a la\nreina Pintiquiniestra, y al pastor Darinel, y a sus églogas, y a las\nendiabladas y revueltas razones de su autor, quemaré con ellos al padre que\nme engendró, si anduviera en figura de caballero andante.",
+ "text_original": "que, a trueco de quemar a la reina Pintiquiniestra, y al pastor Darinel, y a sus églogas, y a las endiabladas y revueltas razones de su autor, quemaré con ellos al padre que me engendró, si anduviera en figura de caballero andante.",
  "text_indexable": "que a trueco de quemar a la reina pintiquiniestra y al pastor darinel y a sus églogas y a las endiabladas y revueltas razones de su autor quemaré con ellos al padre que me engendró si anduviera en figura de caballero andante",
  "position": {
   "start_char": 100836,
   "end_char": 101067
  },
- "sha256": "sha256:875c9bdced1185c67b4c8769e0d47870aa6580a1d89bcc1951dff36d2357d913"
+ "sha256": "sha256:97afc64eccad9052677fd0ff47db2d416ea2c38a3e4111362d213c7e1e5c88fb"
 }

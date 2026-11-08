@@ -1,64 +1,64 @@
 {
-    "id": "DQ.Q.000234",
-    "contract_version": "1.0.0",
-    "episode_id": "DQ.P2.C74.E01",
-    "chapter_ids": [
-        "DQ.P2.C74"
-    ],
-    "passage_ids": [
-        "DQ.P2.C74.P0001"
-    ],
-    "prompt": "¿Qué veredicto pronuncia el cura al salir de la confesión?",
-    "interaction": {
-        "type": "single_choice",
-        "options": [
-            {
-                "id": "DQ.Q.000234.O01",
-                "label": "«Verdaderamente se muere, y verdaderamente está cuerdo Alonso Quijano el Bueno»"
-            },
-            {
-                "id": "DQ.Q.000234.O02",
-                "label": "«Está loco y morirá loco: llamad al médico»"
-            },
-            {
-                "id": "DQ.Q.000234.O03",
-                "label": "«Sana del cuerpo, aunque no del alma»"
-            }
-        ],
-        "correct_option_ids": [
-            "DQ.Q.000234.O01"
-        ],
-        "shuffle_options": true
-    },
-    "rationale": "El doble «verdaderamente» autentica lucidez y gravedad a un tiempo.",
-    "evidence": [
-        {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P2.C74.P0001",
-            "quote": "Verdaderamente se muere, y verdaderamente está cuerdo Alonso Quijano el\nBueno; bien podemos entrar para que haga su testamento."
-        }
-    ],
-    "certainty": "TEXTO_EXPLICITO",
-    "cognitive_type": "cita",
-    "difficulty": 1,
-    "spoiler_policy": {
-        "safe_after_episodes": [
-            "DQ.P2.C74.E01"
-        ]
-    },
-    "visual_requirements": {
-        "pre_image_must_not_reveal": true,
-        "pre_image_media_id": "DQ.MA.900011"
-    },
-    "language": "es",
-    "tags": [
-        "piloto",
-        "final"
-    ],
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "semantic_key": "final cura veredicto cuerdo muere"
+ "id": "DQ.Q.000234",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P2.C74.E01",
+ "chapter_ids": [
+  "DQ.P2.C74"
+ ],
+ "passage_ids": [
+  "DQ.P2.C74.P0001"
+ ],
+ "prompt": "¿Qué veredicto pronuncia el cura al salir de la confesión?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000234.O01",
+    "label": "«Verdaderamente se muere, y verdaderamente está cuerdo Alonso Quijano el Bueno»"
+   },
+   {
+    "id": "DQ.Q.000234.O02",
+    "label": "«Está loco y morirá loco: llamad al médico»"
+   },
+   {
+    "id": "DQ.Q.000234.O03",
+    "label": "«Sana del cuerpo, aunque no del alma»"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000234.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "El doble «verdaderamente» autentica lucidez y gravedad a un tiempo.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P2.C74.P0001",
+   "quote": "Verdaderamente se muere, y verdaderamente está cuerdo Alonso Quijano el Bueno; bien podemos entrar para que haga su testamento."
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "cita",
+ "difficulty": 1,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P2.C74.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900011"
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "final"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "final cura veredicto cuerdo muere"
 }

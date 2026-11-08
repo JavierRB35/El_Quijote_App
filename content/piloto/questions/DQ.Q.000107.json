@@ -1,72 +1,72 @@
 {
-    "id": "DQ.Q.000107",
-    "contract_version": "1.0.0",
-    "episode_id": "DQ.P1.C08.E01",
-    "chapter_ids": [
-        "DQ.P1.C08"
-    ],
-    "passage_ids": [
-        "DQ.P1.C08.P0007",
-        "DQ.P1.C08.P0008",
-        "DQ.P1.C08.P0009"
-    ],
-    "prompt": "¿A qué identifica equivocadamente don Quijote en la segunda parte del capítulo? (varias)",
-    "interaction": {
-        "type": "multi_choice",
-        "multi_declared": true,
-        "options": [
-            {
-                "id": "DQ.Q.000107.O01",
-                "label": "Los molinos de viento, como desaforados gigantes"
-            },
-            {
-                "id": "DQ.Q.000107.O02",
-                "label": "Los frailes de San Benito, como encantadores con una princesa hurtada"
-            },
-            {
-                "id": "DQ.Q.000107.O03",
-                "label": "Las dos mulas del séquito, como dromedarios"
-            },
-            {
-                "id": "DQ.Q.000107.O04",
-                "label": "El coche, como carroza fúnebre"
-            }
-        ],
-        "correct_option_ids": [
-            "DQ.Q.000107.O01",
-            "DQ.Q.000107.O02"
-        ],
-        "shuffle_options": true
-    },
-    "rationale": "La broma de los «dromedarios» es del narrador («no eran más pequeñas dos mulas en que venían»), no identificación de don Quijote; la carroza fúnebre no aparece.",
-    "evidence": [
-        {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P1.C08.P0007",
-            "quote": "dos frailes de la orden de\nSan Benito, caballeros sobre dos dromedarios: que no eran más pequeñas dos\nmulas en que venían."
-        }
-    ],
-    "certainty": "TEXTO_EXPLICITO",
-    "cognitive_type": "humor",
-    "difficulty": 3,
-    "spoiler_policy": {
-        "safe_after_episodes": [
-            "DQ.P1.C08.E01"
-        ]
-    },
-    "visual_requirements": {
-        "pre_image_must_not_reveal": true,
-        "pre_image_media_id": "DQ.MA.900029"
-    },
-    "language": "es",
-    "tags": [
-        "piloto",
-        "molinos"
-    ],
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "semantic_key": "molinos identificaciones frailes encantadores princesa dromedarios"
+ "id": "DQ.Q.000107",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C08.E01",
+ "chapter_ids": [
+  "DQ.P1.C08"
+ ],
+ "passage_ids": [
+  "DQ.P1.C08.P0007",
+  "DQ.P1.C08.P0008",
+  "DQ.P1.C08.P0009"
+ ],
+ "prompt": "¿A qué identifica equivocadamente don Quijote en la segunda parte del capítulo? (varias)",
+ "interaction": {
+  "type": "multi_choice",
+  "multi_declared": true,
+  "options": [
+   {
+    "id": "DQ.Q.000107.O01",
+    "label": "Los molinos de viento, como desaforados gigantes"
+   },
+   {
+    "id": "DQ.Q.000107.O02",
+    "label": "Los frailes de San Benito, como encantadores con una princesa hurtada"
+   },
+   {
+    "id": "DQ.Q.000107.O03",
+    "label": "Las dos mulas del séquito, como dromedarios"
+   },
+   {
+    "id": "DQ.Q.000107.O04",
+    "label": "El coche, como carroza fúnebre"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000107.O01",
+   "DQ.Q.000107.O02"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "La broma de los «dromedarios» es del narrador («no eran más pequeñas dos mulas en que venían»), no identificación de don Quijote; la carroza fúnebre no aparece.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C08.P0007",
+   "quote": "dos frailes de la orden de San Benito, caballeros sobre dos dromedarios: que no eran más pequeñas dos mulas en que venían."
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "humor",
+ "difficulty": 3,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C08.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900029"
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "molinos"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "molinos identificaciones frailes encantadores princesa dromedarios"
 }

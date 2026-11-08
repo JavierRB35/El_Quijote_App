@@ -88,3 +88,15 @@ Conforme a DC-23 (el equipo artístico actúa con prompt exacto de Dirección). 
 - Los tres activos de A02 permanecen **sin alta en el catálogo** hasta su regeneración y el encargo de narración frailes/vizcaíno.
 - `review.state: borrador` y restricciones de distribución sin cambios en todos los activos.
 - La validación de legibilidad real (personas mayores, 1080p/1440p/4K) sigue pendiente según `DOSSIER_ARTISTICO_H4` §3.5: las zonas seguras de esta norma son hipótesis de layout verificadas visualmente por el desarrollador, no decisión de legibilidad validada.
+
+---
+
+## 6. Coordinación con la PR #76 (reencuadres del equipo artístico)
+
+Mientras esta norma se tramitaba, el equipo artístico abrió la **PR #76** con los **reencuadres de los ficheros** N11, N12 y N13 (los tres clasificados aquí en el grupo 1). Inspección de esta PR sobre las versiones de #76:
+
+- **N11**: el caído queda en el 60-70 % izquierdo y la banda derecha (25-30 %) pasa a ser camino/campo limpio — confirma y refuerza la clasificación (derecha).
+- **N13**: los dos cuerpos compactados al 60 % izquierdo; la banda derecha queda de camino libre — resuelve el caso límite documentado aquí (la banda ya no cubre siquiera la nuca).
+- **N12**: mismo patrón declarado por #76 («zona natural libre a la derecha»).
+
+**Complementariedad**: #76 entrega los ficheros; esta PR entrega la norma, la clasificación completa de las 20 imágenes, los metadatos `zona_segura` validados por prueba y la alineación de la banda de la UI. **Nota de integración para Dirección**: los reencuadres de #76 cambian los bytes de N11/N12/N13 — al fusionarse, los `sha256` de `derivatives` en `DQ.MA.901010/901011/901012.json` deben recalcularse (un commit de metadatos posterior, sin cambio de norma).

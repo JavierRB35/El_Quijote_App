@@ -47,7 +47,8 @@
   ]
  },
  "visual_requirements": {
-  "pre_image_must_not_reveal": true
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.901005"
  },
  "language": "es",
  "tags": [

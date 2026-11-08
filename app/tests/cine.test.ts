@@ -227,7 +227,7 @@ test('la activación post-desenlace llega solo cuando un beat la declara (umbral
 // ---------- encuadres.json: versionado, cobertura y coherencia ----------
 
 test('encuadres versionados y coherentes con el manifiesto de escenas', () => {
-  assert.equal(versionEncuadres(), 1);
+  assert.equal(versionEncuadres(), 2);
   const doc = JSON.parse(
     readFileSync(path.join(RAIZ, 'app/src/cine/encuadres.json'), 'utf-8'),
   ) as { version: number; encuadres: { media_id: string; lado_texto: string; region_critica: Record<string, number> }[] };

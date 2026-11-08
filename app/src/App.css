@@ -662,6 +662,35 @@ body {
   color: rgba(242, 232, 213, 0.65);
 }
 
+
+/* ---------- cierre del episodio (panel legible sobre imagen o neutro) --- */
+
+.cierre {
+  position: relative;
+  padding: 1rem 1.4rem;
+  text-align: center;
+  background: var(--panel);
+  border: 1px solid var(--panel-borde);
+  border-top: 2px solid var(--dorado);
+  border-radius: 6px;
+}
+
+.cierre-titulo {
+  margin: 0 0 0.3rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--dorado-claro);
+}
+
+.cierre-texto {
+  margin: 0 auto 0.9rem;
+  max-width: 34rem;
+  line-height: 1.55;
+  color: var(--pergamino-apagado);
+  font-size: calc(clamp(1.15rem, 0.4vw + 0.9rem, 1.4rem) * var(--escala-texto));
+}
+
 /* ---------- controles del reproductor ---------- */
 
 .controles {

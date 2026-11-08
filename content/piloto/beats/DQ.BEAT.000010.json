@@ -1,0 +1,64 @@
+{
+ "id": "DQ.BEAT.000010",
+ "contract_version": "1.2.0",
+ "scene_id": "DQ.P1.C08.E01.S02",
+ "unit_ids": [
+  "DQ.UN.P1.C08.U05"
+ ],
+ "order": 9,
+ "kind": "DIALOGO",
+ "avance_automatico": null,
+ "utterances": [
+  {
+   "utterance_id": "DQ.INT.000014",
+   "speaker": {
+    "tipo": "personaje",
+    "person_id": "DQ.PER.0001",
+    "label": "Don Quijote"
+   },
+   "texto_visible": "— Calla, amigo Sancho —respondió don Quijote—, que las cosas de la guerra,\nmás que otras, están sujetas a continua mudanza; cuanto más, que yo pienso,\ny es así verdad, que aquel sabio Frestón que me robó el aposento y los\nlibros ha vuelto estos gigantes en molinos por quitarme la gloria de su\nvencimiento: tal es la enemistad que me tiene; mas, al cabo al cabo, han de\npoder poco sus malas artes contra la bondad de mi espada.",
+   "text_kind": "CITA_LITERAL",
+   "passage_ids": [
+    "DQ.P1.C08.P0016"
+   ],
+   "localizador": "PG 2000 (DQ.SRC.0005) offset 125065-125492 (indexación LF); líneas 2614-2619 del fichero",
+   "nota_editorial": "FICHA_ESCENA_P1_C08_MOLINOS §3 (propuesta 1.1); texto literal PG #2000.",
+   "incisos_narrador": [
+    "—respondió don Quijote—"
+   ],
+   "texto_oral": "Calla, amigo Sancho, que las cosas de la guerra, más que otras, están sujetas a continua mudanza; cuanto más, que yo pienso, y es así verdad, que aquel sabio Frestón que me robó el aposento y los libros ha vuelto estos gigantes en molinos por quitarme la gloria de su vencimiento: tal es la enemistad que me tiene; mas, al cabo al cabo, han de poder poco sus malas artes contra la bondad de mi espada."
+  },
+  {
+   "utterance_id": "DQ.INT.000015",
+   "speaker": {
+    "tipo": "personaje",
+    "person_id": "DQ.PER.0002",
+    "label": "Sancho Panza"
+   },
+   "texto_visible": "— Dios lo haga como puede —respondió Sancho Panza.",
+   "text_kind": "CITA_LITERAL",
+   "passage_ids": [
+    "DQ.P1.C08.P0016"
+   ],
+   "localizador": "PG 2000 (DQ.SRC.0005) offset 125494-125544 (indexación LF); líneas 2621-2621 del fichero",
+   "nota_editorial": "FICHA_ESCENA_P1_C08_MOLINOS §3 (propuesta 1.1); texto literal PG #2000.",
+   "incisos_narrador": [
+    "—respondió Sancho Panza."
+   ],
+   "texto_oral": "Dios lo haga como puede"
+  }
+ ],
+ "visual_asset_ids": [
+  "DQ.MA.901012"
+ ],
+ "manual_advance_allowed": true,
+ "replay_allowed": true,
+ "reduced_motion_fallback": true,
+ "entry_condition": "SECUENCIA_CANONICA",
+ "exit_condition": "FIN_DE_BEAT_O_AVANCE_MANUAL",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ }
+}

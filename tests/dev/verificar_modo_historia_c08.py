@@ -4,10 +4,12 @@
 
 Comprueba, contra el paquete real (content/piloto) y la edición PG #2000
 almacenada (DQ.SRC.0005):
-  1. El paquete declara contract_version 1.2.0 y lista 2 escenas y 9 beats.
+  1. El paquete declara contract_version 1.2.0 y lista 2 escenas y 10 beats
+   (montaje A01: B08 parte I13; beat nuevo order 9 con I14-I15; B09 order 10).
   2. Las escenas S01/S02 son neutras (media_ids: []) y del episodio DQ.P1.C08.E01.
-  3. Los 9 beats tienen order 1..9 únicos, kinds según la ficha y
-     visual_asset_ids: [] (fondo neutro deliberado, v1.2.0).
+  3. Los 10 beats tienen order 1..10 únicos, kinds según la ficha;
+     B01–B06 neutro deliberado y B07–B10 declaran los planos A01 en sus
+     umbrales (N11 tras I11; N12 en I13; N13 en I14-I15; N16 con I16).
   4. Las 16 intervenciones I01–I16 conservan hablante y orden de la ficha
      (6 NARRADOR, 6 DON QUIJOTE, 4 SANCHO); ids DQ.INT.000001..000016 únicos.
   5. Todo texto_visible es EXACTAMENTE el segmento PG #2000 en el offset que
@@ -46,7 +48,7 @@ def main() -> int:
     # 1. versión del paquete y presencia del vertical
     comprobar(manifest["contract_version"] == "1.2.0",
               f"contract_version del paquete es {manifest['contract_version']}, esperaba 1.2.0")
-    for clave, n in (("scenes", 2), ("beats", 9)):
+    for clave, n in (("scenes", 2), ("beats", 10)):
         comprobar(len(manifest["files"].get(clave, [])) == n,
                   f"files['{clave}'] tiene {len(manifest['files'].get(clave, []))} entradas, esperaba {n}")
 
@@ -62,7 +64,7 @@ def main() -> int:
 
     # 2. escenas neutras del episodio de los molinos
     for sid, orden_beats in (("DQ.P1.C08.E01.S01", (1, 2, 3, 4, 5, 6)),
-                             ("DQ.P1.C08.E01.S02", (7, 8, 9))):
+                             ("DQ.P1.C08.E01.S02", (7, 8, 9, 10))):
         escena = escenas.get(sid)
         comprobar(escena is not None, f"falta la escena {sid}")
         if not escena:
@@ -75,18 +77,26 @@ def main() -> int:
         ids = sorted(b["order"] for b in beats.values() if b.get("scene_id") == sid)
         comprobar(tuple(ids) == orden_beats, f"{sid}: orders de beats {ids} != {list(orden_beats)}")
 
-    # 3. kinds por beat según la ficha §2 (B09 como NARRACION; sin SILENCIO)
+    # 3. kinds y planos por order según la ficha §2 y el montaje A01 de
+    # Dirección (B09 como NARRACION; sin SILENCIO). Planos: B01-B06 neutro;
+    # B07 N11 tras I11; B08 N12 en I13; order 9 (beat nuevo) N13 en I14-I15;
+    # B09 (order 10) N16 con I16.
     KINDS = {1: "NARRACION", 2: "DIALOGO", 3: "DIALOGO", 4: "DIALOGO", 5: "ACCION",
-             6: "ACCION", 7: "ACCION", 8: "DIALOGO", 9: "NARRACION"}
+             6: "ACCION", 7: "ACCION", 8: "DIALOGO", 9: "DIALOGO", 10: "NARRACION"}
+    PLANOS = {7: ["DQ.MA.901010"], 8: ["DQ.MA.901011"],
+              9: ["DQ.MA.901012"], 10: ["DQ.MA.901013"]}
+    por_orden = {b.get("order"): b for b in beats.values()}
+    comprobar(sorted(por_orden) == list(range(1, 11)),
+              f"orders de beat {sorted(por_orden)} != 1..10")
     for orden, kind in KINDS.items():
-        beat = beats.get(f"DQ.BEAT.{orden:06d}")
-        comprobar(beat is not None, f"falta DQ.BEAT.{orden:06d}")
+        beat = por_orden.get(orden)
+        comprobar(beat is not None, f"falta el beat de order {orden}")
         if not beat:
             continue
-        comprobar(beat.get("order") == orden, f"beat {beat.get('id')}: order {beat.get('order')}")
         comprobar(beat.get("kind") == kind, f"beat {beat['id']}: kind {beat.get('kind')}, esperaba {kind}")
-        comprobar(beat.get("visual_asset_ids") == [],
-                  f"beat {beat['id']}: visual_asset_ids != [] (v1 sin imagen)")
+        esperados = PLANOS.get(orden, [])
+        comprobar(beat.get("visual_asset_ids") == esperados,
+                  f"beat {beat['id']}: visual_asset_ids {beat.get('visual_asset_ids')} != {esperados}")
         comprobar(beat.get("manual_advance_allowed") is True and beat.get("replay_allowed") is True,
                   f"beat {beat['id']}: controles no habilitados")
     comprobar(all(b.get("kind") != "SILENCIO" for b in beats.values()),
@@ -101,8 +111,8 @@ def main() -> int:
                 "DQ.PER.0001", None, "DQ.PER.0001", None, "DQ.PER.0001", None, None,
                 "DQ.PER.0002", "DQ.PER.0001", "DQ.PER.0002", None]
     intervenciones: list[dict] = []
-    for orden in range(1, 10):
-        beat = beats.get(f"DQ.BEAT.{orden:06d}")
+    for orden in range(1, 11):
+        beat = por_orden.get(orden)
         if beat:
             intervenciones.extend(beat.get("utterances", []))
     comprobar(len(intervenciones) == 16, f"total intervenciones {len(intervenciones)}, esperaba 16")
@@ -176,7 +186,7 @@ def main() -> int:
         for f in FALLOS:
             print("  -", f)
         return 1
-    print("VERIFICACIÓN MODO HISTORIA OK: 2 escenas neutras, 9 beats, 16 intervenciones "
+    print("VERIFICACIÓN MODO HISTORIA OK: 2 escenas neutras, 10 beats (montaje A01), 16 intervenciones "
           "I01–I16 verbatim contra PG #2000 (offsets y SHA-256), proyección oral válida")
     return 0
 

@@ -1,0 +1,34 @@
+{
+ "id": "DQ.MA.901013",
+ "contract_version": "1.0.0",
+ "function": "post_desenlace",
+ "media_class": "RECREACION_IA",
+ "logical_uri": "assets://scenes/part_1/chapter_08/p1_c08_story_n16_camino.webp",
+ "derivatives": [
+  {
+   "variant": "original",
+   "format": "webp",
+   "width": 2560,
+   "height": 1440,
+   "size_bytes": 683756,
+   "sha256": "sha256:804d24706e318075d2693e198645471b0ec4cbad08152abf0d87325867df0547"
+  }
+ ],
+ "alt": "Don Quijote y Sancho se alejan a caballo por el camino manchego tras el episodio, con los molinos pequeños en el horizonte.",
+ "source_id": "DQ.SRC.0003",
+ "license_id": "DQ.LIC.0002",
+ "author": "Equipo de arte El_Quijote_App (recreación IA)",
+ "date": "2026-11-08",
+ "allowed_uses": [
+  "uso_personal_app",
+  "almacenamiento_repo_git"
+ ],
+ "license_status": "verificada",
+ "provenance": "Recreación IA del proyecto (OpenAI ImageGen, 2026-11-08, encargo artístico A01 — PR #67); referencias encadenadas de continuidad del propio lote y del repositorio (personajes_referencia, molinos_pre, frailes_carreta_pre); rotulada RECREACION_ARTISTICA (nunca evidencia histórica). Plano narrativo N16 (continuación del camino; sin lanza intacta); desde I16 (beat B09). sha256, dimensiones (2560×1440) y tamaño verificados contra el fichero en la catalogación. Revisión editorial de Dirección del lote A01 pendiente (PR #67: control de producción, no aprobación definitiva); permisos acreditados: uso_personal_app y almacenamiento_repo_git — redistribución no acreditada.",
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "spoiler_level": "leve"
+}

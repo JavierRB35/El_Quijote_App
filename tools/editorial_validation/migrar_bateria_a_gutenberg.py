@@ -12,6 +12,9 @@ Los saltos de línea del txt de PG se distinguen por estructura literaria
 unen; párrafos (\n\n), parlamentos (línea que empieza por «—») y versos
 (bloques de líneas cortas) se PRESERVAN. Las palabras extraídas nunca se
 alteran (2026-11-08, corrección de Dirección sobre la primera versión).
+RESTRICCIÓN DE LÍMITES DE CAPÍTULO (`limites_capitulo.py`, incidencia P1
+sangrado I,20→I,21): ningún pasaje ni cita puede cruzar la frontera de su
+capítulo; los hallazgos fuzzy que la crucen se bloquean y se registran.
 Crea la Edition DQ.ED.0003 y rehace passages + evidencias.
 El lector sigue mostrando el EPUB Tusell (DQ.ED.0001); la correspondencia
 queda en el campo anchor de cada pasaje.
@@ -21,6 +24,7 @@ import sys, os, re, json, hashlib, unicodedata
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from estructura_texto import estructurar_segmento  # noqa: E402
+from limites_capitulo import dentro, rango_de_capitulo  # noqa: E402
 
 REPO = sys.argv[1] if len(sys.argv) > 1 else "."
 PKG = os.path.join(REPO, "content", "piloto")
@@ -151,6 +155,15 @@ def migrar_pasaje(rel):
     if not loc:
         return None
     i0, i1, variantes = loc
+    # RESTRICCIÓN DE LÍMITES DE CAPÍTULO (incidencia P1: sangrado I,20→I,21):
+    # un pasaje NUNCA puede capturar contenido del capítulo anterior o
+    # siguiente. Si el hallazgo fuzzy cruza la frontera, se aborta el pasaje
+    # (queda registrado en no_encontrados) en lugar de contaminar el dato.
+    limite = rango_de_capitulo(raw, p["chapter_id"])
+    if not dentro(limite, toks[i0][0], toks[i1 - 1][1]):
+        print("BLOQUEADO por límites de capítulo (%s): hallazgo [%d-%d] fuera de %s"
+              % (p["id"], toks[i0][0], toks[i1 - 1][1], limite))
+        return None
     nuevo = recortar_estructurado(toks[i0][0], toks[i1 - 1][1])
     p["text_original"] = nuevo
     p.pop("edition_id", None)   # el esquema canónico no lo admite; lo porta el anchor
@@ -182,6 +195,13 @@ for rel in files["questions"]:
         loc = localizar_fuzzy(e["quote"])
         if loc:
             i0, i1, _ = loc
+            # Misma restricción para citas: la cita pertenece al capítulo de
+            # la pregunta y no puede sangrar hacia el anterior o siguiente.
+            limite = rango_de_capitulo(raw, q["chapter_ids"][0])
+            if not dentro(limite, toks[i0][0], toks[i1 - 1][1]):
+                print("BLOQUEADO por límites de capítulo (cita de %s): hallazgo [%d-%d] fuera de %s"
+                      % (q["id"], toks[i0][0], toks[i1 - 1][1], limite))
+                continue
             e["quote"] = recortar_estructurado(toks[i0][0], toks[i1 - 1][1])
             cambio = True
             evid_migradas += 1

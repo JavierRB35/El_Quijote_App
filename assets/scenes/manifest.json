@@ -125,11 +125,11 @@
       "episode_key": "p1:c08",
       "phase": "pre",
       "spoiler_risk": "medium",
-      "relative_path": "assets/scenes/part_1/chapter_08/p1_c08_molinos_pre.webp",
+      "relative_path": "assets/scenes/part_1/chapter_08/p1_c08_molinos_pre_safe_right_v2.webp",
       "width_px": 1672,
       "height_px": 941,
       "mime_type": "image/webp",
-      "sha256": "6bd172fcc4447b4170fa5b735905952e8c69fb6975a8402e4098a84970c680f8",
+      "sha256": "fee6b0ff4ddba1cd848d980f1c8f5f70b81b70472e1610ee266b5a1b358727e1",
       "source_class": "RECREACION_ARTISTICA",
       "generated_with": "OpenAI ImageGen",
       "attribution_es": "Recreación artística generada con IA para El Quijote, 2026",
@@ -139,7 +139,7 @@
       "question_spoiler_validation": "pending_per_question",
       "textual_locator_status": "pending_reference_edition",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Usar solo con preguntas cuya solución no quede anticipada por mostrar los molinos."
+      "review_notes_es": "Usar solo con preguntas cuya solución no quede anticipada por mostrar los molinos. Regeneración 2026-11-08: 30% lateral derecho libre para panel, fotograma original conservado; pendiente prueba UI."
     },
     {
       "id": "p1_c08_molinos_post",
@@ -152,11 +152,11 @@
       "episode_key": "p1:c08",
       "phase": "post",
       "spoiler_risk": "high",
-      "relative_path": "assets/scenes/part_1/chapter_08/p1_c08_molinos_post.webp",
+      "relative_path": "assets/scenes/part_1/chapter_08/p1_c08_molinos_post_safe_right_v2.webp",
       "width_px": 1672,
       "height_px": 941,
       "mime_type": "image/webp",
-      "sha256": "c7da1dbb5182fd9183edec3e042383a5293719ac7d68f6d07519dc12e00d5fdf",
+      "sha256": "ac2e7fdc71f6ab9f54745d52ce25c964001b997bf807a77a9528fc5ba27aeced",
       "source_class": "RECREACION_ARTISTICA",
       "generated_with": "OpenAI ImageGen",
       "attribution_es": "Recreación artística generada con IA para El Quijote, 2026",
@@ -166,7 +166,7 @@
       "question_spoiler_validation": "pending_per_question",
       "textual_locator_status": "pending_reference_edition",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Revelación del resultado: no cargar antes del desenlace."
+      "review_notes_es": "Revelación del resultado: no cargar antes del desenlace. Regeneración 2026-11-08: 30% lateral derecho libre para panel, fotograma original conservado; pendiente prueba UI."
     },
     {
       "id": "p1_c11_cabreros_pre",
@@ -4283,11 +4283,11 @@
       "episode_key": "p1:c08",
       "phase": "pre",
       "spoiler_risk": "low",
-      "relative_path": "assets/scenes/part_1/chapter_08/p1_c08_frailes_carreta_pre.webp",
+      "relative_path": "assets/scenes/part_1/chapter_08/p1_c08_frailes_carreta_pre_safe_right_v2.webp",
       "width_px": 1672,
       "height_px": 941,
       "mime_type": "image/webp",
-      "sha256": "c69a9c35047e60655ea9a607ac0db28cef2447748c998950fbeea8ac97a21d35",
+      "sha256": "68db0debf4b093e3ffadf05e28b6bceb5623618699a5e1e24b502705a9cbbd82",
       "source_class": "RECREACION_ARTISTICA",
       "generated_with": "OpenAI ImageGen",
       "attribution_es": "Recreación artística generada con IA para El Quijote, 2026",
@@ -4297,7 +4297,7 @@
       "question_spoiler_validation": "pending_per_question",
       "textual_locator_status": "pending_reference_edition",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Momento narrativo adicional; cotejo editorial y riesgo de spoilers pendientes."
+      "review_notes_es": "Momento narrativo adicional; cotejo editorial y riesgo de spoilers pendientes. Regeneración 2026-11-08: 30% lateral derecho libre para panel, fotograma original conservado; pendiente prueba UI."
     },
     {
       "id": "p1_c10_sancho_alforjas_pre",
@@ -6227,11 +6227,11 @@
       "episode_key": "p1:c08",
       "phase": "pre",
       "spoiler_risk": "low",
-      "relative_path": "assets/scenes/part_1/chapter_08/p1_c08_molinos_siluetas_pre.webp",
+      "relative_path": "assets/scenes/part_1/chapter_08/p1_c08_molinos_siluetas_pre_safe_right_v2.webp",
       "width_px": 1672,
       "height_px": 941,
       "mime_type": "image/webp",
-      "sha256": "7fbb9e371c78443ba68b80fd343d82f533ce5c539d9ee75fdfd1b0a79c4a3fac",
+      "sha256": "8bf4c3dbed26a07d8547bcda5e6b939dbe1270363ffbd855f033546c561d4342",
       "source_class": "RECREACION_ARTISTICA",
       "generated_with": "OpenAI ImageGen",
       "attribution_es": "Recreación artística generada con IA para El Quijote, 2026",
@@ -6241,7 +6241,7 @@
       "question_spoiler_validation": "pending_per_question",
       "textual_locator_status": "pending_reference_edition",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Momento o encuadre adicional seleccionado contra el catálogo previo; pendiente cotejo de fidelidad narrativa y validación de spoilers."
+      "review_notes_es": "Momento o encuadre adicional seleccionado contra el catálogo previo; pendiente cotejo de fidelidad narrativa y validación de spoilers. Regeneración 2026-11-08: 30% lateral derecho libre para panel, fotograma original conservado; pendiente prueba UI."
     },
     {
       "id": "p1_c10_sancho_alforjas_heridas_pre",

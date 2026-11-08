@@ -1,0 +1,391 @@
+{
+  "schema": "composition_audit/1.0",
+  "audited_on": "2026-11-08",
+  "repository": "JavierRB35/El_Quijote_App",
+  "base_main_sha": "921237af0c364418d64f12735ce4c7231dc54c0a",
+  "scope": "Capítulo VIII, ambas partes; prioridad piloto P1 C08",
+  "safe_zone_policy": {
+    "preferred": "lateral",
+    "minimum_fraction": 0.25,
+    "target_fraction": 0.3,
+    "bottom_fallback_fraction": 0.2,
+    "overlay_must_not_cover": "rostros, manos, gesto, objeto decisivo ni información para responder"
+  },
+  "totals": {
+    "reviewed": 20,
+    "part_1": 18,
+    "part_2": 2,
+    "apta_sin_cambios": 6,
+    "apta_con_recorte_reencuadre": 0,
+    "requiere_regeneracion": 14
+  },
+  "editorial_status": "preseleccion visual, pendiente pruebas de integración y revisión editorial; no cambia review.state de recursos canonicos",
+  "assets": [
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_frailes_carreta_pre.webp",
+      "original_git_blob_sha": "078df62139feebc15335586f98877ea4fa7c4fce",
+      "original_bytes": 289418,
+      "classification": "requiere_regeneracion",
+      "safe_side": "right",
+      "safe_fraction": 0.3,
+      "reason_es": "Los dos frailes y la carroza llenan la derecha, mientras Quijote y Sancho ocupan la izquierda.",
+      "action": "regenerar",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_frailes_carreta_pre_safe_right_v2.webp",
+      "visual_note_es": "Banda lateral derecha ≈30 %: cielo, campo y camino; sujetos, gestos y objetos decisivos quedan en los dos tercios izquierdos.",
+      "final_webp": {
+        "width_px": 1672,
+        "height_px": 941,
+        "size_bytes": 321102,
+        "sha256": "68db0debf4b093e3ffadf05e28b6bceb5623618699a5e1e24b502705a9cbbd82",
+        "generated_with": "OpenAI ImageGen",
+        "review_state": "borrador"
+      },
+      "method": "regeneracion_ia"
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_molinos_post.webp",
+      "original_git_blob_sha": "653a3d9eae11d932ac271db35b34e35c0bccb51e",
+      "original_bytes": 301808,
+      "classification": "requiere_regeneracion",
+      "safe_side": "right",
+      "safe_fraction": 0.3,
+      "reason_es": "Sancho, Quijote, Rocinante y la lanza rota se distribuyen hasta los bordes y el suelo inferior.",
+      "action": "regenerar",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_molinos_post_safe_right_v2.webp",
+      "visual_note_es": "Banda lateral derecha ≈30 %: cielo, campo y camino; sujetos, gestos y objetos decisivos quedan en los dos tercios izquierdos.",
+      "final_webp": {
+        "width_px": 1672,
+        "height_px": 941,
+        "size_bytes": 253460,
+        "sha256": "ac2e7fdc71f6ab9f54745d52ce25c964001b997bf807a77a9528fc5ba27aeced",
+        "generated_with": "OpenAI ImageGen",
+        "review_state": "borrador"
+      },
+      "method": "regeneracion_ia"
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_molinos_pre.webp",
+      "original_git_blob_sha": "bef44d1572f39b820fc6376ff24dba5f8c47cbbd",
+      "original_bytes": 304644,
+      "classification": "requiere_regeneracion",
+      "safe_side": "right",
+      "safe_fraction": 0.3,
+      "reason_es": "Los molinos decisivos ocupan el lateral derecho; el izquierdo contiene los gestos de Quijote y Sancho.",
+      "action": "regenerar",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_molinos_pre_safe_right_v2.webp",
+      "visual_note_es": "Banda lateral derecha ≈30 %: cielo, campo y camino; sujetos, gestos y objetos decisivos quedan en los dos tercios izquierdos.",
+      "final_webp": {
+        "width_px": 1672,
+        "height_px": 941,
+        "size_bytes": 310438,
+        "sha256": "fee6b0ff4ddba1cd848d980f1c8f5f70b81b70472e1610ee266b5a1b358727e1",
+        "generated_with": "OpenAI ImageGen",
+        "review_state": "borrador"
+      },
+      "method": "regeneracion_ia"
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_molinos_siluetas_pre.webp",
+      "original_git_blob_sha": "7d77e6e2a38743ff4dcd408cbf76955219c42fe7",
+      "original_bytes": 291882,
+      "classification": "requiere_regeneracion",
+      "safe_side": "right",
+      "safe_fraction": 0.3,
+      "reason_es": "La banda derecha oculta molinos; el borde izquierdo y la base ocupan ambas monturas.",
+      "action": "regenerar",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_molinos_siluetas_pre_safe_right_v2.webp",
+      "visual_note_es": "Banda lateral derecha ≈30 %: cielo, campo y camino; sujetos, gestos y objetos decisivos quedan en los dos tercios izquierdos.",
+      "final_webp": {
+        "width_px": 1672,
+        "height_px": 941,
+        "size_bytes": 235884,
+        "sha256": "8bf4c3dbed26a07d8547bcda5e6b939dbe1270363ffbd855f033546c561d4342",
+        "generated_with": "OpenAI ImageGen",
+        "review_state": "borrador"
+      },
+      "method": "regeneracion_ia"
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_question_000101.webp",
+      "original_git_blob_sha": "44d837ef90f4483d13aac730b6ac4ebea6c0a995",
+      "original_bytes": 499052,
+      "classification": "requiere_regeneracion",
+      "safe_side": "right",
+      "safe_fraction": 0.3,
+      "reason_es": "Sancho y el rucio ocupan el extremo derecho, y Quijote ocupa el izquierdo; tampoco debe anticipar la respuesta mostrando aspas.",
+      "action": "regenerar",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_question_000101_safe_right_v2.webp",
+      "visual_note_es": "Banda lateral derecha ≈30 %: cielo, campo y camino; sujetos, gestos y objetos decisivos quedan en los dos tercios izquierdos.",
+      "final_webp": {
+        "width_px": 1672,
+        "height_px": 941,
+        "size_bytes": 227868,
+        "sha256": "4769cddd9350ac4350a823010fa27276b81ebd4dd40a99fb3b40a5e87dba895e",
+        "generated_with": "OpenAI ImageGen",
+        "review_state": "borrador"
+      },
+      "method": "regeneracion_ia"
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_question_000105.webp",
+      "original_git_blob_sha": "d785ec174f93c33e3d5489c639031f62a80719c5",
+      "original_bytes": 483782,
+      "classification": "requiere_regeneracion",
+      "safe_side": "right",
+      "safe_fraction": 0.3,
+      "reason_es": "El molino cubre la derecha y Rocinante la banda inferior; la lanza cruza el centro.",
+      "action": "regenerar",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_question_000105_safe_right_v2.webp",
+      "visual_note_es": "Banda lateral derecha ≈30 %: cielo, campo y camino; sujetos, gestos y objetos decisivos quedan en los dos tercios izquierdos.",
+      "final_webp": {
+        "width_px": 1672,
+        "height_px": 941,
+        "size_bytes": 233278,
+        "sha256": "a8ce9b56858f88a7eea9f89e8d83b21027f80ac00c6312058dbc93c058bd8ef3",
+        "generated_with": "OpenAI ImageGen",
+        "review_state": "borrador"
+      },
+      "method": "regeneracion_ia"
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_question_000106.webp",
+      "original_git_blob_sha": "0c05016d57dad0fc250ff7f2990b494571da20b7",
+      "original_bytes": 545510,
+      "classification": "apta_sin_cambios",
+      "safe_side": "left",
+      "safe_fraction": 0.25,
+      "reason_es": "El lateral izquierdo contiene cardos, piedras y cielo; el molino clave permanece fuera de la zona segura.",
+      "action": "ninguno",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_question_000106.webp",
+      "visual_note_es": "Banda izquierda ≈25 %: El lateral izquierdo contiene cardos, piedras y cielo; el molino clave permanece fuera de la zona segura."
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_question_000108.webp",
+      "original_git_blob_sha": "ae2eec23c1c7933a10b0a19397510890b9ce65c5",
+      "original_bytes": 680534,
+      "classification": "apta_sin_cambios",
+      "safe_side": "left",
+      "safe_fraction": 0.25,
+      "reason_es": "La izquierda ofrece olivo y paisaje sin cubrir los jinetes ni las decisiones de ordenación.",
+      "action": "ninguno",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_question_000108.webp",
+      "visual_note_es": "Banda izquierda ≈25 %: La izquierda ofrece olivo y paisaje sin cubrir los jinetes ni las decisiones de ordenación."
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_question_000109.webp",
+      "original_git_blob_sha": "1d884e64e32d44491aee6f1cf5202f4eb39eb070",
+      "original_bytes": 448406,
+      "classification": "requiere_regeneracion",
+      "safe_side": "right",
+      "safe_fraction": 0.3,
+      "reason_es": "Los protagonistas y sus monturas ocupan ambos laterales e impiden una banda natural continua.",
+      "action": "regenerar",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_question_000109_safe_right_v2.webp",
+      "visual_note_es": "Banda lateral derecha ≈30 %: cielo, campo y camino; sujetos, gestos y objetos decisivos quedan en los dos tercios izquierdos.",
+      "final_webp": {
+        "width_px": 1672,
+        "height_px": 941,
+        "size_bytes": 175938,
+        "sha256": "3419259b14b0f122a99b27cdfaac2f1419831f13a9d73c3838ff632fae4500d4",
+        "generated_with": "OpenAI ImageGen",
+        "review_state": "borrador"
+      },
+      "method": "regeneracion_ia"
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_question_000111.webp",
+      "original_git_blob_sha": "dd8a3660d2a76229db7865b68f046c96982b0558",
+      "original_bytes": 514404,
+      "classification": "requiere_regeneracion",
+      "safe_side": "right",
+      "safe_fraction": 0.3,
+      "reason_es": "El Quijote y la dama/carroza ocupan los lados opuestos; solo queda una franja estrecha no útil.",
+      "action": "regenerar",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_question_000111_safe_right_v2.webp",
+      "visual_note_es": "Banda lateral derecha ≈30 %: cielo, campo y camino; sujetos, gestos y objetos decisivos quedan en los dos tercios izquierdos.",
+      "final_webp": {
+        "width_px": 1672,
+        "height_px": 941,
+        "size_bytes": 231646,
+        "sha256": "ff4a5c2948857a4783b6a4090e3fd3e55b42cf1fc1d51a515f9b1461dca8d476",
+        "generated_with": "OpenAI ImageGen",
+        "review_state": "borrador"
+      },
+      "method": "regeneracion_ia"
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_story_a02_nf1_fraile_caido.webp",
+      "original_git_blob_sha": "bc7761c2653001f0f4f76e73401b9c296d985482",
+      "original_bytes": 657256,
+      "classification": "requiere_regeneracion",
+      "safe_side": "right",
+      "safe_fraction": 0.3,
+      "reason_es": "El fraile caído ocupa la base central; a la derecha hay animales y personajes secundarios aún narrativos.",
+      "action": "regenerar",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_story_a02_nf1_fraile_caido_safe_right_v2.webp",
+      "visual_note_es": "Banda lateral derecha ≈30 %: cielo, campo y camino; sujetos, gestos y objetos decisivos quedan en los dos tercios izquierdos.",
+      "final_webp": {
+        "width_px": 1672,
+        "height_px": 941,
+        "size_bytes": 314010,
+        "sha256": "beb0423176df55fa9e12751375914909cb02c7735d21cd6ce501b75ed6812e44",
+        "generated_with": "OpenAI ImageGen",
+        "review_state": "borrador"
+      },
+      "method": "regeneracion_ia"
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_story_a02_nf2_sancho_criados.webp",
+      "original_git_blob_sha": "5a4ad054695b52ac0c992441a1b694b0356861a2",
+      "original_bytes": 538290,
+      "classification": "requiere_regeneracion",
+      "safe_side": "right",
+      "safe_fraction": 0.3,
+      "reason_es": "Los gestos de la agresión y el fraile se expanden de lado a lado; la base contiene cuerpos.",
+      "action": "regenerar",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_story_a02_nf2_sancho_criados_safe_right_v2.webp",
+      "visual_note_es": "Banda lateral derecha ≈30 %: cielo, campo y camino; sujetos, gestos y objetos decisivos quedan en los dos tercios izquierdos.",
+      "final_webp": {
+        "width_px": 1672,
+        "height_px": 941,
+        "size_bytes": 334490,
+        "sha256": "bf896850681b920da068d8ac4ba08f1c45b277c011d79aab3c3382154a87423a",
+        "generated_with": "OpenAI ImageGen",
+        "review_state": "borrador"
+      },
+      "method": "regeneracion_ia"
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_story_a02_nv1_duelo_suspendido.webp",
+      "original_git_blob_sha": "7ac4594997239e5e22e122ab9c8bfb6a81b8d562",
+      "original_bytes": 639692,
+      "classification": "requiere_regeneracion",
+      "safe_side": "right",
+      "safe_fraction": 0.3,
+      "reason_es": "Los espadachines y las espadas ocupan los dos extremos; abajo quedan monturas y acción.",
+      "action": "regenerar",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_story_a02_nv1_duelo_suspendido_safe_right_v2.webp",
+      "visual_note_es": "Banda lateral derecha ≈30 %: cielo, campo y camino; sujetos, gestos y objetos decisivos quedan en los dos tercios izquierdos.",
+      "final_webp": {
+        "width_px": 1672,
+        "height_px": 941,
+        "size_bytes": 297374,
+        "sha256": "ce3afa65a4ce31e3eb7c95ce6c81178886bfb0bf8e9844a187cdf3690df2ff3e",
+        "generated_with": "OpenAI ImageGen",
+        "review_state": "borrador"
+      },
+      "method": "regeneracion_ia"
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_story_n11_caida.webp",
+      "original_git_blob_sha": "bf88e801e5c8685898ee79eaef6bc54a6961d34c",
+      "original_bytes": 614058,
+      "classification": "requiere_regeneracion",
+      "safe_side": "right",
+      "safe_fraction": 0.3,
+      "reason_es": "Quijote y Rocinante están en extremos opuestos; abajo quedan la caída y la lanza rota.",
+      "action": "regenerar",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_story_n11_caida_safe_right_v2.webp",
+      "visual_note_es": "Banda lateral derecha ≈30 %: cielo, campo y camino; sujetos, gestos y objetos decisivos quedan en los dos tercios izquierdos.",
+      "final_webp": {
+        "width_px": 1672,
+        "height_px": 941,
+        "size_bytes": 266802,
+        "sha256": "294fc44048544d8d901cc007be8f4439ee56ba049431a51723de6ed5f59c3d6c",
+        "generated_with": "OpenAI ImageGen",
+        "review_state": "borrador"
+      },
+      "method": "regeneracion_ia"
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_story_n12_socorro.webp",
+      "original_git_blob_sha": "76eff6a55534f6cf54af3d0ec643074cecc0561b",
+      "original_bytes": 639600,
+      "classification": "requiere_regeneracion",
+      "safe_side": "right",
+      "safe_fraction": 0.3,
+      "reason_es": "Sancho ocupa la izquierda; la caída y Rocinante, la derecha; abajo hay acción de galope.",
+      "action": "regenerar",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_story_n12_socorro_safe_right_v2.webp",
+      "visual_note_es": "Banda lateral derecha ≈30 %: cielo, campo y camino; sujetos, gestos y objetos decisivos quedan en los dos tercios izquierdos.",
+      "final_webp": {
+        "width_px": 1672,
+        "height_px": 941,
+        "size_bytes": 253744,
+        "sha256": "974313a793534633c83eba99ad0eeeaca37640afa868bfdfebe441a4c49d9c7b",
+        "generated_with": "OpenAI ImageGen",
+        "review_state": "borrador"
+      },
+      "method": "regeneracion_ia_y_correccion_de_molino_intacto"
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_story_n13_dialogo.webp",
+      "original_git_blob_sha": "c602bcfce44ce9091ec82d5eec1292015ddef496",
+      "original_bytes": 569690,
+      "classification": "requiere_regeneracion",
+      "safe_side": "right",
+      "safe_fraction": 0.3,
+      "reason_es": "Los rostros y manos en conversación ocupan la imagen completa; abajo aparece la lanza.",
+      "action": "regenerar",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_story_n13_dialogo_safe_right_v2.webp",
+      "visual_note_es": "Banda lateral derecha ≈30 %: cielo, campo y camino; sujetos, gestos y objetos decisivos quedan en los dos tercios izquierdos.",
+      "final_webp": {
+        "width_px": 1672,
+        "height_px": 941,
+        "size_bytes": 279964,
+        "sha256": "d51d8fe0534b8e62a8df5b2eab2ca8629f3fe400d5226223c50e18a96d6ae2ec",
+        "generated_with": "OpenAI ImageGen",
+        "review_state": "borrador"
+      },
+      "method": "regeneracion_ia"
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_story_n16_camino.webp",
+      "original_git_blob_sha": "96dfda51848e3b2a50e4935d3075a096661f7b01",
+      "original_bytes": 683756,
+      "classification": "apta_sin_cambios",
+      "safe_side": "right",
+      "safe_fraction": 0.25,
+      "reason_es": "El extremo derecho es camino, campo y vegetación; los dos jinetes permanecen a la izquierda.",
+      "action": "ninguno",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_story_n16_camino.webp",
+      "visual_note_es": "Banda derecha ≈25 %: El extremo derecho es camino, campo y vegetación; los dos jinetes permanecen a la izquierda."
+    },
+    {
+      "original_path": "assets/scenes/part_1/chapter_08/p1_c08_vizcaino_camino_pre.webp",
+      "original_git_blob_sha": "276d9d8032c8b956a79deab4c7029cec908e50e7",
+      "original_bytes": 290116,
+      "classification": "apta_sin_cambios",
+      "safe_side": "right",
+      "safe_fraction": 0.25,
+      "reason_es": "La disputa está en la zona izquierda-central; el lado derecho muestra camino y pueblo secundario.",
+      "action": "ninguno",
+      "final_path": "assets/scenes/part_1/chapter_08/p1_c08_vizcaino_camino_pre.webp",
+      "visual_note_es": "Banda derecha ≈25 %: La disputa está en la zona izquierda-central; el lado derecho muestra camino y pueblo secundario."
+    },
+    {
+      "original_path": "assets/scenes/part_2/chapter_08/p2_c08_oracion_camino_pre.webp",
+      "original_git_blob_sha": "8c61f83fcac93111b5b2e8d3e920077d9db120a5",
+      "original_bytes": 240696,
+      "classification": "apta_sin_cambios",
+      "safe_side": "right",
+      "safe_fraction": 0.25,
+      "reason_es": "La oración y la reacción de Sancho están a la izquierda; a la derecha queda campo y arquitectura lejana.",
+      "action": "ninguno",
+      "final_path": "assets/scenes/part_2/chapter_08/p2_c08_oracion_camino_pre.webp",
+      "visual_note_es": "Banda derecha ≈25 %: La oración y la reacción de Sancho están a la izquierda; a la derecha queda campo y arquitectura lejana."
+    },
+    {
+      "original_path": "assets/scenes/part_2/chapter_08/p2_c08_toboso_noche_pre.webp",
+      "original_git_blob_sha": "d3673ffebbc1ed68e5439b1717cf8658c9613ed8",
+      "original_bytes": 276746,
+      "classification": "apta_sin_cambios",
+      "safe_side": "right",
+      "safe_fraction": 0.28,
+      "reason_es": "Quijote y Sancho viajan por la izquierda; la calle nocturna vacía admite texto a la derecha.",
+      "action": "ninguno",
+      "final_path": "assets/scenes/part_2/chapter_08/p2_c08_toboso_noche_pre.webp",
+      "visual_note_es": "Banda derecha ≈28 %: Quijote y Sancho viajan por la izquierda; la calle nocturna vacía admite texto a la derecha."
+    }
+  ]
+}

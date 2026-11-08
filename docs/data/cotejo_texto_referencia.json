@@ -362,8 +362,8 @@
    "tipo": "pasaje",
    "id": "DQ.P1.C21.P0001",
    "contexto": "DQ.P1.C21",
-   "palabras_ok": 124,
-   "palabras_totales": 124,
+   "palabras_ok": 82,
+   "palabras_totales": 82,
    "estado": "OK"
   },
   {
@@ -994,8 +994,8 @@
    "tipo": "evidencia",
    "id": "DQ.Q.000313",
    "contexto": "DQ.P1.C21.E01",
-   "palabras_ok": 124,
-   "palabras_totales": 124,
+   "palabras_ok": 58,
+   "palabras_totales": 58,
    "estado": "OK"
   },
   {
@@ -1042,8 +1042,8 @@
    "tipo": "evidencia",
    "id": "DQ.Q.000318",
    "contexto": "DQ.P1.C21.E01",
-   "palabras_ok": 124,
-   "palabras_totales": 124,
+   "palabras_ok": 58,
+   "palabras_totales": 58,
    "estado": "OK"
   },
   {

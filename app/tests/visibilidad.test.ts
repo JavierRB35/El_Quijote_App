@@ -173,11 +173,13 @@ test('conservación de progreso P0: al desbloquearse Q.107 su respuesta anterior
 });
 
 test('conservación de progreso P0: entradas desconocidas o malformadas no son respuestas válidas', () => {
-  const idsConocidos = new Set(['DQ.Q.000101', 'DQ.Q.000103']);
+  const idsConocidos = new Set(['DQ.Q.000101', 'DQ.Q.000103', 'DQ.Q.000105', 'DQ.Q.000106']);
   const guardadas = respuestasGuardadas(
     JSON.stringify({
       'DQ.Q.000101': { acierto: true, seleccion: ['a'] },
       'DQ.Q.000103': { acierto: false, seleccion: 'roto' }, // malformada
+      'DQ.Q.000105': { acierto: 'false', seleccion: ['a'] }, // no convertir a true
+      'DQ.Q.000106': { acierto: true, seleccion: [123] }, // tipos inválidos
       'DQ.Q.999999': { acierto: true, seleccion: ['x'] }, // desconocida
       basura: { acierto: true, seleccion: [] }, // id fuera del episodio
     }),

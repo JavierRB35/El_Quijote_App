@@ -11,7 +11,8 @@
 
 | Verificación | Resultado |
 |---|---|
-| SHA de referencia `afc72644dc4283ff72f45baa5f85ca79e0498930` | **VIGENTE**: cabeza de `main` en el momento de esta especificación (fusión de PR #52, evaluación R09 D-6). Verificado contra el remoto por API de GitHub y `git log` local |
+| SHA de referencia `afc72644dc4283ff72f45baa5f85ca79e0498930` | **VIGENTE** al iniciar la especificación (cabeza de `main`, fusión de PR #52, evaluación R09 D-6). Verificado contra el remoto por API de GitHub y `git log` local |
+| Movimiento del remoto durante la redacción | `main` avanzó a `6c6e2c9` (PR #53: diseño sonoro R07 de B06–B08 y frontera neutra post-I11). Este documento se **rebasó** sobre el nuevo HEAD; el doc R07 nuevo fue incorporado a la revisión (Anexo A, ítem 15) y es **compatible** con esta especificación: refuerza la distinción «silencio sonoro ≠ imagen neutra», la caducidad post-I11 («invalidar toda imagen de Quijote montado con lanza intacta») y el neutro de B07 con texto I12 íntegro. Sin conflictos detectados. También apareció la rama `feature/r11-validadores-escena-neutra` (no evaluada: fuera de `main`) |
 | Ramas activas revisadas | Solo `main`; ramas `feature/*` listadas en el remoto sin contenido nuevo pertinente para este encargo |
 | Dictámenes leídos íntegros | `ENTREGA_R11_H5_ADR0005.md` (R-V1…R-V12, E-1…E-4, D-1…D-6, CT/FP) · `EVALUACION_R09_D6_ELEGIBILIDAD_CADUCIDAD.md` (A+D, cursor de «intervención presentada», segmentación I.8) |
 | Documentos contrastados | `COMPONENTES_NARRATIVOS_UX.md` (v1.0, 2026-11-06) · `UX_ACCESIBILIDAD.md` (0.2) · `BIBLIA_NARRATIVA…ROLES.md` (§1 TS-001, §3 R08) · `FICHA_ESCENA_P1_C08_MOLINOS.md` (I01–I16, B01–B09; texto I11/I12) · `DIRECCION_SONORA_PILOTO_MODO_HISTORIA.md` (R07, §4–§5) · `DIRECCION_ARTISTICA.md` + `DOSSIER_ARTISTICO_H4.md` (franja TS-001, contraste) · `ESPECIFICACION_FUNCIONAL.md` (EF-HIS-01…04) · `schemas/content/beat.schema.json`, `scene.schema.json`, `schemas/player/profile.schema.json`, `app/src/contrato.ts` |
@@ -241,6 +242,7 @@ Ninguna de estas desalineaciones se ha corregido en este encargo. Todas son docu
 11. `GO_NO_GO_FASE0.md` — estado SIN GO de implementación.
 12. Esquemas: `schemas/content/beat.schema.json` (flags con $comment P0-2/P1-3), `scene.schema.json` (transiciones, accessibility, subtitles_ref), `schemas/player/profile.schema.json` (`text_size`, `reduced_motion`, `subtitles`, `volumes`; sin `avance_automatico`).
 13. `app/src/contrato.ts` — espejo tipado del contrato (sin estados de presentación: coherente con «sin implementación»).
-14. Remoto GitHub (API): SHA de `main` y listado de ramas al 2026-11-08.
+14. Remoto GitHub (API): SHA de `main` y listado de ramas (2026-11-08, dos consultas: `afc7264` al inicio y `6c6e2c9` al publicar).
+15. `DISENO_SONORO_B06_B08_ESCENAS_NEUTRAS.md` + `data/cue_sheet_molinos_b06_b08_neutras.csv` (PR #53, incorporados al remoto durante esta redacción) — coherentes con S-1/S-3/S-5/S-6; sin contradicciones.
 
 *R08 — UX/UI y Accesibilidad. Documento de especificación remitido a R14 para arbitraje. SIN GO.*

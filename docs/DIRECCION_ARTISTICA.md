@@ -125,12 +125,11 @@ Establecer por escena:
 - **Variantes de encuadre:** recorte, plano alternativo o desplazamiento de cámara que cree espacio sin perder una acción o un personaje.
 - **Estados de pantalla:** imagen libre en narración; pregunta; pista; explicación; revelación; subtítulos; menús y accesibilidad ampliada. La zona apta para texto puede cambiar entre estados.
 
-**Orden de resolución cuando no cabe un panel legible sin tapar la imagen:**
+**Orden de resolución VIGENTE (DC-28; sustituye el orden de reencuadre previo) cuando un cuadro de texto no cabe sobre imagen:**
 
-1. Reencuadrar o seleccionar otro plano sin alterar ni anticipar la narración.
-2. Ubicar el texto en una franja lateral o inferior **reservada en la composición**, fuera de las zonas críticas y sin reducir tamaño.
-3. Reorganizar la pantalla en **vista dividida** (escena en un área propia y panel de preguntas en otra), conservando el fotograma esencial.
-4. Utilizar una **pantalla de pregunta dedicada** con fondo atenuado o imagen contextual reducida, siempre que la escena pueda consultarse de nuevo y el usuario no necesite observar detalles ocultos para responder.
+1. **Ensanchar horizontalmente primero** el cuadro dentro de la zona segura real de esa escena/estado/resolución, sin cubrir rostro, gesto, acción, pista, hotspot ni otro elemento relevante; mantener el texto completo y **sin scroll**.
+2. Si sigue sin caber, ajustar espaciado accesorio y **reducir progresivamente el tamaño del texto**, respetando el mínimo legible, contraste, controles y preferencias de accesibilidad. El fondo de todo cuadro sobre imagen será **semitransparente**.
+3. Si la composición sigue sin solución, considerarla **no conforme** y buscar otro plano/encuadre o vista separada autorizada por Dirección, sin omitir texto ni deteriorar el hecho narrativo. No se aceptan recortes, scroll, paneles opacos o letras ilegibles.
 
 **Prohibido resolverlo** reduciendo la letra hasta resultar difícil de leer, acumulando tarjetas sobre protagonistas, aplicando transparencias de contraste dudoso o colocando botones sobre elementos interactivos. Las superposiciones sobre áreas no críticas son admisibles solo cuando mantienen legibilidad y no interfieren en la escena. En ejercicios de identificación visual, la imagen y los hotspots tendrán prioridad: enunciado y opciones deben trasladarse a un área separada si es necesario.
 
@@ -183,7 +182,7 @@ En un piloto representativo y en cada plantilla de pantalla se verificará:
 
 > **Prompt maestro para los equipos:** «Diseñad EL QUIJOTE como una aventura literaria cinematográfica de acabado premium: escenas realistas de composición deliberada, enriquecidas con movimiento ambiental 2.5D y cámara apenas perceptible; dirección de arte rigurosa, continuidad de personajes y una interfaz editorial elegante. Cada texto, subtítulo, pregunta y botón ha de ser grande, legible, accesible y ubicarse fuera de los rostros, acciones, pistas y objetos narrativamente importantes. Definid zonas protegidas y zonas seguras de UI para cada escena y cada estado, adaptando el encuadre o usando un panel separado cuando no exista espacio. Nunca resolváis un conflicto reduciendo tipografía ni tapando la imagen esencial. Priorizad el confort de las personas mayores, sin infantilizarlas, con navegación sencilla, respuestas exclusivamente seleccionadas, ritmo sin presión, narración y subtítulos opcionales, control total del movimiento y funcionamiento offline. Buscad un nivel de detalle y cohesión propio de una producción cultural premium, y someted cada decisión a pruebas de legibilidad, coherencia histórica, accesibilidad y experiencia real de usuario». 
 
-### 9.4. Sustitución específica posterior: DC-28 (2026-11-08)
+### 9.7. Sustitución específica posterior: DC-28 (2026-11-08)
 
 La norma de composición de [DC-28](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md) **prevalece** sobre propuestas de §9.2–9.3 en cualquier punto incompatible: **no hay scroll en cuadros de texto sobre imagen; ensanchar horizontalmente dentro de la zona segura antes de bajar tamaño; tipografía siempre legible; fondo semitransparente en todos los overlays; resultado aceptable como póster**. Vista dividida, cambio de plano o pantalla separada solo cuando la composición no cabe de forma segura, con el texto íntegro y sin truncarlo.
 

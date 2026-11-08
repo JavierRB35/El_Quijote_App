@@ -3,11 +3,11 @@
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C08",
  "anchor": "PG 2000 (DQ.SRC.0005) offset 123972-124056; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1008.xhtml; extracto verbatim",
- "text_original": "Non fuyades, cobardes y viles criaturas, que un solo caballero es el que\nos acomete.",
+ "text_original": "Non fuyades, cobardes y viles criaturas, que un solo caballero es el que os acomete.",
  "text_indexable": "non fuyades cobardes y viles criaturas que un solo caballero es el que os acomete",
  "position": {
   "start_char": 123972,
   "end_char": 124056
  },
- "sha256": "sha256:4a4b9ab45388b4b1ec6186a81e656aa5ca6ca1ca3987165aa5dd23fe23ebb34c"
+ "sha256": "sha256:feb7e78d16cb65e7f9d5b26b86e922a1fefd2df948590070e287111d48e05c9e"
 }

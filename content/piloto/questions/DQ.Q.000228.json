@@ -1,64 +1,64 @@
 {
-    "id": "DQ.Q.000228",
-    "contract_version": "1.0.0",
-    "episode_id": "DQ.P2.C01.E01",
-    "chapter_ids": [
-        "DQ.P2.C01"
-    ],
-    "passage_ids": [
-        "DQ.P2.C01.P0002"
-    ],
-    "prompt": "¿Qué juicio formula el conversador sobre Angélica la Bella?",
-    "interaction": {
-        "type": "single_choice",
-        "options": [
-            {
-                "id": "DQ.Q.000228.O01",
-                "label": "«Doncella distraída, andariega y algo antojadiza» que «contentóse con un pajecillo barbilucio»"
-            },
-            {
-                "id": "DQ.Q.000228.O02",
-                "label": "Reina prudentísima que murió por su esposo en alta torre"
-            },
-            {
-                "id": "DQ.Q.000228.O03",
-                "label": "Fiera amazona que conquistó media Asia"
-            }
-        ],
-        "correct_option_ids": [
-            "DQ.Q.000228.O01"
-        ],
-        "shuffle_options": true
-    },
-    "rationale": "El retrato irónico de Angélica en la conversación de II, 1.",
-    "evidence": [
-        {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P2.C01.P0002",
-            "quote": "fue una doncella\ndestraída, andariega y algo antojadiza, y tan lleno dejó el mundo de sus\nimpertinencias como de la fama de su hermosura"
-        }
-    ],
-    "certainty": "TEXTO_EXPLICITO",
-    "cognitive_type": "arte",
-    "difficulty": 2,
-    "spoiler_policy": {
-        "safe_after_episodes": [
-            "DQ.P2.C01.E01"
-        ]
-    },
-    "visual_requirements": {
-        "pre_image_must_not_reveal": true,
-        "pre_image_media_id": "DQ.MA.900039"
-    },
-    "language": "es",
-    "tags": [
-        "piloto",
-        "visita"
-    ],
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "semantic_key": "visita angélica juicio pajecillo"
+ "id": "DQ.Q.000228",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P2.C01.E01",
+ "chapter_ids": [
+  "DQ.P2.C01"
+ ],
+ "passage_ids": [
+  "DQ.P2.C01.P0002"
+ ],
+ "prompt": "¿Qué juicio formula el conversador sobre Angélica la Bella?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000228.O01",
+    "label": "«Doncella distraída, andariega y algo antojadiza» que «contentóse con un pajecillo barbilucio»"
+   },
+   {
+    "id": "DQ.Q.000228.O02",
+    "label": "Reina prudentísima que murió por su esposo en alta torre"
+   },
+   {
+    "id": "DQ.Q.000228.O03",
+    "label": "Fiera amazona que conquistó media Asia"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000228.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "El retrato irónico de Angélica en la conversación de II, 1.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P2.C01.P0002",
+   "quote": "fue una doncella destraída, andariega y algo antojadiza, y tan lleno dejó el mundo de sus impertinencias como de la fama de su hermosura"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "arte",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P2.C01.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900039"
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "visita"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "visita angélica juicio pajecillo"
 }

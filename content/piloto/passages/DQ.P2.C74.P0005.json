@@ -3,11 +3,11 @@
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P2.C74",
  "anchor": "PG 2000 (DQ.SRC.0005) offset 2102420-2102594; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 2.74.xhtml; extracto verbatim",
- "text_original": "déjense burlas aparte, y\ntraíganme un confesor que me confiese y un escribano que haga mi\ntestamento, que en tales trances como éste no se ha de burlar el hombre con\nel alma",
+ "text_original": "déjense burlas aparte, y traíganme un confesor que me confiese y un escribano que haga mi testamento, que en tales trances como éste no se ha de burlar el hombre con el alma",
  "text_indexable": "déjense burlas aparte y traíganme un confesor que me confiese y un escribano que haga mi testamento que en tales trances como éste no se ha de burlar el hombre con el alma",
  "position": {
   "start_char": 2102420,
   "end_char": 2102594
  },
- "sha256": "sha256:5df0bf6153183753fdabd364d6739552d6ad20ac0227bfb683e747af46258684"
+ "sha256": "sha256:07829f358ebe4490544270735194e8f90321c9980dfbe40333627193babfc0d3"
 }

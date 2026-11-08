@@ -1,73 +1,73 @@
 {
-    "id": "DQ.Q.000318",
-    "contract_version": "1.0.0",
-    "episode_id": "DQ.P1.C21.E01",
-    "chapter_ids": [
-        "DQ.P1.C21"
-    ],
-    "passage_ids": [
-        "DQ.P1.C21.P0001",
-        "DQ.P1.C21.P0002",
-        "DQ.P1.C21.P0004"
-    ],
-    "prompt": "Ordena los lances de la aventura del yelmo.",
-    "interaction": {
-        "type": "ordering",
-        "options": [
-            {
-                "id": "DQ.Q.000318.O01",
-                "label": "Llueve; Sancho propone refugiarse en los batanes y don Quijote lo rechaza"
-            },
-            {
-                "id": "DQ.Q.000318.O02",
-                "label": "Don Quijote señala al jinete con «yelmo de oro» bajo la lluvia"
-            },
-            {
-                "id": "DQ.Q.000318.O03",
-                "label": "Don Quijote ordena «Apártate» y embiste al barbero"
-            },
-            {
-                "id": "DQ.Q.000318.O04",
-                "label": "El barbero deja la bacía y huye; don Quijote la recoge como trofeo"
-            }
-        ],
-        "correct_order": [
-            "DQ.Q.000318.O01",
-            "DQ.Q.000318.O02",
-            "DQ.Q.000318.O03",
-            "DQ.Q.000318.O04"
-        ],
-        "shuffle_options": false
-    },
-    "rationale": "Secuencia canónica de I, 21: lluvia, avistamiento, carga, conquista de la bacía-yelmo.",
-    "evidence": [
-        {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P1.C21.P0001",
-            "quote": "la tierra;\nporque, después de a los padres, a los amos se ha de respetar como si lo\nfuesen.\n\n\n\n\nCapítulo XXI. Que trata de la alta aventura y rica ganancia del yelmo de\nMambrino, con otras cosas sucedidas a nuestro invencible caballero\n\nEn esto, comenzó a llover un poco, y quisiera Sancho que se entraran en el\nmolino de los batanes; mas habíales cobrado tal aborrecimiento don Quijote,\npor la pesada burla, que en ninguna manera quiso entrar dentro; y así,\ntorciendo el camino a la derecha mano, dieron en otro como el que habían\nllevado el día de antes.\n\nDe allí a poco, descubrió don Quijote un hombre a caballo, que traía en la\ncabeza una cosa que relumbraba como si fuera de"
-        }
-    ],
-    "certainty": "TEXTO_EXPLICITO",
-    "cognitive_type": "secuencia",
-    "difficulty": 2,
-    "spoiler_policy": {
-        "safe_after_episodes": [
-            "DQ.P1.C21.E01"
-        ]
-    },
-    "visual_requirements": {
-        "pre_image_must_not_reveal": true,
-        "pre_image_media_id": "DQ.MA.900036"
-    },
-    "language": "es",
-    "tags": [
-        "banco",
-        "mambrino"
-    ],
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "semantic_key": "mambrino orden lluvia avistamiento carga bacía"
+ "id": "DQ.Q.000318",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C21.E01",
+ "chapter_ids": [
+  "DQ.P1.C21"
+ ],
+ "passage_ids": [
+  "DQ.P1.C21.P0001",
+  "DQ.P1.C21.P0002",
+  "DQ.P1.C21.P0004"
+ ],
+ "prompt": "Ordena los lances de la aventura del yelmo.",
+ "interaction": {
+  "type": "ordering",
+  "options": [
+   {
+    "id": "DQ.Q.000318.O01",
+    "label": "Llueve; Sancho propone refugiarse en los batanes y don Quijote lo rechaza"
+   },
+   {
+    "id": "DQ.Q.000318.O02",
+    "label": "Don Quijote señala al jinete con «yelmo de oro» bajo la lluvia"
+   },
+   {
+    "id": "DQ.Q.000318.O03",
+    "label": "Don Quijote ordena «Apártate» y embiste al barbero"
+   },
+   {
+    "id": "DQ.Q.000318.O04",
+    "label": "El barbero deja la bacía y huye; don Quijote la recoge como trofeo"
+   }
+  ],
+  "correct_order": [
+   "DQ.Q.000318.O01",
+   "DQ.Q.000318.O02",
+   "DQ.Q.000318.O03",
+   "DQ.Q.000318.O04"
+  ],
+  "shuffle_options": false
+ },
+ "rationale": "Secuencia canónica de I, 21: lluvia, avistamiento, carga, conquista de la bacía-yelmo.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C21.P0001",
+   "quote": "la tierra; porque, después de a los padres, a los amos se ha de respetar como si lo fuesen. Capítulo XXI. Que trata de la alta aventura y rica ganancia del yelmo de Mambrino, con otras cosas sucedidas a nuestro invencible caballero En esto, comenzó a llover un poco, y quisiera Sancho que se entraran en el molino de los batanes; mas habíales cobrado tal aborrecimiento don Quijote, por la pesada burla, que en ninguna manera quiso entrar dentro; y así, torciendo el camino a la derecha mano, dieron en otro como el que habían llevado el día de antes. De allí a poco, descubrió don Quijote un hombre a caballo, que traía en la cabeza una cosa que relumbraba como si fuera de"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "secuencia",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C21.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900036"
+ },
+ "language": "es",
+ "tags": [
+  "banco",
+  "mambrino"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "mambrino orden lluvia avistamiento carga bacía"
 }

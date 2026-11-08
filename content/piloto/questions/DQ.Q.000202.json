@@ -1,64 +1,64 @@
 {
-    "id": "DQ.Q.000202",
-    "contract_version": "1.0.0",
-    "episode_id": "DQ.P1.C06.E01",
-    "chapter_ids": [
-        "DQ.P1.C06"
-    ],
-    "passage_ids": [
-        "DQ.P1.C06.P0003"
-    ],
-    "prompt": "¿Qué libro salva el cura «por esa razón» y cuál es esa razón?",
-    "interaction": {
-        "type": "single_choice",
-        "options": [
-            {
-                "id": "DQ.Q.000202.O01",
-                "label": "Amadís de Gaula, porque «como á único en su arte, se debe perdonar»"
-            },
-            {
-                "id": "DQ.Q.000202.O02",
-                "label": "Tirante el Blanco, porque es el más antiguo de todos"
-            },
-            {
-                "id": "DQ.Q.000202.O03",
-                "label": "Palmerín de Ingalaterra, por su prosa clara"
-            }
-        ],
-        "correct_option_ids": [
-            "DQ.Q.000202.O01"
-        ],
-        "shuffle_options": true
-    },
-    "rationale": "El barbero pide perdón para Amadís como único en su arte y el cura le otorga «la vida por ahora» (I, 6).",
-    "evidence": [
-        {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P1.C06.P0003",
-            "quote": "como a único\nen su arte, se debe perdonar.\n\n— Así es verdad —dijo el cura—, y por esa razón se le otorga la vida por\nahora."
-        }
-    ],
-    "certainty": "TEXTO_EXPLICITO",
-    "cognitive_type": "actitud_reaccion",
-    "difficulty": 2,
-    "spoiler_policy": {
-        "safe_after_episodes": [
-            "DQ.P1.C06.E01"
-        ]
-    },
-    "visual_requirements": {
-        "pre_image_must_not_reveal": true,
-        "pre_image_media_id": "DQ.MA.900013"
-    },
-    "language": "es",
-    "tags": [
-        "piloto",
-        "escrutinio"
-    ],
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "semantic_key": "escrutinio amadis perdonado unico arte"
+ "id": "DQ.Q.000202",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C06.E01",
+ "chapter_ids": [
+  "DQ.P1.C06"
+ ],
+ "passage_ids": [
+  "DQ.P1.C06.P0003"
+ ],
+ "prompt": "¿Qué libro salva el cura «por esa razón» y cuál es esa razón?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000202.O01",
+    "label": "Amadís de Gaula, porque «como á único en su arte, se debe perdonar»"
+   },
+   {
+    "id": "DQ.Q.000202.O02",
+    "label": "Tirante el Blanco, porque es el más antiguo de todos"
+   },
+   {
+    "id": "DQ.Q.000202.O03",
+    "label": "Palmerín de Ingalaterra, por su prosa clara"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000202.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "El barbero pide perdón para Amadís como único en su arte y el cura le otorga «la vida por ahora» (I, 6).",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C06.P0003",
+   "quote": "como a único en su arte, se debe perdonar. — Así es verdad —dijo el cura—, y por esa razón se le otorga la vida por ahora."
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "actitud_reaccion",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C06.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900013"
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "escrutinio"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "escrutinio amadis perdonado unico arte"
 }

@@ -1,64 +1,64 @@
 {
-    "id": "DQ.Q.000313",
-    "contract_version": "1.0.0",
-    "episode_id": "DQ.P1.C21.E01",
-    "chapter_ids": [
-        "DQ.P1.C21"
-    ],
-    "passage_ids": [
-        "DQ.P1.C21.P0001"
-    ],
-    "prompt": "¿Qué quería Sancho al comenzar a llover al inicio del capítulo?",
-    "interaction": {
-        "type": "single_choice",
-        "options": [
-            {
-                "id": "DQ.Q.000313.O01",
-                "label": "Entrar en el molino de los batanes, aunque a su amo le aborrecía"
-            },
-            {
-                "id": "DQ.Q.000313.O02",
-                "label": "Volver de inmediato a su aldea"
-            },
-            {
-                "id": "DQ.Q.000313.O03",
-                "label": "Vendarle el brazo roto al amo"
-            }
-        ],
-        "correct_option_ids": [
-            "DQ.Q.000313.O01"
-        ],
-        "shuffle_options": true
-    },
-    "rationale": "El «pesada burla» de los batanes (I, 20) aún pesaba sobre don Quijote.",
-    "evidence": [
-        {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P1.C21.P0001",
-            "quote": "la tierra;\nporque, después de a los padres, a los amos se ha de respetar como si lo\nfuesen.\n\n\n\n\nCapítulo XXI. Que trata de la alta aventura y rica ganancia del yelmo de\nMambrino, con otras cosas sucedidas a nuestro invencible caballero\n\nEn esto, comenzó a llover un poco, y quisiera Sancho que se entraran en el\nmolino de los batanes; mas habíales cobrado tal aborrecimiento don Quijote,\npor la pesada burla, que en ninguna manera quiso entrar dentro; y así,\ntorciendo el camino a la derecha mano, dieron en otro como el que habían\nllevado el día de antes.\n\nDe allí a poco, descubrió don Quijote un hombre a caballo, que traía en la\ncabeza una cosa que relumbraba como si fuera de"
-        }
-    ],
-    "certainty": "TEXTO_EXPLICITO",
-    "cognitive_type": "hecho",
-    "difficulty": 1,
-    "spoiler_policy": {
-        "safe_after_episodes": [
-            "DQ.P1.C21.E01"
-        ]
-    },
-    "visual_requirements": {
-        "pre_image_must_not_reveal": true,
-        "pre_image_media_id": "DQ.MA.900025"
-    },
-    "language": "es",
-    "tags": [
-        "banco",
-        "mambrino"
-    ],
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "semantic_key": "mambrino lluvia batanes entrada"
+ "id": "DQ.Q.000313",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C21.E01",
+ "chapter_ids": [
+  "DQ.P1.C21"
+ ],
+ "passage_ids": [
+  "DQ.P1.C21.P0001"
+ ],
+ "prompt": "¿Qué quería Sancho al comenzar a llover al inicio del capítulo?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000313.O01",
+    "label": "Entrar en el molino de los batanes, aunque a su amo le aborrecía"
+   },
+   {
+    "id": "DQ.Q.000313.O02",
+    "label": "Volver de inmediato a su aldea"
+   },
+   {
+    "id": "DQ.Q.000313.O03",
+    "label": "Vendarle el brazo roto al amo"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000313.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "El «pesada burla» de los batanes (I, 20) aún pesaba sobre don Quijote.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C21.P0001",
+   "quote": "la tierra; porque, después de a los padres, a los amos se ha de respetar como si lo fuesen. Capítulo XXI. Que trata de la alta aventura y rica ganancia del yelmo de Mambrino, con otras cosas sucedidas a nuestro invencible caballero En esto, comenzó a llover un poco, y quisiera Sancho que se entraran en el molino de los batanes; mas habíales cobrado tal aborrecimiento don Quijote, por la pesada burla, que en ninguna manera quiso entrar dentro; y así, torciendo el camino a la derecha mano, dieron en otro como el que habían llevado el día de antes. De allí a poco, descubrió don Quijote un hombre a caballo, que traía en la cabeza una cosa que relumbraba como si fuera de"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "hecho",
+ "difficulty": 1,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C21.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900025"
+ },
+ "language": "es",
+ "tags": [
+  "banco",
+  "mambrino"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "mambrino lluvia batanes entrada"
 }

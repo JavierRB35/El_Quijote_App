@@ -1,60 +1,60 @@
 {
-    "id": "DQ.Q.000214",
-    "contract_version": "1.0.0",
-    "episode_id": "DQ.P1.C11.E01",
-    "chapter_ids": [
-        "DQ.P1.C11"
-    ],
-    "passage_ids": [
-        "DQ.P1.C11.P0006"
-    ],
-    "prompt": "¿Verdadero o falso: «la ley del encaje» ya estaba sentada en el entendimiento del juez en aquella edad?",
-    "interaction": {
-        "type": "true_false",
-        "options": [
-            {
-                "id": "DQ.Q.000214.O01",
-                "label": "Verdadero"
-            },
-            {
-                "id": "DQ.Q.000214.O02",
-                "label": "Falso"
-            }
-        ],
-        "correct_option_ids": [
-            "DQ.Q.000214.O02"
-        ],
-        "shuffle_options": false
-    },
-    "rationale": "El texto dice lo contrario: «aun no se había sentado... porque entonces no había qué juzgar».",
-    "evidence": [
-        {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P1.C11.P0006",
-            "quote": "La ley del encaje aún no se había\nsentado en el entendimiento del juez, porque entonces no había qué juzgar"
-        }
-    ],
-    "certainty": "TEXTO_EXPLICITO",
-    "cognitive_type": "cita",
-    "difficulty": 2,
-    "spoiler_policy": {
-        "safe_after_episodes": [
-            "DQ.P1.C11.E01"
-        ]
-    },
-    "visual_requirements": {
-        "pre_image_must_not_reveal": true,
-        "pre_image_media_id": "DQ.MA.900032"
-    },
-    "language": "es",
-    "tags": [
-        "piloto",
-        "edad-oro"
-    ],
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "semantic_key": "edad-oro ley encaje juez falso"
+ "id": "DQ.Q.000214",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C11.E01",
+ "chapter_ids": [
+  "DQ.P1.C11"
+ ],
+ "passage_ids": [
+  "DQ.P1.C11.P0006"
+ ],
+ "prompt": "¿Verdadero o falso: «la ley del encaje» ya estaba sentada en el entendimiento del juez en aquella edad?",
+ "interaction": {
+  "type": "true_false",
+  "options": [
+   {
+    "id": "DQ.Q.000214.O01",
+    "label": "Verdadero"
+   },
+   {
+    "id": "DQ.Q.000214.O02",
+    "label": "Falso"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000214.O02"
+  ],
+  "shuffle_options": false
+ },
+ "rationale": "El texto dice lo contrario: «aun no se había sentado... porque entonces no había qué juzgar».",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C11.P0006",
+   "quote": "La ley del encaje aún no se había sentado en el entendimiento del juez, porque entonces no había qué juzgar"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "cita",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C11.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900032"
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "edad-oro"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "edad-oro ley encaje juez falso"
 }

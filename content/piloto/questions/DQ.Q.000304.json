@@ -1,64 +1,64 @@
 {
-    "id": "DQ.Q.000304",
-    "contract_version": "1.0.0",
-    "episode_id": "DQ.P1.C01.E01",
-    "chapter_ids": [
-        "DQ.P1.C01"
-    ],
-    "passage_ids": [
-        "DQ.P1.C01.P0004"
-    ],
-    "prompt": "¿Qué edades atribuye el narrador al ama y a la sobrina?",
-    "interaction": {
-        "type": "single_choice",
-        "options": [
-            {
-                "id": "DQ.Q.000304.O01",
-                "label": "El ama pasaba de los cuarenta; la sobrina no llegaba a los veinte"
-            },
-            {
-                "id": "DQ.Q.000304.O02",
-                "label": "El ama pasaba de los treinta; la sobrina llegaba a los veinte"
-            },
-            {
-                "id": "DQ.Q.000304.O03",
-                "label": "Ambas rondaban los cincuenta"
-            }
-        ],
-        "correct_option_ids": [
-            "DQ.Q.000304.O01"
-        ],
-        "shuffle_options": true
-    },
-    "rationale": "Los perfiles domésticos se dan con precisión cómica en el retrato inicial (I, 1).",
-    "evidence": [
-        {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P1.C01.P0004",
-            "quote": "en tal desmán, vueso conorte sea\nque Sancho Panza fue mal alcagüete,\nnecio él, dura ella, y vos no amante.\n\nDIÁLOGO ENTRE BABIECA Y ROCINANTE\n\nSoneto\n\nB. ¿Cómo estáis, Rocinante, tan delgado?\nR. Porque nunca se come, y se trabaja.\nB. Pues, ¿qué es de la cebada y de la paja?\nR. No me deja mi amo ni un bocado.\nB. Andá, señor, que estáis muy mal criado,\npues vuestra lengua de asno al amo ultraja.\nR. Asno se es de la cuna a la mortaja.\n¿Queréislo ver? Miraldo enamorado.\nB. ¿Es necedad amar? R. No es gran prudencia.\nB. Metafísico estáis. R. Es que no como.\nB. Quejaos del escudero. R. No es bastante.\n¿Cómo me he de quejar en mi dolencia,\nsi el amo y escudero o mayordomo\nson tan rocines como Rocinante?\n\nPrimera parte del ingenioso hidalgo don Quijote de la Mancha\n\n\n\n\nCapítulo primero. Que trata de la condición y ejercicio del famoso hidalgo\ndon Quijote de la Mancha\n\nEn un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho\ntiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua,\nrocín flaco y galgo corredor. Una olla de algo más vaca que carnero,\nsalpicón las más noches, duelos y quebrantos los sábados, lantejas los\nviernes, algún palomino de añadidura los domingos, consumían las tres\npartes de su hacienda. El resto della concluían sayo de velarte, calzas de\nvelludo para las fiestas, con sus pantuflos de lo mesmo, y los días de\nentresemana se honraba"
-        }
-    ],
-    "certainty": "TEXTO_EXPLICITO",
-    "cognitive_type": "hecho",
-    "difficulty": 1,
-    "spoiler_policy": {
-        "safe_after_episodes": [
-            "DQ.P1.C01.E01"
-        ]
-    },
-    "visual_requirements": {
-        "pre_image_must_not_reveal": true,
-        "pre_image_media_id": "DQ.MA.900002"
-    },
-    "language": "es",
-    "tags": [
-        "banco",
-        "inicio"
-    ],
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "semantic_key": "inicio ama cuarenta sobrina veinte"
+ "id": "DQ.Q.000304",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C01.E01",
+ "chapter_ids": [
+  "DQ.P1.C01"
+ ],
+ "passage_ids": [
+  "DQ.P1.C01.P0004"
+ ],
+ "prompt": "¿Qué edades atribuye el narrador al ama y a la sobrina?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000304.O01",
+    "label": "El ama pasaba de los cuarenta; la sobrina no llegaba a los veinte"
+   },
+   {
+    "id": "DQ.Q.000304.O02",
+    "label": "El ama pasaba de los treinta; la sobrina llegaba a los veinte"
+   },
+   {
+    "id": "DQ.Q.000304.O03",
+    "label": "Ambas rondaban los cincuenta"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000304.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "Los perfiles domésticos se dan con precisión cómica en el retrato inicial (I, 1).",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C01.P0004",
+   "quote": "en tal desmán, vueso conorte sea que Sancho Panza fue mal alcagüete, necio él, dura ella, y vos no amante. DIÁLOGO ENTRE BABIECA Y ROCINANTE Soneto B. ¿Cómo estáis, Rocinante, tan delgado? R. Porque nunca se come, y se trabaja. B. Pues, ¿qué es de la cebada y de la paja? R. No me deja mi amo ni un bocado. B. Andá, señor, que estáis muy mal criado, pues vuestra lengua de asno al amo ultraja. R. Asno se es de la cuna a la mortaja. ¿Queréislo ver? Miraldo enamorado. B. ¿Es necedad amar? R. No es gran prudencia. B. Metafísico estáis. R. Es que no como. B. Quejaos del escudero. R. No es bastante. ¿Cómo me he de quejar en mi dolencia, si el amo y escudero o mayordomo son tan rocines como Rocinante? Primera parte del ingenioso hidalgo don Quijote de la Mancha Capítulo primero. Que trata de la condición y ejercicio del famoso hidalgo don Quijote de la Mancha En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor. Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados, lantejas los viernes, algún palomino de añadidura los domingos, consumían las tres partes de su hacienda. El resto della concluían sayo de velarte, calzas de velludo para las fiestas, con sus pantuflos de lo mesmo, y los días de entresemana se honraba"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "hecho",
+ "difficulty": 1,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C01.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900002"
+ },
+ "language": "es",
+ "tags": [
+  "banco",
+  "inicio"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "inicio ama cuarenta sobrina veinte"
 }

@@ -3,11 +3,11 @@
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C06",
  "anchor": "PG 2000 (DQ.SRC.0005) offset 99646-99734; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1006.xhtml; extracto verbatim",
- "text_original": "según he oído decir, este libro fue\nel primero de caballerías que se imprimió en España",
+ "text_original": "según he oído decir, este libro fue el primero de caballerías que se imprimió en España",
  "text_indexable": "según he oído decir este libro fue el primero de caballerías que se imprimió en españa",
  "position": {
   "start_char": 99646,
   "end_char": 99734
  },
- "sha256": "sha256:0ab5f132fd1cd42d474c056baae70557ba13b2d574ef72ec47c3b30dd9fb3ec1"
+ "sha256": "sha256:e5536eff89aed70df5c79f382eeea9e05b39ecd0836253565455150de4786d71"
 }

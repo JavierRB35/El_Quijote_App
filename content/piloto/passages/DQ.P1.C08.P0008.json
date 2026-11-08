@@ -3,11 +3,11 @@
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C08",
  "anchor": "PG 2000 (DQ.SRC.0005) offset 131182-131323; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1008.xhtml; extracto verbatim",
- "text_original": "aquellos bultos negros que allí parecen deben de ser, y son sin\nduda, algunos encantadores que llevan hurtada alguna princesa en aquel\ncoche",
+ "text_original": "aquellos bultos negros que allí parecen deben de ser, y son sin duda, algunos encantadores que llevan hurtada alguna princesa en aquel coche",
  "text_indexable": "aquellos bultos negros que allí parecen deben de ser y son sin duda algunos encantadores que llevan hurtada alguna princesa en aquel coche",
  "position": {
   "start_char": 131182,
   "end_char": 131323
  },
- "sha256": "sha256:a13108274c6cd89aa2997704cd9b7eef30a5c15c362c9b687481131d232f0da7"
+ "sha256": "sha256:74b118b14277c6d831199fa022b06143346964cddb84caa43accee1926f191a3"
 }

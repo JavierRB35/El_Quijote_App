@@ -3,11 +3,11 @@
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C11",
  "anchor": "PG 2000 (DQ.SRC.0005) offset 163866-163941; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 2011.xhtml; extracto verbatim",
- "text_original": "entonces los que en ella vivían ignoraban estas dos\npalabras de tuyo y mío.",
+ "text_original": "entonces los que en ella vivían ignoraban estas dos palabras de tuyo y mío.",
  "text_indexable": "entonces los que en ella vivían ignoraban estas dos palabras de tuyo y mío",
  "position": {
   "start_char": 163866,
   "end_char": 163941
  },
- "sha256": "sha256:33bcd482cbc334ca4fee5ca059a3bcd684fcfbafff8c05b58405d19bc0dafdd4"
+ "sha256": "sha256:ef16f63492e7af410e524ea21072c73d0245879ffc114b0324b439f1052ee587"
 }

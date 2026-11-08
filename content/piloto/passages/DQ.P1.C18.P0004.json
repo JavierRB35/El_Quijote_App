@@ -3,11 +3,11 @@
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C18",
  "anchor": "PG 2000 (DQ.SRC.0005) offset 283307-283509; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1.18.xhtml; extracto verbatim",
- "text_original": "Llegáronse a él los pastores y\ncreyeron que le habían muerto; y así, con mucha priesa, recogieron su\nganado, y cargaron de las reses muertas, que pasaban de siete, y, sin\naveriguar otra cosa, se fueron.",
+ "text_original": "Llegáronse a él los pastores y creyeron que le habían muerto; y así, con mucha priesa, recogieron su ganado, y cargaron de las reses muertas, que pasaban de siete, y, sin averiguar otra cosa, se fueron.",
  "text_indexable": "llegáronse a él los pastores y creyeron que le habían muerto y así con mucha priesa recogieron su ganado y cargaron de las reses muertas que pasaban de siete y sin averiguar otra cosa se fueron",
  "position": {
   "start_char": 283307,
   "end_char": 283509
  },
- "sha256": "sha256:f489ed80d08607e6c3cea74afe861373d081370d67db5003231b7c0713f96115"
+ "sha256": "sha256:e4b01a82a21259b0583e6159fa27979aae199907c72cd37ca7f82812dcefb848"
 }

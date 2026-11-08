@@ -1,60 +1,60 @@
 {
-    "id": "DQ.Q.000230",
-    "contract_version": "1.0.0",
-    "episode_id": "DQ.P2.C01.E01",
-    "chapter_ids": [
-        "DQ.P2.C01"
-    ],
-    "passage_ids": [
-        "DQ.P2.C01.P0003"
-    ],
-    "prompt": "¿Verdadero o falso: la conversación se interrumpe porque el ama y la sobrina dan grandes voces en el patio?",
-    "interaction": {
-        "type": "true_false",
-        "options": [
-            {
-                "id": "DQ.Q.000230.O01",
-                "label": "Verdadero"
-            },
-            {
-                "id": "DQ.Q.000230.O02",
-                "label": "Falso"
-            }
-        ],
-        "correct_option_ids": [
-            "DQ.Q.000230.O01"
-        ],
-        "shuffle_options": false
-    },
-    "rationale": "«...daban grandes voces en el patio, y acudieron todos al ruido»: interrupción doméstica de la charla literaria.",
-    "evidence": [
-        {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P2.C01.P0003",
-            "quote": "oyeron que la ama y la sobrina, que ya habían dejado la\nconversación, daban grandes voces en el patio, y acudieron todos al ruido."
-        }
-    ],
-    "certainty": "TEXTO_EXPLICITO",
-    "cognitive_type": "secuencia",
-    "difficulty": 1,
-    "spoiler_policy": {
-        "safe_after_episodes": [
-            "DQ.P2.C01.E01"
-        ]
-    },
-    "visual_requirements": {
-        "pre_image_must_not_reveal": true,
-        "pre_image_media_id": "DQ.MA.900038"
-    },
-    "language": "es",
-    "tags": [
-        "piloto",
-        "visita"
-    ],
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "semantic_key": "visita interrupción voces patio ama sobrina"
+ "id": "DQ.Q.000230",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P2.C01.E01",
+ "chapter_ids": [
+  "DQ.P2.C01"
+ ],
+ "passage_ids": [
+  "DQ.P2.C01.P0003"
+ ],
+ "prompt": "¿Verdadero o falso: la conversación se interrumpe porque el ama y la sobrina dan grandes voces en el patio?",
+ "interaction": {
+  "type": "true_false",
+  "options": [
+   {
+    "id": "DQ.Q.000230.O01",
+    "label": "Verdadero"
+   },
+   {
+    "id": "DQ.Q.000230.O02",
+    "label": "Falso"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000230.O01"
+  ],
+  "shuffle_options": false
+ },
+ "rationale": "«...daban grandes voces en el patio, y acudieron todos al ruido»: interrupción doméstica de la charla literaria.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P2.C01.P0003",
+   "quote": "oyeron que la ama y la sobrina, que ya habían dejado la conversación, daban grandes voces en el patio, y acudieron todos al ruido."
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "secuencia",
+ "difficulty": 1,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P2.C01.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900038"
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "visita"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "visita interrupción voces patio ama sobrina"
 }

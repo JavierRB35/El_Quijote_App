@@ -3,11 +3,11 @@
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C06",
  "anchor": "PG 2000 (DQ.SRC.0005) offset 110754-110859; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1006.xhtml; extracto verbatim",
- "text_original": "Muchos años ha que es grande amigo mío ese Cervantes, y sé que es más\nversado en desdichas que en versos.",
+ "text_original": "Muchos años ha que es grande amigo mío ese Cervantes, y sé que es más versado en desdichas que en versos.",
  "text_indexable": "muchos años ha que es grande amigo mío ese cervantes y sé que es más versado en desdichas que en versos",
  "position": {
   "start_char": 110754,
   "end_char": 110859
  },
- "sha256": "sha256:a6977cc72d7135cd5228c3d5547c2eaebee5d17c69081593855f6160b2a893f4"
+ "sha256": "sha256:a526358264bc451a7e0d8e6f98831de5b7b6a7a301bc8a7593f77f66a3dbf3a5"
 }

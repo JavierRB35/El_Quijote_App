@@ -7,6 +7,9 @@ Alineación tolerante por palabras (Damerau-Levenshtein 1, o 2 en palabras
 largas) para absorber las VARIANTES entre ediciones (primer/primero,
 Pentapolín/Pentapolen, distraída/destraida, agora/ahora...) y extraer el
 fragmento VERBATIM de PG con offsets reales en el fichero almacenado.
+Los saltos de línea duros del txt de PG (líneas ~75 col., artefacto del
+formato plano) se colapsan en espacios: ni pasajes ni evidencias deben
+mostrarlos en la app (normalización por `plano()`, 2026-11-08).
 Crea la Edition DQ.ED.0003 y rehace passages + evidencias.
 El lector sigue mostrando el EPUB Tusell (DQ.ED.0001); la correspondencia
 queda en el campo anchor de cada pasaje.
@@ -104,8 +107,14 @@ def localizar_fuzzy(quote):
         return j, i, variantes
     return None
 
+def plano(s):
+    """Colapsa los saltos duros del txt de PG (líneas cortadas ~75 columnas)
+    en espacios: los \n del fichero fuente son artefacto de formato plano,
+    no del texto de Cervantes, y no deben llegar al texto mostrado en la app."""
+    return re.sub(r"\s+", " ", s).strip()
+
 def recortar(s):
-    return re.sub(r"^[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ«(—]+|[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ»).!\?]+$", "", s).strip()
+    return re.sub(r"^[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ«(—]+|[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ»).!\?]+$", "", plano(s))
 
 manifest = json.load(open(os.path.join(PKG, "package.json"), encoding="utf-8"))
 files = manifest["files"]

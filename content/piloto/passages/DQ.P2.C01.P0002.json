@@ -3,11 +3,11 @@
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P2.C01",
  "anchor": "PG 2000 (DQ.SRC.0005) offset 1074069-1074302; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 2.1.xhtml; extracto verbatim",
- "text_original": "fue una doncella\ndestraída, andariega y algo antojadiza, y tan lleno dejó el mundo de sus\nimpertinencias como de la fama de su hermosura: despreció mil señores, mil\nvalientes y mil discretos, y contentóse con un pajecillo barbilucio",
+ "text_original": "fue una doncella destraída, andariega y algo antojadiza, y tan lleno dejó el mundo de sus impertinencias como de la fama de su hermosura: despreció mil señores, mil valientes y mil discretos, y contentóse con un pajecillo barbilucio",
  "text_indexable": "fue una doncella destraída andariega y algo antojadiza y tan lleno dejó el mundo de sus impertinencias como de la fama de su hermosura despreció mil señores mil valientes y mil discretos y contentóse con un pajecillo barbilucio",
  "position": {
   "start_char": 1074069,
   "end_char": 1074302
  },
- "sha256": "sha256:3983f41c362aafb62843c7523862c338db1c5e00a782ad8df82c35da9ec8333c"
+ "sha256": "sha256:11d91908466d7ba523b96d86b0cc729a8bcb7458197b0287cb9567f2bbeaafb7"
 }

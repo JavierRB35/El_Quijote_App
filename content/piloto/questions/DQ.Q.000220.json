@@ -1,64 +1,64 @@
 {
-    "id": "DQ.Q.000220",
-    "contract_version": "1.0.0",
-    "episode_id": "DQ.P1.C18.E01",
-    "chapter_ids": [
-        "DQ.P1.C18"
-    ],
-    "passage_ids": [
-        "DQ.P1.C18.P0001"
-    ],
-    "prompt": "¿Cuál es, según don Quijote, la causa de la guerra entre los dos «reyes»?",
-    "interaction": {
-        "type": "single_choice",
-        "options": [
-            {
-                "id": "DQ.Q.000220.O01",
-                "label": "Alifanfarón, pagano, ama a la hija cristiana de Pentapolín, y el padre no se la entrega si no cambia de ley"
-            },
-            {
-                "id": "DQ.Q.000220.O02",
-                "label": "Disputan la posesión de la ínsula Barataria"
-            },
-            {
-                "id": "DQ.Q.000220.O03",
-                "label": "Pentapolín robó el yelmo de Mambrino a Alifanfarón"
-            }
-        ],
-        "correct_option_ids": [
-            "DQ.Q.000220.O01"
-        ],
-        "shuffle_options": true
-    },
-    "rationale": "El motivo narrado mezcla amor, religión y condición pagana: pura invención del catálogo.",
-    "evidence": [
-        {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P1.C18.P0001",
-            "quote": "este Alefanfarón es un\nforibundo pagano y está enamorado de la hija de Pentapolín, que es una muy\nfermosa y además agraciada señora, y es cristiana"
-        }
-    ],
-    "certainty": "TEXTO_EXPLICITO",
-    "cognitive_type": "hecho",
-    "difficulty": 2,
-    "spoiler_policy": {
-        "safe_after_episodes": [
-            "DQ.P1.C18.E01"
-        ]
-    },
-    "visual_requirements": {
-        "pre_image_must_not_reveal": true,
-        "pre_image_media_id": "DQ.MA.900008"
-    },
-    "language": "es",
-    "tags": [
-        "piloto",
-        "rebaños"
-    ],
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "semantic_key": "rebaños causa guerra hija cristiana pagano"
+ "id": "DQ.Q.000220",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C18.E01",
+ "chapter_ids": [
+  "DQ.P1.C18"
+ ],
+ "passage_ids": [
+  "DQ.P1.C18.P0001"
+ ],
+ "prompt": "¿Cuál es, según don Quijote, la causa de la guerra entre los dos «reyes»?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000220.O01",
+    "label": "Alifanfarón, pagano, ama a la hija cristiana de Pentapolín, y el padre no se la entrega si no cambia de ley"
+   },
+   {
+    "id": "DQ.Q.000220.O02",
+    "label": "Disputan la posesión de la ínsula Barataria"
+   },
+   {
+    "id": "DQ.Q.000220.O03",
+    "label": "Pentapolín robó el yelmo de Mambrino a Alifanfarón"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000220.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "El motivo narrado mezcla amor, religión y condición pagana: pura invención del catálogo.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C18.P0001",
+   "quote": "este Alefanfarón es un foribundo pagano y está enamorado de la hija de Pentapolín, que es una muy fermosa y además agraciada señora, y es cristiana"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "hecho",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C18.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900008"
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "rebaños"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "rebaños causa guerra hija cristiana pagano"
 }

@@ -3,11 +3,11 @@
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P2.C74",
  "anchor": "PG 2000 (DQ.SRC.0005) offset 2098348-2098409; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 2.74.xhtml; extracto verbatim",
- "text_original": "se le\narraigó una calentura que le tuvo seis días en la cama",
+ "text_original": "se le arraigó una calentura que le tuvo seis días en la cama",
  "text_indexable": "se le arraigó una calentura que le tuvo seis días en la cama",
  "position": {
   "start_char": 2098348,
   "end_char": 2098409
  },
- "sha256": "sha256:009afad5d3b49dc24f510e4e74e21f140b3f5581ed301f8757393caca14bac32"
+ "sha256": "sha256:29d5cef9fb1d20f3dcf9f09d42f634230452987c437a9267aeb2c32a5b507279"
 }

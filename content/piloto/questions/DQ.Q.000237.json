@@ -1,64 +1,64 @@
 {
-    "id": "DQ.Q.000237",
-    "contract_version": "1.0.0",
-    "episode_id": "DQ.P2.C74.E01",
-    "chapter_ids": [
-        "DQ.P2.C74"
-    ],
-    "passage_ids": [
-        "DQ.P2.C74.P0003"
-    ],
-    "prompt": "¿Qué dice el epitafio sobre la muerte?",
-    "interaction": {
-        "type": "single_choice",
-        "options": [
-            {
-                "id": "DQ.Q.000237.O01",
-                "label": "«Que la muerte no triunfó de su vida con su muerte»"
-            },
-            {
-                "id": "DQ.Q.000237.O02",
-                "label": "«Que la muerte le llevó con honor de mil batallas»"
-            },
-            {
-                "id": "DQ.Q.000237.O03",
-                "label": "«Que la muerte le hará renacer en tercera parte»"
-            }
-        ],
-        "correct_option_ids": [
-            "DQ.Q.000237.O01"
-        ],
-        "shuffle_options": true
-    },
-    "rationale": "La paradoja final del epitafio condensa el sentido del personaje.",
-    "evidence": [
-        {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P2.C74.P0003",
-            "quote": "Yace aquí el Hidalgo fuerte\nque a tanto estremo llegó\nde valiente, que se advierte\nque la muerte no triunfó\nde su vida con su muerte."
-        }
-    ],
-    "certainty": "TEXTO_EXPLICITO",
-    "cognitive_type": "cita",
-    "difficulty": 2,
-    "spoiler_policy": {
-        "safe_after_episodes": [
-            "DQ.P2.C74.E01"
-        ]
-    },
-    "visual_requirements": {
-        "pre_image_must_not_reveal": true,
-        "pre_image_media_id": "DQ.MA.900042"
-    },
-    "language": "es",
-    "tags": [
-        "piloto",
-        "final"
-    ],
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "semantic_key": "final epitafio muerte no triunfó vida"
+ "id": "DQ.Q.000237",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P2.C74.E01",
+ "chapter_ids": [
+  "DQ.P2.C74"
+ ],
+ "passage_ids": [
+  "DQ.P2.C74.P0003"
+ ],
+ "prompt": "¿Qué dice el epitafio sobre la muerte?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000237.O01",
+    "label": "«Que la muerte no triunfó de su vida con su muerte»"
+   },
+   {
+    "id": "DQ.Q.000237.O02",
+    "label": "«Que la muerte le llevó con honor de mil batallas»"
+   },
+   {
+    "id": "DQ.Q.000237.O03",
+    "label": "«Que la muerte le hará renacer en tercera parte»"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000237.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "La paradoja final del epitafio condensa el sentido del personaje.",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P2.C74.P0003",
+   "quote": "Yace aquí el Hidalgo fuerte que a tanto estremo llegó de valiente, que se advierte que la muerte no triunfó de su vida con su muerte."
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "cita",
+ "difficulty": 2,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P2.C74.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900042"
+ },
+ "language": "es",
+ "tags": [
+  "piloto",
+  "final"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "final epitafio muerte no triunfó vida"
 }

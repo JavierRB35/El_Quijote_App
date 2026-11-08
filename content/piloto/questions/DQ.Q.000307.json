@@ -1,64 +1,64 @@
 {
-    "id": "DQ.Q.000307",
-    "contract_version": "1.0.0",
-    "episode_id": "DQ.P1.C16.E01",
-    "chapter_ids": [
-        "DQ.P1.C16"
-    ],
-    "passage_ids": [
-        "DQ.P1.C16.P0001"
-    ],
-    "prompt": "¿Qué explica Sancho al ventero sobre el estado de su amo a la llegada a la venta?",
-    "interaction": {
-        "type": "single_choice",
-        "options": [
-            {
-                "id": "DQ.Q.000307.O01",
-                "label": "Que había caído de una peña abajo y venía algo brumado"
-            },
-            {
-                "id": "DQ.Q.000307.O02",
-                "label": "Que estaba encantado por un mago enemigo"
-            },
-            {
-                "id": "DQ.Q.000307.O03",
-                "label": "Que había vencido a gigantes y venía molido de gloria"
-            }
-        ],
-        "correct_option_ids": [
-            "DQ.Q.000307.O01"
-        ],
-        "shuffle_options": true
-    },
-    "rationale": "La excusa práctica de Sancho abre el capítulo de la venta (I, 16).",
-    "evidence": [
-        {
-            "kind": "cita_literal",
-            "passage_id": "DQ.P1.C16.P0001",
-            "quote": "El ventero, que vio a don Quijote atravesado en el asno, preguntó a Sancho\nqué mal traía. Sancho le respondió que no era nada, sino que había dado una\ncaída de una peña abajo, y que venía algo brumadas las costillas. Tenía el\nventero por mujer a una, no de la condición que suelen tener las de\nsemejante trato, porque naturalmente era caritativa y se dolía de las\ncalamidades de sus prójimos; y así, acudió luego a curar a don Quijote y\nhizo que una hija"
-        }
-    ],
-    "certainty": "TEXTO_EXPLICITO",
-    "cognitive_type": "hecho",
-    "difficulty": 1,
-    "spoiler_policy": {
-        "safe_after_episodes": [
-            "DQ.P1.C16.E01"
-        ]
-    },
-    "visual_requirements": {
-        "pre_image_must_not_reveal": true,
-        "pre_image_media_id": "DQ.MA.900033"
-    },
-    "language": "es",
-    "tags": [
-        "banco",
-        "venta"
-    ],
-    "review": {
-        "state": "borrador",
-        "reviewer_role": null,
-        "date": null
-    },
-    "semantic_key": "venta sancho caída peña brumado ventero"
+ "id": "DQ.Q.000307",
+ "contract_version": "1.0.0",
+ "episode_id": "DQ.P1.C16.E01",
+ "chapter_ids": [
+  "DQ.P1.C16"
+ ],
+ "passage_ids": [
+  "DQ.P1.C16.P0001"
+ ],
+ "prompt": "¿Qué explica Sancho al ventero sobre el estado de su amo a la llegada a la venta?",
+ "interaction": {
+  "type": "single_choice",
+  "options": [
+   {
+    "id": "DQ.Q.000307.O01",
+    "label": "Que había caído de una peña abajo y venía algo brumado"
+   },
+   {
+    "id": "DQ.Q.000307.O02",
+    "label": "Que estaba encantado por un mago enemigo"
+   },
+   {
+    "id": "DQ.Q.000307.O03",
+    "label": "Que había vencido a gigantes y venía molido de gloria"
+   }
+  ],
+  "correct_option_ids": [
+   "DQ.Q.000307.O01"
+  ],
+  "shuffle_options": true
+ },
+ "rationale": "La excusa práctica de Sancho abre el capítulo de la venta (I, 16).",
+ "evidence": [
+  {
+   "kind": "cita_literal",
+   "passage_id": "DQ.P1.C16.P0001",
+   "quote": "El ventero, que vio a don Quijote atravesado en el asno, preguntó a Sancho qué mal traía. Sancho le respondió que no era nada, sino que había dado una caída de una peña abajo, y que venía algo brumadas las costillas. Tenía el ventero por mujer a una, no de la condición que suelen tener las de semejante trato, porque naturalmente era caritativa y se dolía de las calamidades de sus prójimos; y así, acudió luego a curar a don Quijote y hizo que una hija"
+  }
+ ],
+ "certainty": "TEXTO_EXPLICITO",
+ "cognitive_type": "hecho",
+ "difficulty": 1,
+ "spoiler_policy": {
+  "safe_after_episodes": [
+   "DQ.P1.C16.E01"
+  ]
+ },
+ "visual_requirements": {
+  "pre_image_must_not_reveal": true,
+  "pre_image_media_id": "DQ.MA.900033"
+ },
+ "language": "es",
+ "tags": [
+  "banco",
+  "venta"
+ ],
+ "review": {
+  "state": "borrador",
+  "reviewer_role": null,
+  "date": null
+ },
+ "semantic_key": "venta sancho caída peña brumado ventero"
 }

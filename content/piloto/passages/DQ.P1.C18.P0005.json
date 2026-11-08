@@ -3,11 +3,11 @@
  "contract_version": "1.0.0",
  "chapter_id": "DQ.P1.C18",
  "anchor": "PG 2000 (DQ.SRC.0005) offset 284996-285116; ed. lector: EPUB Tusell (DQ.ED.0001) — EPUB 1.18.xhtml; extracto verbatim",
- "text_original": "arrojó de sí, más recio que una\nescopeta, cuanto dentro tenía, y dio con todo ello en las barbas del\ncompasivo escudero.",
+ "text_original": "arrojó de sí, más recio que una escopeta, cuanto dentro tenía, y dio con todo ello en las barbas del compasivo escudero.",
  "text_indexable": "arrojó de sí más recio que una escopeta cuanto dentro tenía y dio con todo ello en las barbas del compasivo escudero",
  "position": {
   "start_char": 284996,
   "end_char": 285116
  },
- "sha256": "sha256:d9d7d062a2ed5c287f7bd59c084110bb1382dc871cbcf73e28d55dadb41c8c68"
+ "sha256": "sha256:6e64accf882d70fdebf99776ddb94fc7e8522ac0d364af1014e7404d43afc1fb"
 }

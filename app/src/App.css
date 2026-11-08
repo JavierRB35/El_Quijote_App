@@ -348,17 +348,32 @@ body {
   transform: translateX(-50%);
   z-index: 6;
   width: min(58rem, 96vw);
-  max-height: min(64vh, 46rem);
+  /* Altura inicial acotada (refinamiento P1 de Dirección): enunciado completo,
+     indicación y ~2,5–3 opciones visibles; el resto, en scroll interno siempre
+     accesible (ratón, teclado y táctil). «Ampliar panel» sube el techo. */
+  max-height: min(52vh, 32rem);
   overflow-y: auto;
-  background: var(--panel-solido); /* opaco: contraste estable (dirección artística) */
+  /* Semitransparente con desenfoque: la escena se percibe detrás y el texto
+     conserva contraste AAA (pergamino #f2e8d5 ≈ 10–12:1 sobre el respaldo
+     azulado incluso con la imagen más clara detrás). Respaldo @supports para
+     motores sin backdrop-filter: sin desenfoque, respaldo más opaco. */
+  background: var(--panel); /* rgba(13, 19, 34, 0.87) */
+  backdrop-filter: blur(12px) saturate(0.85);
+  -webkit-backdrop-filter: blur(12px) saturate(0.85);
   border: 1px solid var(--panel-borde);
   border-top: 2px solid var(--dorado);
-  border-radius: 8px;
-  padding: 1.4rem 1.8rem 1.3rem;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 1.1rem 1.5rem 1rem;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
   scrollbar-width: thin;
   scrollbar-color: rgba(212, 175, 106, 0.4) transparent;
   animation: subir-panel 0.45s ease;
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .panel-pregunta {
+    background: rgba(13, 19, 34, 0.95);
+  }
 }
 
 .panel-pregunta-cuerpo.amplio .panel-pregunta,

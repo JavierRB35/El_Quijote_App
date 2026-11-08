@@ -76,6 +76,9 @@ jobs:
       - name: 'Regresión P1 — límites de capítulo (sangrado I,20→I,21) y guardia fuzzy'
         run: python -I tests/dev/test_limites_capitulo.py .
 
+      - name: 'Cobertura de presentación textual (0 saltos mecánicos residuales)'
+        run: python -I tests/dev/informe_cobertura_presentacion.py .
+
   frontend:
     name: Construcción React/TypeScript y pruebas de lógica
     runs-on: ubuntu-latest

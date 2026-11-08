@@ -8,7 +8,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { textoParaPantalla } from '../src/historia/presentacion.ts';
+import { textoParaPantalla } from '../src/presentacion.ts';
 
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const DIR_BEATS = join(RAIZ, 'content', 'piloto', 'beats');
@@ -89,12 +89,16 @@ test('los párrafos auténticos (\n\n) se conservan', () => {
 });
 
 test('los cambios de interlocutor (—) conservan su salto', () => {
-  const dialogo = 'dijo a su escudero:\n\n— La ventura va guiando nuestras cosas\nmejor de lo que acertáramos a desear.\n\n— ¿Qué gigantes? —dijo Sancho Panza.';
+  // forma real del corpus: los parlamentos largos envuelven a ~76 col. y sus
+  // cortes son mecánicos (los pares 2×cortas×estrechos del fichero son solo
+  // encabezados y dísticos — población medida en PR #68)
+  const dialogo = 'dijo a su escudero:\n\n— La ventura va guiando nuestras cosas mejor de lo que\nacertáramos a desear, porque ves allí, amigo Sancho Panza, donde se\ndescubren treinta.\n\n— ¿Qué gigantes? —dijo Sancho Panza.';
   const presentado = textoParaPantalla(dialogo);
   assert.equal(presentado.includes('\n— La ventura va guiando'), true);
   assert.equal(presentado.includes('\n— ¿Qué gigantes?'), true);
-  // dentro del parlamento, el corte mecánico se une
-  assert.equal(presentado.includes('nuestras cosas\nmejor'), false);
+  // dentro del parlamento, los cortes mecánicos se unen
+  assert.equal(presentado.includes('de lo que\nacertáramos'), false);
+  assert.equal(presentado.includes('amigo Sancho Panza, donde se\ndescubren'), false);
 });
 
 test('versos y estrofas se preservan línea a línea', () => {
@@ -112,6 +116,36 @@ test('corte estrecho a mitad de frase en prosa se une (no es verso)', () => {
     'el corte estrecho de un párrafo de prosa debe unirse');
 });
 
+test('pareado auténtico (dístico) conserva su separación', () => {
+  // señal verificable: L2 puntada, L1 sin cierre de frase ni frase interior
+  const pareado = 'Y como del Catay recibió el cetro,\nquizá otro cantará con mejor plectro.';
+  const presentado = textoParaPantalla(pareado);
+  assert.equal(presentado, pareado, 'el dístico debe conservar su salto');
+  // del fichero fuente: epitafio latino en cita
+  const latino = 'Pallida mors aequo pulsat pede pauperum tabernas,\nRegumque turres.';
+  assert.equal(textoParaPantalla(latino), latino);
+  // romance con rima
+  const romance = 'No rebuznaron en balde\nel uno y el otro alcalde.';
+  assert.equal(textoParaPantalla(romance), romance);
+});
+
+test('pareado ambiguo se une y los encabezados de dos líneas no son poesía', () => {
+  // L1 cierra una frase (punto final): no hay señal de verso
+  const frases = 'Terminó la primera frase. Y aquí seguía\ncon más contenido de la segunda.';
+  assert.equal(textoParaPantalla(frases).includes('\n'), false,
+    'un par con frase cerrada en la primera línea es prosa');
+  // frase cerrada DENTRO de la primera línea
+  const interior = 'Terminó la primera frase. Y aquí seguía, sin más\nremedio, hacia la venta.';
+  assert.equal(textoParaPantalla(interior).includes('\n'), false);
+  // encabezado de capítulo partido por el compositor: L2 sin puntuación
+  const encabezado = 'Que trata de la condición y ejercicio del famoso\nhidalgo don Quijote de la Mancha';
+  assert.equal(textoParaPantalla(encabezado).includes('\n'), false,
+    'el encabezado de dos líneas no es un pareado');
+  // prosa corta con corte MECÁNICO (la palabra no cabía): se une
+  const mecanico = 'un fragmento de prosa que continúa más allá del ancho disponible de la línea\nsiguiente corta.';
+  assert.equal(textoParaPantalla(mecanico).includes('\n'), false);
+});
+
 test('idempotencia: presentar dos veces no cambia nada', () => {
   for (const { id, texto } of INTERVENCIONES) {
     const una = PRESENTADAS.get(id)!;
@@ -120,4 +154,33 @@ test('idempotencia: presentar dos veces no cambia nada', () => {
   const sintetico = 'bloque uno\ncontinuación del bloque uno\n\nbloque dos\n— Réplica breve.';
   const una = textoParaPantalla(sintetico);
   assert.equal(textoParaPantalla(una), una);
+});
+
+test('poema de arte menor (estrofa octosilábica) conserva cada verso', () => {
+  const romance = 'En un lugar de la Mancha,\nde cuyo nombre no quiero acordarme,\nno ha mucho tiempo que vivía\nun hidalgo de los de lanza\nen astillero, adarga antigua.';
+  const presentado = textoParaPantalla(romance);
+  assert.equal(presentado.split('\n').length, 5,
+    'la estrofa debe conservar sus 5 versos');
+  assert.equal(presentado.includes('\n\n'), false,
+    'la estrofa no debe partirse en párrafos');
+});
+
+test('un encabezado de capítulo incrustado se respeta como bloque propio', () => {
+  const conEncabezado = 'Capítulo XXI. Que trata de la alta aventura y rica ganancia del yelmo de Mambrino\n\nEn esto, comenzó a llover un poco, y quisiera Sancho que se entraran en el molino de los batanes.';
+  const presentado = textoParaPantalla(conEncabezado);
+  assert.equal(presentado.split('\n\n').length, 2,
+    'el encabezado debe quedar como bloque separado del narrativo');
+  assert.equal(presentado.includes('Capítulo XXI. Que trata de la alta aventura y rica ganancia del yelmo de Mambrino\n\nEn esto'), true);
+});
+
+test('evidencia de pregunta (Aventura) con párrafos y parlamentos se presenta intacta', () => {
+  const cita = 'como a único\nen su arte, se debe perdonar.\n\n— Así es verdad —dijo el cura—, y por esa razón se le otorga la vida por\nahora.';
+  const presentado = textoParaPantalla(cita);
+  assert.equal(presentado.split('\n\n').length, 2, 'el parlamento conserva su párrafo');
+  assert.equal(presentado.includes('\n— Así es verdad'), true);
+  assert.equal(presentado.includes('vida por\nahora.'), false,
+    'el corte mecánico interno del parlamento se une');
+  // el primer bloque cumple la señal del dístico (L2 puntada, L1 sin
+  // cierre): la presentación lo conserva para revisión editorial
+  assert.equal(presentado.includes('como a único\nen su arte'), true);
 });

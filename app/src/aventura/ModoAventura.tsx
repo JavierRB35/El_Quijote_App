@@ -15,6 +15,7 @@ import ContenedorCine, { type PlanoCine } from '../cine/ContenedorCine';
 import { encuadreDe } from '../cine/resolverPlano';
 import { AjustesBoton, movimientoReducido, useAjustes } from '../cine/ajustes';
 import PanelDescubrir from '../cine/PanelDescubrir';
+import { textoParaPantalla } from '../presentacion';
 
 type EstadoPregunta =
   | { fase: 'sin_responder' }
@@ -495,7 +496,7 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
         {pregunta.evidence.map((ev) => (
           <p className="evidencia" key={ev.kind + (ev.passage_id ?? '')}>
             {ev.kind === 'cita_literal' && ev.quote
-              ? `«${ev.quote}»`
+              ? `«${textoParaPantalla(ev.quote)}»`
               : `Evidencia: ${ev.kind}`}
           </p>
         ))}

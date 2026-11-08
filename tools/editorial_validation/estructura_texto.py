@@ -64,6 +64,37 @@ def _es_frontera_de_bloque(linea_1: str, linea_2: str) -> bool:
     return bool(_FRASE_TERMINA.search(linea_1) and _MAYUSCULA_INICIA.match(linea_2))
 
 
+_PUNTUACION_VERSO = re.compile(r"[,.;:!?…»\"]\s*$")   # la línea acaba puntuada
+_CIERRE_FRASE = re.compile(r"[.!?…]\s*$")             # la línea cierra una frase
+_FRASE_INTERIOR = re.compile(r"[.!?…]\s+[A-ZÁÉÍÓÚÜÑ¿¡]")  # frase cerrada dentro de la línea
+
+
+def _es_distico(linea_1: str, linea_2: str) -> bool:
+    """Señal estructural de PAREADO/DÍSTICO auténtico (corrección PR #68).
+
+    Población medida en el fichero fuente: los dísticos reales (12 casos:
+    Horacio, romances de Gaiferos, epitafios) presentan la segunda línea con
+    puntuación final de verso y la primera SIN cierre de frase — ni al final
+    ni dentro de la línea (un punto seguido de mayúscula delata prosa con
+    frases múltiples); los encabezados de capítulo partidos por el
+    compositor (84 casos) dejan la segunda línea SIN puntuación. Ambas
+    líneas cortas y corte de edición (la palabra siguiente cabía). Sin esa
+    señal, el par se une y queda registrado para revisión editorial."""
+    p2 = _PALABRA.match(linea_2)
+    if not p2:
+        return False
+    cabe = linea_2.startswith("—") or len(linea_1) + 1 + len(p2.group(0)) < ANCHO_LINEA
+    return (
+        len(linea_1) < UMBRAL_VERSO
+        and len(linea_2) < UMBRAL_VERSO
+        and cabe
+        and _PUNTUACION_VERSO.search(linea_2) is not None
+        and _CIERRE_FRASE.search(linea_1) is None
+        and _FRASE_INTERIOR.search(linea_1) is None
+        and _FRASE_INTERIOR.search(linea_2) is None
+    )
+
+
 def clasificar_parrafo(parrafo: str) -> dict[int, str]:
     """Saltos semánticos de un párrafo completo → {índice de línea: separador}.
 
@@ -94,13 +125,15 @@ def clasificar_parrafo(parrafo: str) -> dict[int, str]:
             cortes[i] = VERSO        # candidata a verso
             no_mecanicos += 1
     # Bloque de verso: TODAS las líneas cortas y NINGÚN corte mecánico que
-    # atraviese la estrofa. En caso contrario el párrafo es prosa y solo se
-    # conservan los parlamentos y las fronteras de bloque — nunca un corte
-    # estrecho a mitad de frase (eso es composición tipográfica, no verso).
+    # atraviese la estrofa. Con dos líneas (pareado) se exige además la
+    # señal estructural del dístico (puntuación del verso), para no
+    # conservar pares de prosa partida. En caso contrario el párrafo es
+    # prosa y solo se conservan los parlamentos y las fronteras de bloque.
     if (
-        len(lineas) >= 3
+        len(lineas) >= 2
         and all(len(l) < UMBRAL_VERSO for l in lineas)
         and no_mecanicos == len(lineas) - 1
+        and (len(lineas) >= 3 or _es_distico(lineas[0], lineas[1]))
     ):
         return {i: VERSO for i in range(len(lineas) - 1)}
     return {i: sep for i, sep in cortes.items() if sep == PAR}
@@ -166,6 +199,44 @@ def restaurar_estructura(texto_dado: str, fuente_lf: str, inicio: int, fin: int)
 def estructurar_segmento(fuente_lf: str, inicio: int, fin: int) -> str:
     """Texto estructurado (palabras verbatim) del rango [inicio, fin)."""
     return restaurar_estructura(plano(fuente_lf[inicio:fin]), fuente_lf, inicio, fin)
+
+
+def _es_bloque_verso(lineas: list[str]) -> bool:
+    """True si las líneas forman un bloque de verso legítimo (todas cortas y
+    con todas sus adyacencias de edición: parlamento o corte estrecho; los
+    pareados exigen además la señal del dístico)."""
+    if len(lineas) < 2 or any(len(l) >= UMBRAL_VERSO for l in lineas):
+        return False
+    for i in range(len(lineas) - 1):
+        l1, l2 = lineas[i], lineas[i + 1]
+        p2 = _PALABRA.match(l2)
+        if not p2:
+            return False
+        cabe = l2.startswith("—") or len(l1) + 1 + len(p2.group(0)) < ANCHO_LINEA
+        if not cabe:
+            return False
+    if len(lineas) == 2 and not _es_distico(lineas[0], lineas[1]):
+        return False
+    return True
+
+
+def cortes_mecanicos_residuales(texto: str) -> list[str]:
+    """Saltos \\n simples que NO pertenecen a un bloque de verso legítimo.
+
+    Detector de residuos para el control de presentación (encargo P1):
+    tras la restauración de estructura o la presentación en runtime, todo
+    salto simple debe ser verso; los que no lo son son cortes mecánicos de
+    maquetación que deben unirse. Devuelve fragmentos descriptivos
+    («…final de línea ⏎ inicio de la siguiente…») para el informe.
+    """
+    residuos: list[str] = []
+    for parrafo in texto.replace("\r\n", "\n").split("\n\n"):
+        lineas = [l.strip() for l in parrafo.split("\n") if l.strip()]
+        if len(lineas) < 2 or _es_bloque_verso(lineas):
+            continue
+        for i in range(len(lineas) - 1):
+            residuos.append(f"…{lineas[i][-32:]} ⏎ {lineas[i + 1][:32]}…")
+    return residuos
 
 
 def _parrafos_de(texto_lf: str, inicio: int, fin: int) -> tuple[int, int]:

@@ -49,11 +49,14 @@ function clasificarParrafo(lineas: string[]): string[] {
     }
   }
   // Bloque de verso: TODAS las líneas cortas y ningún corte mecánico que
-  // atraviese la estrofa. En prosa, solo sobreviven los saltos de bloque.
+  // atraviese la estrofa. Con dos líneas (pareado) se exige además la
+  // señal estructural del dístico, para no conservar pares de prosa
+  // partida. En prosa, solo sobreviven los saltos de bloque.
   if (
-    lineas.length >= 3 &&
+    lineas.length >= 2 &&
     lineas.every((l) => l.length < UMBRAL_VERSO) &&
-    noMecanicos === lineas.length - 1
+    noMecanicos === lineas.length - 1 &&
+    (lineas.length >= 3 || esDistico(lineas[0], lineas[1]))
   ) {
     return new Array(lineas.length - 1).fill(VERSO);
   }
@@ -62,6 +65,28 @@ function clasificarParrafo(lineas: string[]): string[] {
 
 function esFronteraDeBloque(linea1: string, linea2: string): boolean {
   return /[.!?…»"]\s*$/.test(linea1) && /^[A-ZÁÉÍÓÚÜÑ¿¡«\u2014]/.test(linea2);
+}
+
+/** Señal estructural de PAREADO/DÍSTICO auténtico (corrección PR #68).
+ *  Población medida en el fichero fuente: los dísticos reales (Horacio,
+ *  romances, epitafios) presentan la segunda línea con puntuación final de
+ *  verso y la primera SIN cierre de frase — ni final ni interior (un punto
+ *  seguido de mayúscula delata prosa con frases múltiples); los encabezados
+ *  de capítulo partidos por el compositor dejan la segunda línea sin
+ *  puntuación. Sin esa señal, el par se une (caso ambiguo: queda registrado
+ *  para revisión editorial en el informe de cobertura). */
+function esDistico(linea1: string, linea2: string): boolean {
+  const p2 = /\S+/.exec(linea2)?.[0] ?? "";
+  const cabe = linea2.startsWith("—") || linea1.length + 1 + p2.length < ANCHO_LINEA;
+  return (
+    linea1.length < UMBRAL_VERSO &&
+    linea2.length < UMBRAL_VERSO &&
+    cabe &&
+    /[,.;:!?…»"]\s*$/.test(linea2) &&
+    !/[.!?…]\s*$/.test(linea1) &&
+    !/[.!?…]\s+[A-ZÁÉÍÓÚÜÑ¿¡]/.test(linea1) &&
+    !/[.!?…]\s+[A-ZÁÉÍÓÚÜÑ¿¡]/.test(linea2)
+  );
 }
 
 /**

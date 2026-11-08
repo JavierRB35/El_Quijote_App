@@ -1,9 +1,55 @@
 {
-  "version": 2,
-  "actualizado": "2026-11-08 (lote A01)",
-  "fuente": "assets/scenes/manifest.json (preferred_overlay_side) + docs/DIRECCION_ARTISTICA.md (sujeto en tercio izquierdo); hipótesis de layout pendiente de validación de legibilidad (DOSSIER_H4 §3.5)",
-  "nota": "region_critica en tanto por uno del fotograma 1672×941; los paneles no la cubren. Entradas ausentes usan el encuadre por defecto (texto a la derecha).",
+  "version": 3,
+  "actualizado": "2026-11-08 (norma de composición Dirección)",
+  "fuente": "docs/NORMA_COMPOSICION_IMAGENES.md (norma de composición) + assets/scenes/manifest.json (preferred_overlay_side) + inspección visual de las 20 imágenes del capítulo VIII",
+  "nota": "zona_segura: banda natural reservada para la interfaz (lado y tamaño según la norma); region_critica en tanto por uno del fotograma: rectángulo del hecho narrativo que ningún panel cubre. Entradas ausentes usan el encuadre por defecto (texto a la derecha).",
   "encuadres": [
+    {
+      "media_id": "A02-pendiente-nf1",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.1,
+        "w": 0.68,
+        "h": 0.9
+      },
+      "zona_segura": {
+        "lado": "derecha",
+        "tamano": "25-30% ancho",
+        "contenido": "caravana en fuga como contexto; fraile caído y DQ armado a la izquierda (fichero p1_c08_story_a02_nf1_fraile_caido.webp)"
+      },
+      "nota": "pendiente de alta como MediaAsset en el encargo de narración frailes/vizcaíno"
+    },
+    {
+      "media_id": "A02-pendiente-nf2",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 1.0
+      },
+      "zona_segura": {
+        "lado": "inferior",
+        "tamano": "20-25% alto",
+        "contenido": "REGENERAR: tres cuerpos a sangre ocupan el marco completo (ver norma §regeneraciones)"
+      },
+      "nota": "requiere regeneración antes de alta"
+    },
+    {
+      "media_id": "A02-pendiente-nv1",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 1.0
+      },
+      "zona_segura": {
+        "lado": "inferior",
+        "tamano": "20-25% alto",
+        "contenido": "REGENERAR: duelistas en ambos bordes laterales (ver norma §regeneraciones)"
+      },
+      "nota": "requiere regeneración antes de alta"
+    },
     {
       "media_id": "DQ.MA.000026",
       "lado_texto": "derecha",
@@ -12,6 +58,11 @@
         "y": 0.0,
         "w": 0.6,
         "h": 1.0
+      },
+      "zona_segura": {
+        "lado": "inferior",
+        "tamano": "20-25% alto",
+        "contenido": "terreno y vegetación de la acuarela; el hecho (aspa arrastrando) al centro — hotspot Q112"
       }
     },
     {
@@ -32,7 +83,27 @@
         "y": 0.0,
         "w": 0.6,
         "h": 1.0
+      },
+      "zona_segura": {
+        "lado": "derecha",
+        "tamano": "25-30% ancho",
+        "contenido": "molinos lejanos y camino; descubrimiento y advertencia a la izquierda"
       }
+    },
+    {
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.15,
+        "w": 0.66,
+        "h": 0.85
+      },
+      "zona_segura": {
+        "lado": "derecha",
+        "tamano": "25-30% ancho",
+        "contenido": "atardecer y Rocinante; el gesto de socorro a la izquierda-centro (la lanza rota impide banda inferior)"
+      },
+      "media_id": "DQ.MA.900006"
     },
     {
       "media_id": "DQ.MA.900007",
@@ -132,6 +203,11 @@
         "y": 0.0,
         "w": 0.6,
         "h": 1.0
+      },
+      "zona_segura": {
+        "lado": "inferior",
+        "tamano": "20-25% alto",
+        "contenido": "camino y polvo; rostros y gesto del saludo a los frailes en la mitad superior"
       }
     },
     {
@@ -142,6 +218,11 @@
         "y": 0.0,
         "w": 0.6,
         "h": 1.0
+      },
+      "zona_segura": {
+        "lado": "inferior",
+        "tamano": "20-25% alto",
+        "contenido": "rocas y vegetación del primer plano; la hilera de molinos queda íntegra"
       }
     },
     {
@@ -152,6 +233,11 @@
         "y": 0.0,
         "w": 0.6,
         "h": 1.0
+      },
+      "zona_segura": {
+        "lado": "derecha",
+        "tamano": "25-30% ancho",
+        "contenido": "camino, muralla y pueblo lejano; el desafío DQ-vizcaíno a la izquierda-centro"
       }
     },
     {
@@ -265,6 +351,22 @@
       }
     },
     {
+      "media_id": "DQ.MA.901003",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 1.0
+      },
+      "zona_segura": {
+        "lado": "inferior",
+        "tamano": "20-25% alto",
+        "contenido": "fondo pergamino liso bajo el rostro — REQUIERE REGENERACIÓN 16:9 (ver norma §regeneraciones)"
+      },
+      "nota": "closeup 1:1 1254×1254; clasificado grupo 3 en la norma"
+    },
+    {
       "media_id": "DQ.MA.901004",
       "lado_texto": "derecha",
       "region_critica": {
@@ -272,6 +374,11 @@
         "y": 0.05,
         "w": 0.7,
         "h": 0.95
+      },
+      "zona_segura": {
+        "lado": "derecha",
+        "tamano": "25-30% ancho",
+        "contenido": "campo y cielo al fondo; el gesto de advertencia queda en el 60-70% izquierdo"
       }
     },
     {
@@ -282,6 +389,11 @@
         "y": 0.05,
         "w": 0.62,
         "h": 0.95
+      },
+      "zona_segura": {
+        "lado": "inferior",
+        "tamano": "20-25% alto",
+        "contenido": "sendero y polvo; la carga y la lanza en el tercio medio-superior"
       }
     },
     {
@@ -292,6 +404,11 @@
         "y": 0.0,
         "w": 0.45,
         "h": 0.55
+      },
+      "zona_segura": {
+        "lado": "inferior",
+        "tamano": "20-25% alto",
+        "contenido": "camino y pedregal; el molino hito en la mitad superior"
       }
     },
     {
@@ -302,6 +419,11 @@
         "y": 0.05,
         "w": 0.5,
         "h": 0.85
+      },
+      "zona_segura": {
+        "lado": "derecha",
+        "tamano": "25-30% ancho",
+        "contenido": "olivar y campo; los dos jinetes centrados"
       }
     },
     {
@@ -312,6 +434,11 @@
         "y": 0.05,
         "w": 0.62,
         "h": 0.9
+      },
+      "zona_segura": {
+        "lado": "derecha",
+        "tamano": "25-30% ancho",
+        "contenido": "campo y rucio al borde; rostros enfrentados a la izquierda del 70%"
       }
     },
     {
@@ -322,6 +449,11 @@
         "y": 0.05,
         "w": 0.78,
         "h": 0.95
+      },
+      "zona_segura": {
+        "lado": "inferior",
+        "tamano": "20-25% alto",
+        "contenido": "ruedas y bajos de la carroza; el saludo y la señora en la mitad superior"
       }
     },
     {
@@ -332,6 +464,11 @@
         "y": 0.1,
         "w": 0.58,
         "h": 0.9
+      },
+      "zona_segura": {
+        "lado": "derecha",
+        "tamano": "25-30% ancho",
+        "contenido": "Rocinante caído como contexto; rostro, adarga y lanza rota en el 60-70% izquierdo"
       }
     },
     {
@@ -342,6 +479,11 @@
         "y": 0.0,
         "w": 0.5,
         "h": 1.0
+      },
+      "zona_segura": {
+        "lado": "derecha",
+        "tamano": "25-30% ancho",
+        "contenido": "molino y campo; Sancho al galope y el caído dentro del 70% izquierdo"
       }
     },
     {
@@ -352,6 +494,11 @@
         "y": 0.05,
         "w": 0.72,
         "h": 0.95
+      },
+      "zona_segura": {
+        "lado": "derecha",
+        "tamano": "25-30% ancho",
+        "contenido": "molino y Rocinante al fondo; rostro de Sancho en perfil dentro del 70% (la banda cubre solo nuca/sombrero)"
       }
     },
     {
@@ -362,6 +509,11 @@
         "y": 0.25,
         "w": 0.45,
         "h": 0.65
+      },
+      "zona_segura": {
+        "lado": "derecha",
+        "tamano": "25-30% ancho",
+        "contenido": "camino y campos; jinetes centrados"
       }
     }
   ]

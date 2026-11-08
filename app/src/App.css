@@ -237,7 +237,7 @@ body {
   /* Reserva superior: el contenido nunca sube bajo la cabecera compacta,
      tampoco con el panel ampliado en ventanas bajas (768p). */
   padding-top: 7rem;
-  width: min(30rem, 34vw);
+  width: min(30rem, 27vw); /* banda ligera 25-30% (norma de composición) */
   max-height: min(94vh, 56rem);
   overflow-y: auto;
   display: flex;

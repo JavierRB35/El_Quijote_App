@@ -227,13 +227,34 @@ test('la activación post-desenlace llega solo cuando un beat la declara (umbral
 // ---------- encuadres.json: versionado, cobertura y coherencia ----------
 
 test('encuadres versionados y coherentes con el manifiesto de escenas', () => {
-  assert.equal(versionEncuadres(), 2);
+  assert.equal(versionEncuadres(), 3);
   const doc = JSON.parse(
     readFileSync(path.join(RAIZ, 'app/src/cine/encuadres.json'), 'utf-8'),
   ) as { version: number; encuadres: { media_id: string; lado_texto: string; region_critica: Record<string, number> }[] };
 
+  const NORMA_LATERAL = [25, 30];
+  const NORMA_INFERIOR = [20, 25];
   for (const e of doc.encuadres) {
-    assert.ok(['derecha', 'izquierda'].includes(e.lado_texto), `lado inválido en ${e.media_id}`);
+    if (e.lado_texto) {
+      assert.ok(['derecha', 'izquierda'].includes(e.lado_texto), `lado inválido en ${e.media_id}`);
+    }
+    // Norma de composición (Dirección): toda zona_segura declarada usa una
+    // banda lateral (25-30% ancho) o inferior (20-25% alto), con lado
+    // coherente con el lado del texto.
+    if (e.zona_segura) {
+      const zs = e.zona_segura;
+      assert.ok(zs.lado === 'derecha' || zs.lado === 'izquierda' || zs.lado === 'inferior',
+        `zona_segura.lado inválido en ${e.media_id}`);
+      if (zs.lado === 'inferior') {
+        const m = /20-25% alto/.test(zs.tamano);
+        assert.ok(m, `tamaño inferior fuera de norma en ${e.media_id}: ${zs.tamano}`);
+      } else {
+        assert.ok(/25-30% ancho/.test(zs.tamano),
+          `tamaño lateral fuera de norma en ${e.media_id}: ${zs.tamano}`);
+        const ladoEsperado = zs.lado === 'derecha' ? 'derecha' : 'izquierda';
+        assert.equal(e.lado_texto, ladoEsperado, `lado_texto incoherente con zona_segura en ${e.media_id}`);
+      }
+    }
     const r = e.region_critica;
     for (const v of [r.x, r.y, r.w, r.h]) {
       assert.ok(v >= 0 && v <= 1, `región fuera de rango en ${e.media_id}`);

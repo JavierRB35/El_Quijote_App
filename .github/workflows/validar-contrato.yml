@@ -73,6 +73,9 @@ jobs:
       - name: 'Regresión P0 PR #59 — estructura literaria de saltos (versos, párrafos, parlamentos)'
         run: python -I tests/dev/test_estructura_literaria.py .
 
+      - name: 'Regresión P1 — límites de capítulo (sangrado I,20→I,21) y guardia fuzzy'
+        run: python -I tests/dev/test_limites_capitulo.py .
+
   frontend:
     name: Construcción React/TypeScript y pruebas de lógica
     runs-on: ubuntu-latest

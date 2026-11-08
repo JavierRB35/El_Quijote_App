@@ -233,7 +233,17 @@ comprobar("\n" not in p["text_original"],
           "C08.P0017: prosa continua sin saltos literarios debe quedar en un párrafo")
 
 # 7e. globo: todas las citas estructuradas son palabra a palabra iguales al
-# estado plano previo de la PR (solo-estructura) y todos los sha256 son válidos
+# estado plano previo de la PR (solo-estructura) y todos los sha256 son válidos.
+# EXCEPCIONES autorizadas por la subsanación P1 (límites de capítulo, PR
+# independiente): DQ.P1.C21.P0001 pierde la cola de I,20 y el encabezado
+# (posición y contenido corregidos) y Q.313/Q.318 sustituyen la cita
+# contaminada. La integridad de esas palabras la garantizan el test
+# test_limites_capitulo.py y el cotejo contra el fuente.
+PALABRAS_AUTORIZADAS_A_CAMBIAR = {
+    os.path.join("passages", "DQ.P1.C21.P0001.json"),
+    os.path.join("questions", "DQ.Q.000313.json"),
+    os.path.join("questions", "DQ.Q.000318.json"),
+}
 n_estructura = 0
 for dir_nombre in ("passages", "questions"):
     for nombre in sorted(os.listdir(os.path.join(ruta_paquete, dir_nombre))):
@@ -247,8 +257,9 @@ for dir_nombre in ("passages", "questions"):
         if dir_nombre == "passages":
             t_actual = actual["text_original"]
             t_previo = normalizado(previo["text_original"])
-            comprobar(normalizado(t_actual) == t_previo,
-                      f"{nombre}: las palabras cambiaron frente al estado plano de la PR")
+            if relativa not in PALABRAS_AUTORIZADAS_A_CAMBIAR:
+                comprobar(normalizado(t_actual) == t_previo,
+                          f"{nombre}: las palabras cambiaron frente al estado plano de la PR")
             comprobar("sha256:" in actual["sha256"] and len(actual["sha256"]) == 71,
                       f"{nombre}: sha256 mal formado")
             if "\n" in t_actual:
@@ -256,6 +267,8 @@ for dir_nombre in ("passages", "questions"):
         else:
             for e_prev, e_act in zip(previo.get("evidence", []), actual.get("evidence", [])):
                 if "quote" not in e_prev:
+                    continue
+                if relativa in PALABRAS_AUTORIZADAS_A_CAMBIAR:
                     continue
                 comprobar(normalizado(e_act.get("quote", "")) == normalizado(e_prev["quote"]),
                           f"{nombre}: las palabras de una cita cambiaron")

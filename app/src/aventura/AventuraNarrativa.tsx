@@ -57,7 +57,7 @@ function useImagen(uri: string) {
 function Puntuacion({ puntos }: { puntos: number }) {
   return (
     <div className="an-puntos" aria-label={`Puntos de aventura: ${puntos} de ${PUNTOS_MAXIMOS}`}>
-      <span className="an-puntos-titulo">Valor</span>
+      <span className="an-puntos-titulo">Puntos</span>
       {Array.from({ length: PUNTOS_MAXIMOS }, (_, i) => (
         <span key={i} aria-hidden="true" className={i < puntos ? 'an-escudo activo' : 'an-escudo'}>◆</span>
       ))}
@@ -70,8 +70,10 @@ export default function AventuraNarrativa({ catalogo, onSalir }: Props) {
   const [partida, setPartida] = useState<Partida>(() => nuevaPartida());
   const [cargado, setCargado] = useState(false);
   const [errorGuardado, setErrorGuardado] = useState('');
+  const [estadoGuardado, setEstadoGuardado] = useState<'pendiente' | 'guardado' | 'error'>('pendiente');
   const progresoAnterior = useRef<string | null>(null);
   const colaGuardado = useRef<Promise<void>>(Promise.resolve());
+  const revisionGuardado = useRef(0);
   const { ajustes, fijarTexto, fijarMovimiento } = useAjustes();
   const sinMovimiento = movimientoReducido(ajustes.movimiento);
   const [omitirContexto, setOmitirContexto] = useState(false);
@@ -82,8 +84,16 @@ export default function AventuraNarrativa({ catalogo, onSalir }: Props) {
       .then((raw) => {
         if (!vivo) return;
         const restaurada = restaurarPartida(raw, RONDAS_AVENTURA);
-        if (restaurada) setPartida(restaurada);
-        else if (raw) progresoAnterior.current = raw; // conserva el guardado v1
+        if (restaurada) {
+          setPartida(restaurada);
+          // Conservar también el archivo v1 encapsulado en futuras sesiones.
+          const documento = JSON.parse(raw ?? '{}') as { progreso_preguntas_v1?: unknown };
+          if (typeof documento.progreso_preguntas_v1 === 'string') {
+            progresoAnterior.current = documento.progreso_preguntas_v1;
+          }
+        } else if (raw) {
+          progresoAnterior.current = raw; // conserva el guardado v1
+        }
       })
       .catch((error: unknown) => { if (vivo) setErrorGuardado(String(error)); })
       .finally(() => { if (vivo) setCargado(true); });
@@ -100,10 +110,22 @@ export default function AventuraNarrativa({ catalogo, onSalir }: Props) {
       partida,
       ...(progresoAnterior.current ? { progreso_preguntas_v1: progresoAnterior.current } : {}),
     });
+    const revision = ++revisionGuardado.current;
+    setEstadoGuardado('pendiente');
     colaGuardado.current = colaGuardado.current.catch(() => undefined)
       .then(() => guardarProgreso(datos))
-      .then(() => setErrorGuardado(''))
-      .catch((e: unknown) => setErrorGuardado(`No se pudo guardar: ${String(e)}`));
+      .then(() => {
+        if (revision === revisionGuardado.current) {
+          setErrorGuardado('');
+          setEstadoGuardado('guardado');
+        }
+      })
+      .catch((e: unknown) => {
+        if (revision === revisionGuardado.current) {
+          setEstadoGuardado('error');
+          setErrorGuardado(`No se pudo guardar: ${String(e)}`);
+        }
+      });
   }, [partida, cargado]);
 
   const ronda = RONDAS_AVENTURA[Math.min(partida.indice, RONDAS_AVENTURA.length - 1)];
@@ -220,7 +242,7 @@ export default function AventuraNarrativa({ catalogo, onSalir }: Props) {
             <h1>¡Hazaña superada!</h1>
             <p className="an-hito">{ronda.checkpoint?.titulo}</p>
             {ronda.checkpoint?.mayor && <p className="an-insignia">♜ Insignia de caballería</p>}
-            <p>+1 punto · partida guardada · {partida.puntos}/{PUNTOS_MAXIMOS} puntos</p>
+            <p>+1 punto · {estadoGuardado === 'guardado' ? 'partida guardada' : estadoGuardado === 'error' ? 'guardado fallido' : 'guardando partida…'} · {partida.puntos}/{PUNTOS_MAXIMOS} puntos</p>
             <button className="an-primario" onClick={avanzar}>
               {partida.checkpoint.indice >= RONDAS_AVENTURA.length ? 'Ver final del capítulo' : 'Continuar aventura'}
             </button>

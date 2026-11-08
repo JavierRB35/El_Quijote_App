@@ -55,5 +55,12 @@ Las denominaciones R01–R16 de documentos/PR/Issues antiguos solo identifican p
 | Uso indistinto de acuarela y recreación sin prioridad artística | Escenas prioritarias; acuarelas secundarias en gameplay y prioritarias en galería |
 | Segundo tramo de los molinos neutro como montaje final aceptado por defecto | Neutralidad técnica provisional/segura; capítulo final exige ritmo visual y cobertura suficiente |
 | Encargos de auditoría y dictámenes sucesivos como principal medida de progreso | Entregas funcionales en GitHub, prueba reproducible y cobertura audiovisual contrastada |
+| Scroll interno, panel opaco o reducción de letra antes de aprovechar ancho seguro en overlays | **DC-28:** cero scroll; primero ensanchar sin tapar la imagen, después fuente legible; fondo semitransparente; evaluación tipo póster |
 
 Este documento no declara existente ninguna integración visual o función de galería que aún no se haya construido. Debe leerse junto a `docs/ENCARGO_MAESTRO.md` y `docs/VISION_Y_DECISIONES.md` según la precedencia por fecha y especificidad de decisión.
+
+## 7. Ampliación vinculante DC-28 — composición texto + imagen
+
+**Decisión posterior y prevalente del propietario (2026-11-08):** en **todo cuadro de texto sobre imagen** no se admite scroll de ningún eje; cuando el contenido no cabe, se amplía primero su **anchura dentro de zonas visuales seguras**, sin ocultar rostros, gestos, acción, pistas ni hotspots. Si eso no basta, se reduce tipografía **solo hasta un mínimo legible y accesible**, sin suprimir texto ni botones. El fondo es **siempre semitransparente**, con contraste evaluado sobre escena real. Cada composición se acepta en conjunto únicamente si puede funcionar como **póster**. Ninguna limitación de altura anterior ni el panel ampliable justifican incumplirlo.
+
+El principio **TS-001** se preserva: no es admisible esconder parte de una intervención detrás de un scroll. Los cajones abiertos sobre la imagen también están sujetos; para textos irresolubles en la zona segura, exigir solución de arte/encuadre o **vista separada**, no forzar una letra ilegible. Documento técnico, trazabilidad y checklist: [Dictamen DC-28](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md). Esta actualización es documental; no certifica que la aplicación ya pase las pruebas.

@@ -168,3 +168,13 @@ Convenciones: los datos editoriales provienen SIEMPRE del catálogo versionado (
 - **Prueba:** tema piloto con fuentes verificadas, medios etiquetados y navegación completa offline (DC-20).
 
 **Plan por fases y responsabilidades:** ver `docs/HOJA_RUTA_MODOS_HISTORIA_E_HISTORICO.md` y DC-23–DC-27. Dirección integral fija contenido, arte, producto, QA y aceptación; desarrollador único implementa/versiona/prueba en GitHub; el director artístico solo produce recursos bajo prompt encargado por el propietario. Un documento no demuestra implementación. La Fase 1 tiene autorización; Fase 2/distribución no.
+
+## EF-COMP — Composición sobre imagen, DC-28 (adenda vinculante 2026-11-08)
+
+- `EF-COMP-01` Todo texto superpuesto a imagen (incluidos pregunta, opciones, narración, feedback, subtítulo y cajón contextual abierto) se muestra **sin scroll vertical ni horizontal**, sin contenido oculto, recortado ni truncado; no se acepta scroll como accesibilidad sustitutiva.
+- `EF-COMP-02` Si no cabe, el consumidor **ensancha horizontalmente primero** hasta el máximo que permitan las zonas seguras verificadas, sin tapar hechos visuales relevantes; solo después reduce fuente dentro de límites legibles.
+- `EF-COMP-03` Todos los cuadros sobre imagen tienen **fondo semitransparente** y contraste probado sobre la imagen real; no se aceptan paneles opacos sobre el lienzo.
+- `EF-COMP-04` La composición conjunta imagen + texto debe resultar **apta tipo póster**, con sujeto, acción, pistas y hotspots despejados, y controles plenamente accesibles.
+- `EF-COMP-05` Si falla la adaptación sin scroll ni reducción ilegible, registrar **no conformidad** y resolver mediante plano/encuadre/vista separada con aprobación de Dirección; TS-001 prohíbe omitir parte de la intervención.
+
+**Estado:** norma incorporada; el código del vertical aún contiene `overflow-y: auto` y necesita futura PR técnica + QA visual. Checklist y rutas auditadas: [DC-28](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md). El lector del libro en vista independiente mantiene su scroll habitual.

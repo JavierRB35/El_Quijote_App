@@ -7,7 +7,7 @@ Documento rector: **`docs/ENCARGO_MAESTRO.md`** — léelo íntegro antes de act
 
 1. `git pull --rebase` sobre `main` antes de tocar nada.
 2. Ejecutar como **único desarrollador** cuando se reciba un encargo técnico. **Dirección integral (ChatGPT)** decide producto, contenido, UX, calidad y aprobación. Las etiquetas R01–R16 identifican trabajos históricos, no responsables operativos.
-3. Consultar `docs/VISION_Y_DECISIONES.md` y **DC-23–DC-27 (2026-11-08)**: prevalecen sobre instrucciones anteriores incompatibles. Leer también `docs/DECISIONES_OPERATIVAS_Y_POLITICA_VISUAL_2026-11-08.md`.
+3. Consultar `docs/VISION_Y_DECISIONES.md` y **DC-23–DC-28 (2026-11-08)**: prevalecen sobre instrucciones anteriores incompatibles. Leer también `docs/DECISIONES_OPERATIVAS_Y_POLITICA_VISUAL_2026-11-08.md` y **`docs/DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md`**: en overlays sobre imagen, **cero scroll**, ensanchar primero de forma segura, reducir después con legibilidad, fondo semitransparente y QA tipo póster. Esta norma todavía requiere adaptación técnica; no declarar cumplimiento automático.
 4. Verificar estado real de repositorio, rutas y ficheros antes de suponer nada.
 
 ## Git

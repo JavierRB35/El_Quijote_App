@@ -1,14 +1,14 @@
 # DIRECCIÓN ARTÍSTICA — EL QUIJOTE
 
 **Versión:** propuesta 0.3 · **Fecha:** 2026-11-06 · **Estado:** especificación de Fase 0, pendiente de pruebas de usabilidad y aceptación final.
-**Responsabilidad compartida:** Dirección artística/entornos + Diseño UX/UI/accesibilidad + Contenidos/iconografía + QA.
+**Responsabilidad vigente (DC-23–DC-27, 2026-11-08):** **Dirección integral (ChatGPT)** asume criterios narrativos, artísticos, UX y aceptación; el **desarrollador único** implementa y prueba; un **director artístico** interviene solo para producir/modificar imágenes con prompt exacto transmitido por el propietario. Se dejan sin efecto las convocatorias históricas de equipos especializados.
 **Documentos relacionados:** [Piloto de escenas](DIRECCION_ARTISTICA_PILOTO.md) · [UX y accesibilidad](UX_ACCESIBILIDAD.md) · [Encargo maestro](ENCARGO_MAESTRO.md).
 
 > **Principio rector:** La complejidad debe estar en las aventuras, el ingenio de Cervantes y los desafíos cognitivos, nunca en aprender a manejar la interfaz.
 
 ## 1. Propósito y público
 
-La experiencia principal combina aventura narrativa, preguntas, lector íntegro, atlas, museo y cuaderno personal. Se mantiene la vocación intergeneracional del encargo; **las personas de edad avanzada pasan a ser el público de referencia prioritario para la ergonomía y la validación UX**. La aplicación ofrece actividades de recuerdo, observación, razonamiento y coordinación visomotora, pero **no es un dispositivo médico ni se atribuirán mejoras clínicas sin evidencia independiente**.
+La experiencia principal combina aventura narrativa, preguntas, lector íntegro, atlas, museo, **galería artística de acuarelas** y cuaderno personal. Se mantiene la vocación intergeneracional del encargo; **las personas de edad avanzada pasan a ser el público de referencia prioritario para la ergonomía y la validación UX**. La aplicación ofrece actividades de recuerdo, observación, razonamiento y coordinación visomotora, pero **no es un dispositivo médico ni se atribuirán mejoras clínicas sin evidencia independiente**.
 
 La identidad se define como **aventura literaria premium, cinematográfica, serena, elegante y culturalmente rigurosa**. Evitar estética infantil, aplicaciones médicas, gamificación agresiva, pantallas sobrecargadas o formas de comunicación paternalistas.
 
@@ -21,7 +21,7 @@ La identidad se define como **aventura literaria premium, cinematográfica, sere
 - **Tipografía:** encabezados expresivos con serif legible y texto funcional con fuente de alta legibilidad; evitar florituras para instrucciones, alternativas y contenido extenso.
 - **Composición:** la escena narrativa ocupa el protagonismo, con controles limitados, jerarquía visible y áreas seguras para superposiciones. No existen áreas seguras universales: deben registrarse por escena y resolución.
 
-La referencia de continuidad ya documentada en [DIRECCION_ARTISTICA_PILOTO.md](DIRECCION_ARTISTICA_PILOTO.md) sigue vigente. Esta especificación la **complementa**, no sustituye sus inventarios, archivos ni decisiones.
+La referencia de continuidad de [DIRECCION_ARTISTICA_PILOTO.md](DIRECCION_ARTISTICA_PILOTO.md) sigue vigente. **La política visual nueva DC-24–DC-27 prevalece** sobre reglas anteriores incompatibles: imagen específica por pregunta, escenas prioritarias, acuarelas secundarias en gameplay y sección artística propia. Los inventarios y evidencias previas se conservan.
 
 ## 3. Interfaz orientada a la comodidad
 
@@ -52,7 +52,7 @@ La estimulación se integra en episodios auténticos, sin convertir la obra en u
 
 No mezclar rapidez de reacción con capacidad intelectual. En la aventura principal **no habrá cronómetro obligatorio**, ni errores que bloqueen el progreso. El modo competitivo, las puntuaciones o retos cronometrados son voluntarios, claramente separados y desactivables.
 
-Las preguntas aparecen en momentos narrativos relevantes, con frecuencia ajustable. Flujo tipo: **escena antes de la pregunta → elección de opción → explicación amable y fuente → desenlace fiel a Cervantes → descubrimiento opcional → continuación**. La imagen previa no debe revelar la solución; una imagen posterior puede ilustrar el desenlace. Toda pregunta debe tener respaldo editorial específico.
+Las preguntas aparecen en momentos narrativos relevantes, con frecuencia ajustable. **Cada pregunta final debe llevar su propia imagen específica, diferenciada, con control de spoilers y procedencia**. Flujo tipo: **imagen de escena segura antes de la pregunta → elección de opción → explicación amable y fuente → desenlace fiel a Cervantes → descubrimiento opcional → continuación**. La imagen previa no debe revelar la solución; una posterior puede ilustrar el desenlace. Una imagen genérica reutilizada para varias preguntas no cumple DC-24.
 
 ## 5. Ejemplo gráfico conceptual — episodio de los molinos
 
@@ -160,9 +160,9 @@ La calidad no se define por cantidad de efectos ni por ornamento. Se exigirá **
 6. **Estados de excepción cuidados:** carga, ausencia de datos, fallo de copia, desconexión, ayuda y configuración deben mantener la misma dignidad visual que la portada, con información clara y sin impedir el uso offline.
 7. **Respeto histórico:** la apariencia realista no autoriza anacronismos ni convierte recreaciones IA en documentos históricos. Todas las imágenes siguen sujetas a procedencia, derechos, revisión y contrato editorial.
 
-### 9.5. Instrucción operativa compartida entre equipos
+### 9.5. Instrucción operativa vigente (Dirección + desarrollador + artista puntual)
 
-**Contenidos / Dirección artística** debe entregar por escena: propósito narrativo, fase pre/pregunta/revelación/post, imagen o capas, plano y variantes, personajes/objetos protegidos, áreas candidatas para UI, elementos animables, restricciones de spoiler, texto alternativo, procedencia y derechos. **Desarrollo / UX** debe transformar esas zonas y restricciones en distribuciones adaptables para texto normal/ampliado, subtítulos, preguntas, teclado y reducción de movimiento, sin introducir texto editorial directamente en el código. **QA** debe evaluar las composiciones resultantes, no únicamente los recursos aislados.
+**Dirección integral** define por escena y por pregunta: propósito narrativo, fase pre/pregunta/revelación/post, **imagen propia exclusiva de pregunta**, planos suficientes para sostener el interés, prioridad de escenas y primeros planos, acuarelas secundarias de gameplay, áreas seguras, elementos animables, restricciones de spoiler, texto alternativo, fuente y derechos. Cuando falte arte, entrega al propietario **prompt exacto** para el director artístico. **El desarrollador único** convierte la especificación en distribución adaptable, catálogo y pruebas, integra los activos aprobados en **GitHub**, sin contenido literario hardcodeado. **Dirección** evalúa las composiciones, no solo recursos aislados; no hay nuevas firmas de roles R01–R16.
 
 Se recomienda formalizar estas regiones como coordenadas normalizadas y metadatos asociados a cada escena en el contrato editorial-técnico. **No se declara creado ni aprobado un esquema nuevo** por esta directriz: cualquier cambio de contrato requiere versión y revisión conjunta.
 

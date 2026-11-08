@@ -13,6 +13,7 @@ import ContenedorCine, { type PlanoCine } from '../cine/ContenedorCine';
 import { encuadreDe } from '../cine/resolverPlano';
 import { AjustesBoton, movimientoReducido, useAjustes } from '../cine/ajustes';
 import PanelDescubrir from '../cine/PanelDescubrir';
+import { textoParaPantalla } from './presentacion';
 import {
   cargarProgresoHistoria,
   guardarProgresoHistoria,
@@ -272,7 +273,7 @@ export default function ReproductorHistoria({ catalogo, onSalir }: Props) {
               {beat.kind} · beat {beat.order} · paso {item.intervencionIdx + 1} de {beat.utterances.length}
               {esInicioBeat ? ' · inicio del beat' : ''}
             </p>
-            <p className="texto">{intervencion.texto_visible}</p>
+            <p className="texto">{textoParaPantalla(intervencion.texto_visible)}</p>
             {item.escena.accessibility?.alt && (
               <p className="escena-alt">{item.escena.accessibility.alt}</p>
             )}

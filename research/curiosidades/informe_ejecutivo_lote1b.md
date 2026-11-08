@@ -1,51 +1,45 @@
-# Informe ejecutivo — LOTE 1B de investigación «El Quijote oculto» (2026-11-08)
+# Informe ejecutivo — subsanación final del lote 1B (2026-11-08)
 
-## Trazabilidad
+## Identidad y alcance
 
-- **Repositorio:** `JavierRB35/El_Quijote_App` (única fuente de verdad y destino).
-- **SHA inicial de `main` al comenzar:** `909479db65ae04836c6dec7ae8e602c66866e1e9`.
-- **Rama de trabajo:** `research/curiosidades-lote1b-p2c01-p2c74` (creada desde el `main` vigente).
-- **SHA final:** el del último commit de esta rama (ver cabecera de la PR).
-- **Coordinación:** incidencia de solapamiento y estado de la PR #82 documentada en el issue #83 de GitHub antes de trabajar.
+- Repositorio oficial: `JavierRB35/El_Quijote_App`; PR **#84** (rama ya existente `research/curiosidades-lote1b-p2c01-p2c74`).
+- SHA base de `main` desde el que se creó originalmente: `909479db65ae04836c6dec7ae8e602c66866e1e9`.
+- **SHA inicial de esta subsanación (HEAD PR #84 antes de cambios):** `6d5239610ca83fad23b4bade2b78dd6666688f95`.
+- El SHA de cierre se documenta en la PR después del último commit de validación. `main` debe verificarse nuevamente antes de integrar.
+- No se amplía el número de registros ni se modifican imágenes binarias, aplicación, contratos, archivos productivos o ficheros de la PR #82.
 
-## Alcance cumplido
+## Resultado después de la subsanación
 
-Primer lote del encargo originalmente asignado cubría I,8; I,6; I,11; I,18 (PR #82). Este lote completa los capítulos que faltaban del primer lote editorial: **Segunda Parte, capítulo I** y **Segunda Parte, capítulo 74**, y es el primero del proyecto que incorpora **binarios gráficos reales descargados** con SHA-256 y procedencia documentada.
+| Indicador | Estado |
+|---|---:|
+| Curiosidades | **9**: 4 sobre II,1 y 5 sobre II,74 |
+| Fichas `contrastado` (afirmaciones principales documentadas) | **5** |
+| Fichas `candidato` (hipótesis/no verificadas) | **4** |
+| Afirmaciones `CONFIRMADO` | **25** |
+| Afirmaciones `INTERPRETACIÓN ACADÉMICA` | **3** |
+| Afirmaciones `SIN VERIFICAR` | **4** |
+| Fuentes registradas | **17** (incluidos estudios consultados solo por resumen y pistas pendientes) |
+| Imágenes descargadas conservadas | **3** (sin cambio de binario, nombre o huella SHA-256 declarada) |
+| Candidatas iconográficas no descargadas | **1** |
+| Relaciones | **5** |
+| Registros publicables | **0** |
 
-## Estadísticas
+## Rectificaciones sustantivas
 
-| Métrica | Valor |
-|---|---|
-| Curiosidades registradas | 9 (4 en P2.C01, 5 en P2.C74) |
-| … con al menos una afirmación CONFIRMADA con fuente | 9 |
-| … estado `contrastado` | 7 |
-| … estado `candidato` (con afirmaciones SIN VERIFICAR declaradas) | 2 |
-| Afirmaciones por certeza | CONFIRMADO: 20 · INTERPRETACIÓN ACADÉMICA: 5 · SIN VERIFICAR: 2 |
-| Fuentes registradas | 9 (1 primaria textual canónica, 1 edición digitalizada, 3 fichas de imagen, 2 académicas, 2 contextuales) |
-| Imágenes **descargadas e incorporadas al repo** | 3 (todas dominio público, SHA-256 verificado) |
-| Imágenes candidatas sin descarga | 1 (portada de Avellaneda 1614, PDF completo) |
-| Descartados documentados | 5 entradas (identificación desestimada, observaciones editoriales, no incorporados por formato, afirmaciones no emitidas) |
-| Errores de validación | 0 |
+**CUR-L1B-001:** Hay coincidencia verificable de la fórmula «tercera salida» en la portada apócrifa de 1614 y en II,1 de 1615. La imagen de portada BNE fue examinada directamente. No existe en este lote prueba de que el inicio fuera redactado **por causa** del apócrifo. Pontón (2016) y Pedraza (2015) investigan la relación entre obras, pero se distinguió hipótesis general de prueba concreta. `status: candidato`.
 
-## Hallazgos destacados
+**CUR-L1B-002:** Descripción textual del arbitrio de don Quijote, con lectura contextual de la crítica a los arbitristas; estudio histórico-jurídico de Marina Rojo Gallego-Burín (2019) consultado. No se afirma intencionalidad literaria única.
 
-1. **CUR-L1B-001** — El II,1 cervantino anuncia la «tercera salida» que el *Segundo tomo* de Avellaneda ya había anunciado en su portada de 1614: la Segunda Parte abre en competición declarada con el apócrifo.
-2. **CUR-L1B-002** — La sátira del arbitrista: el «arbitrio» secreto de don Quijote para Felipe III es un ejército de caballeros andantes.
-3. **CUR-L1B-003** — Los dos poetas de Angélica (Barahona de Soto / Lope de Vega) y el posible dardo «famoso y único» a Lope.
-4. **CUR-L1B-005** — «Alonso Quijano el Bueno»: el apellido del hidalgo solo se fija en el capítulo de su muerte, tras la inseguridad paródica de I,1/I,2 (Quejana/Quijada/Quesada en el texto de referencia).
-5. **CUR-L1B-008** — El epílogo contra el «escritor fingido y tordesillesco» y la última palabra de la novela en el texto de referencia: «Vale.»
-6. **CUR-L1B-009** — La muerte documentada de Cervantes (22/23 de abril de 1616, Trinitarias) como contrapunto biográfico del desenlace.
+**CUR-L1B-003:** La identificación Barahona de Soto/Lope se basa en Fernández de Navarrete y documentación bibliográfica de 1602; la referencia al escrutinio de I,6 se ha contrastado con un estudio de Marcella Trambaioli que cita la edición Rico. El posible dardo irónico a Lope queda `SIN VERIFICAR`.
 
-## Valor de imagen para la aplicación
+**CUR-L1B-008:** «Tordesillesco» se describe como dato textual vinculado a II,70 y a la portada apócrifa; se elimina un consenso académico no documentado.
 
-- Portada de 1615 (documento de época, PD) como imagen principal del módulo de curiosidades de II,1/II,74.
-- Grabado de la muerte de don Quijote (Ormsby 1885, PD) como REPRESENTACION_POSTERIOR etiquetada.
-- Retrato atribuido de Cervantes (Jáuregui, c. 1600, PD) con la advertencia de atribución incluida en el catálogo, conforme a la regla de no atribuir identidades sin respaldo.
+**CUR-L1B-009:** BNE, Libro 4.º de difuntos, fol. 270r: fallecimiento **22 de abril de 1616**, sepelio **23 de abril** entre las Trinitarias. La fórmula del asiento del 23 se transcribe correctamente y se explica. Rescate por Juan Gil y entierro se registran separadamente; no se atribuyen motivos. Comparaciones calendáricas y excavaciones de 2015 no aparecen como hechos divulgativos sin fuente institucional cotejada.
 
-## Próximos pasos propuestos (para Dirección)
+**IMG-L1B-003:** óleo **anónimo**, atribuido de manera controvertida a Jáuregui, BNE `¿siglo XIX?`, primera difusión pública **1911**. La fecha 1600 es una **inscripción**, no datación acreditada. Se conserva el archivo JPG original sin modificación.
 
-1. Revisión editorial de las 9 fichas; decidir las publicables tras cotejo con la edición canónica de proyecto.
-2. Consolidación futura de los lotes (PR #82 + este) en ficheros únicos, con rebase previo de la PR #82 sobre `main` vigente (véase issue #83).
-3. Extraer la portada del apócrifo (IMG-L1B-004) desde el PDF de Commons y descargar el binario.
-4. Cotejo de las interpretaciones (arbitrista, poetas de Angélica, Avellaneda–Tordesillas) contra ediciones críticas accesibles (CVC fuera de mantenimiento durante esta sesión).
-5. Continuar el segundo lote del encargo (cobertura general) partiendo de esta metodología.
+## Límites y entrega
+
+La investigación no acredita autenticidad del retrato, intenciones de Cervantes ni hechos históricos extrapolados desde la ficción. Las tres imágenes permanecen físicamente en el mismo repositorio. Todas las curiosidades siguen con `publishable:false`. Los resultados estructurales y el alcance real de la comprobación de integridad se registran en `VALIDACION_lote1b.md`; la CI se verifica por el SHA final de la rama en GitHub.
+
+**No fusionar automáticamente.**

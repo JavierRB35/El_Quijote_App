@@ -98,3 +98,22 @@ Si se aprueba, FASE 1 arrancará con el sistema vertical mínimo (una escena end
   - **P1-5:** triada `texto_visible` / `incisos_narrador` / `texto_oral` con la semántica exacta de FICHA_ESCENA_P1_C08 §3 y regla verificable: ningún inciso en `texto_oral`.
   - **P1-6:** `texto_visible` rechaza solo-espacios (`pattern: \S`) sin normalizar el contenido (fidelidad de citas).
   - **Reauditoría H5 (2026-11-06):** (a) `incisos_narrador` presentes ⇒ `texto_oral` **obligatorio** — sin él, la voz leería verbatim un texto que contiene incisos del narrador («—respondió Sancho—»); (b) `lectura_minima_ms` mínimo 1 y **solo eleva** el suelo de la política §2.3 (≥1500 ms) — nunca lo rebaja, con o sin audio; (c) corregida la atribución antigua de la imagen mínima por beat (ver decisión 1).
+
+## Política transversal de correcciones y reutilización
+
+**Norma permanente de Dirección; vinculante para el desarrollador único.** Esta política no aprueba por sí sola un cambio de stack, nuevos esquemas ni producción fuera de la Fase 1. Se aplica junto con DC-23–DC-28 y con la [regla de AGENTS](../AGENTS.md#regla-permanente--correcciones-transversales-y-reutilización).
+
+### Alcance y ubicación de la solución
+
+- **Diagnóstico por capas:** (1) fuente/asset y licencia; (2) metadatos editoriales y contrato; (3) resolvedor de medios/encuadres; (4) primitivas y layouts compartidos; (5) consumidor de módulo; (6) estilos específicos. Localizar la causa real antes de editar. No usar CSS para «reparar» una fuente que ya viene recortada, ni alterar citas/preguntas por un problema visual.
+- **Principio de reutilización:** modificar el nivel compartido más bajo que sea semánticamente correcto y comprobar todos sus consumidores. Preferir un único sistema de composición (p. ej. `ContenedorCine` y descriptores comunes), tokens, patrones y políticas de medio. Evitar componentes por ID, reglas `if (question_id)`, rutas especiales o CSS condicionado a nombres de archivo.
+- **Contratos declarativos:** diferencias legítimas se representan mediante categorías de medio, `fit_mode`, punto focal y zona segura **solo si existen en el contrato vigente**. Si falta un campo, proponerlo y revisar compatibilidad, validadores, datos existentes y aceptación de Dirección **antes** de cambiar esquemas o el catálogo; no incorporar campos inventados a producción unilateralmente.
+- **Tipos de recursos:** imagen patrimonial/acuarela: integridad y proporciones (`contain` o equivalente); escena cinematográfica: encuadre flexible solo si ningún protagonista, gesto, acción u objeto esencial queda cortado u oculto. Validar imagen fuente y resultado real en viewport. Los hotspots se proyectan sobre el rectángulo efectivamente representado, descontando márgenes y escalados.
+- **Layout y contenido:** preservar texto completo, controles, foco, alternativas y contraste; overlays cinematográficos sin scroll conforme a DC-28, panel ampliado voluntario cuando proceda. No sustituir scroll por truncamiento, `overflow: hidden`, tipografía ilegible ni scroll global. El Lector, el catálogo de Museo y otras vistas extensas pueden utilizar desplazamiento accesible cuando su propósito funcional lo requiere.
+- **Coordinación:** revisar Aventura, Historia, Museo, Atlas, Lector, Cuaderno, inicio/menús y ajustes; registrar qué usa realmente el componente, qué comparte solo tokens y dónde corresponde una excepción. No forzar una única disposición visual donde se necesiten interacciones distintas.
+
+### Contrato de cambio para una PR correctiva
+
+Registrar una pequeña **matriz de impacto**: `defecto → causa → regla/componente común → consumidores → pruebas → excepción/pendiente`. Demostrar por lo menos el caso original y casos representativos de consumidores adicionales, según [QA §9](PLAN_QA_Y_ACEPTACION.md#9-gate-de-impacto-transversal-para-correcciones). Si no existen pruebas o evidencias suficientes, el estado es `PENDIENTE`, nunca `PASS`. Mantener separados la mejora arquitectónica documentada, su implementación real y su aceptación.
+
+**Criterio de cierre:** la solución escala a los 126 capítulos por reglas y datos, sin replicar parches por capítulo; queda documentado el alcance funcional y no hay regresiones conocidas sin registrar.

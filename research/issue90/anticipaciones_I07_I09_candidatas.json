@@ -293,7 +293,6 @@
   "validacion": {
     "hechos_cotejados": "PG #2000, I.7 e I.9; citas sin incorporar al dato de producción",
     "respuestas_aceptadas": false,
-    "guiion_implementado": false,
     "imagenes_validadas": false,
     "integracion": false,
     "ids_provisionales": true,
@@ -305,6 +304,7 @@
       "imágenes específicas antes/consecuencia para I.9 rondas 2 y 3",
       "QA spoilers y TS-001 del guion de Historia",
       "revisión del alcance piloto por Dirección y autorización de integración"
-    ]
+    ],
+    "guion_implementado": false
   }
 }

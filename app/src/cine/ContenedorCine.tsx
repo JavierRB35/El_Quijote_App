@@ -4,8 +4,9 @@
 // componen; ninguno conoce su interior. Reglas que fija:
 //  - La imagen (o el fondo neutro editorial) ocupa siempre la mayor superficie;
 //    los paneles respetan el lado seguro del encuadre y la región crítica.
-//  - TS-001: ninguna ranura recorta ni oculta texto — los paneles crecen y
-//    hacen scroll accesible; el contenido completo está en el DOM.
+//  - DC-28/TS-001: los overlays muestran el texto completo sin scroll.
+//    Si el contenido supera el área útil se usa una vista de lectura
+//    independiente (sin imagen), con desplazamiento accesible solo allí.
 //  - Transiciones discretas: fundido suave de plano; con movimiento reducido,
 //    corte sin deriva (reduced_motion_fallback del contrato).
 //  - El neutro es una decisión editorial: sin spinners ni avisos; solo un
@@ -13,6 +14,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 import { rectaContenido, type Recta } from './hotspot';
+import { requiereVistaDedicada } from './composicion';
 
 export interface PlanoCine {
   /** URI lógica del activo visible; null = fondo neutro editorial. */
@@ -35,6 +37,8 @@ interface Props {
   /** Estado de la interfaz: narración (texto lateral/banda) o pregunta
    *  (panel inferior de alto contraste). */
   estado: 'narracion' | 'pregunta';
+  /** Identidad del contenido activo, para revaluar el layout en cada cambio. */
+  contenidoClave?: string | number;
   reducirMovimiento: boolean;
   /** Cargador de URI lógica → URL usable (inyectado: Tauri o dev). */
   cargar: (uri: string) => Promise<string>;
@@ -68,6 +72,7 @@ function NotaFallo({ mensaje, onCerrar }: { mensaje: string; onCerrar: () => voi
 export default function ContenedorCine({
   plano,
   estado,
+  contenidoClave,
   reducirMovimiento,
   cargar,
   cabecera,
@@ -83,7 +88,53 @@ export default function ContenedorCine({
   const [notaCerrada, setNotaCerrada] = useState<string | null>(null);
   const pedidas = useRef<Set<string>>(new Set());
   const refPlano = useRef<HTMLImageElement | null>(null);
-  const contain = plano.ajuste === 'contain';
+  // Conservador por defecto: solo un 'cover' editorial explícito permite recorte.
+  const contain = plano.ajuste !== 'cover';
+  const panelRef = useRef<HTMLElement | null>(null);
+  const bandaRef = useRef<HTMLDivElement | null>(null);
+  const [vistaDedicada, setVistaDedicada] = useState(false);
+
+  // Cada pregunta/intervención comienza en composición cinematográfica.
+  useEffect(() => { setVistaDedicada(false); }, [contenidoClave, estado]);
+
+  // Ajuste por contenido real, no por ID de pregunta ni por nombre de imagen.
+  // No se sustituye el scroll oculto por recorte: lo excepcional abre una
+  // vista separada y accesible, sin imagen subyacente (DC-28 §1).
+  useEffect(() => {
+    if (vistaDedicada) return;
+    const panel = estado === 'pregunta' ? panelRef.current : bandaRef.current;
+    if (!panel) return;
+    const medir = () => {
+      const caja = panel.getBoundingClientRect();
+      const fuera = caja.top < 72 || caja.bottom > window.innerHeight - 8;
+      if (requiereVistaDedicada(panel.scrollHeight, window.innerHeight, estado, fuera)) {
+        setVistaDedicada(true);
+      }
+    };
+    const raf = requestAnimationFrame(medir);
+    const observador = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(medir);
+    observador?.observe(panel);
+    if (panel.firstElementChild) observador?.observe(panel.firstElementChild);
+    return () => {
+      cancelAnimationFrame(raf);
+      observador?.disconnect();
+    };
+  }, [estado, contenidoClave, pregunta, texto, vistaDedicada]);
+
+  // Al cambiar el viewport o la preferencia tipográfica se vuelve a probar
+  // el panel normal, sin dejar a la persona atrapada en la vista separada.
+  useEffect(() => {
+    const revaluar = () => setVistaDedicada(false);
+    window.addEventListener('resize', revaluar);
+    const cambiosTexto = new MutationObserver(revaluar);
+    cambiosTexto.observe(document.documentElement, {
+      attributes: true, attributeFilter: ['data-ajuste-texto'],
+    });
+    return () => {
+      window.removeEventListener('resize', revaluar);
+      cambiosTexto.disconnect();
+    };
+  }, []);
 
   // Recta de la imagen dibujada (solo con capa de zona): se mide al cargar el
   // plano y en cada redimensionado del viewport. Con 'contain' y sin deriva
@@ -124,10 +175,13 @@ export default function ContenedorCine({
     // La decodificación puede terminar después del render: escuchar la carga
     // real además de medir al montar y en cada redimensionado.
     img?.addEventListener('load', medir);
+    const observadorPlano = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(medir);
+    if (img) observadorPlano?.observe(img);
     medir();
     window.addEventListener('resize', medir);
     return () => {
       img?.removeEventListener('load', medir);
+      observadorPlano?.disconnect();
       window.removeEventListener('resize', medir);
     };
   }, [zona, contain, plano.uri, plano.ladoTexto, cargadas]);
@@ -165,7 +219,7 @@ export default function ContenedorCine({
   const hayImagen = plano.uri !== null && plano.uri in cargadas;
 
   return (
-    <main className={`cine cine-${estado} lado-${plano.ladoTexto} ${hayImagen ? '' : 'sin-plano'}`}>
+    <main className={`cine cine-${estado} lado-${plano.ladoTexto} ${hayImagen ? '' : 'sin-plano'} ${vistaDedicada ? 'vista-dedicada' : ''}`}>
       <div className="lienzo" aria-hidden="true">
         {Object.entries(cargadas).map(([uri, src]) => (
           <img
@@ -197,13 +251,18 @@ export default function ContenedorCine({
       {hayImagen && plano.alt && <p className="sr-only">{plano.alt}</p>}
 
       {cabecera}
+      {vistaDedicada && (
+        <p className="estado-vista-dedicada" role="status">
+          Vista de lectura independiente: contenido extenso, sin ocultar respuestas ni recortar la imagen.
+        </p>
+      )}
 
-      <div className={`banda-texto lado-${plano.ladoTexto} ${estado === 'narracion' ? 'visible' : ''}`}>
+      <div ref={bandaRef} className={`banda-texto lado-${plano.ladoTexto} ${estado === 'narracion' ? 'visible' : ''}`}>
         {texto}
       </div>
 
       {pregunta && (
-        <section className={`panel-pregunta lado-${plano.ladoTexto}`} aria-label="Pregunta">
+        <section ref={panelRef} className={`panel-pregunta lado-${plano.ladoTexto}`} aria-label="Pregunta">
           {pregunta}
         </section>
       )}

@@ -34,7 +34,10 @@ for escena in h["escenas"]:
         assert "DQ.SRC.0005" in interv["localizador"]
         assert interv["texto_visible"].strip()
         if interv["tipo_texto"] == "CITA_LITERAL":
-            assert interv["texto_visible"] in capitulo, (escena["id"], interv["id"])
+            # Gutenberg 2000 contiene saltos mecánicos al final de línea.
+            # Cotejar palabras y puntuación sin esos saltos (DC-31).
+            normalizar = lambda texto: re.sub(r"\\s+", " ", texto).strip()
+            assert normalizar(interv["texto_visible"]) in normalizar(capitulo), (escena["id"], interv["id"])
 assert [i["imagen"] for i in h["escenas"][6]["intervenciones"]] == [
     "p1_c01_r03_armas_morrion_pre", "p1_c01_h07_celada_rota_story",
     "p1_c01_r03_celada_reforzada_post"]

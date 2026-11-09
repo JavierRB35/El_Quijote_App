@@ -4,6 +4,7 @@
 **Destino de uso:** instrucciones iniciales o fuente de conocimiento de un nuevo proyecto ChatGPT/equipo de desarrollo de *El Quijote*.  
 **Repositorio oficial, fuente de verdad y destino de todo trabajo:** https://github.com/JavierRB35/El_Quijote_App · rama `main`.  
 **Naturaleza:** documento de navegación y mandato operativo. **No es una especificación alternativa, no sustituye documentos canónicos, no reabre acuerdos ni congela el estado de GitHub.** Su contenido debe interpretarse siempre con la versión más reciente **aprobada y vigente** de los documentos enlazados.
+**Uso fuera de GitHub (p. ej., como fuente de un nuevo Proyecto de ChatGPT):** resolver los enlaces relativos `../AGENTS.md` desde la raíz del repositorio y los demás enlaces a `docs/*.md` desde `https://github.com/JavierRB35/El_Quijote_App/blob/main/docs/`. No buscar versiones sustitutas en Internet ni asumir que el archivo adjunto conserva el estado actualizado: antes de trabajar, abrir los documentos **vivos de `main`**.
 
 ## 1. Mandato permanente
 

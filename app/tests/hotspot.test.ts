@@ -89,3 +89,12 @@ test('alineación del letterbox: con panel a la derecha la obra pega a la izquie
   const rCentro = rectaContenido(833, 1041, 1366, 768, 'contain');
   assert.ok(casiIgual(rCentro.x, (1366 - rCentro.w) / 2), 'centro por defecto');
 });
+
+
+test('marca de hotspot en capa de imagen desplazada no suma dos veces el letterbox', () => {
+  const recta = rectaContenido(833, 1041, 1366, 768, 'contain', 'fin');
+  const global = rectaZonaEnPantalla(ZONA_Q112, recta);
+  const local = rectaZonaEnPantalla(ZONA_Q112, { x: 0, y: 0, w: recta.w, h: recta.h });
+  assert.ok(casiIgual(local.x + recta.x, global.x));
+  assert.ok(casiIgual(local.y + recta.y, global.y));
+});

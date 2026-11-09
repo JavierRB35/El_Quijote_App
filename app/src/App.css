@@ -1483,3 +1483,27 @@ html[data-ajuste-movimiento='reducido'] .progreso-relleno {
     overflow-y: auto;
   }
 }
+
+
+/* Caso general de preguntas con cuatro o más alternativas:
+   compactar blancos, NUNCA ocultar ni reducir el factor personal de texto.
+   Las opciones mantienen tamaño legible y altura táctil >= 48 px.
+   Medición real P0: a 1366x768 con fuente muy grande el panel
+   de cuatro alternativas necesitaba ~10 px de margen adicional. */
+@media (min-width: 1100px) {
+  .cine.cine-pregunta .panel-pregunta:has(.opciones > .opcion:nth-of-type(4)) {
+    padding-top: .45rem;
+    padding-bottom: .5rem;
+  }
+  .cine.cine-pregunta .panel-pregunta:has(.opciones > .opcion:nth-of-type(4)) .opciones {
+    gap: .25rem;
+    margin-bottom: .25rem;
+  }
+  .cine.cine-pregunta .panel-pregunta:has(.opciones > .opcion:nth-of-type(4)) .opcion {
+    padding-block: .25rem;
+    min-height: 48px;
+  }
+  .cine.cine-pregunta .panel-pregunta:has(.opciones > .opcion:nth-of-type(4)) .enunciado {
+    margin-bottom: .3rem;
+  }
+}

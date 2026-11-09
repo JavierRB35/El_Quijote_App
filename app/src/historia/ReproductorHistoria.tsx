@@ -14,10 +14,8 @@ import { encuadreDe } from '../cine/resolverPlano';
 import { AjustesBoton, movimientoReducido, useAjustes } from '../cine/ajustes';
 import PanelDescubrir from '../cine/PanelDescubrir';
 import { textoParaPantalla } from '../presentacion';
-import {
-  cargarProgresoHistoria,
-  guardarProgresoHistoria,
-} from './persistencia';
+import { cargarProgresoDeEpisodio, guardarProgresoDeEpisodio } from './persistencia';
+import type { FichaCapitulo } from '../capitulos/registro';
 import {
   etiquetaHablante,
   estructuraHistoria,
@@ -29,30 +27,30 @@ import {
   type ItemLectura,
 } from './logica';
 
-const EPISODIO = 'DQ.P1.C08.E01';
-
 interface Props {
   catalogo: Catalogo;
   onSalir: () => void;
+  ficha: FichaCapitulo;
 }
 
 /** Estructura de lectura del episodio a partir del catálogo (data-driven). */
-function construirEstructura(catalogo: Catalogo): {
+function construirEstructura(catalogo: Catalogo, episodioId: string): {
   titulo: string;
   items: ItemLectura[];
 } {
-  const episodio = catalogo.episodio(EPISODIO);
-  const escenas: Escena[] = catalogo.escenasDeEpisodio(EPISODIO);
+  const episodio = catalogo.episodio(episodioId);
+  const escenas: Escena[] = catalogo.escenasDeEpisodio(episodioId);
   const beatsPorEscena: Beat[][] = escenas.map((e) => catalogo.beatsDeEscena(e.id));
   return { titulo: episodio.title, items: estructuraHistoria(escenas, beatsPorEscena) };
 }
 
-export default function ReproductorHistoria({ catalogo, onSalir }: Props) {
-  const { titulo, items } = useMemo(() => construirEstructura(catalogo), [catalogo]);
+export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props) {
+  const episodioId = ficha.episodioId;
+  const { titulo, items } = useMemo(() => construirEstructura(catalogo, episodioId), [catalogo, episodioId]);
   const medios = useMemo(() => catalogo.medios(), [catalogo]);
   const descubrimientos = useMemo(
-    () => catalogo.descubrimientosDeEpisodio(EPISODIO),
-    [catalogo],
+    () => catalogo.descubrimientosDeEpisodio(episodioId),
+    [catalogo, episodioId],
   );
 
   // Ajustes de presentación (texto/movimiento) con persistencia propia.
@@ -73,10 +71,10 @@ export default function ReproductorHistoria({ catalogo, onSalir }: Props) {
   // ---- recuperación de la lectura (persistencia independiente de Aventura)
   useEffect(() => {
     if (!items.length) return;
-    cargarProgresoHistoria()
+    cargarProgresoDeEpisodio('historia', episodioId)
       .then((crudo) => {
         if (crudo) {
-          const restaurada = restaurarPosicion(items, EPISODIO, crudo);
+          const restaurada = restaurarPosicion(items, episodioId, crudo);
           if (restaurada) {
             setPosicion(restaurada.posicion);
             if (restaurada.auto !== null) setAutoAvance(restaurada.auto);
@@ -87,7 +85,7 @@ export default function ReproductorHistoria({ catalogo, onSalir }: Props) {
         setPosicion(0); // inicio en I01
       })
       .catch(() => setPosicion(0));
-  }, [items]);
+  }, [items, episodioId]);
 
   const avanzar = useCallback(() => {
     setPosicion((p) => (p !== null && p + 1 < items.length ? p + 1 : p));
@@ -111,11 +109,11 @@ export default function ReproductorHistoria({ catalogo, onSalir }: Props) {
   // ---- autoguardado de la posición y la preferencia (progreso_historia)
   useEffect(() => {
     if (posicion === null) return;
-    const datos = JSON.stringify(progresoDesde(items, posicion, EPISODIO, autoAvance));
-    guardarProgresoHistoria(datos)
+    const datos = JSON.stringify(progresoDesde(items, posicion, episodioId, autoAvance));
+    guardarProgresoDeEpisodio('historia', episodioId, datos)
       .then(() => setAvisoGuardado(`guardado ${new Date().toLocaleTimeString()}`))
       .catch((e) => setAvisoGuardado(`fallo de guardado: ${e}`));
-  }, [posicion, autoAvance, items]);
+  }, [posicion, autoAvance, items, episodioId]);
 
   // ---- temporizador de autoavance con lectura mínima y pausa que congela
   // el tiempo restante (COMPONENTES_NARRATIVOS_UX §2.3; sin audio, el suelo
@@ -222,7 +220,7 @@ export default function ReproductorHistoria({ catalogo, onSalir }: Props) {
 
   const cabecera = (
     <header className="cabecera">
-      <p className="kicker">Parte I · Capítulo VIII · Modo Historia · Escena {item.escenaIdx + 1}</p>
+      <p className="kicker">{ficha.etiqueta} · Modo Historia · Escena {item.escenaIdx + 1}</p>
       <h1>{titulo}</h1>
       <div className="cabecera-linea">
         <span className="progreso-texto">
@@ -291,11 +289,8 @@ export default function ReproductorHistoria({ catalogo, onSalir }: Props) {
 
           {fin && (
             <section className="cierre" aria-live="polite">
-              <p className="cierre-titulo">Camino del Puerto Lápice</p>
-              <p className="cierre-texto">
-                La aventura de los molinos queda contada. El episodio continúa en el
-                Modo Aventura con sus preguntas.
-              </p>
+              <p className="cierre-titulo">{ficha.cierreHistoria.titulo}</p>
+              <p className="cierre-texto">{ficha.cierreHistoria.texto}</p>
               <button
                 className="primario"
                 onClick={() => { setPosicion(0); setCiclo((c) => c + 1); }}

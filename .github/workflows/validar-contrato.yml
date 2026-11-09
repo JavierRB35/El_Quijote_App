@@ -58,6 +58,12 @@ jobs:
             python tools/editorial_validation/validate.py package "$p"
           done
 
+      - name: Catálogo Aventura DC-34 (esquema, imágenes y referencias)
+        run: python tools/editorial_validation/validar_aventura.py
+
+      - name: Regresiones negativas del catálogo Aventura
+        run: python tests/dev/test_catalogo_aventura.py
+
       - name: Cotejo textual de la batería contra el texto almacenado
         run: python tools/editorial_validation/cotejar_texto_referencia.py . repo
 

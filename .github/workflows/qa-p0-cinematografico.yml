@@ -1,0 +1,75 @@
+name: qa-p0-cinematografico
+on:
+  push:
+    branches:
+      - feature/p0-dc28-composicion-sin-scroll-20261109
+    paths:
+      - '.github/workflows/qa-p0-cinematografico.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  visual:
+    name: QA real Chromium · PR 89
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - name: Instalar dependencias
+        working-directory: app
+        run: |
+          npm ci
+          npm install --no-save --no-package-lock playwright
+      - name: Instalar Chromium y librerías Linux
+        working-directory: app
+        run: npx playwright install --with-deps chromium
+      - name: Compilación
+        working-directory: app
+        run: npm run build 2>&1 | tee ../qa89-build.log
+      - name: Tests de lógica
+        working-directory: app
+        run: npm test 2>&1 | tee ../qa89-tests.log
+      - name: Servidor de Vite para UI real
+        working-directory: app
+        run: |
+          nohup npm run dev -- --host 127.0.0.1 > ../qa89-vite.log 2>&1 &
+          for i in $(seq 1 50); do
+            if curl -fsS http://127.0.0.1:1420/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat ../qa89-vite.log
+          exit 1
+      - name: Capturas reales, 3 resoluciones por 3 tamaños y métricas
+        id: browser
+        continue-on-error: true
+        env:
+          QA_OUTPUT: qa-resultados
+        run: |
+          set -o pipefail
+          node app/tests/e2e/composicion_qa.mjs despues http://127.0.0.1:1420 clasica 2>&1 | tee qa89-e2e.log
+      - name: Resumen de navegador
+        if: always()
+        run: |
+          if test -f qa-resultados/despues-clasica-metricas.json; then
+            node -e 'let q=require("./qa-resultados/despues-clasica-metricas.json");console.log(JSON.stringify({total:q.total,medidos:q.medidos,errores:q.errores,precauciones:q.precauciones},null,2))' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'Sin métricas de Chromium; comprobar logs.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Evidencias QA
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-p0-89-chromium
+          path: |
+            qa-resultados/**
+            qa89-*.log
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Gate browser
+        if: always()
+        run: test "${{ steps.browser.outcome }}" = success

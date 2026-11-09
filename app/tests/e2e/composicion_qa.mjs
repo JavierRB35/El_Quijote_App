@@ -71,6 +71,35 @@ async function sesion(w,h,escala,modo) {
     },modo);
     reg.estado='MEDIDO';
     await page.screenshot({path:path.join(salida,id+'.png'),fullPage:true,animations:'disabled'});
+
+    if(modo==='museo'){
+      // No confundir la portada y las miniaturas de selección con el visor de obra.
+      await page.locator('.museo-destacada').first().click({timeout:12000});
+      await page.waitForSelector('.museo-obra-img',{state:'visible',timeout:15000});
+      await page.waitForFunction(() => document.querySelector('.museo-obra-img')?.naturalWidth>0,
+        {timeout:10000});
+      reg.museoVisor=await page.evaluate(()=>{
+        const img=document.querySelector('.museo-obra-img');
+        const obra=document.querySelector('.museo-obra');
+        const b=img.getBoundingClientRect();
+        return {cargada:img.complete&&img.naturalWidth>0,
+          anchoOriginal:img.naturalWidth,altoOriginal:img.naturalHeight,
+          objectFit:getComputedStyle(img).objectFit,
+          anchoCaja:Math.round(b.width),altoCaja:Math.round(b.height),
+          fichaScrollable:Boolean(document.querySelector('.museo-ficha') &&
+            document.querySelector('.museo-ficha').scrollHeight>document.querySelector('.museo-ficha').clientHeight),
+          obraVisible:Boolean(obra&&obra.getBoundingClientRect().width>0)};
+      });
+      await page.screenshot({path:path.join(salida,id+'-visor.png'),animations:'disabled'});
+      if(reg.museoVisor.objectFit!=='contain'||!reg.museoVisor.cargada)throw Error('Visor de obra sin contain o asset');
+      await page.getByRole('button',{name:'Ver la obra completa (ampliar)'}).click({timeout:6000});
+      await page.waitForSelector('.museo-completa',{state:'visible',timeout:6000});
+      await page.screenshot({path:path.join(salida,id+'-obra-completa.png'),animations:'disabled'});
+      await page.keyboard.press('Escape');
+      await page.waitForSelector('.museo-completa',{state:'hidden',timeout:6000});
+      reg.museoVisor.escCierraZoom=true;
+    }
+
     if (modo==='aventura' && w===1366 && escala==='medio') {
       reg.recorrido=[];
       // Capturas de cada pregunta accesible: llegar al hotspot Q112 sin saltar restricciones antispoiler.

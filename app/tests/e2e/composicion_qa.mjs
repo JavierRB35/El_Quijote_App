@@ -63,6 +63,7 @@ async function sesion(w,h,escala,modo) {
           perdidaPorCoverPct:ajuste==='cover'?ratio((realW*realH-cajaW*cajaH),realW*realH):0},
         opciones:visibles,alternativasSimultaneas:visibles.every(o=>o.visible),
         vistaDedicada:Boolean(document.querySelector('.cine.vista-dedicada')),
+        opcionFontPx:opciones[0]?Number.parseFloat(getComputedStyle(opciones[0]).fontSize):null,
         scrollPagina:document.scrollingElement?.scrollHeight>innerHeight+2,
         overlayConScroll:Boolean(nodo&&s&&(s.overflowY==='auto'||s.overflowY==='scroll')&&nodo.scrollHeight>nodo.clientHeight+2),
         textoPreferencia:document.documentElement.dataset.ajusteTexto??null
@@ -115,11 +116,18 @@ try{
  for(const [w,h] of resoluciones){
    for(const t of escalas){
      await sesion(w,h,t,'aventura');
-     if(label==='after')await sesion(w,h,t,'historia');
+     if(label.startsWith('despues'))await sesion(w,h,t,'historia');
    }
  }
- if(label==='after')await sesion(1366,768,'muy_grande','museo');
+ if(label.startsWith('despues'))await sesion(1366,768,'muy_grande','museo');
 } finally { await browser.close(); }
+const escalasInsuficientes=[];
+for(const [w,h] of resoluciones) {
+  const rows=registros.filter(x=>x.modo==='aventura'&&x.estado==='MEDIDO'&&x.viewport.width===w&&x.viewport.height===h);
+  const medio=rows.find(x=>x.escala==='medio')?.metricas.opcionFontPx;
+  const enorme=rows.find(x=>x.escala==='muy_grande')?.metricas.opcionFontPx;
+  if(medio&&enorme&&enorme/medio<1.25)escalasInsuficientes.push({ancho:w,alto:h,ratio:Math.round(enorme/medio*100)/100});
+}
 const total=registros.length;
 const fallo=registros.filter(x=>x.estado!=='MEDIDO');
 const precaucion=registros.filter(x=>x.estado==='MEDIDO'&&x.modo==='aventura'&&
@@ -127,11 +135,11 @@ const precaucion=registros.filter(x=>x.estado==='MEDIDO'&&x.modo==='aventura'&&
     || x.metricas.panel.ocupacionViewportPct>=x.metricas.imagen.superficieDibujadaPct*.95
     || x.metricas.imagen.superficieDibujadaPct<35
     || !x.metricas.alternativasSimultaneas || x.metricas.overlayConScroll || x.metricas.vistaDedicada));
-const resumen={label,tipo,origin,total,medidos:total-fallo.length,errores:fallo.map(x=>x.id),
+const resumen={label,tipo,origin,total,medidos:total-fallo.length,errores:fallo.map(x=>x.id),escalasInsuficientes,
   precauciones:precaucion.map(x=>({id:x.id,panelAlturaPct:x.metricas.panel.proporcionAlturaViewportPct,
     areaPanelPct:x.metricas.panel.ocupacionViewportPct,
     areaImagenPct:x.metricas.imagen.superficieDibujadaPct,
     alternativas:x.metricas.alternativasSimultaneas,scroll:x.metricas.overlayConScroll, dedic:x.metricas.vistaDedicada})),registros};
 await fs.writeFile(path.join(salida,label+'-'+tipo+'-metricas.json'),JSON.stringify(resumen,null,2));
-console.log('QA_BROWSER_RESULT='+JSON.stringify({total:resumen.total,medidos:resumen.medidos,errores:resumen.errores,precauciones:resumen.precauciones}));
-if(fallo.length||precaucion.length)process.exitCode=1;
+console.log('QA_BROWSER_RESULT='+JSON.stringify({total:resumen.total,medidos:resumen.medidos,errores:resumen.errores,escalasInsuficientes:resumen.escalasInsuficientes,precauciones:resumen.precauciones}));
+if(fallo.length||precaucion.length||escalasInsuficientes.length)process.exitCode=1;

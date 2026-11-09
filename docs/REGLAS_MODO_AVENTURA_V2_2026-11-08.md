@@ -4,7 +4,7 @@
 
 ## 1. Qué es ahora Aventura
 
-El jugador observa una escena y **anticipa qué hará un personaje a continuación**, eligiendo entre respuestas predefinidas. No es un examen de conocimientos de la novela ni una historia ramificada: **los hechos, los personajes y la sucesión canónica de Cervantes permanecen invariables**, incluso si el jugador falla. El antiguo banco de preguntas no se borra ni se convierte automáticamente a este formato.
+El jugador observa una escena y **anticipa qué hará un personaje a continuación**, eligiendo entre respuestas predefinidas. No es un examen de conocimientos de la novela ni una historia ramificada: **los hechos, los personajes y la sucesión canónica de Cervantes permanecen invariables**, incluso si el jugador falla. El cuestionario cultural anterior se elimina del catálogo y de la aplicación. Las únicas decisiones jugables son anticipaciones narrativas verificadas, con consecuencia canónica.
 
 Cada ronda muestra una imagen anterior al desenlace, una situación breve, el personaje protagonista y la decisión. La escena contiene pistas naturales suficientes (diálogos, gestos, motivos), sin revelar la respuesta. **Dificultad media UNIFORME en todas las rondas**: ni trivial ni frustrante; no aumenta por tramo y no se adapta algorítmicamente. Las tres opciones habituales (cuatro solo cuando esté justificado) deben ser verosímiles, inequívocas y relevantes.
 
@@ -58,13 +58,13 @@ Primera Parte, capítulo VIII: **9 rondas**, en **3 tramos de 3**.
 2. **Los frailes y el coche:** interpretación errónea, arremetida, reacción de Sancho ante los despojos; checkpoint «La comitiva de los frailes».
 3. **El vizcaíno:** petición a la dama, reacción del vizcaíno, desafío; checkpoint «El desafío del vizcaíno». El resultado del combate queda para la narración posterior.
 
-Los datos viven en `app/src/aventura/guionNarrativo.ts`, las reglas puras en `motorNarrativo.ts`, la interfaz en `AventuraNarrativa.tsx`, estilos en `aventuraNarrativa.css` y pruebas en `app/tests/aventura_narrativa.test.ts`. La UI de menú activa la versión nueva; el código legacy permanece sin cambios para comparar o recuperar datos.
+Los datos viven en `app/src/aventura/guionNarrativo.ts`, las reglas puras en `motorNarrativo.ts`, la interfaz en `AventuraNarrativa.tsx`, estilos en `aventuraNarrativa.css` y pruebas en `app/tests/aventura_narrativa.test.ts`. La entrada de Aventura carga exclusivamente esta experiencia narrativa. El código del cuestionario y sus preguntas se retiran del repositorio activo, sin conservar una versión antigua.
 
 **Reutilización visual real**: imágenes ya existentes y específicas de preguntas de Aventura (`DQ.MA.901004`, `901005`, `900006`, `900029`, `901008`, `901009`, `900031`, `901007`), más escenas de `assets/scenes/part_1/chapter_08/p1_c08_story_*` propias del montaje Historia. Cada ronda tiene una preimagen distinta y una consecuencia ilustrada. Las escenas Historia aún no registradas como `MediaAsset` se usan por ruta exacta existente **sin crear IDs canónicos falsos**; esa catalogación es pendiente editorial/técnico antes de publicarlas como contenido terminado. Revisión de spoilers/continuidad y derechos para toda imagen pendiente de control visual real.
 
 ## 7. Persistencia y compatibilidad
 
-Se reutiliza el canal nativo `guardar_progreso` / `cargar_progreso` del backend Tauri y el equivalente local en desarrollo; no se modifica Rust ni se confunde con `progreso_historia`. El formato v2 incluye `version`, `episodio`, `partida`, puntos, fase, índice, checkpoint, intentos y vistas. Los guardados antiguos de respuestas del modo cuestionario se conservan como `progreso_preguntas_v1` en el nuevo archivo, **sin convertir respuestas culturales en puntos**. El formato corrupto se descarta para el modo nuevo. El paso de guardado asíncrono se serializa para evitar sobreescrituras por transiciones rápidas.
+Se reutiliza el canal nativo `guardar_progreso` / `cargar_progreso` del backend Tauri y el equivalente local en desarrollo; no se modifica Rust ni se confunde con `progreso_historia`. El formato v2 incluye `version`, `episodio`, `partida`, puntos, fase, índice, checkpoint, intentos y vistas. Los guardados del cuestionario anterior no se importan ni se almacenan dentro de los guardados actuales. Si no existe una partida narrativa válida, se crea una partida nueva de 3 puntos. No convertir respuestas culturales en puntos. El formato corrupto se descarta para el modo nuevo. El paso de guardado asíncrono se serializa para evitar sobreescrituras por transiciones rápidas.
 
 ## 8. Criterios de QA y límites
 

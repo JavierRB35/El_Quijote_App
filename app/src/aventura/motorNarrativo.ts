@@ -1,4 +1,4 @@
-// Motor puro de Aventura v2. Separado de React y del catálogo histórico de preguntas.
+// Motor puro de Aventura narrativa. Separado de React y del contenido editorial.
 // Reglas A–J aprobadas por el propietario: dificultad uniforme y moderada.
 export const PUNTOS_INICIALES = 3;
 export const PUNTOS_MAXIMOS = 5;

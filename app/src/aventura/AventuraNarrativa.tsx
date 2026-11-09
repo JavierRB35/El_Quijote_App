@@ -1,5 +1,5 @@
 // Nuevo Modo Aventura: anticipar el siguiente acto, nunca alterar el canon.
-// Estado puro en motorNarrativo; el antiguo catálogo de preguntas sigue intacto.
+// Estado puro en motorNarrativo; sin cuestionarios de conocimientos.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Catalogo } from '../contrato';
 import { leerAsset } from '../entorno';
@@ -71,7 +71,6 @@ export default function AventuraNarrativa({ catalogo, onSalir }: Props) {
   const [cargado, setCargado] = useState(false);
   const [errorGuardado, setErrorGuardado] = useState('');
   const [estadoGuardado, setEstadoGuardado] = useState<'pendiente' | 'guardado' | 'error'>('pendiente');
-  const progresoAnterior = useRef<string | null>(null);
   const colaGuardado = useRef<Promise<void>>(Promise.resolve());
   const revisionGuardado = useRef(0);
   const { ajustes, fijarTexto, fijarMovimiento } = useAjustes();
@@ -84,31 +83,19 @@ export default function AventuraNarrativa({ catalogo, onSalir }: Props) {
       .then((raw) => {
         if (!vivo) return;
         const restaurada = restaurarPartida(raw, RONDAS_AVENTURA);
-        if (restaurada) {
-          setPartida(restaurada);
-          // Conservar también el archivo v1 encapsulado en futuras sesiones.
-          const documento = JSON.parse(raw ?? '{}') as { progreso_preguntas_v1?: unknown };
-          if (typeof documento.progreso_preguntas_v1 === 'string') {
-            progresoAnterior.current = documento.progreso_preguntas_v1;
-          }
-        } else if (raw) {
-          progresoAnterior.current = raw; // conserva el guardado v1
-        }
+        if (restaurada) setPartida(restaurada);
       })
       .catch((error: unknown) => { if (vivo) setErrorGuardado(String(error)); })
       .finally(() => { if (vivo) setCargado(true); });
     return () => { vivo = false; };
   }, []);
 
-  // El progreso antiguo queda archivado dentro del nuevo guardado; los puntos
-  // no se infieren de preguntas de conocimiento sin equivalencia narrativa.
   useEffect(() => {
     if (!cargado) return;
     const datos = JSON.stringify({
       version: VERSION_PARTIDA,
       episodio: EPISODIO_AVENTURA,
       partida,
-      ...(progresoAnterior.current ? { progreso_preguntas_v1: progresoAnterior.current } : {}),
     });
     const revision = ++revisionGuardado.current;
     setEstadoGuardado('pendiente');

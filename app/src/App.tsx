@@ -82,7 +82,7 @@ export default function App() {
             progreso.
           </span>
         </button>
-        <p className="menu-nota">Historia guarda aparte la lectura; Aventura guarda aparte tus respuestas.</p>
+        <p className="menu-nota">Historia guarda la lectura; Aventura guarda puntos y checkpoints.</p>
       </section>
     </main>
   );

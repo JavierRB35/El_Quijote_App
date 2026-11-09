@@ -18,6 +18,8 @@
 | beat `order` / `manual_advance_allowed` / `replay_allowed` | Habilitan los controles «Siguiente/Atrás» y «Repetir» |
 | `reduced_motion_fallback` | Con movimiento reducido: cambio de plano sin deriva, transición instantánea |
 
+**DC-28 — condición de presentación vigente:** `texto_visible` íntegro significa **legible sin scroll ni truncado dentro del cuadro sobre imagen**, no solo presente en el DOM o recuperable con la rueda. Primero ampliar horizontalmente el cuadro **dentro de zona segura**; si todavía no cabe, reducir tipografía sin comprometer legibilidad. El panel será semitransparente y su integración deberá pasar QA «tipo póster». Si no es posible mantener TS-001 y composición, bloquear la aceptación gráfica del estado; no dividir intervenciones sin aprobación editorial. Véase [dictamen y auditoría preliminar](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md).
+
 ## 2. Estados del reproductor de beats — matriz subsanada (dictamen H5)
 
 Alcance de «texto siempre visible»: el **texto íntegro de la intervención activa** permanece en pantalla durante todo su beat (y es recuperable íntegro al retroceder); no significa mantener la novela entera fijada en una sola pantalla.
@@ -91,5 +93,6 @@ Regla verificable en el validador (activa): **ningún inciso del narrador puede 
 | T9 | Movimiento reducido: sin deriva; texto idéntico | Accesibilidad | Con reproductor (pendiente) |
 | T10 | Política de autoavance (P0-2): el autoavance respeta `max(voz, lectura_mínima)`; fin de voz solo no oculta texto; pausa congela voz y temporizador | Automática (mock) + manual | Con reproductor (pendiente) |
 | T11 | Texto primero: con imágenes ausentes, lentas o erróneas, el texto aparece y la narración continúa (P1-4) | Automática (mock) + manual | Con reproductor (pendiente) |
+| T12 (DC-28) | Overlay sin scroll/recorte; ajuste horizontal seguro antes de reducción legible; fondo semitransparente, zonas críticas intactas y composición tipo póster | E2E CSS/DOM + capturas por estado y revisión artística | **PENDIENTE**: esta PR solo documenta la deuda |
 
 T5–T9 (y T10–T11 funcionales) **siguen pendientes de ejecución real hasta nueva evidencia**: alimentarán pruebas de usabilidad y componentes del desarrollador único, con aceptación de Dirección. Las pruebas de contrato T1–T4b no constituyen prueba de visualización real. Añadir QA de imagen específica por pregunta, cobertura cinematográfica por capítulo y galería artística de acuarelas con fuente y derechos.

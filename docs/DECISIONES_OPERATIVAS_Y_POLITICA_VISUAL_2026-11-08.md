@@ -34,9 +34,9 @@ Una escena de novela no se debe falsificar para convertirla en imagen. Cada prei
 
 ## 5. Flujo de ejecución y criterios de aceptación
 
-1. Dirección consulta GitHub, mantiene **inventario de cobertura por episodio y pregunta**, selecciona escenas existentes, comprueba candidatos secundarios y genera lista de huecos visuales.
+1. Dirección consulta GitHub, mantiene **inventario de cobertura por episodio y ronda**, selecciona escenas existentes, comprueba candidatos secundarios y genera lista de huecos visuales.
 2. Si falta arte, Dirección proporciona al propietario **prompt exacto por imagen** para encargarlo al director artístico; identifica imagen, objetivo expresivo, uso antes/después del hecho y limitaciones.
-3. El desarrollador toma sus datos **solo de GitHub**, verifica el SHA de `main`, trabaja en rama, produce software/validaciones/activos y devuelve **la PR al mismo GitHub**. No deja entregas solo locales ni fusiona sin cumplir las reglas.
+3. El desarrollador toma sus datos **solo de GitHub**, verifica el SHA de `main`, aplica la estrategia de integración de DC-29, produce software y validaciones y entrega commits identificables al mismo GitHub. No deja entregas solo locales ni omite las pruebas obligatorias.
 4. Dirección verifica integridad, fidelidad, cobertura visual y corrección del producto con pruebas ejecutadas. Las PR documentales antiguas no requieren rondas de aprobación entre roles.
 5. Cada capítulo tiene dos hitos distintos:
    - **Vertical técnico jugable:** el reproductor es verificable con recursos neutros y/o provisionales, sin alterar derechos.
@@ -55,3 +55,9 @@ Una escena de novela no se debe falsificar para convertirla en imagen. Cada prei
 | Encargos de auditoría y dictámenes sucesivos como principal medida de progreso | Entregas funcionales en GitHub, prueba reproducible y cobertura audiovisual contrastada |
 
 Este documento no declara existente ninguna integración visual o función de galería que aún no se haya construido. Debe leerse junto a `docs/ENCARGO_MAESTRO.md` y `docs/VISION_Y_DECISIONES.md` según la precedencia por fecha y especificidad de decisión.
+
+## 7. Ampliación vinculante DC-28 — composición texto + imagen
+
+**Decisión posterior y prevalente del propietario (2026-11-08):** en **todo cuadro de texto sobre imagen** no se admite scroll de ningún eje; cuando el contenido no cabe, se amplía primero su **anchura dentro de zonas visuales seguras**, sin ocultar rostros, gestos, acción, pistas ni hotspots. Si eso no basta, se reduce tipografía **solo hasta un mínimo legible y accesible**, sin suprimir texto ni botones. El fondo es **siempre semitransparente**, con contraste evaluado sobre escena real. Cada composición se acepta en conjunto únicamente si puede funcionar como **póster**. Ninguna limitación de altura anterior ni el panel ampliable justifican incumplirlo.
+
+El principio **TS-001** se preserva: no es admisible esconder parte de una intervención detrás de un scroll. Los cajones abiertos sobre la imagen también están sujetos; para textos irresolubles en la zona segura, exigir solución de arte/encuadre o **vista separada**, no forzar una letra ilegible. Documento técnico, trazabilidad y checklist: [Dictamen DC-28](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md). Esta actualización es documental; no certifica que la aplicación ya pase las pruebas.

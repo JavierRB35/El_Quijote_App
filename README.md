@@ -2,13 +2,15 @@
 
 Videojuego premium para PC basado en las **dos partes completas de Don Quijote de la Mancha**, con aventura narrativa interactiva, preguntas de respuesta seleccionada, **Modo Historia condensado** y **Modo Histórico-cultural real** previstos, atlas geográfico, museo histórico-literario y cuaderno personal de investigador. **Uso estrictamente personal, privado y no comercial:** la aplicación no está destinada a publicación, venta, distribución ni difusión en línea. La autorización del propietario para descargar imágenes destinadas a su consulta privada no equivale a permiso de terceros para alojarlas en GitHub. Véase [uso privado y recursos QBI](docs/USO_PRIVADO_Y_RECURSOS_QBI.md) para las condiciones de copia local, atribuciones y las limitaciones aplicables al repositorio remoto.
 
+> **Instrucciones operativas para todos los agentes:** leer primero [`AGENTS.md`](AGENTS.md) y [`Directriz de desarrollo ágil (2026-11-09)`](docs/DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md). La nueva directriz **sustituye** la obligación general de rama/PR en Fase 1: `main` para cambios menores y activos, ramas/PR según riesgo. Ver DC-29 y gobernanza Git.
+>
 > **Documento rector:** [`docs/ENCARGO_MAESTRO.md`](docs/ENCARGO_MAESTRO.md) — especificación íntegra de producción editorial y desarrollo. Todo trabajo debe ser conforme a él.
 
 ## Estado del proyecto
 
-**FASE 0 — Auditoría y diseño.** No hay implementación del videojuego, producción de contenido ni código de aplicación. La implementación requiere la aprobación expresa del propietario en el punto de control GO/NO-GO (encargo maestro, §8).
+**FASE 1 — Piloto coordinado autorizado por DC-18 (2026-11-05).** Se permite el sistema vertical de molinos, la validación empírica del stack, el piloto editorial de seis capítulos y su QA. **No se ha autorizado la Fase 2**, ni distribución o comercialización. El registro vigente está en `AGENTS.md` y `docs/VISION_Y_DECISIONES.md`.
 
-Trabajo autorizado en esta fase: estudio, inventario, diseño documental, estimaciones y propuestas de esquema.
+Los entregables de Fase 0 que siguen a continuación son historial, no descripción del estado actual.
 
 **Entrega 2026-11-05 (modo CONTENIDOS):** auditoría y extracción reales del EPUB ilustrado — **376 acuarelas de Salvador Tusell + 39 elementos de edición** en [`assets/ilustraciones_tusell/`](assets/ilustraciones_tusell/), con manifiestos (CSV/JSON), [informe de inventario](docs/INVENTARIO_ILUSTRACIONES_TUSELL.md) y [expediente de derechos](docs/DERECHOS_Y_PROCEDENCIA_ILUSTRACIONES.md). Corresponde a la decisión DP-03 y resuelve PEND-02 (`docs/VISION_Y_DECISIONES.md`). Excepción de `.gitignore` documentada en [`docs/GOBERNANZA_GIT.md`](docs/GOBERNANZA_GIT.md) §5.
 
@@ -16,7 +18,7 @@ Trabajo autorizado en esta fase: estudio, inventario, diseño documental, estima
 
 ## Repositorio
 
-- **Principal y única fuente de verdad:** `JavierRB35/El_Quijote_App` en GitHub (privado), rama `main`.
+- **Principal y única fuente de verdad:** `JavierRB35/El_Quijote_App` en GitHub, rama `main`.
 - Regla del propietario (2026-11-05): **GitHub debe estar siempre actualizado** — ver [`docs/GOBERNANZA_GIT.md`](docs/GOBERNANZA_GIT.md).
 - Registro de decisiones cerradas/provisionales/pendientes: [`docs/VISION_Y_DECISIONES.md`](docs/VISION_Y_DECISIONES.md). No reabrir decisiones cerradas.
 

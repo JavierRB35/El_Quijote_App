@@ -13,13 +13,11 @@
 
 Las denominaciones R01–R16 de documentos/PR/Issues antiguos solo identifican procedencia de evidencia; **no se convocan como agentes operativos ni son firmas obligatorias**. Dirección decide con competencia multidisciplinar y trazabilidad, solicitando asesoramiento jurídico externo si fuera imprescindible para un lanzamiento real.
 
-## 2. Política obligatoria de imágenes por pregunta
+## 2. Política visual obligatoria de las rondas de Aventura
 
-- **Cada pregunta publicada en la experiencia final debe disponer de una imagen propia y específica**, con identidad de recurso y asignación por pregunta: no basta una imagen genérica de capítulo ni reutilizar automáticamente el mismo plano como ilustración de varias preguntas.
-- Prioridad de obtención: **(1)** escenas ya catalogadas en `assets/scenes/` que sean específicas, exactas y aptas para la pregunta; **(2)** acuarelas existentes, como apoyo **secundario** cuando sean pertinentes y se permitan sus usos; **(3)** encargo individual nuevo al director artístico si las dos opciones anteriores no permiten obtener una imagen propia adecuada. Se pueden generar **variantes originales claramente diferenciadas** a partir de escenas existentes, con nuevos IDs/hash/procedencia, si cumple derechos y calidad.
-- `pre_image_media_id` nunca debe revelar una respuesta, el desenlace ni un hecho aún no narrado. Si la imagen pertinente es necesariamente posterior, programar una imagen previa independiente y usar la posterior solo en la explicación/revelación. Los tipos `ordering`, `hotspot`, `true_false` y resto mantienen sus controles accesibles.
-- Las preguntas existentes sin imagen específica o con imágenes no elegibles siguen siendo **deuda de producción**: pueden permanecer en catálogo técnico para desarrollo, pero **no se declaran visualmente terminadas ni publicables**. No falsear una imagen, su licencia, `review.state` ni métricas de cobertura para conseguir un PASS.
-- La cobertura se verifica por ID de pregunta: `id → media_asset_id exclusivo → URI/blob/hash → fase → instante seguro → revisión → derechos → QA`.
+En la aventura narrativa, **cada ronda exige una imagen previa propia y no reveladora** y una representación del acontecimiento posterior. La revisión de inventario se realiza antes de encargar imágenes; el propietario indica las que ya existen y solicita exclusivamente las faltantes mediante prompts fieles al texto de Cervantes.
+
+Una escena de novela no se debe falsificar para convertirla en imagen. Cada preimagen se vincula por ronda y momento: `round_id → capítulo/pasaje → media_asset/preimagen → consecuencia → momento de revelación → licencias → QA`. La falta de un recurso no autoriza a fingir cobertura visual terminada. Conservar obras e imágenes verificables para Historia, Lector, Museo y Cuaderno.
 
 ## 3. Política visual de Modo Historia
 

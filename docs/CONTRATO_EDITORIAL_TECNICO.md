@@ -1,6 +1,6 @@
 # CONTRATO EDITORIAL-TÉCNICO — v0.2.0 (borrador integrado)
 
-**Estado histórico:** consolidación editorial/técnica v0.2.0 de 2026-11-05, con contrafirma registrada en §12. La versión contractual real vigente debe verificarse **en los esquemas de GitHub**, no deducirse del título. **Actualización operativa 2026-11-08 (DC-23–DC-27):** Dirección integral decide requisitos editoriales y revisa; un desarrollador implementa/valida. No hay nuevas firmas de equipos R01–R16. Preguntas finales con imagen propia, Historia visualmente rica, escenas prioritarias y acuarelas secundarias; la relajación de listas vacías de Scene/Beat requiere PR técnica versionada y pruebas, no se declara ya implementada.
+**Estado histórico:** consolidación editorial/técnica v0.2.0 de 2026-11-05, con contrafirma registrada en §12. La versión contractual real vigente debe verificarse **en los esquemas de GitHub**, no deducirse del título. **Actualización operativa 2026-11-08 (DC-23–DC-27):** Dirección integral decide requisitos editoriales y revisa; un desarrollador implementa/valida. No hay nuevas firmas de equipos R01–R16. Rondas de anticipación con preimagen propia, Historia visualmente rica, escenas prioritarias y acuarelas secundarias; la relajación de listas vacías de Scene/Beat requiere PR técnica versionada y pruebas, no se declara ya implementada.
 **Fuente normativa:** `docs/ENCARGO_MAESTRO.md` §2.2, §4.3, §6.1–§6.3, Anexo A.
 **Última actualización normativa:** 2026-11-08 (DC-23–DC-27); los hitos de reconciliación anteriores permanecen históricos.
 
@@ -23,7 +23,7 @@ Ambos equipos redactaron en paralelo el 2026-11-05. Divergencias detectadas y re
 | spoiler_policy | enum simple: `capitulo_actual/episodios_anteriores/siempre/nunca` | estructura `safe_after_episodes[]` | **Técnica**: estructurada es comprobable por máquina; el enum editorial queda como abreviatura documental (tabla de equivalencias en §4) |
 | difficulty | `facil/media/dificil` | entero 1–5 | **Técnica**: 1–5 alimenta el selector adaptativo (§5.4); equivalencia documentada 1–2=fácil, 3=media, 4–5=difícil |
 | allowed_uses | `uso_interno, instalador, web_publica` | `uso_personal_app, almacenamiento_repo_git, redistribucion` | **Técnica**: alineado con el encargo §4.1/§4.7.8 (uso personal / repositorio / redistribución) y con las puertas de licencia implementadas |
-| Opciones por pregunta | minItems 3, maxItems 8 | minItems 3 (single) sin máximo | **Fusión**: 3–8 opciones; `true_false` exactamente 2 |
+| Opciones por ronda | minItems 3, maxItems 8 | minItems 3 (single) sin máximo | **Fusión**: 3–8 opciones; `true_false` exactamente 2 |
 | evidence obligatoria | `passage_ids` minItems 1 en TODA pregunta | pasajes opcionales si hay fuente histórica | **Técnica**: el encargo §4.3.9 admite «capítulo/pasaje **o** fuente histórica»; `evidence[]` siempre ≥1 |
 
 ## 1. Versionado y compatibilidad
@@ -101,19 +101,11 @@ Los patrones de capítulo ya codifican la realidad textual (P1: 52 capítulos, P
 
 Definiciones compartidas (IDs, enumeraciones, Review, EvidenceItem, NormalizedArea): `schemas/content/_definitions.schema.json`.
 
-## 4. Preguntas — reglas vinculantes (§2.2, §4.3)
+## 4. Aventura narrativa — contrato de producto vigente
 
-- Tipos permitidos (`interaction.type`): `single_choice`, `multi_choice`, `true_false`, `ordering`, `matching`, `hotspot`. **No existe ningún mecanismo de respuesta escrita libre.**
-- `multi_choice` exige `multi_declared: true`: el enunciado declara expresamente que puede haber varias correctas.
-- Opciones: **3–8** para choice; `single_choice` exactamente 1 correcta; `true_false` exactamente 2 opciones; `ordering` con `correct_order` = TODAS las opciones y `shuffle_options: false`; `matching` con `pairs` sin reutilización de lados.
-- `hotspot`: `hotspot_area` normalizada 0..1 con `x+w ≤ 1`, `y+h ≤ 1` (comprobado por el validador).
-- `shuffle_options` puede reordenar el **texto** de las opciones; **nunca** altera el ID de la correcta ni la cita asociada.
-- `evidence`: mínimo 1 elemento. `cita_literal` ⇒ `passage_id` + `quote`; `parrafo_localizado` ⇒ `passage_id`; `fuente_historica`/`estudio_academico` ⇒ `source_id` + `locator`. **Regla anti-fábrica-de-verdades:** si alguna evidencia es `interpretacion_editorial`, `certainty` no puede ser `TEXTO_EXPLICITO` ni `HECHO_HISTORICO_DOCUMENTADO`.
-- `visual_requirements.pre_image_must_not_reveal` es siempre `true`; la imagen previa **nunca adelanta la respuesta ni un hecho futuro**, aunque el metadato `spoiler_level` sea permisivo. **Nueva condición de acabado visual DC-24:** cada pregunta definitiva debe tener **imagen propia, exclusiva y apta para ella**; el contrato actual puede admitir campos visuales opcionales para el prototipo técnico, lo que **no equivale a cobertura editorial aprobada**. La exigencia de cobertura se incorporará a validación de publicación/versionado cuando proceda.
-- `semantic_key`: **único entre todas las preguntas del paquete** (detector de duplicados semánticos, §4.3.13).
-- `spoiler_policy` estructurada con `safe_after_episodes[]`; equivalencia documental con la abreviatura editorial: `capitulo_actual` = `[]` + escena del capítulo; `episodios_anteriores` = lista de episodios previos; `siempre` = `[]`; `nunca` = episodios posteriores al suyo.
-- Estados de revisión (`review.state`): `borrador → documentada → revisada → aprobada` (o `descartada`). Solo `aprobada` es empaquetable; la puerta de publicación es editorial.
-- `difficulty` 1–5: 1–2 fácil, 3 media, 4–5 difícil (alimenta el selector adaptativo §5.4).
+No existe la entidad `question` ni el banco de exámenes culturales en el manifiesto editorial vigente. El paquete conserva capítulos, episodios, pasajes, escenas, beats, medios, descubrimientos, personas, lugares, fichas museísticas, fuentes y derechos. Las **rondas de anticipación** del piloto I.8 se definen actualmente en `app/src/aventura/guionNarrativo.ts` y `motorNarrativo.ts`: cada ronda identifica un hecho inmediato, tres alternativas habituales, una acción canónica, consecuencia documentada, `pasajeId`, preimagen exclusiva antiespoiler, imagen posterior y checkpoint opcional.
+
+El paso a contrato de datos declarativo para 126 capítulos está pendiente de diseño/QA; no recuperar el esquema `question.schema.json`, sus validadoras ni su banco, y no inventar IDs productivos sin aprobación. Fidelidad textual, derechos y trazabilidad siguen siendo vinculantes.
 
 ## 5 bis. Intervenciones narrativas y beats (v1.1.0 — R09/R11, DC-22/TS-001)
 

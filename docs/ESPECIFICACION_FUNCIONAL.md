@@ -5,7 +5,7 @@
 **Fuente normativa:** encargo §3, §5.4, §7.2; decisiones cerradas DC-01…DC-17 (`VISION_Y_DECISIONES.md`); contrato editorial-técnico v0.2.0 (firmado por ambos lados).
 **Última actualización:** 2026-11-06 (ampliación modos Historia e Histórico; resto de la especificación conserva su estado previo).
 
-Convenciones: los datos editoriales provienen SIEMPRE del catálogo versionado (contrato), nunca de componentes con textos incrustados (encargo §5.3, §9 criterio de excelencia). «Piloto I.8» = `content/piloto/package.json` (12 preguntas reales, 21 medios, VÁLIDO).
+Convenciones: los datos editoriales provienen SIEMPRE del catálogo versionado (contrato), nunca de componentes con textos incrustados (encargo §5.3, §9 criterio de excelencia). «Piloto I.8» = guion de anticipación de `app/src/aventura/guionNarrativo.ts` y paquete editorial de pasajes, personajes, imágenes y fuentes.
 
 ---
 
@@ -19,43 +19,20 @@ Convenciones: los datos editoriales provienen SIEMPRE del catálogo versionado (
 - `EF-INI-04` La pantalla de inicio no muestra avisos de actualización ni paneles de telemetría; lo relativo a red vive en ajustes.
 - **Prueba:** recorrer inicio con teclado solo, sin puntero (QA §7.4, perfil «usuario de teclado»).
 
-## EF-AV — Aventura (controlador narrativo)
+## EF-AV — Aventura narrativa (normativa vigente)
 
-**Propósito:** recorrer los episodios en orden canónico (DC-01) con etapas: situación previa → interacción opcional → pregunta → respuesta amable → desenlace → descubrimiento opcional → continuación (§3).
+**Propósito:** anticipar la acción inmediata de un personaje a partir de la escena anterior al acontecimiento; no examinar conocimientos de la obra. El canon permanece siempre invariable.
 
-- `EF-AV-01` La secuencia canónica se lee del catálogo (`Episode.narrative_order`); la app no codifica el orden.
-- `EF-AV-02` Cada escena se compone desde `Scene` (fases before/question/reveal/after, capas, hotspots). Sin imagen elegible se muestra fallback seguro para **prototipo/fallo/transición**, nunca hueco; esto no satisface la exigencia **visual definitiva** de capítulos suficientemente ilustrados (DC-25).
-- `EF-AV-03` Los puntos interactivos son SIEMPRE opcionales y accesibles por teclado (contrato `hotspots[]`); ignorarlos no bloquea nada.
-- `EF-AV-04` Las preguntas se presentan en momentos significativos con ritmo adaptativo (EF-SEL); su frecuencia es ajustable por perfil.
-- `EF-AV-05` Fallo una pregunta: explicación siempre visible, sin bloqueo narrativo, con nuevo intento o continuación (DC-05, §3.4).
-- `EF-AV-06` Aventuras aleatorias: solo episodios compatibles con el conocimiento del jugador o con aviso explícito de spoilers (`Episode.spoiler_flags`, `Question.spoiler_policy`) (§3).
-- `EF-AV-07` Nada reescribe el desenlace canónico; no existen decisiones contrafactuales en el hilo (§3).
-- `EF-AV-08` Autoguardado transparente en transiciones y al salir; un cierre imprevisto recupera la partida sin corrupción (§7.3).
-- **Prueba:** jugar el piloto I.8 end-to-end offline (instalador, VM limpia) — criterio de salida de FASE 1.
+- **EF-AV-01:** presentar antes del hecho imagen específica, contexto breve, personaje, anticipación y tres opciones usuales verosímiles, una canónica, dificultad moderada uniforme.
+- **EF-AV-02:** resultado inmediato exclusivamente +1/−1 punto; solo tras la acción voluntaria «Descubrir qué sucede» mostrar consecuencia real e imagen posterior.
+- **EF-AV-03:** nueva partida con 3 puntos, máximo 5, checkpoints por momentos narrativos; +1 al cruzarlos, guardado después del bono y mínimo 3 al restaurar tras agotamiento.
+- **EF-AV-04:** los errores no cambian los hechos ni abren ramas alternativas; al saldo 0 mostrar consecuencia antes de retroceder. En reintentos se reordenan las opciones sin cambiar la respuesta.
+- **EF-AV-05:** imagen previa propia, cronología sin spoilers, continuidad; la solicitud de imágenes nuevas depende de revisión previa del propietario de activos existentes.
+- **EF-AV-06:** sin scroll interno en paneles, con texto completo, teclado/foco, contraste y movimiento reducido conforme a DC-28.
+- **EF-AV-07:** datos y guion de cada ronda vinculados a pasaje real y evidencia. El piloto es I,8; cualquier expansión por los 126 capítulos requiere revisión editorial y contrato declarativo adecuado.
+- **EF-AV-08:** partidas y checkpoints persistentes separados del progreso de Historia. No conservar la partida del cuestionario eliminado como versión paralela.
 
-## EF-PRE — Preguntas
-
-**Propósito:** presentar preguntas del catálogo con interacción determinada por descriptor; **exclusivamente respuesta seleccionada** (DC-04).
-
-- `EF-PRE-01` Los 6 tipos (`single_choice`, `multi_choice`, `true_false`, `ordering`, `matching`, `hotspot`) se renderizan desde `interaction`; NO existe ningún campo de texto libre (prohibición §2.2).
-- `EF-PRE-02` `multi_choice` muestra el aviso de «puede haber varias correctas» solo con `multi_declared: true`; el juego no lo añade por su cuenta.
-- `EF-PRE-03` La corrección es local y determinista desde `correct_option_ids`/`correct_order`/`pairs`/`hotspot_area`; la aleatorización del orden visual (`shuffle_options`) nunca altera la identidad de la respuesta.
-- `EF-PRE-04` Toda pregunta muestra tras responder `rationale` (breve) y, si existe, `rationale_extended`, con enlace a pasaje/cita (§4.3.8).
-- `EF-PRE-05` La imagen previa de una pregunta (`visual_requirements.pre_image_media_id`) **no puede revelar la respuesta ni hechos futuros**; `spoiler_level: ninguno` es insuficiente por sí solo y debe verificarse en contexto. La prueba del contrato no sustituye la auditoría de pantalla.
-- `EF-PRE-06` La interacción se completa sin puntería precisa; todo control responde a teclado (§3, §7.2).
-- **`EF-PRE-07` (DC-24):** **cada pregunta definitivamente aprobada tiene imagen propia, específica y diferenciada**, asignada por ID, con momento visual correcto, alt, origen/licencia, integridad y QA. Preguntas sin imagen pueden permanecer en el **prototipo técnico**, pero se clasifican como cobertura pendiente y **no** se aceptan como experiencia final.
-- **Prueba:** los 6 tipos del piloto I.8 en pantalla; casos negativos del contrato como pruebas de UI (respuesta imposible de escribir).
-
-## EF-SEL — Selector adaptativo
-
-**Propósito:** elegir qué pregunta mostrar; algoritmo local determinista y documentado, sin LLM (§5.4).
-
-- `EF-SEL-01` Entradas: historial del perfil (vistas/acertadas/falladas), intervalo de repaso, episodio actual, afinidades temáticas, preferencia de frecuencia.
-- `EF-SEL-02` Garantías: sin repetición exacta en la misma sesión; sin spoilers (`spoiler_policy` respeta lo jugado); preguntas agotadas no rompen el flujo (continúa sin pregunta).
-- `EF-SEL-03` El repaso inteligente prioriza fallos recientes con espaciado creciente; desactivable por perfil.
-- `EF-SEL-04` Sin presión temporal por defecto; la dificultad ajusta complejidad conceptual, nunca bloquea (DC-05).
-- `EF-SEL-05` El algoritmo y sus parámetros están documentados y son reproducibles (misma entrada → misma salida dado el mismo historial).
-- **Prueba:** simulación con historiales sintéticos + verificación de no-spoiler sobre el piloto.
+La autoridad funcional es [REGLAS_MODO_AVENTURA_V2_2026-11-08.md](REGLAS_MODO_AVENTURA_V2_2026-11-08.md). Los subsistemas de Museo, Lector y Modo Histórico no pasan a ser examen por esta revisión.
 
 ## EF-LEC — Lector
 

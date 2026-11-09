@@ -4,8 +4,8 @@
 // componen; ninguno conoce su interior. Reglas que fija:
 //  - La imagen (o el fondo neutro editorial) ocupa siempre la mayor superficie;
 //    los paneles respetan el lado seguro del encuadre y la región crítica.
-//  - TS-001: ninguna ranura recorta ni oculta texto — los paneles crecen y
-//    hacen scroll accesible; el contenido completo está en el DOM.
+//  - TS-001 / DC-28: texto completo en panel separado del lienzo,
+//    nunca scroll en cuadros superpuestos ni truncamiento.
 //  - Transiciones discretas: fundido suave de plano; con movimiento reducido,
 //    corte sin deriva (reduced_motion_fallback del contrato).
 //  - El neutro es una decisión editorial: sin spinners ni avisos; solo un

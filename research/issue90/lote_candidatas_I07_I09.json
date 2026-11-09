@@ -1,0 +1,220 @@
+{
+  "issue": 90,
+  "kind": "lote_editorial_de_candidatas_NO_CONTRACTUAL",
+  "publishable": false,
+  "contract_version": "no_asignada",
+  "ids_are_provisional": true,
+  "citation_policy": "Enunciados y explicaciones son paráfrasis editoriales; NO son citas literales del original. Los pasajes contractuales y anclas EPUB siguen pendientes.",
+  "source": {
+    "repository_source_id": "DQ.SRC.0005",
+    "repository_edition_id": "DQ.ED.0003",
+    "work": "Don Quijote de la Mancha, Parte I, capítulos 7 y 9",
+    "url": "https://www.gutenberg.org/cache/epub/2000/pg2000-images.html",
+    "other_collation": "https://www.cervantesvirtual.com/obra-visor/el-ingenioso-hidalgo-don-quijote-de-la-mancha--10/html/",
+    "verified_from": "Texto de Gutenberg eBook #2000 y contraste puntual de I.9 con Cervantes Virtual; NO realizado cotejo crítico completo con EPUB Tusell",
+    "state": "localizacion_textual_preliminar"
+  },
+  "release_gates": [
+    "Asignar IDs definitivos y pasajes exactos existentes/creados en el catálogo tras cotejo con la edición declarada",
+    "Revisión semántica de distractores y duplicados frente a banco completo",
+    "Aprobar imágenes previas únicas y antiespoiler, incluyendo licencias y metadatos",
+    "Cerrar guion/beat y dependencias para TS-001",
+    "Validación contractual y ejecución técnica por desarrollador",
+    "Autorización de Dirección para integración"
+  ],
+  "candidates": [
+    {
+      "id": "ISS90.I07.Q01",
+      "chapter_id": "DQ.P1.C07",
+      "episode_reference": "DQ.P1.C07.E01",
+      "type": "single_choice",
+      "cognitive_type": "causa",
+      "prompt": "¿Qué promesa anima a Sancho Panza a aceptar el puesto de escudero?",
+      "options": [
+        {
+          "id": "A",
+          "label": "El gobierno de una ínsula que su amo pudiera ganar"
+        },
+        {
+          "id": "B",
+          "label": "Una plaza en la corte como cronista oficial"
+        },
+        {
+          "id": "C",
+          "label": "La propiedad de los libros de caballerías de su vecino"
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "rationale": "Don Quijote le propone que podría ganar una ínsula y dejarlo por gobernador; la promesa pesa en su decisión de acompañarlo.",
+      "semantic_key": "sancho acepta escudero promesa gobierno insula",
+      "evidence_locator": "I.7, párrafo que comienza «En este tiempo, solicitó don Quijote a un labrador vecino suyo»; continuación «Decíale, entre otras cosas...»",
+      "safe_stage": "Tras presentar al labrador y antes de revelar la promesa",
+      "visual": "Dos vecinos conversan en exterior rural manchego. No dibujar islas, coronas, títulos, tronos ni texto."
+    },
+    {
+      "id": "ISS90.I07.Q02",
+      "chapter_id": "DQ.P1.C07",
+      "episode_reference": "DQ.P1.C07.E01",
+      "type": "single_choice",
+      "cognitive_type": "humor",
+      "prompt": "¿Qué detalle hace que don Quijote dude un momento de la montura que propone Sancho?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Sancho propone ir en asno, y él no recuerda escuderos de ese tipo en los libros"
+        },
+        {
+          "id": "B",
+          "label": "Sancho insiste en llevar dos carros llenos de armas"
+        },
+        {
+          "id": "C",
+          "label": "Sancho pretende montar a Rocinante y dejar a su amo a pie"
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "rationale": "El hidalgo vacila porque no recuerda escuderos que acompañaran a un caballero montados en asno, pero termina por consentirlo.",
+      "semantic_key": "sancho montura asno don quijote duda escudero caballeria",
+      "evidence_locator": "I.7, párrafos «Sobre todo le encargó que llevase alforjas» y «En lo del asno reparó un poco don Quijote»",
+      "safe_stage": "Antes de mostrar la montura de Sancho",
+      "visual": "Preparativos y alforjas; montura de Sancho fuera de plano y sin pistas textuales."
+    },
+    {
+      "id": "ISS90.I07.Q03",
+      "chapter_id": "DQ.P1.C07",
+      "episode_reference": "DQ.P1.C07.E01",
+      "type": "ordering",
+      "cognitive_type": "secuencia",
+      "prompt": "Ordena estos acontecimientos de la preparación de la segunda salida.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Don Quijote persuade a Sancho para ser su escudero"
+        },
+        {
+          "id": "B",
+          "label": "Don Quijote reúne dinero y prepara su equipo"
+        },
+        {
+          "id": "C",
+          "label": "Sancho prepara alforjas y plantea llevar su asno"
+        },
+        {
+          "id": "D",
+          "label": "Ambos salen del lugar una noche, sin despedirse"
+        }
+      ],
+      "correct_order": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "rationale": "El relato presenta la aceptación de Sancho, los preparativos de don Quijote, la preparación de Sancho y la salida nocturna sin avisar a la familia.",
+      "semantic_key": "segunda salida orden captacion sancho equipamiento alforjas partida nocturna",
+      "evidence_locator": "I.7, secuencia continua desde «En este tiempo, solicitó» hasta «una noche se salieron del lugar»",
+      "safe_stage": "Después de la salida nocturna, sin incorporar eventos del capítulo siguiente",
+      "visual": "Camino nocturno con siluetas distantes, sin ilustrar en viñetas secuenciales ni enumerar hitos."
+    },
+    {
+      "id": "ISS90.I09.Q01",
+      "chapter_id": "DQ.P1.C09",
+      "episode_reference": "DQ.P1.C08.E01",
+      "type": "single_choice",
+      "cognitive_type": "narrador",
+      "prompt": "¿En qué lugar cuenta el segundo narrador que encontró los papeles que permiten proseguir la historia?",
+      "options": [
+        {
+          "id": "A",
+          "label": "En el Alcaná de Toledo"
+        },
+        {
+          "id": "B",
+          "label": "En una posada del camino de Montiel"
+        },
+        {
+          "id": "C",
+          "label": "En la biblioteca de la casa de don Quijote"
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "rationale": "El segundo narrador sitúa el hallazgo de cartapacios escritos en caracteres arábigos en el Alcaná de Toledo; es un procedimiento narrativo de la ficción, no un archivo histórico certificado.",
+      "semantic_key": "segundo narrador alcana toledo hallazgo cartapacios",
+      "evidence_locator": "I.9, párrafo «Estando yo un día en el Alcaná de Toledo»",
+      "safe_stage": "Tras explicar el corte de la batalla I.8 y antes de nombrar el lugar del hallazgo",
+      "visual": "Mercado de libros y papeles en Toledo, sin carteles legibles de localización."
+    },
+    {
+      "id": "ISS90.I09.Q02",
+      "chapter_id": "DQ.P1.C09",
+      "episode_reference": "DQ.P1.C08.E01",
+      "type": "multi_choice",
+      "cognitive_type": "metaficcion",
+      "prompt": "¿Qué dos indicios permiten al segundo narrador reconocer que los cartapacios tratan de don Quijote? Selecciona dos.",
+      "options": [
+        {
+          "id": "A",
+          "label": "Una anotación marginal que menciona a Dulcinea del Toboso"
+        },
+        {
+          "id": "B",
+          "label": "El título de la historia atribuido a Cide Hamete Benengeli"
+        },
+        {
+          "id": "C",
+          "label": "Un decreto real que ordena publicar sus hazañas"
+        },
+        {
+          "id": "D",
+          "label": "Un mapa con las rutas exactas de las tres salidas"
+        }
+      ],
+      "correct": [
+        "A",
+        "B"
+      ],
+      "multi_declared": true,
+      "rationale": "La mención de Dulcinea alerta al narrador; la lectura del título confirma la identificación del manuscrito y presenta a Cide Hamete como autor dentro del artificio narrativo.",
+      "semantic_key": "cartapacios indicios identificacion dulcinea titulo cide hamete",
+      "evidence_locator": "I.9, desde «Está, como he dicho, aquí en el margen» hasta «Historia de don Quijote de la Mancha, escrita por Cide Hamete Benengeli»",
+      "safe_stage": "Antes de que se lean la nota y el título, sin letras legibles en pantalla",
+      "visual": "Primer plano de cartapacios arábigos sin notas marginales ni título inteligible; gesto interrogativo del lector."
+    },
+    {
+      "id": "ISS90.I09.Q03",
+      "chapter_id": "DQ.P1.C09",
+      "episode_reference": "DQ.P1.C08.E01",
+      "type": "single_choice",
+      "cognitive_type": "accion",
+      "prompt": "¿Con qué objeto se protege el vizcaíno en la representación del combate que describe el manuscrito?",
+      "options": [
+        {
+          "id": "A",
+          "label": "Con una almohada tomada junto al coche"
+        },
+        {
+          "id": "B",
+          "label": "Con la rodela de don Quijote"
+        },
+        {
+          "id": "C",
+          "label": "Con una tapa de barril de la venta"
+        }
+      ],
+      "correct": [
+        "A"
+      ],
+      "rationale": "El texto describe al vizcaíno cubierto con una almohada, frente a don Quijote protegido por su rodela.",
+      "semantic_key": "combate vizcaino almohada escudo rodela",
+      "evidence_locator": "I.9, párrafo «Estaba en el primero cartapacio, pintada muy al natural, la batalla de don Quijote con el vizcaíno»",
+      "safe_stage": "Antes de descubrir la defensa improvisada; respetar el conocimiento ya adquirido en I.8",
+      "visual": "Plano de contendientes con espadas alzadas y brazo defensivo del vizcaíno fuera de encuadre; no mostrar almohada."
+    }
+  ]
+}

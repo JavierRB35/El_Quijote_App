@@ -13,6 +13,9 @@ const R = RONDAS_AVENTURA;
 
 test('guion piloto: 9 anticipaciones, 3 tramos de 3 y única continuación canónica', () => {
   assert.equal(R.length, 9);
+  // Migración DC-34: asegurar la correspondencia exacta con las nueve soluciones previas.
+  assert.deepEqual(R.map((r) => r.id), Array.from({ length: 9 }, (_, i) => `AV2-I8-${String(i + 1).padStart(2, '0')}`));
+  assert.deepEqual(R.map((r) => r.correcta), ['a', 'b', 'a', 'c', 'a', 'b', 'a', 'c', 'b']);
   assert.equal(new Set(R.map((q) => q.id)).size, 9);
   assert.deepEqual(R.filter((q) => q.checkpoint).map((q) => q.id), [R[2].id, R[5].id, R[8].id]);
   for (const ronda of R) {

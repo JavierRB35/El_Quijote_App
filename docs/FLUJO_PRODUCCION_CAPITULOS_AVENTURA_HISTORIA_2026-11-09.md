@@ -18,6 +18,8 @@ El EPUB ilustrado Tusell (`DQ.ED.0001`) sigue cumpliendo la función de lector; 
 
 Ante una incompatibilidad real: indicar ruta y norma infringida, **no generar ni activar el entregable conflictivo** y subsanar primero; solo el propietario puede aprobar una excepción que se documentará en GitHub. La documentación histórica desplazada por decisiones más recientes no invalida trabajo conforme. Se pueden proponer rondas **candidatas** para revisión sin presentarlas como aprobadas, como exige el orden de trabajo.
 
+**DC-34 (2026-11-09):** una vez revisadas y aprobadas las rondas, sus datos editoriales se registran en el JSON correspondiente de `content/aventura/` del mismo GitHub, bajo el esquema `schemas/content/adventure-round.schema.json`; los enunciados y respuestas nunca se hardcodean en componentes. El archivo separa `borrador`, `en_revision`, `piloto_integrado` y `aprobado`; la disponibilidad técnica de un piloto no sustituye la validación editorial ni visual. Más detalles en `content/aventura/README.md`.
+
 ## 1. Flujo obligatorio capítulo a capítulo
 
 **Aventura (propuesta) → revisión del propietario e inventario visual → prompts solo de imágenes ausentes → Historia (guion y textos) → revisión de reutilización visual y carencias de Historia → validación e integración.**

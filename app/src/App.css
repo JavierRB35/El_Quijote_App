@@ -259,7 +259,7 @@ body {
   padding-top: 7rem;
   width: min(30rem, 34vw);
   max-height: min(94vh, 56rem);
-  overflow-y: auto;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -299,7 +299,7 @@ body {
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(14px) saturate(0.9);
   max-height: min(60vh, 42rem);
-  overflow-y: auto;
+  overflow: visible;
   scrollbar-width: thin;
   scrollbar-color: rgba(212, 175, 106, 0.4) transparent;
 }
@@ -395,7 +395,7 @@ body {
      «Ampliar panel» la ensancha, «Contemplar la imagen» la retira por
      completo sin tocar el progreso. */
   max-height: min(66vh, 40rem);
-  overflow-y: auto;
+  overflow: visible;
   background: var(--panel); /* rgba(13, 19, 34, 0.87) */
   backdrop-filter: blur(12px) saturate(0.85);
   -webkit-backdrop-filter: blur(12px) saturate(0.85);
@@ -1186,4 +1186,211 @@ html[data-ajuste-movimiento='reducido'] .progreso-relleno {
 .tarjeta-modo.museo-entrada {
   width: 100%;
   margin-top: 1rem;
+}
+
+/* ==========================================================================
+   P0 / DC-28 (2026-11-09): composición sin scroll sobre la escena.
+   El panel inferior participa en el layout: la imagen y las respuestas no
+   compiten por los mismos píxeles. No se recorta, aplasta ni desplaza arte.
+   El único desplazamiento que se conserva para contenido excepcional ocurre
+   en una vista DEDICADA sin imagen subyacente (clase .vista-dedicada).
+   Estos estilos prevalecen sobre límites históricos de altura de #79.
+   ========================================================================== */
+
+/* Sin deriva y con contain por defecto, la obra queda íntegra. */
+.cine .plano.ajuste-contain {
+  object-fit: contain;
+  animation: none;
+  transform: none;
+}
+
+/* Pregunta inferior: imagen en el primer renglón, pregunta completa debajo.
+   El contenedor adapta ambas alturas a contenido real, nunca usa scroll. */
+.cine.cine-pregunta {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr);
+}
+.cine.cine-pregunta .lienzo {
+  position: relative;
+  inset: auto;
+  grid-row: 1;
+  grid-column: 1;
+  min-height: 0;
+}
+.cine.cine-pregunta .panel-pregunta,
+.cine.cine-pregunta.sin-plano .panel-pregunta {
+  grid-row: 2;
+  grid-column: 1;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  transform: none;
+  width: min(84rem, calc(100% - 1.6rem));
+  max-height: none;
+  height: auto;
+  overflow: visible;
+  margin: 0 auto 0.6rem;
+  padding: 0.7rem 1.15rem 0.75rem;
+  border-radius: 9px;
+  animation: none;
+}
+
+/* Opciones simultáneas: dos columnas cuando existe anchura útil;
+   frases largas permanecen completas y activables por teclado. */
+.cine.cine-pregunta .opciones {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 0.75rem;
+  row-gap: 0.35rem;
+  margin: 0.3rem 0 0.5rem;
+}
+.cine.cine-pregunta .opciones > .pista {
+  grid-column: 1 / -1;
+}
+.cine.cine-pregunta .enunciado {
+  margin: 0 0 0.45rem;
+  font-size: calc(clamp(1.7rem, 1vw + 1.2rem, 2.4rem) * var(--escala-texto));
+  line-height: 1.25;
+}
+.cine.cine-pregunta .opcion {
+  font-size: calc(clamp(1.4rem, 0.8vw + 0.9rem, 1.8rem) * var(--escala-texto));
+  line-height: 1.28;
+  min-height: 48px;
+  padding: 0.38rem 0.7rem;
+}
+.cine.cine-pregunta .primario {
+  margin-top: 0.35rem;
+  padding-block: 0.5rem;
+}
+.cine.cine-pregunta .contemplar-panel,
+.cine.cine-pregunta .ampliar-panel {
+  margin: 0.35rem 0.65rem 0 0;
+}
+.cine.cine-pregunta .panel-pregunta:has(.panel-pregunta-cuerpo.amplio) {
+  width: min(90rem, calc(100% - 1rem));
+  max-height: none;
+}
+.cine.cine-pregunta .pie {
+  top: 6.1rem;
+  bottom: auto;
+}
+
+/* Narración: aprovechar el lado seguro sin scroll, con texto y controles
+   completos. Si no cabe, el medidor activa una vista separada. */
+.cine.cine-narracion .banda-texto,
+.cine.cine-narracion.sin-plano .banda-texto {
+  top: clamp(6.3rem, 15vh, 8rem);
+  bottom: auto;
+  transform: none;
+  width: min(38rem, 40vw);
+  padding-top: 0;
+  max-height: none;
+  overflow: visible;
+}
+.cine.cine-narracion .banda-texto.lado-derecha { right: 1.5rem; }
+.cine.cine-narracion .banda-texto.lado-izquierda { left: 1.5rem; }
+.cine.cine-narracion.sin-plano .banda-texto {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: min(48rem, 94vw);
+}
+.cine.cine-narracion .lectura,
+.cine.cine-narracion .lectura.amplia {
+  max-height: none;
+  overflow: visible;
+}
+
+/* En ventana estrecha las opciones pasan a una columna, pero no se
+   silencian, ocultan ni convierten a scroll en el overlay. */
+@media (max-width: 760px) {
+  .cine.cine-pregunta .opciones {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .cine.cine-pregunta .panel-pregunta {
+    width: calc(100% - 0.5rem);
+    margin-bottom: 0.25rem;
+    padding: 0.55rem 0.7rem;
+  }
+}
+@media (max-width: 1100px) {
+  .cine.cine-narracion .banda-texto,
+  .cine.cine-narracion.sin-plano .banda-texto {
+    top: clamp(6rem, 14vh, 8rem);
+    bottom: auto;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    max-height: none;
+    width: min(48rem, 94vw);
+    padding-top: 0;
+    overflow: visible;
+  }
+}
+
+/* El contenido que desborda el espacio seguro deja de ser overlay:
+   se retira por completo el lienzo de imagen. Solo en esta vista autónoma
+   se permite desplazamiento para textos editorialmente excepcionales. */
+.cine.vista-dedicada {
+  display: block;
+  background: var(--noche);
+}
+.cine.vista-dedicada .lienzo,
+.cine.vista-dedicada .pie {
+  display: none;
+}
+.cine.vista-dedicada.cine-pregunta .panel-pregunta,
+.cine.vista-dedicada.cine-pregunta.sin-plano .panel-pregunta,
+.cine.vista-dedicada.cine-narracion .banda-texto,
+.cine.vista-dedicada.cine-narracion.sin-plano .banda-texto {
+  position: absolute;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  top: 8.2rem;
+  bottom: 0;
+  left: 0.75rem;
+  right: 0.75rem;
+  width: auto;
+  height: auto;
+  max-height: none;
+  transform: none;
+  margin: 0 auto;
+  padding: 1.1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--noche);
+  border-radius: 0;
+}
+.cine.vista-dedicada.cine-narracion .lectura {
+  background: rgba(13, 19, 34, 0.88);
+}
+.estado-vista-dedicada {
+  position: absolute;
+  top: 6.8rem;
+  left: 1.5rem;
+  z-index: 9;
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--dorado-claro);
+}
+@media (max-height: 600px) {
+  .cine.vista-dedicada.cine-pregunta .panel-pregunta,
+  .cine.vista-dedicada.cine-narracion .banda-texto {
+    top: 6.4rem;
+  }
+  .estado-vista-dedicada { top: 5.7rem; }
+}
+
+/* Descubrir es una lectura voluntaria AUTÓNOMA, no un cajón desplazable
+   superpuesto a la escena (DC-28). El contenido largo puede recorrerse. */
+.descubrir.abierto {
+  left: 0;
+  right: 0;
+  width: 100vw;
+  background: var(--noche);
+  padding: 1.4rem max(1rem, calc((100vw - 62rem) / 2));
 }

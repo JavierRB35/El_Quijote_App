@@ -8,7 +8,9 @@ No se preparan preguntas de examen, verdadero/falso retrospectivo, ordenación d
 
 **Edición textual obligatoria (DC-31, 2026-11-09):** la referencia fiable para el desarrollo capítulo a capítulo ya se encuentra en GitHub: `content/textos/gutenberg_2000/El_Quijote.txt` (`DQ.ED.0003` / `DQ.SRC.0005`). Todas las acciones, consecuencias, citas y descripciones que fundamenten Aventura, Historia o prompts de imágenes se cotejan directamente con ese archivo y su parte/capítulo/ancla u offset; no se reemplaza por memoria, resúmenes ni otra edición de Internet. `DQ.ED.0001` (EPUB Tusell) permanece como lector y `DQ.ED.0002` (Rico) como cotejo filológico auxiliar. Registrar variantes sin recomponer citas a partir de diferentes ediciones. Esta decisión no elimina comprobaciones de derechos ni altera el corpus existente.
 
-La aplicación conserva derechos, procedencia, incertidumbre y texto original; no convertir adaptación editorial en cita literal. La expansión más allá de I,8 permanece sujeta a aceptación.
+**Conformidad obligatoria (DC-32):** todas las respuestas operativas y entregables de contenido deben seguir las directrices vigentes publicadas en `main`. Antes de proponer o validar una ronda se cotejan las reglas narrativas y el texto DC-31; antes de preparar o aprovechar una imagen se cotejan la dirección artística, el dictamen de composición DC-28, las normas de continuidad, antiespoiler, procedencia y derechos. Un borrador puede entregarse solo como candidato sujeto a revisión; no se activarán rondas, escenas ni recursos visuales contrarios a la documentación oficial. Incumplimientos materiales o excepciones deben quedar documentados y autorizados expresamente por el propietario.
+
+La aplicación conserva derechos, procedencia, incertidumbre y texto original;La aplicación conserva derechos, procedencia, incertidumbre y texto original; no convertir adaptación editorial en cita literal. La expansión más allá de I,8 permanece sujeta a aceptación.
 
 ## Producción oficial por capítulo (DC-30, 2026-11-09)
 

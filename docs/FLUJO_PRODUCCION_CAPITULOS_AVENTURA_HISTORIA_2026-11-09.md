@@ -10,6 +10,14 @@ La **edición fiable para este flujo es la que ya está almacenada y registrada 
 
 El EPUB ilustrado Tusell (`DQ.ED.0001`) sigue cumpliendo la función de lector; la edición académica Rico (`DQ.ED.0002`) sirve solo para contraste editorial de variantes. No escoger una edición externa para sustituir el corpus local, no atribuir a Cervantes diálogos o detalles ausentes y no mezclar citas de ediciones distintas. Distinguir expresamente el texto literal de cualquier paráfrasis de jugabilidad. Aplicar `docs/RESOLUCION_PEND01_EDICION_REFERENCIA.md` y la validación de derechos prevista.
 
+## 0 bis. Conformidad vinculante de todo arte y contenido (DC-32)
+
+**Condición previa obligatoria:** ninguna ronda, texto, consecuencia, prompt, imagen, escena, funcionalidad o integración de Aventura/Historia puede elaborarse como entrega válida ni publicarse si incumple las directrices oficiales vigentes de GitHub. Comprobar `AGENTS.md`, `docs/DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md`, `docs/VISION_Y_DECISIONES.md`, estas reglas de flujo, la norma narrativa de cada modo y los contratos pertinentes, además del corpus textual DC-31.
+
+**Requisitos artísticos para cada imagen y prompt:** contrastar con `docs/DIRECCION_ARTISTICA.md`, `docs/DIRECCION_ARTISTICA_PILOTO.md`, `docs/DECISIONES_OPERATIVAS_Y_POLITICA_VISUAL_2026-11-08.md` y `docs/DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md`. Verificar por tipo de medio: exactitud del instante narrativo, personajes/objetos/época, continuidad, antiespoiler de la preimagen, imagen exclusiva por ronda, reutilización segura con Historia, espacio de texto y composición protegida, integridad sin recorte de acuarelas, procedencia/derechos, rutas y metadatos. Un archivo existente o un prompt redactado **no supone conformidad**. Se requieren además revisión/validación del propietario para imágenes nuevas y controles técnicos aplicables antes de integrarlas.
+
+Ante una incompatibilidad real: indicar ruta y norma infringida, **no generar ni activar el entregable conflictivo** y subsanar primero; solo el propietario puede aprobar una excepción que se documentará en GitHub. La documentación histórica desplazada por decisiones más recientes no invalida trabajo conforme. Se pueden proponer rondas **candidatas** para revisión sin presentarlas como aprobadas, como exige el orden de trabajo.
+
 ## 1. Flujo obligatorio capítulo a capítulo
 
 **Aventura (propuesta) → revisión del propietario e inventario visual → prompts solo de imágenes ausentes → Historia (guion y textos) → revisión de reutilización visual y carencias de Historia → validación e integración.**

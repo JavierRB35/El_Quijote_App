@@ -12,6 +12,12 @@ La experiencia principal combina aventura narrativa, preguntas, lector íntegro,
 
 La identidad se define como **aventura literaria premium, cinematográfica, serena, elegante y culturalmente rigurosa**. Evitar estética infantil, aplicaciones médicas, gamificación agresiva, pantallas sobrecargadas o formas de comunicación paternalistas.
 
+## 1 bis. Obligación de cumplimiento de todas las imágenes y prompts (DC-32)
+
+**Vinculante para el juego completo.** Ningún recurso visual —existente, reutilizado, nuevo o derivado— ni prompt dirigido al artista puede considerarse apto o integrarse si contradice esta dirección artística o cualquier **norma oficial vigente y aplicable de GitHub**. Revisar conjuntamente `docs/DIRECCION_ARTISTICA_PILOTO.md`, `docs/DECISIONES_OPERATIVAS_Y_POLITICA_VISUAL_2026-11-08.md`, `docs/DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md`, `docs/FLUJO_PRODUCCION_CAPITULOS_AVENTURA_HISTORIA_2026-11-09.md`, `docs/VISION_Y_DECISIONES.md` y los expedientes de derechos/procedencia. Las normas posteriores aprobadas sustituyen solo los apartados anteriores incompatibles.
+
+La revisión de cada imagen debe comprobar **fidelidad textual al corpus del repositorio (DC-31), función pre/post, antiespoiler, composición y zonas seguras, continuidad de personajes, ambientación sin anacronismos, integridad de acuarelas sin recorte/deformación, ausencia de texto o UI incrustados cuando sea una escena narrativa, metadatos, licencia y estado de aprobación**. Las pautas técnicas se aplican según la clase de imagen; no tratar una ilustración histórica como escena cinematográfica. **Si falta evidencia o se incumple una directriz material, el recurso no se crea/activa/publica como aprobado**. Registrar el motivo y corregir; toda excepción debe constar como decisión expresa del propietario en GitHub. La existencia de una imagen en `assets/` o una aprobación visual aislada no sustituyen otros controles obligatorios.
+
 ## 2. Lenguaje visual
 
 - **Entorno:** realismo cinematográfico con matiz pictórico del Siglo de Oro español; fotografía patrimonial, reproducciones históricas y recreaciones originales claramente diferenciadas por procedencia.

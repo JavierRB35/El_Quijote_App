@@ -1394,3 +1394,92 @@ html[data-ajuste-movimiento='reducido'] .progreso-relleno {
   background: var(--noche);
   padding: 1.4rem max(1rem, calc((100vw - 62rem) / 2));
 }
+
+
+/* QA Chromium P0: el panel ancho inferior sacrificaba la escena (hasta
+   45,7 % de pantalla frente a 27,2 % de imagen a 1366x768).
+   Para escritorio, raíl lateral reservado FUERA del fotograma. No se
+   superpone a personajes, y la imagen se centra bajo la cabecera.
+   Patrón general, sin selectores por pregunta o por asset. */
+@media (min-width: 1100px) {
+  .cine.cine-pregunta {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 36%);
+    grid-template-rows: minmax(0, 1fr);
+  }
+  .cine.cine-pregunta.lado-izquierda {
+    grid-template-columns: minmax(0, 36%) minmax(0, 1fr);
+  }
+  .cine.cine-pregunta .lienzo {
+    grid-row: 1;
+    grid-column: 1;
+    min-height: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .cine.cine-pregunta.lado-izquierda .lienzo { grid-column: 2; }
+  .cine.cine-pregunta .lienzo .plano.ajuste-contain {
+    object-position: center center;
+  }
+  .cine.cine-pregunta .panel-pregunta,
+  .cine.cine-pregunta.sin-plano .panel-pregunta,
+  .cine.cine-pregunta .panel-pregunta:has(.panel-pregunta-cuerpo.amplio) {
+    grid-row: 1;
+    grid-column: 2;
+    align-self: center;
+    justify-self: center;
+    width: calc(100% - 1.15rem);
+    max-width: none;
+    margin: 6.25rem 0.55rem 0.85rem;
+    box-sizing: border-box;
+    padding: 0.65rem 0.8rem 0.75rem;
+    background: rgba(8, 15, 27, 0.81);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 106, .55);
+    overflow: visible;
+  }
+  .cine.cine-pregunta.lado-izquierda .panel-pregunta,
+  .cine.cine-pregunta.lado-izquierda .panel-pregunta:has(.panel-pregunta-cuerpo.amplio) {
+    grid-column: 1;
+  }
+  .cine.cine-pregunta .enunciado {
+    margin: 0 0 .55rem;
+    font-size: calc(clamp(1.25rem, 0.9vw + .62rem, 1.55rem) * var(--escala-texto));
+    line-height: 1.23;
+  }
+  .cine.cine-pregunta .opciones {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .45rem;
+  }
+  .cine.cine-pregunta .opcion {
+    font-size: calc(clamp(1.1rem, .7vw + .68rem, 1.33rem) * var(--escala-texto));
+    line-height: 1.28;
+    min-height: 48px;
+    padding: .4rem .6rem;
+  }
+  .cine.cine-pregunta .ampliar-panel,
+  .cine.cine-pregunta .contemplar-panel {
+    min-height: 40px;
+    font-size: calc(.78rem * var(--escala-texto));
+  }
+  .cine.cine-pregunta .pie {
+    top: auto;
+    bottom: 1rem;
+    left: 1.1rem;
+  }
+}
+/* Una vista dedicada no hereda el raíl de escritorio. */
+@media (min-width: 1100px) {
+  .cine.vista-dedicada.cine-pregunta { display: block; }
+  .cine.vista-dedicada.cine-pregunta .panel-pregunta,
+  .cine.vista-dedicada.cine-pregunta.sin-plano .panel-pregunta {
+    position: absolute;
+    top: 8.2rem;
+    bottom: 0;
+    left: 0.75rem;
+    right: 0.75rem;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    overflow-y: auto;
+  }
+}

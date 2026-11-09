@@ -123,10 +123,15 @@ try{
 const total=registros.length;
 const fallo=registros.filter(x=>x.estado!=='MEDIDO');
 const precaucion=registros.filter(x=>x.estado==='MEDIDO'&&x.modo==='aventura'&&
-  (x.metricas.panel.proporcionAlturaViewportPct>42||!x.metricas.alternativasSimultaneas||x.metricas.overlayConScroll));
+  ( (x.metricas.panel.proporcionAlturaViewportPct>42 && x.metricas.panel.ancho>x.viewport.width*.70)
+    || x.metricas.panel.ocupacionViewportPct>=x.metricas.imagen.superficieDibujadaPct*.95
+    || x.metricas.imagen.superficieDibujadaPct<35
+    || !x.metricas.alternativasSimultaneas || x.metricas.overlayConScroll || x.metricas.vistaDedicada));
 const resumen={label,tipo,origin,total,medidos:total-fallo.length,errores:fallo.map(x=>x.id),
   precauciones:precaucion.map(x=>({id:x.id,panelAlturaPct:x.metricas.panel.proporcionAlturaViewportPct,
-    alternativas:x.metricas.alternativasSimultaneas,scroll:x.metricas.overlayConScroll})),registros};
+    areaPanelPct:x.metricas.panel.ocupacionViewportPct,
+    areaImagenPct:x.metricas.imagen.superficieDibujadaPct,
+    alternativas:x.metricas.alternativasSimultaneas,scroll:x.metricas.overlayConScroll, dedic:x.metricas.vistaDedicada})),registros};
 await fs.writeFile(path.join(salida,label+'-'+tipo+'-metricas.json'),JSON.stringify(resumen,null,2));
 console.log('QA_BROWSER_RESULT='+JSON.stringify({total:resumen.total,medidos:resumen.medidos,errores:resumen.errores,precauciones:resumen.precauciones}));
 if(fallo.length||precaucion.length)process.exitCode=1;

@@ -107,7 +107,7 @@ export default function ContenedorCine({
     const medir = () => {
       const caja = panel.getBoundingClientRect();
       const fuera = caja.top < 72 || caja.bottom > window.innerHeight - 8;
-      if (requiereVistaDedicada(panel.scrollHeight, window.innerHeight, estado, fuera)) {
+      if (requiereVistaDedicada(panel.scrollHeight, window.innerHeight, estado, fuera, window.innerWidth >= 1100 ? 'lateral' : 'inferior')) {
         setVistaDedicada(true);
       }
     };

@@ -7,20 +7,24 @@
  * el DOM se mide de verdad en ContenedorCine y nunca se trunca contenido.
  */
 export type EstadoComposicion = 'narracion' | 'pregunta';
+export type DisposicionPregunta = 'inferior' | 'lateral';
 
 export function requiereVistaDedicada(
   altoContenido: number,
   altoViewport: number,
   estado: EstadoComposicion,
   fueraDeViewport = false,
+  disposicion: DisposicionPregunta = 'inferior',
 ): boolean {
   if (
     !Number.isFinite(altoContenido) ||
     !Number.isFinite(altoViewport) ||
     altoViewport <= 0 || altoContenido < 0
   ) return true;
-  // En pregunta: reservar al menos 38% del viewport a la imagen completa;
-  // en narración: reservar espacio a cabecera y acciones.
-  const maximo = altoViewport * (estado === 'pregunta' ? 0.62 : 0.82);
+  // Raíl lateral: usar altura no reduce la imagen (columnas independientes),
+  // a diferencia de la banda inferior. No forzar una lectura separada por
+  // superar el presupuesto propio de un panel que ocupa la parte baja.
+  const presupuestoPregunta = disposicion === 'lateral' ? 0.88 : 0.62;
+  const maximo = altoViewport * (estado === 'pregunta' ? presupuestoPregunta : 0.82);
   return fueraDeViewport || altoContenido > maximo;
 }

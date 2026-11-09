@@ -22,3 +22,17 @@ test('dimensiones imposibles fallan de forma segura', () => {
   assert.equal(requiereVistaDedicada(NaN, 800, 'narracion'), true);
   assert.equal(requiereVistaDedicada(200, 0, 'pregunta'), true);
 });
+
+
+test('raíl lateral no consume altura del fotograma y admite enunciados accesibles grandes', () => {
+  assert.equal(requiereVistaDedicada(605, 768, 'pregunta', false, 'lateral'), false);
+  assert.equal(requiereVistaDedicada(680, 768, 'pregunta', false, 'lateral'), true);
+});
+
+test('una banda inferior igual de alta comprometería la imagen', () => {
+  assert.equal(requiereVistaDedicada(605, 768, 'pregunta', false, 'inferior'), true);
+});
+
+test('un raíl lateral que desborda la cabecera nunca oculta controles', () => {
+  assert.equal(requiereVistaDedicada(605, 768, 'pregunta', true, 'lateral'), true);
+});

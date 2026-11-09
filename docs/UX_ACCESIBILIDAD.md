@@ -64,3 +64,27 @@ Los componentes consumen preguntas, imágenes, hotspots, textos alternativos, na
 Para Historia, Aventura y cualquier **texto superpuesto a escena**, se aplicará [DC-28](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md): **sin scroll interno**, texto y controles completos a la vista; **ensanchar horizontalmente primero** solo en zona segura, **reducir letra después** sin bajar del suelo tipográfico legible; **fondo semitransparente** con contraste demostrado; no tapar protagonistas/acciones/hotspots; composición **tipo póster**. Las bandas máximas anteriores son guías, no autorización para recortar texto. Nunca convertir una preferencia de letra grande en un defecto oculto o en un scroll.
 
 QA visual obligatoria: cubrir tamaños normales y ampliados, 1920×1080/1366×768/1280×800 y escalado Windows 125/150 %, frases extensas, preguntas de muchos controles, zonas claras/oscuras y movimiento reducido. Se inspeccionan a la vez legibilidad, accesibilidad, contenido íntegro, geometría y calidad estética. El lector íntegro y vistas sin imagen no están sometidos a la prohibición de scroll del **overlay**. Incompatibilidades sin solución segura bloquean aprobación visual; no se alteran datos editoriales unilateralmente.
+
+## 8. Aplicación transversal y diferencias por módulo
+
+**Norma permanente:** una corrección visible en una ronda o escena pasa a ser un criterio del sistema UX compartido, y se revisa en todos los consumidores pertinentes; no se declara resuelta únicamente por el caso de partida. Desarrollo documenta la trazabilidad según [AGENTS.md](../AGENTS.md#regla-permanente--correcciones-transversales-y-reutilización) y la [arquitectura](ARQUITECTURA_Y_ADR.md#política-transversal-de-correcciones-y-reutilización).
+
+| Superficie | Aplicación de reglas comunes | Diferencia funcional legítima |
+|---|---|---|
+| Aventura | Imagen protagonista, controles y alternativas visibles, encuadre seguro, tipografía ajustable, foco | Anticipación y consecuencia sin scroll en overlays; hotspot exige imagen íntegra en el área interactiva |
+| Historia | Narración y personajes visibles, bandas en zona segura, texto TS-001 íntegro, control de ritmo | Panel narrativo lateral/inferior según composición; avance nunca oculta texto |
+| Museo | Proporciones, procedencia, contraste, foco, vista contemplativa | Obras patrimoniales siempre completas; galerías y fichas extensas admiten scroll accesible |
+| Atlas | Claridad de controles, información y zonas útiles, navegación por teclado | Mapas requieren pan/zoom y fichas adaptativas; no imponer restricciones propias de una pregunta |
+| Lector | Legibilidad, reflujo, tamaño de letra, navegación, conservación de posición | Lectura extensa con scroll permitido y necesario |
+| Cuaderno | Tarjetas/fichas, consistencia tipográfica, accesibilidad, procedencia | Notas y listados extensos admiten scroll |
+| Inicio, menús y ajustes | Jerarquía, contraste, foco visible, escalado y controles coherentes | Formularios, preferencias y listados pueden desplazarse si es necesario para preservar accesibilidad |
+
+### Reglas de decisión
+
+1. **Comprobar asset y layout por separado.** Si un protagonista aparece cortado, comparar el fichero original con su representación; identificar `cover`/`contain`, escalado, recorte y zona focal. No regenerar medios solo para ocultar un fallo del visor.
+2. **Proteger contenido y contexto.** Ningún rostro, gesto, acción, pista u hotspot esencial debe quedar oculto por recorte o panel; en imágenes patrimoniales, ninguna parte de la obra debe desaparecer por llenar el monitor.
+3. **Resolver la geometría sin trampas.** Para overlays de Historia/Aventura: sin scroll interno ni alternativas ocultas; primero usar espacios seguros, después redistribuir, y ajustar tamaño solo dentro del suelo tipográfico validado. No trasladar el scroll del panel a la página, ni confundir `overflow: hidden` con corrección. El contenido excepcional incompatible se eleva a Dirección, sin aprobación ficticia.
+4. **Preservar autonomía y accesibilidad.** Foco visible, teclado, alternativas de arrastre, tamaño de texto configurable, zoom/Windows 125–150 %, movimiento reducido y lectura íntegra.
+5. **Revisión cruzada.** Toda modificación de presentación compartida debe probar tanto el flujo donde se descubrió el defecto como otro módulo consumidor real; documentar cuando un módulo no comparta el componente y cómo hereda la regla por tokens o patrón.
+
+Los criterios de cobertura por resolución y evidencia se concretan en [QA §9](PLAN_QA_Y_ACEPTACION.md#9-gate-de-impacto-transversal-para-correcciones). **Estas reglas son especificación; su publicación no prueba que estén implementadas ni validadas visualmente.**

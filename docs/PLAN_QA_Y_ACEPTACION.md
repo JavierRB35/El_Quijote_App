@@ -92,3 +92,36 @@ La [checklist canónica de composición](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-
 - [ ] **TS-001 y funcionalidad**: texto íntegro, progreso, controles y estados no regresan.
 
 **Pruebas inicialmente pendientes:** 1920×1080, 1365/1366×768, 1280×800, viewport estrecho; Windows 125 % y 150 %; Historia breve/larga, MCQ, multiopción, ordering, matching, hotspot, feedback, Descubrir abierto. Los tests de contrato o el mero `overflow: hidden` **no** prueban aceptación visual; prohibido cerrar esta lista sin capturas y revisión real.
+
+## 9. Gate de impacto transversal para correcciones
+
+**Obligatorio en toda PR que corrija diseño, composición, interfaz, accesibilidad o comportamiento.** Un PASS del caso original no equivale a aprobación global. Aplicar la [regla permanente de AGENTS](../AGENTS.md#regla-permanente--correcciones-transversales-y-reutilización), la [política técnica](ARQUITECTURA_Y_ADR.md#política-transversal-de-correcciones-y-reutilización) y [UX §8](UX_ACCESIBILIDAD.md#8-aplicación-transversal-y-diferencias-por-módulo).
+
+### Evidencia mínima por cambio correctivo
+
+| Campo de la matriz `IMPACTO TRANSVERSAL Y REUTILIZACIÓN` | Evidencia exigida |
+|---|---|
+| Reproducción y causa raíz | Pasos, estado/viewport, asset original vs. representación si aplica, diagnóstico verificable |
+| Regla o componente modificado | Ruta(s), justificación del nivel compartido elegido, efecto antes/después |
+| Inventario de consumidores | Módulos que utilizan el componente/patrón y módulos revisados no afectados, con motivo |
+| Pruebas del caso inicial | Capturas reales y recorrido funcional; texto, controles, imagen y foco |
+| Pruebas cruzadas | Por lo menos **otro consumidor real de un módulo distinto**, cuando exista; si no hay segundo consumidor, probar otra variante de datos/estado y justificarlo |
+| Casos límite | Resolución, zoom, texto grande, contenido largo, fallos de medios, teclado y movimiento reducido según aplique |
+| Excepciones y deuda | Excepción acotada y motivo funcional; evidencia pendiente identificada como `PENDIENTE`, nunca como superada |
+| Integración y no regresión | Suites existentes ejecutadas, resultado real de CI y comportamiento de perfiles/progreso/contrato si resulta afectado |
+
+### Matriz mínima de pruebas visuales cuando haya imagen o texto sobre ella
+
+- **Viewports:** 1920×1080, 1366×768, 1280×800 y ventana estrecha representativa; Windows 125 % y 150 % cuando haya entorno disponible. Registrar dimensiones efectivas y estado del navegador/aplicación.
+- **Tamaño de texto:** normal, grande y muy grande; enunciados y alternativas largos; TS-001 íntegro en Historia.
+- **Formatos y estados:** situación de Aventura, tres alternativas, puntuación, consecuencia canónica, checkpoint y, en sus módulos pertinentes, hotspots y panel de lectura; en vistas pertinentes, acuarela vertical y horizontal, escena cinematográfica, foco de teclado y movimiento reducido.
+- **Comprobaciones:** sin scroll interno/truncamiento en overlays, alternativas simultáneamente visibles, sin recorte del sujeto/acción esencial, sin distorsión patrimonial, hotspots alineados, contraste legible, foco operativo, sin regresiones de navegación y persistencia. El scroll propio de Lector, listados o fichas extensas es compatible con UX §8.
+- **Regresión intermodular:** después de cambiar un componente/estilo compartido, repetir una escena de Aventura **y** otra de Historia si ambos consumen la regla; ampliar a Museo/Atlas/Lector/Cuaderno/menús según matriz de dependencias. Si el alcance incluye solo un módulo, documentar por qué.
+
+### Estados y aceptación
+
+- `PASS`: evidencia real disponible y criterio verificado.
+- `FAIL`: criterio incumplido, bloquea cierre.
+- `PENDIENTE`: prueba no ejecutada, entorno no disponible o resultado inconcluso; **nunca** presentarlo como aprobado.
+
+**Gate:** Dirección no acepta un cierre que solo demuestre «se ve bien en la captura original» sin diagnóstico, matriz de alcance, pruebas cruzadas y explicación de excepciones. Un test unitario o CI verde no sustituye la comprobación visual con capturas reales. Todo cambio correctivo documentará, en el commit o PR, la sección **«IMPACTO TRANSVERSAL Y REUTILIZACIÓN»** con esta evidencia. Esta regla no implica afirmar que las pruebas estén ya ejecutadas ni altera los gates de fases vigentes.

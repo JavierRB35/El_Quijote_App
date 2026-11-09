@@ -101,6 +101,8 @@ Si Historia exige imágenes adicionales, **se repite el control del propietario*
 
 ## 6. Integración GitHub de imágenes aprobadas
 
+**Procedimiento técnico obligatorio (DC-35):** al recibir «revisadas y validadas. cataloga e incorpora a main», «sigue el protocolo de aceptación de imágenes» o equivalente para archivos identificables, ejecutar [`PROTOCOLO_ACEPTACION_E_INTEGRACION_IMAGENES.md`](PROTOCOLO_ACEPTACION_E_INTEGRACION_IMAGENES.md) sin solicitar nueva aprobación. Este procedimiento recoge el puente binario privado temporal Drive → Base64 → blobs Git, SHA, catálogo, commit atómico, comprobación de `main` y limpieza de temporales. No autoriza activar contenidos ni omitir QA o derechos.
+
 **Excepción operativa permanente aprobada por el propietario:** una imagen nueva que **ya haya sido expresamente validada por él** puede incorporarse **directamente a `main`**, sin rama ni Pull Request creadas exclusivamente por el recurso artístico, de acuerdo con DC-29.
 
 El diseñador/integrador deberá:

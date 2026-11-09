@@ -1,6 +1,6 @@
 # Derechos, adquisición y preservación de imágenes
 
-**Carácter del proyecto:** uso personal privado y no comercial. Esta circunstancia no presume autorización universal para la copia, almacenamiento remoto o redistribución. GitHub es privado, pero sigue siendo alojamiento de una copia.
+**Estado de publicación del repositorio (comprobado el 2026-11-09): GitHub es PÚBLICO.** La investigación sigue siendo interna/no productiva, pero alojar un archivo en GitHub lo expone públicamente y no se justifica por el uso personal o no comercial de la futura aplicación. **No descargar ni subir imágenes históricas con derechos pendientes**; antes de incorporar cualquier binario se requiere verificar licencia/permiso explícito para almacenamiento público, reproducción, derivados y distribución, además de aprobación del propietario.
 
 ## Clasificación a 2026-11-08
 

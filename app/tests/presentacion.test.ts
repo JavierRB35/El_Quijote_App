@@ -173,7 +173,7 @@ test('un encabezado de capítulo incrustado se respeta como bloque propio', () =
   assert.equal(presentado.includes('Capítulo XXI. Que trata de la alta aventura y rica ganancia del yelmo de Mambrino\n\nEn esto'), true);
 });
 
-test('evidencia de pregunta (Aventura) con párrafos y parlamentos se presenta intacta', () => {
+test('parlamentos y citas de la narración se presentan íntegros', () => {
   const cita = 'como a único\nen su arte, se debe perdonar.\n\n— Así es verdad —dijo el cura—, y por esa razón se le otorga la vida por\nahora.';
   const presentado = textoParaPantalla(cita);
   assert.equal(presentado.split('\n\n').length, 2, 'el parlamento conserva su párrafo');

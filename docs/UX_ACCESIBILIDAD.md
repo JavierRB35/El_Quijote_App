@@ -30,25 +30,22 @@ No declarar cumplimiento técnico sin auditoría automatizada y manual. Los tama
 ## 3. Flujos mínimos
 
 1. **Inicio/perfil:** continuar como acción principal; accesos claros a comenzar, aventura aleatoria, atlas, museo, lector, cuaderno y ajustes. Introducción breve, omisible y recuperable.
-2. **Aventura:** contexto audiovisual, puntos opcionales, pregunta contextual, elección, explicación, revelación, descubrimiento y continuación sin pantallas administrativas excesivas.
-3. **Preguntas:** exclusivamente selección de una o varias opciones declaradas, verdadero/falso, hotspots, ordenación o emparejamiento accesible; **ninguna respuesta libre escrita**. Si hay varias correctas debe indicarse inequívocamente. Evitar zonas pequeñas y arrastre obligatorio: ofrecer alternativa con teclado.
+2. **Aventura:** contexto audiovisual, puntos de aventura, anticipación de la acción, elección, puntuación, revelación canónica, checkpoint y continuación sin pantallas administrativas excesivas.
+3. **Aventura:** anticipación de la siguiente acción, tres alternativas habituales y una consecuencia canónica. Ninguna respuesta escrita ni examen retrospectivo. Teclado y foco accesibles.
 4. **Lector:** 126 capítulos, navegación por parte/capítulo, posición persistente, tipografía ajustable, búsqueda, marcadores y anotaciones; salto al pasaje que fundamenta una respuesta y regreso a la aventura.
 5. **Atlas/museo:** abiertos desde el principio, filtrado sencillo, fichas comprensibles y procedencia visual explícita; no hacer depender la consulta de destreza con mapas o zoom.
 6. **Cuaderno:** consulta de descubrimientos y notas, recuperación por episodio/personaje, diferenciación de contenido editorial e IA bajo petición.
 7. **Ajustes/perfiles:** accesibilidad, voz, frecuencia de preguntas, copia y restauración; cambios reversibles con confirmación ante acciones destructivas.
 
-## 4. Estructura de pantalla de pregunta
+## 4. Pantalla de anticipación de Aventura
 
-- **Cada pregunta final tendrá su propia imagen específica y elegible**, preferentemente una escena cinematográfica existente; si no existe, acuarela secundaria o encargo nuevo. El fallback neutro es válido en prototipos/fallos, no completa la imagen exigida (DC-24). Mantener escena visible, pero priorizar contraste del panel.
-- Enunciado de lectura cómoda, una única pregunta por vez; una breve referencia de contexto si es útil.
-- Dos a cuatro alternativas por ejemplo; el catálogo determinará la cantidad real según contenido, sin forzar siempre cuatro.
-- Botones amplios, orden visual y de foco coherentes, selección marcada por algo más que color.
-- Controles de «Repetir narración», «Pista» y «Continuar» donde correspondan; evitar saturación simultánea.
-- La imagen **anterior** propia de cada pregunta nunca revela una respuesta ni un hecho todavía no presentado; el desenlace permanece oculto hasta la resolución. Verificar elegibilidad y vigencia en UI, no solo `spoiler_level`.
-- El resultado presenta explicación breve con opción de ampliar al fragmento exacto del libro.
-- Pantallas de evaluación nunca confunden rapidez con competencia cognitiva; historial y repaso son personales y locales.
-
-La lámina conceptual de los molinos se describe en [Dirección artística, §5](DIRECCION_ARTISTICA.md#5-ejemplo-gráfico-conceptual--episodio-de-los-molinos). La imagen PNG generada está **pendiente de incorporación física al Git**; no tratarla como asset disponible desde el repositorio.
+- La experiencia no evalúa conocimientos: presenta una situación previa, muestra qué personaje afronta el siguiente lance y pregunta qué hará a continuación. Alternativas usualmente tres, dificultad moderada uniforme y una acción fiel a Cervantes.
+- Una **preimagen exclusiva de la ronda**, validada contra spoilers, acompaña a la situación; la imagen de consecuencia se presenta únicamente al seleccionar «Descubrir qué sucede».
+- Tras escoger: mostrar primero +1/−1 punto, luego el desenlace narrativo canónico y explicación breve. Nunca crear bifurcaciones ficticias.
+- Inicio 3 puntos, máximo 5, checkpoints con bonificación y recuperación tras agotamiento según reglas canónicas de Aventura.
+- Texto completo, alternativas simultáneamente visibles, no scroll interno, teclado/foco accesible, contraste y escenas sin cortes; aplicar DC-28. Tamaños de texto personalizables, movimiento reducido y controles con área cómoda.
+- El propietario confirma las imágenes ya disponibles y solicita únicamente las faltantes con prompts artísticos exactos y fidelidad al texto de la novela; un asset sin validación no equivale a cobertura final.
+- Los contenidos culturales no evaluativos siguen disponibles en Lector, Museo, Cuaderno y Modo Histórico. No restaurar un cuestionario de conocimientos.
 
 ## 5. Pruebas de caja negra
 

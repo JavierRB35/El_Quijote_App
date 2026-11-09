@@ -19,14 +19,6 @@
     "scenes": [
       "valid/scene.json"
     ],
-    "questions": [
-      "valid/question_single.json",
-      "valid/question_multi.json",
-      "valid/question_true_false.json",
-      "valid/question_ordering.json",
-      "valid/question_matching.json",
-      "valid/question_hotspot.json"
-    ],
     "discoveries": [
       "valid/discovery_cita.json",
       "valid/discovery_lectura.json"
@@ -62,7 +54,6 @@
     ]
   },
   "counts": {
-    "questions": 6,
     "episodes": 1,
     "scenes": 1,
     "media_assets": 3,

@@ -33,18 +33,12 @@ REPO_GATE_USES = {"uso_personal_app", "almacenamiento_repo_git"}
 
 FORMATOS_AUDIO = {"mp3", "ogg"}
 
-# Episodios con la regla DC-24 de imagen propia por pregunta ya aplicada a sus
-# datos reales (la ausencia de imagen es válida mientras llega el encargo
-# artístico; lo que no es válido es reutilizar un activo entre dos preguntas).
-EPISODIOS_CON_IMAGEN_PROPIA = {"DQ.P1.C08.E01"}
-
 SCHEMA_BY_CATEGORY = {
     "edition": "content/edition.schema.json",
     "chapter": "content/chapter.schema.json",
     "passage": "content/passage.schema.json",
     "episode": "content/episode.schema.json",
     "scene": "content/scene.schema.json",
-    "question": "content/question.schema.json",
     "discovery": "content/discovery.schema.json",
     "person": "content/person.schema.json",
     "place": "content/place.schema.json",
@@ -62,14 +56,14 @@ PACKAGE_CATEGORIES = set(SCHEMA_BY_CATEGORY) - {"profile", "content_package"}
 # Claves del manifest (plural) -> categoría de esquema (singular)
 FILES_KEY_TO_CATEGORY = {
     "editions": "edition", "chapters": "chapter", "passages": "passage", "episodes": "episode",
-    "scenes": "scene", "questions": "question", "discoveries": "discovery", "persons": "person",
+    "scenes": "scene", "discoveries": "discovery", "persons": "person",
     "places": "place", "museum_items": "museum_item", "media_assets": "media_asset",
     "sources": "source", "licenses": "license", "beats": "beat",
 }
 # Categoría -> clave del índice de referencias usado por crossref_errors()
 CATEGORY_TO_INDEX = {
     "edition": "editions", "chapter": "chapters", "passage": "passages", "episode": "episodes",
-    "scene": "scenes", "question": "questions", "discovery": "discoveries", "person": "persons",
+    "scene": "scenes", "discovery": "discoveries", "person": "persons",
     "place": "places", "museum_item": "museum_items", "media_asset": "media",
     "source": "sources", "license": "licenses", "beat": "beats",
 }
@@ -126,61 +120,6 @@ def schema_errors(instance: Any, category: str) -> list[str]:
 
 
 # ---------------------------------------------------------------- semántica
-
-def question_semantic_errors(q: dict) -> list[str]:
-    errs: list[str] = []
-    inter = q["interaction"]
-    qid = q["id"]
-    opts = inter["options"]
-    ids = [o["id"] for o in opts]
-    prefix = qid + ".O"
-    if len(set(ids)) != len(ids):
-        errs.append("IDs de opción duplicados")
-    for oid in ids:
-        if not oid.startswith(prefix):
-            errs.append(f"Opción '{oid}' no respeta el prefijo '{prefix}NN'")
-    correct = inter.get("correct_option_ids", [])
-    for cid in correct:
-        if cid not in ids:
-            errs.append(f"correct_option_ids referencia una opción inexistente: '{cid}'")
-    t = inter["type"]
-    if t in ("single_choice", "true_false") and len(correct) != 1:
-        errs.append(f"{t} exige exactamente una respuesta correcta")
-    if t == "multi_choice" and len(correct) < 2:
-        errs.append("multi_choice exige al menos dos respuestas correctas")
-    if t == "ordering":
-        order = inter.get("correct_order", [])
-        if set(order) != set(ids) or len(order) != len(ids):
-            errs.append("correct_order debe contener TODAS las opciones, una sola vez cada una")
-        elif ids == order:
-            errs.append(
-                "la presentación inicial (orden del array de opciones) coincide con correct_order: "
-                "las opciones no deben mostrarse ya resueltas ni depender del azar para aparecer "
-                "desordenadas (encargo §4.3; corrección P1 de ordenación)"
-            )
-    if t == "matching":
-        lefts = [p["left"] for p in inter.get("pairs", [])]
-        rights = [p["right"] for p in inter.get("pairs", [])]
-        for oid in lefts + rights:
-            if oid not in ids:
-                errs.append(f"pairs referencia una opción inexistente: '{oid}'")
-        if len(set(lefts)) != len(lefts) or len(set(rights)) != len(rights):
-            errs.append("pairs reutiliza un elemento del mismo lado")
-        if set(lefts) & set(rights):
-            errs.append("un mismo ID aparece como izquierda y derecha en pairs")
-    if t == "hotspot":
-        area = inter.get("hotspot_area")
-        if area and (area["x"] + area["w"] > 1 or area["y"] + area["h"] > 1):
-            errs.append(
-                f"hotspot_area fuera de imagen: x+w={area['x'] + area['w']:.2f}, y+h={area['y'] + area['h']:.2f}"
-            )
-    has_interpretation = any(ev["kind"] == "interpretacion_editorial" for ev in q["evidence"])
-    textual = q["certainty"] in ("TEXTO_EXPLICITO", "HECHO_HISTORICO_DOCUMENTADO")
-    if has_interpretation and textual:
-        errs.append("evidence 'interpretacion_editorial' incompatible con certainty textual: "
-                    "no se fabrica verdad única sobre interpretaciones")
-    return errs
-
 
 def arrays_neutros_errors(entity: dict) -> list[str]:
     """v1.2.0 (compatibilidad): los arrays de recursos visuales vacíos
@@ -242,17 +181,6 @@ def crossref_errors(entity: dict, category: str, index: dict[str, set[str]]) -> 
             chk(layer.get("media_id"), "media", f"scene {entity['id']}.layers")
         for hs in entity.get("hotspots", []):
             chk(hs.get("media_id"), "media", f"scene {entity['id']}.hotspots")
-    elif category == "question":
-        chk(entity.get("episode_id"), "episodes", f"question {entity['id']}.episode_id")
-        chk(entity.get("chapter_ids"), "chapters", f"question {entity['id']}.chapter_ids")
-        chk(entity.get("passage_ids"), "passages", f"question {entity['id']}.passage_ids")
-        chk(entity.get("scene_id"), "scenes", f"question {entity['id']}.scene_id")
-        vr = entity.get("visual_requirements", {})
-        chk(vr.get("pre_image_media_id"), "media", f"question {entity['id']}.visual_requirements")
-        chk(vr.get("hotspot_media_id"), "media", f"question {entity['id']}.visual_requirements")
-        for ev in entity.get("evidence", []):
-            chk(ev.get("passage_id"), "passages", f"question {entity['id']}.evidence")
-            chk(ev.get("source_id"), "sources", f"question {entity['id']}.evidence")
     elif category == "discovery":
         chk(entity.get("appearance", {}).get("episode_id"), "episodes", f"discovery {entity['id']}.appearance")
         chk(entity.get("passages"), "passages", f"discovery {entity['id']}.passages")
@@ -299,8 +227,6 @@ def validate_entity(instance: dict, category: str, gate: str = "repo",
         errors.append({"code": "SCHEMA_ERROR", "message": msg})
     if errors:
         return errors
-    if category == "question":
-        errors += [{"code": "SEMANTIC_ERROR", "message": m} for m in question_semantic_errors(instance)]
     if category in ("scene", "beat"):
         errors += [{"code": "SEMANTIC_ERROR", "message": m} for m in arrays_neutros_errors(instance)]
     if category == "media_asset":
@@ -342,47 +268,7 @@ def validate_package(manifest_path: Path, gate: str = "repo") -> list[dict]:
         for rel, _files_key, inst in items:
             for err in validate_entity(inst, category, gate=gate, index=index):
                 errors.append({**err, "message": f"[{rel}] {err['message']}"})
-    # Reglas de paquete enteras (v0.2.0): duplicados semánticos e imagen previa reveladora.
-    questions = objects.get("question", {})
-    seen_keys: dict[str, str] = {}
-    for qid in sorted(questions):
-        key = questions[qid].get("semantic_key")
-        if key:
-            if key in seen_keys:
-                errors.append({"code": "SEMANTIC_ERROR",
-                               "message": f"semantic_key duplicado '{key}' en {seen_keys[key]} y {qid}"})
-            seen_keys[key] = qid
     media = objects.get("media_asset", {})
-    for qid in sorted(questions):
-        pre = questions[qid].get("visual_requirements", {}).get("pre_image_media_id")
-        asset = media.get(pre or "")
-        if asset and asset.get("spoiler_level") != "ninguno":
-            errors.append({"code": "SEMANTIC_ERROR",
-                           "message": f"imagen previa de {qid} ({pre}) tiene spoiler_level "
-                                      f"'{asset.get('spoiler_level')}': revelaría la respuesta (§4.3.4)"})
-
-    # DC-24 (2026-11-08): una imagen propia por cada pregunta; la misma imagen
-    # para dos preguntas no satisface la obligación. Se aplica por episodio a
-    # medida que Dirección cierra su asignación visual (primera aplicación:
-    # DQ.P1.C08.E01, corrección P1); los demás episodios migrarán con sus
-    # propios encargos y se añadirán aquí, nunca antes de sus datos reales.
-    for episodio in sorted(EPISODIOS_CON_IMAGEN_PROPIA):
-        asignacion: dict[str, list[str]] = {}
-        for qid in sorted(questions):
-            q = questions[qid]
-            if q.get("episode_id") != episodio:
-                continue
-            vr = q.get("visual_requirements", {})
-            for campo in ("pre_image_media_id", "hotspot_media_id"):
-                medio = vr.get(campo)
-                if medio:
-                    asignacion.setdefault(medio, []).append(f"{qid} ({campo})")
-        for medio, qids in sorted(asignacion.items()):
-            if len(qids) > 1:
-                errors.append({"code": "SEMANTIC_ERROR",
-                               "message": f"DC-24: el activo '{medio}' es imagen de varias "
-                                          f"preguntas de {episodio}: {', '.join(qids)}; cada "
-                                          f"pregunta exige imagen propia exclusiva"})
 
     # Reglas de beats/intervenciones (v1.1.0, R11): orden único por escena,
     # utterance_id único global, audio existente y con formato de voz.
@@ -436,7 +322,7 @@ def validate_package(manifest_path: Path, gate: str = "repo") -> list[dict]:
 # ---------------------------------------------------------------- suite
 
 FILENAME_CATEGORY_RULES = [
-    ("question", "question"), ("media_", "media_asset"), ("discovery", "discovery"),
+("media_", "media_asset"), ("discovery", "discovery"),
     ("person", "person"), ("place_", "place"), ("route_", "place"), ("museum_item", "museum_item"),
     ("beat", "beat"),
     ("edition", "edition"), ("chapter", "chapter"), ("passage", "passage"),
@@ -445,17 +331,9 @@ FILENAME_CATEGORY_RULES = [
 ]
 
 EXPECTED_INVALID = {
-    "invalid_question_no_correct.json": "SCHEMA_ERROR",
-    "invalid_question_single_option.json": "SCHEMA_ERROR",
-    "invalid_question_multi_not_declared.json": "SCHEMA_ERROR",
-    "invalid_question_option_ids_mismatch.json": "SEMANTIC_ERROR",
-    "invalid_question_bad_chapter.json": "SCHEMA_ERROR",
-    "invalid_question_certainty_mismatch.json": "SEMANTIC_ERROR",
-    "invalid_question_ordering_resuelta.json": "SEMANTIC_ERROR",
     "invalid_discovery_cita_without_passage.json": "SCHEMA_ERROR",
     "invalid_media_unknown_license.json": "LICENSE_NOT_VERIFIED",
     "invalid_media_repo_only.json": "ALLOWED_USE_MISSING",
-    "invalid_question_hotspot_out_of_bounds.json": "SEMANTIC_ERROR",
     "invalid_place_no_certainty.json": "SCHEMA_ERROR",
     "invalid_route_not_hypothesis.json": "SCHEMA_ERROR",
     "invalid_beat_sin_texto.json": "SCHEMA_ERROR",
@@ -470,11 +348,8 @@ EXPECTED_INVALID = {
 EXPECTED_INVALID_PACKAGES = {
     "package_invalid_missing_media.json": "REFERENCE_ERROR",
     "package_invalid_stale_contract.json": "CONTRACT_VERSION_UNSUPPORTED",
-    "package_invalid_duplicate_semantic.json": "SEMANTIC_ERROR",
-    "package_invalid_revealing_preimage.json": "SEMANTIC_ERROR",
     "package_invalid_beats_orden_duplicado.json": "SEMANTIC_ERROR",
     "package_invalid_beats_audio_fantasma.json": "REFERENCE_ERROR",
-    "package_invalid_imagen_compartida.json": "SEMANTIC_ERROR",
 }
 
 

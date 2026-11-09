@@ -2,65 +2,6 @@
 // sistema vertical). Espejo de /schemas — la fuente de verdad es el esquema,
 // no este fichero (contrato §11: la UI nunca hardcodea contenido).
 
-export type TipoPregunta =
-  | 'single_choice'
-  | 'multi_choice'
-  | 'true_false'
-  | 'ordering'
-  | 'matching'
-  | 'hotspot';
-
-export interface Opcion {
-  id: string;
-  label: string;
-  explanation?: string;
-}
-
-export interface Interaccion {
-  type: TipoPregunta;
-  options: Opcion[];
-  correct_option_ids?: string[];
-  correct_order?: string[];
-  pairs?: { left: string; right: string }[];
-  hotspot_area?: { x: number; y: number; w: number; h: number };
-  multi_declared?: boolean;
-  shuffle_options?: boolean;
-}
-
-export interface EvidenceItem {
-  kind: string;
-  passage_id?: string;
-  quote?: string;
-  source_id?: string;
-  locator?: string;
-  note?: string;
-}
-
-export interface RequisitosVisuales {
-  pre_image_media_id?: string;
-  hotspot_media_id?: string;
-  pre_image_must_not_reveal: boolean;
-}
-
-export interface Pregunta {
-  id: string;
-  contract_version: string;
-  episode_id: string;
-  chapter_ids: string[];
-  passage_ids?: string[];
-  scene_id?: string;
-  prompt: string;
-  interaction: Interaccion;
-  rationale: string;
-  rationale_extended?: string;
-  evidence: EvidenceItem[];
-  cognitive_type: string;
-  difficulty: number;
-  language: string;
-  tags: string[];
-  visual_requirements?: RequisitosVisuales;
-}
-
 export interface MediaAsset {
   id: string;
   function: string;
@@ -240,11 +181,6 @@ export class Catalogo {
     return ep;
   }
 
-  preguntasDeEpisodio(episodeId: string): Pregunta[] {
-    return Object.values(this.categoria<Pregunta>('questions'))
-      .filter((q) => q.episode_id === episodeId)
-      .sort((a, b) => a.id.localeCompare(b.id));
-  }
 
   medio(id: string): MediaAsset | undefined {
     return this.categoria<MediaAsset>('media_assets')[id];

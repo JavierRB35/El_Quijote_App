@@ -80,7 +80,7 @@ def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     files: dict[str, list[str]] = {
         "editions": [], "chapters": [], "passages": [], "episodes": [], "scenes": [],
-        "questions": [], "discoveries": [], "persons": [], "places": [], "museum_items": [],
+        "discoveries": [], "persons": [], "places": [], "museum_items": [],
         "media_assets": [], "sources": [], "licenses": [],
     }
 

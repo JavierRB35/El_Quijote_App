@@ -50,7 +50,7 @@ Público objetivo: **todos los públicos desde la adolescencia**. Lenguaje claro
 
 ## 2. DECISIONES VINCULANTES YA CONFIRMADAS
 
-**Actualización del propietario — 2026-11-08 (DC-23–DC-27):** desde esta fecha la estructura operativa del proyecto es **Dirección integral (ChatGPT) + desarrollador único**, con **director artístico únicamente para encargos concretos de imágenes canalizados por el propietario**. La fuente y destino únicos del desarrollo son el repositorio GitHub `JavierRB35/El_Quijote_App`. Cada pregunta terminada requiere **imagen propia específica y no reutilizada genéricamente**, y Modo Historia requiere **cobertura visual cinematográfica suficiente** para sostener el interés. Priorizar `assets/scenes/` y primeros planos aptos, usar las acuarelas solo secundariamente en gameplay y como contenido principal de una **sección artística dedicada**. Los fondos neutros son válidos para prototipo/fallback, no aceptación visual final por defecto. Estas decisiones **reemplazan** cualquier asignación anterior a equipos o roles R01–R16 y cualquier política de preguntas finales sin imagen. Se registran en `docs/VISION_Y_DECISIONES.md` y `docs/DECISIONES_OPERATIVAS_Y_POLITICA_VISUAL_2026-11-08.md`. No implican Fase 2 ni derechos para distribución.
+**Normativa consolidada, 2026-11-09 (Aventura narrativa y DC-23–DC-28):** desde esta fecha la estructura operativa del proyecto es **Dirección integral (ChatGPT) + desarrollador único**, con **director artístico únicamente para encargos concretos de imágenes canalizados por el propietario**. La fuente y destino únicos del desarrollo son el repositorio GitHub `JavierRB35/El_Quijote_App`. Cada ronda terminada de Aventura requiere **preimagen propia y no reutilizada genéricamente**, y Modo Historia requiere **cobertura visual cinematográfica suficiente** para sostener el interés. Priorizar `assets/scenes/` y primeros planos aptos, usar las acuarelas solo secundariamente en gameplay y como contenido principal de una **sección artística dedicada**. Los fondos neutros son válidos para prototipo/fallback, no aceptación visual final por defecto. Estas decisiones **reemplazan** cualquier asignación anterior a equipos o roles R01–R16 y cualquier política de preguntas finales sin imagen. Se registran en `docs/VISION_Y_DECISIONES.md` y `docs/DECISIONES_OPERATIVAS_Y_POLITICA_VISUAL_2026-11-08.md`. No implican Fase 2 ni derechos para distribución.
 
 
 
@@ -66,30 +66,23 @@ Público objetivo: **todos los públicos desde la adolescencia**. Lenguaje claro
 - Personalidad visual: **realismo cinematográfico con influencias pictóricas**; sistema mixto de fotografía patrimonial, reproducciones históricas y recreaciones IA según la escena, siempre identificadas por su naturaleza.
 - Imágenes de **alta calidad y tamaño optimizado**. No confundir máxima resolución con máxima experiencia.
 - Interfaz inmersiva, elegante y discreta; no tapar la escena con menús y avisos.
-- Preguntas con **presentación variable** según contenido y tipo, pero **RESPUESTAS EXCLUSIVAMENTE SELECCIONADAS**.
+- Rondas de **anticipación narrativa**, con opciones exclusivamente seleccionadas y consecuencia inalterable según Cervantes.
 - Primera partida: **introducción breve y opcional**.
 - Experiencia amable y adaptativa; desafíos competitivos optativos. No usar dificultad artificial ni penalizaciones que impidan avanzar.
-- Ritmo de preguntas: **cinematográfico y adaptativo**; aparecen en momentos significativos y su frecuencia es ajustable; desafíos adicionales voluntarios.
+- Ritmo cinematográfico de rondas en momentos significativos; dificultad moderada uniforme, con checkpoints.
 
-### 2.2 Formatos de respuesta — DECISIÓN CERRADA
+### 2.2 Interacción de Aventura — DECISIÓN VIGENTE
 
-**No pedir al jugador respuestas libres por escrito, no introducir cuadros de respuesta textual ni reabrir esta decisión.** Todas las respuestas se resuelven mediante opciones propuestas por el juego:
+El jugador no responde preguntas de examen. En cada ronda observa una imagen anterior al hecho, conoce una situación y **anticipa la próxima acción** de un personaje mediante tres alternativas seleccionables (cuatro solo justificadas). La respuesta correcta sigue el relato de Cervantes; un fallo no bifurca la historia. Mostrar primero el efecto sobre los puntos, después la consecuencia canónica e imagen de revelación. Dificultad **media y uniforme**. La puntuación comienza en 3, suma/resta 1, tiene techo 5 y utiliza checkpoints según las [reglas canónicas](REGLAS_MODO_AVENTURA_V2_2026-11-08.md). No hay campos libres, test de conocimientos, verdadero/falso retrospectivo, ordenación de sucesos ya narrados ni preguntas triviales por completar cupos.
 
-- Elección de una respuesta entre varias.
-- Elección de varias respuestas **solo cuando la pregunta indique explícitamente que puede haber varias correctas**.
-- Verdadero/falso como selección.
-- Selección de elementos, personajes u objetos en la escena mediante puntos interactivos claros.
-- Ordenación de alternativas mediante selección/arrastre con alternativa accesible por teclado, si aporta valor.
-- Asociación de opciones en pares o conjuntos, con interacción accesible.
-
-La variedad estará en la **formulación, el razonamiento, la imagen y la disposición de las opciones**, no en exigir escritura al jugador. Cuando una interpretación literaria admita varias lecturas defendibles, formular la pregunta y las opciones con precisión; aceptar más de una interpretación cuando proceda y explicarlo. No fabricar una verdad única sobre supuestas intenciones ocultas de Cervantes.
+Una escena no se inventa: la situación, cada opción y el desenlace deben apoyarse en la novela, mantener cronología y evitar spoilers. Dirección propone las rondas; el propietario verifica si existe cada preimagen y solicita las faltantes. Los prompts describen exclusivamente elementos respaldados por el texto. La capa visual debe cumplir DC-28.
 
 ### 2.3 Texto, investigación y volumen
 
 - Las **dos partes completas de la novela** estarán incluidas localmente en la aplicación.
 - **Lector íntegro e interactivo confirmado**: 126 capítulos organizados por parte; lectura continua, búsqueda, marcadores, anotaciones, tamaño de letra ajustable, conservación de posición, acceso desde preguntas y museo, ilustraciones asociadas y ayudas diferenciadas del original.
 - Preferencia arquitectónica: conservar **el EPUB completo de una edición legalmente adecuada** y una representación textual estructurada e indexable por capítulos/pasajes. Verificar antes la edición elegida, variaciones textuales y derechos.
-- La aspiración inicial de **10.000 preguntas** ha sido expresamente **sustituida** por **tantas preguntas realmente diferentes, útiles y verificables como permita un trabajo riguroso**. Ninguna cuota numérica mínima inventada.
+- No se establece cuota de preguntas ni banco cultural. Las rondas se seleccionan por su relevancia dramática y posibilidad de anticipación fiel; ninguna cifra justifica inventar hechos.
 - Piloto de auditoría editorial sobre **seis capítulos representativos** antes de proyectar el tamaño del catálogo total; informar del rendimiento por capítulo y del coste real de validación.
 - Frases exactas y extractos con **parte, capítulo, edición y localizador de pasaje**, y circunstancias narrativas. Distinguir cita literal, resumen, adaptación y comentario.
 - Interpretaciones, mensajes ocultos, sátiras y alusiones históricas como **hipótesis atribuidas y graduadas por evidencia**, no como intenciones demostradas sin prueba.
@@ -182,10 +175,10 @@ Las especialidades enumeradas a continuación expresan **controles de calidad as
 - Analiza alusiones a personajes reales: homenaje, sátira o referencia posible, siempre con grado de evidencia y bibliografía.
 - Identifica debates historiográficos y evita presentar hipótesis como hechos.
 
-**Especialista en diseño pedagógico y banco de preguntas**
-- Convierte unidades verificables de conocimiento en **preguntas de respuesta seleccionada**, con distractores justos y explicaciones.
-- Controla variedad, dificultad, precisión, valor de aprendizaje y repeticiones semánticas.
-- Audita la distribución por capítulos, temas, protagonistas y capacidades cognitivas.
+**Especialista en diseño de situaciones y decisiones narrativas**
+- Transforma situaciones verificables del relato en **anticipaciones de la siguiente acción**, con alternativas justas y consecuencias canónicas.
+- Controla variedad, dificultad media uniforme, precisión, dramatismo y repeticiones.
+- Audita distribución de situaciones por capítulos, tramos y personajes.
 
 **Curador iconográfico / investigador de archivos y patrimonio**
 - Busca reproducciones, fotografías y fuentes primarias en repositorios fiables; establece relación con episodio y autoría.
@@ -233,30 +226,11 @@ Fuentes prioritarias para verificar y documentar, sin atribuirles automáticamen
 
 **Prioridad de evidencia:** texto original → documentación histórica primaria/registro patrimonial → estudio académico acreditado → interpretación editorial propia expresamente indicada. Rechazar anécdotas de webs sin fuente.
 
-### 4.3 Banco de preguntas: requisitos de cada registro
+### 4.3 Rondas de anticipación — requisitos de cada registro
 
-Una pregunta publicable necesita **como mínimo**:
+Cada ronda candidata debe incluir: identificador estable; parte/capítulo/episodio/pasaje exacto; situación inmediatamente anterior a la acción; personaje que decide o actúa; formulación **«¿qué hará a continuación?»** o equivalente natural; tres opciones plausibles de dificultad media uniforme, una canónica e inequívoca; consecuencia auténtica; explicación breve; localizador de evidencia; restricciones de spoilers; imagen previa exclusiva y no reveladora; imagen de consecuencia; continuidad de personajes y vestuario; estado de fuentes, derechos y revisión. La historia no se altera por el acierto/fallo.
 
-1. Identificador permanente y versión editorial.
-2. Parte, capítulo, episodio y pasaje(s) de respaldo.
-3. Tipo cognitivo y tema: hecho, secuencia, causa/consecuencia, actitud o reacción, diálogo, humor, cita, interpretación, historia, lugar, arte, etc.
-4. Enunciado inequívoco en español, sin spoilers de la respuesta en la imagen o el título.
-5. **Opciones seleccionables** con identificadores propios y orden presentable aleatoriamente si no cambia el sentido.
-6. Una solución exacta o conjunto explícito de alternativas válidas; especificar single-choice, multi-choice, ordenación, emparejamiento o hotspot.
-7. Distractores plausibles, no tramposos, estilísticamente equilibrados y libres de falsedades difundidas como hechos.
-8. Explicación verificable, breve primero y ampliación opcional.
-9. Referencia de evidencia exacta: edición, parte, capítulo, pasaje, cita o paráfrasis, URL de fuente secundaria si aplica.
-10. Grado de certeza; para interpretaciones, autoría de la tesis y alternativas admitidas.
-11. Dependencias narrativas y restricción de spoilers; cuándo es seguro mostrarla.
-12. Requisitos visuales: imagen previa idónea, perspectiva, puntos interactivos, imagen de desenlace, vínculo con acuarela si procede.
-13. Dificultad estimada, etiquetas, accesibilidad, idioma, revisión y auditoría de duplicados.
-14. Estado: borrador, documentada, revisada, aprobada, descartada; responsables y fechas.
-
-**Prohibiciones:** ninguna respuesta libre escrita; ninguna pregunta improvisada en tiempo de juego con respuesta no verificada; nada de preguntas clones cambiando un sinónimo, el orden o las alternativas; no inventar intenciones de Cervantes; no «todas las anteriores» ambiguo; no sustentar una pregunta textual solo en una versión cinematográfica; no hacer la respuesta obvia por una imagen previa reveladora.
-
-Las **preguntas históricas** se respaldan con fuentes históricas, no solo con la ficción; las de **interpretación** deben formularse como «según esta interpretación documentada...», «¿cuál es una lectura defendible...?» cuando no exista respuesta única. No forzar como verdad conclusiones debatidas.
-
-Aleatoriedad con sentido: mostrar preguntas pertinentes al episodio, sin repetición exacta en la misma sesión, con historial por perfil, dificultad adaptable, repaso inteligente de fallos y control de preguntas agotadas. Las opciones pueden cambiar de orden; nunca alterar el identificador de la respuesta correcta ni la cita asociada.
+El propietario valida qué imágenes existen y solicita individualmente los prompts restantes. No preparar un examen de cultura cervantina, no reutilizar la misma imagen previa como recurso genérico de varias rondas y no generar imágenes antes del control de inventario. Los descubrimientos culturales pueden mantenerse en sus módulos no evaluativos (Museo/Lector/Cuaderno). Los contratos del juego narrativo aún deben llevarse a un formato declarativo versionado antes de generalizar la producción.
 
 ### 4.4 Humor, refranes, citas e interpretaciones
 
@@ -305,19 +279,9 @@ Cada pieza: título, autor/atribución, fecha, procedencia, técnica, entidad pr
 8. Marcar fuente y estado de derechos por **cada archivo y derivado**; material de uso privado no autorizado para redistribución no se sube sin más a un Git remoto ni a un instalador público.
 9. Si falta autorización o hay dudas, usar metadatos y fallback **neutro y seguro** en el **vertical técnico**, sin simular aprobación de imágenes; las preguntas sin imagen específica y capítulos de narración visualmente insuficientes **no cuentan como terminados en producto**, aunque compile la aplicación.
 
-### 4.8 Piloto editorial obligatorio
+### 4.8 Piloto editorial y extensión por capítulos
 
-Seleccionar **seis capítulos representativos**: acción/aventura, diálogo, humor, reflexión, referencias históricas y etapa final de la obra; justificar la muestra antes de ejecutarla. Para cada uno elaborar inventario de episodios, hechos, personajes, lugares, citas, cápsulas, posibles imágenes, preguntas candidatas y evidencia.
-
-Auditar con revisión cruzada filológica e histórica y eliminar duplicados semánticos; medir:
-
-- Preguntas válidas y rechazadas, motivo de rechazo, minutos/horas de investigación por pregunta aprobada.
-- Recursos visuales por episodio/perspectiva; imagen histórica vs recreación necesaria.
-- Disponibilidad legal, coste/tiempo de licencia o producción, tamaño estimado en disco.
-- Necesidades cartográficas/audio/QA y complejidad de integrar fragmentos exactos.
-- Variación por tipo de capítulo. No extrapolar multiplicando seis capítulos por 126 sin ponderación.
-
-Publicar **una estimación razonada con intervalo y supuestos**, no prometer 10.000. El propietario validará alcance y fases antes de autorizar producción.
+Usar el capítulo VIII como piloto de la experiencia de anticipación. Preparar nuevos capítulos mediante inventario del texto original, hechos, episodios, diálogos, humor, puntos de anticipación válidos, consecuencias y cobertura de medios. La selección de rondas responde a momentos con incertidumbre dramática verificable, no a cuotas de examen. Para todos los capítulos se examinan primero las imágenes disponibles; únicamente el propietario solicita nuevas creaciones a partir de prompts textualmente fieles. La preparación editorial no supone aprobar Fase 2 ni autorizar integración o publicación sin QA.
 
 ## 5. PLIEGO DEL EQUIPO DE DESARROLLO
 
@@ -547,8 +511,8 @@ Si el repositorio existe con otro diseño, proponer adaptación y **mantener el 
 
 - **100 %** de preguntas aprobadas con ID único, opciones seleccionadas, respuesta(s) definida(s), explicación, capítulo/pasaje o fuente histórica pertinente, revisión, validez del enlace y estado de licencia de activos.
 - **100 %** de citas presentadas como literales cotejadas con la edición declarada. Las adaptaciones se etiquetan.
-- **0** preguntas publicadas sin respuesta inequívoca según su formulación; interpretaciones discutidas explícitamente señaladas.
-- **0** duplicados semánticos aprobados deliberadamente para aumentar volumen; métricas de posibles duplicados y revisión de falsos positivos.
+- **0** rondas de anticipación publicadas sin consecuencia inequívoca y documentada en el texto.
+- **0** rondas duplicadas o de relleno para aumentar volumen; métricas de diversidad narrativa.
 - **100 %** de imágenes visibles con procedencia, autoría, clase (histórica/foto/recreación) y condición de uso registrada.
 - **0** activos de derechos desconocidos o restringidos incluidos inadvertidamente en paquetes o Git remoto no autorizados.
 - **100 %** de topónimos/rutas con tipo de certeza y fuente; las rutas inferidas claramente marcadas.
@@ -558,13 +522,13 @@ Si el repositorio existe con otro diseño, proponer adaptación y **mantener el 
 
 ### 7.2 Funcionales y de experiencia de usuario
 
-- Instalación y primera ejecución con red desconectada; recorrer al menos un episodio con escena, pregunta, respuesta seleccionada, explicación, voz/subtítulos, descubrimiento, cuaderno y guardado.
+- Instalación y primera ejecución sin conexión; recorrer un episodio con situación, anticipación, puntos, consecuencia, checkpoints y guardado, además de Historia, Museo y Lector.
 - Cambiar de perfil y demostrar aislamiento de progreso, ajustes, favoritos y anotaciones.
-- Acceso al lector completo, búsqueda en ambas partes, navegar desde pregunta a pasaje y volver sin perder posición.
-- Preguntas fáciles/difíciles, single/multi-select, orden y hotspot; opciones y respuestas correctas persisten frente a cambios de orden visual; sin campos de respuesta escrita.
-- Fallos, pistas y repaso no bloquean la historia. Ajuste de frecuencia de preguntas y desafíos voluntarios.
+- Acceso al lector completo, búsqueda en ambas partes, navegar desde una ronda a su pasaje y regresar sin perder posición.
+- Anticipaciones con dificultad media uniforme, tres opciones usualmente y una acción canónica; reordenar opciones en reintentos sin alterar solución y sin escritura libre.
+- Los fallos reducen puntos y muestran el desenlace canónico; al llegar a cero se revela la consecuencia y se retorna al checkpoint con un mínimo de 3 puntos.
 - Conectividad ausente: atlas, museo, partidas, recursos y mapas locales operativos; IA opcional indica que está sin conexión.
-- Imagen previa no revela respuestas y sus hotspots opcionales no interfieren con teclado, pantalla táctil si se admite, o ratón.
+- Imagen previa exclusiva sin spoilers; la imagen de consecuencia aparece solo tras elegir «Descubrir qué sucede»; controles de teclado completos.
 - Todas las imágenes de evidencia histórica distinguidas de las recreaciones; retratos dudosos y rutas hipotéticas rotulados.
 - Accesibilidad: navegación teclado, orden de foco, contraste, escalado, subtítulos, alt y reducción de animaciones.
 - Rendimiento medido en el hardware objetivo; tamaño de instalación, picos de RAM/VRAM, tiempos de escena, atlas, búsqueda y carga de imágenes; objetivos definitivos basados en mediciones.

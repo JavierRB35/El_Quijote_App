@@ -41,7 +41,7 @@ Se verifican contra los requisitos `EF-*` de `ESPECIFICACION_FUNCIONAL.md` (cada
 - Instalación y primera ejecución **sin red**; un episodio completo con escena, pregunta seleccionada, explicación, voz/subtítulos, descubrimiento, cuaderno y guardado.
 - Cambio de perfil con aislamiento demostrado.
 - Lector: búsqueda en ambas partes, pregunta→pasaje→volver sin perder posición.
-- Los 6 tipos de pregunta; orden visual aleatorio sin alterar respuestas; **ningún campo de escritura**.
+- Rondas de anticipación narrativa con dificultad media uniforme; puntuación 3/5, checkpoints, retorno tras agotamiento, opciones reordenadas al reintentar y canon inalterable; **sin cuestionario ni campos de escritura**.
 - Atlas y museo completos sin red; IA opcional reporta sin conexión.
 - Imagen previa que no revela y **una imagen propia, exclusiva y elegible para cada pregunta de un capítulo final**; hotspots teclado-amigables. **Escenas cinematográficas suficientes** para que la narración no sea mayormente estática sin justificación; escenarios `sin imagen` se prueban como **fallback técnico**, no cobertura audiovisual aceptada.
 - Clases de evidencia siempre distinguidas (histórica/foto/recreación); rutas hipotéticas rotuladas.

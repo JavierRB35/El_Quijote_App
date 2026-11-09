@@ -1,6 +1,6 @@
 // EL QUIJOTE — sistema vertical FASE 1. App es la puerta de entrada: carga el
 // catálogo y ofrece la elección entre Modo Historia (narración continua del
-// episodio, nuevo en P0), Modo Aventura (sistema de preguntas existente) y
+// episodio, nuevo en P0), Modo Aventura (anticipación narrativa con puntos y checkpoints) y
 // Museo (galería artística, abierto desde el inicio). La implementación de
 // cada modo vive en su módulo: src/historia, src/aventura y src/museo
 // (encargo P0 §8: separar componentes, no engordar App).
@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import type { Catalogo } from './contrato';
 import { cargarCatalogo } from './entorno';
 import ReproductorHistoria from './historia/ReproductorHistoria';
-import ModoAventura from './aventura/ModoAventura';
+import AventuraNarrativa from './aventura/AventuraNarrativa';
 import Museo from './museo/Museo';
 import './App.css';
 
@@ -32,7 +32,7 @@ export default function App() {
     return <ReproductorHistoria catalogo={catalogo} onSalir={() => setModo('menu')} />;
   }
   if (modo === 'aventura') {
-    return <ModoAventura catalogo={catalogo} onSalir={() => setModo('menu')} />;
+    return <AventuraNarrativa catalogo={catalogo} onSalir={() => setModo('menu')} />;
   }
   if (modo === 'museo') {
     // Museo abierto desde el inicio (DC-09): no depende del progreso; usa el
@@ -69,8 +69,8 @@ export default function App() {
           <button className="tarjeta-modo" onClick={() => setModo('aventura')}>
             <span className="tarjeta-modo-nombre">Modo Aventura</span>
             <span className="tarjeta-modo-detalle">
-              Preguntas sobre el episodio: hechos, causas y sentido del equívoco.
-              Tu progreso de respuestas se conserva tal como lo dejaste.
+              Anticipa lo que harán los personajes: cada respuesta puede hacerte ganar o perder puntos.
+              Supera hazañas, consigue bonificaciones y guarda el avance en checkpoints.
             </span>
           </button>
         </div>
@@ -82,7 +82,7 @@ export default function App() {
             progreso.
           </span>
         </button>
-        <p className="menu-nota">Historia guarda aparte la lectura; Aventura guarda aparte tus respuestas.</p>
+        <p className="menu-nota">Historia guarda la lectura; Aventura guarda puntos y checkpoints.</p>
       </section>
     </main>
   );

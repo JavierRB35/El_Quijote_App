@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "capitulos": [
+    {
+      "capituloId": "DQ.P1.C01",
+      "episodioId": "DQ.P1.C01.E01",
+      "etiqueta": "Parte I · Capítulo I",
+      "titulo": "El hidalgo, los libros y los nombres",
+      "resumen": "Del hidalgo lector al nacimiento de don Quijote: sus armas, Rocinante y Dulcinea.",
+      "descripcionHistoria": "Un relato audiovisual desde la vida del hidalgo hasta el nombre de Dulcinea. Toda intervención permanece visible incluso sin audio.",
+      "descripcionAventura": "Anticipa cinco acciones de Cervantes, descubre su consecuencia y cruza dos checkpoints.",
+      "cierreAventura": {
+        "titulo": "El caballero ya tiene nombre",
+        "texto": "El hidalgo ha preparado armas, caballo y dama en sus pensamientos. La primera salida empieza en el capítulo II."
+      },
+      "cierreHistoria": {
+        "titulo": "El nacimiento de don Quijote",
+        "texto": "El hidalgo ya tiene nombre, caballo y dama. Su primera salida pertenece al capítulo II."
+      }
+    },
+    {
+      "capituloId": "DQ.P1.C08",
+      "episodioId": "DQ.P1.C08.E01",
+      "etiqueta": "Parte I · Capítulo VIII",
+      "titulo": "Los molinos de viento y el vizcaíno",
+      "resumen": "Los molinos, la comitiva de frailes y el desafío del vizcaíno.",
+      "descripcionHistoria": "Narración de los molinos de viento, la caída y el camino al Puerto Lápice, con texto íntegro en pantalla.",
+      "descripcionAventura": "Anticipa nueve acciones de Cervantes con puntos, checkpoints y respuestas sin alterar el canon.",
+      "cierreAventura": {
+        "titulo": "El camino continúa",
+        "texto": "El duelo con el vizcaíno queda suspendido. Descubrirás su desenlace en el capítulo siguiente."
+      },
+      "cierreHistoria": {
+        "titulo": "Camino del Puerto Lápice",
+        "texto": "La aventura de los molinos queda contada. El episodio continúa en el Modo Aventura con sus decisiones."
+      }
+    }
+  ]
+}

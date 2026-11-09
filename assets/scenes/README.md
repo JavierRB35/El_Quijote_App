@@ -27,7 +27,7 @@ Por petición expresa del propietario, los **WebP optimizados de este piloto** s
 
 **Historial del catálogo:** v0.1, 11 imágenes (10 escenas más referencia); v0.2, 12 escenas nuevas; v0.3, 12 escenas nuevas; v0.4, 12 escenas nuevas; v0.5, 12 escenas nuevas (6 de cada parte) en capítulos no ilustrados anteriormente, conservando IDs y hashes de los 47 recursos anteriores. El catálogo incluye escenas de relato intercalado (`p1_c33_*` y `p1_c41_*`) y narrador-marco (`p1_c09_*`), **que no deben confundirse con aventuras vividas por Don Quijote**. No se considera un catálogo editorial aprobado: la versión indica evolución del paquete artístico, no aprobación GO/NO-GO del videojuego.
 
-Todos los archivos quedan en `editorial_review_pending` hasta que se cotejen los capítulos, la indumentaria, la arquitectura y los detalles de utilería. Las asociaciones con la novela no constituyen una edición textual ni justifican preguntas por sí mismas.
+Salvo los cinco recursos aprobados expresamente el 2026-11-09, los demás archivos quedan en `editorial_review_pending` hasta que se cotejen los capítulos, la indumentaria, la arquitectura y los detalles de utilería. Las asociaciones con la novela no constituyen una edición textual ni justifican preguntas por sí mismas.
 
 **Batería sexta (2026-11-06):** seis nuevas escenas `pre`, en capítulos I.4, I.12, I.27, II.4, II.14 y II.43 antes no representados por recreaciones propias; 65 recursos en total. Se conservan los 59 anteriores sin alteración. Pendiente de validación editorial.
 
@@ -40,3 +40,7 @@ Todos los archivos quedan en `editorial_review_pending` hasta que se cotejen los
 **Décima batería (2026-11-06):** 20 nuevas escenas en capítulos sin recreación propia previa: I.28, 31, 37, 39, 42, 44, 47, 48, 49, 50, 51; II.2, 5, 6, 7, 9, 15, 23, 24, 25. Total: **103 activos** (83 anteriores conservados). I.39 representa el relato intercalado del cautivo; II.15 y II.23 se catalogan `post` con spoiler alto. Pendiente de cotejo editorial individual.
 
 **Duodécima batería (2026-11-06):** 50 nuevas recreaciones WebP de momentos narrativos diferentes, alternando estados `pre` y `post` y perspectivas complementarias; total **203 recursos visuales** (202 escenas y referencia). Las 153 entradas previas se conservan. Todas las nuevas escenas quedan pendientes de cotejo editorial individual.
+
+## Capítulo I — cinco escenas aprobadas por el propietario (2026-11-09)
+
+Se incorporan cinco WebP originales de 1672 × 941 px para Aventura R01/R03/R04/R05 y su reutilización pertinente en Historia, con continuidad visual, fases `pre`/`post`, pasajes de `DQ.ED.0003` / `DQ.SRC.0005`, textos alternativos y SHA-256 en `manifest.json`. El propietario los ha revisado y validado expresamente. Su registro **no activa** por sí mismo las rondas ni el montaje de Historia; queda pendiente el QA de integración y composición DC-28 / TS-001 en la aplicación. La aprobación de estos cinco recursos **no se extiende** al resto del inventario artístico.

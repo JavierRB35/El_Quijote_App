@@ -515,7 +515,8 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
         autor: escenaActiva.author,
         mediaClass: escenaActiva.media_class,
         ladoTexto: encuadreDe(escenaActiva.id).lado_texto,
-        ajuste: esImagenHotspot ? 'contain' : 'cover',
+        // P0: presentación íntegra de todas las preguntas, con hotspots estables.
+        ajuste: 'contain',
       }
     : {
         uri: null,
@@ -633,6 +634,7 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
     <ContenedorCine
       plano={plano}
       estado={respondida ? 'narracion' : 'pregunta'}
+      contenidoClave={`${pregunta.id}:${respondida ? 'respuesta' : 'opciones'}`}
       reducirMovimiento={reducirMovimiento}
       cargar={leerAsset}
       cabecera={cabecera}

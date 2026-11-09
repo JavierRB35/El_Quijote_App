@@ -62,6 +62,7 @@ jobs:
           npx playwright install --with-deps chromium
           mkdir -p tests/e2e
           cp ../../script-qa/app/tests/e2e/composicion_qa.mjs tests/e2e/composicion_qa.mjs
+          cp ../../script-qa/app/tests/e2e/recorrido_profundo.mjs tests/e2e/recorrido_profundo.mjs
       - name: "Build y pruebas unitarias (sin ocultar fallos)"
         shell: bash
         run: |
@@ -101,6 +102,17 @@ jobs:
           echo "navegador=$E2E" >> ../resultados-ci.txt
           cat ../navegador.log
           exit 0
+      - name: "Recorridos y QA interactivo real"
+        if: matrix.etiqueta == 'despues-pr89' || matrix.etiqueta == 'aventura-v2-pr87'
+        shell: bash
+        run: |
+          set +e
+          cd producto
+          QA_OUTPUT=../qa-resultados node app/tests/e2e/recorrido_profundo.mjs "${{ matrix.tipo }}" http://127.0.0.1:1420 "${{ matrix.etiqueta }}" > ../recorridos.log 2>&1
+          ESTADO=$?
+          echo "recorridos=$ESTADO" >> ../resultados-ci.txt
+          cat ../recorridos.log
+          exit 0
       - name: "Criterio de salida sin PASS artificial"
         if: always()
         shell: bash
@@ -108,7 +120,43 @@ jobs:
           cat resultados-ci.txt || true
           if ! grep -q '^build=0$' resultados-ci.txt; then exit 1; fi
           if ! grep -q '^unit_tests=0$' resultados-ci.txt; then exit 1; fi
-          if ! grep -q '^navegador=0$' resultados-ci.txt; then exit 1; fi
+          if ! grep -q '^navegador=0
+      - name: "Publicar evidencia original (PNG/JSON/logs/SHA)"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-p0-${{ matrix.etiqueta }}-${{ github.run_id }}
+          path: |
+            qa-resultados/
+            build.log
+            unit-tests.log
+            navegador.log
+            recorridos.log
+            vite.log
+            resultados-ci.txt
+            sha-ejecutado.txt
+            sha-script.txt
+          retention-days: 30
+ resultados-ci.txt; then exit 1; fi
+          if [ '${{ matrix.etiqueta }}' = 'despues-pr89' ] || [ '${{ matrix.etiqueta }}' = 'aventura-v2-pr87' ]; then
+            if ! grep -q '^recorridos=0
+      - name: "Publicar evidencia original (PNG/JSON/logs/SHA)"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-p0-${{ matrix.etiqueta }}-${{ github.run_id }}
+          path: |
+            qa-resultados/
+            build.log
+            unit-tests.log
+            navegador.log
+            vite.log
+            resultados-ci.txt
+            sha-ejecutado.txt
+            sha-script.txt
+          retention-days: 30
+ resultados-ci.txt; then exit 1; fi
+          fi
       - name: "Publicar evidencia original (PNG/JSON/logs/SHA)"
         if: always()
         uses: actions/upload-artifact@v4

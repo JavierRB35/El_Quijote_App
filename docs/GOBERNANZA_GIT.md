@@ -2,6 +2,8 @@
 
 **Decisión del propietario (2026-11-05):** GitHub (`JavierRB35/El_Quijote_App`, privado, rama `main`) es el **repositorio principal y única fuente de verdad** del proyecto, y debe mantenerse **siempre actualizado**. Registrada como `D-2026-11-05-01` en `VISION_Y_DECISIONES.md`.
 
+> **Actualización 2026-11-09 (DC-29):** la directriz ágil `docs/DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md` prevalece sobre la antigua regla de PR obligatoria en Fase 1. Ramas y pruebas proporcionadas al riesgo.
+
 ## 1. Principio rector
 
 Ningún trabajo está terminado hasta que está en `origin/main`. El estado local de cualquier máquina es **desechable**; lo que no está en GitHub se considera no hecho. `main` en GitHub es además la copia de seguridad de todo el trabajo documental y de especificación.
@@ -16,10 +18,10 @@ Ningún trabajo está terminado hasta que está en `origin/main`. El estado loca
 
 No se difieren pushes «para más tarde». Si un bloque está a medias, se commitea con mensaje explícito `WIP:` solo si es imprescindible, y se resuelve en la misma jornada.
 
-## 3. Ramas y revisión
+## 3. Ramas y revisión (actualizado por DC-29, 2026-11-09)
 
 - **FASE 0 (documentación):** commits directos a `main` permitidos. Justificación: agente único, sin código ejecutable, historial limpio como evidencia de auditoría.
-- **FASE 1+ (código, contenido y decisiones):** ramas de trabajo `feature/<área>-<tema>` + Pull Request con checklist del encargo §6.5. **Revisión y aceptación por Dirección integral**, con comprobación técnica/pruebas ejecutadas por el desarrollador; cambios de esquema y datos requieren coherencia editorial y técnica verificable. La obligación antigua de convocar dos equipos o firmas de R01–R16 **queda sustituida por DC-23**. El director artístico solo recibe encargos puntuales de imágenes a través del propietario.
+- **FASE 1+ (directriz del propietario 2026-11-09, DC-29):** se **deroga** la obligación general de rama + PR por fase. Se permite commit directo a `main` para documentación, imágenes y activos permitidos, y cambios de código menores, localizados, reversibles y de bajo riesgo, con validación proporcional. Rama + PR para cambios grandes, arquitectónicos, sensibles, riesgosos, concurrentes o cuando la protección del repositorio lo exija. Dirección integral conserva las decisiones editoriales/funcionales; el desarrollador verifica técnicamente. Se mantienen DC-23 (un único desarrollador y artista puntual), seguridad, derechos y límites de fase. Política íntegra: `docs/DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md`.
 - **Prohibido siempre:** force-push, reescritura del historial de `main`, `git push --force`, borrado de `main`.
 - Colisiones: rebase local antes de push; nunca «merge a ciegas» sobre `main`.
 
@@ -47,7 +49,7 @@ No se difieren pushes «para más tarde». Si un bloque está a medias, se commi
 **Ampliación de excepción (2026-11-05, batería visual 02):** por nueva orden expresa del propietario («Genera otra batería de escenas y fusiónalas en main organizadas»), se añaden otros **12 WebP optimizados**, ~3,5 MB, repartidos entre `assets/scenes/part_1` y `part_2`, elevando el piloto a **23 WebP**, ~6,5 MB. Todos son recreaciones IA de uso interno, con manifiesto y hashes; los 12 PNG maestros de esta tanda se entregan en ZIP fuera de Git. Se mantiene sin cambios la prohibición de otros medios pesados y la revisión de PEND-05.
 
 
-**Ampliación de excepción (2026-11-05, baterías visuales 03, 04 y 05):** por autorización expresa del propietario para nuevas baterías de ilustraciones y su organización en `main`, se incorporan **12 WebP optimizados adicionales en cada batería**, elevando la colección a **59 WebP** (58 escenas y una referencia visual). Los maestros PNG se entregan en ZIPs independientes y permanecen fuera del repositorio; cada nuevo archivo se identifica por parte y capítulo y registra SHA-256 y estado de revisión editorial en `assets/scenes/manifest.json`. Por instrucción específica del propietario, estas entregas artísticas se publican directamente en `main` sin crear ramas o PR dedicados, mediante commits de avance rápido con control de cabeza concurrente y sin `force`; **esta autorización no exime de PR a cambios de código, esquemas ni otros contenidos de FASE 1**. La revisión editorial por especialistas sigue pendiente y PEND-05 continúa abierta para otros medios pesados.
+**Ampliación de excepción (2026-11-05, baterías visuales 03, 04 y 05):** por autorización expresa del propietario para nuevas baterías de ilustraciones y su organización en `main`, se incorporan **12 WebP optimizados adicionales en cada batería**, elevando la colección a **59 WebP** (58 escenas y una referencia visual). Los maestros PNG se entregan en ZIPs independientes y permanecen fuera del repositorio; cada nuevo archivo se identifica por parte y capítulo y registra SHA-256 y estado de revisión editorial en `assets/scenes/manifest.json`. Por instrucción específica del propietario, estas entregas artísticas se publican directamente en `main` sin crear ramas o PR dedicados, mediante commits de avance rápido con control de cabeza concurrente y sin `force`; **esta excepción fue anterior a DC-29; desde 2026-11-09 se aplica la nueva política por riesgo, también a cambios menores de código**. La revisión editorial por especialistas sigue pendiente y PEND-05 continúa abierta para otros medios pesados.
 
 ## 6. Versionado y etiquetas
 
@@ -56,7 +58,7 @@ No se difieren pushes «para más tarde». Si un bloque está a medias, se commi
 
 ## 7. Evidencia y trazabilidad
 
-- El historial de `main` es evidencia de auditoría: cada entrega debe poder rastrearse a un commit con fecha, autor y contenido. **Todas las tareas del desarrollador nacen de esta fuente GitHub y regresan a este mismo repositorio**; cada prompt cita el enlace, `main`, SHA remoto verificado, rama/PR, pruebas y SHA final. Nunca se da por entregado código solo local.
+- El historial de `main` es evidencia de auditoría: cada entrega debe poder rastrearse a un commit con fecha, autor y contenido. **Todas las tareas del desarrollador nacen de esta fuente GitHub y regresan a este mismo repositorio**; cada encargo cita el enlace, `main`, SHA remoto verificado, validación proporcional, destino y SHA final; rama/PR únicamente cuando aplique según DC-29. Nunca se da por entregado código solo local.
 - Los hitos GO/NO-GO se etiquetan y se referencian desde `VISION_Y_DECISIONES.md`.
 
 ## 8. Integración continua del contrato (activo desde 2026-11-06)

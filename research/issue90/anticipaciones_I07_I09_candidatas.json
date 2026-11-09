@@ -1,0 +1,310 @@
+{
+  "expediente": "ISS90-AV-2026-11-09",
+  "issue": 90,
+  "estado": "propuesta_editorial_no_productiva",
+  "sustituye_documentalmente": "PR #93 contiene una propuesta del modelo antiguo, no integrarla",
+  "decision": "orden de retirada del cuestionario cultural descrita en PR #95, pendiente de integración técnica",
+  "regla": "anticipación de la siguiente acción, canon invariable, 3 opciones, dificultad media uniforme, 3 puntos iniciales, checkpoints según motor aprobado",
+  "fase": "Fase 1 piloto; no autoriza Fase 2 ni incorporación masiva a 126 capítulos",
+  "rondas": [
+    {
+      "id": "ISS90.AV.I07.01",
+      "capitulo_id": "DQ.P1.C07",
+      "tramo": "La nueva pareja",
+      "contexto": "Don Quijote propone a Sancho que lo acompañe como escudero; le ofrece la posibilidad de gobernar una ínsula conquistada en alguna aventura.",
+      "personaje": "Sancho Panza",
+      "pregunta": "¿Qué hará Sancho ante la propuesta?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Aceptará acompañar al hidalgo como escudero."
+        },
+        {
+          "id": "b",
+          "texto": "Exigirá ser nombrado gobernador antes de salir."
+        },
+        {
+          "id": "c",
+          "texto": "Rechazará el viaje y avisará al cura para detenerlo."
+        }
+      ],
+      "correcta": "a",
+      "consecuencia": "Sancho acepta y se determina a dejar a su familia para servir de escudero.",
+      "explicacion": "La esperanza de llegar a gobernador es parte de lo que le mueve a salir con don Quijote.",
+      "fuente": {
+        "edicion_id": "DQ.ED.0003",
+        "source_id": "DQ.SRC.0005",
+        "url": "https://www.gutenberg.org/files/2000/2000-h/2000-h.htm",
+        "capitulo": "DQ.P1.C07",
+        "ancla_busqueda": "En este tiempo, solicitó don Quijote a un labrador vecino suyo",
+        "estado_cotejo": "hecho_contrastado_en_PG2000_pendiente_edicion_critica"
+      },
+      "pasajeId": null,
+      "imagenPrevia": {
+        "ruta_existente_candidata": "assets/scenes/part_1/chapter_07/p1_c07_sancho_promesa_pre.webp",
+        "estado": "PENDIENTE_REVISION_BINARIO_COMPOSICION_SPOILER_LICENCIA"
+      },
+      "imagenConsecuencia": {
+        "ruta_existente_candidata": null,
+        "estado": "PENDIENTE_REVISION_BINARIO_COMPOSICION_LICENCIA"
+      },
+      "spoiler_control": "Mostrar conversación sin representar anticipadamente la aceptación irrevocable; no mostrar consecuencias de capítulos posteriores.",
+      "checkpoint_propuesto": null,
+      "estado": "candidata",
+      "integrable": false
+    },
+    {
+      "id": "ISS90.AV.I07.02",
+      "capitulo_id": "DQ.P1.C07",
+      "tramo": "Preparativos de viaje",
+      "contexto": "Sancho se dispone a llevar alforjas y ha expresado que necesita montar su asno porque no está acostumbrado a caminar grandes distancias. Don Quijote piensa en las costumbres de los libros de caballerías.",
+      "personaje": "Don Quijote",
+      "pregunta": "¿Qué decidirá respecto al asno de Sancho?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Le ordenará abandonar el asno y caminar a su lado."
+        },
+        {
+          "id": "b",
+          "texto": "Permitirá que lo lleve, pensando en una montura mejor para más adelante."
+        },
+        {
+          "id": "c",
+          "texto": "Suspenderá el viaje hasta encontrar otro caballo."
+        }
+      ],
+      "correcta": "b",
+      "consecuencia": "Don Quijote permite el asno, aunque no recuerda escuderos montados de ese modo; piensa procurarle cabalgadura más honrosa cuando pueda.",
+      "explicacion": "La incongruencia entre el ideal caballeresco y la necesidad práctica se resuelve a favor del viaje.",
+      "fuente": {
+        "edicion_id": "DQ.ED.0003",
+        "source_id": "DQ.SRC.0005",
+        "url": "https://www.gutenberg.org/files/2000/2000-h/2000-h.htm",
+        "capitulo": "DQ.P1.C07",
+        "ancla_busqueda": "En lo del asno reparó un poco don Quijote",
+        "estado_cotejo": "hecho_contrastado_en_PG2000_pendiente_edicion_critica"
+      },
+      "pasajeId": null,
+      "imagenPrevia": {
+        "ruta_existente_candidata": "assets/scenes/part_1/chapter_07/p1_c07_sancho_alforjas_pre.webp",
+        "estado": "PENDIENTE_REVISION_BINARIO_COMPOSICION_SPOILER_LICENCIA"
+      },
+      "imagenConsecuencia": {
+        "ruta_existente_candidata": null,
+        "estado": "PENDIENTE_REVISION_BINARIO_COMPOSICION_LICENCIA"
+      },
+      "spoiler_control": "Antes de responder no mostrar señal de asentimiento definitivo ni la decisión escrita.",
+      "checkpoint_propuesto": null,
+      "estado": "candidata",
+      "integrable": false
+    },
+    {
+      "id": "ISS90.AV.I07.03",
+      "capitulo_id": "DQ.P1.C07",
+      "tramo": "La segunda salida",
+      "contexto": "La rodela, la celada, las camisas y las alforjas están listas. Los dos compañeros desean partir sin que sus familiares puedan impedírselo.",
+      "personaje": "Don Quijote y Sancho Panza",
+      "pregunta": "¿Cómo emprenderán la segunda salida?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "De día, con una despedida pública ante los vecinos."
+        },
+        {
+          "id": "b",
+          "texto": "En compañía del cura y el barbero para pedir consejo."
+        },
+        {
+          "id": "c",
+          "texto": "Una noche, sin despedirse ni dejarse ver."
+        }
+      ],
+      "correcta": "c",
+      "consecuencia": "Ambos salen de noche sin avisar a los suyos y avanzan hasta el amanecer.",
+      "explicacion": "Cervantes describe la partida clandestina; el camino abre la segunda salida sin anticipar la aventura de los molinos.",
+      "fuente": {
+        "edicion_id": "DQ.ED.0003",
+        "source_id": "DQ.SRC.0005",
+        "url": "https://www.gutenberg.org/files/2000/2000-h/2000-h.htm",
+        "capitulo": "DQ.P1.C07",
+        "ancla_busqueda": "sin despedirse Panza de sus hijos y mujer",
+        "estado_cotejo": "hecho_contrastado_en_PG2000_pendiente_edicion_critica"
+      },
+      "pasajeId": null,
+      "imagenPrevia": {
+        "ruta_existente_candidata": "assets/scenes/part_1/chapter_07/p1_c07_segunda_salida_pre.webp",
+        "estado": "PENDIENTE_REVISION_BINARIO_COMPOSICION_SPOILER_LICENCIA"
+      },
+      "imagenConsecuencia": {
+        "ruta_existente_candidata": null,
+        "estado": "PENDIENTE_REVISION_BINARIO_COMPOSICION_LICENCIA"
+      },
+      "spoiler_control": "Verificar que la preimagen no exhiba ya la salida nocturna consumada; si lo hace, reservarla para consecuencia.",
+      "checkpoint_propuesto": {
+        "id": "ISS90.CP.I07",
+        "titulo": "La segunda salida"
+      },
+      "estado": "candidata",
+      "integrable": false
+    },
+    {
+      "id": "ISS90.AV.I09.01",
+      "capitulo_id": "DQ.P1.C09",
+      "tramo": "El manuscrito",
+      "contexto": "El relato del combate se interrumpió al final del capítulo VIII. En un mercado de Toledo, el segundo narrador encuentra unos cartapacios escritos en caracteres arábigos que no sabe leer.",
+      "personaje": "Segundo narrador",
+      "pregunta": "¿Qué hará para averiguar qué dicen los papeles?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Los devolverá porque no reconoce el idioma."
+        },
+        {
+          "id": "b",
+          "texto": "Buscará a un lector capaz de traducir los caracteres arábigos."
+        },
+        {
+          "id": "c",
+          "texto": "Los dejará sellados en el archivo del mercado."
+        }
+      ],
+      "correcta": "b",
+      "consecuencia": "El narrador encuentra un intérprete morisco, que abre el cartapacio y comienza a leer.",
+      "explicacion": "La búsqueda del texto es un artificio literario: no debe confundirse con evidencia de un manuscrito histórico recuperado.",
+      "fuente": {
+        "edicion_id": "DQ.ED.0003",
+        "source_id": "DQ.SRC.0005",
+        "url": "https://www.gutenberg.org/files/2000/2000-h/2000-h.htm",
+        "capitulo": "DQ.P1.C09",
+        "ancla_busqueda": "anduve mirando si parecía por allí algún morisco aljamiado que los leyese",
+        "estado_cotejo": "hecho_contrastado_en_PG2000_pendiente_edicion_critica"
+      },
+      "pasajeId": null,
+      "imagenPrevia": {
+        "ruta_existente_candidata": "assets/scenes/part_1/chapter_09/p1_c09_manuscrito_toledo_pre.webp",
+        "estado": "PENDIENTE_REVISION_BINARIO_COMPOSICION_SPOILER_LICENCIA"
+      },
+      "imagenConsecuencia": {
+        "ruta_existente_candidata": "assets/scenes/part_1/chapter_09/p1_c09_manuscritos_alcana_post.webp",
+        "estado": "PENDIENTE_REVISION_BINARIO_COMPOSICION_LICENCIA"
+      },
+      "spoiler_control": "La preimagen no debe contener el título de Cide Hamete ni la anotación sobre Dulcinea, que se revelan después.",
+      "checkpoint_propuesto": null,
+      "estado": "candidata",
+      "integrable": false
+    },
+    {
+      "id": "ISS90.AV.I09.02",
+      "capitulo_id": "DQ.P1.C09",
+      "tramo": "Retorno al duelo",
+      "contexto": "La traducción devuelve el combate suspendido. El vizcaíno acaba de herir a don Quijote en el hombro y de dañarle parte de la celada. El hidalgo reacciona con rabia.",
+      "personaje": "Don Quijote",
+      "pregunta": "¿Qué hará don Quijote tras recibir el golpe?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Devolverá una acometida furiosa con su espada."
+        },
+        {
+          "id": "b",
+          "texto": "Depondrá la espada para curarse la herida."
+        },
+        {
+          "id": "c",
+          "texto": "Enviará a Sancho a ofrecer una tregua en su nombre."
+        }
+      ],
+      "correcta": "a",
+      "consecuencia": "Don Quijote devuelve un golpe violento que alcanza al vizcaíno y acaba derribándolo de la mula.",
+      "explicacion": "El resultado del choque pertenece al relato de I.9, no debe aparecer en preimagen; se conserva la continuidad con el cierre suspendido de I.8.",
+      "fuente": {
+        "edicion_id": "DQ.ED.0003",
+        "source_id": "DQ.SRC.0005",
+        "url": "https://www.gutenberg.org/files/2000/2000-h/2000-h.htm",
+        "capitulo": "DQ.P1.C09",
+        "ancla_busqueda": "se alzó de nuevo en los estribos",
+        "estado_cotejo": "hecho_contrastado_en_PG2000_pendiente_edicion_critica"
+      },
+      "pasajeId": null,
+      "imagenPrevia": {
+        "ruta_existente_candidata": null,
+        "estado": "PENDIENTE_REVISION_BINARIO_COMPOSICION_SPOILER_LICENCIA"
+      },
+      "imagenConsecuencia": {
+        "ruta_existente_candidata": null,
+        "estado": "PENDIENTE_REVISION_BINARIO_COMPOSICION_LICENCIA"
+      },
+      "spoiler_control": "Necesaria revisión de plano específico posterior a la herida y anterior al contraataque; no reutilizar automáticamente la imagen previa del capítulo VIII.",
+      "checkpoint_propuesto": null,
+      "estado": "candidata",
+      "integrable": false
+    },
+    {
+      "id": "ISS90.AV.I09.03",
+      "capitulo_id": "DQ.P1.C09",
+      "tramo": "La petición de clemencia",
+      "contexto": "El vizcaíno ha caído al suelo. Don Quijote le exige rendirse. Las mujeres del coche, temerosas, ruegan al caballero que le perdone la vida.",
+      "personaje": "Don Quijote",
+      "pregunta": "¿Cómo responderá don Quijote a su petición?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Pedirá un rescate de dinero antes de dejarlo marchar."
+        },
+        {
+          "id": "b",
+          "texto": "Negará cualquier clemencia y se alejará sin escuchar."
+        },
+        {
+          "id": "c",
+          "texto": "Aceptará perdonarlo con la condición de que se presente ante Dulcinea en el Toboso."
+        }
+      ],
+      "correcta": "c",
+      "consecuencia": "Don Quijote acepta la petición imponiendo la condición de que el vizcaíno acuda al Toboso; las señoras prometen cumplirla.",
+      "explicacion": "La clemencia condicionada enlaza el combate con la devoción caballeresca por Dulcinea.",
+      "fuente": {
+        "edicion_id": "DQ.ED.0003",
+        "source_id": "DQ.SRC.0005",
+        "url": "https://www.gutenberg.org/files/2000/2000-h/2000-h.htm",
+        "capitulo": "DQ.P1.C09",
+        "ancla_busqueda": "yo soy muy contento de hacer lo que me pedís; mas ha de ser con una condición",
+        "estado_cotejo": "hecho_contrastado_en_PG2000_pendiente_edicion_critica"
+      },
+      "pasajeId": null,
+      "imagenPrevia": {
+        "ruta_existente_candidata": null,
+        "estado": "PENDIENTE_REVISION_BINARIO_COMPOSICION_SPOILER_LICENCIA"
+      },
+      "imagenConsecuencia": {
+        "ruta_existente_candidata": null,
+        "estado": "PENDIENTE_REVISION_BINARIO_COMPOSICION_LICENCIA"
+      },
+      "spoiler_control": "La preimagen muestra la súplica, pero no la aceptación ni el destino al Toboso; no incrustar texto de solución.",
+      "checkpoint_propuesto": {
+        "id": "ISS90.CP.I09",
+        "titulo": "El combate del vizcaíno"
+      },
+      "estado": "candidata",
+      "integrable": false
+    }
+  ],
+  "validacion": {
+    "hechos_cotejados": "PG #2000, I.7 e I.9; citas sin incorporar al dato de producción",
+    "respuestas_aceptadas": false,
+    "imagenes_validadas": false,
+    "integracion": false,
+    "ids_provisionales": true,
+    "no_crea_dq_q": true,
+    "pendiente": [
+      "contraste edición Rico y edición de lector",
+      "pasajes contractuales de I.7/I.9",
+      "comprobar por inspección las imágenes existentes y estados de derechos",
+      "imágenes específicas antes/consecuencia para I.9 rondas 2 y 3",
+      "QA spoilers y TS-001 del guion de Historia",
+      "revisión del alcance piloto por Dirección y autorización de integración"
+    ],
+    "guion_implementado": false
+  }
+}

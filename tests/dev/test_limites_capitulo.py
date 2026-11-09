@@ -1,40 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Regresión P1 (sangrado I,20 → I,21) y restricción de límites de capítulo.
+"""Regresión de límites de los 126 capítulos del corpus original.
 
-La extracción fuzzy permitió que DQ.P1.C21.P0001 capturase la cola del
-capítulo XX («la tierra; porque, después de a los padres…») y el encabezado
-del propio XXI; Q.313 y Q.318 reprodujeron la cita contaminada. Esta batería
-comprueba:
-
-  1. El módulo limites_capitulo valida la secuencia de 126 encabezados
-     (52 de P1 + 74 de P2, con «Capítulo primero.»/«Capítulo Primero.») y
-     bloquea fragmentos que crucen la frontera de capítulo (caso sintético).
-  2. migrar_bateria_a_gutenberg.py tiene incorporada la guardia (pasajes y
-     citas).
-  3. P0001 corregido: arranca EXACTAMENTE en «En esto, comenzó a llover un
-     poco…» (offset 333819 LF), sin cola de I,20 ni encabezado; posición,
-     sha256, text_indexable y anchor verificados contra el fuente; estructura
-     literaria conservada.
-  4. Q.313/Q.318: la cita empieza en el arranque válido, no contiene firma
-     de I,20 ni encabezado, y está íntegra dentro del pasaje citado.
-  5. Firma global de la incidencia: NINGÚN pasaje o cita ajeno a las
-     EXCEPCIONES DOCUMENTADAS contiene la cola de I,20 ni el encabezado de
-     XXI. Las excepciones son casos LEGADOS registrados para una corrección
-     editorial posterior (NO autorizada en la PR de esta subsanación):
-       - DQ.P1.C21.P0002 (empieza en la cola de I,20; contiene encabezado).
-         Sus citas reproducen el sangrado: DQ.Q.000314 y DQ.Q.000317 (sus
-         evidencias citan P0002 y quedan congeladas junto a él hasta que la
-         corrección de P0002 esté autorizada).
-       - DQ.P1.C21.P0004 (texto del episodio del vizcaíno, región de I,9:
-         posición y contenido ajenos al capítulo XXI).
-       - DQ.P1.C01.P0002/P0003/P0004/P0005 y DQ.P1.C16.P0002/P0003 (rangos
-         que incluyen material previo al encabezado de su capítulo: sonetos
-         situados antes del título en la edición de 1833/PG).
-  6. El resto de pasajes del paquete queda DENTRO de los límites de su
-     capítulo (cualquier violación nueva hace fallar la prueba).
-
-Uso: python -I test_limites_capitulo.py <raiz_repo>
+Verifica la frontera I,20→I,21, el pasaje P0001 reparado, la integridad
+textual y las excepciones de pasajes ya documentadas, sin depender del
+cuestionario ni de scripts antiguos.
 """
 import hashlib
 import json
@@ -87,14 +57,6 @@ comprobar(not dentro(r1, r1[0], r2[1]), "sintético: un fragmento que cruza la f
 comprobar(not dentro(r1, r2[0], r2[1]), "sintético: un fragmento de C2 no puede validar como C1")
 comprobar(not dentro(r2, r1[0], r1[1]), "sintético: un fragmento de C1 no puede validar como C2")
 
-# ------------------------------------------------------------ 2. guardia en migrar
-with open(os.path.join(REPO, "tools", "editorial_validation",
-                       "migrar_bateria_a_gutenberg.py"), encoding="utf-8") as fh:
-    migrar_src = fh.read()
-comprobar("limites_capitulo" in migrar_src and "rango_de_capitulo" in migrar_src
-          and "dentro(limite" in migrar_src,
-          "migrar_bateria_a_gutenberg.py no incorpora la guardia de límites")
-
 # ----------------------------------------------------- 3. P0001 corregido
 ruta_p1 = os.path.join(REPO, "content", "piloto", "passages", "DQ.P1.C21.P0001.json")
 p1 = json.load(open(ruta_p1, encoding="utf-8"))
@@ -122,23 +84,6 @@ comprobar(f"offset {INICIO_VALIDO}-{FIN_VALIDO}" in p1["anchor"],
 r21 = rango_de_capitulo(lf, "DQ.P1.C21")
 comprobar(dentro(r21, pos["start_char"], pos["end_char"]),
           "P0001: el rango no queda dentro de los límites de I,21")
-
-# ----------------------------------------------------- 4. Q.313 y Q.318
-for qid in ("DQ.Q.000313", "DQ.Q.000318"):
-    q = json.load(open(os.path.join(REPO, "content", "piloto", "questions",
-                                    qid + ".json"), encoding="utf-8"))
-    citas = [e for e in q["evidence"] if e.get("passage_id") == "DQ.P1.C21.P0001"]
-    comprobar(bool(citas), f"{qid}: sin cita de P0001")
-    for e in citas:
-        cita = e["quote"]
-        comprobar(cita.startswith("En esto, comenzó a llover un poco"),
-                  f"{qid}: la cita no arranca en el fragmento válido")
-        comprobar("después de a los padres" not in cita,
-                  f"{qid}: la cita contiene la cola del capítulo XX")
-        comprobar("Capítulo" not in cita,
-                  f"{qid}: la cita contiene el encabezado del capítulo")
-        comprobar(plano(cita) in plano(p1["text_original"]),
-                  f"{qid}: la cita no está contenida en el pasaje citado")
 
 # --------------------------------- 5/6. firma global + excepciones congeladas
 EXCEPCIONES_LEGADO = {
@@ -178,26 +123,9 @@ for nombre in sorted(os.listdir(ruta_pass)):
         comprobar(ENCABEZADO_XXI not in t,
                   f"{pid}: contiene el encabezado del capítulo XXI")
 
-# citas: la firma de la incidencia no puede reaparecer en ninguna evidencia
-# salvo en las preguntas que citan pasajes de la lista de excepciones legado
-# (Q.314/Q.317 citan P0002; su corrección va con la de P0002, no autorizada aquí)
-ruta_q = os.path.join(REPO, "content", "piloto", "questions")
-for nombre in sorted(os.listdir(ruta_q)):
-    if not nombre.endswith(".json"):
-        continue
-    q = json.load(open(os.path.join(ruta_q, nombre), encoding="utf-8"))
-    for e in q.get("evidence", []):
-        cita = e.get("quote", "")
-        if "después de a los padres" in cita:
-            comprobar(e.get("passage_id") in EXCEPCIONES_LEGADO,
-                      f"{q['id']}: cita con la firma de sangrado del capítulo XX "
-                      f"sobre un pasaje NO registrado como excepción")
-
 if FALLOS:
     print(f"TEST LÍMITES DE CAPÍTULO: {len(FALLOS)} fallo/s")
     for f in FALLOS:
         print("  -", f)
     sys.exit(1)
-print("OK: 126 encabezados validados; guardia en migración; P0001 y Q.313/Q.318 "
-      "corregidos y contenidos en su pasaje; firma de sangrado erradicada salvo "
-      "las 8 excepciones legadas registradas; resto del paquete dentro de límites")
+print("OK: 126 encabezados; P0001 correcto; 8 excepciones de pasajes registradas; resto dentro de límites")

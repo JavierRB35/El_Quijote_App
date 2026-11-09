@@ -4,7 +4,7 @@
 // node --test, sin DOM ni Tauri (lógica pura).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
@@ -258,23 +258,5 @@ test('encuadres versionados y coherentes con el manifiesto de escenas', () => {
         `lado divergente del manifiesto en ${e.media_id}`,
       );
     }
-  }
-});
-
-test('toda pre-imagen/hotspot de las preguntas resuelve a un encuadre (con default si no tiene entrada)', () => {
-  const dirPreguntas = path.join(RAIZ, 'content', 'piloto', 'questions');
-  const usados = new Set<string>();
-  for (const f of readdirSync(dirPreguntas)) {
-    const q = JSON.parse(readFileSync(path.join(dirPreguntas, f), 'utf-8')) as {
-      visual_requirements?: { pre_image_media_id?: string; hotspot_media_id?: string };
-    };
-    const vr = q.visual_requirements ?? {};
-    if (vr.pre_image_media_id) usados.add(vr.pre_image_media_id);
-    if (vr.hotspot_media_id) usados.add(vr.hotspot_media_id);
-  }
-  assert.ok(usados.size > 0, 'el piloto debe declarar requisitos visuales');
-  for (const id of usados) {
-    const e = encuadreDe(id);
-    assert.ok(['derecha', 'izquierda'].includes(e.lado_texto), `encuadre inválido para ${id}`);
   }
 });

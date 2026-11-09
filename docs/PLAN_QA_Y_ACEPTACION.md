@@ -41,7 +41,7 @@ Se verifican contra los requisitos `EF-*` de `ESPECIFICACION_FUNCIONAL.md` (cada
 - Instalación y primera ejecución **sin red**; un episodio completo con escena, pregunta seleccionada, explicación, voz/subtítulos, descubrimiento, cuaderno y guardado.
 - Cambio de perfil con aislamiento demostrado.
 - Lector: búsqueda en ambas partes, pregunta→pasaje→volver sin perder posición.
-- Los 6 tipos de pregunta; orden visual aleatorio sin alterar respuestas; **ningún campo de escritura**.
+- Rondas de anticipación narrativa con dificultad media uniforme; puntuación 3/5, checkpoints, retorno tras agotamiento, opciones reordenadas al reintentar y canon inalterable; **sin cuestionario ni campos de escritura**.
 - Atlas y museo completos sin red; IA opcional reporta sin conexión.
 - Imagen previa que no revela y **una imagen propia, exclusiva y elegible para cada pregunta de un capítulo final**; hotspots teclado-amigables. **Escenas cinematográficas suficientes** para que la narración no sea mayormente estática sin justificación; escenarios `sin imagen` se prueban como **fallback técnico**, no cobertura audiovisual aceptada.
 - Clases de evidencia siempre distinguidas (histórica/foto/recreación); rutas hipotéticas rotuladas.
@@ -97,7 +97,7 @@ La [checklist canónica de composición](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-
 
 **Obligatorio en toda PR que corrija diseño, composición, interfaz, accesibilidad o comportamiento.** Un PASS del caso original no equivale a aprobación global. Aplicar la [regla permanente de AGENTS](../AGENTS.md#regla-permanente--correcciones-transversales-y-reutilización), la [política técnica](ARQUITECTURA_Y_ADR.md#política-transversal-de-correcciones-y-reutilización) y [UX §8](UX_ACCESIBILIDAD.md#8-aplicación-transversal-y-diferencias-por-módulo).
 
-### Evidencia mínima por PR
+### Evidencia mínima por cambio correctivo
 
 | Campo de la matriz `IMPACTO TRANSVERSAL Y REUTILIZACIÓN` | Evidencia exigida |
 |---|---|
@@ -114,7 +114,7 @@ La [checklist canónica de composición](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-
 
 - **Viewports:** 1920×1080, 1366×768, 1280×800 y ventana estrecha representativa; Windows 125 % y 150 % cuando haya entorno disponible. Registrar dimensiones efectivas y estado del navegador/aplicación.
 - **Tamaño de texto:** normal, grande y muy grande; enunciados y alternativas largos; TS-001 íntegro en Historia.
-- **Formatos y estados:** MCQ, multiopción, ordering, matching, hotspot, feedback y panel ampliado; en vistas pertinentes, acuarela vertical y horizontal, escena cinematográfica, foco de teclado y movimiento reducido.
+- **Formatos y estados:** situación de Aventura, tres alternativas, puntuación, consecuencia canónica, checkpoint y, en sus módulos pertinentes, hotspots y panel de lectura; en vistas pertinentes, acuarela vertical y horizontal, escena cinematográfica, foco de teclado y movimiento reducido.
 - **Comprobaciones:** sin scroll interno/truncamiento en overlays, alternativas simultáneamente visibles, sin recorte del sujeto/acción esencial, sin distorsión patrimonial, hotspots alineados, contraste legible, foco operativo, sin regresiones de navegación y persistencia. El scroll propio de Lector, listados o fichas extensas es compatible con UX §8.
 - **Regresión intermodular:** después de cambiar un componente/estilo compartido, repetir una escena de Aventura **y** otra de Historia si ambos consumen la regla; ampliar a Museo/Atlas/Lector/Cuaderno/menús según matriz de dependencias. Si el alcance incluye solo un módulo, documentar por qué.
 
@@ -124,4 +124,4 @@ La [checklist canónica de composición](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-
 - `FAIL`: criterio incumplido, bloquea cierre.
 - `PENDIENTE`: prueba no ejecutada, entorno no disponible o resultado inconcluso; **nunca** presentarlo como aprobado.
 
-**Gate:** Dirección no acepta un cierre que solo demuestre «se ve bien en la captura original» sin diagnóstico, matriz de alcance, pruebas cruzadas y explicación de excepciones. Un test unitario o CI verde no sustituye la comprobación visual con capturas reales. Toda PR debe incluir la sección titulada **«IMPACTO TRANSVERSAL Y REUTILIZACIÓN»** con esta evidencia. Esta regla no implica afirmar que las pruebas estén ya ejecutadas ni altera los gates de fases vigentes.
+**Gate:** Dirección no acepta un cierre que solo demuestre «se ve bien en la captura original» sin diagnóstico, matriz de alcance, pruebas cruzadas y explicación de excepciones. Un test unitario o CI verde no sustituye la comprobación visual con capturas reales. Todo cambio correctivo documentará, en el commit o PR, la sección **«IMPACTO TRANSVERSAL Y REUTILIZACIÓN»** con esta evidencia. Esta regla no implica afirmar que las pruebas estén ya ejecutadas ni altera los gates de fases vigentes.

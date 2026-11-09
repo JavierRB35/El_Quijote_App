@@ -8,11 +8,6 @@
    "comprobados": 59,
    "con_residuos": {}
   },
-  "questions.evidence[].quote": {
-   "capa": "datos (restaurar_estructura, PR #59)",
-   "citas": 76,
-   "questions_con_residuos": {}
-  },
   "beats.utterances[].texto_visible": {
    "capa": "presentación runtime (textoParaPantalla, app/src/presentacion.ts; JSON verbatim intacto)",
    "intervenciones": 16,

@@ -9,7 +9,7 @@ la normalización de presentación:
 
   * DATOS normalizados (`restaurar_estructura`, PR #59 y extracción
     estructurada): `text_original` de passages y `evidence[].quote` de
-    questions. Aquí el detector `cortes_mecanicos_residuales` debe dar CERO
+    pasajes. Aquí el detector `cortes_mecanicos_residuales` debe dar CERO
     para todo registro comprobado — cualquier residuo es un fallo (exit 1).
   * PRESENTACIÓN en runtime (`textoParaPantalla`, app/src/presentacion.ts):
     `texto_visible` de las intervenciones de Historia, verbatim del fuente
@@ -62,7 +62,6 @@ def capitulo_de_escena(scene_id):
 
 
 pasajes = cargar("passages")
-questions = cargar("questions")
 beats = cargar("beats")
 
 # ---------------------------------------------------------------- pasajes
@@ -72,21 +71,6 @@ for pid, p in sorted(pasajes.items()):
     if residuos:
         residuos_pasajes[pid] = residuos
         FALLOS.append(f"pasaje {pid}: {len(residuos)} salto/s mecánico/s residual/es")
-
-# ---------------------------------------------------------------- citas
-residuos_citas = {}
-total_citas = 0
-for qid, q in sorted(questions.items()):
-    for e in q.get("evidence", []):
-        cita = e.get("quote")
-        if not cita:
-            continue
-        total_citas += 1
-        residuos = cortes_mecanicos_residuales(cita)
-        if residuos:
-            residuos_citas.setdefault(qid, []).extend(residuos)
-            FALLOS.append(f"cita de {qid} → {e.get('passage_id')}: "
-                          f"{len(residuos)} salto/s mecánico/s residual/es")
 
 # --------------------------------------------- intervenciones de Historia
 # texto_visible es verbatim (con cortes de maquetación por diseño); la
@@ -131,10 +115,6 @@ pareados_conservados, pareados_unidos = [], []
 _pareados = [
     escanear_pareados("passages.text_original",
                       [(pid, p.get("text_original", "")) for pid, p in pasajes.items()]),
-    escanear_pareados("questions.evidence[].quote",
-                      [(qid, e.get("quote", ""))
-                       for qid, q in questions.items()
-                       for e in q.get("evidence", []) if e.get("quote")]),
     escanear_pareados("beats.utterances[].texto_visible",
                       [(uid, i["detalle"] if False else "")
                        for uid, i in []] or
@@ -171,11 +151,6 @@ informe = {
             "comprobados": len(pasajes) - len(residuos_pasajes),
             "con_residuos": residuos_pasajes,
         },
-        "questions.evidence[].quote": {
-            "capa": "datos (restaurar_estructura, PR #59)",
-            "citas": total_citas,
-            "questions_con_residuos": residuos_citas,
-        },
         "beats.utterances[].texto_visible": {
             "capa": "presentación runtime (textoParaPantalla, app/src/presentacion.ts; JSON verbatim intacto)",
             "intervenciones": len(intervenciones),
@@ -207,7 +182,6 @@ with open(salida, "w", encoding="utf-8") as fh:
 
 print("INFORME DE COBERTURA DE PRESENTACIÓN")
 print(f"  pasajes comprobados (0 residuos): {len(pasajes) - len(residuos_pasajes)}/{len(pasajes)}")
-print(f"  citas comprobadas (0 residuos):   {total_citas - sum(len(v) for v in residuos_citas.values())}/{total_citas}")
 n_interv = len(intervenciones)
 con_cortes = sum(1 for v in intervenciones.values() if v["cortes_que_presentacion_une"] > 0)
 print(f"  intervenciones de Historia:       {n_interv} (presentación runtime; "

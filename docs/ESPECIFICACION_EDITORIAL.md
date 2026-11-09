@@ -1,13 +1,9 @@
-# ESPECIFICACIÓN EDITORIAL
+# ESPECIFICACIÓN EDITORIAL — AVENTURA NARRATIVA
 
-**Estado:** PENDIENTE — entregable FASE 0 (encargo §8) — redacción liderada por MODO CONTENIDOS
-**Modo responsable:** CONTENIDOS (DESARROLLO consume sus contratos)
-**Última actualización:** 2026-11-05
+**Norma vigente (2026-11-09):** [REGLAS_MODO_AVENTURA_V2_2026-11-08.md](REGLAS_MODO_AVENTURA_V2_2026-11-08.md) y [encargo maestro §4.3](ENCARGO_MAESTRO.md).
 
-## Alcance previsto
+La unidad editorial de juego es la **ronda de anticipación narrativa**: situación previa y personaje, próximas acciones plausibles, única acción canónica, consecuencia real, referencia de parte/capítulo/pasaje, preimagen exclusiva antiespoiler e imagen posterior. Dificultad moderada uniforme. Los fallos restan puntos pero no cambian sucesos.
 
-Edición textual de referencia, tipología de episodios, criterios de citas exactas, interpretación y revisión; tipología y requisitos del banco de preguntas (§4.3); cápsulas de descubrimiento (§4.4); atlas (§4.5) y museo (§4.6); procedimiento de imágenes y acuarelas (§4.7); plan del piloto de seis capítulos (§4.8).
+No se preparan preguntas de examen, verdadero/falso retrospectivo, ordenación de hechos conocidos ni banco cultural. Los hechos de historia externa y la interpretación literaria se documentan en Lector, Museo y Modo Histórico sin evaluación. Toda imagen futura deberá solicitarse por el propietario tras contrastar inventario y recibir un prompt fiel al original.
 
-## Nota para DESARROLLO
-
-Los identificadores, estados de certeza (Anexo A) y requisitos mínimos de registro de preguntas (§4.3) deben reflejarse 1:1 en `CONTRATO_EDITORIAL_TECNICO.md` y en `/schemas`. DESARROLLO no altera criterios editoriales; solo formaliza sus mecanismos.
+La aplicación conserva derechos, procedencia, incertidumbre y texto original; no convertir adaptación editorial en cita literal. La expansión más allá de I,8 permanece sujeta a aceptación.

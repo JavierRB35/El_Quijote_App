@@ -120,7 +120,7 @@ async function ejecutar(escala){
       await page.getByRole('button',{name:/Modo Aventura/}).click();
       await page.waitForSelector(selector,{state:'visible'});
       const texto=await page.locator(esV2?'.an-pretitle':'.progreso-texto').first().innerText();
-      anotar('Restauración '+tipo+' '+escala,esV2?texto.includes('Decisión 2'):texto.includes('2 / 7'),texto);
+      anotar('Restauración '+tipo+' '+escala,esV2?texto.toLocaleLowerCase('es').includes('decisión 2'):texto.includes('2 / 7'),texto);
     }
   }
  }catch(e){

@@ -1,6 +1,6 @@
 # Validación editorial — herramientas del contrato (encargo §6.3, §8.7)
 
-`validate.py` valida registros del catálogo y paquetes contra los esquemas de `/schemas` y aplica las reglas semánticas del contrato (tipos de pregunta, puertas de licencia, certezas, referencias cruzadas).
+`validate.py` valida registros del catálogo y paquetes contra los esquemas de `/schemas` y aplica las reglas semánticas del contrato (puertas de licencia, escenas, beats y referencias cruzadas).
 
 ## Requisitos
 
@@ -10,7 +10,7 @@ Python 3.11+ y `pip install -r requirements.txt` (solo en local; **los paquetes 
 
 ```bash
 # Un registro suelto (puerta 'repo' por defecto: exige licencia verificada + uso de repo)
-python tools/editorial_validation/validate.py file tests/contracts/fixtures/valid/question_single.json
+python tools/editorial_validation/validate.py file tests/contracts/fixtures/valid/episode.json
 
 # Un registro con la puerta de instalador ('app': no exige permiso de repositorio Git)
 python tools/editorial_validation/validate.py file tests/contracts/fixtures/invalid/invalid_media_repo_only.json --gate app

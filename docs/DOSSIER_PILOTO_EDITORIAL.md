@@ -28,7 +28,7 @@
 **Hechos:** cura y barbero examinan la biblioteca mientras don Quijote duerme → condena mayoritaria al fuego con salvamentos selectivos y justificaciones ingeniosas: **Amadís de Gaula** («el primero de caballerías que se imprimió en España»), **Tirante el Blanco** («tesoro de contento y una mina de pasatiempos»), y —sorpresa meta-literaria— **La Galatea**, del propio Cervantes, salvada «con los escogidos».
 
 **Personajes:** cura, maese Nicolás (barbero), ama, sobrina; don Quijote (dormido). **Lugar:** la librería (interior doméstico).
-**Referencias históricas reales** (para el banco con fuentes externas): la reescritura bibliográfica del cura es una sátira de la crítica real de los libros de caballerías; las afirmaciones del cura (p. ej. el «primero que se imprimió en España») son **declaraciones de un personaje**, no hechos: el banco debe distinguirlas (estado: TEXTO_EXPLICITO como cita; la veracidad histórica se documenta aparte).
+**Referencias históricas reales** (para el módulo cultural con fuentes externas): la reescritura bibliográfica del cura es una sátira de la crítica real de los libros de caballerías; las afirmaciones del cura (p. ej. el «primero que se imprimió en España») son **declaraciones de un personaje**, no hechos: el módulo cultural debe distinguirlas (estado: TEXTO_EXPLICITO como cita; la veracidad histórica se documenta aparte).
 
 **Citas verificadas:**
 1. «…hago cuenta que he hallado en él un tesoro de contento y una mina de pasatiempos.» (Tirante)
@@ -80,7 +80,7 @@
 
 **Hechos:** postración → confesión y renuncia a los libros («ya yo no soy don Quijote de la Mancha, sino Alonso Quijano») → juicio del cura: «verdaderamente está cuerdo» → testamento con el escribano → muerte entre lágrimas de Sancho, sobrina y ama → epitafio de Sansón Carrasco («Yace aquí el hidalgo fuerte…») y advertencia final contra los «fabricantes de segundas partes» (contra Avellaneda, sin nombrarlo aquí).
 **Personajes:** Alonso Quijano, Sancho, sobrina, ama, cura, maese Nicolás, **Sansón Carrasco** (epitafio), escribano.
-**Nota de spoilers:** todo el banco anterior queda libre de spoilers solo tras este capítulo (`spoiler_policy` de cierre).
+**Nota de spoilers:** todo el recorrido narrativo previo queda libre de los spoilers de ese desenlace solo tras este capítulo (`spoiler_policy` de cierre).
 
 **Citas verificadas:**
 1. «Verdaderamente se muere, y verdaderamente está cuerdo Alonso Quijano el Bueno; bien podemos entrar para que haga su testamento.»

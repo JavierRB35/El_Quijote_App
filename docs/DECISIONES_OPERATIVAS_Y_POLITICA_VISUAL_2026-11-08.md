@@ -40,7 +40,7 @@ Una escena de novela no se debe falsificar para convertirla en imagen. Cada prei
 4. Dirección verifica integridad, fidelidad, cobertura visual y corrección del producto con pruebas ejecutadas. Las PR documentales antiguas no requieren rondas de aprobación entre roles.
 5. Cada capítulo tiene dos hitos distintos:
    - **Vertical técnico jugable:** el reproductor es verificable con recursos neutros y/o provisionales, sin alterar derechos.
-   - **Capítulo visualmente aceptado:** imágenes propias para **todas** sus preguntas y secuencia narrativa visualmente suficiente, con coherencia, accesibilidad, QA y permisos para el uso declarado.
+   - **Capítulo visualmente aceptado:** preimágenes propias para **todas** sus rondas de anticipación y secuencia narrativa visualmente suficiente, con coherencia, accesibilidad, QA y permisos para el uso declarado.
 
 **No cambia:** orden de Cervantes, fidelidad textual y grado de certeza, respuesta seleccionada, offline, TS-001, seguridad, privacidad, seguimiento de progreso y derechos de terceros. **No autoriza distribución, comercialización ni FASE 2.**
 
@@ -49,7 +49,7 @@ Una escena de novela no se debe falsificar para convertirla en imagen. Cada prei
 | Texto/política anterior | Sustituido por |
 |---|---|
 | Trabajos divididos entre R01–R16 o equipos contenidos/desarrollo/coordinación con múltiples visados | Dirección integral + desarrollador; artista solo para imágenes puntuales |
-| Preguntas terminadas sin imagen específica o con la misma escena genérica | Imagen propia y adecuada **por pregunta** como requisito de aceptación visual |
+| Rondas sin preimagen propia o con imagen genérica repetida | Preimagen específica por ronda como requisito de aceptación visual |
 | Uso indistinto de acuarela y recreación sin prioridad artística | Escenas prioritarias; acuarelas secundarias en gameplay y prioritarias en galería |
 | Segundo tramo de los molinos neutro como montaje final aceptado por defecto | Neutralidad técnica provisional/segura; capítulo final exige ritmo visual y cobertura suficiente |
 | Encargos de auditoría y dictámenes sucesivos como principal medida de progreso | Entregas funcionales en GitHub, prueba reproducible y cobertura audiovisual contrastada |

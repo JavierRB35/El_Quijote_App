@@ -116,11 +116,11 @@ test('D1: reordenación real de opciones al repetir, sin alterar la respuesta co
   }
 });
 
-test('reanudación validada y progreso antiguo no interpretado como puntos', () => {
+test('reanudación validada y documento ajeno rechazado', () => {
   const p = nuevaPartida();
   const raw = JSON.stringify({ version: VERSION_PARTIDA, episodio: EPISODIO_AVENTURA, partida: p });
   assert.deepEqual(restaurarPartida(raw, R), p);
-  assert.equal(restaurarPartida('{"DQ.Q.000101":{"acierto":true}}', R), null);
+  assert.equal(restaurarPartida('{"documento_ajeno":{"valor":true}}', R), null);
   assert.equal(restaurarPartida('basura', R), null);
   assert.equal(restaurarPartida(JSON.stringify({
     version: 2, episodio: EPISODIO_AVENTURA, partida: { ...p, puntos: 999 },

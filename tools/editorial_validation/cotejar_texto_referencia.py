@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Cotejo de integridad textual: compara citas y pasajes del paquete editorial
+Cotejo de integridad textual: compara pasajes del paquete editorial
 contra un texto COMPLETO de referencia (dominio público, p. ej. PG #2000).
 Método: normalización (sin acentos diacríticos del s. XVII-XVIII, minúsculas,
 sin puntuación) + búsqueda de subcadena. Detecta abreviaciones/variantes.
@@ -59,15 +59,6 @@ def main():
         palabras, idx = prefijo_comun_mas_largo(n, ref)
         total = len(n.split(" "))
         resultados.append(("pasaje", p["id"], p["chapter_id"], palabras, total, idx >= 0))
-    # --- evidencias de preguntas ---
-    for rel in pkg["files"]["questions"]:
-        q = json.load(open(os.path.join(base, rel.replace("/", os.sep)), encoding="utf-8"))
-        for e in q.get("evidence", []):
-            n = normalizar(e["quote"])
-            palabras, idx = prefijo_comun_mas_largo(n, ref)
-            total = len(n.split(" "))
-            resultados.append(("evidencia", q["id"], q["episode_id"], palabras, total, idx >= 0))
-
     ok = sum(1 for r in resultados if r[5])
     informe = {"fuente": os.path.basename(ruta_ref), "caracteres_ref": len(ref),
                "prueba_abreviacion": {k: ("presente" if v else "AUSENTE") for k, v in abrev.items()},

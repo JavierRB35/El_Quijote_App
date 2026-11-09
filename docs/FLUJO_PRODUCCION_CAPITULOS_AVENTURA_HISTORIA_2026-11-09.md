@@ -1,0 +1,106 @@
+# Flujo oficial de producción de capítulos — Aventura → Historia
+
+**Decisión del propietario:** 2026-11-09 · **Estado:** VIGENTE para todos los capítulos que se preparen a partir de esta fecha.
+
+**Autoridad:** [AGENTS.md](../AGENTS.md), [DC-30 y DC-27](VISION_Y_DECISIONES.md), [reglas de Aventura narrativa](REGLAS_MODO_AVENTURA_V2_2026-11-08.md), [especificación editorial](ESPECIFICACION_EDITORIAL.md), [directriz ágil DC-29](DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md) y [norma visual DC-28](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md). Las instrucciones posteriores del propietario prevalecen sobre procedimientos anteriores incompatibles.
+
+## 1. Flujo obligatorio capítulo a capítulo
+
+**Aventura (propuesta) → revisión del propietario e inventario visual → prompts solo de imágenes ausentes → Historia (guion y textos) → revisión de reutilización visual y carencias de Historia → validación e integración.**
+
+- **Se empieza por Primera Parte, capítulo I.** No abrir por iniciativa propia el capítulo siguiente antes de completar el tramo de revisión acordado del actual.
+- **Primero se entrega Aventura, no el texto de Historia.** Tras revisar las rondas y las imágenes con el propietario, se prepara Historia para ese mismo capítulo, aplicando los recursos ya identificados y proponiendo carencias adicionales si las hubiera.
+- Una ronda redactada no es una ronda aprobada ni publicada. Una imagen catalogada no es necesariamente apta. Una imagen candidata no se activa por incorporarse al repositorio.
+- Este procedimiento autoriza la **preparación editorial secuencial**; no amplía la Fase 1 ni autoriza automáticamente publicar los 126 capítulos, activar contenidos no aprobados o iniciar Fase 2.
+
+## 2. Aventura: anticipar acciones, nunca examinar conocimientos
+
+Cada unidad jugable es una **ronda de anticipación narrativa**, conforme a la mecánica ya integrada:
+
+1. **Antes del hecho:** presentar una situación verdadera del texto, el personaje que va a actuar y una preimagen que no revele la respuesta.
+2. Preguntar de forma natural **qué hará a continuación**, con **tres opciones habitualmente** (cuatro solo con justificación), todas plausibles en la situación, pero con **una sola acción canónica inequívoca**.
+3. El jugador elige: resultado de puntos (+1/−1), sin alterar jamás la historia. La partida empieza con 3 puntos, tope 5 y checkpoints según reglas vigentes.
+4. Solo al solicitar **«Descubrir qué sucede»**, revelar el acontecimiento real y, cuando corresponda, la imagen de consecuencia. No anticipar desenlaces de capítulos posteriores.
+
+**No se admiten** exámenes de memoria («¿Quién era...?», «¿Cómo se llamaba...?»), verdadero/falso retrospectivo, ordenación de hechos ya conocidos, preguntas de relleno ni recuperación del antiguo banco `DQ.Q.*`. Si un capítulo carece de suficientes actos previsibles, **se proponen menos rondas**: no se inventan decisiones para llegar a una cuota.
+
+### 2.1 Formato de entrega inicial al propietario
+
+Entregar **solo las rondas candidatas de Aventura**, con una ficha por ronda:
+
+| Campo | Contenido obligatorio |
+|---|---|
+| Identificador | ID provisional de ronda, capítulo y episodio o tramo |
+| Situación previa | Qué se sabe exactamente **antes** del acto; personaje, contexto y pista legítima |
+| Anticipación | Pregunta sobre la acción inmediata futura, no sobre cultura literaria |
+| Alternativas | Tres opciones verosímiles; una correcta e inequívoca |
+| Respuesta y consecuencia | Acción realmente narrada y consecuencia canónica (oculta al jugador hasta la revelación) |
+| Fuente | Parte, capítulo, pasaje o ancla verificable, edición/referencia y fragmento de evidencia limitado |
+| Antiespoiler | Elementos prohibidos en la preimagen y momento en el que puede mostrarse la consecuencia |
+| Preimagen requerida | Descripción del **instante anterior**, con uso principal en Aventura |
+| Imagen de consecuencia | Descripción del **instante posterior**; indicar si resulta necesaria y si ya hay candidata |
+| Reutilización | Uso potencial del mismo plano en Historia y en qué beat, sin revelar un hecho prematuramente |
+| Estado | `CANDIDATA`, `REVISIÓN PROPIETARIO`, `APROBADA EDITORIALMENTE` o `PENDIENTE`; sin aprobar por defecto |
+
+La entrega editorial **no contiene prompts de nuevas imágenes** mientras el propietario no haya indicado qué planos faltan.
+
+## 3. Comprobación de imágenes y autoridad del propietario
+
+Después de ver las rondas, **el propietario revisa personalmente qué imágenes existen**, si son apropiadas para ese momento y cuáles faltan. Dirección puede facilitar una lista de necesidades y candidatos con referencias de catálogo, pero **no sustituye la validación del propietario** ni encarga arte automáticamente.
+
+Orden de búsqueda y aprovechamiento: recursos ya registrados en `assets/scenes/` y `assets/closeups/` → acuarelas como recurso secundario cuando proceda y tengan derechos claros → **nuevo encargo solo si hay una carencia concreta confirmada por el propietario**.
+
+Distinguir por unidad: `EXISTE_Y_APROBADA`, `EXISTE_PENDIENTE_REVISION`, `NO_APTA` y `FALTA_CONFIRMADA`. Relacionar cada candidato con su ruta/identificador, fase `pre` o `consecuencia`, escena, restricciones de spoilers, derechos y destino previsto.
+
+**Reutilización intermodal:** preferir una misma imagen para Aventura e Historia cuando represente el mismo hecho y aparezca en el mismo punto cronológico; no duplicar archivos o encargos por modo. La preimagen de **cada ronda distinta** debe seguir siendo específica y no reveladora conforme a DC-24; reutilizar entre **modos** no autoriza usar una escena genérica repetida para diferentes rondas ni mostrar una consecuencia antes de tiempo. Historia puede requerir planos adicionales para sostener una narración visualmente rica.
+
+## 4. Prompts artísticos: únicamente para las imágenes confirmadas como faltantes
+
+**Solo después de que el propietario confirme las carencias**, Dirección entrega **un prompt independiente por imagen necesaria**, listo para enviar al diseñador. El propietario solicita las imágenes y **las valida personalmente**; el diseñador no debe generar variantes no pedidas, reemplazar originales ni activar medios por iniciativa propia.
+
+Cada prompt incluirá:
+- **ID provisional y uso**: capítulo, escena/beat, ronda, fase previa o consecuencia, Aventura, Historia o ambos.
+- **Fundamento textual**: parte, capítulo, pasaje y hecho concreto narrado por Cervantes; citas breves verificadas cuando sean pertinentes.
+- **Descripción exacta de la escena**: quiénes están presentes **según el texto**, qué hacen, relaciones espaciales o temporales que sí estén descritas, objetos y ambiente sustentados; momento antes/después del hecho.
+- **Composición funcional**: formato, plano, sujetos íntegros, proporciones, zona segura para texto si hace falta, continuidad visual de personajes y legibilidad en el diseño DC-28. Estas instrucciones gráficas **no pueden modificar la narración**.
+- **Prohibiciones**: desenlaces adelantados, personajes o acciones inexistentes, detalles de vestuario/armas/época contradictorios, anacronismos, elementos de interfaz o rótulos incrustados, cabezas/gestos/objetos narrativos recortados.
+- **Trazabilidad y aceptación**: recurso existente de referencia, capítulo/pasaje, función, alt y criterios observables que el propietario comprobará.
+
+**Fidelidad total al libro original:** no inventar acciones, diálogos, causalidad, simultaneidad, personajes ni objetos como si Cervantes los hubiera descrito. Cuando el texto no precise un rasgo físico, vestuario, postura, hora o decorado, **indicar que es una decisión visual no especificada por la fuente** y proponer una solución sobria y compatible con el periodo; nunca presentarla como un dato textual. Si la escena no puede concretarse sin inventarla, elevar el problema al propietario en vez de generar un prompt engañoso.
+
+No confundir las paráfrasis editoriales del juego con citas literales de la novela.
+
+## 5. Historia: textos y escenas después de Aventura
+
+Tras la revisión inicial de Aventura y del inventario, se entrega el **Modo Historia** del mismo capítulo:
+
+- Desglose secuencial de escenas y beats; desarrollo condensado, claro, atractivo y **fiel a Cervantes**.
+- Texto del narrador y parlamentos con procedencia localizable; distinguir cita literal de adaptación narrativa.
+- Referencia del texto original para cada intervención o unidad narrativa relevante.
+- Orden cronológico correcto, ritmo dramático, humor y desarrollo de personajes sin revelar escenas futuras.
+- Imagen prevista para cada intervención/beat, identificando **cuáles ya están disponibles**, cuáles pueden reutilizarse desde Aventura y cuáles siguen faltando.
+- **TS-001:** todos los textos de voces de narrador/personajes deben permanecer visibles completos en pantalla incluso sin audio; ninguna elipsis en la interfaz por la existencia de sonido.
+
+Si Historia exige imágenes adicionales, **se repite el control del propietario**: entregar listado de carencias, esperar su confirmación y redactar **solo** los prompts de las faltantes. La revisión final debe maximizar reutilización legítima Aventura/Historia sin degradar la puesta en escena.
+
+## 6. Integración GitHub de imágenes aprobadas
+
+**Excepción operativa permanente aprobada por el propietario:** una imagen nueva que **ya haya sido expresamente validada por él** puede incorporarse **directamente a `main`**, sin rama ni Pull Request creadas exclusivamente por el recurso artístico, de acuerdo con DC-29.
+
+El diseñador/integrador deberá:
+1. Confirmar autorización del propietario **para la imagen concreta** y comprobar HEAD remoto de `main`.
+2. Guardar en la carpeta apropiada con nombre estable; **no sobrescribir originales** sin decisión explícita.
+3. Verificar bytes reales, formato, resolución, tamaño y SHA-256; comprobar calidad de archivo, ausencia de duplicados y derechos/licencias de almacenamiento en el **repositorio público** y usos previstos.
+4. Actualizar manifiesto y ficha de medio/derivada existente según el contrato, con ID estable, `logical_uri` si se ha autorizado su activación, fase narrativa, alt, referencia textual, licencias y estado de revisión correcto; no crear IDs duplicados ni declarar aprobación no concedida.
+5. Comprobar integridad de rutas y referencias, spoilers, visualización y los controles pertinentes; **hacer commit identificable en `main`** y comunicar SHA, recurso y pruebas. Sin PR artificial.
+6. **Si la imagen aún no ha sido validada, no integrarla bajo esta excepción.** La aprobación del recurso no implica por sí sola aprobación funcional/UX ni autoriza cambios de código grandes sin revisión.
+
+La edición de código, contratos y sistemas de navegación sigue el criterio de riesgo de DC-29. Los recursos audiovisuales con restricciones de derechos no se subirán, aunque sean útiles narrativamente.
+
+## 7. Estados de trabajo y criterio de cierre
+
+Por capítulo conservar una matriz mínima de **ronda/beat → fuente → preimagen/imagen posterior → medios reutilizados → carencias confirmadas → prompt enviado → aprobación del propietario → commit SHA → QA**.
+
+**Aventura lista editorialmente** solo si las rondas y consecuencias tienen apoyo textual verificable y el propietario revisó las necesidades visuales. **Historia lista editorialmente** solo con guion/TS-001 y cobertura visual revisados. **Capítulo integrado** solo si los archivos y datos autorizados constan en `main`, las pruebas pertinentes han pasado, los medios usados tienen derechos y la aceptación editorial/visual del propietario está registrada. No declarar terminado por tener una lista de escenas o prompts.
+
+**Inicio vigente:** Primera Parte, capítulo I. Entrega inmediata: **rondas de anticipación**, sin adelantar el guion de Historia ni generar imágenes hasta la revisión del propietario.

@@ -1,6 +1,6 @@
 # Modo Aventura v2 — reglas aprobadas y piloto jugable (2026-11-08)
 
-**Estado:** dictamen del propietario; implementación piloto en rama `feature/aventura-v2-anticipacion-checkpoints`, **pendiente de revisión e integración**. GitHub remoto `JavierRB35/El_Quijote_App` es única fuente de verdad. SHA de `main` al iniciar: `8e3ec9694298b13c204aaffd1b70febc38e36fb3`.
+**Estado vigente (2026-11-09):** Aventura narrativa ya integrada en `main` mediante PR #87/#95; el cuestionario anterior quedó retirado. La aceptación visual final sigue siendo independiente de la compilación y pendiente de comprobación. Producción de nuevos capítulos conforme a [DC-30](FLUJO_PRODUCCION_CAPITULOS_AVENTURA_HISTORIA_2026-11-09.md). GitHub remoto `JavierRB35/El_Quijote_App` es única fuente de verdad. SHA de `main` al iniciar: `8e3ec9694298b13c204aaffd1b70febc38e36fb3`.
 
 ## 1. Qué es ahora Aventura
 

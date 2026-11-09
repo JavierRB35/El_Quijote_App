@@ -7,3 +7,9 @@ La unidad editorial de juego es la **ronda de anticipación narrativa**: situaci
 No se preparan preguntas de examen, verdadero/falso retrospectivo, ordenación de hechos conocidos ni banco cultural. Los hechos de historia externa y la interpretación literaria se documentan en Lector, Museo y Modo Histórico sin evaluación. Toda imagen futura deberá solicitarse por el propietario tras contrastar inventario y recibir un prompt fiel al original.
 
 La aplicación conserva derechos, procedencia, incertidumbre y texto original; no convertir adaptación editorial en cita literal. La expansión más allá de I,8 permanece sujeta a aceptación.
+
+## Producción oficial por capítulo (DC-30, 2026-11-09)
+
+La preparación comienza por **Parte I, capítulo I** y aplica el [flujo vinculante Aventura → revisión visual del propietario → prompts de carencias → Historia → reutilización y revisión final](FLUJO_PRODUCCION_CAPITULOS_AVENTURA_HISTORIA_2026-11-09.md). Cada ronda se entrega con situación previa, tres opciones usuales, acción canónica, consecuencia y evidencia textual exacta; solo después de la revisión de Aventura se escriben los textos y parlamentos de Historia con TS-001. El propietario decide qué imágenes ya existen y solicita/valida personalmente las faltantes; **no hay encargos artísticos automáticos**. Se reutilizan imágenes entre los modos cuando no haya spoilers ni conflicto con la preimagen específica de cada ronda.
+
+Las imágenes **expresamente aprobadas** pueden ser incorporadas por el diseñador **directamente a `main` sin una rama artística**, con revisión de formato, hashes, derechos, manifiestos, rutas, referencias y SHA de commit. Ningún recurso pendiente de validación queda aprobado ni activado por defecto. La adaptación editorial no inventará hechos ni atribuirá al original detalles que este no describe.

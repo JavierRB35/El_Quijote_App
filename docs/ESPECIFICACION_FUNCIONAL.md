@@ -5,7 +5,7 @@
 **Fuente normativa:** encargo §3, §5.4, §7.2; decisiones cerradas DC-01…DC-17 (`VISION_Y_DECISIONES.md`); contrato editorial-técnico v0.2.0 (firmado por ambos lados).
 **Última actualización:** 2026-11-06 (ampliación modos Historia e Histórico; resto de la especificación conserva su estado previo).
 
-Convenciones: los datos editoriales provienen SIEMPRE del catálogo versionado (contrato), nunca de componentes con textos incrustados (encargo §5.3, §9 criterio de excelencia). «Piloto I.8» = guion de anticipación de `app/src/aventura/guionNarrativo.ts` y paquete editorial de pasajes, personajes, imágenes y fuentes.
+Convenciones: los datos editoriales provienen SIEMPRE del catálogo versionado (contrato), nunca de componentes con textos incrustados. **DC-34 (2026-11-09):** las rondas del piloto I.8 se revisan en `content/aventura/parte_1/capitulo_08.json` y se cargan mediante `app/src/aventura/guionNarrativo.ts`; no hay preguntas ni soluciones hardcodeadas en TSX. Validación en CI y separación lógica DC-16.
 
 ---
 

@@ -2,6 +2,8 @@
 
 **Documento de encargo íntegro y compartido. Versión de especificación para auditoría y coordinación.**
 
+> **Actualización vinculante 2026-11-09 — DC-31 (edición de referencia):** el propietario fija como **fuente textual fiable para todo trabajo nuevo por capítulos** el texto íntegro que ya figura en GitHub: `content/textos/gutenberg_2000/El_Quijote.txt` (`DQ.ED.0003` / `DQ.SRC.0005`). Rondas de Aventura, hechos/consecuencias, guiones de Historia y prompts artísticos deben fundamentarse y localizarse en ese archivo. **No volver a elegir otra edición como base**; conservar el EPUB Tusell como texto de lector (`DQ.ED.0001`) y la edición Rico como instrumento auxiliar de cotejo (`DQ.ED.0002`). Documentar diferencias; no mezclar literales de versiones, modernizar citas por cuenta propia ni inferir permisos de redistribución. Aplica también a los prompts que se entreguen al desarrollador y al artista. Ver `docs/RESOLUCION_PEND01_EDICION_REFERENCIA.md` y DC-31.
+
 > **Actualización vinculante 2026-11-09 — DC-29:** el flujo de desarrollo se rige por `AGENTS.md` y `docs/DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md`. Se deroga cualquier instrucción histórica de rama/PR obligatoria por fase; `main` es el destino y se usa directamente para cambios menores/activos de bajo riesgo. Ramas y pruebas según riesgo. Siguen vigentes la seguridad, los derechos, las decisiones de producto y la autorización limitada a Fase 1.
 
 > **Actualización vinculante posterior, 2026-11-08 — DC-28:** para cuadros de texto sobre imagen, sin scroll; si el texto no cabe, primero ensanchar en zona segura sin ocultar lo relevante y después reducir fuente solo si continúa legible; fondo semitransparente obligatorio y composición apta «tipo póster». **Sustituye cualquier instrucción histórica contradictoria de este encargo**. Registro vigente y checklist en `docs/VISION_Y_DECISIONES.md` y `docs/DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md`. La implementación de esta norma está pendiente de QA visual.
@@ -209,7 +211,9 @@ Las especialidades enumeradas a continuación expresan **controles de calidad as
 
 ### 4.2 Corpus documental obligatorio
 
-Primero seleccionar una **edición española de referencia jurídicamente utilizable** y registrar:
+**La fuente textual de producción ya está fijada por el propietario (DC-31):** `content/textos/gutenberg_2000/El_Quijote.txt` (`DQ.ED.0003` / `DQ.SRC.0005`), en `main` de GitHub. Comprobar contra ese texto la secuencia canónica, cada cita y cada detalle descriptivo usado para Aventura, Historia o instrucciones al artista, con localizador reproducible. El EPUB Tusell (lector) y la edición Rico (cotejo de variantes) tienen funciones diferentes, expresamente documentadas; ninguna se sustituye ni mezcla sin trazabilidad.
+
+Conservar y registrar:
 
 - Autor, título de ambas partes, editor, edición, año, fuente/URL, versión digital, derechos y fecha de consulta.
 - Diferencias textuales, paginación variable, normalización ortográfica y advertencia sobre modernizaciones.
@@ -593,6 +597,8 @@ El QA debe inventar desde cero perfiles de jugadores de prueba: adolescente sin 
 Desde **DC-23–DC-27 (2026-11-08)** solo hay **Dirección integral (ChatGPT)** y **desarrollador único** como entidades operativas permanentes; el **director artístico** es tercero puntual para imágenes, a través del propietario. Las antiguas descripciones profesionales de §§4–5 son catálogo de competencias, no responsables externos ni agentes a convocar.
 
 **Cada prompt al desarrollador debe decir explícitamente:**
+
+> **Base de fidelidad literaria:** la fuente textual principal ya se encuentra en GitHub, `content/textos/gutenberg_2000/El_Quijote.txt` (`DQ.ED.0003` / `DQ.SRC.0005`). El guion, la acción correcta, la consecuencia y los prompts visuales se contrastan con este archivo y llevan referencia de parte, capítulo y pasaje/ancla. No usar otra edición para sustituirlo, ni mezclar citas entre versiones; Rico es cotejo complementario y Tusell conserva su función de lector.
 
 > La **única fuente de verdad de donde procede la información y a la que deberá volver el desarrollo** es el repositorio GitHub `https://github.com/JavierRB35/El_Quijote_App`, `main` remoto. Verifica el SHA, sincroniza, implementa en rama, prueba, publica la PR en este mismo repositorio y reporta el SHA final.
 

@@ -26,6 +26,8 @@ Documento rector de producto: **`docs/ENCARGO_MAESTRO.md`**. Consultar las secci
 
 Trabajo y documentación en español. El castellano de las citas de Cervantes nunca se mezcla con traducciones ni parafraseos (encargo §2.6).
 
+**Fuente textual vinculante para nuevas rondas, consecuencias, guiones de Historia y prompts de imágenes (DC-31, 2026-11-09):** utilizar el texto íntegro almacenado en este repositorio, `content/textos/gutenberg_2000/El_Quijote.txt` (`DQ.ED.0003` / `DQ.SRC.0005`), verificando capítulo, localizador y literalidad contra el archivo real. No buscar ni elegir otra edición como fuente principal; el EPUB Tusell (`DQ.ED.0001`) se conserva para el lector y la edición Rico (`DQ.ED.0002`) solo como cotejo auxiliar de variantes. Separar claramente citas literales de paráfrasis; no mezclar palabras de ediciones distintas. Consultar `docs/RESOLUCION_PEND01_EDICION_REFERENCIA.md` y `docs/FLUJO_PRODUCCION_CAPITULOS_AVENTURA_HISTORIA_2026-11-09.md`.
+
 
 ## Hoja de ruta narrativa común (Modo Historia)
 

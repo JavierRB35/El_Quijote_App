@@ -6,6 +6,8 @@ La unidad editorial de juego es la **ronda de anticipación narrativa**: situaci
 
 No se preparan preguntas de examen, verdadero/falso retrospectivo, ordenación de hechos conocidos ni banco cultural. Los hechos de historia externa y la interpretación literaria se documentan en Lector, Museo y Modo Histórico sin evaluación. Toda imagen futura deberá solicitarse por el propietario tras contrastar inventario y recibir un prompt fiel al original.
 
+**Edición textual obligatoria (DC-31, 2026-11-09):** la referencia fiable para el desarrollo capítulo a capítulo ya se encuentra en GitHub: `content/textos/gutenberg_2000/El_Quijote.txt` (`DQ.ED.0003` / `DQ.SRC.0005`). Todas las acciones, consecuencias, citas y descripciones que fundamenten Aventura, Historia o prompts de imágenes se cotejan directamente con ese archivo y su parte/capítulo/ancla u offset; no se reemplaza por memoria, resúmenes ni otra edición de Internet. `DQ.ED.0001` (EPUB Tusell) permanece como lector y `DQ.ED.0002` (Rico) como cotejo filológico auxiliar. Registrar variantes sin recomponer citas a partir de diferentes ediciones. Esta decisión no elimina comprobaciones de derechos ni altera el corpus existente.
+
 La aplicación conserva derechos, procedencia, incertidumbre y texto original; no convertir adaptación editorial en cita literal. La expansión más allá de I,8 permanece sujeta a aceptación.
 
 ## Producción oficial por capítulo (DC-30, 2026-11-09)

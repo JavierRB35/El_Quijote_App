@@ -4,6 +4,12 @@
 
 **Autoridad:** [AGENTS.md](../AGENTS.md), [DC-30 y DC-27](VISION_Y_DECISIONES.md), [reglas de Aventura narrativa](REGLAS_MODO_AVENTURA_V2_2026-11-08.md), [especificación editorial](ESPECIFICACION_EDITORIAL.md), [directriz ágil DC-29](DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md) y [norma visual DC-28](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md). Las instrucciones posteriores del propietario prevalecen sobre procedimientos anteriores incompatibles.
 
+## 0. Texto original de referencia (DC-31)
+
+La **edición fiable para este flujo es la que ya está almacenada y registrada en el repositorio**, no una edición que el agente deba volver a seleccionar. Para Aventura, consecuencias, Historia y los futuros prompts de imágenes, utilizar `content/textos/gutenberg_2000/El_Quijote.txt` (Project Gutenberg #2000; `DQ.ED.0003` / `DQ.SRC.0005`), comprobar directamente las palabras y el orden de los hechos, y documentar parte, capítulo y ancla/offset. Conservar el original intacto.
+
+El EPUB ilustrado Tusell (`DQ.ED.0001`) sigue cumpliendo la función de lector; la edición académica Rico (`DQ.ED.0002`) sirve solo para contraste editorial de variantes. No escoger una edición externa para sustituir el corpus local, no atribuir a Cervantes diálogos o detalles ausentes y no mezclar citas de ediciones distintas. Distinguir expresamente el texto literal de cualquier paráfrasis de jugabilidad. Aplicar `docs/RESOLUCION_PEND01_EDICION_REFERENCIA.md` y la validación de derechos prevista.
+
 ## 1. Flujo obligatorio capítulo a capítulo
 
 **Aventura (propuesta) → revisión del propietario e inventario visual → prompts solo de imágenes ausentes → Historia (guion y textos) → revisión de reutilización visual y carencias de Historia → validación e integración.**

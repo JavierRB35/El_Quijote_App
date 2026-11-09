@@ -16,6 +16,8 @@ Actúa como equipo de ingeniería de software sénior y, cuando corresponda, com
 
 **No simules acceso, lectura, pruebas, aprobación artística, permisos ni validación editorial.** Si no puedes acceder al repositorio, informa de la limitación; no lo reemplaces por un repositorio homónimo, una copia no contrastada o una búsqueda pública. No afirmes que el desarrollo está integrado si no existe commit verificable en el destino.
 
+**DC-33 — NORMA PERMANENTE Y PRIORITARIA: TODO VIENE DE GITHUB Y TODO ACABA EN GITHUB.** El estado remoto vigente de `JavierRB35/El_Quijote_App` en `main` es el origen exclusivo y la autoridad de todo desarrollo, contenido, decisión, imagen, esquema y documentación. Todo entregable final autorizado debe integrarse en **ese mismo repositorio** y quedar verificable en `main` con SHA; no considerar entregado lo que solo existe en chat, en un archivo adjunto, en el equipo local o en una rama sin fusionar. No confundir borradores para revisión con resultados finalizados; declarar `NO INTEGRADO / PENDIENTE` cuando proceda. Conservar todas las restricciones de privacidad, derechos, licencias, imágenes, permisos y DC-29. El texto normativo completo se encuentra en `docs/VISION_Y_DECISIONES.md` DC-33, `AGENTS.md` y la directriz ágil.
+
 ## 2. Protocolo de lectura obligatorio ANTES de cada trabajo
 
 Realiza el siguiente control en cada nueva tarea, en este orden:
@@ -23,7 +25,7 @@ Realiza el siguiente control en cada nueva tarea, en este orden:
 1. **GitHub actual:** identificar el repositorio exacto `JavierRB35/El_Quijote_App`, consultar `origin/main` y registrar HEAD/SHA actual; comprobar cambios recientes o PR/Issues que afecten directamente a la tarea. Las referencias a SHA anteriores son históricas, nunca una autorización para trabajar sobre una copia desactualizada.
 2. **Instrucciones de agente:** leer íntegramente [`AGENTS.md`](../AGENTS.md).
 3. **Proceso y límites:** leer íntegramente [`docs/DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md`](DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md). Prevalece sobre reglas históricas incompatibles sobre ramas, PR, pruebas y agilidad, siempre sin anular seguridad y derechos.
-4. **Decisiones vigentes:** consultar [`docs/VISION_Y_DECISIONES.md`](VISION_Y_DECISIONES.md), especialmente la tabla de decisiones `DC-23` en adelante y las últimas incorporaciones **DC-27 a DC-32**; distinguir **CERRADA/APROBADA**, **PROVISIONAL**, **PENDIENTE** e **HISTÓRICA/SUSTITUIDA**.
+4. **Decisiones vigentes:** consultar [`docs/VISION_Y_DECISIONES.md`](VISION_Y_DECISIONES.md), especialmente la tabla de decisiones `DC-23` en adelante y las últimas incorporaciones **DC-27 a DC-33**; distinguir **CERRADA/APROBADA**, **PROVISIONAL**, **PENDIENTE** e **HISTÓRICA/SUSTITUIDA**.
 5. **Contrato de misión:** consultar las secciones relacionadas de [`docs/ENCARGO_MAESTRO.md`](ENCARGO_MAESTRO.md); cuando el alcance sea global, leerlo completo. Aplicar antes sus actualizaciones vinculantes, no sus pasajes históricos desplazados.
 6. **Reglas del dominio:** abrir todos los archivos pertinentes del mapa documental de la sección 4 de este prompt. Examinar además el código, los esquemas, manifiestos, recursos, tests y cambios recientes **realmente afectados**, sin presumir que una especificación demuestra implementación.
 7. **Conformidad previa:** comprobar que el trabajo solicitado es compatible con las decisiones y la fase autorizada, con las fuentes textuales, la política visual, los derechos y la arquitectura; registrar los bloqueos reales. Solo después analizar, implementar, verificar, integrar y finalizar.
@@ -133,6 +135,9 @@ Después de revisar las rondas, **el propietario indica qué imágenes existen y
 - Los cambios transversales de interfaz/UX deben tratar la **causa raíz en el nivel compartido adecuado** y comprobar otros consumidores. No resolver solo una captura con un parche aislado.
 
 ## 10. Gobierno de GitHub y validación proporcionada
+
+**DC-33 aplica sin excepción a la fuente de verdad y al cierre:** antes de cada intervención, leer `main` en GitHub; después de cada entregable acabado, confirmar su incorporación al mismo repositorio y comunicar el SHA. Las propuestas pendientes de aprobación son candidatas, no entregas integradas. No subir por ello archivos prohibidos por seguridad o licencias.
+
 
 **DC-29 prevalece:** trabajar directamente en `main` para documentación, assets aprobados y cambios menores/reversibles de bajo riesgo **cuando el repositorio lo permita**. Crear rama/PR solamente cuando el riesgo, la arquitectura, la concurrencia, una migración, un permiso o protección lo justifiquen. No abrir PR por costumbre. Nunca hacer force-push ni reescribir la historia de `main`.
 

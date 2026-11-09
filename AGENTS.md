@@ -14,6 +14,8 @@ Documento rector de producto: **`docs/ENCARGO_MAESTRO.md`**. Consultar las secci
 
 ## Git
 
+**DC-33 — PRINCIPIO INVARIABLE: TODO SALE DE GITHUB Y TODO TERMINA EN GITHUB.** Para **cada encargo** leer el estado vigente de `JavierRB35/El_Quijote_App` en `origin/main`, usar exclusivamente las instrucciones, decisiones, código, contenidos y activos verificados allí como autoridad del proyecto. Las copias locales, adjuntos, chats, memorias o borradores no pueden sustituirlo. El trabajo terminado vuelve al **mismo repositorio** integrado y comprobado en `main`, con SHA final. Si está solo en local, pendiente de aprobación, en una rama no fusionada, no se pudo subir o no se pudo verificar, **NO está terminado**: indicar estado real. Respetar DC-29 y las exclusiones obligatorias de secretos, datos privados, licencias y medios no permitidos; los ficheros excluidos solo tendrán referencias/manifiestos permitidos, nunca se subirán por este mandato.
+
 - **ÚNICA FUENTE DE VERDAD Y DESTINO:** `origin/main` de GitHub `JavierRB35/El_Quijote_App`. Reportar SHA remoto inicial/final y la integración realizada. La estrategia de ramas y validación se rige por **DC-29** y `docs/DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md`, no por la regla histórica de PR para toda la Fase 1.
 - **Por defecto, commits directos a `main` para documentación, imágenes/activos permitidos y cambios menores de código de bajo riesgo.** Rama + PR solo cuando complejidad, riesgo, concurrencia o protección lo justifiquen. Mantener commits pequeños y verificaciones proporcionadas. Ver `docs/GOBERNANZA_GIT.md`.
 - Nunca forzar pushes, nunca reescribir historial de `main`.

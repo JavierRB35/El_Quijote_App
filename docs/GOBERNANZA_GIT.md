@@ -2,6 +2,8 @@
 
 **Decisión del propietario (2026-11-05):** GitHub (`JavierRB35/El_Quijote_App`, privado, rama `main`) es el **repositorio principal y única fuente de verdad** del proyecto, y debe mantenerse **siempre actualizado**. Registrada como `D-2026-11-05-01` en `VISION_Y_DECISIONES.md`.
 
+> **Actualización vinculante 2026-11-09 (DC-33):** GitHub `JavierRB35/El_Quijote_App`, `origin/main`, es **único origen autorizado y único destino final** del proyecto. Todo trabajo empieza con el estado remoto vigente y termina, si se declara finalizado, con integración y SHA verificable en ese mismo repositorio. Las ramas de trabajo, chats, memorias, archivos locales y adjuntos son medios auxiliares, no fuentes de verdad ni entregas definitivas. Los recursos que por secretos, datos privados o licencias no deban publicarse en Git se mantienen fuera y solo se referencian mediante metadatos permitidos; esta regla no levanta sus prohibiciones.
+
 > **Actualización 2026-11-09 (DC-29):** la directriz ágil `docs/DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md` prevalece sobre la antigua regla de PR obligatoria en Fase 1. Ramas y pruebas proporcionadas al riesgo.
 
 ## 1. Principio rector

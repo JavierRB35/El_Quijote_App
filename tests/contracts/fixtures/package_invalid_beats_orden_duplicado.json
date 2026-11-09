@@ -4,15 +4,35 @@
   "catalog_version": "0.1.0",
   "created": "2026-11-06",
   "files": {
-    "editions": ["valid/edition.json"],
-    "chapters": ["valid/chapter.json"],
-    "passages": ["valid/passage.json"],
-    "episodes": ["valid/episode.json"],
-    "scenes": ["valid/scene.json"],
-    "questions": ["valid/question_single.json"],
-    "beats": ["valid/beat_cita.json", "negative_beat_orden_duplicado.json"],
-    "media_assets": ["valid/media_asset_recreacion.json"],
-    "sources": ["valid/source_edicion.json", "valid/source_estudio.json", "valid/source_produccion.json"],
-    "licenses": ["valid/license.json"]
+    "editions": [
+      "valid/edition.json"
+    ],
+    "chapters": [
+      "valid/chapter.json"
+    ],
+    "passages": [
+      "valid/passage.json"
+    ],
+    "episodes": [
+      "valid/episode.json"
+    ],
+    "scenes": [
+      "valid/scene.json"
+    ],
+    "beats": [
+      "valid/beat_cita.json",
+      "negative_beat_orden_duplicado.json"
+    ],
+    "media_assets": [
+      "valid/media_asset_recreacion.json"
+    ],
+    "sources": [
+      "valid/source_edicion.json",
+      "valid/source_estudio.json",
+      "valid/source_produccion.json"
+    ],
+    "licenses": [
+      "valid/license.json"
+    ]
   }
 }

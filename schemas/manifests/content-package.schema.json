@@ -37,7 +37,6 @@
         "passages",
         "episodes",
         "scenes",
-        "questions",
         "media_assets",
         "sources",
         "licenses"
@@ -68,12 +67,6 @@
           }
         },
         "scenes": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "questions": {
           "type": "array",
           "items": {
             "type": "string"

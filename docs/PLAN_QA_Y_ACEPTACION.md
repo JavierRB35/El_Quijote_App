@@ -78,3 +78,17 @@ De la matriz completa en `docs/COMPONENTES_NARRATIVOS_UX.md` §4: **automáticas
 - Números de requisitos mínimos (RAM/GPU) sin medición previa.
 - Seguridad de proveedores de IA externos (depende del proveedor elegido por el usuario; solo se garantiza el manejo local de la clave).
 - Distribución pública/comercial (proyecto personal, DC-11).
+
+## 8. Gate de aceptación visual — DC-28 (2026-11-08)
+
+La [checklist canónica de composición](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md#5-checklist-mínima-de-validación-visual-obligatoria) pasa a formar parte del QA de Historia, Aventura y cualquier cuadro de texto **sobre imagen**. Evidencia por escena y estado: captura del viewport real, escala de texto, zona crítica y justificación de `PASS/FAIL/PENDIENTE`.
+
+- [ ] **Sin scroll** vertical/horizontal interno ni truncamiento; texto y controles completos visibles.
+- [ ] **Ensanchamiento horizontal previo** realizado solo en espacio seguro, antes de reducir fuente.
+- [ ] **Fondo semitransparente** y contraste real suficiente en claro/oscuro y sin blur.
+- [ ] **Ningún elemento narrativo relevante tapado**: rostros, acciones, pistas, objetos o hotspots.
+- [ ] **Tipografía legible y accesible**, con preferencias de tamaño normal/grande/muy grande y teclado.
+- [ ] **Calidad conjunta tipo póster**, sin panel dominante, encuadre incoherente ni pérdida del hecho visual principal.
+- [ ] **TS-001 y funcionalidad**: texto íntegro, progreso, controles y estados no regresan.
+
+**Pruebas inicialmente pendientes:** 1920×1080, 1365/1366×768, 1280×800, viewport estrecho; Windows 125 % y 150 %; Historia breve/larga, MCQ, multiopción, ordering, matching, hotspot, feedback, Descubrir abierto. Los tests de contrato o el mero `overflow: hidden` **no** prueban aceptación visual; prohibido cerrar esta lista sin capturas y revisión real.

@@ -232,12 +232,9 @@ p = cargar_actual(os.path.join("passages", "DQ.P1.C08.P0017.json"))
 comprobar("\n" not in p["text_original"],
           "C08.P0017: prosa continua sin saltos literarios debe quedar en un párrafo")
 
-# 7e. globo: todas las citas estructuradas son palabra a palabra iguales al
-# estado plano previo de la PR (solo-estructura) y todos los sha256 son válidos.
-# EXCEPCIONES autorizadas por la subsanación P1 (límites de capítulo, PR
-# independiente): DQ.P1.C21.P0001 pierde la cola de I,20 y el encabezado
-# (posición y contenido corregidos) y la integridad de palabras permanece protegida. La integridad de esas palabras la garantizan el test
-# test_limites_capitulo.py y el cotejo contra el fuente.
+# 7e. integridad de pasajes: la estructura literaria preserva las palabras del
+# estado plano y verifica sus hashes. Se exceptúa la corrección autorizada de
+# DQ.P1.C21.P0001, cotejada por test_limites_capitulo.py.
 PALABRAS_AUTORIZADAS_A_CAMBIAR = {
     os.path.join("passages", "DQ.P1.C21.P0001.json"),
 }

@@ -305,3 +305,32 @@
   animation: none !important;
   transition: none !important;
 }
+
+
+/* DC-28 / PR88 — auditoría transversal real 2026-11-09.
+   El capado a 1.12/1.15 impedía acceder a 'muy_grande' (1.32).
+   Se ensancha el raíl sin invadir la imagen y se permite la escala
+   íntegra de preferencias. El contenido largo se seguirá sometiendo
+   a QA para demostrar que las opciones no salen del viewport. */
+.aventura-n2 .an-panel h1 {
+  font-size: calc(clamp(1.3rem, 1.6vw, 1.9rem) * var(--escala-texto));
+}
+.aventura-n2 .an-contexto,
+.aventura-n2 .an-consecuencia,
+.aventura-n2 .an-explicacion {
+  font-size: calc(clamp(1rem, .85vw, 1.15rem) * var(--escala-texto));
+}
+.aventura-n2 .an-opcion {
+  font-size: calc(clamp(1rem, .8vw, 1.1rem) * var(--escala-texto));
+}
+.aventura-n2 .an-pretitle,
+.aventura-n2 .an-pregunta span,
+.aventura-n2 .an-pie-panel,
+.aventura-n2 .an-fuente,
+.aventura-n2 .an-texto-omitido {
+  font-size: calc(.82rem * var(--escala-texto));
+}
+@media (min-width: 1051px) {
+  .aventura-n2 .an-obra { right: 34%; }
+  .aventura-n2 .an-panel { width: 32%; }
+}

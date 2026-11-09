@@ -217,9 +217,13 @@ export default function ContenedorCine({
   }, [uriFallo, cerrarNota]);
 
   const hayImagen = plano.uri !== null && plano.uri in cargadas;
+  // 'Contemplar la imagen' elimina la pregunta temporalmente: nunca debe
+  // heredar una vista dedicada vacía del contenido anterior.
+  const vistaDedicadaActiva = vistaDedicada &&
+    (estado === 'pregunta' ? Boolean(pregunta) : Boolean(texto));
 
   return (
-    <main className={`cine cine-${estado} lado-${plano.ladoTexto} ${hayImagen ? '' : 'sin-plano'} ${vistaDedicada ? 'vista-dedicada' : ''}`}>
+    <main className={`cine cine-${estado} lado-${plano.ladoTexto} ${hayImagen ? '' : 'sin-plano'} ${vistaDedicadaActiva ? 'vista-dedicada' : ''}`}>
       <div className="lienzo" aria-hidden="true">
         {Object.entries(cargadas).map(([uri, src]) => (
           <img
@@ -251,7 +255,7 @@ export default function ContenedorCine({
       {hayImagen && plano.alt && <p className="sr-only">{plano.alt}</p>}
 
       {cabecera}
-      {vistaDedicada && (
+      {vistaDedicadaActiva && (
         <p className="estado-vista-dedicada" role="status">
           Vista de lectura independiente: contenido extenso, sin ocultar respuestas ni recortar la imagen.
         </p>

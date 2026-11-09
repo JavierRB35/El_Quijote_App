@@ -3,6 +3,7 @@
 Proyecto: El_Quijote_App (videojuego premium del Quijote, Windows 11 x64, español).
 **LECTURA OBLIGATORIA EN CADA ENCARGO:** primero este `AGENTS.md` y luego **`docs/DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md`**. Esta directriz actualiza y sustituye las reglas históricas incompatibles de ramas/PR y validación. No omitirla ni basarse en instrucciones antiguas.
 Documento rector de producto: **`docs/ENCARGO_MAESTRO.md`**. Consultar las secciones pertinentes y las decisiones más recientes; lectura íntegra cuando el alcance lo requiera. No reiniciar auditorías innecesariamente.
+**Incorporación de nuevos proyectos/equipos:** `docs/PROMPT_INICIO_NUEVO_PROYECTO_DESARROLLO.md` es el prompt/índice de lectura y continuidad para abrir otro proyecto ChatGPT o equipo; no reemplaza normas aprobadas ni permite omitir la consulta de `main` antes de cada solicitud.
 
 ## Al comenzar cada sesión
 

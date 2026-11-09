@@ -2,6 +2,8 @@
 
 **Documento de encargo íntegro y compartido. Versión de especificación para auditoría y coordinación.**
 
+> **Actualización vinculante 2026-11-09 — DC-29:** el flujo de desarrollo se rige por `AGENTS.md` y `docs/DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md`. Se deroga cualquier instrucción histórica de rama/PR obligatoria por fase; `main` es el destino y se usa directamente para cambios menores/activos de bajo riesgo. Ramas y pruebas según riesgo. Siguen vigentes la seguridad, los derechos, las decisiones de producto y la autorización limitada a Fase 1.
+
 > **Actualización vinculante posterior, 2026-11-08 — DC-28:** para cuadros de texto sobre imagen, sin scroll; si el texto no cabe, primero ensanchar en zona segura sin ocultar lo relevante y después reducir fuente solo si continúa legible; fondo semitransparente obligatorio y composición apta «tipo póster». **Sustituye cualquier instrucción histórica contradictoria de este encargo**. Registro vigente y checklist en `docs/VISION_Y_DECISIONES.md` y `docs/DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md`. La implementación de esta norma está pendiente de QA visual.
 
 **Repositorio GitHub verificado:** https://github.com/JavierRB35/El_Quijote_App — **JavierRB35/El_Quijote_App**, privado, rama predeterminada **main**. En la comprobación del 5 de noviembre de 2026 estaba **vacío**, sin estructura ni código previo. Si esta situación cambia, inspeccionar el contenido real y no sobrescribirlo. No confundirlo con otro proyecto del propietario.

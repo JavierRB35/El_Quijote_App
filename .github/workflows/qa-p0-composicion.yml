@@ -1,0 +1,126 @@
+name: "QA P0 - composición visual Chromium"
+on:
+  push:
+    branches:
+      - feature/p0-dc28-composicion-sin-scroll-20261109
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  navegador:
+    name: "QA ${{ matrix.etiqueta }} (build/test/Chromium)"
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - etiqueta: antes-main
+            rama: main
+            tipo: clasica
+          - etiqueta: antes-pr79
+            rama: feature/p0-composicion-aventura
+            tipo: clasica
+          - etiqueta: despues-pr89
+            rama: feature/p0-dc28-composicion-sin-scroll-20261109
+            tipo: clasica
+          - etiqueta: aventura-v2-pr87
+            rama: feature/aventura-v2-anticipacion-checkpoints
+            tipo: v2
+
+    steps:
+      - name: "Checkout del SHA de la variante"
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.rama }}
+          path: producto
+          persist-credentials: false
+      - name: "QA script desde PR89"
+        uses: actions/checkout@v4
+        with:
+          ref: feature/p0-dc28-composicion-sin-scroll-20261109
+          path: script-qa
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: producto/app/package-lock.json
+      - name: "Identidad exacta de las ramas"
+        run: |
+          echo "QA branch: ${{ matrix.rama }}"
+          git -C producto rev-parse HEAD | tee sha-ejecutado.txt
+          git -C script-qa rev-parse HEAD | tee sha-script.txt
+      - name: "Preparar aplicación y test de navegador"
+        shell: bash
+        run: |
+          cd producto/app
+          npm ci
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+          mkdir -p tests/e2e
+          cp ../../script-qa/app/tests/e2e/composicion_qa.mjs tests/e2e/composicion_qa.mjs
+      - name: "Build y pruebas unitarias (sin ocultar fallos)"
+        shell: bash
+        run: |
+          set +e
+          cd producto/app
+          npm run build > ../../build.log 2>&1
+          BUILD=$?
+          npm test > ../../unit-tests.log 2>&1
+          TESTS=$?
+          echo "build=$BUILD" > ../../resultados-ci.txt
+          echo "unit_tests=$TESTS" >> ../../resultados-ci.txt
+          cat ../../resultados-ci.txt
+          tail -n 35 ../../build.log
+          tail -n 35 ../../unit-tests.log
+          exit 0
+      - name: "Iniciar Vite con paquete y assets auténticos"
+        shell: bash
+        run: |
+          cd producto/app
+          npm run dev -- --host 127.0.0.1 > ../../vite.log 2>&1 &
+          for i in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:1420/ > /dev/null; then
+              echo "Vite responde";
+              exit 0;
+            fi
+            sleep 2
+          done
+          cat ../../vite.log
+          exit 1
+      - name: "Mediciones DOM y capturas reales Chromium"
+        shell: bash
+        run: |
+          set +e
+          cd producto
+          QA_OUTPUT=../qa-resultados node app/tests/e2e/composicion_qa.mjs "${{ matrix.etiqueta }}" http://127.0.0.1:1420 "${{ matrix.tipo }}" > ../navegador.log 2>&1
+          E2E=$?
+          echo "navegador=$E2E" >> ../resultados-ci.txt
+          cat ../navegador.log
+          exit 0
+      - name: "Criterio de salida sin PASS artificial"
+        if: always()
+        shell: bash
+        run: |
+          cat resultados-ci.txt || true
+          if ! grep -q '^build=0$' resultados-ci.txt; then exit 1; fi
+          if ! grep -q '^unit_tests=0$' resultados-ci.txt; then exit 1; fi
+          if ! grep -q '^navegador=0$' resultados-ci.txt; then exit 1; fi
+      - name: "Publicar evidencia original (PNG/JSON/logs/SHA)"
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-p0-${{ matrix.etiqueta }}-${{ github.run_id }}
+          path: |
+            qa-resultados/
+            build.log
+            unit-tests.log
+            navegador.log
+            vite.log
+            resultados-ci.txt
+            sha-ejecutado.txt
+            sha-script.txt
+          retention-days: 30

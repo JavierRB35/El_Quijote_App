@@ -70,7 +70,27 @@
       "spoiler_risk": "none",
       "episode_key": null,
       "alt_es": "Primer plano de Don Quijote en batalla, con armadura antigua, casco metálico, bigote y perilla grises.",
-      "rights_status": "original_generated_asset_review_on_redistribution"
+      "rights_status": "original_generated_asset_review_on_redistribution",
+      "variants": [
+        {
+          "variant": "hd",
+          "relative_path": "assets/closeups/don_quixote_battle_safe_right_v2.webp",
+          "width_px": 1672,
+          "height_px": 941,
+          "mime_type": "image/webp",
+          "size_bytes": 224758,
+          "sha256": "1586e530adfbd7d0fe68c4acde0c3e5842865dfcb5b2bf4ed71154e5b3c5c49a",
+          "generated_with": "OpenAI ImageGen",
+          "review_state": "borrador",
+          "spoiler_risk": "none",
+          "phase": "pre_pregunta",
+          "preferred_overlay_side": "right",
+          "safe_zone_fraction": 0.3,
+          "alt_es": "Don Quijote grita en combate con casco metálico y gorguera; el fondo derecho queda despejado para los textos de la pregunta.",
+          "rights_status": "original_generated_asset_review_on_redistribution",
+          "review_notes_es": "Candidato 16:9 para Q104, Issue #92. Casco próximo al borde superior; QA real de interfaz y revisión artística pendientes. El original cuadrado se conserva."
+        }
+      ]
     },
     {
       "id": "quixote_determined",

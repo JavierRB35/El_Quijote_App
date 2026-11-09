@@ -480,7 +480,11 @@ export default function ModoAventura({ catalogo, onSalir }: Props) {
   const zonaHotspot = marcaHotspot
     ? (recta: Recta | null) => {
         if (!recta) return null;
-        const marca = rectaZonaEnPantalla(interaccion.hotspot_area!, recta);
+        // La marca vive DENTRO de .zona-plano: su origen local es (0,0),
+        // aunque el letterbox haya desplazado la imagen en el viewport.
+        const marca = rectaZonaEnPantalla(interaccion.hotspot_area!, {
+          x: 0, y: 0, w: recta.w, h: recta.h,
+        });
         return <div className="zona-marca" style={{ left: marca.x, top: marca.y, width: marca.w, height: marca.h }} />;
       }
     : esHotspot

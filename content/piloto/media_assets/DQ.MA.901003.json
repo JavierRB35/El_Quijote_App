@@ -1,34 +1,42 @@
 {
- "id": "DQ.MA.901003",
- "contract_version": "1.0.0",
- "function": "pre_pregunta",
- "media_class": "RECREACION_IA",
- "logical_uri": "assets://closeups/don_quixote_battle.webp",
- "derivatives": [
-  {
-   "variant": "original",
-   "format": "webp",
-   "width": 1254,
-   "height": 1254,
-   "size_bytes": 275942,
-   "sha256": "sha256:1bf7ae2fab241736052b57b091cffa7d2e5a50e3a960c4d4736257ff591a7008"
-  }
- ],
- "alt": "Primer plano de Don Quijote en batalla, con armadura antigua, casco metálico, bigote y perilla grises.",
- "source_id": "DQ.SRC.0003",
- "license_id": "DQ.LIC.0002",
- "author": "Equipo de arte El_Quijote_App (recreación IA)",
- "date": "2026-11-06",
- "allowed_uses": [
-  "uso_personal_app",
-  "almacenamiento_repo_git"
- ],
- "license_status": "verificada",
- "provenance": "Recreación IA del proyecto (OpenAI ImageGen, 2026-11-06, a petición del propietario); rotulada RECREACION_ARTISTICA (nunca evidencia histórica). Catalogación P1 del candidato quixote_battle del manifiesto assets/closeups/manifest.json: sha256, dimensiones y tamaño verificados contra el fichero; ID único en el paquete; primer plano sin desenlace (spoiler ninguno).",
- "review": {
-  "state": "borrador",
-  "reviewer_role": null,
-  "date": null
- },
- "spoiler_level": "ninguno"
+  "id": "DQ.MA.901003",
+  "contract_version": "1.0.0",
+  "function": "pre_pregunta",
+  "media_class": "RECREACION_IA",
+  "logical_uri": "assets://closeups/don_quixote_battle.webp",
+  "derivatives": [
+    {
+      "variant": "original",
+      "format": "webp",
+      "width": 1254,
+      "height": 1254,
+      "size_bytes": 275942,
+      "sha256": "sha256:1bf7ae2fab241736052b57b091cffa7d2e5a50e3a960c4d4736257ff591a7008"
+    },
+    {
+      "variant": "hd",
+      "format": "webp",
+      "width": 1672,
+      "height": 941,
+      "size_bytes": 224758,
+      "sha256": "sha256:1586e530adfbd7d0fe68c4acde0c3e5842865dfcb5b2bf4ed71154e5b3c5c49a"
+    }
+  ],
+  "alt": "Primer plano de Don Quijote en batalla, con armadura antigua, casco metálico, bigote y perilla grises.",
+  "source_id": "DQ.SRC.0003",
+  "license_id": "DQ.LIC.0002",
+  "author": "Equipo de arte El_Quijote_App (recreación IA)",
+  "date": "2026-11-06",
+  "allowed_uses": [
+    "uso_personal_app",
+    "almacenamiento_repo_git"
+  ],
+  "license_status": "verificada",
+  "provenance": "Recreación IA del proyecto (OpenAI ImageGen, 2026-11-06, a petición del propietario); rotulada RECREACION_ARTISTICA (nunca evidencia histórica). Catalogación P1 del candidato quixote_battle del manifiesto assets/closeups/manifest.json: sha256, dimensiones y tamaño verificados contra el fichero; ID único en el paquete; primer plano sin desenlace (spoiler ninguno). Candidato horizontal 16:9 R1 (Issue #92, 2026-11-09), almacenado en assets/closeups/don_quixote_battle_safe_right_v2.webp y referenciado como derivada hd, 1672×941, SHA-256 verificado; no sustituye el original. Banda derecha prevista de ~30 %, casco próximo al borde superior. Revisión editorial/visual real pendiente; logical_uri original se conserva hasta decisión de integración.",
+  "review": {
+    "state": "borrador",
+    "reviewer_role": null,
+    "date": null
+  },
+  "spoiler_level": "ninguno"
 }

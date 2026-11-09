@@ -59,7 +59,7 @@ async function ejecutar(escala){
   await page.waitForSelector(selector,{state:'visible',timeout:15000});
 
   // Accesibilidad de Escape dentro de ajustes: no debe abandonar Aventura.
-  await page.getByRole('button',{name:'Ajustes',exact:true}).click();
+  await page.getByRole('button',{name:/Ajustes de texto y movimiento/}).click({timeout:7000});
   await page.keyboard.press('Escape');
   anotar('Escape y regreso de foco '+escala,await page.locator(selector).count()>0,'Aventura permanece tras cerrar ajustes');
 

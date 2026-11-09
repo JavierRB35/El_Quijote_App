@@ -120,42 +120,9 @@ jobs:
           cat resultados-ci.txt || true
           if ! grep -q '^build=0$' resultados-ci.txt; then exit 1; fi
           if ! grep -q '^unit_tests=0$' resultados-ci.txt; then exit 1; fi
-          if ! grep -q '^navegador=0
-      - name: "Publicar evidencia original (PNG/JSON/logs/SHA)"
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: qa-p0-${{ matrix.etiqueta }}-${{ github.run_id }}
-          path: |
-            qa-resultados/
-            build.log
-            unit-tests.log
-            navegador.log
-            recorridos.log
-            vite.log
-            resultados-ci.txt
-            sha-ejecutado.txt
-            sha-script.txt
-          retention-days: 30
- resultados-ci.txt; then exit 1; fi
+          if ! grep -q '^navegador=0$' resultados-ci.txt; then exit 1; fi
           if [ '${{ matrix.etiqueta }}' = 'despues-pr89' ] || [ '${{ matrix.etiqueta }}' = 'aventura-v2-pr87' ]; then
-            if ! grep -q '^recorridos=0
-      - name: "Publicar evidencia original (PNG/JSON/logs/SHA)"
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: qa-p0-${{ matrix.etiqueta }}-${{ github.run_id }}
-          path: |
-            qa-resultados/
-            build.log
-            unit-tests.log
-            navegador.log
-            vite.log
-            resultados-ci.txt
-            sha-ejecutado.txt
-            sha-script.txt
-          retention-days: 30
- resultados-ci.txt; then exit 1; fi
+            if ! grep -q '^recorridos=0$' resultados-ci.txt; then exit 1; fi
           fi
       - name: "Publicar evidencia original (PNG/JSON/logs/SHA)"
         if: always()
@@ -167,6 +134,7 @@ jobs:
             build.log
             unit-tests.log
             navegador.log
+            recorridos.log
             vite.log
             resultados-ci.txt
             sha-ejecutado.txt

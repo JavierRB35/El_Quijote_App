@@ -25,3 +25,24 @@ export async function cargarProgresoHistoria(): Promise<string | null> {
   if (ES_TAURI) return invoke<string | null>('cargar_progreso_historia');
   return localStorage.getItem('quijote.progreso_historia');
 }
+
+/** Guardados separados por episodio y modo; el episodio I.8 conserva intacto
+ *  su fichero nativo y su formato v2 histórico. Los restantes usan comandos
+ *  Tauri con nombre de fichero validado (no rutas proporcionadas por la UI). */
+export type ModoProgreso = 'aventura' | 'historia';
+
+export async function guardarProgresoDeEpisodio(modo: ModoProgreso, episodio: string, datos: string): Promise<void> {
+  if (episodio === 'DQ.P1.C08.E01') {
+    return modo === 'aventura' ? guardarProgreso(datos) : guardarProgresoHistoria(datos);
+  }
+  if (ES_TAURI) return invoke<void>('guardar_progreso_capitulo', { modo, episodio, datos });
+  localStorage.setItem(`quijote.${modo}.${episodio}`, datos);
+}
+
+export async function cargarProgresoDeEpisodio(modo: ModoProgreso, episodio: string): Promise<string | null> {
+  if (episodio === 'DQ.P1.C08.E01') {
+    return modo === 'aventura' ? cargarProgreso() : cargarProgresoHistoria();
+  }
+  if (ES_TAURI) return invoke<string | null>('cargar_progreso_capitulo', { modo, episodio });
+  return localStorage.getItem(`quijote.${modo}.${episodio}`);
+}

@@ -165,6 +165,19 @@ export class Catalogo {
     };
   }
 
+  /** Añade escenas/beats del capítulo a la vista en memoria del catálogo.
+   *  No modifica ni serializa el paquete canónico ni inventa MediaAsset físicos. */
+  anexarCategorias(extra: Record<string, Record<string, unknown>>): Catalogo {
+    const categorias = { ...this.paquete.categorias };
+    for (const [nombre, registros] of Object.entries(extra)) {
+      categorias[nombre] = { ...(categorias[nombre] ?? {}), ...registros };
+    }
+    const counts = Object.fromEntries(
+      Object.entries(categorias).map(([nombre, registros]) => [nombre, Object.keys(registros).length]),
+    );
+    return new Catalogo({ ...this.paquete, categorias, counts });
+  }
+
   private categoria<T>(nombre: string): Record<string, T> {
     return (this.paquete.categorias[nombre] ?? {}) as Record<string, T>;
   }

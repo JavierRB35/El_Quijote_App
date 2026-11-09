@@ -21,3 +21,5 @@ Se conservan exactamente los **9 IDs**, **27 alternativas**, soluciones correcta
 Seguir DC-30: rondas candidatas → revisión del propietario → inventario visual → prompts solo para imágenes cuya ausencia confirme → Historia y reutilización → aprobación y QA → integración. Un archivo JSON en una rama no acredita aprobación.
 
 Desde la raíz: `python tools/editorial_validation/validar_aventura.py` y `python tests/dev/test_catalogo_aventura.py`. GitHub Actions ejecuta ambos junto al build y pruebas existentes. Se verifican esquema, unicidad, respuestas, rutas, imágenes, medio IDs y pasajes. **La revisión humana** de fidelidad a Cervantes, calidad premium, continuidad, derechos y antiespoilers continúa siendo obligatoria.
+
+**Producción I.1 (2026-11-09):** tras el encargo directo del propietario, `piloto_integrado` se aplica también a un capítulo nuevo que pasa a ser ejecutable como piloto de la fase autorizada. Esto acredita **solo integración técnica en la aplicación**, no revisión artística final: `revision_visual` sigue `pendiente`, con QA de pantallas y prueba real obligatorias. No usar este estado para saltarse el ciclo DC-30.

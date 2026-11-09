@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "capituloId": "DQ.P1.C01",
+  "episodioId": "DQ.P1.C01.E01",
+  "estado_editorial": "piloto_integrado",
+  "revision_visual": "pendiente",
+  "fuente": {
+    "id": "DQ.SRC.0005",
+    "ruta": "content/textos/gutenberg_2000/El_Quijote.txt"
+  },
+  "titulo": "El hidalgo, los libros y los nombres",
+  "cierre": {
+    "titulo": "El nacimiento de don Quijote",
+    "texto": "El hidalgo ya tiene armas, caballo y dama en sus pensamientos. Su primera salida pertenece al capítulo II."
+  },
+  "escenas": [
+    {
+      "id": "H01",
+      "titulo": "Presentación del hidalgo",
+      "intervenciones": [
+        {
+          "id": "H01-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "CITA_LITERAL",
+          "texto_visible": "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1072–1074",
+          "imagen": "p1_c01_h01_presentacion_hidalgo_story"
+        },
+        {
+          "id": "H01-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Rondaba los cincuenta años, era seco de carnes y enjuto de rostro. En su casa vivían un ama, una sobrina y un mozo. Ni siquiera su apellido queda seguro: Quijada, Quesada o, según ciertas conjeturas, Quejana.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1079–1088",
+          "imagen": "p1_c01_h01_presentacion_hidalgo_story"
+        }
+      ]
+    },
+    {
+      "id": "H02",
+      "titulo": "El precio de los libros",
+      "intervenciones": [
+        {
+          "id": "H02-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Casi todos sus ratos ociosos los pasaba leyendo libros de caballerías. La afición le hizo olvidar la caza y descuidar su hacienda.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1090–1094",
+          "imagen": "p1_c01_r01_lectura_pre"
+        },
+        {
+          "id": "H02-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Llegó a vender muchas hanegas de tierra de sembradura para comprar más libros, y llevó a casa cuantos pudo conseguir.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1093–1096",
+          "imagen": "p1_c01_r01_lectura_pre"
+        }
+      ]
+    },
+    {
+      "id": "H03",
+      "titulo": "Las razones de la sinrazón",
+      "intervenciones": [
+        {
+          "id": "H03-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "De todos los autores, prefería a Feliciano de Silva. Sus requiebros y desafíos, aunque difíciles de comprender, le parecían extraordinarios.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1096–1100",
+          "imagen": "p1_c01_r01_lectura_pre"
+        },
+        {
+          "id": "H03-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "CITA_LITERAL",
+          "texto_visible": "La razón de la sinrazón que a mi razón se hace, de tal manera mi razón enflaquece, que con razón me quejo de la vuestra fermosura.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1100–1102",
+          "imagen": "p1_c01_r01_lectura_pre"
+        },
+        {
+          "id": "H03-I03",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "El narrador asegura con ironía que ni Aristóteles habría desentrañado aquellas frases. El hidalgo también discutía de caballeros con el cura; maese Nicolás, el barbero, tenía otros héroes favoritos.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1106–1123",
+          "imagen": "p1_c01_r01_lectura_pre"
+        }
+      ]
+    },
+    {
+      "id": "H04",
+      "titulo": "Las noches en vela",
+      "intervenciones": [
+        {
+          "id": "H04-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Se pasaba las noches leyendo de claro en claro y los días de turbio en turbio. De tanto leer y dormir tan poco, terminó perdiendo el juicio.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1125–1128",
+          "imagen": "p1_c01_h04_desvelo_nocturno_story"
+        },
+        {
+          "id": "H04-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Su imaginación se llenó de encantamientos, batallas, heridas, desafíos y gigantes. Llegó a creer que las invenciones de aquellos libros eran historias verdaderas.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1128–1145",
+          "imagen": "p1_c01_h04_desvelo_nocturno_story"
+        }
+      ]
+    },
+    {
+      "id": "H05",
+      "titulo": "La decisión del caballero",
+      "intervenciones": [
+        {
+          "id": "H05-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "De aquella convicción nació una resolución extraordinaria: hacerse caballero andante.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1147–1150",
+          "imagen": "p1_c01_h04_desvelo_nocturno_story"
+        },
+        {
+          "id": "H05-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Quería ir por el mundo con armas y caballo, buscar aventuras, deshacer agravios y ganar honra y fama. Hasta se imaginó emperador de Trapisonda; enseguida quiso ponerlo en práctica.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1149–1158",
+          "imagen": "p1_c01_h04_desvelo_nocturno_story"
+        }
+      ]
+    },
+    {
+      "id": "H06",
+      "titulo": "Las armas heredadas",
+      "intervenciones": [
+        {
+          "id": "H06-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Lo primero que hizo fue sacar unas armas de sus bisabuelos, olvidadas en un rincón desde hacía mucho tiempo, cubiertas de orín y moho.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1159–1161",
+          "imagen": "p1_c01_r03_armas_morrion_pre"
+        },
+        {
+          "id": "H06-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Las limpió y reparó como pudo, pero descubrió una falta importante: no tenía celada de encaje, sino un simple morrión.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1161–1164",
+          "imagen": "p1_c01_r03_armas_morrion_pre"
+        }
+      ]
+    },
+    {
+      "id": "H07",
+      "titulo": "La celada de cartón",
+      "intervenciones": [
+        {
+          "id": "H07-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Con cartones fabricó una media celada que, encajada en el morrión, parecía una celada entera. Había dedicado una semana a construirla.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1163–1168",
+          "imagen": "p1_c01_r03_armas_morrion_pre"
+        },
+        {
+          "id": "H07-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Para probar si resistiría una cuchillada, sacó la espada. Bastó el primer golpe para deshacer en un instante todo aquel trabajo.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1165–1169",
+          "imagen": "p1_c01_h07_celada_rota_story"
+        },
+        {
+          "id": "H07-I03",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "La hizo de nuevo y puso barras de hierro por dentro. Satisfecho de su resistencia, decidió no volver a probarla.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1169–1172",
+          "imagen": "p1_c01_r03_celada_reforzada_post"
+        }
+      ]
+    },
+    {
+      "id": "H08",
+      "titulo": "El rocín",
+      "intervenciones": [
+        {
+          "id": "H08-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Fue luego a ver a su viejo rocín. Aunque tenía innumerables defectos, a sus ojos ni Bucéfalo ni Babieca podían comparársele.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1174–1177",
+          "imagen": "p1_c01_r04_rocin_pre"
+        },
+        {
+          "id": "H08-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Durante cuatro días imaginó y descartó nombres, hasta elegir uno que dijera lo que aquel caballo había sido y lo que ahora debía representar: Rocinante.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1177–1188",
+          "imagen": "p1_c01_r04_rocin_pre"
+        }
+      ]
+    },
+    {
+      "id": "H09",
+      "titulo": "Don Quijote de la Mancha",
+      "intervenciones": [
+        {
+          "id": "H09-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Después de dar nombre al caballo, dedicó otros ocho días a elegir el suyo. Al cabo se llamó don Quijote.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1190–1194",
+          "imagen": "p1_c01_r04_rocin_pre"
+        },
+        {
+          "id": "H09-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Como Amadís había añadido Gaula a su nombre, él quiso honrar su propia tierra y llamarse don Quijote de la Mancha.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1194–1199",
+          "imagen": "p1_c01_r05_dama_pensamientos_pre"
+        }
+      ]
+    },
+    {
+      "id": "H10",
+      "titulo": "Una dama para sus hazañas",
+      "intervenciones": [
+        {
+          "id": "H10-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Con las armas, el caballo y el nombre preparados, creyó que todavía le faltaba una dama. Un caballero sin amores le parecía un cuerpo sin alma.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1201–1205",
+          "imagen": "p1_c01_r05_dama_pensamientos_pre"
+        },
+        {
+          "id": "H10-I02",
+          "hablante": "Don Quijote",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Si venzo a un gigante, ¿ante qué señora habré de enviarlo para que se arrodille y quede a su disposición?",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1207–1216",
+          "imagen": "p1_c01_r05_dama_pensamientos_pre"
+        },
+        {
+          "id": "H10-I03",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "En su fantasía ya tenía nombre el vencido: Caraculiambro, señor de la ínsula Malindrania. La idea de presentarlo ante su dama lo llenó de satisfacción.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1212–1218",
+          "imagen": "p1_c01_r05_dama_pensamientos_pre"
+        }
+      ]
+    },
+    {
+      "id": "H11",
+      "titulo": "Dulcinea del Toboso",
+      "intervenciones": [
+        {
+          "id": "H11-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Recordó entonces a Aldonza Lorenzo, una moza labradora de muy buen parecer que vivía cerca de su lugar. Había estado enamorado de ella, aunque, según el narrador, ella nunca llegó a saberlo.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1218–1223",
+          "imagen": "p1_c01_r05_dama_pensamientos_pre"
+        },
+        {
+          "id": "H11-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Decidió hacerla señora de sus pensamientos y buscó un nombre digno de una gran señora. Como ella era natural del Toboso, terminó llamándola Dulcinea del Toboso.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1222–1228",
+          "imagen": "p1_c01_r05_dama_pensamientos_pre"
+        }
+      ]
+    }
+  ]
+}

@@ -183,6 +183,41 @@ fn cargar_progreso_historia(app: tauri::AppHandle) -> Result<Option<String>, Str
     }
 }
 
+
+/// Progreso independiente para nuevos episodios, sin romper los dos ficheros
+/// heredados de I.8. Solo se aceptan IDs canónicos: nunca rutas arbitrarias.
+fn ruta_progreso_capitulo(app: &tauri::AppHandle, modo: &str, episodio: &str) -> Result<PathBuf, String> {
+    if modo != "aventura" && modo != "historia" {
+        return Err("modo de progreso inválido".into());
+    }
+    let partes: Vec<&str> = episodio.split('.').collect();
+    let valido = partes.len() == 4
+        && partes[0] == "DQ"
+        && (partes[1] == "P1" || partes[1] == "P2")
+        && partes[2].strip_prefix('C').is_some_and(|v| v.len() == 2 && v.bytes().all(|b| b.is_ascii_digit()))
+        && partes[3].strip_prefix('E').is_some_and(|v| v.len() == 2 && v.bytes().all(|b| b.is_ascii_digit()));
+    if !valido {
+        return Err("ID de episodio inválido".into());
+    }
+    ruta_progreso_en(app, &format!("progreso_{}_{}.json", modo, episodio.replace('.', "_")))
+}
+
+#[tauri::command]
+fn guardar_progreso_capitulo(app: tauri::AppHandle, modo: String, episodio: String, datos: String) -> Result<(), String> {
+    let destino = ruta_progreso_capitulo(&app, &modo, &episodio)?;
+    guardar_json_atomico(&destino, &datos)
+}
+
+#[tauri::command]
+fn cargar_progreso_capitulo(app: tauri::AppHandle, modo: String, episodio: String) -> Result<Option<String>, String> {
+    let destino = ruta_progreso_capitulo(&app, &modo, &episodio)?;
+    match std::fs::read_to_string(&destino) {
+        Ok(s) => Ok(Some(s)),
+        Err(e) if e.kind() == std::io::ErrorKind::NotFound => Ok(None),
+        Err(e) => Err(format!("no se pudo leer el progreso: {e}")),
+    }
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
@@ -193,7 +228,9 @@ pub fn run() {
             guardar_progreso,
             cargar_progreso,
             guardar_progreso_historia,
-            cargar_progreso_historia
+            cargar_progreso_historia,
+            guardar_progreso_capitulo,
+            cargar_progreso_capitulo
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

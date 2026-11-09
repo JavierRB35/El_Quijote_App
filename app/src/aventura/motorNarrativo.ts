@@ -44,10 +44,10 @@ export interface Partida {
   vistas: string[];
 }
 
-export function nuevaPartida(intento = 0): Partida {
+export function nuevaPartida(intento = 0, episodioId = EPISODIO_AVENTURA): Partida {
   return {
     version: VERSION_PARTIDA,
-    episodio: EPISODIO_AVENTURA,
+    episodio: episodioId,
     indice: 0,
     puntos: PUNTOS_INICIALES,
     fase: 'pregunta',
@@ -134,16 +134,16 @@ export function continuar(partida: Partida, rondas: readonly RondaNarrativa[]): 
   };
 }
 
-export function restaurarPartida(raw: string | null, rondas: readonly RondaNarrativa[]): Partida | null {
+export function restaurarPartida(raw: string | null, rondas: readonly RondaNarrativa[], episodioId = EPISODIO_AVENTURA): Partida | null {
   if (!raw) return null;
   try {
     const parsed: unknown = JSON.parse(raw);
     if (!parsed || typeof parsed !== 'object') return null;
     const p = parsed as { partida?: unknown; version?: unknown; episodio?: unknown };
-    if (p.version !== VERSION_PARTIDA || p.episodio !== EPISODIO_AVENTURA) return null;
+    if (p.version !== VERSION_PARTIDA || p.episodio !== episodioId) return null;
     const e = p.partida as Partida | null;
     if (!e || typeof e !== 'object' ||
-        e.version !== VERSION_PARTIDA || e.episodio !== EPISODIO_AVENTURA ||
+        e.version !== VERSION_PARTIDA || e.episodio !== episodioId ||
         !Number.isInteger(e.indice) || e.indice < 0 || e.indice >= rondas.length ||
         !Number.isInteger(e.puntos) || e.puntos < 0 || e.puntos > PUNTOS_MAXIMOS ||
         !['pregunta', 'resultado', 'revelacion', 'checkpoint', 'completada'].includes(e.fase) ||

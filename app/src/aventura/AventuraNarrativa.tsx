@@ -3,10 +3,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Catalogo } from '../contrato';
 import { leerAsset } from '../entorno';
-import { cargarProgreso, guardarProgreso } from '../historia/persistencia';
+import { cargarProgresoDeEpisodio, guardarProgresoDeEpisodio } from '../historia/persistencia';
 import { AjustesBoton, movimientoReducido, useAjustes } from '../cine/ajustes';
 import {
-  EPISODIO_AVENTURA,
   PUNTOS_MAXIMOS,
   VERSION_PARTIDA,
   continuar,
@@ -18,12 +17,14 @@ import {
   type ImagenNarrativa,
   type Partida,
 } from './motorNarrativo';
-import { RONDAS_AVENTURA } from './guionNarrativo';
+import type { FichaCapitulo } from '../capitulos/registro';
 import './aventuraNarrativa.css';
 
 interface Props {
   catalogo: Catalogo;
   onSalir: () => void;
+  ficha: FichaCapitulo;
+  rondas: readonly import('./motorNarrativo').RondaNarrativa[];
 }
 
 function imagenVigente(imagen: ImagenNarrativa, catalogo: Catalogo): string {
@@ -66,8 +67,9 @@ function Puntuacion({ puntos }: { puntos: number }) {
   );
 }
 
-export default function AventuraNarrativa({ catalogo, onSalir }: Props) {
-  const [partida, setPartida] = useState<Partida>(() => nuevaPartida());
+export default function AventuraNarrativa({ catalogo, onSalir, ficha, rondas }: Props) {
+  const episodioId = ficha.episodioId;
+  const [partida, setPartida] = useState<Partida>(() => nuevaPartida(0, episodioId));
   const [cargado, setCargado] = useState(false);
   const [errorGuardado, setErrorGuardado] = useState('');
   const [estadoGuardado, setEstadoGuardado] = useState<'pendiente' | 'guardado' | 'error'>('pendiente');
@@ -79,28 +81,28 @@ export default function AventuraNarrativa({ catalogo, onSalir }: Props) {
 
   useEffect(() => {
     let vivo = true;
-    cargarProgreso()
+    cargarProgresoDeEpisodio('aventura', episodioId)
       .then((raw) => {
         if (!vivo) return;
-        const restaurada = restaurarPartida(raw, RONDAS_AVENTURA);
+        const restaurada = restaurarPartida(raw, rondas, episodioId);
         if (restaurada) setPartida(restaurada);
       })
       .catch((error: unknown) => { if (vivo) setErrorGuardado(String(error)); })
       .finally(() => { if (vivo) setCargado(true); });
     return () => { vivo = false; };
-  }, []);
+  }, [episodioId, rondas]);
 
   useEffect(() => {
     if (!cargado) return;
     const datos = JSON.stringify({
       version: VERSION_PARTIDA,
-      episodio: EPISODIO_AVENTURA,
+      episodio: episodioId,
       partida,
     });
     const revision = ++revisionGuardado.current;
     setEstadoGuardado('pendiente');
     colaGuardado.current = colaGuardado.current.catch(() => undefined)
-      .then(() => guardarProgreso(datos))
+      .then(() => guardarProgresoDeEpisodio('aventura', episodioId, datos))
       .then(() => {
         if (revision === revisionGuardado.current) {
           setErrorGuardado('');
@@ -113,9 +115,9 @@ export default function AventuraNarrativa({ catalogo, onSalir }: Props) {
           setErrorGuardado(`No se pudo guardar: ${String(e)}`);
         }
       });
-  }, [partida, cargado]);
+  }, [partida, cargado, episodioId]);
 
-  const ronda = RONDAS_AVENTURA[Math.min(partida.indice, RONDAS_AVENTURA.length - 1)];
+  const ronda = rondas[Math.min(partida.indice, rondas.length - 1)];
   const enResultado = partida.fase === 'resultado';
   const enRevelacion = partida.fase === 'revelacion';
   const enCheckpoint = partida.fase === 'checkpoint';
@@ -133,10 +135,10 @@ export default function AventuraNarrativa({ catalogo, onSalir }: Props) {
   useEffect(() => { setOmitirContexto(partida.intento > 0); }, [partida.indice, partida.intento]);
 
   const procesar = useCallback((id: string) => {
-    setPartida((p) => responder(p, RONDAS_AVENTURA[p.indice], id));
-  }, []);
+    setPartida((p) => responder(p, rondas[p.indice], id));
+  }, [rondas]);
   const descubrir = useCallback(() => setPartida(revelar), []);
-  const avanzar = useCallback(() => setPartida((p) => continuar(p, RONDAS_AVENTURA)), []);
+  const avanzar = useCallback(() => setPartida((p) => continuar(p, rondas)), [rondas]);
 
   useEffect(() => {
     const tecla = (e: KeyboardEvent) => {
@@ -167,7 +169,7 @@ export default function AventuraNarrativa({ catalogo, onSalir }: Props) {
       <header className="an-cabecera">
         <div>
           <span className="an-sello-marca">EL QUIJOTE · AVENTURA</span>
-          <p>Parte I · Capítulo VIII · {ronda.tramo}</p>
+          <p>{ficha.etiqueta} · {ronda.tramo}</p>
         </div>
         <div className="an-cabecera-acciones">
           <Puntuacion puntos={partida.puntos} />
@@ -178,7 +180,7 @@ export default function AventuraNarrativa({ catalogo, onSalir }: Props) {
       <section className="an-panel" aria-live="polite" aria-label="Aventura narrativa">
         {partida.fase === 'pregunta' && (
           <>
-            <p className="an-pretitle">Decisión {partida.indice + 1} de {RONDAS_AVENTURA.length}</p>
+            <p className="an-pretitle">Decisión {partida.indice + 1} de {rondas.length}</p>
             {mostrarContexto && <p className="an-contexto">{ronda.contexto}</p>}
             {contextoConocido && (
               <button className="an-texto-omitido" onClick={() => setOmitirContexto((v) => !v)}>
@@ -218,7 +220,7 @@ export default function AventuraNarrativa({ catalogo, onSalir }: Props) {
             <p className="an-fuente">
               {ronda.pasajeId
                 ? `Referencia: ${ronda.pasajeId} · edición del proyecto`
-                : 'Referencia: Primera Parte, capítulo VIII · DQ.SRC.0005'}
+                : `Referencia: ${ficha.etiqueta} · DQ.SRC.0005`}
             </p>
             <button className="an-primario" onClick={avanzar}>
               {partida.puntos === 0 ? 'Volver al checkpoint' : ronda.checkpoint ? 'Completar hazaña' : 'Siguiente decisión'}
@@ -235,17 +237,17 @@ export default function AventuraNarrativa({ catalogo, onSalir }: Props) {
             {ronda.checkpoint?.mayor && <p className="an-insignia">♜ Insignia de caballería</p>}
             <p>+1 punto · {estadoGuardado === 'guardado' ? 'partida guardada' : estadoGuardado === 'error' ? 'guardado fallido' : 'guardando partida…'} · {partida.puntos}/{PUNTOS_MAXIMOS} puntos</p>
             <button className="an-primario" onClick={avanzar}>
-              {partida.checkpoint.indice >= RONDAS_AVENTURA.length ? 'Ver final del capítulo' : 'Continuar aventura'}
+              {partida.checkpoint.indice >= rondas.length ? 'Ver final del capítulo' : 'Continuar aventura'}
             </button>
           </div>
         )}
         {completada && (
           <>
-            <p className="an-pretitle">Capítulo VIII · recorrido completado</p>
-            <h1>El camino continúa</h1>
-            <p className="an-contexto">El duelo con el vizcaíno queda suspendido. Descubrirás su desenlace en el capítulo siguiente.</p>
+            <p className="an-pretitle">{ficha.etiqueta} · recorrido completado</p>
+            <h1>{ficha.cierreAventura.titulo}</h1>
+            <p className="an-contexto">{ficha.cierreAventura.texto}</p>
             <p className="an-consecuencia">Aciertos: {partida.aciertos} · Errores: {partida.errores} · Puntos: {partida.puntos}/{PUNTOS_MAXIMOS}</p>
-            <button className="an-primario" onClick={() => setPartida(nuevaPartida(partida.intento + 1))}>
+            <button className="an-primario" onClick={() => setPartida(nuevaPartida(partida.intento + 1, episodioId))}>
               Volver a recorrer el capítulo
             </button>
             <button className="an-menubtn" onClick={onSalir}>Volver al menú</button>

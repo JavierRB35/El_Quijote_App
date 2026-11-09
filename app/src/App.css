@@ -1097,3 +1097,148 @@ html[data-ajuste-movimiento='reducido'] .progreso-relleno {
   width: 100%;
   margin-top: 1rem;
 }
+
+
+/* --------------------------------------------------------------------------
+   DC-28 / TS-001 — composición compartida de Historia por capítulo.
+   Imagen y texto son regiones HERMANAS: no overlays, scroll ni recortes
+   internos. Las áreas protegidas de todos los planos quedan íntegramente
+   visibles: no se recorta el WebP ni se aplica deriva Ken Burns.
+   -------------------------------------------------------------------------- */
+.cine.cine-narracion {
+  display: grid;
+  grid-template-columns: minmax(0, 57fr) minmax(440px, 43fr);
+  grid-template-rows: auto minmax(0, 1fr);
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--noche);
+}
+.cine.cine-narracion .cabecera {
+  position: relative;
+  grid-row: 1;
+  grid-column: 1 / -1;
+  padding: .75rem 1.2rem .55rem;
+  background: rgba(7, 12, 23, .92);
+  border-bottom: 1px solid var(--panel-borde);
+}
+.cine.cine-narracion .lienzo {
+  position: relative;
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 0;
+  height: 100%;
+}
+.cine.cine-narracion .plano {
+  object-fit: contain;
+  animation: none;
+  transform: none;
+}
+.cine.cine-narracion .vineta {
+  background: none;
+}
+.cine.cine-narracion .banda-texto,
+.cine.cine-narracion.sin-plano .banda-texto {
+  position: relative;
+  grid-column: 2;
+  grid-row: 2;
+  inset: auto;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  transform: none;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  padding: .9rem 1.15rem 1rem;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: .5rem;
+  opacity: 1;
+  visibility: visible;
+}
+.cine.cine-narracion .lectura,
+.cine.cine-narracion .lectura.amplia {
+  max-height: none;
+  overflow: visible;
+  padding: .8rem 1rem;
+  flex: 0 0 auto;
+}
+.cine.cine-narracion .texto {
+  font-size: calc(clamp(1.16rem, .7vw + .84rem, 1.45rem) * var(--escala-texto));
+  line-height: 1.43;
+  overflow-wrap: anywhere;
+}
+.cine.cine-narracion .beat-info {
+  margin: 0 0 .45rem;
+}
+.cine.cine-narracion .control {
+  font-size: .78rem;
+  letter-spacing: .02em;
+  min-height: 41px;
+  padding: .35rem .55rem;
+}
+.cine.cine-narracion .controles {
+  gap: .35rem;
+  padding: .15rem;
+}
+.cine.cine-narracion .ampliar-lectura {
+  min-height: 35px;
+  padding: .22rem .55rem;
+}
+.cine.cine-narracion:has(.lectura.amplia) {
+  grid-template-columns: minmax(0, 46fr) minmax(500px, 54fr);
+}
+.menu-capitulo-etiqueta {
+  display: block;
+  margin: 0 0 .35rem;
+  color: var(--dorado-claro);
+  font-size: .92rem;
+}
+.menu-selector-capitulo {
+  font: inherit;
+  width: 100%;
+  color: var(--pergamino);
+  background: #1b263b;
+  border: 1px solid var(--panel-borde);
+  border-radius: 6px;
+  padding: .8rem 1rem;
+  margin-bottom: .85rem;
+}
+.menu-selector-capitulo:focus-visible {
+  outline: 3px solid var(--dorado-claro);
+  outline-offset: 2px;
+}
+/* Sin área lateral garantizada (pantalla estrecha, muy baja o texto
+   muy ampliado), vista EDITORIAL DEDICADA SIN IMAGEN, no overlay. */
+@media (max-width: 1050px), (max-height: 690px) {
+  .cine.cine-narracion,
+  .cine.cine-narracion:has(.lectura.amplia) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .cine.cine-narracion .lienzo { display: none; }
+  .cine.cine-narracion .banda-texto,
+  .cine.cine-narracion.sin-plano .banda-texto {
+    grid-column: 1;
+    width: min(880px, 100%);
+    height: 100%;
+    margin-inline: auto;
+    padding: .7rem 1rem;
+  }
+}
+@media (max-width: 650px) {
+  .cine.cine-narracion {
+    min-height: 100dvh;
+    height: auto;
+    overflow: visible;
+  }
+  .cine.cine-narracion .cabecera { padding: .5rem .7rem; }
+  .cine.cine-narracion .cabecera h1 { font-size: 1rem; }
+  .cine.cine-narracion .texto { font-size: calc(1.05rem * var(--escala-texto)); }
+  .cine.cine-narracion .banda-texto,
+  .cine.cine-narracion.sin-plano .banda-texto { height: auto; }
+}

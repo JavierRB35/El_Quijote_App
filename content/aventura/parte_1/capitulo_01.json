@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0.0",
+  "capituloId": "DQ.P1.C01",
+  "episodioId": "DQ.P1.C01.E01",
+  "estado_editorial": "piloto_integrado",
+  "revision_visual": "pendiente",
+  "fuente": {
+    "id": "DQ.SRC.0005",
+    "ruta": "content/textos/gutenberg_2000/El_Quijote.txt"
+  },
+  "pendientes_editoriales": [
+    "AV2-I1-01",
+    "AV2-I1-02",
+    "AV2-I1-03",
+    "AV2-I1-04"
+  ],
+  "rondas": [
+    {
+      "id": "AV2-I1-01",
+      "tramo": "Los libros de caballerías",
+      "contexto": "El hidalgo se entrega a la lectura de libros de caballerías con tanta afición que ha comenzado a descuidar sus ocupaciones y su hacienda.",
+      "personaje": "El hidalgo",
+      "pregunta": "¿Qué hará para conseguir todavía más libros de caballerías?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Pedir prestados los libros al cura de su lugar."
+        },
+        {
+          "id": "b",
+          "texto": "Vender tierras de sembradura para comprarlos."
+        },
+        {
+          "id": "c",
+          "texto": "Abandonar la lectura para dedicarse a la caza."
+        }
+      ],
+      "correcta": "b",
+      "consecuencia": "Vende muchas hanegas de tierra de sembradura para comprar libros de caballerías y reúne cuantos puede en su casa.",
+      "explicacion": "El entusiasmo por estas novelas llega a imponerse a la administración de su hacienda. La lectura se prolongará hasta las noches.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_01/p1_c01_r01_lectura_pre.webp",
+        "alt": "El hidalgo lee con avidez antes de adquirir más libros."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_01/p1_c01_h04_desvelo_nocturno_story.webp",
+        "alt": "El hidalgo se desvela leyendo libros de caballerías durante la noche."
+      }
+    },
+    {
+      "id": "AV2-I1-02",
+      "tramo": "La gran resolución",
+      "contexto": "Después de pasar noches enteras leyendo y dormir muy poco, el hidalgo da por verdaderas las aventuras imposibles de sus libros y ansía obtener honra y fama.",
+      "personaje": "El hidalgo",
+      "pregunta": "¿Qué decidirá hacer con esas ideas?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Hacerse caballero andante y salir a buscar aventuras."
+        },
+        {
+          "id": "b",
+          "texto": "Escribir una refutación de los libros de caballerías."
+        },
+        {
+          "id": "c",
+          "texto": "Pedir al cura que juzgue cuáles de esos relatos son históricos."
+        }
+      ],
+      "correcta": "a",
+      "consecuencia": "Decide hacerse caballero andante, combatir agravios y buscar aventuras que le granjeen fama; enseguida empieza los preparativos.",
+      "explicacion": "No distingue la invención de la realidad: quiere vivir como los caballeros cuya historia ha leído.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_01/p1_c01_h04_desvelo_nocturno_story.webp",
+        "alt": "El hidalgo se desvela leyendo antes de decidir su nueva vida."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_01/p1_c01_r03_armas_morrion_pre.webp",
+        "alt": "El hidalgo examina las armas heredadas para iniciar sus preparativos."
+      }
+    },
+    {
+      "id": "AV2-I1-03",
+      "tramo": "Las armas heredadas",
+      "contexto": "El hidalgo ha limpiado unas armas antiguas de sus bisabuelos y descubre que no posee celada de encaje, sino un morrión simple.",
+      "personaje": "El hidalgo",
+      "pregunta": "¿Cómo intentará resolver esa falta?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Renunciar al casco y buscar aventuras con la cabeza descubierta."
+        },
+        {
+          "id": "b",
+          "texto": "Mandar fabricar una armadura de acero enteramente nueva."
+        },
+        {
+          "id": "c",
+          "texto": "Improvisar una media celada de cartón y probarla con la espada."
+        }
+      ],
+      "correcta": "c",
+      "consecuencia": "Construye una media celada de cartón. El primer golpe de espada la deshace; la reconstruye con barras de hierro por dentro y, satisfecho, no vuelve a probarla.",
+      "explicacion": "La solución mezcla ingenio y precariedad: la primera prueba fracasa, pero da por buena la segunda sin comprobarla.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_01/p1_c01_r03_armas_morrion_pre.webp",
+        "alt": "El hidalgo examina el morrión simple y las armas heredadas, aún sin celada de cartón."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_01/p1_c01_r03_celada_reforzada_post.webp",
+        "alt": "El hidalgo contempla su segunda celada rehecha y reforzada por dentro con hierro."
+      },
+      "checkpoint": {
+        "id": "preparativos",
+        "titulo": "Los preparativos del caballero",
+        "mayor": true
+      }
+    },
+    {
+      "id": "AV2-I1-04",
+      "tramo": "El nombre del rocín",
+      "contexto": "Al ver a su viejo y flaco rocín, el hidalgo piensa que un caballo destinado a servir a un caballero famoso no puede seguir sin un nombre distinguido.",
+      "personaje": "El hidalgo",
+      "pregunta": "¿Qué hará con el nombre de su caballo?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Conservará el nombre común de rocín porque es un animal modesto."
+        },
+        {
+          "id": "b",
+          "texto": "Pensará durante cuatro días y acabará llamándolo Rocinante."
+        },
+        {
+          "id": "c",
+          "texto": "Lo bautizará Babieca en recuerdo del caballo del Cid."
+        }
+      ],
+      "correcta": "b",
+      "consecuencia": "Después de imaginar, descartar y rehacer nombres durante cuatro días, decide llamarlo Rocinante.",
+      "explicacion": "El nombre le parece alto y significativo: evoca lo que el animal había sido y su nueva dignidad imaginada.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_01/p1_c01_r04_rocin_pre.webp",
+        "alt": "El hidalgo contempla a su viejo rocín, antes de darle nombre."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_01/p1_c01_r04_rocin_pre.webp",
+        "alt": "El viejo rocín recibe el nombre de Rocinante, explicado en el texto."
+      }
+    },
+    {
+      "id": "AV2-I1-05",
+      "tramo": "La señora de sus pensamientos",
+      "contexto": "Tras llamarse don Quijote de la Mancha, el hidalgo considera que todavía le falta una dama a quien dedicar sus futuras hazañas.",
+      "personaje": "Don Quijote",
+      "pregunta": "¿Cómo elegirá a la señora de sus pensamientos?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Buscará una princesa desconocida que lo nombre caballero."
+        },
+        {
+          "id": "b",
+          "texto": "Preguntará al barbero a qué dama debe servir."
+        },
+        {
+          "id": "c",
+          "texto": "Recordará a Aldonza Lorenzo y le dará el nombre de Dulcinea del Toboso."
+        }
+      ],
+      "correcta": "c",
+      "consecuencia": "Piensa en Aldonza Lorenzo, una labradora de quien estuvo enamorado sin que ella lo supiera, y decide llamarla Dulcinea del Toboso.",
+      "explicacion": "No ocurre un encuentro entre ambos: don Quijote transforma a Aldonza en dama ideal mediante el nombre.",
+      "pasajeId": "DQ.P1.C01.P0005",
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_01/p1_c01_r05_dama_pensamientos_pre.webp",
+        "alt": "Don Quijote reflexiona solo sobre la dama que le falta."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_01/p1_c01_r05_dama_pensamientos_pre.webp",
+        "alt": "Don Quijote imagina a su dama, cuyo nombre revela la narración."
+      },
+      "checkpoint": {
+        "id": "identidad",
+        "titulo": "Rocinante, don Quijote y Dulcinea",
+        "mayor": true
+      }
+    }
+  ]
+}

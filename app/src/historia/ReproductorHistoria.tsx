@@ -258,6 +258,7 @@ export default function ReproductorHistoria({ catalogo, onSalir }: Props) {
     <ContenedorCine
       plano={plano}
       estado="narracion"
+      contenidoClave={`${posicion}:${lecturaAmplia ? 'amplia' : 'normal'}`}
       reducirMovimiento={reducirMovimiento}
       cargar={leerAsset}
       cabecera={cabecera}

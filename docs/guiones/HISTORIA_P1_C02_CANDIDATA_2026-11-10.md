@@ -2,7 +2,7 @@
 
 **Estado:** EN_REVISIÓN, NO ACTIVABLE. **Fecha:** 2026-11-10. **Fuente exclusiva:** `content/textos/gutenberg_2000/El_Quijote.txt`, DQ.SRC.0005 / DQ.ED.0003, Primera Parte, capítulo II, líneas 1233–1450. **Autoridad:** DC-30, DC-31, DC-32, TS-001, DC-28.
 
-No interpretar una referencia visual de la tabla como aprobación o presencia física en `main`. Las seis imágenes Historia y la preimagen Aventura R04 fueron **aprobadas por el propietario** pero aún no localizadas físicamente en el árbol GitHub revisado. El ID de episodio para activar I.2 requiere resolver el conflicto contractual documentado en el informe de integración. No hay integración jugable ni QA en interfaz.
+No interpretar una referencia visual de la tabla como aprobación o presencia física en `main`. Las seis imágenes Historia y la preimagen Aventura R04 fueron **aprobadas por el propietario** pero aún no localizadas físicamente en el árbol GitHub revisado. El propietario ha aprobado la identidad técnica independiente `capituloId: DQ.P1.C02` / `episodioId: DQ.P1.C02.E01`; la decisión está registrada en el mapa editorial y en el informe de integración. No hay integración jugable ni QA en interfaz.
 
 **Especificación de entrega:** 11 escenas, 25 intervenciones; textos completos visibles incluso sin audio; pausa/repetición/retroceso, sin scroll sobre imagen; sin adelantar la investidura de I.3.
 
@@ -188,6 +188,6 @@ No interpretar una referencia visual de la tabla como aprobación o presencia f�
 
 - Mantener todas las adaptaciones etiquetadas `ADAPTACION_FIEL`; solo H06-I02 es `CITA_LITERAL`, literalmente cotejada con el corpus.
 - La secuencia y las anclas se registran arriba; no identificar acciones imaginadas como hechos físicos.
-- Resolver `episodioId` antes de crear un catálogo activable; no tocar el guardado v2 de I.8 ni las escenas I.1.
+- Utilizar el episodio independiente aprobado `DQ.P1.C02.E01` cuando se creen los catálogos de I.2; conservar intactos I.1, I.8 y sus guardados.
 - Integrar únicamente los WebP originales aprobados con bytes verificables y DC-35; después resolver imagen por beat con ID de manifiesto y ejecutar QA TS-001/DC-28.
 - Hasta disponer de los medios, este documento **no sustituye** `content/historia/parte_1/capitulo_02.json`.

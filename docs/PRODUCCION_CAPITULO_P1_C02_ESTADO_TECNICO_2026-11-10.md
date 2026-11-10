@@ -112,18 +112,20 @@ C. Horadar una caña para hacer llegar el vino hasta su boca.
 
 **Postimágenes de Aventura:** las cinco consecuencias requieren selección cronológica y aprobación específica; no asignar en el JSON imágenes ajenas al desenlace. La imagen de la caña de H10 será candidata a consecuencia R05 **solo una vez** incorporada y revisada. No sustituir la R04 por `p1_c02_celada_reparacion_pre.webp`: describe un hecho del capítulo I. No reutilizar `p1_c02_moza_venta_pre.webp` antes de la reacción de las mujeres ni como sustituto de R04.
 
-## 3. Contradicción real de identificación de episodio — BLOQUEO DE ACTIVACIÓN
+## 3. Identificador de episodio — RESUELTO por decisión del propietario (2026-11-10)
 
-- `docs/MAPA_EPISODIOS_Y_CAPITULOS.md` propone en **borrador** que `DQ.P1.C01.E01` agrupe I.1 e I.2; la ficha física `content/piloto/episodes/DQ.P1.C01.E01.json` enumera por ahora **solo** `DQ.P1.C01`.
-- `tools/editorial_validation/validar_aventura.py` exige `episodioId.startsWith(capituloId + ".E")`, por lo que rechaza `DQ.P1.C01.E01` para `DQ.P1.C02`.
-- `app/src/capitulos/registro.ts` construye los IDs de escena desde `episodioId`; reutilizar `DQ.P1.C01.E01` entre capítulos causaría colisión de `S01`, `S02`, etc. La persistencia por episodio/mode también requiere aislamiento.
-- No inventar `DQ.P1.C02.E01` ni cambiar la agrupación editorial sin resolver explícitamente contrato e invariantes. La decisión vinculante de software/guardado y DC-32 prevalecen sobre la tabla **provisional** del mapa para impedir una activación incompatible; conservar el conflicto documentado y cerrado a nivel de ejecución.
+- Para **I.1** se conserva `capituloId: "DQ.P1.C01"` y `episodioId: "DQ.P1.C01.E01"`, sin migraciones ni cambios en los guardados existentes.
+- Para **I.2** se aprueba `capituloId: "DQ.P1.C02"` y `episodioId: "DQ.P1.C02.E01"`, en ambos catálogos declarativos de Aventura e Historia y en su futura ficha de capítulo.
+- `docs/MAPA_EPISODIOS_Y_CAPITULOS.md` se ha actualizado para **retirar la agrupación provisional** I.1 + I.2. Esto no altera ni resuelve otras agrupaciones propuestas.
+- Esta elección respeta el validador `tools/editorial_validation/validar_aventura.py`, que comprueba que el episodio se ancle en el capítulo, y evita colisiones de `DQ.P1.C01.E01.S01` con `DQ.P1.C02.E01.S01` en el resolvedor `app/src/capitulos/registro.ts`.
+- La persistencia `app/src/historia/persistencia.ts` ya separa las claves por modo y episodio; no requiere cambios ni afecta al piloto I.8.
+- **Resuelto exclusivamente el punto de identidad.** El capítulo continúa no activable por imágenes/posimágenes y QA pendientes. La decisión no equivale a incorporar ni aprobar automáticamente los JSON de juego.
 
 ## 4. Puerta técnica siguiente
 
 1. Disponer de **bytes auténticos** de R04 y las seis imágenes aceptadas de Historia; conservar formato y nombres verificados, calcular SHA-256, derechos, registro/ID, fase, alt y revisión; incorporar con DC-35 y SHA final.
 2. Revisar R01 (puente como recreación) y las postimágenes de las cinco rondas; no confundir aceptación de preimágenes con aprobación de cada consecuencia.
-3. Reconciliar identificación por capítulo/episodio sin romper I.1, I.8 ni guardados v2; luego crear `content/aventura/parte_1/capitulo_02.json` y `content/historia/parte_1/capitulo_02.json` válidos y no hardcodeados.
+3. Crear los catálogos declarativos de I.2 con `capituloId: DQ.P1.C02` y el **episodio aprobado** `DQ.P1.C02.E01` cuando se complete el inventario de imágenes, se validen las consecuencias y proceda la activación. No cambiar I.1, I.8 ni los guardados v2.
 4. Añadir ficha a `content/capitulos/registro.json` solo cuando sea autorizada y activable, usando las pantallas existentes.
 5. Ejecutar `validar_aventura.py`, pruebas TypeScript, compilación, checks pertinentes Rust, QA visual DC-28/TS-001 1920×1080, 1366×768, 1280×800, teclado, mute, movimiento reducido, texto ampliado y offline; registrar resultados **reales**.
 

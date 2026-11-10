@@ -18,11 +18,23 @@ El encargo exige varias perspectivas por episodio (§2.1). Método propuesto par
 las fases *before/question/reveal/after* que las acuarelas no cubran (encargo §4.7.5), siempre identificadas como RECREACION_ARTISTICA.
 Las cifras se validarán midiendo el piloto de seis capítulos antes de extrapolar a los 126 (encargo §4.8: no extrapolar sin ponderar).
 
+## Identificadores técnicos aprobados para I.1 e I.2 (2026-11-10)
+
+**Decisión expresa del propietario:** los capítulos I.1 e I.2 comparten continuidad literaria, pero funcionan como **episodios técnicos independientes** en Aventura e Historia, con progreso propio por modo y sin colisión de escenas:
+
+| Capítulo | `capituloId` | `episodioId` | Alcance |
+|---|---|---|---|
+| I.1 | `DQ.P1.C01` | `DQ.P1.C01.E01` | Conserva el piloto y sus progresos |
+| I.2 | `DQ.P1.C02` | `DQ.P1.C02.E01` | Nuevo episodio técnico; pendiente de medios y activación |
+
+Esta resolución **sustituye solo** la agrupación I.1 + I.2 anteriormente propuesta abajo, sin decidir otras agrupaciones futuras. La ficha existente `content/piloto/episodes/DQ.P1.C01.E01.json` sigue circunscrita a I.1. El validador DC-34 exige que `episodioId` esté anclado en el capítulo del JSON; `app/src/capitulos/registro.ts` genera escenas con ese identificador y `app/src/historia/persistencia.ts` guarda por modo y episodio. No modificar los guardados de I.1 ni I.8. **La aprobación del identificador no autoriza activar I.2** sin recursos y QA conformes.
+
 ## Episodios multicapítulo PROPUESTOS (borrador)
 
+La antigua agrupación I.1 + I.2 se ha retirado de esta tabla por decisión aprobada; las siguientes agrupaciones siguen siendo propuestas, no asignaciones técnicas automáticas.
+
 | ID | Capítulos | Título provisional |
-|---|---|---|
-| DQ.P1.C01.E01 | I.1, I.2 | Preparación y primera salida |
+|---|---|---|}
 | DQ.P1.C03.E01 | I.3, I.4, I.5 | Armarse caballero; Andrés; regreso |
 | DQ.P1.C08.E01 | I.8, I.9 | Molinos y batalla con el vizcaíno |
 | DQ.P1.C12.E01 | I.12, I.13, I.14 | Marcela y Grisóstomo |

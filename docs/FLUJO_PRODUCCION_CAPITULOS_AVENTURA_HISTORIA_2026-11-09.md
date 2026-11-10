@@ -63,7 +63,20 @@ Entregar **primero las rondas candidatas de Aventura**, con una ficha por ronda;
 
 La entrega editorial **no contiene prompts de nuevas imágenes** mientras el propietario no haya indicado qué planos faltan.
 
-## 3. Comprobación de imágenes y autoridad del propietario
+## 3. Historia: textos y escenas después de Aventura, ANTES de juzgar la aptitud visual (DC-36)
+
+Tras redactar Aventura y **antes de evaluar como apropiadas o no las imágenes**, se entrega un **guion candidato completo de Historia** del mismo capítulo:
+
+- Desglose secuencial de escenas y beats; desarrollo condensado, claro, atractivo y **fiel a Cervantes**.
+- Texto del narrador y parlamentos con procedencia localizable; distinguir cita literal de adaptación narrativa.
+- Referencia del texto original para cada intervención o unidad narrativa relevante.
+- Orden cronológico correcto, ritmo dramático, humor y desarrollo de personajes sin revelar escenas futuras.
+- Imagen prevista para cada intervención/beat, identificando **cuáles ya están disponibles**, cuáles pueden reutilizarse desde Aventura y cuáles siguen faltando.
+- **TS-001:** todos los textos de voces de narrador/personajes deben permanecer visibles completos en pantalla incluso sin audio; ninguna elipsis en la interfaz por la existencia de sonido.
+
+Como el borrador de Historia se prepara antes del control de aptitud, **la revisión del propietario es conjunta para Aventura e Historia**: contrastar recursos con ambos guiones, entregar listado de carencias, esperar su confirmación y redactar **solo** los prompts de las faltantes. La revisión final debe maximizar reutilización legítima Aventura/Historia sin degradar la puesta en escena.
+
+## 4. Comprobación de imágenes y autoridad del propietario
 
 Después de disponer de **las rondas y sus consecuencias de Aventura Y los textos/escenas/beat de Historia**, **el propietario revisa personalmente qué imágenes existen**, si son apropiadas para cada uno de esos momentos y cuáles faltan. Dirección puede facilitar una lista de necesidades y candidatos con referencias de catálogo, pero **no sustituye la validación del propietario** ni encarga arte automáticamente.
 
@@ -73,7 +86,7 @@ Distinguir por unidad: `EXISTE_Y_APROBADA`, `EXISTE_PENDIENTE_REVISION`, `NO_APT
 
 **Reutilización intermodal:** preferir una misma imagen para Aventura e Historia cuando represente el mismo hecho y aparezca en el mismo punto cronológico; no duplicar archivos o encargos por modo. La preimagen de **cada ronda distinta** debe seguir siendo específica y no reveladora conforme a DC-24; reutilizar entre **modos** no autoriza usar una escena genérica repetida para diferentes rondas ni mostrar una consecuencia antes de tiempo. Historia puede requerir planos adicionales para sostener una narración visualmente rica.
 
-## 4. Prompts artísticos: únicamente para las imágenes confirmadas como faltantes
+## 5. Prompts artísticos: únicamente para las imágenes confirmadas como faltantes
 
 **Solo después de que el propietario confirme las carencias**, Dirección entrega **un prompt independiente por imagen necesaria**, listo para enviar al diseñador. El propietario solicita las imágenes y **las valida personalmente**; el diseñador no debe generar variantes no pedidas, reemplazar originales ni activar medios por iniciativa propia.
 
@@ -88,19 +101,6 @@ Cada prompt incluirá:
 **Fidelidad total al libro original:** no inventar acciones, diálogos, causalidad, simultaneidad, personajes ni objetos como si Cervantes los hubiera descrito. Cuando el texto no precise un rasgo físico, vestuario, postura, hora o decorado, **indicar que es una decisión visual no especificada por la fuente** y proponer una solución sobria y compatible con el periodo; nunca presentarla como un dato textual. Si la escena no puede concretarse sin inventarla, elevar el problema al propietario en vez de generar un prompt engañoso.
 
 No confundir las paráfrasis editoriales del juego con citas literales de la novela.
-
-## 5. Historia: textos y escenas después de Aventura, ANTES de juzgar la aptitud visual (DC-36)
-
-Tras redactar Aventura y **antes de evaluar como apropiadas o no las imágenes**, se entrega un **guion candidato completo de Historia** del mismo capítulo:
-
-- Desglose secuencial de escenas y beats; desarrollo condensado, claro, atractivo y **fiel a Cervantes**.
-- Texto del narrador y parlamentos con procedencia localizable; distinguir cita literal de adaptación narrativa.
-- Referencia del texto original para cada intervención o unidad narrativa relevante.
-- Orden cronológico correcto, ritmo dramático, humor y desarrollo de personajes sin revelar escenas futuras.
-- Imagen prevista para cada intervención/beat, identificando **cuáles ya están disponibles**, cuáles pueden reutilizarse desde Aventura y cuáles siguen faltando.
-- **TS-001:** todos los textos de voces de narrador/personajes deben permanecer visibles completos en pantalla incluso sin audio; ninguna elipsis en la interfaz por la existencia de sonido.
-
-Como el borrador de Historia se prepara antes del control de aptitud, **la revisión del propietario es conjunta para Aventura e Historia**: contrastar recursos con ambos guiones, entregar listado de carencias, esperar su confirmación y redactar **solo** los prompts de las faltantes. La revisión final debe maximizar reutilización legítima Aventura/Historia sin degradar la puesta en escena.
 
 ## 6. Integración GitHub de imágenes aprobadas
 
@@ -124,4 +124,4 @@ Por capítulo conservar una matriz mínima de **ronda/beat → fuente → preima
 
 **Aventura lista editorialmente** solo si las rondas y consecuencias tienen apoyo textual verificable y el propietario revisó las necesidades visuales. **Historia lista editorialmente** solo con guion/TS-001 y cobertura visual revisados. **Capítulo integrado** solo si los archivos y datos autorizados constan en `main`, las pruebas pertinentes han pasado, los medios usados tienen derechos y la aceptación editorial/visual del propietario está registrada. No declarar terminado por tener una lista de escenas o prompts.
 
-**Inicio vigente:** Primera Parte, capítulo I. Entrega inmediata: **rondas de anticipación**, sin adelantar el guion de Historia ni generar imágenes hasta la revisión del propietario.
+**Inicio vigente:** Primera Parte, capítulo I. La **primera entrega** presenta las rondas candidatas de anticipación de Aventura; **después** se prepara el guion candidato completo de Historia (TS-001). La evaluación de aptitud de imágenes existentes se realiza **solo con los contenidos de ambos modos disponibles** y por revisión del propietario. No redactar prompts de arte faltante antes de su confirmación ni generar imágenes sin encargo expreso.

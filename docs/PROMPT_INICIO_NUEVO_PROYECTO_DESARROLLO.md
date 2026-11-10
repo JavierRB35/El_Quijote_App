@@ -119,14 +119,14 @@ Criterios nucleares para orientar la comprobación, **sin sustituir el pliego**:
 
 **Ningún miembro del equipo producirá imágenes por iniciativa propia.** La intervención del artista es puntual, por encargo concreto canalizado por el propietario. No generar prompts de imágenes faltantes hasta que el propietario haya revisado la lista de necesidades del capítulo y confirmado las ausencias.
 
-## 8. Producción de contenidos: secuencia cerrada DC-30
+## 8. Producción de contenidos: secuencia vigente DC-30 actualizada por DC-36
 
-**Orden obligatorio por capítulo:** 
-`Aventura (rondas candidatas) → revisión del propietario e inventario visual → prompts solo para faltantes confirmadas → Historia (guion y escenas) → revisión final de reutilización → validación e integración autorizada`.
+**Orden obligatorio por capítulo (DC-36, 2026-11-10):**
+`Aventura (rondas candidatas) → Historia (guion, escenas e intervenciones candidatas con TS-001) → evaluación visual conjunta por el propietario → prompts solo para faltantes confirmadas → aprobación, validación e integración autorizada`.
 
-Para la **primera entrega de cada capítulo**, presentar **solo Aventura**: ID provisional, momento previo, personaje que actuará, anticipación, tres alternativas, única correcta, consecuencia canónica, fuente exacta, preimagen ideal, imagen posterior si corresponde y posibilidad de reutilizar con Historia. No adelantar el guion Historia ni generar imágenes. **Capítulo de inicio indicado:** Primera Parte, capítulo I; su estado editorial debe comprobarse en GitHub antes de iniciar o repetir trabajo.
+Para la **primera entrega de cada capítulo**, presentar **solo Aventura**: ID provisional, momento previo, personaje que actuará, anticipación, tres alternativas, única correcta, consecuencia canónica, fuente exacta, preimagen ideal, imagen posterior si corresponde y posibilidad de reutilizar con Historia. Esta entrega inicial no adelanta el guion de Historia ni autoriza generar imágenes; **sí debe continuarse con el borrador completo de Historia antes de decidir si las imágenes son aptas**. **Capítulo de inicio indicado:** Primera Parte, capítulo I; su estado editorial debe comprobarse en GitHub antes de iniciar o repetir trabajo.
 
-Después de revisar las rondas, **el propietario indica qué imágenes existen y cuáles faltan**. Solo para las ausencias confirmadas, redactar prompts completos ajustados a la documentación visual y al original. Tras la revisión de Aventura e inventario, desarrollar Historia del mismo capítulo con **TS-001** y referencias exactas; revisar de nuevo carencias visuales. Mantener aprobación editorial, visual y publicación como estados diferentes.
+Tras las rondas de Aventura, desarrollar el guion de Historia del mismo capítulo con **TS-001** y referencias DC-31, identificando escenas, beats e intervenciones. Solo entonces el propietario contrasta los recursos existentes con las necesidades narrativas concretas de **ambos modos** e indica cuáles son aptos y cuáles faltan. Un inventario técnico previo puede localizar rutas, pero no acredita aptitud. Redactar prompts completos solo para las carencias confirmadas; preservar la reutilización intermodal segura, el control antiespoiler y la separación entre aprobación editorial, visual y publicación.
 
 ## 9. Arquitectura, integración y seguridad
 

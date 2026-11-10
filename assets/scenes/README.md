@@ -94,3 +94,9 @@ A04 solo puede revelarse tras la consecuencia del ataque; A05 es la preimagen qu
 Se integran dos WebP originales de la ronda `AV2-I3-04`, 1672 × 941 px (calidad 82): **A07** `pre`, preparativos de investidura sin golpear, y **A08** `post`, espaldarazo improvisado con la espada de don Quijote. IDs de catálogo `DQ.MED.900276`–`DQ.MED.900277`. Sus rutas, SHA-256, Git SHA, anclas de texto, alt, procedencia y aprobación constan en `manifest.json`.
 
 La preimagen A07 no revela la respuesta de la ronda; la consecuencia A08 solo aparece después de «Descubrir qué sucede». Su eventual reutilización en Historia H09–H10 depende de respetar los textos exactos del guion y el instante narrado. **No se activan** rondas ni guiones, no se declara superado QA DC-28/TS-001, ni se autoriza distribución. H-A, en preparación artística y todavía pendiente de aceptación visual, no forma parte de esta integración.
+
+## Capítulo III — H-A y H-B aprobadas visualmente (2026-11-10)
+
+Se integran dos imágenes cinematográficas `STORY` para Historia: **H-A** (diálogo socarrón y consejos prácticos del ventero, H03–H04) y **H-B** (pedradas desde lejos, don Quijote protegido por la adarga junto al pozo y ventero pidiendo detenerse, H07). Los WebP originales de 1672 × 941 px a calidad 82 reciben IDs provisionales `DQ.MED.900278`–`DQ.MED.900279`; el catálogo documenta rutas, dimensiones, hashes, referencias literarias, alt, origen, aprobación y riesgos.
+
+Estos planos pertenecen al **Modo Historia**, no sustituyen preimágenes específicas de Aventura y deben presentarse únicamente en sus beats exactos, con texto íntegro TS-001. La integración no activa guiones ni certifica QA de texto sobre imagen DC-28, derechos de redistribución o fidelidad literaria directamente cotejada con el corpus extenso. H-C, tras detectar un defecto anatómico, ha sido corregida como candidata, pero **su nueva versión todavía no tiene aprobación** y no forma parte de esta entrega.

@@ -23,7 +23,11 @@ La R02 **no queda visualmente aceptada**: la preimagen de vela fue considerada c
 
 ## Historia y reservas editoriales
 
-Se emplean las escenas nuevas A01/A02, H-A, A04, H-B, A05/A06, A07/A08, H-C/H-D y se referencian como **candidatas no activadas** las antiguas de vela (H05), arriero-pozo (H06 y transición H07), libro-de-cuentas (H09) e investidura (H10). H-B no se muestra hasta el relato de las piedras; H-D no se muestra hasta la salida. El uso contextual de arriero-pozo en H07-I01 para un **segundo** arriero requiere revisión de continuidad, pues un mismo personaje visible no debe parecer atacado dos veces.
+Se emplean las escenas nuevas A01/A02, H-A, A04, H-B, A05/A06, A07/A08, H-C/H-D y se referencian como **candidatas no activadas** las antiguas de vela (H05), arriero-pozo (H06), libro-de-cuentas (H09) e investidura (H10). H07-I01 reutiliza el plano de **vela de armas** como transición tras el primer ataque: Cervantes dice que don Quijote vuelve a pasearse ante la pila, sin dar a entender que el primer arriero sea golpeado de nuevo. H-B no se muestra hasta la intervención que narra las piedras; H-D, solamente en la partida. Este plano H07 continúa sujeto a QA visual por proceder de la biblioteca anterior.
+
+## Evidencia técnica automatizada
+
+Para el SHA `21db299120a7622f85784ab3853f27c7964a4f5e`, GitHub Actions [validar-contrato · 42892846953](https://github.com/JavierRB35/El_Quijote_App/actions/runs/42892846953) terminó con **success** en sus tres trabajos: contratos y medios DC-35, React/TypeScript y tests, y Tauri/Rust. Es evidencia **automatizada de ese commit**, no QA de composición ni permiso de activación. Este ajuste de continuidad H07 deberá superar otra ejecución de CI.
 
 ## Puertas para declarar capítulo COMPLETO
 

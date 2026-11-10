@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "package_id": "el-quijote-visual-pilot-2026-11-09-v16",
+  "package_id": "el-quijote-visual-pilot-2026-11-10-v17",
   "generated_on": "2026-11-06",
   "production_state": "visual_pilot_not_editorially_approved",
   "source_media_policy": "Only original AI recreations; no Tusell or Doré illustrations extracted or included",
@@ -7025,8 +7025,35 @@
       "textual_locator_status": "pending_direct_source_cotejo",
       "rights_status": "original_generated_asset_review_on_redistribution",
       "review_notes_es": "Aprobación visual expresa del propietario el 2026-11-09 (DC-35). Historia H07-I02: inmediatamente después del primer golpe de prueba, antes de construir la segunda celada. Fuente editorial trazada en docs/historia/GUION_HISTORIA_P1_C01_2026-11-09.md, I.1, líneas 1163–1169; corpus DQ.ED.0003 / DQ.SRC.0005. Solo el añadido de cartón se rompe; el morrión metálico original queda entero. No mostrar en la preimagen de Aventura R03 ni anticipar refuerzos de hierro o segunda prueba. Deriva visualmente de la referencia aprobada p1_c01_r03_celada_reforzada_post.webp, pero representa un momento anterior diferente. El texto original extenso no pudo descargarse para un cotejo directo en esta intervención. No activar automáticamente; QA DC-28/TS-001 en la aplicación pendiente."
+    },
+    {
+      "id": "p1_c02_r03_mujeres_temor_pre",
+      "candidate_media_id": "DQ.MED.900262",
+      "media_class": "recreacion_ia",
+      "review_state": "aprobada",
+      "title_es": "El temor de las dos mujeres ante don Quijote",
+      "part": 1,
+      "chapter": 2,
+      "episode_key": "p1:c02",
+      "phase": "pre",
+      "spoiler_risk": "low",
+      "relative_path": "assets/scenes/part_1/chapter_02/p1_c02_r03_mujeres_temor_pre.webp",
+      "width_px": 1672,
+      "height_px": 941,
+      "mime_type": "image/webp",
+      "sha256": "22d3d3992dde43ddebb97916adae74fc9fb5aadab34ca54e0d43c5745b8d988f",
+      "source_class": "RECREACION_ARTISTICA",
+      "generated_with": "OpenAI ImageGen",
+      "attribution_es": "Recreación artística generada con IA para El Quijote, noviembre de 2026, por encargo del propietario.",
+      "alt_es": "Dos mujeres retroceden con temor hacia la puerta de una venta ante don Quijote, montado en Rocinante con lanza, adarga y visera bajada.",
+      "preferred_overlay_side": "right",
+      "historical_editorial_status": "approved_owner_visual",
+      "question_spoiler_validation": "pending_in_game_context_qa",
+      "textual_locator_status": "verified_repo_gutenberg_2000",
+      "rights_status": "original_generated_asset_review_on_redistribution",
+      "review_notes_es": "Aprobación visual específica del propietario el 2026-11-10 mediante invocación del protocolo DC-35. Imagen 2 del encargo artístico del capítulo II, Aventura R03, preimagen anterior a que don Quijote alce la visera y hable a las mujeres; reutilización posible en Historia antes de ese diálogo. Fuente literal cotejada con content/textos/gutenberg_2000/El_Quijote.txt, Primera parte, capítulo II, líneas 1325–1338 (DQ.ED.0003 / DQ.SRC.0005). El temor de las mujeres, la lanza, la adarga y la visera bajada están fundamentados; detalle de la arquitectura, vestuario y luz son recreaciones plausibles. Sin Sancho ni ventero. WebP generado y convertido sin alteraciones narrativas desde el original aprobado; no activar automáticamente. QA de superposición de texto DC-28/TS-001 en los modos aún pendiente."
     }
   ],
-  "catalog_version": "0.5.2",
-  "last_updated_on": "2026-11-09"
+  "catalog_version": "0.5.3",
+  "last_updated_on": "2026-11-10"
 }

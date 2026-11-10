@@ -18,7 +18,7 @@ C. Proseguir como caballero ya reconocido sin ocuparse del asunto.
 
 **Canónica:** B. **Consecuencia (solo después de descubrir):** Decide hacerse armar caballero por el primero que encuentre y sigue la ruta que escoge Rocinante.
 
-**Fuente:** Parte I, capítulo II, líneas 1240–1259. **Preimagen prevista:** `p1_c02_primera_salida_pre` — Borrador existente: puente no documentado; pendiente revisión visual. **Postimagen:** Pendiente: consecuencia fiel, a seleccionar.
+**Fuente:** Parte I, capítulo II, líneas 1240–1259. **Preimagen prevista:** `p1_c02_primera_salida_pre` — Borrador existente: puente no documentado; pendiente revisión visual. **Postimagen candidata:** `p1_c02_h03_camino_monologos_story.webp` (continuidad de la marcha, revisar salto temporal).
 
 **pasajeId:** `null` hasta que exista archivo real de pasaje fraccionado en el catálogo. No inventar IDs.
 
@@ -36,7 +36,7 @@ C. Rodear la supuesta fortaleza para comprobar sus defensas.
 
 **Canónica:** B. **Consecuencia (solo después de descubrir):** Detiene las riendas esperando una trompeta; al no producirse, se acerca a la venta y oye el cuerno de un porquero.
 
-**Fuente:** Parte I, capítulo II, líneas 1305–1332. **Preimagen prevista:** `p1_c02_r02_venta_llegada_pre` — Aprobada y física en main. **Postimagen:** Pendiente: selección posterior al desenlace.
+**Fuente:** Parte I, capítulo II, líneas 1305–1332. **Preimagen prevista:** `p1_c02_r02_venta_llegada_pre` — Aprobada y física en main. **Postimagen candidata:** `p1_c02_h05_espera_trompeta_story.webp` (detención y espera ante la venta, después de la decisión R02).
 
 **pasajeId:** `null` hasta que exista archivo real de pasaje fraccionado en el catálogo. No inventar IDs.
 
@@ -54,7 +54,7 @@ C. Exigir que llamen al señor del castillo antes de hablar.
 
 **Canónica:** A. **Consecuencia (solo después de descubrir):** Alza la visera de papelón y les pide que no teman; ellas acaban riéndose de su habla y apariencia.
 
-**Fuente:** Parte I, capítulo II, líneas 1325–1352. **Preimagen prevista:** `p1_c02_r03_mujeres_temor_pre` — Aprobada y física en main. **Postimagen:** Historia H06 nuevo fotograma de risas, no presente aún en main.
+**Fuente:** Parte I, capítulo II, líneas 1325–1352. **Preimagen prevista:** `p1_c02_r03_mujeres_temor_pre` — Aprobada y física en main. **Postimagen candidata:** `p1_c02_h06_visera_risas_story.webp` (visera levantada y risas, solo tras resolver R03).
 
 **pasajeId:** `null` hasta que exista archivo real de pasaje fraccionado en el catálogo. No inventar IDs.
 
@@ -72,7 +72,7 @@ C. Buscar herramientas para desmontar por completo el casco.
 
 **Canónica:** B. **Consecuencia (solo después de descubrir):** No consiente que corten los nudos y conserva toda la noche la celada puesta.
 
-**Fuente:** Parte I, capítulo II, líneas 1388–1395. **Preimagen prevista:** `p1_c02_r04_celada_cintas_pre` — Aprobada por propietario; binario aún no localizado en main. **Postimagen:** Pendiente: consecuencia posterior fiel.
+**Fuente:** Parte I, capítulo II, líneas 1388–1395. **Preimagen prevista:** `p1_c02_r04_celada_cintas_pre` — Aprobada por propietario; binario aún no localizado en main. **Postimagen candidata:** `p1_c02_r05_cena_sin_cana_pre.webp` (conserva celada durante la cena; revisar solapamiento con preimagen R05).
 
 **pasajeId:** `null` hasta que exista archivo real de pasaje fraccionado en el catálogo. No inventar IDs.
 
@@ -90,7 +90,7 @@ C. Horadar una caña para hacer llegar el vino hasta su boca.
 
 **Canónica:** C. **Consecuencia (solo después de descubrir):** El ventero agujerea una caña y vierte el vino por un extremo, mientras don Quijote bebe por el otro.
 
-**Fuente:** Parte I, capítulo II, líneas 1433–1441. **Preimagen prevista:** `p1_c02_r05_cena_sin_cana_pre` — Aprobada y física en main. **Postimagen:** Historia H10 nuevo fotograma de la caña, no presente aún en main.
+**Fuente:** Parte I, capítulo II, líneas 1433–1441. **Preimagen prevista:** `p1_c02_r05_cena_sin_cana_pre` — Aprobada y física en main. **Postimagen candidata:** `p1_c02_h10_cana_vino_story.webp` (consecuencia visible del uso de caña, solo tras resolver R05).
 
 **pasajeId:** `null` hasta que exista archivo real de pasaje fraccionado en el catálogo. No inventar IDs.
 
@@ -110,12 +110,26 @@ C. Horadar una caña para hacer llegar el vino hasta su boca.
 | Historia H10 | `p1_c02_h10_cana_vino_story.webp` | Aprobada, catalogada e integrada en `main` |
 | Historia H11 | `p1_c02_h11_silbato_castrador_story.webp` | Aprobada, catalogada e integrada en `main` |
 
-**Postimágenes de Aventura:** las cinco consecuencias requieren selección cronológica y aprobación específica; no asignar en el JSON imágenes ajenas al desenlace. La imagen de la caña de H10 ya está integrada y es candidata a consecuencia R05 **solo después** de la selección y revisión cronológica específica de Aventura. No sustituir la R04 por `p1_c02_celada_reparacion_pre.webp`: describe un hecho del capítulo I. No reutilizar `p1_c02_moza_venta_pre.webp` antes de la reacción de las mujeres ni como sustituto de R04.
+**Postimágenes de Aventura:** se propone una **matriz de cinco postimágenes candidatas** para evaluación conjunta de Aventura e Historia conforme a DC-36; no equivale a aprobación funcional o activación. Todas las candidatas existen en `main`. Exigen comprobación antiespoiler y de composición en interfaz. R01 presenta un salto temporal y R04 reutiliza la preimagen de la ronda posterior. La preimagen específica de Aventura I.2 R04 aún no consta en `main`. No sustituirla por `p1_c02_celada_reparacion_pre.webp`, `p1_c01_r04_rocin_pre.webp` ni `p1_c01_r01_lectura_pre.webp`: los tres representan acciones de otro momento. No mostrar `p1_c02_moza_venta_pre.webp` antes de la reacción de las mujeres.
+
+### Matriz de reutilización posterior a Aventura e Historia — evaluación DC-36
+
+Las cinco rondas candidatas de Aventura y las 25 intervenciones de Historia ya existen como propuestas editoriales en este repositorio. Con ellas se cotejan **ahora** los medios aprobados de Historia y Aventura, sin declarar aprobada automáticamente su nueva función como postimagen.
+
+| Ronda | Postimagen candidata que consta en `main` | Alcance y QA pendiente |
+|---|---|---|
+| R01 | `p1_c02_h03_camino_monologos_story.webp` | Muestra la marcha que continúa tras la duda, pero más tarde; revisión temporal |
+| R02 | `p1_c02_h05_espera_trompeta_story.webp` | Detiene a Rocinante y espera la señal; consecuencia tras responder |
+| R03 | `p1_c02_h06_visera_risas_story.webp` | Visera alzada, reacción posterior; no usar como preimagen de R03 |
+| R04 | `p1_c02_r05_cena_sin_cana_pre.webp` | Don Quijote aún lleva celada; compartir con la siguiente preimagen exige QA antiespoiler |
+| R05 | `p1_c02_h10_cana_vino_story.webp` | Solución exacta y reveladora: dar vino a través de una caña; post únicamente |
+
+**Estado de decisión:** `CANDIDATA_EN_REVISION`. El propietario puede valorar las cinco propuestas frente al montaje Aventura + Historia; ninguna queda activada por esta matriz. La condición antiespoiler DC-24, integridad DC-28 y fidelidad DC-31/32 son obligatorias. R04 necesita todavía una **preimagen propia** del hecho de las cintas verdes; no reemplazarla con imágenes de I.1.
 
 ### Aclaración de reutilización y excepción H07 (propietario, 2026-11-10)
 
 - `assets/scenes/part_1/chapter_01/p1_c01_r04_rocin_pre.webp` **sí existe** y figura **aprobada** en el manifiesto. Su contenido es el hidalgo ante Rocinante antes de darle nombre (Aventura **I.1 R04**); por fidelidad a DC-32 **no se reutiliza** como preimagen de **I.2 R04**, cuya acción trata de las cintas de la celada.
-- El nombre exacto `p1_c01_r01_rocin_pre.webp` **no se encuentra en el árbol de `main`** comprobado. El recurso de Aventura I.1 R01 catalogado es `p1_c01_r01_lectura_pre.webp`; no inventar alias ni rutas físicas.
+- **Corrección del propietario confirmada:** el nombre es `assets/scenes/part_1/chapter_01/p1_c01_r01_lectura_pre.webp`, **presente en `main` y aprobado**. Representa al hidalgo leyendo antes de comprar más libros, como preimagen de Aventura **I.1 R01**. `p1_c01_r01_rocin_pre.webp` era una denominación errónea; no crear ese alias ni usar la lectura como la primera salida de I.2.
 - El propietario **autoriza expresamente** mantener `p1_c02_h07_ventero_acogida_story.webp` con sus dimensiones originales **1670 × 941 px** frente al objetivo general 1672 × 941. La excepción es **única para este recurso** y se registra en `tools/editorial_validation/validar_medios_aprobados.py`; no modificar, estirar ni regenerar el archivo. Se preservan las comprobaciones de SHA-256, MIME, dimensiones reales versus manifiesto, aprobación y la futura revisión DC-28/TS-001 de presentación en pantalla.
 - Estado de Historia I.2 actualizado tras el commit `0592752a4f976e1eece9a874df1555213f7e5125`: sus seis imágenes nuevas constan catalogadas y físicamente integradas. La aprobación visual y técnica del recurso no equivale a activar Historia o Aventura.
 
@@ -131,7 +145,7 @@ C. Horadar una caña para hacer llegar el vino hasta su boca.
 ## 4. Puerta técnica siguiente
 
 1. Resolver la preimagen R04 de Aventura I.2 que aún no consta en `main`; las seis imágenes aprobadas de Historia ya están integradas y catalogadas. Comprobar en la activación final derechos, integridad de medios, referencias y QA DC-28/TS-001.
-2. Revisar R01 (puente como recreación) y las postimágenes de las cinco rondas; no confundir aceptación de preimágenes con aprobación de cada consecuencia.
+2. Revisar R01 (puente como recreación) y someter a evaluación visual conjunta DC-36 las cinco postimágenes candidatas, con atención a cronología R01 y solapamiento R04/R05; no confundir aprobación del archivo con la de todas sus funciones.
 3. Crear los catálogos declarativos de I.2 con `capituloId: DQ.P1.C02` y el **episodio aprobado** `DQ.P1.C02.E01` cuando se complete el inventario de imágenes, se validen las consecuencias y proceda la activación. No cambiar I.1, I.8 ni los guardados v2.
 4. Añadir ficha a `content/capitulos/registro.json` solo cuando sea autorizada y activable, usando las pantallas existentes.
 5. Ejecutar `validar_aventura.py`, pruebas TypeScript, compilación, checks pertinentes Rust, QA visual DC-28/TS-001 1920×1080, 1366×768, 1280×800, teclado, mute, movimiento reducido, texto ampliado y offline; registrar resultados **reales**.

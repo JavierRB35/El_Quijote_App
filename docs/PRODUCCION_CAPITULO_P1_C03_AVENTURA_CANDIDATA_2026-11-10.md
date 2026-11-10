@@ -1,6 +1,6 @@
 # Capítulo I.3 — Propuesta inicial de Aventura
 
-**Fecha:** 2026-11-10. **Estado:** CANDIDATA / REVISIÓN PROPIETARIO. **No activado ni aprobado; no incluye guion de Historia ni prompts de imágenes.**
+**Fecha:** 2026-11-10. **Estado:** APROBADA EDITORIALMENTE por el propietario (4 rondas, decisión expresa «sí. apruebo»); **NO ACTIVADA**. La aprobación no afecta a QA de imágenes ni derechos. Guion Historia y prompts se registran en documentos independientes de GitHub.
 
 **Repositorio:** JavierRB35/El_Quijote_App, main. **Base revisada:** be9124d1c83e54bf720b11b5275cf21cba0e6d50 (el commit reciente modifica CI y tests de medios/episodios, no las fuentes de esta propuesta). **Fuente canónica:** content/textos/gutenberg_2000/El_Quijote.txt; DQ.ED.0003 / DQ.SRC.0005; Parte I, capítulo III, líneas 1455–1664. Los números de línea se refieren al contenido de GitHub cotejado en esta intervención.
 
@@ -126,6 +126,10 @@ La **norma de diseño preexistente**, documentada en `docs/DIRECCION_ARTISTICA_P
 **Balance de Aventura:** de cuatro rondas candidatas, **como máximo una** puede aprovechar la única preimagen compositivamente aceptable existente, siempre que su momento y antiespoiler sean correctos. Las **otras tres previas necesitarán recursos distintos**, si las cuatro rondas se aprueban. Tampoco se han asignado imágenes de consecuencia aptas para Aventura. Antes de declarar FALTA_CONFIRMADA, revisar el resto del inventario existente y obtener confirmación del propietario.
 
 **Estado y límites:** las cuatro entradas del `assets/scenes/manifest.json` continúan `review_state=borrador`; la selección del propietario es de **idoneidad compositiva por modo**, no una orden de aceptación binaria DC-35, cambio de metadatos, integración jugable, validación de licencias ni QA de pantalla. No generar imágenes ni redactar prompts sin la confirmación de carencias.
+
+## Actualización de seguimiento — aprobación editorial y elección B (2026-11-10)
+
+El propietario aprobó las **cuatro rondas** y el guion Historia (11 escenas/30 intervenciones) en su respuesta «sí. apruebo». Posteriormente eligió **«B»** entre cerrar carencias y redactar prompts **solo si las consideraba confirmadas**. Se preparan encargos para las posiciones de Aventura **A01, A02, A04, A05, A06, A07, A08** y para las complementarias de Historia **H-A, H-B, H-C, H-D** en [`docs/PROMPTS_CAPITULO_P1_C03_FALTANTES_2026-11-10.md`](PROMPTS_CAPITULO_P1_C03_FALTANTES_2026-11-10.md). **A03 permanece pendiente** de dictaminar si cabe reutilizar `p1_c03_vela_armas_pre.webp` sin alterar la pregunta ni el instante. No hay recursos nuevos generados ni instrucción para catalogarlos como aprobados.
 
 ## Puerta de aprobación y siguiente fase
 

@@ -71,3 +71,19 @@ test('guardados de episodios distintos nunca se restauran como I.8', () => {
   assert.equal(p.indice, 1);
   assert.equal(p.episodio, episodio);
 });
+
+test('IDs de episodio técnicos únicos y anclados al capítulo en la selección activable', () => {
+  const ids = new Set<string>();
+  for (const ficha of registro.capitulos) {
+    assert.ok(ficha.episodioId.startsWith(ficha.capituloId + '.E'), ficha.capituloId);
+    assert.ok(!ids.has(ficha.episodioId), 'episodio duplicado: ' + ficha.episodioId);
+    ids.add(ficha.episodioId);
+  }
+  const i1 = registro.capitulos.find((c: any) => c.capituloId === 'DQ.P1.C01');
+  assert.equal(i1?.episodioId, 'DQ.P1.C01.E01');
+  // El capítulo II podrá publicarse únicamente con su propio episodio.
+  const i2 = registro.capitulos.find((c: any) => c.capituloId === 'DQ.P1.C02');
+  if (i2) assert.equal(i2.episodioId, 'DQ.P1.C02.E01');
+  const i8 = registro.capitulos.find((c: any) => c.capituloId === 'DQ.P1.C08');
+  assert.equal(i8?.episodioId, 'DQ.P1.C08.E01');
+});

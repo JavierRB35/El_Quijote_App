@@ -1,3 +1,13 @@
+## Actualización de integración técnica, 2026-11-10
+
+**I.2 se incorpora al registro de capítulos de Fase 1**, con cinco rondas de Aventura y 11 escenas/25 intervenciones de Historia, ambas en JSON declarativos con `capituloId: DQ.P1.C02` y `episodioId: DQ.P1.C02.E01`. Se deja el estado `piloto_integrado` y la revisión visual `pendiente` para las pruebas locales del propietario; los cinco `pasajeId` quedan nulos y declarados, sin inventar fichas.
+
+**Decisión artística y editorial motivada:** la antigua pregunta R04 sobre cortar las cintas carecía de una preimagen propia y específica aprobada. Se reemplaza solo la cuarta anticipación de Aventura por la acción canónica del ventero (estribo, ayuda al desmontaje y caballeriza: I.2, 1353–1390), usando la preimagen aprobada `p1_c02_h07_ventero_acogida_story.webp`. Las cintas verdes permanecen íntegramente narradas en Historia H08, con prolongación visual del momento previo de la acogida. No se utilizan las imágenes inexactas de celada retirada ni ninguna imagen del capítulo I. **No se precisa producción artística adicional.** La imagen R01 de la salida ha quedado catalogada como aprobada conforme a la aceptación previa del propietario; el puente es recreación escenográfica no literal. Las cinco consecuencias de Aventura se relacionan con imágenes ya existentes del mismo capítulo y solo aparecen al revelar la respuesta.
+
+**QA pendiente del propietario en local:** comprobar los cinco momentos de Aventura, los 25 textos visibles sin audio, accesibilidad de controles, sin truncamientos ni desplazamiento interno prohibido DC-28, adaptación 1920×1080 / 1366×768 / 1280×800, teclado, movimiento reducido, guardado/reanudación, antiespoiler y continuidad de la nueva R04. La excepción 1670×941 de Historia H07 queda intacta. Los puntos contradictorios del historial inferior quedan sustituidos por esta actualización y no representan el estado jugable actual.
+
+---
+
 # I.2 — estado técnico, Aventura y bloqueos para integración
 
 **Fecha:** 2026-11-10. **Base GitHub verificada:** `f1ecdb98159b9a17c97fbc138545229b2611971e`. **Fuente:** `content/textos/gutenberg_2000/El_Quijote.txt` (DQ.SRC.0005), líneas 1233–1450. **Estado:** preparado editorialmente, **NO ACTIVADO**; decisión DC-30/DC-32.

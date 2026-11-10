@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0.0",
+  "capituloId": "DQ.P1.C02",
+  "episodioId": "DQ.P1.C02.E01",
+  "estado_editorial": "piloto_integrado",
+  "revision_visual": "pendiente",
+  "fuente": {
+    "id": "DQ.SRC.0005",
+    "ruta": "content/textos/gutenberg_2000/El_Quijote.txt"
+  },
+  "titulo": "La primera salida y la venta",
+  "cierre": {
+    "titulo": "El caballero que aún esperaba ser armado",
+    "texto": "Don Quijote ha llegado a una venta que imagina castillo. Todavía no ha sido armado caballero: la investidura pertenece al capítulo III."
+  },
+  "escenas": [
+    {
+      "id": "H01",
+      "titulo": "La salida furtiva",
+      "intervenciones": [
+        {
+          "id": "H01-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Una mañana de julio, antes de que amaneciera, don Quijote salió sin avisar a nadie. Se armó, montó en Rocinante y abandonó su casa por la puerta falsa de un corral.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1236–1244",
+          "imagen": "p1_c02_primera_salida_pre"
+        },
+        {
+          "id": "H01-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Se sentía lleno de alegría. Por fin había comenzado la empresa con la que esperaba deshacer agravios y enderezar injusticias.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1236–1245",
+          "imagen": "p1_c02_primera_salida_pre"
+        }
+      ]
+    },
+    {
+      "id": "H02",
+      "titulo": "El caballero que aún no lo era",
+      "intervenciones": [
+        {
+          "id": "H02-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Pero apenas llegó al campo, una idea terrible lo hizo vacilar: no había sido armado caballero. Según las leyes de caballería que conocía, no debía combatir como si ya lo fuera.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1246–1252",
+          "imagen": "p1_c02_primera_salida_pre"
+        },
+        {
+          "id": "H02-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Resolvió hacerse armar caballero por la primera persona con la que se encontrara. Tranquilizado con aquella decisión, dejó que Rocinante escogiera el camino.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1252–1259",
+          "imagen": "p1_c02_primera_salida_pre"
+        }
+      ]
+    },
+    {
+      "id": "H03",
+      "titulo": "Las glorias imaginadas",
+      "intervenciones": [
+        {
+          "id": "H03-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Mientras atravesaba el campo de Montiel, don Quijote imaginaba que un sabio escribiría algún día la historia de sus extraordinarias hazañas.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1261–1277",
+          "imagen": "p1_c02_h03_camino_monologos_story"
+        },
+        {
+          "id": "H03-I02",
+          "hablante": "Don Quijote",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "¡Qué dichosos serán los tiempos en que se conozcan mis hazañas! Que el cronista de mi historia no se olvide de mi buen Rocinante.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1279–1284",
+          "imagen": "p1_c02_h03_camino_monologos_story"
+        },
+        {
+          "id": "H03-I03",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Después dirigía a Dulcinea palabras de enamorado, imitando el lenguaje de sus libros. El sol calentaba con fuerza y el día pasó sin una aventura digna de contar.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1286–1304",
+          "imagen": "p1_c02_h03_camino_monologos_story"
+        }
+      ]
+    },
+    {
+      "id": "H04",
+      "titulo": "Una venta al anochecer",
+      "intervenciones": [
+        {
+          "id": "H04-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Al anochecer, don Quijote y Rocinante estaban rendidos por el cansancio y el hambre. Buscando un lugar donde descansar, descubrió una venta cerca del camino.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1305–1311",
+          "imagen": "p1_c02_r02_venta_llegada_pre"
+        },
+        {
+          "id": "H04-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Se apresuró a llegar. Junto a la puerta se encontraban dos mujeres que viajaban hacia Sevilla con unos arrieros.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1310–1315",
+          "imagen": "p1_c02_r02_venta_llegada_pre"
+        }
+      ]
+    },
+    {
+      "id": "H05",
+      "titulo": "El castillo que no existía",
+      "intervenciones": [
+        {
+          "id": "H05-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "A los ojos de don Quijote, aquella humilde venta era un castillo con torres resplandecientes y puente levadizo. Detuvo las riendas de Rocinante y esperó que anunciaran su llegada con una trompeta.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1315–1323",
+          "imagen": "p1_c02_h05_espera_trompeta_story"
+        },
+        {
+          "id": "H05-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "La señal tardaba. Entonces sonó el cuerno de un porquero que reunía a sus animales. Don Quijote creyó escuchar el anuncio que esperaba y se acercó a la venta, muy satisfecho.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1323–1332",
+          "imagen": "p1_c02_h05_espera_trompeta_story"
+        }
+      ]
+    },
+    {
+      "id": "H06",
+      "titulo": "Las damas de la venta",
+      "intervenciones": [
+        {
+          "id": "H06-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Al verlo llegar con lanza, adarga y armadura, las dos mujeres sintieron miedo y se disponían a entrar en la venta. Don Quijote comprendió su temor, levantó la visera de papelón y les habló serenamente.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1332–1336",
+          "imagen": "p1_c02_r03_mujeres_temor_pre"
+        },
+        {
+          "id": "H06-I02",
+          "hablante": "Don Quijote",
+          "tipo_texto": "CITA_LITERAL",
+          "texto_visible": "No fuyan las vuestras mercedes ni teman desaguisado alguno; ca a la orden de caballería que profeso non toca ni atañe facerle a ninguno, cuanto más a tan altas doncellas como vuestras presencias demuestran.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1338–1340",
+          "imagen": "p1_c02_h06_visera_risas_story"
+        },
+        {
+          "id": "H06-I03",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Al escucharse llamar doncellas, las mujeres no pudieron contener la risa. Don Quijote se ofendió y les pidió mesura, pero su lenguaje y aspecto solo consiguieron aumentar las risas.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1342–1352",
+          "imagen": "p1_c02_h06_visera_risas_story"
+        }
+      ]
+    },
+    {
+      "id": "H07",
+      "titulo": "El ventero y el castellano",
+      "intervenciones": [
+        {
+          "id": "H07-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "En aquel momento salió el ventero, un hombre corpulento y pacífico. Ante la extraña figura del caballero, decidió hablarle con cortesía y ofrecerle posada, aunque advirtió que no había cama.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1353–1362",
+          "imagen": "p1_c02_h07_ventero_acogida_story"
+        },
+        {
+          "id": "H07-I02",
+          "hablante": "Don Quijote",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Para mí, señor castellano, cualquier cosa basta. Mis arreos son las armas y mi descanso, el pelear.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1364–1369",
+          "imagen": "p1_c02_h07_ventero_acogida_story"
+        }
+      ]
+    },
+    {
+      "id": "H08",
+      "titulo": "Los nudos de la celada",
+      "intervenciones": [
+        {
+          "id": "H08-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "El ventero le sostuvo el estribo para ayudarlo a bajar del caballo. Don Quijote desmontó con dificultad y encargó que cuidaran muy bien de Rocinante. Las dos mujeres comenzaron a quitarle las armas.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1381–1390",
+          "imagen": "p1_c02_h07_ventero_acogida_story"
+        },
+        {
+          "id": "H08-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Le retiraron el peto y el espaldar, pero no consiguieron quitarle la celada, atada con cintas verdes. Había que cortar los nudos; don Quijote se negó y permaneció toda la noche con la celada puesta.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1390–1395",
+          "imagen": "p1_c02_h07_ventero_acogida_story"
+        }
+      ]
+    },
+    {
+      "id": "H09",
+      "titulo": "Unas damas desconcertadas",
+      "intervenciones": [
+        {
+          "id": "H09-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Imaginando que aquellas mujeres eran nobles damas de un castillo, don Quijote les recitó unos versos de Lanzarote. Luego les reveló su nombre y el de su caballo: don Quijote de la Mancha y Rocinante.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1395–1412",
+          "imagen": "p1_c02_h07_ventero_acogida_story"
+        },
+        {
+          "id": "H09-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Las mujeres no sabían qué responder a semejantes discursos y solo le preguntaron si quería comer. Era viernes y en la venta no había más pescado que el llamado abadejo, bacalao o truchuela.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1414–1424",
+          "imagen": "p1_c02_h07_ventero_acogida_story"
+        }
+      ]
+    },
+    {
+      "id": "H10",
+      "titulo": "Una cena imposible",
+      "intervenciones": [
+        {
+          "id": "H10-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Pusieron la mesa a la puerta de la venta, para disfrutar del fresco. Le sirvieron bacalao mal preparado y un pan tan oscuro como sus armas. Comer resultó difícil: la celada le impedía llevarse los alimentos a la boca.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1433–1438",
+          "imagen": "p1_c02_r05_cena_sin_cana_pre"
+        },
+        {
+          "id": "H10-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Una de las mujeres tuvo que darle de comer. Pero cuando intentaron darle de beber, ni siquiera aquella ayuda bastó.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1436–1439",
+          "imagen": "p1_c02_r05_cena_sin_cana_pre"
+        },
+        {
+          "id": "H10-I03",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "El ventero encontró la solución: agujereó una caña, puso un extremo en la boca de don Quijote y vertió vino por el otro. El caballero aceptó la incomodidad antes que consentir que cortaran las cintas.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1439–1441",
+          "imagen": "p1_c02_h10_cana_vino_story"
+        }
+      ]
+    },
+    {
+      "id": "H11",
+      "titulo": "La música del supuesto castillo",
+      "intervenciones": [
+        {
+          "id": "H11-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Llegó entonces un castrador de puercos que hizo sonar varias veces su silbato de cañas. Don Quijote interpretó aquellos sonidos como la música con la que lo agasajaban en el castillo.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1443–1446",
+          "imagen": "p1_c02_h11_silbato_castrador_story"
+        },
+        {
+          "id": "H11-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "En su imaginación, el pescado humilde era un manjar, las mujeres eran damas y el ventero, castellano de una fortaleza. Solo una cosa le preocupaba: aún no había sido armado caballero y creía que, sin esa ceremonia, no podía emprender legítimamente sus aventuras.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo II, líneas 1445–1450",
+          "imagen": "p1_c02_h11_silbato_castrador_story"
+        }
+      ]
+    }
+  ]
+}

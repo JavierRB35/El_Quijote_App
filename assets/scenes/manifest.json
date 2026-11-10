@@ -64,7 +64,7 @@
       "id": "p1_c02_primera_salida_pre",
       "candidate_media_id": "DQ.MED.900003",
       "media_class": "recreacion_ia",
-      "review_state": "borrador",
+      "review_state": "aprobada",
       "title_es": "La primera salida",
       "part": 1,
       "chapter": 2,
@@ -81,11 +81,11 @@
       "attribution_es": "Recreación artística generada con IA para El Quijote, 2026",
       "alt_es": "Don Quijote cabalga solo por un puente de piedra al amanecer, dejando atrás un pueblo manchego.",
       "preferred_overlay_side": "right",
-      "historical_editorial_status": "pending_review",
-      "question_spoiler_validation": "pending_per_question",
-      "textual_locator_status": "pending_reference_edition",
+      "historical_editorial_status": "approved_owner_visual",
+      "question_spoiler_validation": "pending_in_game_context_qa",
+      "textual_locator_status": "verified_repo_gutenberg_2000",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Mantener ausencia de Sancho en la primera salida."
+      "review_notes_es": "Aprobación visual global de imágenes de Aventura I.2 comunicada por el propietario el 2026-11-10 y autorización de cerrar el capítulo. La salida antes del amanecer sobre Rocinante es textual (I.2, líneas 1236–1245); puente y paisaje son recreación escenográfica no descrita, no un hecho afirmado por Cervantes. Revisar DC-28/TS-001 en aplicación antes de publicar."
     },
     {
       "id": "p1_c02_venta_pre",

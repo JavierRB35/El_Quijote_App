@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0.0",
+  "capituloId": "DQ.P1.C02",
+  "episodioId": "DQ.P1.C02.E01",
+  "estado_editorial": "piloto_integrado",
+  "revision_visual": "pendiente",
+  "fuente": {
+    "id": "DQ.SRC.0005",
+    "ruta": "content/textos/gutenberg_2000/El_Quijote.txt"
+  },
+  "pendientes_editoriales": [
+    "AV2-I2-01",
+    "AV2-I2-02",
+    "AV2-I2-03",
+    "AV2-I2-04",
+    "AV2-I2-05"
+  ],
+  "rondas": [
+    {
+      "id": "AV2-I2-01",
+      "tramo": "La duda del caballero",
+      "contexto": "Tras salir de su casa antes del amanecer, don Quijote recuerda que no ha sido armado caballero y duda de si puede continuar su primera aventura.",
+      "personaje": "Don Quijote",
+      "pregunta": "¿Qué resolverá hacer para poder continuar su primera salida?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Regresar a casa y aplazar la aventura."
+        },
+        {
+          "id": "b",
+          "texto": "Pedir que lo arme caballero la primera persona con quien se encuentre."
+        },
+        {
+          "id": "c",
+          "texto": "Proseguir como caballero ya reconocido sin ocuparse del asunto."
+        }
+      ],
+      "correcta": "b",
+      "consecuencia": "Decide hacerse armar caballero por el primero que encuentre y sigue la ruta que escoge Rocinante.",
+      "explicacion": "Cervantes describe esta decisión en el campo, antes de llegar a la venta (I.2, líneas 1246–1259).",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_02/p1_c02_primera_salida_pre.webp",
+        "alt": "Don Quijote sale solo de su lugar sobre Rocinante antes del amanecer."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_02/p1_c02_h03_camino_monologos_story.webp",
+        "alt": "Don Quijote continúa el camino por el campo de Montiel mientras imagina sus hazañas."
+      }
+    },
+    {
+      "id": "AV2-I2-02",
+      "tramo": "La venta que parece castillo",
+      "contexto": "Cansado y hambriento al anochecer, don Quijote ve una venta que imagina castillo y se acerca a ella montado sobre Rocinante.",
+      "personaje": "Don Quijote",
+      "pregunta": "¿Qué hará poco antes de llegar a la venta?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Entrar inmediatamente y pedir una habitación."
+        },
+        {
+          "id": "b",
+          "texto": "Detener a Rocinante y aguardar una señal que anuncie su llegada."
+        },
+        {
+          "id": "c",
+          "texto": "Rodear la supuesta fortaleza para comprobar sus defensas."
+        }
+      ],
+      "correcta": "b",
+      "consecuencia": "Detiene las riendas de Rocinante a la espera de una trompeta imaginaria; después llega a la puerta al oír el cuerno de un porquero.",
+      "explicacion": "La venta no es un castillo: sus torres, enano y trompeta solo existen en la imaginación del protagonista (I.2, líneas 1315–1332).",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_02/p1_c02_r02_venta_llegada_pre.webp",
+        "alt": "Don Quijote cabalga hacia una venta rural con dos mujeres ante la entrada."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_02/p1_c02_h05_espera_trompeta_story.webp",
+        "alt": "Don Quijote detiene a Rocinante frente a la venta y espera una señal."
+      },
+      "checkpoint": {
+        "id": "entrada_venta",
+        "titulo": "Primera etapa: del camino a la venta"
+      }
+    },
+    {
+      "id": "AV2-I2-03",
+      "tramo": "Las dos mujeres de la venta",
+      "contexto": "Dos mujeres retroceden asustadas al ver llegar a don Quijote con armadura, lanza y adarga a la puerta de una venta.",
+      "personaje": "Don Quijote",
+      "pregunta": "¿Cómo responderá don Quijote al temor de las mujeres?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Alzar la visera y hablarles con cortesía caballeresca."
+        },
+        {
+          "id": "b",
+          "texto": "Alejarse de la venta sin dirigirles la palabra."
+        },
+        {
+          "id": "c",
+          "texto": "Exigir que llamen al señor del castillo antes de hablar."
+        }
+      ],
+      "correcta": "a",
+      "consecuencia": "Alza la visera de papelón y procura tranquilizarlas como si fueran nobles doncellas; las mujeres terminan riéndose de su lenguaje.",
+      "explicacion": "El temor se transforma en risa por la conducta caballeresca del forastero (I.2, líneas 1332–1352).",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_02/p1_c02_r03_mujeres_temor_pre.webp",
+        "alt": "Dos mujeres temen al caballero armado que llega con la visera bajada."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_02/p1_c02_h06_visera_risas_story.webp",
+        "alt": "Dos mujeres ríen mientras don Quijote les habla con la visera alzada."
+      }
+    },
+    {
+      "id": "AV2-I2-04",
+      "tramo": "La acogida del ventero",
+      "contexto": "El ventero sale de la venta y recibe a un extraño caballero aún montado sobre Rocinante. Le ofrece posada sin cama y lo invita a apearse.",
+      "personaje": "El ventero",
+      "pregunta": "¿Qué hará el ventero para atender al caballero y a Rocinante?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Le exigirá que abandone la venta con su caballo."
+        },
+        {
+          "id": "b",
+          "texto": "Sostendrá el estribo para que baje y acomodará a Rocinante en la caballeriza."
+        },
+        {
+          "id": "c",
+          "texto": "Mandará a las dos mujeres que armen caballero inmediatamente al visitante."
+        }
+      ],
+      "correcta": "b",
+      "consecuencia": "El ventero sostiene el estribo, don Quijote desmonta con mucha dificultad y Rocinante queda acomodado en la caballeriza; las mujeres empiezan a desarmar al huésped.",
+      "explicacion": "Se cambia la antigua anticipación sobre las cintas, por falta de una preimagen apta, por la acción documentada en I.2, líneas 1353–1390. Las cintas conservan su explicación íntegra en Historia H08.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_02/p1_c02_h07_ventero_acogida_story.webp",
+        "alt": "El ventero recibe a don Quijote todavía montado sobre Rocinante."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_02/p1_c02_r05_cena_sin_cana_pre.webp",
+        "alt": "Don Quijote ya está alojado y cena con la celada puesta mientras una mujer lo ayuda."
+      }
+    },
+    {
+      "id": "AV2-I2-05",
+      "tramo": "Cómo dar de beber a un caballero",
+      "contexto": "En la cena, don Quijote conserva la celada y no puede beber normalmente, aunque una de las mujeres consigue darle la comida.",
+      "personaje": "El ventero",
+      "pregunta": "¿Cómo conseguirá el ventero darle vino sin quitarle la celada?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Esperará hasta que don Quijote acceda a quitarse el casco."
+        },
+        {
+          "id": "b",
+          "texto": "Intentará que beba directamente de una copa pequeña."
+        },
+        {
+          "id": "c",
+          "texto": "Horadará una caña para conducir el vino hasta su boca."
+        }
+      ],
+      "correcta": "c",
+      "consecuencia": "El ventero horada una caña y vierte vino por uno de sus extremos, mientras el otro llega a la boca de don Quijote sin quitarle la celada.",
+      "explicacion": "La caña horadada y el rechazo a cortar las cintas aparecen en I.2, líneas 1433–1441.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_02/p1_c02_r05_cena_sin_cana_pre.webp",
+        "alt": "Don Quijote cena con la celada puesta antes de conocer la solución para beber."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_02/p1_c02_h10_cana_vino_story.webp",
+        "alt": "El ventero vierte el vino por una caña hueca para que beba don Quijote."
+      },
+      "checkpoint": {
+        "id": "cierre_venta",
+        "titulo": "El camino del caballero continúa",
+        "mayor": true
+      }
+    }
+  ]
+}

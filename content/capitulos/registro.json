@@ -19,6 +19,23 @@
       }
     },
     {
+      "capituloId": "DQ.P1.C02",
+      "episodioId": "DQ.P1.C02.E01",
+      "etiqueta": "Parte I · Capítulo II",
+      "titulo": "La primera salida y la venta",
+      "resumen": "La salida furtiva de don Quijote, su duda de caballería y la llegada a una venta que imagina castillo.",
+      "descripcionHistoria": "La primera salida, las mujeres, el ventero, las cintas de la celada y la cena, con texto completo aunque el sonido esté desactivado.",
+      "descripcionAventura": "Cinco anticipaciones de acciones canónicas con imágenes específicas y dos checkpoints.",
+      "cierreAventura": {
+        "titulo": "Aún sin ser armado caballero",
+        "texto": "Don Quijote ha llegado a la venta y ha podido cenar sin quitarse la celada. La investidura se contará en el capítulo III."
+      },
+      "cierreHistoria": {
+        "titulo": "El caballero que aún esperaba ser armado",
+        "texto": "Don Quijote ha llegado a una venta que imagina castillo. Todavía no ha sido armado caballero: la investidura pertenece al capítulo III."
+      }
+    },
+    {
       "capituloId": "DQ.P1.C08",
       "episodioId": "DQ.P1.C08.E01",
       "etiqueta": "Parte I · Capítulo VIII",

@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "capituloId": "DQ.P1.C03",
+  "episodioId": "DQ.P1.C03.E01",
+  "estado_editorial": "en_revision",
+  "revision_visual": "pendiente",
+  "fuente": {
+    "id": "DQ.SRC.0005",
+    "ruta": "content/textos/gutenberg_2000/El_Quijote.txt"
+  },
+  "pendientes_editoriales": [
+    "AV2-I3-01",
+    "AV2-I3-02",
+    "AV2-I3-03",
+    "AV2-I3-04"
+  ],
+  "rondas": [
+    {
+      "id": "AV2-I3-01",
+      "tramo": "El favor de la caballeriza",
+      "contexto": "Don Quijote, terminada la cena, ha llamado al ventero para hablar en la caballeriza. Continúa preocupado por no estar armado caballero; todavía no ha recibido promesa alguna.",
+      "personaje": "Don Quijote",
+      "pregunta": "¿Cómo intentará don Quijote asegurarse de que el ventero le conceda el favor?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Le solicitará que lo arme caballero inmediatamente, sin más preámbulo."
+        },
+        {
+          "id": "b",
+          "texto": "Se arrodillará y se negará a levantarse hasta obtener su promesa."
+        },
+        {
+          "id": "c",
+          "texto": "Aplazará la petición hasta el amanecer para hacerla ante los huéspedes."
+        }
+      ],
+      "correcta": "b",
+      "consecuencia": "el ventero promete concederle el favor y don Quijote le pide que lo arme caballero al día siguiente, después de velar las armas aquella noche.",
+      "explicacion": "La súplica ocurre en la caballeriza antes de que el ventero conozca la petición de investidura (I.3, L1458–1479).",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_03/p1_c03_a01_encuentro_caballeriza_pre.webp",
+        "alt": "Don Quijote habla de pie con el ventero en una caballeriza humilde, antes de pedirle que lo arme caballero."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_03/p1_c03_a02_promesa_ventero_post.webp",
+        "alt": "Don Quijote se arrodilla ante el ventero en la caballeriza; este accede resignado a concederle un favor."
+      }
+    },
+    {
+      "id": "AV2-I3-02",
+      "tramo": "El arriero y las armas",
+      "contexto": "Don Quijote vela sus armas en la pila junto al pozo. Un arriero necesita dar agua a sus animales; desoye la advertencia y aparta, arrojándolas, las armas del caballero.",
+      "personaje": "Don Quijote",
+      "pregunta": "¿Cómo reaccionará don Quijote ante el arriero que ha desoído su aviso?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Acudirá al ventero a pedir que lo reprenda."
+        },
+        {
+          "id": "b",
+          "texto": "Tomará la lanza con ambas manos y golpeará al arriero."
+        },
+        {
+          "id": "c",
+          "texto": "Trasladará silenciosamente las armas al interior de la venta."
+        }
+      ],
+      "correcta": "b",
+      "consecuencia": "golpea al arriero en la cabeza y lo derriba; luego recupera las armas y reanuda la vela. No se inventa un combate de esgrima ni se adelanta la agresión posterior a otro arriero.",
+      "explicacion": "Tras arrojar el arriero las armas, don Quijote lo golpea con la lanza y retoma la vela (I.3, L1553–1575).",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_03/p1_c03_vela_armas_pre.webp",
+        "alt": "Recreación cinematográfica de vela armas en el capítulo 3 de la parte 1."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_03/p1_c03_a04_golpe_primer_arriero_post.webp",
+        "alt": "Don Quijote golpea con una lanza al primer arriero junto al pozo de la venta, después de que este apartara sus armas."
+      },
+      "checkpoint": {
+        "id": "vela_interrumpida",
+        "titulo": "La vela de armas interrumpida"
+      }
+    },
+    {
+      "id": "AV2-I3-03",
+      "tramo": "El ventero intenta evitar otra desgracia",
+      "contexto": "El ventero observa las consecuencias de dos ataques a arrieros y la pedrea contra don Quijote. Los presentes se retiran y el caballero reanuda su vigilia; el ventero teme una nueva desgracia.",
+      "personaje": "El ventero",
+      "pregunta": "¿Qué decidirá el ventero para detener aquella situación?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Exigirá que la vigilia continúe sin interrupción hasta el alba."
+        },
+        {
+          "id": "b",
+          "texto": "Apresurará la investidura para armar caballero a don Quijote cuanto antes."
+        },
+        {
+          "id": "c",
+          "texto": "Cancelará sin más la ceremonia y lo expulsará de la venta."
+        }
+      ],
+      "correcta": "b",
+      "consecuencia": "explica que ha velado bastante y que bastan pescozada y espaldarazo para completar la ceremonia, logrando el consentimiento de don Quijote.",
+      "explicacion": "El ventero decide impedir otra desgracia tras los ataques y la pedrea (I.3, L1605–1625).",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_03/p1_c03_a05_silencio_tras_pedrea_pre.webp",
+        "alt": "Don Quijote reanuda la vela de sus armas con adarga y lanza junto al pozo; el ventero lo contempla preocupado."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_03/p1_c03_a06_ventero_abrevia_ceremonia_post.webp",
+        "alt": "El ventero persuade a don Quijote junto al pozo para abreviar la ceremonia de armarlo caballero."
+      }
+    },
+    {
+      "id": "AV2-I3-04",
+      "tramo": "La investidura improvisada",
+      "contexto": "Para abreviar el trámite, el ventero llega con un libro de cuentas, un muchacho con una vela y las dos mujeres de la venta. Don Quijote se arrodilla a la espera de la ceremonia.",
+      "personaje": "El ventero",
+      "pregunta": "¿Qué gesto ceremonial ejecutará el ventero para armarlo caballero?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Hará llamar a un clérigo para que le imponga un juramento público."
+        },
+        {
+          "id": "b",
+          "texto": "Le dará una pescozada y luego un espaldarazo con su propia espada."
+        },
+        {
+          "id": "c",
+          "texto": "Le entregará un diploma y le exigirá romper una lanza ceremonial."
+        }
+      ],
+      "correcta": "b",
+      "consecuencia": "el ventero simula leer un rito en el libro de cuentas, da los dos golpes ceremoniales y las mujeres ciñen la espada y calzan la espuela. Don Quijote monta a Rocinante y se marcha de la venta.",
+      "explicacion": "La pescozada y el espaldarazo preceden a las intervenciones de la Tolosa y la Molinera (I.3, L1627–1664).",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_03/p1_c03_a07_ceremonia_previa_pre.webp",
+        "alt": "El ventero finge leer un ceremonial en un libro de cuentas ante don Quijote arrodillado, mientras un muchacho sostiene una vela y dos mujeres observan."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_03/p1_c03_a08_espaldarazo_improvisado_post.webp",
+        "alt": "El ventero da un toque ceremonial de espada al don Quijote arrodillado, junto al libro de cuentas y ante las dos mujeres y el muchacho con vela."
+      },
+      "checkpoint": {
+        "id": "investidura",
+        "titulo": "La orden de caballería",
+        "mayor": true
+      }
+    }
+  ]
+}

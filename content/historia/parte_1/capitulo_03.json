@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0.0",
+  "capituloId": "DQ.P1.C03",
+  "episodioId": "DQ.P1.C03.E01",
+  "estado_editorial": "en_revision",
+  "revision_visual": "pendiente",
+  "fuente": {
+    "id": "DQ.SRC.0005",
+    "ruta": "content/textos/gutenberg_2000/El_Quijote.txt"
+  },
+  "titulo": "La graciosa manera de armarse caballero",
+  "cierre": {
+    "titulo": "Caballero por fin, según don Quijote",
+    "texto": "Don Quijote deja la venta montado en Rocinante, convencido de que ha recibido la orden de caballería. El camino continúa en el capítulo IV."
+  },
+  "escenas": [
+    {
+      "id": "H01",
+      "titulo": "Una preocupación durante la cena",
+      "intervenciones": [
+        {
+          "id": "H01-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Abrevió su escasa cena en la venta. A don Quijote le atormentaba aún no haber sido armado caballero, y no podía continuar tranquilo su primera salida.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1458–1461",
+          "imagen": "p1_c03_a01_encuentro_caballeriza_pre"
+        },
+        {
+          "id": "H01-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Llamó al ventero y se retiró con él a la caballeriza. Allí estaba decidido a obtener un favor que consideraba indispensable.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1458–1461",
+          "imagen": "p1_c03_a01_encuentro_caballeriza_pre"
+        }
+      ]
+    },
+    {
+      "id": "H02",
+      "titulo": "La promesa del ventero",
+      "intervenciones": [
+        {
+          "id": "H02-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Don Quijote se arrodilló ante el ventero y se negó a levantarse mientras aquel no le prometiera el favor que iba a pedir.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1459–1479",
+          "imagen": "p1_c03_a02_promesa_ventero_post"
+        },
+        {
+          "id": "H02-I02",
+          "hablante": "Don Quijote",
+          "tipo_texto": "CITA_LITERAL",
+          "texto_visible": "No me levantaré jamás de donde estoy, valeroso caballero, fasta que la vuestra cortesía me otorgue un don que pedirle quiero, el cual redundará en alabanza vuestra y en pro del género humano.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1462–1464",
+          "imagen": "p1_c03_a02_promesa_ventero_post"
+        },
+        {
+          "id": "H02-I03",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "El ventero, confundido, trató inútilmente de levantarlo. Al final le concedió el favor solicitado, sin saber todavía de qué se trataba.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1459–1479",
+          "imagen": "p1_c03_a02_promesa_ventero_post"
+        },
+        {
+          "id": "H02-I04",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Don Quijote le pidió entonces que al día siguiente lo armara caballero. Aquella noche velaría las armas en la capilla del supuesto castillo.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1459–1479",
+          "imagen": "p1_c03_a02_promesa_ventero_post"
+        }
+      ]
+    },
+    {
+      "id": "H03",
+      "titulo": "Las burlas del supuesto castellano",
+      "intervenciones": [
+        {
+          "id": "H03-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "El ventero, socarrón, comprendió que aquel huésped confundía su venta con un castillo y decidió seguirle el juego por divertirse.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1481–1508",
+          "imagen": "p1_c03_ha_conversacion_consejos_story"
+        },
+        {
+          "id": "H03-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Fingió haber recorrido tierras en busca de aventuras, mezclando lugares y fechorías con palabras de caballería. Don Quijote no advirtió la burla.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1481–1508",
+          "imagen": "p1_c03_ha_conversacion_consejos_story"
+        },
+        {
+          "id": "H03-I03",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Le dijo que no había capilla disponible porque estaba derribada, pero que podía velar las armas en el patio y recibir la ceremonia por la mañana.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1481–1508",
+          "imagen": "p1_c03_ha_conversacion_consejos_story"
+        }
+      ]
+    },
+    {
+      "id": "H04",
+      "titulo": "Dinero y camisas limpias",
+      "intervenciones": [
+        {
+          "id": "H04-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "El ventero preguntó si llevaba dinero. Don Quijote respondió que no tenía ni una moneda: jamás había leído que los caballeros andantes lo llevasen.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1510–1539",
+          "imagen": "p1_c03_ha_conversacion_consejos_story"
+        },
+        {
+          "id": "H04-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "El ventero insistió en que hasta los caballeros necesitaban dinero, camisas limpias y remedios para curarse, aunque los libros no se detuvieran en esos detalles.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1510–1539",
+          "imagen": "p1_c03_ha_conversacion_consejos_story"
+        },
+        {
+          "id": "H04-I03",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Don Quijote prometió seguir aquellos consejos. La conversación terminó y dio comienzo la vela de las armas.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1510–1539",
+          "imagen": "p1_c03_ha_conversacion_consejos_story"
+        }
+      ]
+    },
+    {
+      "id": "H05",
+      "titulo": "La vela de armas",
+      "intervenciones": [
+        {
+          "id": "H05-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "En un gran corral junto a la venta, don Quijote puso sus armas sobre una pila al lado de un pozo. Con la adarga al brazo y la lanza en la mano, empezó a pasearse frente a ellas.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1539–1553",
+          "imagen": "p1_c03_vela_armas_pre"
+        },
+        {
+          "id": "H05-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "La noche se cerró con una luna tan clara que los huéspedes pudieron contemplarlo desde lejos. A ratos paseaba; a ratos miraba fijamente sus armas.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1539–1553",
+          "imagen": "p1_c03_vela_armas_pre"
+        }
+      ]
+    },
+    {
+      "id": "H06",
+      "titulo": "La insolencia del primer arriero",
+      "intervenciones": [
+        {
+          "id": "H06-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Un arriero se acercó para dar agua a sus animales. Necesitaba apartar las armas de la pila, pero don Quijote le advirtió que no las tocara.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1553–1575",
+          "imagen": "p1_c03_arriero_pozo_pre"
+        },
+        {
+          "id": "H06-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "El hombre ignoró la amenaza, agarró las correas y arrojó las armas lejos de sí. Don Quijote invocó a Dulcinea antes de responder.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1553–1575",
+          "imagen": "p1_c03_arriero_pozo_pre"
+        },
+        {
+          "id": "H06-I03",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Soltó la adarga, descargó un fuerte golpe de lanza sobre la cabeza del arriero y lo derribó. Después recogió las armas y reanudó la vela como si nada hubiera ocurrido.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1553–1575",
+          "imagen": "p1_c03_a04_golpe_primer_arriero_post"
+        }
+      ]
+    },
+    {
+      "id": "H07",
+      "titulo": "El segundo arriero y las piedras",
+      "intervenciones": [
+        {
+          "id": "H07-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Otro arriero trató de despejar la misma pila para dar agua a sus mulos. Don Quijote, sin decir palabra, lo golpeó también con la lanza y le abrió una grave herida en la cabeza.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1575–1608",
+          "imagen": "p1_c03_arriero_pozo_pre"
+        },
+        {
+          "id": "H07-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Acudieron los presentes. Los compañeros de los heridos le lanzaron piedras desde lejos, mientras él se cubría con la adarga sin abandonar sus armas.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1575–1608",
+          "imagen": "p1_c03_hb_pedrada_guarda_armas_story"
+        },
+        {
+          "id": "H07-I03",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "El ventero les gritó que lo dejaran. Entre sus ruegos y el desafío de don Quijote, la pedrea cesó y los heridos pudieron retirarse.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1575–1608",
+          "imagen": "p1_c03_hb_pedrada_guarda_armas_story"
+        }
+      ]
+    },
+    {
+      "id": "H08",
+      "titulo": "Una ceremonia urgente",
+      "intervenciones": [
+        {
+          "id": "H08-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Al ventero dejaron de divertirle aquellas burlas. Temeroso de otra desgracia, resolvió apresurar la investidura y librarse cuanto antes de aquel huésped.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1610–1625",
+          "imagen": "p1_c03_a05_silencio_tras_pedrea_pre"
+        },
+        {
+          "id": "H08-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Le aseguró que ya había velado suficiente y que bastaban la pescozada y el espaldarazo para armarlo caballero. Don Quijote, deseoso de concluir, aceptó.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1610–1625",
+          "imagen": "p1_c03_a06_ventero_abrevia_ceremonia_post"
+        }
+      ]
+    },
+    {
+      "id": "H09",
+      "titulo": "El libro de las cuentas",
+      "intervenciones": [
+        {
+          "id": "H09-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "El ventero regresó con un libro en el que apuntaba la paja y la cebada de los arrieros. Lo acompañaban un muchacho con un cabo de vela y las dos mujeres de la venta.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1627–1633",
+          "imagen": "p1_c03_ventero_libro_cuentas_pre"
+        },
+        {
+          "id": "H09-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Mandó que don Quijote se arrodillara y fingió leer una oración en aquel libro de cuentas, como si se tratara de un solemne ceremonial.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1627–1633",
+          "imagen": "p1_c03_a07_ceremonia_previa_pre"
+        }
+      ]
+    },
+    {
+      "id": "H10",
+      "titulo": "La improvisada investidura",
+      "intervenciones": [
+        {
+          "id": "H10-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "En mitad de la lectura fingida, el ventero le dio un golpe en el cuello y después otro con su propia espada. Así consumó aquella precipitada investidura.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1631–1642",
+          "imagen": "p1_c03_investidura_post"
+        },
+        {
+          "id": "H10-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Una de las mujeres le ciñó la espada, conteniendo la risa: los golpes que habían presenciado aconsejaban no provocar más al recién armado caballero.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1631–1642",
+          "imagen": "p1_c03_a08_espaldarazo_improvisado_post"
+        },
+        {
+          "id": "H10-I03",
+          "hablante": "La Tolosa",
+          "tipo_texto": "CITA_LITERAL",
+          "texto_visible": "Dios haga a vuestra merced muy venturoso caballero y le dé ventura en lides.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1640–1641",
+          "imagen": "p1_c03_a08_espaldarazo_improvisado_post"
+        }
+      ]
+    },
+    {
+      "id": "H11",
+      "titulo": "La Tolosa, la Molinera y la partida",
+      "intervenciones": [
+        {
+          "id": "H11-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Don Quijote preguntó cómo se llamaba la mujer de la espada. Ella dijo ser la Tolosa, hija de un remendón de Toledo; él le pidió que en adelante se llamara doña Tolosa.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1643–1664",
+          "imagen": "p1_c03_a08_espaldarazo_improvisado_post"
+        },
+        {
+          "id": "H11-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "La otra mujer, la Molinera, hija de un molinero de Antequera, le calzó la espuela y recibió de él el mismo tratamiento de doña.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1643–1664",
+          "imagen": "p1_c03_hc_molinera_espuela_story"
+        },
+        {
+          "id": "H11-I03",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Terminadas aquellas ceremonias apresuradas, don Quijote ensilló a Rocinante, agradeció efusivamente al ventero la merced y salió de la venta. El ventero lo dejó marchar sin cobrarle la posada.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo III, líneas 1643–1664",
+          "imagen": "p1_c03_hd_salida_venta_armado_story"
+        }
+      ]
+    }
+  ]
+}

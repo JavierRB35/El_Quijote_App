@@ -103,14 +103,21 @@ C. Horadar una caña para hacer llegar el vino hasta su boca.
 | Aventura R03 | `p1_c02_r03_mujeres_temor_pre.webp` | Existe, `aprobada` |
 | Aventura R04 | `p1_c02_r04_celada_cintas_pre.webp` | Aceptación del propietario; archivo no encontrado |
 | Aventura R05 | `p1_c02_r05_cena_sin_cana_pre.webp` | Existe, `aprobada` |
-| Historia H03 | `p1_c02_h03_camino_monologos_story.webp` | Aceptada por propietario; archivo no encontrado |
-| Historia H05 | `p1_c02_h05_espera_trompeta_story.webp` | Aceptada por propietario; archivo no encontrado |
-| Historia H06 | `p1_c02_h06_visera_risas_story.webp` | Aceptada por propietario; archivo no encontrado |
-| Historia H07 | `p1_c02_h07_ventero_acogida_story.webp` | Aceptada por propietario; archivo no encontrado |
-| Historia H10 | `p1_c02_h10_cana_vino_story.webp` | Aceptada por propietario; archivo no encontrado |
-| Historia H11 | `p1_c02_h11_silbato_castrador_story.webp` | Aceptada por propietario; archivo no encontrado |
+| Historia H03 | `p1_c02_h03_camino_monologos_story.webp` | Aprobada, catalogada e integrada en `main` |
+| Historia H05 | `p1_c02_h05_espera_trompeta_story.webp` | Aprobada, catalogada e integrada en `main` |
+| Historia H06 | `p1_c02_h06_visera_risas_story.webp` | Aprobada, catalogada e integrada en `main` |
+| Historia H07 | `p1_c02_h07_ventero_acogida_story.webp` | Aprobada e integrada; excepción dimensional autorizada: 1670 × 941 |
+| Historia H10 | `p1_c02_h10_cana_vino_story.webp` | Aprobada, catalogada e integrada en `main` |
+| Historia H11 | `p1_c02_h11_silbato_castrador_story.webp` | Aprobada, catalogada e integrada en `main` |
 
-**Postimágenes de Aventura:** las cinco consecuencias requieren selección cronológica y aprobación específica; no asignar en el JSON imágenes ajenas al desenlace. La imagen de la caña de H10 será candidata a consecuencia R05 **solo una vez** incorporada y revisada. No sustituir la R04 por `p1_c02_celada_reparacion_pre.webp`: describe un hecho del capítulo I. No reutilizar `p1_c02_moza_venta_pre.webp` antes de la reacción de las mujeres ni como sustituto de R04.
+**Postimágenes de Aventura:** las cinco consecuencias requieren selección cronológica y aprobación específica; no asignar en el JSON imágenes ajenas al desenlace. La imagen de la caña de H10 ya está integrada y es candidata a consecuencia R05 **solo después** de la selección y revisión cronológica específica de Aventura. No sustituir la R04 por `p1_c02_celada_reparacion_pre.webp`: describe un hecho del capítulo I. No reutilizar `p1_c02_moza_venta_pre.webp` antes de la reacción de las mujeres ni como sustituto de R04.
+
+### Aclaración de reutilización y excepción H07 (propietario, 2026-11-10)
+
+- `assets/scenes/part_1/chapter_01/p1_c01_r04_rocin_pre.webp` **sí existe** y figura **aprobada** en el manifiesto. Su contenido es el hidalgo ante Rocinante antes de darle nombre (Aventura **I.1 R04**); por fidelidad a DC-32 **no se reutiliza** como preimagen de **I.2 R04**, cuya acción trata de las cintas de la celada.
+- El nombre exacto `p1_c01_r01_rocin_pre.webp` **no se encuentra en el árbol de `main`** comprobado. El recurso de Aventura I.1 R01 catalogado es `p1_c01_r01_lectura_pre.webp`; no inventar alias ni rutas físicas.
+- El propietario **autoriza expresamente** mantener `p1_c02_h07_ventero_acogida_story.webp` con sus dimensiones originales **1670 × 941 px** frente al objetivo general 1672 × 941. La excepción es **única para este recurso** y se registra en `tools/editorial_validation/validar_medios_aprobados.py`; no modificar, estirar ni regenerar el archivo. Se preservan las comprobaciones de SHA-256, MIME, dimensiones reales versus manifiesto, aprobación y la futura revisión DC-28/TS-001 de presentación en pantalla.
+- Estado de Historia I.2 actualizado tras el commit `0592752a4f976e1eece9a874df1555213f7e5125`: sus seis imágenes nuevas constan catalogadas y físicamente integradas. La aprobación visual y técnica del recurso no equivale a activar Historia o Aventura.
 
 ## 3. Identificador de episodio — RESUELTO por decisión del propietario (2026-11-10)
 
@@ -123,7 +130,7 @@ C. Horadar una caña para hacer llegar el vino hasta su boca.
 
 ## 4. Puerta técnica siguiente
 
-1. Disponer de **bytes auténticos** de R04 y las seis imágenes aceptadas de Historia; conservar formato y nombres verificados, calcular SHA-256, derechos, registro/ID, fase, alt y revisión; incorporar con DC-35 y SHA final.
+1. Resolver la preimagen R04 de Aventura I.2 que aún no consta en `main`; las seis imágenes aprobadas de Historia ya están integradas y catalogadas. Comprobar en la activación final derechos, integridad de medios, referencias y QA DC-28/TS-001.
 2. Revisar R01 (puente como recreación) y las postimágenes de las cinco rondas; no confundir aceptación de preimágenes con aprobación de cada consecuencia.
 3. Crear los catálogos declarativos de I.2 con `capituloId: DQ.P1.C02` y el **episodio aprobado** `DQ.P1.C02.E01` cuando se complete el inventario de imágenes, se validen las consecuencias y proceda la activación. No cambiar I.1, I.8 ni los guardados v2.
 4. Añadir ficha a `content/capitulos/registro.json` solo cuando sea autorizada y activable, usando las pantallas existentes.

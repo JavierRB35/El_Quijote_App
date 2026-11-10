@@ -50,6 +50,15 @@ def dimensiones_webp(datos: bytes) -> tuple[int, int]:
     raise ValueError("sin chunk VP8, VP8L o VP8X")
 
 
+# Excepción dimensional expresa del propietario (2026-11-10), limitada a este
+# archivo H07 original: 1670x941. No se altera el binario aprobado ni se amplía
+# la tolerancia a otras imágenes. SHA-256 y dimensiones del manifiesto siguen
+# comprobándose obligatoriamente.
+EXCEPCIONES_DIMENSIONES_I2 = {
+    ("p1_c02_h07_ventero_acogida_story", "assets/scenes/part_1/chapter_02/p1_c02_h07_ventero_acogida_story.webp"): (1670, 941),
+}
+
+
 def ejecutar(raiz: Path = ROOT) -> tuple[list[str], int, list[str]]:
     catalogo = json.loads((raiz / "assets/scenes/manifest.json").read_text(encoding="utf-8"))
     imagenes = catalogo["images"]
@@ -95,7 +104,9 @@ def ejecutar(raiz: Path = ROOT) -> tuple[list[str], int, list[str]]:
         declaradas = (imagen.get("width_px"), imagen.get("height_px"))
         if dimensiones != declaradas:
             errores.append(f"{identificador}: dimensiones reales {dimensiones}, catálogo {declaradas}")
-        if (imagen.get("part"), imagen.get("chapter")) == (1, 2) and dimensiones != (1672, 941):
+        if ((imagen.get("part"), imagen.get("chapter")) == (1, 2)
+                and dimensiones != (1672, 941)
+                and EXCEPCIONES_DIMENSIONES_I2.get((identificador, ruta)) != dimensiones):
             avisos.append(
                 f"{identificador}: {dimensiones[0]}x{dimensiones[1]} frente a 1672x941 "
                 "(pendiente de evaluar la desviación del encargo artístico)"

@@ -2,7 +2,7 @@
 
 **Estado:** EN_REVISIÓN, NO ACTIVABLE. **Fecha:** 2026-11-10. **Fuente exclusiva:** `content/textos/gutenberg_2000/El_Quijote.txt`, DQ.SRC.0005 / DQ.ED.0003, Primera Parte, capítulo II, líneas 1233–1450. **Autoridad:** DC-30, DC-31, DC-32, TS-001, DC-28.
 
-No interpretar una referencia visual de la tabla como aprobación o presencia física en `main`. Las seis imágenes Historia y la preimagen Aventura R04 fueron **aprobadas por el propietario** pero aún no localizadas físicamente en el árbol GitHub revisado. El propietario ha aprobado la identidad técnica independiente `capituloId: DQ.P1.C02` / `episodioId: DQ.P1.C02.E01`; la decisión está registrada en el mapa editorial y en el informe de integración. No hay integración jugable ni QA en interfaz.
+No interpretar una referencia visual de la tabla como aprobación o presencia física en `main`. Las seis imágenes nuevas de Historia I.2 ya están aprobadas, catalogadas e integradas en `main` (commit `0592752a4f976e1eece9a874df1555213f7e5125`). La preimagen específica de Aventura I.2 R04 sigue sin localizarse físicamente; los recursos de Rocinante aprobados para I.1 no son sustitutos narrativamente aptos. El propietario ha aprobado la identidad técnica independiente `capituloId: DQ.P1.C02` / `episodioId: DQ.P1.C02.E01`; la decisión está registrada en el mapa editorial y en el informe de integración. No hay integración jugable ni QA en interfaz.
 
 **Especificación de entrega:** 11 escenas, 25 intervenciones; textos completos visibles incluso sin audio; pausa/repetición/retroceso, sin scroll sobre imagen; sin adelantar la investidura de I.3.
 

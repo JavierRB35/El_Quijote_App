@@ -1,10 +1,12 @@
 # Historia I.3 — Guion candidato para revisión editorial y visual
 
-**Fecha:** 2026-11-10. **Estado:** GUION CANDIDATO / PENDIENTE DE APROBACIÓN; NO ACTIVADO.
+**Fecha:** 2026-11-10. **Estado:** APROBADO EDITORIALMENTE por el propietario («sí. apruebo»), 11 escenas y 30 intervenciones; **NO ACTIVADO**. Permanece pendiente la validación visual, de derechos y TS-001 en interfaz.
 **Fuente única:** `content/textos/gutenberg_2000/El_Quijote.txt` (DQ.ED.0003 / DQ.SRC.0005), Primera Parte, capítulo III, líneas 1455–1664, cotejadas directamente con GitHub. **Alcance:** 11 escenas y 30 intervenciones. **Episodio:** identificador `DQ.P1.C03.E01` solo propuesto como multicapítulo I.3–I.5; no fijar todavía el contrato técnico.
 **Decisión DC-36:** preguntas y consecuencias de Aventura → texto completo de Historia → evaluación de aptitud visual. Estas escenas e intervenciones preceden a la validación definitiva de imágenes.
 
 **TS-001 y DC-28:** cada intervención debe mostrarse entera, legible y vinculada al hablante, con o sin audio; pausa, repetición, retroceso, teclado y texto ampliado. No ocultar, truncar ni desplazar internamente textos sobre imágenes. Las intervenciones se fraccionan editorialmente para favorecer ritmo y composición tipo póster sin omitir sucesos. No se ha efectuado aún QA de pantalla. **Clasificación editorial:** `CITA_LITERAL` solo para palabras cotejadas literalmente; `ADAPTACION_FIEL` para paráfrasis de la narración. No atribuir las paráfrasis a Cervantes como citas.
+
+**Prompts complementarios tras elección B (2026-11-10):** el propietario eligió redactar prompts para las carencias descritas en la matriz conjunta. H-A (conversación), H-B (pedrada), H-C (Molinera) y H-D (partida) constan como encargos documentados en [`docs/PROMPTS_CAPITULO_P1_C03_FALTANTES_2026-11-10.md`](../PROMPTS_CAPITULO_P1_C03_FALTANTES_2026-11-10.md). Las cuatro imágenes existentes mantienen su uso Historia, su clasificación `borrador` y su QA pendiente. Los prompts no son imágenes aprobadas.
 
 ## Guion audiovisual — cronología canónica
 

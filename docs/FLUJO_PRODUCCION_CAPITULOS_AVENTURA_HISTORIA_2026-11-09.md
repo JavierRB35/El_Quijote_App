@@ -20,12 +20,15 @@ Ante una incompatibilidad real: indicar ruta y norma infringida, **no generar ni
 
 **DC-34 (2026-11-09):** una vez revisadas y aprobadas las rondas, sus datos editoriales se registran en el JSON correspondiente de `content/aventura/` del mismo GitHub, bajo el esquema `schemas/content/adventure-round.schema.json`; los enunciados y respuestas nunca se hardcodean en componentes. El archivo separa `borrador`, `en_revision`, `piloto_integrado` y `aprobado`; la disponibilidad técnica de un piloto no sustituye la validación editorial ni visual. Más detalles en `content/aventura/README.md`.
 
+**Actualización vinculante DC-36 (instrucción expresa del propietario, 2026-11-10):** la evaluación de si una imagen es apropiada o no necesita conocer primero las preguntas/consecuencias de Aventura **y** los textos e intervenciones de Historia. La antigua indicación de redactar Historia tras aprobar el inventario visual queda sustituida en ese aspecto. Se mantiene la revisión y aprobación del propietario para los medios, el inventario previo solo como localización técnica, y la prohibición de prompts/imágenes sin carencias confirmadas.
+
 ## 1. Flujo obligatorio capítulo a capítulo
 
-**Aventura (propuesta) → revisión del propietario e inventario visual → prompts solo de imágenes ausentes → Historia (guion y textos) → revisión de reutilización visual y carencias de Historia → validación e integración.**
+**Aventura (preguntas, alternativas y consecuencias candidatas) → Historia (guion y textos por intervención/beat, también candidatos, con TS-001) → evaluación de aptitud visual conjunta por el propietario, cotejando imagen con cada pregunta y cada intervención → prompts exclusivamente para carencias confirmadas → validación, integración y QA.**
 
 - **Se empieza por Primera Parte, capítulo I.** No abrir por iniciativa propia el capítulo siguiente antes de completar el tramo de revisión acordado del actual.
-- **Primero se entrega Aventura, no el texto de Historia.** Tras revisar las rondas y las imágenes con el propietario, se prepara Historia para ese mismo capítulo, aplicando los recursos ya identificados y proponiendo carencias adicionales si las hubiera.
+- **Primero se definen las rondas de Aventura; a continuación los textos completos de Historia**, antes de calificar imágenes como aptas o no aptas. El propietario revisa la propuesta editorial y después compara medios existentes con las dos necesidades narrativas; ambos textos siguen siendo candidatos, sin aprobación automática.
+- Se puede consultar un **inventario técnico preliminar** para localizar archivos, pero la aptitud visual y la declaración FALTA_CONFIRMADA esperan a conocer las preguntas y textos concretos de ambos modos.
 - Una ronda redactada no es una ronda aprobada ni publicada. Una imagen catalogada no es necesariamente apta. Una imagen candidata no se activa por incorporarse al repositorio.
 - Este procedimiento autoriza la **preparación editorial secuencial**; no amplía la Fase 1 ni autoriza automáticamente publicar los 126 capítulos, activar contenidos no aprobados o iniciar Fase 2.
 
@@ -42,7 +45,7 @@ Cada unidad jugable es una **ronda de anticipación narrativa**, conforme a la m
 
 ### 2.1 Formato de entrega inicial al propietario
 
-Entregar **solo las rondas candidatas de Aventura**, con una ficha por ronda:
+Entregar **primero las rondas candidatas de Aventura**, con una ficha por ronda; antes de evaluar la aptitud visual, completar también las intervenciones de Historia de ese capítulo:
 
 | Campo | Contenido obligatorio |
 |---|---|
@@ -62,7 +65,7 @@ La entrega editorial **no contiene prompts de nuevas imágenes** mientras el pro
 
 ## 3. Comprobación de imágenes y autoridad del propietario
 
-Después de ver las rondas, **el propietario revisa personalmente qué imágenes existen**, si son apropiadas para ese momento y cuáles faltan. Dirección puede facilitar una lista de necesidades y candidatos con referencias de catálogo, pero **no sustituye la validación del propietario** ni encarga arte automáticamente.
+Después de disponer de **las rondas y sus consecuencias de Aventura Y los textos/escenas/beat de Historia**, **el propietario revisa personalmente qué imágenes existen**, si son apropiadas para cada uno de esos momentos y cuáles faltan. Dirección puede facilitar una lista de necesidades y candidatos con referencias de catálogo, pero **no sustituye la validación del propietario** ni encarga arte automáticamente.
 
 Orden de búsqueda y aprovechamiento: recursos ya registrados en `assets/scenes/` y `assets/closeups/` → acuarelas como recurso secundario cuando proceda y tengan derechos claros → **nuevo encargo solo si hay una carencia concreta confirmada por el propietario**.
 
@@ -86,9 +89,9 @@ Cada prompt incluirá:
 
 No confundir las paráfrasis editoriales del juego con citas literales de la novela.
 
-## 5. Historia: textos y escenas después de Aventura
+## 5. Historia: textos y escenas después de Aventura, ANTES de juzgar la aptitud visual (DC-36)
 
-Tras la revisión inicial de Aventura y del inventario, se entrega el **Modo Historia** del mismo capítulo:
+Tras redactar Aventura y **antes de evaluar como apropiadas o no las imágenes**, se entrega un **guion candidato completo de Historia** del mismo capítulo:
 
 - Desglose secuencial de escenas y beats; desarrollo condensado, claro, atractivo y **fiel a Cervantes**.
 - Texto del narrador y parlamentos con procedencia localizable; distinguir cita literal de adaptación narrativa.
@@ -97,7 +100,7 @@ Tras la revisión inicial de Aventura y del inventario, se entrega el **Modo His
 - Imagen prevista para cada intervención/beat, identificando **cuáles ya están disponibles**, cuáles pueden reutilizarse desde Aventura y cuáles siguen faltando.
 - **TS-001:** todos los textos de voces de narrador/personajes deben permanecer visibles completos en pantalla incluso sin audio; ninguna elipsis en la interfaz por la existencia de sonido.
 
-Si Historia exige imágenes adicionales, **se repite el control del propietario**: entregar listado de carencias, esperar su confirmación y redactar **solo** los prompts de las faltantes. La revisión final debe maximizar reutilización legítima Aventura/Historia sin degradar la puesta en escena.
+Como el borrador de Historia se prepara antes del control de aptitud, **la revisión del propietario es conjunta para Aventura e Historia**: contrastar recursos con ambos guiones, entregar listado de carencias, esperar su confirmación y redactar **solo** los prompts de las faltantes. La revisión final debe maximizar reutilización legítima Aventura/Historia sin degradar la puesta en escena.
 
 ## 6. Integración GitHub de imágenes aprobadas
 

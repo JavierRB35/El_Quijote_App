@@ -8,6 +8,15 @@
 - Historia: [`docs/guiones/HISTORIA_P1_C03_CANDIDATA_2026-11-10.md`](guiones/HISTORIA_P1_C03_CANDIDATA_2026-11-10.md), 11 escenas H01–H11, 30 intervenciones íntegras; sin integración al reproductor.
 - Reglas: DC-24/25/26/28/30–36, `docs/DIRECCION_ARTISTICA_PILOTO.md` (tercio izquierdo), `docs/REGLAS_MODO_AVENTURA_V2_2026-11-08.md` (§5: escena izquierda y panel derecho) y `docs/PROTOCOLO_ELABORACION_CAPITULO_X.md` en su versión ya ajustada a DC-36.
 
+## Actualización de autorizaciones — propietario (2026-11-10)
+
+- **Contenido editorial aprobado:** las 4 rondas Aventura y las 11 escenas / 30 intervenciones Historia, por «sí. apruebo». No se aprueban por ello imágenes ni implementación.
+- **Selección explícita de opción B:** ante «Prompts, solo si consideras confirmadas las carencias», el propietario contestó «B». Se toman por confirmadas **para preparar los prompts** las posiciones sin cobertura visual propia de Aventura **A01, A02, A04, A05, A06, A07, A08** y los complementos de Historia **H-A, H-B, H-C, H-D**, que en esta matriz ya estaban identificados. Estado de esas posiciones: `FALTA_CONFIRMADA` **a efectos de encargo**, no `IMAGEN_APROBADA`.
+- **Excepción expresa por incertidumbre:** `A03` sigue `EXISTE_PENDIENTE_REVISION`: aunque `p1_c03_vela_armas_pre.webp` es apta compositivamente, no está demostrado que corresponda al momento exacto de la pregunta R02. No se redacta prompt sustitutivo de A03 hasta dictaminarlo. La selección B **no** fuerza su asignación ni una duplicación de arte.
+- **Documento de prompts resultante:** [`docs/PROMPTS_CAPITULO_P1_C03_FALTANTES_2026-11-10.md`](PROMPTS_CAPITULO_P1_C03_FALTANTES_2026-11-10.md). **11 prompts individuales** (7 Aventura; 4 Historia), ninguno ejecutado. Siguen pendientes revisión de arte, derechos, QA e integración.
+
+Las tablas siguientes se conservan como matriz editorial original **anterior a la aprobación y a la confirmación de B**. La presente actualización prevalece solo en los campos de estado y autorización; no cambia hechos ni planes visuales.
+
 ## 1. Dictamen de composición comunicado por el propietario
 
 **Norma preexistente, no nueva:** en Aventura la imagen debe favorecer el peso visual a la izquierda y dejar **espacio seguro a la derecha** para pregunta/opciones, sin tapar protagonistas, acción ni pistas. La pregunta se formula ANTES del hecho y cada ronda debe llevar su preimagen **diferente, específica y antiespoiler**. En Historia no se impone el mismo encuadre de pregunta: prevalecen cobertura cinematográfica, sincronía y texto íntegro (TS-001), con DC-28 aplicable.

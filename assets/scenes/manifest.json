@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "package_id": "el-quijote-visual-pilot-2026-11-10-v17",
+  "package_id": "el-quijote-visual-pilot-2026-11-10-v18",
   "generated_on": "2026-11-06",
   "production_state": "visual_pilot_not_editorially_approved",
   "source_media_policy": "Only original AI recreations; no Tusell or Doré illustrations extracted or included",
@@ -7052,8 +7052,35 @@
       "textual_locator_status": "verified_repo_gutenberg_2000",
       "rights_status": "original_generated_asset_review_on_redistribution",
       "review_notes_es": "Aprobación visual específica del propietario el 2026-11-10 mediante invocación del protocolo DC-35. Imagen 2 del encargo artístico del capítulo II, Aventura R03, preimagen anterior a que don Quijote alce la visera y hable a las mujeres; reutilización posible en Historia antes de ese diálogo. Fuente literal cotejada con content/textos/gutenberg_2000/El_Quijote.txt, Primera parte, capítulo II, líneas 1325–1338 (DQ.ED.0003 / DQ.SRC.0005). El temor de las mujeres, la lanza, la adarga y la visera bajada están fundamentados; detalle de la arquitectura, vestuario y luz son recreaciones plausibles. Sin Sancho ni ventero. WebP generado y convertido sin alteraciones narrativas desde el original aprobado; no activar automáticamente. QA de superposición de texto DC-28/TS-001 en los modos aún pendiente."
+    },
+    {
+      "id": "p1_c02_r02_venta_llegada_pre",
+      "candidate_media_id": "DQ.MED.900263",
+      "media_class": "recreacion_ia",
+      "review_state": "aprobada",
+      "title_es": "Don Quijote se aproxima a la venta al anochecer",
+      "part": 1,
+      "chapter": 2,
+      "episode_key": "p1:c02",
+      "phase": "pre",
+      "spoiler_risk": "low",
+      "relative_path": "assets/scenes/part_1/chapter_02/p1_c02_r02_venta_llegada_pre.webp",
+      "width_px": 1672,
+      "height_px": 941,
+      "mime_type": "image/webp",
+      "sha256": "938fe045bbc9d20e0f1389a613212a0647efaad5383a24a3e5071c8d6a78985b",
+      "source_class": "RECREACION_ARTISTICA",
+      "generated_with": "OpenAI ImageGen",
+      "attribution_es": "Recreación artística generada con IA para El Quijote, noviembre de 2026, por encargo del propietario.",
+      "alt_es": "Don Quijote cabalga sobre Rocinante al anochecer hacia una venta rural, ante cuya entrada se encuentran dos mujeres.",
+      "preferred_overlay_side": "right",
+      "historical_editorial_status": "approved_owner_visual",
+      "question_spoiler_validation": "pending_in_game_context_qa",
+      "textual_locator_status": "verified_repo_gutenberg_2000",
+      "rights_status": "original_generated_asset_review_on_redistribution",
+      "review_notes_es": "Aprobación visual específica del propietario el 2026-11-10 mediante protocolo DC-35: imagen 1 del encargo artístico de Primera Parte, capítulo II, Aventura R02, preimagen anterior a detener a Rocinante y esperar una señal. Uso potencial en Historia, llegada a la venta. Pasaje cotejado en content/textos/gutenberg_2000/El_Quijote.txt, Primera Parte, capítulo II, líneas 1305–1323 (DQ.ED.0003 / DQ.SRC.0005): cansancio, hambre, venta, dos mujeres, espera todavía no representada. Sin ventero, castillo real, enanos, porquero ni Sancho. Arquitectura, vestuario e iluminación son recreaciones artísticas plausibles. Fuente aprobada: PNG de 1672×941 (SHA-256 6d339be7da55a6040717fe7046d81523f18ca376d739e929329aa08e5ef5eb45); derivado WebP optimizado (calidad 82; 249070 bytes) sin alterar el encuadre y con SHA-256 registrado. No activar automáticamente; QA de composición DC-28/TS-001 en aplicación pendiente."
     }
   ],
-  "catalog_version": "0.5.3",
+  "catalog_version": "0.5.4",
   "last_updated_on": "2026-11-10"
 }

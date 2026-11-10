@@ -67,6 +67,9 @@ jobs:
       - name: Capítulo I — Aventura, Historia, corpus y escenas
         run: python -I tests/dev/test_capitulo_01.py
 
+      - name: Capítulo III — Aventura, Historia y activos en revisión
+        run: python -I tests/dev/test_capitulo_03.py
+
       - name: Regresiones negativas del catálogo Aventura
         run: python tests/dev/test_catalogo_aventura.py
 

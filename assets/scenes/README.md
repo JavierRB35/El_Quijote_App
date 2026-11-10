@@ -1,4 +1,4 @@
-# Catálogo de escenas — piloto visual v0.10
+# Catálogo de escenas — piloto visual v0.11
 
 Las imágenes de este directorio son **recreaciones originales generadas con IA** para el videojuego *El Quijote*. Su lenguaje visual sigue el encargo maestro: realismo cinematográfico con influencias pictóricas, España de comienzos del siglo XVII, profundidad para un tratamiento 2.5D, personajes consistentes e interfaz discreta.
 
@@ -68,3 +68,11 @@ El propietario aprobó visualmente la **imagen 4** del encargo de Primera Parte,
 **Función:** Aventura R05, `pre` antiespoiler; posible reutilización en Historia durante la cena, **antes** de la solución del ventero para beber. Cotejo directo con el texto oficial `content/textos/gutenberg_2000/El_Quijote.txt` (`DQ.ED.0003` / `DQ.SRC.0005`), I.2, líneas 1433–1441: mesa a la puerta de la venta por el fresco, bacalao, pan oscuro, celada puesta **con la visera alzada**, mujer ayudando a comer y ventero aún sin horadar la caña. No se muestra el procedimiento de bebida ni intervenciones posteriores. La arquitectura, el vestuario, la luz del candil y el encuadre son recreaciones artísticas plausibles, no especificaciones literales de Cervantes.
 
 **Estado:** aprobación visual específica del propietario; metadatos, procedencia, texto alternativo, derechos y hashes en `manifest.json`. **No implica activación de la ronda, del montaje de Historia ni publicación.** Pendiente QA de pantalla, composición DC-28/TS-001 y revisión de derechos para redistribución.
+
+## Capítulo II — seis escenas de Historia aceptadas (2026-11-10; DC-35)
+
+El propietario aprobó visualmente las seis imágenes para los planos **H03, H05, H06, H07, H10 y H11** de la Primera Parte, capítulo II. La imagen 4 es la versión **regenerada con don Quijote montado en Rocinante**, no las variantes desmontadas. Se incorporan seis WebP de las imágenes aprobadas, sin recortes ni alteración narrativa, identificados **DQ.MED.900265–DQ.MED.900270**. El inventario se amplía de **263 a 269 recursos**; el manifiesto registra hash SHA-256, Git blob SHA-1, dimensiones, tamaño, nombre del PNG original y autorización visual. Los PNG maestros permanecen fuera de Git.
+
+Vinculación editorial, sin activación: **H03** cabalgata y monólogos; **H05** espera en la venta; **H06** risas tras el diálogo; **H07** recepción del ventero con el caballero todavía a caballo; **H10** vino administrado por caña; **H11** silbato del castrador. La secuencia sigue el [guion candidato de Historia I.2](../../docs/guiones/HISTORIA_P1_C02_CANDIDATA_2026-11-10.md) y el [informe técnico](../../docs/PRODUCCION_CAPITULO_P1_C02_ESTADO_TECNICO_2026-11-10.md). H06 y H10 muestran hechos posteriores: **no son preimágenes antiespoiler** de Aventura R03/R05. En H11, los cerdos visibles y el encuadre nocturno se consignan como contextualización artística, no como detalles explícitos del texto.
+
+El propietario ha resuelto el identificador de I.2 como **DQ.P1.C02.E01**; esta decisión es ajena al alta de imágenes y no activa el capítulo. Siguen pendientes la preimagen R04, selección/revisión de consecuencias de Aventura, cotejo textual directo y QA real de composición DC-28/TS-001, accesibilidad y derechos para redistribución. Ningún JSON jugable, pantalla, recurso ajeno o contenido del guion ha sido modificado ni activado por esta integración.

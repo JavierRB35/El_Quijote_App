@@ -112,7 +112,7 @@ C. Le entregará un diploma y le exigirá romper una lanza ceremonial.
 
 ## Selección visual del propietario para el capítulo III (2026-11-10)
 
-El propietario especifica que en **Modo Aventura** la escena debe tener **mayor peso visual a la izquierda**, dejando la **derecha despejada** para pregunta, tres alternativas y controles; además de zonas seguras, contraste y DC-28. La adecuación al texto narrativo **no basta** si el panel de Aventura no encaja en la composición.
+La **norma de diseño preexistente**, documentada en `docs/DIRECCION_ARTISTICA_PILOTO.md` (Cámara e interfaz), `docs/REGLAS_MODO_AVENTURA_V2_2026-11-08.md` (§5) y DC-28, exige que en **Modo Aventura** el peso visual principal se sitúe preferentemente a la **izquierda**, con espacio seguro a la **derecha** para pregunta, alternativas y controles. No es una nueva regla del propietario. Su decisión concreta para I.3 es **qué imágenes cumplen o no** ese protocolo en Aventura y cuáles aprovecha Historia. La adecuación literaria no basta si el panel no cabe con calidad.
 
 | Medio registrado (archivo físico en GitHub) | Aventura | Historia | Tratamiento |
 |---|---|---|---|

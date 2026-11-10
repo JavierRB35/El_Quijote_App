@@ -174,7 +174,7 @@
 
 ## Adecuación visual comunicada expresamente por el propietario
 
-**Criterio Aventura:** imagen de mayor peso compositivo a la **izquierda**, espacio despejado a la **derecha** para pregunta, opciones y controles, sin cubrir la acción, y conforme DC-28. No basta con que una escena pertenezca al capítulo: también debe admitir el panel.
+**Norma de diseño ya vigente (no una decisión nueva):** `docs/DIRECCION_ARTISTICA_PILOTO.md` § Cámara e interfaz, `docs/REGLAS_MODO_AVENTURA_V2_2026-11-08.md` §5 y DC-28 establecen que Aventura requiere composición con peso visual a la **izquierda** y espacio seguro a la **derecha** para pregunta, opciones y controles. La adaptación de cada encuadre debe comprobarse en su estado y resolución. **Aportación concreta del propietario:** determina cuál de los cuatro medios del I.3 cumple el criterio existente.
 
 | Imagen existente en GitHub | Aventura: juicio de composición del propietario | Historia: juicio del propietario | Uso editorial previsto en Historia |
 |---|---|---|---|

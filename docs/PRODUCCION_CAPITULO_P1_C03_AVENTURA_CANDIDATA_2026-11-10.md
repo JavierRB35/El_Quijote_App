@@ -56,7 +56,7 @@ C. Trasladará silenciosamente las armas al interior de la venta.
 
 **Antiespoiler:** preimagen en el instante anterior a la agresión, sin arriero caído, lanza ya descargada ni daño mostrado. Representación no sensacionalista.
 
-**Preimagen candidata:** assets/scenes/part_1/chapter_03/p1_c03_arriero_pozo_pre.webp, DQ.MED.900155; **review_state=borrador; EXISTE_PENDIENTE_REVISION**. Comprobar si representa precisamente el intervalo antes del golpe; el nombre del archivo no basta para aprobarla. **Consecuencia:** sin imagen seleccionada.
+**Preimagen:** la candidata anterior `p1_c03_arriero_pozo_pre.webp` queda **DESCARTADA PARA AVENTURA por composición**, según el propietario; **sirve para Historia**, no para el panel de pregunta. Buscar otra previa exclusiva antes del golpe. `p1_c03_vela_armas_pre.webp` es el **único recurso compositivamente apto para Aventura** del inventario actual, pero su asignación a esta ronda **no está confirmada** y exige comprobar el instante anterior y las pistas, sin spoilers. **Consecuencia:** sin imagen seleccionada para Aventura.
 
 **Reutilización en Historia:** llegada del arriero y respuesta violenta, diferenciando planos pre/post en su punto cronológico. **Estado:** CANDIDATA / medios y aprobación pendientes.
 
@@ -80,7 +80,7 @@ C. Cancelará sin más la ceremonia y lo expulsará de la venta.
 
 **Antiespoiler:** el momento previo es una nueva pausa en la vela; prohibido mostrar el ritual ya empezado ni la ceremonia terminada.
 
-**Preimagen candidata condicionada:** assets/scenes/part_1/chapter_03/p1_c03_vela_armas_pre.webp, DQ.MED.900131; **review_state=borrador; EXISTE_PENDIENTE_REVISION**. Puede resultar cronológicamente anterior a los incidentes: comprobarlo con el propietario y descartarla para esta ronda si no corresponde. **Consecuencia:** sin posimagen seleccionada.
+**Preimagen:** `p1_c03_vela_armas_pre.webp` (DQ.MED.900131) **sí permite composición de Aventura**, según el propietario, y sirve también para Historia. No asignarla automáticamente a esta ronda: la vela representada podría ser **anterior** a los enfrentamientos que ya conoce el jugador. Requiere verificar el instante narrativo y el antiespoiler. **Consecuencia:** sin posimagen de Aventura seleccionada.
 
 **Reutilización en Historia:** pausa tras la refriega y decisión práctica del ventero. **Estado:** CANDIDATA / medios y aprobación pendientes.
 
@@ -104,26 +104,39 @@ C. Le entregará un diploma y le exigirá romper una lanza ceremonial.
 
 **Antiespoiler:** la preimagen puede mostrar la preparación y el libro, pero **no** el golpe, espada ceñida, espuela puesta ni partida.
 
-**Preimagen candidata:** assets/scenes/part_1/chapter_03/p1_c03_ventero_libro_cuentas_pre.webp, DQ.MED.900205; **review_state=borrador; EXISTE_PENDIENTE_REVISION**.
+**Preimagen:** `p1_c03_ventero_libro_cuentas_pre.webp` (DQ.MED.900205) **no sirve para Aventura por su composición**, según el propietario; **sí sirve para Historia** en el momento del libro. La ronda necesita preimagen exclusiva compatible con el panel y sin revelar la acción.
 
-**Consecuencia candidata:** assets/scenes/part_1/chapter_03/p1_c03_investidura_post.webp, DQ.MED.900012; **review_state=borrador; EXISTE_PENDIENTE_REVISION**. Validar el instante narrativo, personajes, utilería, composición y derechos antes de su uso.
+**Consecuencia:** `p1_c03_investidura_post.webp` (DQ.MED.900012) queda **reservada a Historia** por la selección del propietario; no asignar en Aventura sin nueva revisión de composición. La ronda necesita seleccionar un recurso posterior apto para mostrar la consecuencia. Validar instante, continuidad, utilería y derechos antes de cualquier uso.
 
 **Reutilización en Historia:** gesto burlesco de la ceremonia y reacción de las mujeres, solamente tras la revelación. **Estado:** CANDIDATA / aprobación pendiente.
 
-## Inventario real inicial
+## Selección visual del propietario para el capítulo III (2026-11-10)
 
-Se han localizado **cuatro archivos físicos** en assets/scenes/part_1/chapter_03 y sus entradas en assets/scenes/manifest.json: DQ.MED.900012, 900131, 900155 y 900205. Todos constan como **borrador**; los campos de revisión textual, spoiler por pregunta y derechos siguen pendientes. El inventario **no equivale a validación visual**. La eventual reutilización intermodal o entre capítulos exige comprobar primero que el instante sea el mismo.
+El propietario especifica que en **Modo Aventura** la escena debe tener **mayor peso visual a la izquierda**, dejando la **derecha despejada** para pregunta, tres alternativas y controles; además de zonas seguras, contraste y DC-28. La adecuación al texto narrativo **no basta** si el panel de Aventura no encaja en la composición.
 
-**Necesidades que el propietario debe revisar:** preimagen exclusiva R01; correspondencia cronológica de las candidatas R02–R04; posimágenes R01–R03; aptitud de la investidura como consecuencia R04. Ninguna necesidad se marca FALTA_CONFIRMADA hasta la comprobación expresa del propietario.
+| Medio registrado (archivo físico en GitHub) | Aventura | Historia | Tratamiento |
+|---|---|---|---|
+| `p1_c03_vela_armas_pre.webp` · DQ.MED.900131 | **SÍ: única imagen compositivamente apta para Aventura** | **SÍ** | Posible previa **de una sola ronda**, todavía sin asignar hasta comprobar cronología y spoiler; Historia H05 |
+| `p1_c03_arriero_pozo_pre.webp` · DQ.MED.900155 | **NO** (composición) | **SÍ** | Historia H06; excluida de Aventura |
+| `p1_c03_ventero_libro_cuentas_pre.webp` · DQ.MED.900205 | **NO** (composición) | **SÍ** | Historia H09; excluida de Aventura |
+| `p1_c03_investidura_post.webp` · DQ.MED.900012 | **NO** (composición) | **SÍ** | Historia H10, después del golpe ceremonial; excluida de Aventura |
+
+**Referencia de Historia ya definida:** [`docs/guiones/HISTORIA_P1_C03_CANDIDATA_2026-11-10.md`](guiones/HISTORIA_P1_C03_CANDIDATA_2026-11-10.md) — 11 escenas y 30 intervenciones de texto completo, con anclas al original y ubicación narrativa tentativa de las cuatro imágenes. Esa asociación no equivale a validación final del recurso o de los derechos.
+
+**Balance de Aventura:** de cuatro rondas candidatas, **como máximo una** puede aprovechar la única preimagen compositivamente aceptable existente, siempre que su momento y antiespoiler sean correctos. Las **otras tres previas necesitarán recursos distintos**, si las cuatro rondas se aprueban. Tampoco se han asignado imágenes de consecuencia aptas para Aventura. Antes de declarar FALTA_CONFIRMADA, revisar el resto del inventario existente y obtener confirmación del propietario.
+
+**Estado y límites:** las cuatro entradas del `assets/scenes/manifest.json` continúan `review_state=borrador`; la selección del propietario es de **idoneidad compositiva por modo**, no una orden de aceptación binaria DC-35, cambio de metadatos, integración jugable, validación de licencias ni QA de pantalla. No generar imágenes ni redactar prompts sin la confirmación de carencias.
 
 ## Puerta de aprobación y siguiente fase
 
 1. **Revisión del propietario:** confirmar o corregir las cuatro rondas, opciones y consecuencias contra el capítulo III.
 2. **Inventario del propietario:** para cada imagen, decidir EXISTE_Y_APROBADA, EXISTE_PENDIENTE_REVISION, NO_APTA o FALTA_CONFIRMADA; examinar continuidad, fidelidad DC-31, spoilers, DC-28, derechos y calidad premium.
 3. **Solo después:** preparar prompts separados exclusivamente de imágenes declaradas FALTA_CONFIRMADA. **No generar imágenes por iniciativa propia.**
-4. **Más adelante:** guion de Historia con TS-001, cobertura de planos y reutilización Aventura/Historia; nueva revisión de carencias.
+4. **Historia ya redactada como candidata** en `docs/guiones/HISTORIA_P1_C03_CANDIDATA_2026-11-10.md` (11 escenas, 30 intervenciones). Revisar sus textos junto con estas cuatro preguntas **antes** de decidir adecuación definitiva y carencias (DC-36).
 5. **Integración de contenido jugable solo tras aprobación:** formalizar episodio aún provisional, JSON DC-34, pasajes reales, pre/post medios aprobados y QA técnico/visual. No activar por tener este documento.
+
+**Actualización de conformidad:** DC-36 ya incorpora el orden Aventura → textos Historia → valoración conjunta de imágenes. Las aptitudes por modo proceden de la declaración expresa del propietario en esta intervención (2026-11-10). No se han atribuido aprobaciones técnicas.
 
 **Normas consultadas en GitHub:** docs/PROMPT_INICIO_NUEVO_PROYECTO_DESARROLLO.md; AGENTS.md; docs/DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md; docs/VISION_Y_DECISIONES.md (DC-24–DC-35); docs/ENCARGO_MAESTRO.md; docs/FLUJO_PRODUCCION_CAPITULOS_AVENTURA_HISTORIA_2026-11-09.md; docs/REGLAS_MODO_AVENTURA_V2_2026-11-08.md; docs/ESPECIFICACION_EDITORIAL.md; docs/DIRECCION_ARTISTICA.md; docs/DIRECCION_ARTISTICA_PILOTO.md; docs/DECISIONES_OPERATIVAS_Y_POLITICA_VISUAL_2026-11-08.md; docs/DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md; docs/BIBLIA_NARRATIVA_MODO_HISTORIA_HOJA_RUTA_ROLES.md; docs/HOJA_RUTA_MODOS_HISTORIA_E_HISTORICO.md; docs/MAPA_EPISODIOS_Y_CAPITULOS.md; docs/CONTRATO_EDITORIAL_TECNICO.md; content/aventura/README.md; assets/scenes/manifest.json y corpus DC-31.
 
-**QA ejecutada en esta fase:** cotejo de acciones con líneas originales; comprobación documental de una solución por ronda; cuatro preimágenes planificadas para rondas diferentes (una aún sin candidata); comprobación de existencia, IDs y estado real de los medios; no uso adelantado del plano de investidura. **No ejecutado:** compilación, tests de app ni QA visual DC-28/TS-001 (no hay cambios de aplicación ni medios activos).
+**QA documental de esta actualización:** cotejo de acciones con el original, cuatro rondas con una respuesta canónica, diferenciación compositiva Aventura/Historia, cuatro recursos físicos inventariados y sin falsificar su estado; **sin asignar imágenes no idóneas a preguntas**. Solo una preimagen está admitida compositivamente y sigue pendiente de asignación a una ronda concreta. **No ejecutado:** compilación, tests de app ni QA visual DC-28/TS-001 (no hay cambios de aplicación ni medios activos).

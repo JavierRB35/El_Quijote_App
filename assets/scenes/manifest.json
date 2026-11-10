@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "package_id": "el-quijote-visual-pilot-2026-11-10-v18",
+  "package_id": "el-quijote-visual-pilot-2026-11-10-v19",
   "generated_on": "2026-11-06",
   "production_state": "visual_pilot_not_editorially_approved",
   "source_media_policy": "Only original AI recreations; no Tusell or Doré illustrations extracted or included",
@@ -7079,8 +7079,35 @@
       "textual_locator_status": "verified_repo_gutenberg_2000",
       "rights_status": "original_generated_asset_review_on_redistribution",
       "review_notes_es": "Aprobación visual específica del propietario el 2026-11-10 mediante protocolo DC-35: imagen 1 del encargo artístico de Primera Parte, capítulo II, Aventura R02, preimagen anterior a detener a Rocinante y esperar una señal. Uso potencial en Historia, llegada a la venta. Pasaje cotejado en content/textos/gutenberg_2000/El_Quijote.txt, Primera Parte, capítulo II, líneas 1305–1323 (DQ.ED.0003 / DQ.SRC.0005): cansancio, hambre, venta, dos mujeres, espera todavía no representada. Sin ventero, castillo real, enanos, porquero ni Sancho. Arquitectura, vestuario e iluminación son recreaciones artísticas plausibles. Fuente aprobada: PNG de 1672×941 (SHA-256 6d339be7da55a6040717fe7046d81523f18ca376d739e929329aa08e5ef5eb45); derivado WebP optimizado (calidad 82; 249070 bytes) sin alterar el encuadre y con SHA-256 registrado. No activar automáticamente; QA de composición DC-28/TS-001 en aplicación pendiente."
+    },
+    {
+      "id": "p1_c02_r05_cena_sin_cana_pre",
+      "candidate_media_id": "DQ.MED.900264",
+      "media_class": "recreacion_ia",
+      "review_state": "aprobada",
+      "title_es": "La cena imposible a la puerta de la venta",
+      "part": 1,
+      "chapter": 2,
+      "episode_key": "p1:c02",
+      "phase": "pre",
+      "spoiler_risk": "low",
+      "relative_path": "assets/scenes/part_1/chapter_02/p1_c02_r05_cena_sin_cana_pre.webp",
+      "width_px": 1672,
+      "height_px": 941,
+      "mime_type": "image/webp",
+      "sha256": "f1f2ade765ea17e7a941cf99057405d5a9a7cb81db8da74f0508c1995f07a89c",
+      "source_class": "RECREACION_ARTISTICA",
+      "generated_with": "OpenAI ImageGen",
+      "attribution_es": "Recreación artística generada con IA para El Quijote, noviembre de 2026, por encargo del propietario.",
+      "alt_es": "Don Quijote cena a la puerta de la venta con la celada puesta mientras una mujer le ayuda y el ventero observa la dificultad para darle de beber.",
+      "preferred_overlay_side": "right",
+      "historical_editorial_status": "approved_owner_visual",
+      "question_spoiler_validation": "pending_in_game_context_qa",
+      "textual_locator_status": "verified_repo_gutenberg_2000",
+      "rights_status": "original_generated_asset_review_on_redistribution",
+      "review_notes_es": "Aprobación visual expresa del propietario el 2026-11-10 y orden de integración en main mediante DC-35. Imagen 4 del encargo artístico de Primera Parte, capítulo II; Aventura R05, preimagen anterior a la solución del ventero para beber. Reutilización posible en Historia al presentar la cena, antes de la caña. Pasaje cotejado directamente con content/textos/gutenberg_2000/El_Quijote.txt, DQ.ED.0003 / DQ.SRC.0005, Primera parte, capítulo II, líneas 1433–1441: cena a la puerta de la venta por el fresco, bacalao, pan oscuro, celada puesta con la visera alzada, una mujer facilita la comida y el ventero aún no ha ofrecido la solución para beber. Sin caña, embudo, tubo, Sancho ni intervención del castrador de puercos. La forma de la celada improvisada, las cintas, gestos, candil, mesa, indumentaria y arquitectura son recreaciones visuales plausibles; no se atribuyen literalmente a Cervantes. PNG aprobado: 1672×941, SHA-256 24dc53f2eb5289e2581d767217f96a231decc16860c79ca5c0828a59eaf543cf; WebP derivado y cotejado visualmente: 1672×941, 182170 bytes, SHA-256 f1f2ade765ea17e7a941cf99057405d5a9a7cb81db8da74f0508c1995f07a89c, Git blob SHA-1 1fc98e3e25b86a153205ac73008339c276dbbe09. No activar rondas o guiones por el alta; QA DC-28/TS-001 de composición y legibilidad en la aplicación pendiente."
     }
   ],
-  "catalog_version": "0.5.4",
+  "catalog_version": "0.5.5",
   "last_updated_on": "2026-11-10"
 }

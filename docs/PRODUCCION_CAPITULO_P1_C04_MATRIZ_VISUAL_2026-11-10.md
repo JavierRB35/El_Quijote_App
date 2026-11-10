@@ -1,5 +1,7 @@
 # Capítulo I.4 — Matriz conjunta y estado de ejecución
 
+**Actualización tras revisión del propietario (2026-11-10):** las imágenes actuales quedan fuera del montaje de I.4 por indicación del propietario. Se han redactado [22 prompts individuales](PROMPTS_CAPITULO_P1_C04_FALTANTES_2026-11-10.md) para las carencias confirmadas. Diez cubren las posiciones de Aventura y se reutilizan en Historia en su instante exacto. Doce completan los instantes propios de Historia. Pendientes la aprobación editorial de los textos, la recepción y aceptación del arte, y el QA. El inventario y las evaluaciones de abajo conservan el diagnóstico anterior a esta revisión.
+
 **Fecha:** 2026-11-10. **Base remota consultada:** `7f0f4c411abb5c759907f160e2b812fad84f706b` (`main`).
 **Estado:** preparación editorial ejecutada; evaluación técnica preliminar realizada; **revisión conjunta del propietario PENDIENTE**. No es capítulo jugable terminado.
 

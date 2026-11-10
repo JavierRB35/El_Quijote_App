@@ -1,3 +1,16 @@
+## Aceptación expresa del propietario — 2026-11-10
+
+**Decisión comunicada por el propietario:** «aprobado capitulo 2». Se registra la **aprobación del capítulo II (Parte I, I.2)**, en sus modos Aventura e Historia, tal como están integrados en `main` mediante `749fcaff441bed803fe27b6477215d8e5738c78a`.
+
+- **Alcance aprobado:** `DQ.P1.C02` / `DQ.P1.C02.E01`, cinco rondas jugables de Aventura con R04 dedicada a la acogida del ventero y 11 escenas/25 intervenciones de Historia. No se reabre la decisión editorial R04 ni se exigen imágenes adicionales.
+- **Verificación automatizada de integración:** ejecución de GitHub Actions `42811167587` completada con éxito el 2026-11-10: validaciones editoriales DC-34, integridad de medios DC-35, compilación React/TypeScript, 62 pruebas de lógica correctas y `cargo check` de Tauri/Rust. Esta es evidencia técnica, **no** captura visual de la ejecución local.
+- **Reserva obligatoria de DC-28/TS-001:** la aprobación expresa del propietario se recoge como aceptación del capítulo, pero **no se afirma** que existan capturas y matrices completas de QA visual para todos los tamaños/estados cuando no se han adjuntado. Por ello se conservan `revision_visual: "pendiente"` y `estado_editorial: "piloto_integrado"` en los JSON hasta reunir las evidencias que exige `docs/PLAN_QA_Y_ACEPTACION.md` §8. Estos valores no invalidan ni ocultan la aprobación del propietario.
+- **Sin cambios funcionales:** se respetan el contenido jugable, los recursos visuales ya aceptados, la excepción dimensional de H07 (1670×941), las partidas de I.1/I.8 y los cinco `pasajeId: null` correctamente declarados.
+
+El resto de este informe conserva trazabilidad de propuestas y estados históricos; **el presente registro de aceptación prevalece** en el ámbito específico de I.2.
+
+---
+
 ## Actualización de integración técnica, 2026-11-10
 
 **I.2 se incorpora al registro de capítulos de Fase 1**, con cinco rondas de Aventura y 11 escenas/25 intervenciones de Historia, ambas en JSON declarativos con `capituloId: DQ.P1.C02` y `episodioId: DQ.P1.C02.E01`. Se deja el estado `piloto_integrado` y la revisión visual `pendiente` para las pruebas locales del propietario; los cinco `pasajeId` quedan nulos y declarados, sin inventar fichas.

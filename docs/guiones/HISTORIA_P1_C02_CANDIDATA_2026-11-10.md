@@ -1,8 +1,8 @@
-# Historia I.2 — guion candidato y trazabilidad
+# Historia I.2 — guion integrado, aceptado y trazabilidad
 
-**Estado:** EN_REVISIÓN, NO ACTIVABLE. **Fecha:** 2026-11-10. **Fuente exclusiva:** `content/textos/gutenberg_2000/El_Quijote.txt`, DQ.SRC.0005 / DQ.ED.0003, Primera Parte, capítulo II, líneas 1233–1450. **Autoridad:** DC-30, DC-31, DC-32, TS-001, DC-28.
+**Estado:** CAPÍTULO I.2 APROBADO POR EL PROPIETARIO (2026-11-10), integrado como piloto jugable; QA visual de matriz DC-28 pendiente de evidencia documental. **Fuente exclusiva:** `content/textos/gutenberg_2000/El_Quijote.txt`, DQ.SRC.0005 / DQ.ED.0003, Primera Parte, capítulo II, líneas 1233–1450. **Autoridad:** DC-30/DC-36, DC-31, DC-32, TS-001, DC-28.
 
-No interpretar una referencia visual de la tabla como aprobación o presencia física en `main`. Las seis imágenes nuevas de Historia I.2 ya están aprobadas, catalogadas e integradas en `main` (commit `0592752a4f976e1eece9a874df1555213f7e5125`). La preimagen específica de Aventura I.2 R04 sigue sin localizarse físicamente; los recursos de Rocinante aprobados para I.1 no son sustitutos narrativamente aptos. El propietario ha aprobado la identidad técnica independiente `capituloId: DQ.P1.C02` / `episodioId: DQ.P1.C02.E01`; la decisión está registrada en el mapa editorial y en el informe de integración. No hay integración jugable ni QA en interfaz.
+La versión **jugable y vinculante** del capítulo Historia I.2 es `content/historia/parte_1/capitulo_02.json`, integrada en `main` mediante `749fcaff441bed803fe27b6477215d8e5738c78a`; los planos se resuelven desde los WebP originales catalogados y aprobados de `assets/scenes/manifest.json`. El capítulo tiene `capituloId: DQ.P1.C02` / `episodioId: DQ.P1.C02.E01`. El propietario ha declarado **«aprobado capitulo 2»**; su conformidad queda registrada sin presumir capturas de QA visual no aportadas. La antigua referencia del guion a `p1_c02_r04_celada_cintas_pre` se resolvió en el JSON jugable con la imagen aprobada `p1_c02_h07_ventero_acogida_story` para Historia H08; en Aventura R04 se anticipa la acogida del ventero, mientras que las cintas siguen narradas en Historia. El texto del guion que sigue es **trazabilidad editorial**, no sustituto del JSON integrado.
 
 **Especificación de entrega:** 11 escenas, 25 intervenciones; textos completos visibles incluso sin audio; pausa/repetición/retroceso, sin scroll sobre imagen; sin adelantar la investidura de I.3.
 
@@ -188,6 +188,6 @@ No interpretar una referencia visual de la tabla como aprobación o presencia f�
 
 - Mantener todas las adaptaciones etiquetadas `ADAPTACION_FIEL`; solo H06-I02 es `CITA_LITERAL`, literalmente cotejada con el corpus.
 - La secuencia y las anclas se registran arriba; no identificar acciones imaginadas como hechos físicos.
-- Utilizar el episodio independiente aprobado `DQ.P1.C02.E01` cuando se creen los catálogos de I.2; conservar intactos I.1, I.8 y sus guardados.
-- Integrar únicamente los WebP originales aprobados con bytes verificables y DC-35; después resolver imagen por beat con ID de manifiesto y ejecutar QA TS-001/DC-28.
-- Hasta disponer de los medios, este documento **no sustituye** `content/historia/parte_1/capitulo_02.json`.
+- Los catálogos jugables ya están creados e integrados con el episodio independiente `DQ.P1.C02.E01`; preservar I.1, I.8 y sus guardados.
+- Los WebP utilizados están aprobados, identificados por manifiesto y pasan el control técnico DC-35; la verificación de composición real DC-28/TS-001 exige las capturas previstas en el plan QA.
+- Esta copia documental es evidencia de guion y de la aprobación expresa del propietario. Para ejecutar, usar `content/historia/parte_1/capitulo_02.json`.

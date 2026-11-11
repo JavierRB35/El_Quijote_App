@@ -1279,7 +1279,7 @@
       "id": "p1_c05_pedro_alonso_auxilio_post",
       "candidate_media_id": "DQ.MED.900048",
       "media_class": "recreacion_ia",
-      "review_state": "borrador",
+      "review_state": "aprobada",
       "title_es": "Pedro Alonso socorre al hidalgo",
       "part": 1,
       "chapter": 5,
@@ -1296,11 +1296,11 @@
       "attribution_es": "Recreación artística generada con IA para El Quijote, 2026",
       "alt_es": "Pedro Alonso ayuda a Don Quijote, maltrecho y sin sangre visible, junto a un camino rural al atardecer mientras Rocinante espera cerca.",
       "preferred_overlay_side": "right",
-      "historical_editorial_status": "pending_review",
+      "historical_editorial_status": "approved_owner_visual",
       "question_spoiler_validation": "pending_per_question",
       "textual_locator_status": "pending_reference_edition",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Escena posterior al primer infortunio; cotejar el traslado al hogar y evitar atribuir diálogos no documentados."
+      "review_notes_es": "Escena posterior al primer infortunio; cotejar el traslado al hogar y evitar atribuir diálogos no documentados. Aprobación visual expresa del propietario 2026-11-11. No implica aptitud antiespoiler, QA de interfaz ni licencia de redistribución; controles pendientes."
     },
     {
       "id": "p1_c16_maritornes_venta_pre",
@@ -4168,7 +4168,7 @@
       "id": "p1_c05_quijote_romances_post",
       "candidate_media_id": "DQ.MED.900156",
       "media_class": "recreacion_ia",
-      "review_state": "borrador",
+      "review_state": "aprobada",
       "title_es": "Quijote romances",
       "part": 1,
       "chapter": 5,
@@ -4185,11 +4185,11 @@
       "attribution_es": "Recreación artística generada con IA para El Quijote, 2026",
       "alt_es": "Recreación cinematográfica del episodio «quijote romances» en el capítulo 5 de la parte 1.",
       "preferred_overlay_side": "right",
-      "historical_editorial_status": "pending_review",
+      "historical_editorial_status": "approved_owner_visual",
       "question_spoiler_validation": "pending_per_question",
       "textual_locator_status": "pending_reference_edition",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Momento narrativo adicional; cotejo editorial y riesgo de spoilers pendientes."
+      "review_notes_es": "Momento narrativo adicional; cotejo editorial y riesgo de spoilers pendientes. Aprobación visual expresa del propietario 2026-11-11. No implica aptitud antiespoiler, QA de interfaz ni licencia de redistribución; controles pendientes."
     },
     {
       "id": "p1_c06_ama_sobrina_libros_pre",
@@ -6139,7 +6139,7 @@
       "id": "p1_c05_labrador_auxilio_pre",
       "candidate_media_id": "DQ.MED.900229",
       "media_class": "recreacion_ia",
-      "review_state": "borrador",
+      "review_state": "aprobada",
       "title_es": "El labrador vecino reconoce al caballero herido junto al camino y se inclina para ayudarlo",
       "part": 1,
       "chapter": 5,
@@ -6156,11 +6156,11 @@
       "attribution_es": "Recreación artística generada con IA para El Quijote, 2026",
       "alt_es": "Recreación artística: El labrador vecino reconoce al caballero herido junto al camino y se inclina para ayudarlo.",
       "preferred_overlay_side": "right",
-      "historical_editorial_status": "pending_review",
+      "historical_editorial_status": "approved_owner_visual",
       "question_spoiler_validation": "pending_per_question",
       "textual_locator_status": "pending_reference_edition",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Momento o encuadre adicional seleccionado contra el catálogo previo; pendiente cotejo de fidelidad narrativa y validación de spoilers."
+      "review_notes_es": "Momento o encuadre adicional seleccionado contra el catálogo previo; pendiente cotejo de fidelidad narrativa y validación de spoilers. Aprobación visual expresa del propietario 2026-11-11. No implica aptitud antiespoiler, QA de interfaz ni licencia de redistribución; controles pendientes."
     },
     {
       "id": "p1_c06_cura_barbero_libros_pre",

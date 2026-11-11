@@ -232,3 +232,9 @@ La aceptación de H11 es exclusivamente visual, no activa el Modo Historia ni Av
 Se integra **H13** (`STORY`, Historia H13.1–H13.2 y cierre posterior de Aventura) como WebP 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900303`. Tras la caída y la rotura de la lanza, don Quijote yace sin poder incorporarse; el mozo de mulas está junto a él con un fragmento del asta rota. Otros pedazos aparecen en el suelo y los mercaderes gesticulan al fondo para que el mozo se detenga. Se sugiere la agresión por las posturas, sin impacto en cuadro, heridas ni sangre. Fuente `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1894–1904, cotejadas.
 
 Imagen posterior a la rotura: no emplear como preimagen de anticipación. La aprobación es exclusivamente visual, sin activación de Aventura/Historia, sin QA de interfaz DC-28/TS-001 acreditado y con revisión de derechos pendiente. H14 queda fuera de `main` hasta su aceptación individual.
+
+## Capítulo IV — H14 aprobada visualmente: solo en el camino (2026-11-11)
+
+Se integra **H14** (`STORY`, Historia H14.1–H14.2 y cierre posterior de Aventura) como WebP 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900304`. Tras marcharse los mercaderes, don Quijote permanece como la única persona visible, tendido e incapaz de alzarse en un camino rural completamente vacío. Su equipo y los fragmentos de la lanza permanecen junto a él. Rocinante queda fuera de campo, sin fijar su destino. No hay ayuda, vecino, carro ni escena posterior. Fuente `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1906–1912, cotejadas.
+
+La imagen es de desenlace y no debe usarse como preimagen. Aprobación solo visual, sin activar Aventura/Historia ni acreditar QA de interfaz DC-28/TS-001 o derechos de redistribución. Con H14 quedan aceptadas e integradas las 22 imágenes enumeradas en `docs/PROMPTS_CAPITULO_P1_C04_FALTANTES_2026-11-10.md`; este cierre de inventario no sustituye QA de uso en la app.

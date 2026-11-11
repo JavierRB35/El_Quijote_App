@@ -172,3 +172,9 @@ Esta consecuencia `POST` **solo se muestra después de «Descubrir qué sucede»
 Se integra **H01** (`STORY`, Historia H01.1–H01.2) como WebP original 1672 × 941 px y calidad 82, ID provisional `DQ.MED.900293`. Don Quijote parte de una venta modesta a la primera luz del día, montado en Rocinante, armado y satisfecho por la investidura. Esta imagen de **amanecer** se diferencia de la despedida nocturna del capítulo III: no presenta ventero destacado, luna, ceremonia, dinero, camisas nuevas o escudero. Fuente literaria: `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1672–1681, cotejadas.
 
 H01 es material para Modo Historia, no sustituye una preimagen específica de Aventura. Su catalogación no activa contenido, ni certifica todavía QA visual DC-28/TS-001 o derechos de distribución pública. H02A está aún pendiente de aceptación y no se incluye en el commit.
+
+## Capítulo IV — H02A aprobada visualmente: voces del bosque (2026-11-11)
+
+Se integra **H02A** (`STORY`, Historia H02.1) como WebP original de 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900294`. Tras escuchar voces de queja a su derecha, don Quijote guía a Rocinante hacia las encinas; la causa de esas voces sigue fuera de plano. Plano de entrada al bosque con el caballero de perfil, celada, lanza y adarga; sin Andrés, Haldudo, yegua ni consecuencias futuras. Fuente: `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1683–1693, cotejadas.
+
+La aprobación es visual y específica. No activa guiones ni contenido de juego, no acredita todavía QA de interfaz DC-28/TS-001 ni derechos de redistribución. La imagen H02B se generará como candidata independiente y no se integra sin aceptación posterior.

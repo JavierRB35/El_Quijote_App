@@ -220,3 +220,9 @@ La aceptación es solo visual de H09; no activa rondas ni Modo Historia y no sus
 Se integra **H10** (`STORY`, Historia H10.2–H10.3) como WebP original 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900301`. El mismo mercader, ante la exigencia de creer sin ver, pide con cortesía fingida un retrato de Dulcinea. Sus dos manos están vacías, don Quijote escucha montado y la comitiva con sus quitasoles queda en segundo plano. No aparece retrato, grano literal, réplica airada ni acción violenta posterior. Fuente `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1865–1875, cotejadas.
 
 Esta aceptación visual específica de H10 no activa guiones ni contenido ni certifica QA de UI DC-28/TS-001 o derechos de redistribución. H11 permanecerá fuera del catálogo hasta su aceptación individual.
+
+## Capítulo IV — H11 aprobada visualmente: la acometida (2026-11-11)
+
+Se integra **H11** (`STORY`, Historia H11.3) como WebP original 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900302`. Don Quijote arremete montado en Rocinante con la lanza baja contra el mercader que se ha burlado de Dulcinea; en el plano lateral abierto ambos siguen separados y no hay contacto. Rocinante avanza erguido y todavía no tropieza. Los compañeros con quitasoles quedan al fondo. No hay caballo caído, lanza rota, heridos ni agresión posterior. Fuente `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1883–1885, cotejadas.
+
+La aceptación de H11 es exclusivamente visual, no activa el Modo Historia ni Aventura ni certifica QA de interfaz DC-28/TS-001 o derechos de redistribución. H13 continúa pendiente de aceptación específica.

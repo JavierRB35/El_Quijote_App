@@ -127,8 +127,6 @@ Se incorpora **A05** (`PRE`, `AV2-I4-03`, Historia H08.2 durante la pausa), WebP
 A05 es preimagen **antiespoiler**: no revela la decisión posterior del caballo; se reserva para la pregunta previa en Aventura y el instante H08.2 de Historia antes de la resolución. Su incorporación no activa las rondas ni los guiones, no acredita QA DC-28/TS-001 en interfaz ni concede derechos de redistribución pública. Quedan pendientes esas verificaciones. A06 aún no cuenta con aprobación visual y queda fuera del commit.
 
 
-## Capítulo IV — A06 aprobada visualmente: Rocinante elige (2026-11-11)
+## Capítulo IV — A06: aceptación retirada (2026-11-11)
 
-Se incorpora la escena **A06** (`POST`, Aventura `AV2-I4-03`, Historia H08.2 tras la pausa), WebP original de 1672 × 941 px y calidad 82 con ID provisional `DQ.MED.900287`. El mismo cruce de cuatro ramales mantiene su continuidad con A05: desde atrás y a tres cuartos se ve a Rocinante iniciando el giro por uno de los tres ramales de salida, mientras don Quijote le deja decidir, con las riendas visiblemente flojas. El camino concreto seleccionado (izquierdo en esta recreación) no está indicado por Cervantes, y no aparece la caballeriza ni el encuentro ulterior. Fuente literaria: Primera Parte capítulo IV, líneas 1825–1827, cotejo directo con `DQ.SRC.0005`.
-
-Como consecuencia `POST`, **solo mostrar tras «Descubrir qué sucede»**; no sustituye la preimagen A05. La integración en el catálogo no activa rondas ni Historia, no acredita el QA DC-28/TS-001 en pantalla ni autoriza redistribución pública. Pendientes esas verificaciones. A07 es candidata todavía sin aprobación del propietario y queda fuera de este commit.
+El propietario retiró expresamente la aceptación visual de la primera A06 (`POST`, `AV2-I4-03`) tras su integración: la cámara exterior no respetaba la continuidad subjetiva desde la montura aprobada en A05. Se retira el WebP del catálogo y de `main` mediante commit no destructivo del historial. La sustituta será una nueva candidata, pendiente de aprobación expresa, desde los ojos de don Quijote a lomos de Rocinante. No se activa ninguna escena.

@@ -151,3 +151,10 @@ Por ser PRE, la escena debe mostrarse antes de la respuesta del caballero y **no
 Se integra **A08** (`POST`, Aventura `AV2-I4-04`, Historia H10.1), WebP original 1672 × 941 px a calidad 82 con ID provisional `DQ.MED.900290`. Es el contraplano de A07: don Quijote afirma con solemnidad que deben creer en la incomparable Dulcinea sin verla; el mercader escucha, Rocinante sigue detenido, adarga visible y lanza vertical sin iniciar carga. La comitiva continúa inmóvil; no hay retrato, burla siguiente ni violencia. Fuente textual `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1857–1863, cotejo directo.
 
 Por ser `POST`, no debe mostrarse hasta después de «Descubrir qué sucede» en Aventura. Su alta de imagen no activa rondas/Historia ni certifica aún QA visual DC-28/TS-001 en el juego o permisos de redistribución. A09 sigue fuera del catálogo aprobado hasta validación específica del propietario.
+
+
+## Capítulo IV — A09 aprobada visualmente: réplica airada (2026-11-11)
+
+Se integra **A09** (`PRE`, Aventura `AV2-I4-05`, Historia H11.1–H11.2), WebP original 1672 × 941 px a calidad 82 e ID provisional `DQ.MED.900291`. El plano medio corto desde el lado de los viajeros muestra a don Quijote indignado por las palabras del mercader contra Dulcinea. Rocinante sigue inmóvil y la lanza todavía vertical, sin amenazar físicamente. El encuadre modifica escala, eje y expresión respecto de A07 y A08, preservando el lateral derecho libre para un panel posterior. Fuente: `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1877–1881, verificadas.
+
+A09 es una preimagen antiespoiler: no revela la acometida ni el tropiezo posterior. Su integración no activa Aventura/Historia ni acredita QA de UI DC-28/TS-001 o redistribución pública. A10 continúa pendiente de aceptación visual y no se incluye en el commit.

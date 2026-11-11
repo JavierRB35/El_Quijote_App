@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0.0",
+  "capituloId": "DQ.P1.C04",
+  "episodioId": "DQ.P1.C04.E01",
+  "estado_editorial": "piloto_integrado",
+  "revision_visual": "pendiente",
+  "fuente": {
+    "id": "DQ.SRC.0005",
+    "ruta": "content/textos/gutenberg_2000/El_Quijote.txt"
+  },
+  "pendientes_editoriales": [
+    "AV2-I4-01",
+    "AV2-I4-02",
+    "AV2-I4-03",
+    "AV2-I4-04",
+    "AV2-I4-05"
+  ],
+  "rondas": [
+    {
+      "id": "AV2-I4-01",
+      "tramo": "Andrés y la justicia prometida",
+      "contexto": "Camino de su aldea, don Quijote ha seguido unos lamentos hasta el bosque. Encuentra a un muchacho atado a una encina y a su amo azotándolo. El labrador alega que pierde ovejas y niega que el castigo sea una excusa para no pagarle.",
+      "personaje": "Don Quijote",
+      "pregunta": "¿Qué exigirá don Quijote al oír la explicación del amo?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Que lleve al muchacho ante un juez de la aldea."
+        },
+        {
+          "id": "b",
+          "texto": "Que desate al muchacho y le pague lo que le debe."
+        },
+        {
+          "id": "c",
+          "texto": "Que entregue las ovejas al muchacho como compensación."
+        }
+      ],
+      "correcta": "b",
+      "consecuencia": "Don Quijote amenaza al amo con la lanza y exige que pague y desate al muchacho. El labrador lo libera. Al discutir la deuda, el caballero rechaza descontar zapatos y sangrías: los considera compensados por los azotes.",
+      "explicacion": "Don Quijote impone una reparación inmediata con su autoridad de caballero, sin acudir a otro juez.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_04/p1_c04_a01_explicacion_amo_pre.webp",
+        "alt": "Haldudo se explica con temor ante don Quijote montado, mientras Andrés permanece atado a una encina y la yegua está junto a otra."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_04/p1_c04_a02_andres_libre_post.webp",
+        "alt": "Andrés, ya libre, habla con don Quijote mientras la cuerda permanece suelta junto a la encina y Haldudo escucha."
+      }
+    },
+    {
+      "id": "AV2-I4-02",
+      "tramo": "Andrés y la justicia prometida",
+      "contexto": "El amo dice que no lleva dinero y propone pagar en casa. Andrés teme quedarse solo con él y advierte que Juan Haldudo no es caballero. El labrador acaba de jurar que pagará toda la deuda.",
+      "personaje": "Don Quijote",
+      "pregunta": "¿Qué hará don Quijote ante aquel juramento?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Acompañará a los dos hasta que Andrés cobre."
+        },
+        {
+          "id": "b",
+          "texto": "Se llevará a Andrés y dejará pendiente el cobro."
+        },
+        {
+          "id": "c",
+          "texto": "Advertirá al amo que cumpla y se marchará confiando en su promesa."
+        }
+      ],
+      "correcta": "c",
+      "consecuencia": "Don Quijote amenaza con volver si el amo incumple y se aleja. Cuando deja de verlo, Haldudo vuelve a atar y azotar a Andrés. Después lo suelta; el muchacho se marcha llorando mientras su amo ríe.",
+      "explicacion": "La confianza del caballero en el juramento deja a Andrés sin protección; su satisfacción contrasta con lo ocurrido tras su partida.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_04/p1_c04_a03_promesa_haldudo_pre.webp",
+        "alt": "Juan Haldudo promete pagar a Andrés ante don Quijote montado; Andrés escucha con recelo junto a la encina."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_04/p1_c04_a04_represalia_indirecta_post.webp",
+        "alt": "Haldudo se encuentra junto a la encina mientras Andrés apenas se distingue oculto tras el tronco, una representación indirecta de la represalia."
+      }
+    },
+    {
+      "id": "AV2-I4-03",
+      "tramo": "El regreso y los mercaderes",
+      "contexto": "Satisfecho de su intervención e ignorante de lo ocurrido a Andrés, don Quijote avanza hacia su aldea. Llega a una encrucijada de cuatro caminos y se detiene, imitando las deliberaciones de los caballeros de sus libros.",
+      "personaje": "Don Quijote",
+      "pregunta": "¿Cómo decidirá por dónde continuar?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Soltará la rienda y dejará que Rocinante elija."
+        },
+        {
+          "id": "b",
+          "texto": "Tomará el camino que le parezca más apartado de su aldea."
+        },
+        {
+          "id": "c",
+          "texto": "Esperará a un viajero para pedirle orientación."
+        }
+      ],
+      "correcta": "a",
+      "consecuencia": "Don Quijote deja la elección a Rocinante. El caballo continúa hacia su caballeriza.",
+      "explicacion": "La deliberación caballeresca termina confiando la decisión al caballo, que mantiene su querencia por casa.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_04/p1_c04_a05_encrucijada_pov_pre.webp",
+        "alt": "Desde la montura de Rocinante, don Quijote contempla tres caminos posibles hacia delante; el cuarto, por el que llegó, queda detrás del jinete."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_04/p1_c04_a06_rocinante_elige_pov_post.webp",
+        "alt": "Desde la silla de don Quijote se ve a Rocinante girar hacia el ramal izquierdo de la encrucijada, con las riendas sueltas y los otros dos caminos a la derecha."
+      },
+      "checkpoint": {
+        "id": "encrucijada",
+        "titulo": "La encrucijada"
+      }
+    },
+    {
+      "id": "AV2-I4-04",
+      "tramo": "El regreso y los mercaderes",
+      "contexto": "Don Quijote ha detenido a unos mercaderes y exige que proclamen a Dulcinea la doncella más hermosa. Uno responde que no la conocen y que, si se la muestra, reconocerán su belleza.",
+      "personaje": "Don Quijote",
+      "pregunta": "¿Cómo responderá don Quijote a la petición de verla?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Les propondrá viajar al Toboso para conocerla."
+        },
+        {
+          "id": "b",
+          "texto": "Exigirá que lo crean sin verla y los desafiará si se niegan."
+        },
+        {
+          "id": "c",
+          "texto": "Aceptará que no opinen hasta haberla visto."
+        }
+      ],
+      "correcta": "b",
+      "consecuencia": "Don Quijote sostiene que el mérito consiste en creer, afirmar y defender su belleza sin verla. Los desafía a combatir, uno a uno o todos juntos.",
+      "explicacion": "Su demanda de fe caballeresca choca con la petición de prueba de los viajeros.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_04/p1_c04_a07_primera_peticion_mercader_pre.webp",
+        "alt": "Un mercader toledano de rico atuendo pide ver a la dama mientras don Quijote escucha montado en Rocinante ante la comitiva detenida y sus quitasoles."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_04/p1_c04_a08_respuesta_caballero_post.webp",
+        "alt": "Don Quijote responde al mercader con expresión solemne y una mano abierta desde Rocinante, sin bajar la lanza; la comitiva permanece quieta."
+      }
+    },
+    {
+      "id": "AV2-I4-05",
+      "tramo": "El regreso y los mercaderes",
+      "contexto": "El mercader pide ahora un retrato diminuto y bromea con que elogiarían a Dulcinea aun si tuviera defectos. Don Quijote lo considera una ofensa y acaba de amenazar con hacerles pagar sus palabras.",
+      "personaje": "Don Quijote",
+      "pregunta": "¿Qué hará don Quijote inmediatamente después de la amenaza?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Reclamará una disculpa y esperará inmóvil."
+        },
+        {
+          "id": "b",
+          "texto": "Dará la espalda a los mercaderes y seguirá hacia su aldea."
+        },
+        {
+          "id": "c",
+          "texto": "Arremeterá con la lanza baja contra quien habló."
+        }
+      ],
+      "correcta": "c",
+      "consecuencia": "Don Quijote carga contra el mercader, pero Rocinante tropieza y cae antes de alcanzarlo. Su amo sale rodando y no logra levantarse por el estorbo y peso de sus armas.",
+      "explicacion": "El ataque nace de la ofensa que cree oír; el tropiezo interrumpe la carga. No llega a herir al mercader.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_04/p1_c04_a09_replica_airada_pre.webp",
+        "alt": "Desde Rocinante, don Quijote replica colérico al mercader que lo ha ofendido, sin bajar todavía su lanza, ante la comitiva detenida."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_04/p1_c04_a10_caida_rocinante_post.webp",
+        "alt": "Rocinante yace caído en el camino y don Quijote intenta incorporarse, con ambas piernas en posición natural y su lanza todavía entera; el mercader permanece lejos e ileso."
+      },
+      "checkpoint": {
+        "id": "mercaderes",
+        "titulo": "La aventura de los mercaderes"
+      }
+    }
+  ]
+}

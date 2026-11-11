@@ -36,6 +36,23 @@
       }
     },
     {
+      "capituloId": "DQ.P1.C04",
+      "episodioId": "DQ.P1.C04.E01",
+      "etiqueta": "Parte I · Capítulo IV",
+      "titulo": "Andrés, la encrucijada y los mercaderes",
+      "resumen": "Don Quijote intenta socorrer a Andrés, confía en un juramento, deja elegir a Rocinante y se enfrenta a unos mercaderes.",
+      "descripcionHistoria": "Catorce escenas y 33 intervenciones completas: Andrés y Juan Haldudo, la encrucijada, los mercaderes, la caída y la soledad final.",
+      "descripcionAventura": "Cinco anticipaciones de acciones canónicas con diez imágenes previas y posteriores y dos checkpoints.",
+      "cierreAventura": {
+        "titulo": "El caballero queda solo",
+        "texto": "Un mozo de mulas rompe la lanza y golpea al don Quijote caído pese a los gritos de sus amos. Los mercaderes prosiguen su camino. Don Quijote queda solo, sin poder levantarse; su auxilio pertenece al capítulo V."
+      },
+      "cierreHistoria": {
+        "titulo": "Solo en el camino",
+        "texto": "Tras el encuentro con los mercaderes, don Quijote yace solo e incapaz de levantarse. El auxilio y el regreso pertenecen al capítulo V."
+      }
+    },
+    {
       "capituloId": "DQ.P1.C08",
       "episodioId": "DQ.P1.C08.E01",
       "etiqueta": "Parte I · Capítulo VIII",

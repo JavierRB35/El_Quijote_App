@@ -190,3 +190,9 @@ La imagen se registra por aceptación visual expresa. No activa escenas ni garan
 Se integra **H06** (`STORY`, Historia H06.2) como WebP 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900296`. La cámara mira desde el encinar hacia su salida: Haldudo sigue con la vista a don Quijote, que se aleja montado en Rocinante y aparece a escala reducida al fondo; Andrés sigue libre y la yegua permanece junto a otra encina. No hay represalia, monedas entregadas ni regreso a la venta. Fuente: `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1778–1780, cotejadas con el texto del repositorio.
 
 Aprobación visual específica del propietario, sin activación de Modo Historia ni de Aventura. QA de interfaz DC-28/TS-001 y revisión de derechos de distribución pendientes. H07A no forma parte de esta integración y queda pendiente de aceptación visual independiente.
+
+## Capítulo IV — H07A aprobada visualmente: falso ofrecimiento (2026-11-11)
+
+Se integra **H07A** (`STORY`, Historia H07.1) como WebP 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900297`. Ya sin don Quijote a la vista, Haldudo se dirige a Andrés como si fuera a cumplir el pago prometido. Andrés permanece libre, sin ataduras; el camino de salida está vacío y no aparecen monedas, cobro ni represalia posterior. La expresión cordial-ambigua del amo y la esperanza del muchacho son recreaciones plausibles del diálogo. Fuente `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1783–1792, cotejadas.
+
+La aceptación visual es específica de H07A. No se activa Historia/Aventura ni se acredita todavía QA DC-28/TS-001 en el juego o derechos para redistribución. H07B necesita aceptación visual propia.

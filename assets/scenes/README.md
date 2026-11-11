@@ -226,3 +226,9 @@ Esta aceptación visual específica de H10 no activa guiones ni contenido ni cer
 Se integra **H11** (`STORY`, Historia H11.3) como WebP original 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900302`. Don Quijote arremete montado en Rocinante con la lanza baja contra el mercader que se ha burlado de Dulcinea; en el plano lateral abierto ambos siguen separados y no hay contacto. Rocinante avanza erguido y todavía no tropieza. Los compañeros con quitasoles quedan al fondo. No hay caballo caído, lanza rota, heridos ni agresión posterior. Fuente `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1883–1885, cotejadas.
 
 La aceptación de H11 es exclusivamente visual, no activa el Modo Historia ni Aventura ni certifica QA de interfaz DC-28/TS-001 o derechos de redistribución. H13 continúa pendiente de aceptación específica.
+
+## Capítulo IV — H13 aprobada visualmente: los pedazos de la lanza (2026-11-11)
+
+Se integra **H13** (`STORY`, Historia H13.1–H13.2 y cierre posterior de Aventura) como WebP 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900303`. Tras la caída y la rotura de la lanza, don Quijote yace sin poder incorporarse; el mozo de mulas está junto a él con un fragmento del asta rota. Otros pedazos aparecen en el suelo y los mercaderes gesticulan al fondo para que el mozo se detenga. Se sugiere la agresión por las posturas, sin impacto en cuadro, heridas ni sangre. Fuente `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1894–1904, cotejadas.
+
+Imagen posterior a la rotura: no emplear como preimagen de anticipación. La aprobación es exclusivamente visual, sin activación de Aventura/Historia, sin QA de interfaz DC-28/TS-001 acreditado y con revisión de derechos pendiente. H14 queda fuera de `main` hasta su aceptación individual.

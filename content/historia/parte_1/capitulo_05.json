@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0.0",
+  "capituloId": "DQ.P1.C05",
+  "episodioId": "DQ.P1.C05.E01",
+  "estado_editorial": "piloto_integrado",
+  "revision_visual": "pendiente",
+  "fuente": {
+    "id": "DQ.SRC.0005",
+    "ruta": "content/textos/gutenberg_2000/El_Quijote.txt"
+  },
+  "titulo": "Donde se prosigue la narración de la desgracia de nuestro caballero",
+  "cierre": {
+    "titulo": "El caballero vuelve a casa",
+    "texto": "Don Quijote duerme en su lecho y el cura escucha el relato del vecino. El examen de sus libros comienza en el capítulo VI."
+  },
+  "escenas": [
+    {
+      "id": "H01",
+      "titulo": "El romance sustituye a la derrota",
+      "intervenciones": [
+        {
+          "id": "H01-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Don Quijote permanece tendido en el camino. Le duele todo el cuerpo y no logra levantarse. Pero, en vez de pedir auxilio, se aferra a lo que ha leído.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 1920–1926",
+          "imagen": "p1_c05_quijote_romances_post"
+        },
+        {
+          "id": "H01-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Recuerda el romance de Valdovinos, el caballero herido en la montaña, y empieza a revolcarse y a declamar como si aquella desgracia fuera la suya.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 1922–1929",
+          "imagen": "p1_c05_quijote_romances_post"
+        },
+        {
+          "id": "H01-I03",
+          "hablante": "Don Quijote",
+          "tipo_texto": "CITA_LITERAL",
+          "texto_visible": "¿Donde estás, señora mía, que no te duele mi mal?",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 1931–1932",
+          "imagen": "p1_c05_quijote_romances_post"
+        }
+      ]
+    },
+    {
+      "id": "H02",
+      "titulo": "El vecino encuentra a un caballero de romance",
+      "intervenciones": [
+        {
+          "id": "H02-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Cuando invoca al marqués de Mantua, pasa por el camino un labrador de su mismo lugar, de vuelta de llevar trigo al molino. Ve al herido y se acerca a preguntarle quién es y qué le ha sucedido.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 1939–1945",
+          "imagen": "p1_c05_r02_a03_pre_owner_approved"
+        },
+        {
+          "id": "H02-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Don Quijote cree que aquel hombre es el propio marqués y sigue declamando su romance, sin responder a las preguntas. El labrador escucha atónito.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 1946–1951",
+          "imagen": "p1_c05_r02_a03_pre_owner_approved"
+        },
+        {
+          "id": "H02-I03",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "El vecino aparta la visera destrozada por los golpes y limpia el polvo del rostro. Así reconoce al señor Quijana y le pregunta quién lo ha puesto de aquella suerte. El hidalgo continúa su recitación.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 1951–1960",
+          "imagen": "p1_c05_pedro_alonso_auxilio_post"
+        }
+      ]
+    },
+    {
+      "id": "H03",
+      "titulo": "Un asno más seguro que Rocinante",
+      "intervenciones": [
+        {
+          "id": "H03-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "El hombre le retira como puede el peto y el espaldar para examinarlo. No descubre sangre ni heridas visibles, aunque apenas puede moverse.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 1960–1963",
+          "imagen": "p1_c05_pedro_alonso_auxilio_post"
+        },
+        {
+          "id": "H03-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Con gran esfuerzo monta al hidalgo sobre su propio asno, más sosegado. Recoge todas las armas, hasta los fragmentos de la lanza, los ata sobre Rocinante y guía ambas caballerías rumbo al pueblo.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 1963–1969",
+          "imagen": "p1_c05_h03_historia_owner_approved"
+        }
+      ]
+    },
+    {
+      "id": "H04",
+      "titulo": "De Valdovinos a Abindarráez",
+      "intervenciones": [
+        {
+          "id": "H04-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Don Quijote se balancea sobre el jumento, tan molido que apenas consigue sostenerse. Sus suspiros obligan al labrador a preguntarle otra vez dónde le duele.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 1967–1970",
+          "imagen": "p1_c05_h04_historia_owner_approved"
+        },
+        {
+          "id": "H04-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "El caballero ha olvidado a Valdovinos. Ahora se cree el moro Abindarráez, prisionero del alcaide Rodrigo de Narváez, y responde con las palabras de otro relato que había leído. El vecino comienza a comprender la profundidad de su extravío.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 1971–1982",
+          "imagen": "p1_c05_h04_historia_owner_approved"
+        },
+        {
+          "id": "H04-I03",
+          "hablante": "Don Quijote",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Escuchad, señor Rodrigo de Narváez: mi hermosa Jarifa no es otra que Dulcinea del Toboso, por quien he realizado y realizaré las mayores hazañas de caballería.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 1984–1987",
+          "imagen": "p1_c05_h04_historia_owner_approved"
+        }
+      ]
+    },
+    {
+      "id": "H05",
+      "titulo": "Pedro Alonso y el «Yo sé quién soy»",
+      "intervenciones": [
+        {
+          "id": "H05-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "El labrador trata de poner fin a tanta confusión. Le aclara quién es realmente cada uno de ellos.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 1989–1994",
+          "imagen": "p1_c05_h05_historia_owner_approved"
+        },
+        {
+          "id": "H05-I02",
+          "hablante": "Pedro Alonso",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "No soy Rodrigo de Narváez ni el marqués de Mantua. Soy Pedro Alonso, vuestro vecino; y vos no sois Valdovinos ni Abindarráez, sino el honrado hidalgo señor Quijana.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 1991–1994",
+          "imagen": "p1_c05_h05_historia_owner_approved"
+        },
+        {
+          "id": "H05-I03",
+          "hablante": "Don Quijote",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Yo sé quién soy. Puedo ser también los Doce Pares de Francia y los Nueve de la Fama: mis hazañas superarán a las de todos ellos.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 1996–1999",
+          "imagen": "p1_c05_h05_historia_owner_approved"
+        }
+      ]
+    },
+    {
+      "id": "H06",
+      "titulo": "Entrar sin ser visto",
+      "intervenciones": [
+        {
+          "id": "H06-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Llegan al pueblo al anochecer, pero Pedro Alonso espera un poco más: no quiere que vean a su vecino en tan lastimoso estado.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2001–2003",
+          "imagen": "p1_c05_h06_historia_owner_approved"
+        },
+        {
+          "id": "H06-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Cuando la oscuridad le parece suficiente, entra con él en su casa. Allí se encuentra todo alborotado: el ama, la sobrina y dos grandes amigos del hidalgo, el cura y el barbero.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2003–2006",
+          "imagen": "p1_c05_r04_a08_post_owner_approved"
+        }
+      ]
+    },
+    {
+      "id": "H07",
+      "titulo": "El ama acusa a los libros",
+      "intervenciones": [
+        {
+          "id": "H07-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "El ama se dirige al cura, el licenciado Pero Pérez. Lleva tres días sin ver al señor, al rocín ni a sus armas.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2006–2011",
+          "imagen": "p1_c05_h07_historia_owner_approved"
+        },
+        {
+          "id": "H07-I02",
+          "hablante": "Ama",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Son esos malditos libros de caballerías. Se pasaba leyéndolos y diciendo que saldría a buscar aventuras. Le han trastornado el entendimiento.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2012–2017",
+          "imagen": "p1_c05_h07_historia_owner_approved"
+        },
+        {
+          "id": "H07-I03",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "En su angustia, maldice los libros que considera responsables de haber perdido a su amo. La sobrina coincide y tiene aún más que contar.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2015–2019",
+          "imagen": "p1_c05_h07_historia_owner_approved"
+        }
+      ]
+    },
+    {
+      "id": "H08",
+      "titulo": "La sobrina recuerda y el cura amenaza",
+      "intervenciones": [
+        {
+          "id": "H08-I01",
+          "hablante": "Sobrina",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Maese Nicolás, mi tío podía pasar dos días y dos noches leyendo. Después tomaba la espada y daba cuchilladas a las paredes, convencido de haber vencido a cuatro gigantes.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2021–2027",
+          "imagen": "p1_c05_h08_historia_owner_approved"
+        },
+        {
+          "id": "H08-I02",
+          "hablante": "Sobrina",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Hasta creía que el sudor era sangre y que un jarro de agua fría era un remedio enviado por el sabio Esquife. Debimos advertiros para que se pusiera fin a esos libros.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2026–2034",
+          "imagen": "p1_c05_h08_historia_owner_approved"
+        },
+        {
+          "id": "H08-I03",
+          "hablante": "Cura Pero Pérez",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Mañana mismo haré que se examinen esos libros y sean condenados al fuego, antes de que causen otro daño semejante.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2036–2039",
+          "imagen": "p1_c05_h08_historia_owner_approved"
+        }
+      ]
+    },
+    {
+      "id": "H09",
+      "titulo": "El herido vuelve a su casa",
+      "intervenciones": [
+        {
+          "id": "H09-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Pedro Alonso, que ha oído la conversación, alza la voz y anuncia la llegada de Valdovinos, del marqués de Mantua y de Abindarráez: usa con ironía los nombres que ha oído durante el camino.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2041–2048",
+          "imagen": "p1_c05_h09_historia_owner_approved"
+        },
+        {
+          "id": "H09-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Todos salen al encuentro. Reconocen al amigo, al amo, al tío. Corren a abrazarlo mientras él sigue sobre el jumento, incapaz de apearse.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2049–2051",
+          "imagen": "p1_c05_h09_historia_owner_approved"
+        },
+        {
+          "id": "H09-I03",
+          "hablante": "Don Quijote",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Deteneos, que vengo herido por culpa de mi caballo. Llevadme a mi lecho y, si es posible, llamad a la sabia Urganda para que cure mis heridas.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2053–2055",
+          "imagen": "p1_c05_h09_historia_owner_approved"
+        }
+      ]
+    },
+    {
+      "id": "H10",
+      "titulo": "La cura, los supuestos gigantes",
+      "intervenciones": [
+        {
+          "id": "H10-I01",
+          "hablante": "Ama",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Subid a la cama. Aquí sabremos curaros sin llamar a esa Urganda. ¡Otra vez malditos libros de caballerías, que os han dejado así!",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2057–2061",
+          "imagen": "p1_c05_h10_historia_owner_approved"
+        },
+        {
+          "id": "H10-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Lo acuestan y buscan heridas, pero no encuentran ninguna. Don Quijote insiste en que está molido por caer de Rocinante mientras combatía con diez gigantes.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2063–2066",
+          "imagen": "p1_c05_h10_historia_owner_approved"
+        },
+        {
+          "id": "H10-I03",
+          "hablante": "Cura Pero Pérez",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "¿Gigantes, decís? Entonces no dejaré pasar mañana sin quemar esos libros.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2068–2070",
+          "imagen": "p1_c05_h10_historia_owner_approved"
+        }
+      ]
+    },
+    {
+      "id": "H11",
+      "titulo": "Comer y dormir; el relato del vecino",
+      "intervenciones": [
+        {
+          "id": "H11-I01",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Le hacen muchas preguntas, pero don Quijote no quiere responder. Solo pide de comer y que lo dejen dormir. Lo complacen y, por fin, descansa.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2071–2073",
+          "imagen": "p1_c05_h11_historia_owner_approved"
+        },
+        {
+          "id": "H11-I02",
+          "hablante": "Narrador",
+          "tipo_texto": "ADAPTACION_FIEL",
+          "texto_visible": "Mientras duerme, el cura escucha con detalle cómo lo encontró Pedro Alonso y qué disparates dijo durante el camino. Aquello refuerza su decisión para el día siguiente.",
+          "localizador": "DQ.SRC.0005 · Parte I, capítulo V, líneas 2073–2077",
+          "imagen": "p1_c05_h11_historia_owner_approved"
+        }
+      ]
+    }
+  ]
+}

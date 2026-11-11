@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0.0",
+  "capituloId": "DQ.P1.C05",
+  "episodioId": "DQ.P1.C05.E01",
+  "estado_editorial": "piloto_integrado",
+  "revision_visual": "pendiente",
+  "fuente": {
+    "id": "DQ.SRC.0005",
+    "ruta": "content/textos/gutenberg_2000/El_Quijote.txt"
+  },
+  "pendientes_editoriales": [
+    "AV2-I5-01",
+    "AV2-I5-02",
+    "AV2-I5-03",
+    "AV2-I5-04",
+    "AV2-I5-05"
+  ],
+  "rondas": [
+    {
+      "id": "AV2-I5-01",
+      "tramo": "El romance del herido",
+      "contexto": "Don Quijote yace dolorido y solo en el camino, tras la paliza de los mercaderes. No puede levantarse y cree estar viviendo una desgracia propia de un caballero andante.",
+      "personaje": "Don Quijote",
+      "pregunta": "Incapaz de incorporarse, ¿cómo tratará de dar sentido a su situación?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Se concentrará en llamar a los caminantes para que lo socorran."
+        },
+        {
+          "id": "b",
+          "texto": "Evocará el romance del herido Valdovinos y comenzará a recitarlo."
+        },
+        {
+          "id": "c",
+          "texto": "Reprochará en voz alta al mozo la pérdida de su lanza."
+        }
+      ],
+      "correcta": "b",
+      "consecuencia": "Don Quijote se revuelca por el suelo y recita el romance de Valdovinos como si él fuera el caballero herido. Mientras invoca al marqués de Mantua, pasa un labrador del mismo pueblo.",
+      "explicacion": "Don Quijote encuentra un paralelo en sus lecturas caballerescas, sin reconocer la realidad de lo ocurrido.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_04/p1_c04_h14_solo_camino_story.webp",
+        "alt": "Don Quijote yace solo, incapaz de levantarse, junto a los pedazos de su lanza en un camino rural desierto."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_05/p1_c05_quijote_romances_post.webp",
+        "alt": "Recreación cinematográfica del episodio «quijote romances» en el capítulo 5 de la parte 1."
+      }
+    },
+    {
+      "id": "AV2-I5-02",
+      "tramo": "El rostro bajo la visera",
+      "contexto": "Un labrador que vuelve de llevar trigo al molino encuentra al caballero caído. Le pregunta por su identidad y sus heridas, pero el herido lo confunde con el marqués de Mantua y continúa recitando.",
+      "personaje": "Pedro Alonso",
+      "pregunta": "¿Qué hará el labrador para comprender quién es el hombre tendido?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Le quitará la visera dañada, le limpiará el rostro y lo reconocerá."
+        },
+        {
+          "id": "b",
+          "texto": "Le pedirá su nombre y seguirá hacia el pueblo sin tocarlo."
+        },
+        {
+          "id": "c",
+          "texto": "Buscará primero al marqués de Mantua al que invoca el herido."
+        }
+      ],
+      "correcta": "a",
+      "consecuencia": "El labrador retira la visera destrozada, limpia el polvo del rostro y reconoce al señor Quijana, su vecino, que continúa su romance.",
+      "explicacion": "Al descubrir el rostro, Pedro Alonso reconoce al hidalgo real tras la figura que este cree representar.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_05/p1_c05_r02_a03_pre_owner_approved.webp",
+        "alt": "Pedro Alonso se arrodilla junto a don Quijote tendido en el camino con la visera cerrada, antes de reconocerlo."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_05/p1_c05_pedro_alonso_auxilio_post.webp",
+        "alt": "Pedro Alonso ayuda a Don Quijote, maltrecho y sin sangre visible, junto a un camino rural al atardecer mientras Rocinante espera cerca."
+      }
+    },
+    {
+      "id": "AV2-I5-03",
+      "tramo": "El auxilio en el camino",
+      "contexto": "El vecino ya ha reconocido al hidalgo. Tras quitarle parte de la armadura para comprobar si tiene heridas, no encuentra sangre. Don Quijote continúa tan molido que no puede levantarse.",
+      "personaje": "Pedro Alonso",
+      "pregunta": "¿Cómo decidirá llevar a su vecino a casa?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Lo montará sobre Rocinante y caminará delante."
+        },
+        {
+          "id": "b",
+          "texto": "Lo dejará descansar hasta que pueda volver andando."
+        },
+        {
+          "id": "c",
+          "texto": "Lo subirá al jumento y cargará las armas sobre Rocinante."
+        }
+      ],
+      "correcta": "c",
+      "consecuencia": "Pedro Alonso sube con esfuerzo al herido sobre su asno, por parecerle más sosegado. Recoge las armas y astillas de la lanza, las ata sobre Rocinante y conduce las dos caballerías hacia el pueblo.",
+      "explicacion": "El asno del labrador resulta más adecuado para transportar al hidalgo; Rocinante carga las armas.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_05/p1_c05_labrador_auxilio_pre.webp",
+        "alt": "Recreación artística: El labrador vecino reconoce al caballero herido junto al camino y se inclina para ayudarlo."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_05/p1_c05_h04_historia_owner_approved.webp",
+        "alt": "Don Quijote, encorvado sobre el asno, regresa con Pedro Alonso y Rocinante."
+      },
+      "checkpoint": {
+        "id": "auxilio_camino",
+        "titulo": "El auxilio en el camino"
+      }
+    },
+    {
+      "id": "AV2-I5-04",
+      "tramo": "La discreción al anochecer",
+      "contexto": "Pedro Alonso ha llegado con el maltrecho hidalgo sobre el asno hasta las afueras de su pueblo. Está anocheciendo y el labrador quiere evitar que los demás vecinos vean a don Quijote en ese estado.",
+      "personaje": "Pedro Alonso",
+      "pregunta": "¿Qué hará antes de entrar con él en el pueblo?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Esperará a que sea algo más de noche para que no lo vean."
+        },
+        {
+          "id": "b",
+          "texto": "Tocará a todas las puertas para que lo ayuden a apearse."
+        },
+        {
+          "id": "c",
+          "texto": "Lo llevará de inmediato a la plaza para buscar al cura."
+        }
+      ],
+      "correcta": "a",
+      "consecuencia": "Pedro Alonso espera a que oscurezca más y entra discretamente con don Quijote en su casa. Allí encuentra alborotados al ama, la sobrina, el cura y el barbero.",
+      "explicacion": "El labrador retrasa la entrada por consideración hacia la dignidad de su vecino.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_05/p1_c05_r04_a07_exterior_pueblo_pre_candidata.webp",
+        "alt": "Al anochecer, don Quijote maltrecho está sentado en el asno de Pedro Alonso ante un pueblo, mientras el labrador sostiene el cabestro y las riendas de Rocinante cargado con las armas."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_05/p1_c05_r04_a08_post_owner_approved.webp",
+        "alt": "Pedro Alonso sostiene a don Quijote maltrecho sobre el asno frente a la puerta de su casa, donde lo reciben el ama y la sobrina al atardecer."
+      }
+    },
+    {
+      "id": "AV2-I5-05",
+      "tramo": "La petición del hidalgo",
+      "contexto": "Ya en su casa, don Quijote está acostado tras relatar una supuesta batalla con gigantes, que no ocurrió. Sus allegados comprueban que no tiene heridas abiertas y le hacen numerosas preguntas.",
+      "personaje": "Don Quijote",
+      "pregunta": "¿Qué solicitará ahora a su familia y amigos?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Que le acerquen sus armas para salir esa misma noche."
+        },
+        {
+          "id": "b",
+          "texto": "Que le den de comer y lo dejen dormir."
+        },
+        {
+          "id": "c",
+          "texto": "Que el cura salga a buscar a los supuestos gigantes."
+        }
+      ],
+      "correcta": "b",
+      "consecuencia": "Don Quijote rehúsa responder las preguntas y solo pide comida y descanso. Lo dejan dormir. Mientras reposa, el cura escucha a Pedro Alonso contar cómo lo encontró y qué dijo durante el regreso.",
+      "explicacion": "Tras el penoso viaje, el hidalgo quiere descansar; el escrutinio de los libros no ocurre hasta el capítulo VI.",
+      "pasajeId": null,
+      "imagenPrevia": {
+        "uri": "assets://scenes/part_1/chapter_05/p1_c05_h10_historia_owner_approved.webp",
+        "alt": "Don Quijote, en cama, explica sus supuestas aventuras a sus allegados."
+      },
+      "imagenConsecuencia": {
+        "uri": "assets://scenes/part_1/chapter_05/p1_c05_r05_a10_descanso_cura_pedro_post.webp",
+        "alt": "Don Quijote descansa tendido en el lecho; Pedro Alonso, junto a la cama, relata lo ocurrido y el cura lo escucha atentamente; el ama y la sobrina observan preocupadas."
+      },
+      "checkpoint": {
+        "id": "regreso_casa",
+        "titulo": "El regreso a casa"
+      }
+    }
+  ]
+}

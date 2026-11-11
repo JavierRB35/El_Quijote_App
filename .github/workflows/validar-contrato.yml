@@ -73,6 +73,9 @@ jobs:
       - name: Capítulo IV — rondas, Historia, WebP y fidelidad literaria
         run: python -I tests/dev/test_capitulo_04.py
 
+      - name: Capítulo V — rondas, Historia, imágenes aprobadas y referencias
+        run: python -I tests/dev/test_capitulo_05.py
+
       - name: Regresiones negativas del catálogo Aventura
         run: python tests/dev/test_catalogo_aventura.py
 

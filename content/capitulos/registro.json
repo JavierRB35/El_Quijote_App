@@ -53,6 +53,23 @@
       }
     },
     {
+      "capituloId": "DQ.P1.C05",
+      "episodioId": "DQ.P1.C05.E01",
+      "etiqueta": "Parte I · Capítulo V",
+      "titulo": "El regreso del caballero",
+      "resumen": "Pedro Alonso encuentra al herido, lo transporta sobre su asno y lo lleva discretamente a casa, donde aguardan sus allegados.",
+      "descripcionHistoria": "Once escenas y treinta intervenciones visibles: el romance, el auxilio, el camino, el regreso al hogar y el descanso.",
+      "descripcionAventura": "Cinco anticipaciones narrativas con preimágenes exclusivas, consecuencias canónicas y dos checkpoints.",
+      "cierreAventura": {
+        "titulo": "En casa, al fin",
+        "texto": "Don Quijote descansa mientras el cura escucha a Pedro Alonso. El escrutinio de libros pertenece al capítulo VI."
+      },
+      "cierreHistoria": {
+        "titulo": "El caballero vuelve a casa",
+        "texto": "Don Quijote duerme y el cura escucha el relato del vecino. El examen de su biblioteca se contará en el capítulo VI."
+      }
+    },
+    {
       "capituloId": "DQ.P1.C08",
       "episodioId": "DQ.P1.C08.E01",
       "etiqueta": "Parte I · Capítulo VIII",

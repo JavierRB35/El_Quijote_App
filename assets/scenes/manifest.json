@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "package_id": "el-quijote-visual-pilot-2026-11-11-v25",
+  "package_id": "el-quijote-visual-pilot-2026-11-11-v26",
   "generated_on": "2026-11-06",
   "production_state": "visual_pilot_not_editorially_approved",
   "source_media_policy": "Only original AI recreations; no Tusell or Doré illustrations extracted or included",
@@ -7694,8 +7694,35 @@
       "textual_locator_status": "verified_against_repository_source",
       "rights_status": "original_generated_asset_review_on_redistribution",
       "review_notes_es": "A05 aprobada visualmente por el propietario el 2026-11-11 tras rechazar versiones con seis caminos y perspectiva externa. Aventura AV2-I4-03 PRE antiespoiler; Historia H08.2 durante la pausa. Fuente DQ.ED.0003 / DQ.SRC.0005, Primera Parte capítulo IV, líneas 1822–1825, cotejadas directamente con el archivo fuente. Se ve desde la silla de Rocinante una bifurcación de exactamente tres ramales hacia delante (izquierda, centro y derecha), con el cuarto de llegada detrás de la cámara; el caballo aún no ha elegido ruta. La vista subjetiva y la elección exacta de elementos del paisaje son recreación artística. PNG aprobado SHA-256 2c8612d49712ff739f050ddd203bcf7f8904a3d05c2914679d10c14f5b5c9d06. WebP 1672×941, calidad 82, 327546 bytes, SHA-256 8673942e2088c2e42cada1aeafd58484d27c8b8fcbe12f55b96e829489dd0094, Git blob SHA-1 a8c82706b8b58b5c197dcf66e9cbe445382e91cd. Pendientes QA visual DC-28/TS-001 en interfaz y revisión de derechos para redistribución. No activar automáticamente."
+    },
+    {
+      "id": "p1_c04_a06_rocinante_elige_pov_post",
+      "candidate_media_id": "DQ.MED.900288",
+      "media_class": "recreacion_ia",
+      "review_state": "aprobada",
+      "title_es": "Rocinante elige desde la montura de don Quijote",
+      "part": 1,
+      "chapter": 4,
+      "episode_key": "p1:c04",
+      "phase": "post",
+      "spoiler_risk": "medium",
+      "relative_path": "assets/scenes/part_1/chapter_04/p1_c04_a06_rocinante_elige_pov_post.webp",
+      "width_px": 1672,
+      "height_px": 941,
+      "mime_type": "image/webp",
+      "sha256": "1cb879387988400421385418418d5c09792ff3abf2af7343dfdea3a4319768c1",
+      "source_class": "RECREACION_ARTISTICA",
+      "generated_with": "OpenAI ImageGen",
+      "attribution_es": "Recreación artística original generada mediante OpenAI ImageGen para El Quijote en noviembre de 2026, por encargo del propietario y con aceptación visual expresa el 2026-11-11.",
+      "alt_es": "Desde la silla de don Quijote se ve a Rocinante girar hacia el ramal izquierdo de la encrucijada, con las riendas sueltas y los otros dos caminos a la derecha.",
+      "preferred_overlay_side": "right",
+      "historical_editorial_status": "approved_owner_visual",
+      "question_spoiler_validation": "pending_in_game_context_qa",
+      "textual_locator_status": "verified_against_repository_source",
+      "rights_status": "original_generated_asset_review_on_redistribution",
+      "review_notes_es": "A06 nueva versión POV aprobada expresamente por el propietario el 2026-11-11 tras retirar la aceptación de la versión exterior anterior (DQ.MED.900287, retirada de main en commit 0437f4ddf0b73847d4e9cb511ddc78940e581b81). Aventura AV2-I4-03 POST: revelar solo después de «Descubrir qué sucede»; Historia H08.2 después de la pausa. Fuente DQ.ED.0003 / DQ.SRC.0005, Primera Parte capítulo IV, líneas 1825–1827, cotejadas contra el repositorio. Continuidad directa de A05: misma perspectiva en primera persona desde la montura de Rocinante, caballo que ya ha girado hacia el ramal izquierdo y ha empezado a caminar, riendas colgando flojas de la mano del caballero; se mantienen exactamente cuatro caminos totales, tres salidas y la llegada. La dirección concreta izquierda es recreación plausible; Cervantes no fija el ramal concreto, solo que el rocín se va hacia su caballeriza, no visible. PNG aprobado SHA-256 cdb20c5634fc8c0f051ece0dd99e83324fc4815c2ed4611bd9364b8400526d15. WebP 1672×941, calidad 82, 309650 bytes, SHA-256 1cb879387988400421385418418d5c09792ff3abf2af7343dfdea3a4319768c1, Git blob SHA-1 ca42b647fb91cd516f18617a1f6b758d9ce8944a. Pendientes QA DC-28/TS-001 en interfaz y derechos de redistribución; no activar automáticamente."
     }
   ],
-  "catalog_version": "0.5.16",
+  "catalog_version": "0.5.17",
   "last_updated_on": "2026-11-11"
 }

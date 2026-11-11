@@ -130,3 +130,10 @@ A05 es preimagen **antiespoiler**: no revela la decisión posterior del caballo;
 ## Capítulo IV — A06: aceptación retirada (2026-11-11)
 
 El propietario retiró expresamente la aceptación visual de la primera A06 (`POST`, `AV2-I4-03`) tras su integración: la cámara exterior no respetaba la continuidad subjetiva desde la montura aprobada en A05. Se retira el WebP del catálogo y de `main` mediante commit no destructivo del historial. La sustituta será una nueva candidata, pendiente de aprobación expresa, desde los ojos de don Quijote a lomos de Rocinante. No se activa ninguna escena.
+
+
+## Capítulo IV — A06 POV corregida y aprobada (2026-11-11)
+
+Se incorpora la **A06 corregida**, `POST` de Aventura `AV2-I4-03` y reutilizable en Historia H08.2 después de la pausa, WebP original 1672 × 941 px a calidad 82, ID provisional `DQ.MED.900288`. El propietario aprobó esta nueva versión en **primera persona desde la montura de don Quijote**, continuidad exacta de A05: el cuello y las orejas de Rocinante giran hacia el ramal izquierdo, el caballo ya se dispone a avanzar y las riendas cuelgan flojas. Las otras dos salidas siguen visibles a la derecha; el cuarto ramal es el de llegada, detrás del jinete. El ramal específico es recreación artística, pues el texto solo dice que Rocinante tomó el camino de su caballeriza, que no se muestra. Fuente: `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1825–1827.
+
+Esta versión **sustituye** la A06 anterior con cámara exterior que el propietario rechazó posteriormente; se conserva esa revocación únicamente en historial, no como recurso vigente. Mostrar A06 solo después de revelar la consecuencia de A05. No se activan rondas/Historia, no se acredita aún QA DC-28/TS-001 en la aplicación ni redistribución pública. A07 queda fuera de este commit hasta su aceptación.

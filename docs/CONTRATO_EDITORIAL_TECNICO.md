@@ -1,5 +1,7 @@
 # CONTRATO EDITORIAL-TÉCNICO — v0.2.0 (borrador integrado)
 
+> **Actualización vinculante 2026-11-11, DC-37:** Los contratos TS-001 siguen exigiendo texto_visible completo y trazable; DC-37 modifica únicamente la capa de presentación para ocultar voluntariamente el pergamino durante contemplación pausada. No se modifica ni declara actualizado esquema JSON alguno con esta decisión; cualquier revisión futura de schema/guardado requiere autorización, migración y pruebas. Referencia prioritaria: [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Decisión **solo documental**; no autoriza implementación ni nuevas imágenes.
+
 **Estado histórico:** consolidación editorial/técnica v0.2.0 de 2026-11-05, con contrafirma registrada en §12. La versión contractual real vigente debe verificarse **en los esquemas de GitHub**, no deducirse del título. **Actualización operativa 2026-11-08 (DC-23–DC-27):** Dirección integral decide requisitos editoriales y revisa; un desarrollador implementa/valida. No hay nuevas firmas de equipos R01–R16. Rondas de anticipación con preimagen propia, Historia visualmente rica, escenas prioritarias y acuarelas secundarias; la relajación de listas vacías de Scene/Beat requiere PR técnica versionada y pruebas, no se declara ya implementada.
 **Fuente normativa:** `docs/ENCARGO_MAESTRO.md` §2.2, §4.3, §6.1–§6.3, Anexo A.
 **Última actualización normativa:** 2026-11-08 (DC-23–DC-27); los hitos de reconciliación anteriores permanecen históricos.

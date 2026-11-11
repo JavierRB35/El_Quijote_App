@@ -1,5 +1,7 @@
 # DIRECCIÓN ARTÍSTICA — EL QUIJOTE
 
+> **Actualización vinculante DC-37 (2026-11-11):** La escena narrativa llena toda la superficie útil; texto y alternativas viven íntegros dentro de pergamino semitransparente, sin desbordamiento ni scroll; icono fijo arriba a la derecha permite ocultarlo/recuperarlo voluntariamente con narración pausada. Tipografía histórica legible y fondos artísticos en todas las pantallas finales (menú: pueblo/paisaje manchego de época). TS-001 es texto completo visible por defecto y recuperable, no obligación de impedir la contemplación. Consultar [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Las instrucciones históricas incompatibles se consideran sustituidas **solo en el ámbito indicado**; no se autoriza código ni producción de imágenes.
+
 **Versión:** propuesta 0.3 · **Fecha:** 2026-11-06 · **Estado:** especificación de Fase 0, pendiente de pruebas de usabilidad y aceptación final.
 **Responsabilidad vigente (DC-23–DC-27, 2026-11-08):** **Dirección integral (ChatGPT)** asume criterios narrativos, artísticos, UX y aceptación; el **desarrollador único** implementa y prueba; un **director artístico** interviene solo para producir/modificar imágenes con prompt exacto transmitido por el propietario. Se dejan sin efecto las convocatorias históricas de equipos especializados.
 **Documentos relacionados:** [Piloto de escenas](DIRECCION_ARTISTICA_PILOTO.md) · [UX y accesibilidad](UX_ACCESIBILIDAD.md) · [Encargo maestro](ENCARGO_MAESTRO.md).

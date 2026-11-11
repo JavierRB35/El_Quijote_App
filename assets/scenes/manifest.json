@@ -8146,8 +8146,35 @@
       "textual_locator_status": "verified_against_repository_source",
       "rights_status": "original_generated_asset_review_on_redistribution",
       "review_notes_es": "H14 aceptada visualmente por el propietario el 2026-11-11. Historia H14.1–H14.2 y cierre de Aventura, después de que el mozo se canse y los mercaderes prosigan su camino. Don Quijote es la única persona visible: queda semitendido sobre el camino, intenta incorporarse sin conseguirlo; conserva armadura, celada, adarga y espuelas. Hay fragmentos de la lanza rota y su punta, sin lanza intacta. El camino sinuoso está enteramente desierto, sin mercaderes, mozos, vecino, rescate o carro. Rocinante no aparece en el encuadre y no se fija su destino, estado ni dirección. Sin heridas añadidas. Fuente DQ.ED.0003 / DQ.SRC.0005, Primera Parte capítulo IV, líneas 1906–1912, cotejadas con el corpus del repositorio. Paisaje, luz del atardecer y postura son recreaciones artísticas plausibles. WebP 1672×941, calidad 82, 311008 bytes, SHA-256 6b649ab25a4ccb9dc337f02f26df23512978b148d823812ae694d9c3ac206e5b, Git blob SHA-1 d934e332ef955d8d41175d7e519f66b59ba05a84. Alta solo visual sin activación ni validación TS-001/DC-28; derechos de redistribución pendientes."
+    },
+    {
+      "id": "p1_c05_r04_a07_exterior_pueblo_pre_candidata",
+      "candidate_media_id": "DQ.MED.900305",
+      "media_class": "recreacion_ia",
+      "review_state": "aprobada",
+      "title_es": "Pedro Alonso aguarda al anochecer fuera del pueblo con don Quijote",
+      "part": 1,
+      "chapter": 5,
+      "episode_key": "p1:c05",
+      "phase": "pre",
+      "spoiler_risk": "low",
+      "relative_path": "assets/scenes/part_1/chapter_05/p1_c05_r04_a07_exterior_pueblo_pre_candidata.webp",
+      "width_px": 1672,
+      "height_px": 941,
+      "mime_type": "image/webp",
+      "sha256": "4315451faee004cea792c3e15113d2d40c5854c005d47713936855226f94ea7c",
+      "source_class": "RECREACION_ARTISTICA",
+      "generated_with": "OpenAI ImageGen",
+      "attribution_es": "Recreación artística original generada mediante OpenAI ImageGen para El Quijote en noviembre de 2026; aceptación visual expresa del propietario el 2026-11-11.",
+      "alt_es": "Al anochecer, don Quijote maltrecho está sentado en el asno de Pedro Alonso ante un pueblo, mientras el labrador sostiene el cabestro y las riendas de Rocinante cargado con las armas.",
+      "preferred_overlay_side": "right",
+      "historical_editorial_status": "approved_owner_visual",
+      "question_spoiler_validation": "pending_in_game_context_qa",
+      "textual_locator_status": "verified_against_repository_source",
+      "rights_status": "original_generated_asset_review_on_redistribution",
+      "review_notes_es": "Propietario: «Imagen autorizada, aplica la directriz de imagen y continua con la siguiente imagen» (2026-11-11), aplicado a R04/A07 presentada previamente. PRE de Aventura R04 y posible Historia H06.1: llegada al exterior del pueblo al anochecer antes de que Pedro aguarde a que haya más noche; entrada al pueblo NO representada. Fuente DQ.ED.0003 / DQ.SRC.0005, Primera Parte, capítulo V, líneas 2001–2003, verificadas contra blob 9d7a51e978dca96b11ba1d1b66eabd57c6ef5eb5. Pedro Alonso, don Quijote, su asno y Rocinante con las armas, sin Sancho ni testigos. Pueblo, campanario, indumentaria y luz concretos son recreaciones plásticas no fijadas por Cervantes. PNG maestro fuera de Git SHA-256 a2025a928fd962bacc14695329ce9b0141d6f6f9cdda737205984d02372bcd7e. WebP 1672x941 q82, 218336 bytes, SHA-256 4315451faee004cea792c3e15113d2d40c5854c005d47713936855226f94ea7c, blob Git SHA-1 957e3cc179dceda4c2fd10c973a1b93c2e6774af. Aprobación visual únicamente. PENDIENTE: QA real DC-28 (el caballo ocupa el lado derecho donde debe colocarse el panel), continuidad del pelaje de Rocinante respecto a referencia pardo clara, TS-001 en pantalla, derechos de redistribución. No activar Aventura/Historia ni declarar la imagen apta para overlay hasta superar esos controles."
     }
   ],
-  "catalog_version": "0.5.30",
+  "catalog_version": "0.5.31",
   "last_updated_on": "2026-11-11"
 }

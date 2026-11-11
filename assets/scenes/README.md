@@ -178,3 +178,9 @@ H01 es material para Modo Historia, no sustituye una preimagen específica de Av
 Se integra **H02A** (`STORY`, Historia H02.1) como WebP original de 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900294`. Tras escuchar voces de queja a su derecha, don Quijote guía a Rocinante hacia las encinas; la causa de esas voces sigue fuera de plano. Plano de entrada al bosque con el caballero de perfil, celada, lanza y adarga; sin Andrés, Haldudo, yegua ni consecuencias futuras. Fuente: `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1683–1693, cotejadas.
 
 La aprobación es visual y específica. No activa guiones ni contenido de juego, no acredita todavía QA de interfaz DC-28/TS-001 ni derechos de redistribución. La imagen H02B se generará como candidata independiente y no se integra sin aceptación posterior.
+
+## Capítulo IV — H02B aprobada visualmente: descubrimiento entre las encinas (2026-11-11)
+
+Se integra **H02B** (`STORY`, Historia H02.2) como WebP 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900295`. Es continuación de H02A: desde la entrada del encinar don Quijote acaba de descubrir al joven Andrés atado a una encina, al labrador Juan Haldudo con la pretina baja y una yegua amarrada a otra encina distinta. No aparece azote en ejecución, lesión gráfica, desafío al amo ni liberación. Fuente: `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1693–1705, contrastadas con texto íntegro en repositorio.
+
+La imagen se registra por aceptación visual expresa. No activa escenas ni garantiza QA de interfaz DC-28/TS-001 o derechos de distribución; H06 queda como candidata independiente hasta nueva validación del propietario.

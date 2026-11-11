@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "package_id": "el-quijote-visual-pilot-2026-11-11-v37",
+  "package_id": "el-quijote-visual-pilot-2026-11-11-v38",
   "generated_on": "2026-11-06",
   "production_state": "visual_pilot_not_editorially_approved",
   "source_media_policy": "Only original AI recreations; no Tusell or Doré illustrations extracted or included",
@@ -8016,8 +8016,34 @@
       "textual_locator_status": "verified_against_repository_source",
       "rights_status": "original_generated_asset_review_on_redistribution",
       "review_notes_es": "H08 aceptada visualmente por el propietario el 2026-11-11. Imagen original de Modo Historia H08.1, previa a la encrucijada: don Quijote cabalga solo sobre Rocinante, en plano medio lateral/tres cuartos, con celada, armadura, lanza erguida, adarga y expresión de satisfacción, murmurando para sí sobre la supuesta hazaña que cree haber cumplido en favor de Andrés. Se ve un único camino de tierra sin cruces ni destinos identificables. No aparecen Dulcinea, Andrés, Haldudo ni los mercaderes. Fuente DQ.ED.0003 / DQ.SRC.0005, Primera Parte capítulo IV, líneas 1808–1820, cotejadas directamente contra el corpus del repositorio. La luz matinal, el gesto y el paisaje son recreaciones plausibles. PNG aprobado SHA-256 1b90f3bba3113ca8d14c722830ed9f1735d95808153683db21cab99391dfad31. WebP 1672×941, calidad 82, 303090 bytes, SHA-256 e6a2721b67b24fa18b5550b59cd8d3d4f3f596b18f163ead113ff964b587816f, Git blob SHA-1 8033b6754a2b0bff17c9128c7e4f1886a34a2878. H09 permanecerá candidata hasta aceptación visual propia. QA de interfaz DC-28/TS-001 y derechos de redistribución pendientes; sin activación automática."
+    },
+    {
+      "id": "p1_c04_h09_comitiva_se_acerca_story",
+      "candidate_media_id": "DQ.MED.900300",
+      "media_class": "recreacion_ia",
+      "review_state": "aprobada",
+      "title_es": "Don Quijote espera a una comitiva de mercaderes que se aproxima",
+      "part": 1,
+      "chapter": 4,
+      "episode_key": "p1:c04",
+      "phase": "story",
+      "spoiler_risk": "low",
+      "relative_path": "assets/scenes/part_1/chapter_04/p1_c04_h09_comitiva_se_acerca_story.webp",
+      "width_px": 1672,
+      "height_px": 941,
+      "mime_type": "image/webp",
+      "sha256": "7e1071ba287a335e5d06d4ec51da5e9325445da6dd96ff436f32e45f73b8a71a",
+      "source_class": "RECREACION_ARTISTICA",
+      "generated_with": "OpenAI ImageGen",
+      "attribution_es": "Recreación artística original generada mediante OpenAI ImageGen para El Quijote en noviembre de 2026, por encargo del propietario y con aceptación visual expresa el 2026-11-11.",
+      "alt_es": "Don Quijote aguarda montado en Rocinante en mitad del camino, con lanza y adarga, mientras se acerca parte de una comitiva de mercaderes con quitasoles.",
+      "historical_editorial_status": "approved_owner_visual",
+      "question_spoiler_validation": "pending_in_game_context_qa",
+      "textual_locator_status": "verified_against_repository_source",
+      "rights_status": "original_generated_asset_review_on_redistribution",
+      "review_notes_es": "H09 aceptada visualmente por el propietario el 2026-11-11. Imagen original para Historia H09.1, previa a la primera petición. Plano general de establecimiento: don Quijote, afirmado en los estribos sobre Rocinante y armado con lanza y adarga, se planta en mitad de un camino mientras se aproxima, a distancia, la parte delantera de la comitiva mercantil. Se ven quitasoles de tela crema y rojiza, comerciantes con sombreros y acompañantes; la comitiva completa NO está representada ni pretendida como inventario visible, pues el texto establece seis mercaderes, cuatro criados a caballo y tres mozos de mulas a pie. Sin diálogo iniciado, retrato, lucha, caída, castillos o molinos identificables. Fuente DQ.ED.0003 / DQ.SRC.0005, Primera Parte capítulo IV, líneas 1829–1840, cotejadas con texto del repositorio. La composición, luz y vestuario secundarios son recreación plausible. PNG aprobado SHA-256 fbf5fd95b53cf6f747bed2f9a7f02d941fc71858799e0b62cab29f6442c6de15. WebP 1672×941, calidad 82, 330636 bytes, SHA-256 7e1071ba287a335e5d06d4ec51da5e9325445da6dd96ff436f32e45f73b8a71a, Git blob SHA-1 4a4f0d239d6d8433689023acebe19e36450586eb. H10 permanece candidata independiente. QA interfaz DC-28/TS-001 y derechos redistribución pendientes; no activar."
     }
   ],
-  "catalog_version": "0.5.28",
+  "catalog_version": "0.5.29",
   "last_updated_on": "2026-11-11"
 }

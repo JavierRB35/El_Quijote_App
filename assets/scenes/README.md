@@ -208,3 +208,9 @@ Por revelar el efecto del episodio, esta imagen no debe exponerse antes de H07.3
 Se integra **H08** (`STORY`, Historia H08.1) como WebP 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900299`. Don Quijote avanza solo sobre Rocinante por un camino rural único, satisfecho de su supuesta intervención por Andrés y hablando para sí en voz baja. Sin Dulcinea representada, sin Andrés o Haldudo, sin encrucijada ni comitiva de mercaderes. Fuente `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1808–1820, cotejadas con el texto del repositorio.
 
 La aceptación es visual y exclusiva de H08; su alta no activa la Historia ni la Aventura y no acredita QA de UI DC-28/TS-001 o derechos de redistribución pública. H09 sigue pendiente de validación individual.
+
+## Capítulo IV — H09 aprobada visualmente: la comitiva se acerca (2026-11-11)
+
+Se integra **H09** (`STORY`, Historia H09.1) como WebP 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900300`. Don Quijote, firme en los estribos en mitad del camino, espera montado sobre Rocinante, con adarga al pecho y lanza erguida, mientras se aproxima el frente visible de la comitiva de mercaderes con quitasoles. **No se muestra la comitiva completa**; el texto describe seis mercaderes, cuatro criados montados y tres mozos de mulas a pie. No se anticipa el diálogo, burla, carga ni caída. Fuente `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1829–1840, cotejadas.
+
+La aceptación es solo visual de H09; no activa rondas ni Modo Historia y no sustituye QA de interfaz DC-28/TS-001 o revisión de derechos. H10 continúa fuera de `main` hasta aceptación individual.

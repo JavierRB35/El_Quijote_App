@@ -214,3 +214,9 @@ La aceptación es visual y exclusiva de H08; su alta no activa la Historia ni la
 Se integra **H09** (`STORY`, Historia H09.1) como WebP 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900300`. Don Quijote, firme en los estribos en mitad del camino, espera montado sobre Rocinante, con adarga al pecho y lanza erguida, mientras se aproxima el frente visible de la comitiva de mercaderes con quitasoles. **No se muestra la comitiva completa**; el texto describe seis mercaderes, cuatro criados montados y tres mozos de mulas a pie. No se anticipa el diálogo, burla, carga ni caída. Fuente `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1829–1840, cotejadas.
 
 La aceptación es solo visual de H09; no activa rondas ni Modo Historia y no sustituye QA de interfaz DC-28/TS-001 o revisión de derechos. H10 continúa fuera de `main` hasta aceptación individual.
+
+## Capítulo IV — H10 aprobada visualmente: petición burlona del retrato (2026-11-11)
+
+Se integra **H10** (`STORY`, Historia H10.2–H10.3) como WebP original 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900301`. El mismo mercader, ante la exigencia de creer sin ver, pide con cortesía fingida un retrato de Dulcinea. Sus dos manos están vacías, don Quijote escucha montado y la comitiva con sus quitasoles queda en segundo plano. No aparece retrato, grano literal, réplica airada ni acción violenta posterior. Fuente `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1865–1875, cotejadas.
+
+Esta aceptación visual específica de H10 no activa guiones ni contenido ni certifica QA de UI DC-28/TS-001 o derechos de redistribución. H11 permanecerá fuera del catálogo hasta su aceptación individual.

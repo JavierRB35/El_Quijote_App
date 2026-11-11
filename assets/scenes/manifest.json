@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "package_id": "el-quijote-visual-pilot-2026-11-11-v38",
+  "package_id": "el-quijote-visual-pilot-2026-11-11-v39",
   "generated_on": "2026-11-06",
   "production_state": "visual_pilot_not_editorially_approved",
   "source_media_policy": "Only original AI recreations; no Tusell or Doré illustrations extracted or included",
@@ -8042,8 +8042,34 @@
       "textual_locator_status": "verified_against_repository_source",
       "rights_status": "original_generated_asset_review_on_redistribution",
       "review_notes_es": "H09 aceptada visualmente por el propietario el 2026-11-11. Imagen original para Historia H09.1, previa a la primera petición. Plano general de establecimiento: don Quijote, afirmado en los estribos sobre Rocinante y armado con lanza y adarga, se planta en mitad de un camino mientras se aproxima, a distancia, la parte delantera de la comitiva mercantil. Se ven quitasoles de tela crema y rojiza, comerciantes con sombreros y acompañantes; la comitiva completa NO está representada ni pretendida como inventario visible, pues el texto establece seis mercaderes, cuatro criados a caballo y tres mozos de mulas a pie. Sin diálogo iniciado, retrato, lucha, caída, castillos o molinos identificables. Fuente DQ.ED.0003 / DQ.SRC.0005, Primera Parte capítulo IV, líneas 1829–1840, cotejadas con texto del repositorio. La composición, luz y vestuario secundarios son recreación plausible. PNG aprobado SHA-256 fbf5fd95b53cf6f747bed2f9a7f02d941fc71858799e0b62cab29f6442c6de15. WebP 1672×941, calidad 82, 330636 bytes, SHA-256 7e1071ba287a335e5d06d4ec51da5e9325445da6dd96ff436f32e45f73b8a71a, Git blob SHA-1 4a4f0d239d6d8433689023acebe19e36450586eb. H10 permanece candidata independiente. QA interfaz DC-28/TS-001 y derechos redistribución pendientes; no activar."
+    },
+    {
+      "id": "p1_c04_h10_peticion_retrato_burlona_story",
+      "candidate_media_id": "DQ.MED.900301",
+      "media_class": "recreacion_ia",
+      "review_state": "aprobada",
+      "title_es": "El mercader pide burlonamente un retrato de Dulcinea",
+      "part": 1,
+      "chapter": 4,
+      "episode_key": "p1:c04",
+      "phase": "story",
+      "spoiler_risk": "low",
+      "relative_path": "assets/scenes/part_1/chapter_04/p1_c04_h10_peticion_retrato_burlona_story.webp",
+      "width_px": 1672,
+      "height_px": 941,
+      "mime_type": "image/webp",
+      "sha256": "3548efe8f822e3b90e6be3df240c08bc2d99dc29bec142fb62efc3fef564c403",
+      "source_class": "RECREACION_ARTISTICA",
+      "generated_with": "OpenAI ImageGen",
+      "attribution_es": "Recreación artística original generada mediante OpenAI ImageGen para El Quijote en noviembre de 2026, por encargo del propietario y con aceptación visual expresa el 2026-11-11.",
+      "alt_es": "El mercader del sombrero con pluma roja habla con fingida cortesía y ambas manos vacías, mientras don Quijote escucha desde Rocinante sin mostrar retrato alguno.",
+      "historical_editorial_status": "approved_owner_visual",
+      "question_spoiler_validation": "pending_in_game_context_qa",
+      "textual_locator_status": "verified_against_repository_source",
+      "rights_status": "original_generated_asset_review_on_redistribution",
+      "review_notes_es": "H10 aceptada visualmente por el propietario el 2026-11-11. Imagen propia de Modo Historia H10.2–H10.3, después de la exigencia de don Quijote de creer sin ver. El mismo mercader de la primera petición, ataviado con sombrero oscuro de pluma roja y casaca granate con brocados, pide burlonamente con cortesía fingida un retrato de Dulcinea; se destacan ambas manos vacías y sonrisa discreta. Don Quijote escucha montado sobre Rocinante, con lanza vertical y adarga, mientras los demás comerciantes y quitasoles quedan en segundo término. No hay retrato físico ni imaginado, grano literal, réplica airada, carga o caída. Fuente DQ.ED.0003 / DQ.SRC.0005, Primera Parte capítulo IV, líneas 1865–1875, cotejadas directamente con texto del repositorio. Gestos, encuadre, vestuario secundario y luz son recreación artística plausible. PNG aprobado SHA-256 be8a3c4b0d08a554f4ee77aaf01e2bc14f4f61019a98509827bd33012ddfd718. WebP 1672×941, calidad 82, 253028 bytes, SHA-256 3548efe8f822e3b90e6be3df240c08bc2d99dc29bec142fb62efc3fef564c403, Git blob SHA-1 939c536a0c651ec64425825c2c5c24f940ea59fb. H11 permanece candidata independiente y no se activa. QA de interfaz DC-28/TS-001 y derechos de redistribución pendientes."
     }
   ],
-  "catalog_version": "0.5.29",
+  "catalog_version": "0.5.30",
   "last_updated_on": "2026-11-11"
 }

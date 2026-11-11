@@ -165,3 +165,10 @@ A09 es una preimagen antiespoiler: no revela la acometida ni el tropiezo posteri
 Se integra exclusivamente la **versión corregida y aceptada de A10** (`POST`, Aventura `AV2-I4-05`, Historia H12), WebP original 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900292`. La candidata anterior fue rechazada por una postura antinatural de las piernas del caballero; la versión ahora aceptada presenta dos piernas anatómicamente coherentes sin cambiar el suceso, caballo, lanza ni mercader. Plano general lateral del instante después del tropiezo: Rocinante en el suelo, don Quijote separado e incapaz de incorporarse, adarga, espuelas y celada visibles, lanza todavía entera; mercader ileso a distancia y sin mozo golpeador ni auxilio. Fuente: `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1885–1892, cotejadas.
 
 Esta consecuencia `POST` **solo se muestra después de «Descubrir qué sucede»**. El alta no activa la ronda ni los guiones de Historia, no certifica el QA de UI DC-28/TS-001 ni derechos de distribución pública. La H01 solicitada posteriormente será imagen autónoma pendiente de aceptación.
+
+
+## Capítulo IV — H01 aprobada visualmente: salida al alba (2026-11-11)
+
+Se integra **H01** (`STORY`, Historia H01.1–H01.2) como WebP original 1672 × 941 px y calidad 82, ID provisional `DQ.MED.900293`. Don Quijote parte de una venta modesta a la primera luz del día, montado en Rocinante, armado y satisfecho por la investidura. Esta imagen de **amanecer** se diferencia de la despedida nocturna del capítulo III: no presenta ventero destacado, luna, ceremonia, dinero, camisas nuevas o escudero. Fuente literaria: `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1672–1681, cotejadas.
+
+H01 es material para Modo Historia, no sustituye una preimagen específica de Aventura. Su catalogación no activa contenido, ni certifica todavía QA visual DC-28/TS-001 o derechos de distribución pública. H02A está aún pendiente de aceptación y no se incluye en el commit.

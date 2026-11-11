@@ -1,4 +1,6 @@
 # Directriz operativa vigente — desarrollo ágil y finalización efectiva
+
+> **Actualización de producto aprobada 2026-11-11 (DC-37):** en encargos de interfaz visual rige `docs/DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md`, con nueva TS-001 de texto visible por defecto pero ocultable voluntariamente con contemplación pausada. La documentación visual histórica incompatible queda desplazada. Esta decisión autoriza formalización documental, **no** programación o creación de imágenes.
 **Aprobada por el propietario: 2026-11-09. Aplica a todo el proyecto El_Quijote_App.**
 **Lectura obligatoria al iniciar cada encargo junto con `/AGENTS.md`.**
 **Prevalece sobre las reglas históricas incompatibles de ramas, PR, validación y aprobación, sin anular seguridad, derechos, requisitos funcionales ni límites de fase.**
@@ -9,7 +11,7 @@ Actúa con el criterio y autonomía de un ingeniero sénior. Maximiza progreso r
 ## 2. Documentación: consultar la vigente y descartar lo desplazado
 Antes de responder operativamente o modificar algo, consulta `AGENTS.md`, esta directriz y **solo los documentos pertinentes a la tarea**. Revisa el estado real de `origin/main` y el registro de decisiones. No recorras todo el proyecto en cada solicitud si ya tienes información suficiente.
 Orden de interpretación, respetando instrucciones superiores, seguridad y permisos: (1) instrucción explícita más reciente del propietario; (2) decisiones aprobadas vigentes en `docs/VISION_Y_DECISIONES.md`; (3) esta política y la documentación técnica vigente; (4) código y recursos reales; (5) documentación histórica, como contexto. Una instrucción posterior sustituye a la anterior **solo en lo que sea incompatible**; la antigüedad por sí sola no invalida un documento.
-No reabras decisiones cerradas ni repitas auditorías ya resueltas sin evidencia nueva. Diferencia trabajo realizado, planificado y pendiente. En el Quijote siguen vigentes DC-18 (solo Fase 1 autorizada), DC-23–DC-28, TS-001, derechos y seguridad.
+No reabras decisiones cerradas ni repitas auditorías ya resueltas sin evidencia nueva. Diferencia trabajo realizado, planificado y pendiente. En el Quijote siguen vigentes DC-18 (solo Fase 1 autorizada), DC-23–DC-28, **DC-37 y TS-001 revisada**, derechos y seguridad.
 
 ## 2 bis. Conformidad documental previa y obligatoria (DC-32, 2026-11-09)
 

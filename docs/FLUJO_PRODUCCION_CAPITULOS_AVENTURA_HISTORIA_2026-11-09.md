@@ -1,5 +1,7 @@
 # Flujo oficial de producción de capítulos — Aventura → Historia
 
+> **Actualización vinculante 2026-11-11, DC-37:** Se conserva estrictamente el orden editorial DC-36; la revisión conjunta de aptitud visual debe tener en cuenta imagen a superficie completa, zonas seguras del pergamino, cobertura específica por intervención de Historia y preimagen exclusiva de Aventura. La TS-001 revisada conserva texto completo visible por defecto, ocultable voluntariamente en contemplación pausada. Referencia prioritaria: [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Decisión **solo documental**; no autoriza implementación ni nuevas imágenes.
+
 **Decisión del propietario:** 2026-11-09 · **Estado:** VIGENTE para todos los capítulos que se preparen a partir de esta fecha.
 
 **Autoridad:** [AGENTS.md](../AGENTS.md), [DC-30 y DC-27](VISION_Y_DECISIONES.md), [reglas de Aventura narrativa](REGLAS_MODO_AVENTURA_V2_2026-11-08.md), [especificación editorial](ESPECIFICACION_EDITORIAL.md), [directriz ágil DC-29](DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md) y [norma visual DC-28](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md). Las instrucciones posteriores del propietario prevalecen sobre procedimientos anteriores incompatibles.
@@ -72,7 +74,7 @@ Tras redactar Aventura y **antes de evaluar como apropiadas o no las imágenes**
 - Referencia del texto original para cada intervención o unidad narrativa relevante.
 - Orden cronológico correcto, ritmo dramático, humor y desarrollo de personajes sin revelar escenas futuras.
 - Imagen prevista para cada intervención/beat, identificando **cuáles ya están disponibles**, cuáles pueden reutilizarse desde Aventura y cuáles siguen faltando.
-- **TS-001:** todos los textos de voces de narrador/personajes deben permanecer visibles completos en pantalla incluso sin audio; ninguna elipsis en la interfaz por la existencia de sonido.
+- **TS-001 revisada (DC-37):** todos los textos de voces de narrador/personajes deben estar completos y visibles **por defecto** incluso sin audio; el usuario podrá ocultar voluntariamente el pergamino solo con avance/voz/temporizador pausados, y recuperar íntegra la misma intervención. Nunca omitir contenido por existir sonido.
 
 Como el borrador de Historia se prepara antes del control de aptitud, **la revisión del propietario es conjunta para Aventura e Historia**: contrastar recursos con ambos guiones, entregar listado de carencias, esperar su confirmación y redactar **solo** los prompts de las faltantes. La revisión final debe maximizar reutilización legítima Aventura/Historia sin degradar la puesta en escena.
 

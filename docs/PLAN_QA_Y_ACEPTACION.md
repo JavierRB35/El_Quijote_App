@@ -1,5 +1,7 @@
 # PLAN DE QA Y ACEPTACIÓN — FASE 0
 
+> **Actualización vinculante 2026-11-11, DC-37:** Incorporar gate nuevo de imagen completa, pergamino sin desbordamiento, control contemplación reversible, tipografía histórica, ausencia de fondos neutros finales y menú manchego. TS-001 debe comprobar texto íntegro visible por defecto pero ocultable voluntariamente con avance pausado. Referencia prioritaria: [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Decisión **solo documental**; no autoriza implementación ni nuevas imágenes.
+
 **Estado:** COMPLETO (v1.0, borrador para GO/NO-GO) — entregable FASE 0 (encargo §8, punto 10)
 **Modo responsable:** DESARROLLO (QA y automatización / release manager)
 **Fuente normativa:** encargo §5.2 (tabla QA), §7 (criterios), §8 (fases); ESPECIFICACION_FUNCIONAL (`EF-*`).
@@ -125,3 +127,18 @@ La [checklist canónica de composición](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-
 - `PENDIENTE`: prueba no ejecutada, entorno no disponible o resultado inconcluso; **nunca** presentarlo como aprobado.
 
 **Gate:** Dirección no acepta un cierre que solo demuestre «se ve bien en la captura original» sin diagnóstico, matriz de alcance, pruebas cruzadas y explicación de excepciones. Un test unitario o CI verde no sustituye la comprobación visual con capturas reales. Todo cambio correctivo documentará, en el commit o PR, la sección **«IMPACTO TRANSVERSAL Y REUTILIZACIÓN»** con esta evidencia. Esta regla no implica afirmar que las pruebas estén ya ejecutadas ni altera los gates de fases vigentes.
+
+## Gate DC-37 — Aceptación de experiencia visual premium (aprobada, pruebas pendientes)
+
+Todas las verificaciones son **PASS / FAIL / PENDIENTE** con captura real, viewport y estado probado. No se han ejecutado al formalizar esta directriz.
+
+1. **Historia y Aventura:** fotografía/escena ocupa toda superficie útil de juego, sin columna de texto independiente ni vacíos neutros. Imagen no distorsionada, encuadre sin pérdida de rostros, gestos, acciones, pistas o hotspots.
+2. **Pergamino:** material histórico semitransparente y legible; contexto, hablante, texto, opciones, consecuencia y controles dentro de bordes. Sin scroll interno, contenido cortado, elipsis automática ni opción oculta; verificar cajas reales y captura.
+3. **Contemplación:** icono presente arriba a la derecha con texto visible; ocultación elimina solo pergamino; mantiene el icono recuperable, pausa voz, temporizador y avance, conserva estado, no responde en Aventura ni altera puntuación, restaura contenido íntegro, foco y reanudación explícita.
+4. **Tipografía:** carácter editorial de época, offline, legibilidad y preferencias de tamaño normal/grande/muy grande. Contraste medido WCAG AA (4,5:1 normal, 3:1 grande/controles) sobre composición real.
+5. **Menú y global:** pueblo y paisaje manchego de época de fondo a pantalla completa, pergamino de navegación semitransparente; fondos artísticos contextuales en restantes módulos, sin neutros como acabado final.
+6. **Cobertura:** 100 % intervenciones de Historia con imagen narrativamente apta y asociación validada, reutilización justificada; preimagen propia y sin spoiler por ronda final de Aventura; derechos y procedencia verificados.
+7. **Matriz mínima:** 1920×1080, 1366×768, 1280×800, 2560×1440, 3840×2160, ventanas pequeñas admitidas, Windows 100/125/150 %, ratón/teclado, audio ausente, movimiento reducido, textos largos, imágenes claras/oscuras y fallos de recursos.
+8. **Regresión:** navegación, selección, puntuación, revelación, pausa, repetición, guardados, perfiles y offline.
+
+**Bloqueo:** una prueba P0 en FAIL impide declarar aprobada visualmente la pantalla/capítulo. Un fallback técnico neutro no es PASS artístico. QA de esta implementación queda **PENDIENTE** hasta que exista nueva versión ejecutable y pruebas reales.

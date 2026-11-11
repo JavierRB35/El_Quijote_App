@@ -1,6 +1,8 @@
 # AGENTS.md — Convenciones para agentes en este repositorio
 
 Proyecto: El_Quijote_App (videojuego premium del Quijote, Windows 11 x64, español).
+**DECISIÓN NUEVA DC-37, 2026-11-11 (VIGENTE):** [`docs/DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md`](docs/DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Historia/Aventura con imagen a toda la superficie jugable, pergaminos semitransparentes sin desbordamientos, control fijo arriba a la derecha para ocultar/recuperar texto en contemplación pausada, tipografía histórica legible y fondos artísticos en todas las pantallas finales (menú manchego). **TS-001 se revisa:** texto completo visible por defecto y siempre recuperable, pero ocultable voluntariamente con voz/temporizador/avance pausados. La anterior prohibición de ocultar queda desplazada; NO hay autorización para código o imágenes en este acto.
+
 **LECTURA OBLIGATORIA EN CADA ENCARGO:** primero este `AGENTS.md` y luego **`docs/DIRECTRIZ_DESARROLLO_AGIL_2026-11-09.md`**. Esta directriz actualiza y sustituye las reglas históricas incompatibles de ramas/PR y validación. No omitirla ni basarse en instrucciones antiguas.
 Documento rector de producto: **`docs/ENCARGO_MAESTRO.md`**. Consultar las secciones pertinentes y las decisiones más recientes; lectura íntegra cuando el alcance lo requiera. No reiniciar auditorías innecesariamente.
 **Incorporación de nuevos proyectos/equipos:** `docs/PROMPT_INICIO_NUEVO_PROYECTO_DESARROLLO.md` es el prompt/índice de lectura y continuidad para abrir otro proyecto ChatGPT o equipo; no reemplaza normas aprobadas ni permite omitir la consulta de `main` antes de cada solicitud.
@@ -40,7 +42,7 @@ Trabajo y documentación en español. El castellano de las citas de Cervantes nu
 
 En tareas del **Modo Historia**, leer `docs/BIBLIA_NARRATIVA_MODO_HISTORIA_HOJA_RUTA_ROLES.md` (organización operativa vigente en §3), `docs/HOJA_RUTA_MODOS_HISTORIA_E_HISTORICO.md` y las decisiones **DC-19, DC-21 a DC-27**. **Cada ronda final de Aventura tendrá una preimagen específica**, y Modo Historia conserva su cobertura visual propia; la narración tendrá cobertura visual atractiva, priorizando `assets/scenes/`, con acuarelas secundarias en gameplay y sección artística propia. Un fondo neutro puede servir de prototipo/fallback pero no cierra la calidad visual final.
 
-**TS-001:** el texto de cada intervención hablada de narrador o personaje se verá **siempre** en pantalla, con y sin audio; no se puede ocultar, truncar ni omitir por avanzar. Los cambios de contratos y validadores requieren **decisión editorial/funcional de Dirección** y verificación técnica del **desarrollador único**. No se atribuirán firmas ni pruebas a antiguos roles. La documentación del Modo Historia no autoriza Fase 2.
+**TS-001 revisada por DC-37:** el texto de cada intervención hablada se ofrece completo y visible por defecto, con y sin audio; el usuario podrá ocultar **voluntariamente** el pergamino para contemplar una imagen, con voz, temporización y avance pausados, sin perder estado y con recuperación íntegra; está prohibido truncarlo u omitirlo. Los cambios de contratos y validadores requieren **decisión editorial/funcional de Dirección** y verificación técnica del **desarrollador único**. No se atribuirán firmas ni pruebas a antiguos roles. La documentación del Modo Historia no autoriza Fase 2.
 
 ## Puerta obligatoria de conformidad con GitHub (DC-32, 2026-11-09)
 

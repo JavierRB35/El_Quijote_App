@@ -1,5 +1,7 @@
 # EL QUIJOTE — Biblia narrativa y flujo operativo del Modo Historia
 
+> **Actualización vinculante DC-37 (2026-11-11):** Se conserva fidelidad, voces y texto íntegro, pero se actualiza la TS-001 histórica: ocultar voluntariamente un pergamino en modo contemplación **sí** es obligatorio y pausa voz/temporización/avance. La narración será imagen a superficie completa, no panel lateral. Consultar [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Las instrucciones históricas incompatibles se consideran sustituidas **solo en el ámbito indicado**; no se autoriza código ni producción de imágenes.
+
 **Versión:** 0.2 · **Base:** 2026-11-06 · **Actualización vinculante:** 2026-11-08, decisiones DC-23–DC-27. FASE 1 piloto autorizada; FASE 2 y distribución pública sin autorización.
 **Documento narrativo común a Dirección integral y al desarrollador único; las antiguas etiquetas R01–R16 son historia, no un circuito de trabajo.** Ruta canónica: `docs/BIBLIA_NARRATIVA_MODO_HISTORIA_HOJA_RUTA_ROLES.md`.
 **Repositorio:** `JavierRB35/El_Quijote_App`. No sustituye `docs/ENCARGO_MAESTRO.md`, `docs/VISION_Y_DECISIONES.md`, `docs/HOJA_RUTA_MODOS_HISTORIA_E_HISTORICO.md`, `docs/CONTRATO_EDITORIAL_TECNICO.md`, `docs/ESPECIFICACION_FUNCIONAL.md` ni `docs/DIRECCION_ARTISTICA.md`; los complementa y solicita su reconciliación formal cuando corresponda.
@@ -20,10 +22,10 @@
 
 **Límites:** este documento define criterios, no acredita por sí solo guiones, activos, licencias, pruebas ni código. La Fase 1 piloto y el vertical técnico de Historia han sido autorizados por el propietario; **un prototipo neutro no equivale a capítulo visualmente terminado** (DC-24–DC-26). Fase 2 y distribución siguen sin autorización.
 
-## 1. Requisito transversal TS-001 — Texto siempre en pantalla
+## 1. Requisito transversal TS-001 (revisada por DC-37) — Texto completo disponible y visible por defecto
 
 Para **cada intervención audible** (narrador, Don Quijote, Sancho, secundarios y voz narrativa dentro de relatos), el modo historia debe:
-- Presentar **texto escrito visible, completo y asociado al hablante** en la misma secuencia, con su puntuación y atribución revisadas. No ofrecer interruptor para ocultar el texto de intervenciones habladas. El audio es opcional; la escritura no.
+- Presentar **texto escrito visible, completo y asociado al hablante** en la misma secuencia, con su puntuación y atribución revisadas. **Ofrecer icono en la esquina superior derecha para ocultar/mostrar voluntariamente el pergamino**, deteniendo voz, temporizador y avance mientras está oculto y restaurando íntegro el texto. El audio es opcional; la escritura no.
 - Sincronizar bloques de texto y audio a nivel de intervención/beat y, si es viable, de segmento; no exigir karaoke palabra a palabra. Mantener el texto hasta que pueda leerse, permitiendo pausar, repetir y retroceder; no truncar diálogos. El ritmo automático respetará lectura y preferencias de accesibilidad. No fijar tiempos universales sin pruebas.
 - Permitir volumen cero, audio ausente o fallo de reproducción **sin perder una sola intervención**. Una escena debe poder completarse sin sonido ni red.
 - Mostrar tipografía escalable, contraste, caja sobre área segura, navegación por teclado, foco claro, identificación no basada solo en color y alternativa al movimiento. Evitar cubrir rostros, pistas visuales, acciones y opciones. En pantallas reducidas ajustar composición y paginar el texto si fuera preciso, sin omitirlo.
@@ -32,7 +34,7 @@ Para **cada intervención audible** (narrador, Don Quijote, Sancho, secundarios 
 - Incluir en QA matriz **voz activa + texto**, **mute + texto**, **sin archivo de audio + texto**, **pausa/repetición + texto**, **lectura ampliada + texto**, **sincronía/subtítulos**, **teclado**, **movimiento reducido** y **retroceso desde transición**.
 - No confundir este requisito con texto alternativo de imágenes, que también es obligatorio cuando corresponda. Los subtítulos incluirán información significativa de sonido cuando sea necesaria para comprender la escena, sin inventar conversaciones.
 
-**Bloqueo de salida:** intervención con audio pero sin texto visible, texto ocultable, texto cortado o audio obligatorio = defecto P0. Texto de voz y texto visible deben partir del **mismo registro editorial**, evitando versiones divergentes.
+**Bloqueo de salida:** intervención sin texto íntegro y recuperable, ocultación involuntaria, avance durante contemplación, texto cortado o audio obligatorio = defecto P0. Texto de voz y texto visible deben partir del **mismo registro editorial**, evitando versiones divergentes.
 
 ## 2. Cadena de producción y puertas de calidad
 
@@ -154,5 +156,5 @@ Para imágenes nuevas, el encargo lo prepara Dirección como **prompt visual com
 
 ## 9. Definición de terminado y de aceptación de producto
 
-**Documentación:** decisiones integradas en `main` vía PR, con trazabilidad, sin asumir que una propuesta sea funcionalidad terminada. **Vertical técnico:** reproductor utilizable, validadores y pruebas reales, con texto TS-001 siempre visible y fallback neutro seguro. **Capítulo terminado visualmente:** ritmo cinematográfico, escenas y primeros planos suficientes, **una imagen propia válida para cada pregunta**, licencias/comprobaciones de spoilers y accesibilidad. Dirección acepta la PR; el propietario conserva la autorización de Fase 2 y publicación. Una PR abierta **no equivale** a `main`.
+**Documentación:** decisiones integradas en `main` vía PR, con trazabilidad, sin asumir que una propuesta sea funcionalidad terminada. **Vertical técnico:** reproductor utilizable, validadores y pruebas reales, con texto TS-001 completo, visible por defecto y recuperable, y fallback neutro técnico sin aceptación visual final según DC-37. **Capítulo terminado visualmente:** ritmo cinematográfico, escenas y primeros planos suficientes, **una imagen propia válida para cada pregunta**, licencias/comprobaciones de spoilers y accesibilidad. Dirección acepta la PR; el propietario conserva la autorización de Fase 2 y publicación. Una PR abierta **no equivale** a `main`.
 

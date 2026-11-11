@@ -1,7 +1,9 @@
 # COMPONENTES NARRATIVOS — Especificación de UX y contrato del consumidor (Dirección integral / desarrollador)
 
+> **Actualización vinculante DC-37 (2026-11-11):** TS-001 revisada: texto íntegro visible por defecto, con estado explícito de contemplación voluntaria que oculta el pergamino y pausa temporizadores/voz/avance hasta recuperar el mismo contenido; no modificar aún el código o esquemas de datos. El componente visual será pergamino semitransparente sobre escena completa. Consultar [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Las instrucciones históricas incompatibles se consideran sustituidas **solo en el ámbito indicado**; no se autoriza código ni producción de imágenes.
+
 **Estado:** especificación histórica v1.0, actualizada en decisiones de producto **DC-23–DC-27 (2026-11-08)**; **no es evidencia de implementación**. Dirección integral define y revisa; el desarrollador único implementa y prueba. Los anteriores informes R08/R10 son antecedentes, no equipos operativos.
-**Base normativa:** DC-22 (TS-001 — texto hablado siempre escrito y visible), decisión de coordinación del propietario (texto = elemento principal del contrato; audio = recurso opcional asociado), `schemas/content/beat.schema.json` (contrato v1.1.0), ADR-0005.
+**Base normativa:** DC-22 actualizado por DC-37 (TS-001: texto escrito completo, visible por defecto, ocultable voluntariamente solo en contemplación pausada y recuperable), decisión de coordinación del propietario (texto = elemento principal del contrato; audio = recurso opcional asociado), `schemas/content/beat.schema.json` (contrato v1.1.0), ADR-0005.
 **Fecha:** 2026-11-06.
 
 ## 1. Representación de una intervención narrativa (estructura de datos ↔ pantalla)
@@ -10,7 +12,7 @@
 |---|---|
 | `utterance_id` (DQ.INT.*) | Identificador interno; clave del estado de reproducción y del guardado |
 | `speaker.tipo` + `label`/`person_id` | **Rótulo de hablante** sobre el texto: nombre del personaje, o «Narrador» en estilo distinto (versalitas/itálica) |
-| `texto_visible` (obligatorio, íntegro) | **Panel de texto**: siempres visible, completo, sin truncar ni paginar por defecto; es la fuente principal de la escena |
+| `texto_visible` (obligatorio, íntegro) | **Pergamino**: visible por defecto, completo y sin truncamiento/scroll; ocultable voluntariamente solo en contemplación pausada (DC-37) y recuperable íntegro |
 | `text_kind` | Tratamiento tipográfico: CITA_LITERAL con comillas latinas y atribución; ADAPTACION_FIEL con nota discreta «adaptado»; NARRACION_ENLACE estilo narrador |
 | `passage_ids` + `localizador` | Acción «ver en el lector» (enlace a pasaje; desactivada sin capa textual) |
 | `audio_asset_id` (opcional) | **Control de voz**: reproduce si existe; si falta, silencio y el panel funciona igual (criterio de aceptación) |
@@ -22,7 +24,7 @@
 
 ## 2. Estados del reproductor de beats — matriz subsanada (dictamen H5)
 
-Alcance de «texto siempre visible»: el **texto íntegro de la intervención activa** permanece en pantalla durante todo su beat (y es recuperable íntegro al retroceder); no significa mantener la novela entera fijada en una sola pantalla.
+Alcance de TS-001 revisada: el **texto íntegro de la intervención activa** permanece visible por defecto y recuperable al retroceder; la **única ocultación voluntaria permitida** es el modo contemplación DC-37, que pausa audio/tiempo/avance y conserva íntegramente el estado. No significa mantener la novela entera fijada en una pantalla.
 
 **Invariante P0-1 (sin rutas de avance dependientes del audio):** existe siempre una vía de avance que no requiere voz. La voz —ausente, silenciada, fallida o terminada— nunca bloquea, nunca oculta el texto y nunca es condición necesaria para continuar.
 
@@ -41,7 +43,7 @@ Alcance de «texto siempre visible»: el **texto íntegro de la intervención ac
 ### 2.2 Carga de recursos (P1-4)
 
 1. El beat entra en `TEXTO_VISIBLE` cuando sus **datos** (texto, hablante) están listos: las imágenes se cargan **en paralelo** y nunca gatean el texto.
-2. Fallback visual **sujeto a elegibilidad temporal**: perspectivas aprobadas del beat → de la escena → fotograma anterior **solo si no ha caducado ni anticipa nada** → fondo neutro seguro. El neutro deliberado no es un error; el fallo de carga real puede notificarse discretamente. **La narración continúa íntegra por texto**. Esto sirve al vertical técnico, no demuestra suficiencia visual final.
+2. Fallback visual **sujeto a elegibilidad temporal**: perspectivas aprobadas del beat → de la escena → fotograma anterior **solo si no ha caducado ni anticipa nada** → fondo neutro seguro. El neutro es exclusivamente respaldo técnico de prototipo/emergencia y **no acredita calidad visual final**; el fallo de carga real debe registrarse y notificarse de manera accesible. **La narración continúa íntegra por texto**. Esto sirve al vertical técnico, no demuestra suficiencia visual final.
 3. **Diferenciar versión ejecutada y decisión de producto:** el esquema actualmente integrado exige `visual_asset_ids.minItems:1` y `scene.media_ids.minItems:1`; el cambio **a arrays vacíos permitidos y obligatorios** pertenece al encargo técnico de v1.2.0 y **no se considera implementado hasta fusionar y probar la PR**. La revisión es de Dirección integral + desarrollador único, **no doble firma de roles antiguos**. `[]` de beat significa no solicitar nuevo plano; cambio a escena neutra reinicia imagen. La obligatoriedad de una imagen específica por pregunta final (DC-24) y la suficiencia visual narrativa (DC-25) son **criterios de producto distintos**, no cardinalidad por beat.
 
 ### 2.3 Política de autoavance (P0-2 — cinematografía DC-21)

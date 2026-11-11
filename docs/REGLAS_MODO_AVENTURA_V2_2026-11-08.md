@@ -1,5 +1,7 @@
 # Modo Aventura v2 — reglas aprobadas y piloto jugable (2026-11-08)
 
+> **Actualización vinculante 2026-11-11, DC-37:** La mecánica de Aventura se mantiene, pero su interfaz final utilizará imagen previa a toda superficie y pergamino semitransparente con contexto/pregunta/todas las opciones visibles, y control reversible de contemplación arriba a la derecha, sin responder ni alterar puntos al ocultarlo. Menú global y fondos según DC-37. Referencia prioritaria: [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Decisión **solo documental**; no autoriza implementación ni nuevas imágenes.
+
 **Estado vigente (2026-11-09):** Aventura narrativa ya integrada en `main` mediante PR #87/#95; el cuestionario anterior quedó retirado. La aceptación visual final sigue siendo independiente de la compilación y pendiente de comprobación. Producción de nuevos capítulos conforme a [DC-30](FLUJO_PRODUCCION_CAPITULOS_AVENTURA_HISTORIA_2026-11-09.md). GitHub remoto `JavierRB35/El_Quijote_App` es única fuente de verdad. SHA de `main` al iniciar: `8e3ec9694298b13c204aaffd1b70febc38e36fb3`.
 
 ## 1. Qué es ahora Aventura

@@ -1,5 +1,7 @@
 # UX Y ACCESIBILIDAD — EL QUIJOTE
 
+> **Actualización vinculante DC-37 (2026-11-11):** Historia/Aventura: escena completa y pergamino histórico semitransparente para texto, opciones y feedback; icono de contemplación accesible arriba a la derecha, texto visible por defecto, ocultación pausada y restauración íntegra; ningún fondo neutro final. Esta regla prevalece sobre pantallas laterales anteriores. Consultar [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Las instrucciones históricas incompatibles se consideran sustituidas **solo en el ámbito indicado**; no se autoriza código ni producción de imágenes.
+
 **Versión:** propuesta 0.2 · **Fecha:** 2026-11-06 · **Estado:** diseño Fase 0, validación pendiente.
 **Responsables:** desarrollo frontend, UX/UI/accesibilidad, contenidos y QA.
 **Vínculos:** [Dirección artística](DIRECCION_ARTISTICA.md) · [Piloto visual](DIRECCION_ARTISTICA_PILOTO.md) · [Encargo maestro](ENCARGO_MAESTRO.md).
@@ -72,7 +74,7 @@ QA visual obligatoria: cubrir tamaños normales y ampliados, 1920×1080/1366×76
 | Superficie | Aplicación de reglas comunes | Diferencia funcional legítima |
 |---|---|---|
 | Aventura | Imagen protagonista, controles y alternativas visibles, encuadre seguro, tipografía ajustable, foco | Anticipación y consecuencia sin scroll en overlays; hotspot exige imagen íntegra en el área interactiva |
-| Historia | Narración y personajes visibles, bandas en zona segura, texto TS-001 íntegro, control de ritmo | Panel narrativo lateral/inferior según composición; avance nunca oculta texto |
+| Historia | Imagen a toda superficie, pergamino semitransparente en zona segura, texto TS-001 revisado íntegro y visible por defecto, control de contemplación arriba a la derecha | Sin columna lateral independiente ni scroll; ocultación voluntaria pausa voz/avance y permite restauración íntegra |
 | Museo | Proporciones, procedencia, contraste, foco, vista contemplativa | Obras patrimoniales siempre completas; galerías y fichas extensas admiten scroll accesible |
 | Atlas | Claridad de controles, información y zonas útiles, navegación por teclado | Mapas requieren pan/zoom y fichas adaptativas; no imponer restricciones propias de una pregunta |
 | Lector | Legibilidad, reflujo, tamaño de letra, navegación, conservación de posición | Lectura extensa con scroll permitido y necesario |

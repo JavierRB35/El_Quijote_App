@@ -1,5 +1,7 @@
 # EL QUIJOTE — PROMPT MAESTRO DE INICIO, CONTINUIDAD Y CUMPLIMIENTO PARA UN NUEVO PROYECTO DE DESARROLLO
 
+> **Actualización aprobada 2026-11-11, DC-37:** leer `docs/DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md` en cualquier intervención de diseño/UX/imagen/QA. Sustituye el diseño de pantalla dividida por escena a superficie completa con pergamino semitransparente y control de contemplación. TS-001 admite ocultación voluntaria pausada y recuperación íntegra, aunque permanece texto visible por defecto. Fondos artísticos obligatorios como acabado final, incluido menú con pueblo/paisaje manchego. Esta formalización no autoriza desarrollo ni imágenes.
+
 **Versión del documento de incorporación:** 1.0 · **Fecha:** 2026-11-09  
 **Destino de uso:** instrucciones iniciales o fuente de conocimiento de un nuevo proyecto ChatGPT/equipo de desarrollo de *El Quijote*.  
 **Repositorio oficial, fuente de verdad y destino de todo trabajo:** https://github.com/JavierRB35/El_Quijote_App · rama `main`.  
@@ -65,6 +67,7 @@ No reabrir acuerdos aprobados sin defecto comprobable, causa justificada o petic
 | Corpus, citas y variantes | [`RESOLUCION_PEND01_EDICION_REFERENCIA.md`](RESOLUCION_PEND01_EDICION_REFERENCIA.md), [`FUENTE_TEXTO_PLANO_GUTENBERG.md`](FUENTE_TEXTO_PLANO_GUTENBERG.md), `content/textos/gutenberg_2000/El_Quijote.txt` y fichas de pasajes/ediciones |
 | Modo Historia y voces | [`BIBLIA_NARRATIVA_MODO_HISTORIA_HOJA_RUTA_ROLES.md`](BIBLIA_NARRATIVA_MODO_HISTORIA_HOJA_RUTA_ROLES.md), [`HOJA_RUTA_MODOS_HISTORIA_E_HISTORICO.md`](HOJA_RUTA_MODOS_HISTORIA_E_HISTORICO.md) |
 | **Arte, imágenes y estética premium** | [`DIRECCION_ARTISTICA.md`](DIRECCION_ARTISTICA.md), [`DIRECCION_ARTISTICA_PILOTO.md`](DIRECCION_ARTISTICA_PILOTO.md), [`DECISIONES_OPERATIVAS_Y_POLITICA_VISUAL_2026-11-08.md`](DECISIONES_OPERATIVAS_Y_POLITICA_VISUAL_2026-11-08.md), [`DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md`](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md) |
+| **Nueva directriz visual UX/UI DC-37** | [`DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md`](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md), prevalente sobre reglas visuales previas incompatibles, con TS-001 revisada, pergaminos, contemplación, menú y QA | 
 | **Aceptación y catalogación de imágenes aprobadas** | [`PROTOCOLO_ACEPTACION_E_INTEGRACION_IMAGENES.md`](PROTOCOLO_ACEPTACION_E_INTEGRACION_IMAGENES.md) — activación por orden del propietario, transporte binario, SHA, manifiestos, commit/verificación de `main` (DC-35) |
 | UX, pantallas y accesibilidad | [`UX_ACCESIBILIDAD.md`](UX_ACCESIBILIDAD.md), [`ESPECIFICACION_FUNCIONAL.md`](ESPECIFICACION_FUNCIONAL.md), [`COMPONENTES_NARRATIVOS_UX.md`](COMPONENTES_NARRATIVOS_UX.md) |
 | Arquitectura y datos | [`ARQUITECTURA_Y_ADR.md`](ARQUITECTURA_Y_ADR.md), [`CONTRATO_EDITORIAL_TECNICO.md`](CONTRATO_EDITORIAL_TECNICO.md), esquemas `schemas/` y código `app/` |

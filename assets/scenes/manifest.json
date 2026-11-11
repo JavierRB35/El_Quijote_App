@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "package_id": "el-quijote-visual-pilot-2026-11-11-v26",
+  "package_id": "el-quijote-visual-pilot-2026-11-11-v27",
   "generated_on": "2026-11-06",
   "production_state": "visual_pilot_not_editorially_approved",
   "source_media_policy": "Only original AI recreations; no Tusell or Doré illustrations extracted or included",
@@ -7721,8 +7721,35 @@
       "textual_locator_status": "verified_against_repository_source",
       "rights_status": "original_generated_asset_review_on_redistribution",
       "review_notes_es": "A06 nueva versión POV aprobada expresamente por el propietario el 2026-11-11 tras retirar la aceptación de la versión exterior anterior (DQ.MED.900287, retirada de main en commit 0437f4ddf0b73847d4e9cb511ddc78940e581b81). Aventura AV2-I4-03 POST: revelar solo después de «Descubrir qué sucede»; Historia H08.2 después de la pausa. Fuente DQ.ED.0003 / DQ.SRC.0005, Primera Parte capítulo IV, líneas 1825–1827, cotejadas contra el repositorio. Continuidad directa de A05: misma perspectiva en primera persona desde la montura de Rocinante, caballo que ya ha girado hacia el ramal izquierdo y ha empezado a caminar, riendas colgando flojas de la mano del caballero; se mantienen exactamente cuatro caminos totales, tres salidas y la llegada. La dirección concreta izquierda es recreación plausible; Cervantes no fija el ramal concreto, solo que el rocín se va hacia su caballeriza, no visible. PNG aprobado SHA-256 cdb20c5634fc8c0f051ece0dd99e83324fc4815c2ed4611bd9364b8400526d15. WebP 1672×941, calidad 82, 309650 bytes, SHA-256 1cb879387988400421385418418d5c09792ff3abf2af7343dfdea3a4319768c1, Git blob SHA-1 ca42b647fb91cd516f18617a1f6b758d9ce8944a. Pendientes QA DC-28/TS-001 en interfaz y derechos de redistribución; no activar automáticamente."
+    },
+    {
+      "id": "p1_c04_a07_primera_peticion_mercader_pre",
+      "candidate_media_id": "DQ.MED.900289",
+      "media_class": "recreacion_ia",
+      "review_state": "aprobada",
+      "title_es": "La primera petición del mercader toledano",
+      "part": 1,
+      "chapter": 4,
+      "episode_key": "p1:c04",
+      "phase": "pre",
+      "spoiler_risk": "low",
+      "relative_path": "assets/scenes/part_1/chapter_04/p1_c04_a07_primera_peticion_mercader_pre.webp",
+      "width_px": 1672,
+      "height_px": 941,
+      "mime_type": "image/webp",
+      "sha256": "2fd743205474cb40babd69d44cc114a68ca21d432c0ab313eea2fa742c41cd16",
+      "source_class": "RECREACION_ARTISTICA",
+      "generated_with": "OpenAI ImageGen",
+      "attribution_es": "Recreación artística original generada mediante OpenAI ImageGen para El Quijote en noviembre de 2026, por encargo del propietario y con aceptación visual expresa el 2026-11-11.",
+      "alt_es": "Un mercader toledano de rico atuendo pide ver a la dama mientras don Quijote escucha montado en Rocinante ante la comitiva detenida y sus quitasoles.",
+      "preferred_overlay_side": "right",
+      "historical_editorial_status": "approved_owner_visual",
+      "question_spoiler_validation": "pending_in_game_context_qa",
+      "textual_locator_status": "verified_against_repository_source",
+      "rights_status": "original_generated_asset_review_on_redistribution",
+      "review_notes_es": "A07 aprobada visualmente por el propietario el 2026-11-11. Aventura AV2-I4-04 PRE: mostrar antes de la elección sin adelantar respuesta; Historia H09.2 durante la petición del mercader. Fuente DQ.ED.0003 / DQ.SRC.0005, Primera Parte capítulo IV, líneas 1846–1855, cotejadas contra el repositorio. Un solo mercader toledano, distinto del ventero, formula educadamente la petición de ver a Dulcinea, mientras don Quijote escucha sobre Rocinante, quieto, con adarga y lanza en reposo; parte de la comitiva y quitasoles de época en segundo plano. El número total de acompañantes no se fija porque el encuadre solo muestra una parte. No aparece Dulcinea, retrato, réplica, caída ni ataque. Revisión focal de composición para despejar el lateral derecho de interfaz. PNG aprobado SHA-256 fd8b40777b3afc17a693e7917ab5acb57c433dba56705225918121e429a4d730. WebP 1672×941, calidad 82, 302508 bytes, SHA-256 2fd743205474cb40babd69d44cc114a68ca21d432c0ab313eea2fa742c41cd16, Git blob SHA-1 39315ab3bb15d5c9b2f3bf55311844c2d5301633. Pendientes QA DC-28/TS-001 en interfaz y revisión de derechos de redistribución; no activar automáticamente."
     }
   ],
-  "catalog_version": "0.5.17",
+  "catalog_version": "0.5.18",
   "last_updated_on": "2026-11-11"
 }

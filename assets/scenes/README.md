@@ -202,3 +202,9 @@ La aceptación visual es específica de H07A. No se activa Historia/Aventura ni 
 Se integra **H07B** (`STORY`, Historia H07.3) como WebP 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900298`. Tras la segunda liberación, Andrés se aleja llorando por un sendero de la arboleda, mientras Juan Haldudo permanece más atrás junto a una encina. Se muestra la tristeza mediante el gesto, sin heridas visibles, golpes, nueva atadura, regreso de don Quijote o pago. Fuente `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1801–1806, cotejadas.
 
 Por revelar el efecto del episodio, esta imagen no debe exponerse antes de H07.3 ni usarse como preimagen de una ronda de Aventura. Su alta no activa historias ni acredita QA de interfaz DC-28/TS-001 o derechos para redistribución. H08 permanece fuera hasta aceptación individual.
+
+## Capítulo IV — H08 aprobada visualmente: satisfacción del caballero (2026-11-11)
+
+Se integra **H08** (`STORY`, Historia H08.1) como WebP 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900299`. Don Quijote avanza solo sobre Rocinante por un camino rural único, satisfecho de su supuesta intervención por Andrés y hablando para sí en voz baja. Sin Dulcinea representada, sin Andrés o Haldudo, sin encrucijada ni comitiva de mercaderes. Fuente `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1808–1820, cotejadas con el texto del repositorio.
+
+La aceptación es visual y exclusiva de H08; su alta no activa la Historia ni la Aventura y no acredita QA de UI DC-28/TS-001 o derechos de redistribución pública. H09 sigue pendiente de validación individual.

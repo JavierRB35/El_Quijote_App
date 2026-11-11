@@ -184,3 +184,9 @@ La aprobación es visual y específica. No activa guiones ni contenido de juego,
 Se integra **H02B** (`STORY`, Historia H02.2) como WebP 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900295`. Es continuación de H02A: desde la entrada del encinar don Quijote acaba de descubrir al joven Andrés atado a una encina, al labrador Juan Haldudo con la pretina baja y una yegua amarrada a otra encina distinta. No aparece azote en ejecución, lesión gráfica, desafío al amo ni liberación. Fuente: `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1693–1705, contrastadas con texto íntegro en repositorio.
 
 La imagen se registra por aceptación visual expresa. No activa escenas ni garantiza QA de interfaz DC-28/TS-001 o derechos de distribución; H06 queda como candidata independiente hasta nueva validación del propietario.
+
+## Capítulo IV — H06 aprobada visualmente: el caballero se aleja (2026-11-11)
+
+Se integra **H06** (`STORY`, Historia H06.2) como WebP 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900296`. La cámara mira desde el encinar hacia su salida: Haldudo sigue con la vista a don Quijote, que se aleja montado en Rocinante y aparece a escala reducida al fondo; Andrés sigue libre y la yegua permanece junto a otra encina. No hay represalia, monedas entregadas ni regreso a la venta. Fuente: `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1778–1780, cotejadas con el texto del repositorio.
+
+Aprobación visual específica del propietario, sin activación de Modo Historia ni de Aventura. QA de interfaz DC-28/TS-001 y revisión de derechos de distribución pendientes. H07A no forma parte de esta integración y queda pendiente de aceptación visual independiente.

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "package_id": "el-quijote-visual-pilot-2026-11-11-v33",
+  "package_id": "el-quijote-visual-pilot-2026-11-11-v34",
   "generated_on": "2026-11-06",
   "production_state": "visual_pilot_not_editorially_approved",
   "source_media_policy": "Only original AI recreations; no Tusell or Doré illustrations extracted or included",
@@ -7909,8 +7909,34 @@
       "textual_locator_status": "verified_against_repository_source",
       "rights_status": "original_generated_asset_review_on_redistribution",
       "review_notes_es": "H02B aceptada visualmente por el propietario el 2026-11-11. Imagen original para Modo Historia H02.2, inmediatamente después de H02A; plano de descubrimiento desde la entrada del bosque. Andrés, de unos quince años, está atado a una encina y sin ropa de cintura para arriba; Juan Haldudo, diferenciado del ventero, aparece a su lado sosteniendo baja una pretina de cuero entre acciones; una yegua está atada a una encina físicamente separada. Don Quijote acaba de entrar montado sobre Rocinante, con lanza no dirigida a los personajes. No se muestra impacto, heridas visibles, reprimenda en curso, liberación, represalia ni diálogo con el caballero. Fuente DQ.ED.0003 / DQ.SRC.0005, Primera Parte capítulo IV, líneas 1693–1705, cotejadas directamente con el texto del repositorio. Iluminación, pausa y encuadre son recreación artística plausible. PNG aprobado SHA-256 146a9d5362528396f1d7ce0b1e404cdbe9ca5e989fe0add32188b66fb1ff5100. WebP 1672×941, calidad 82, 376066 bytes, SHA-256 972805354f0700dd48a4a1802c662a63c53c6f36c532b4f380fdda187440afc7, Git blob SHA-1 bd429af9a2b73392fe69870ed507ff0f929adb8f. El área inferior contiene suelo/hojarasca y puede estudiarse como zona segura, pendiente de QA DC-28/TS-001. H06 no está aún aprobado ni integrado. Derechos de redistribución pendientes; no activar automáticamente."
+    },
+    {
+      "id": "p1_c04_h06_caballero_se_aleja_story",
+      "candidate_media_id": "DQ.MED.900296",
+      "media_class": "recreacion_ia",
+      "review_state": "aprobada",
+      "title_es": "Haldudo observa cómo don Quijote se aleja",
+      "part": 1,
+      "chapter": 4,
+      "episode_key": "p1:c04",
+      "phase": "story",
+      "spoiler_risk": "low",
+      "relative_path": "assets/scenes/part_1/chapter_04/p1_c04_h06_caballero_se_aleja_story.webp",
+      "width_px": 1672,
+      "height_px": 941,
+      "mime_type": "image/webp",
+      "sha256": "df9527942d1403e53fe77b8beb4e4782ad70ce98e01f8bc9ac0d22e50d34fbaf",
+      "source_class": "RECREACION_ARTISTICA",
+      "generated_with": "OpenAI ImageGen",
+      "attribution_es": "Recreación artística original generada mediante OpenAI ImageGen para El Quijote en noviembre de 2026, por encargo del propietario y con aceptación visual expresa el 2026-11-11.",
+      "alt_es": "Desde el encinar, Haldudo ve alejarse a don Quijote a caballo hacia el camino; Andrés permanece libre cerca de las encinas y de una yegua amarrada.",
+      "historical_editorial_status": "approved_owner_visual",
+      "question_spoiler_validation": "pending_in_game_context_qa",
+      "textual_locator_status": "verified_against_repository_source",
+      "rights_status": "original_generated_asset_review_on_redistribution",
+      "review_notes_es": "H06 aceptada visualmente por el propietario el 2026-11-11. Imagen original para Modo Historia H06.2, inmediatamente después de la advertencia de don Quijote. Juan Haldudo, de espaldas/tres cuartos, sigue con la mirada al caballero que cabalga hacia la salida del bosque, reducido ya a una figura reconocible al fondo, montado sobre Rocinante; Andrés sigue libre y sin ataduras junto a una encina y una yegua marrón permanece atada a otra. Una reacción contenida se contrapone a la partida del caballero. Sin represalia, pago, diálogo ni venta. Fuente DQ.ED.0003 / DQ.SRC.0005, Primera Parte capítulo IV, líneas 1778–1780, cotejadas con el texto del repositorio. La composición, ubicación de la yegua y el gesto son recreación artística plausible. PNG aprobado SHA-256 3999d0325e9627802bebeaa403b8099d0c560dc1e1118fcc5ace9bb9ecfec87d. WebP 1672×941, calidad 82, 392696 bytes, SHA-256 df9527942d1403e53fe77b8beb4e4782ad70ce98e01f8bc9ac0d22e50d34fbaf, Git blob SHA-1 5fc9757449d5218880a1ea93a15f68cb5aada03c. Para texto de Historia revisar zona inferior libre sin cubrir la figura del caballero a la derecha. H07A permanecerá candidata independiente; QA de interfaz DC-28/TS-001 y derechos de redistribución pendientes, sin activación automática."
     }
   ],
-  "catalog_version": "0.5.24",
+  "catalog_version": "0.5.25",
   "last_updated_on": "2026-11-11"
 }

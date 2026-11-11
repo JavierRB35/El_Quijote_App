@@ -241,3 +241,8 @@ La imagen es de desenlace y no debe usarse como preimagen. Aprobación solo visu
 
 
 **Aceptación visual capítulo I.5 (2026-11-11):** incorporado bajo aprobación visual expresa del propietario el WebP `part_1/chapter_05/p1_c05_r04_a07_exterior_pueblo_pre_candidata.webp` (`DQ.MED.900305`), PRE de Aventura R04 y candidato para Historia H06.1; fuente DC-31 Primera Parte capítulo V, L2001–2003. **No se activa el capítulo.** Persisten QA de superposición DC-28 (el lateral derecho contiene Rocinante), contraste y continuidad de pelaje, derechos de redistribución y TS-001 en la presentación real. La aprobación visual no acredita esos controles. Maestro PNG fuera de Git.
+
+
+## Capítulo V — R05/A10 POST (aceptación visual, 2026-11-11)
+
+Se cataloga `DQ.MED.900306` en `assets/scenes/part_1/chapter_05/p1_c05_r05_a10_descanso_cura_pedro_post.webp` (WebP, 1672×941, 139928 bytes, SHA-256 `aeb826498e9302cd2ab7048a3848c1109e00905fa23c85ca198c5a8e241337a8`), derivado optimizado del PNG original de la imagen aprobada visualmente (`9efb5d2b6110f4ee34ab967b0698b32837f40346271ba84cb957fc2d8e0106c1`). Aventura R05/A10 **post** (solo tras revelación); candidata de Historia H11.2. Corpus DQ.ED.0003/DQ.SRC.0005, capítulo V, L2071–2077. La aceptación visual del propietario no equivale a habilitación en la app: pendientes QA de DC-28/TS-001, revisión final de uso, accesibilidad y derechos antes de redistribución. No hay cambios en guiones, rondas ni código. Otros recursos visualmente aceptados con incidencias quedan fuera de este commit hasta resolverlas, sin sustituciones implícitas.

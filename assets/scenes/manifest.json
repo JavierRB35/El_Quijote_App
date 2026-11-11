@@ -8173,8 +8173,35 @@
       "textual_locator_status": "verified_against_repository_source",
       "rights_status": "original_generated_asset_review_on_redistribution",
       "review_notes_es": "Propietario: «Imagen autorizada, aplica la directriz de imagen y continua con la siguiente imagen» (2026-11-11), aplicado a R04/A07 presentada previamente. PRE de Aventura R04 y posible Historia H06.1: llegada al exterior del pueblo al anochecer antes de que Pedro aguarde a que haya más noche; entrada al pueblo NO representada. Fuente DQ.ED.0003 / DQ.SRC.0005, Primera Parte, capítulo V, líneas 2001–2003, verificadas contra blob 9d7a51e978dca96b11ba1d1b66eabd57c6ef5eb5. Pedro Alonso, don Quijote, su asno y Rocinante con las armas, sin Sancho ni testigos. Pueblo, campanario, indumentaria y luz concretos son recreaciones plásticas no fijadas por Cervantes. PNG maestro fuera de Git SHA-256 a2025a928fd962bacc14695329ce9b0141d6f6f9cdda737205984d02372bcd7e. WebP 1672x941 q82, 218336 bytes, SHA-256 4315451faee004cea792c3e15113d2d40c5854c005d47713936855226f94ea7c, blob Git SHA-1 957e3cc179dceda4c2fd10c973a1b93c2e6774af. Aprobación visual únicamente. PENDIENTE: QA real DC-28 (el caballo ocupa el lado derecho donde debe colocarse el panel), continuidad del pelaje de Rocinante respecto a referencia pardo clara, TS-001 en pantalla, derechos de redistribución. No activar Aventura/Historia ni declarar la imagen apta para overlay hasta superar esos controles."
+    },
+    {
+      "id": "p1_c05_r05_a10_descanso_cura_pedro_post",
+      "candidate_media_id": "DQ.MED.900306",
+      "media_class": "recreacion_ia",
+      "review_state": "aprobada",
+      "title_es": "Don Quijote descansa mientras el cura escucha a Pedro Alonso",
+      "part": 1,
+      "chapter": 5,
+      "episode_key": "p1:c05",
+      "phase": "post",
+      "spoiler_risk": "high",
+      "relative_path": "assets/scenes/part_1/chapter_05/p1_c05_r05_a10_descanso_cura_pedro_post.webp",
+      "width_px": 1672,
+      "height_px": 941,
+      "mime_type": "image/webp",
+      "sha256": "aeb826498e9302cd2ab7048a3848c1109e00905fa23c85ca198c5a8e241337a8",
+      "source_class": "RECREACION_ARTISTICA",
+      "generated_with": "OpenAI ImageGen",
+      "attribution_es": "Recreación artística original generada mediante OpenAI ImageGen para El Quijote, 11-11-2026, por encargo del propietario; aceptación visual expresa en esta conversación.",
+      "alt_es": "Don Quijote descansa tendido en el lecho; Pedro Alonso, junto a la cama, relata lo ocurrido y el cura lo escucha atentamente; el ama y la sobrina observan preocupadas.",
+      "preferred_overlay_side": "right",
+      "historical_editorial_status": "approved_owner_visual",
+      "question_spoiler_validation": "pending_in_game_context_qa",
+      "textual_locator_status": "verified_against_repository_source",
+      "rights_status": "original_generated_asset_review_on_redistribution",
+      "review_notes_es": "Aventura R05/A10 POST, después de la petición de comer y dormir; Historia H11.2, conversación del cura con Pedro Alonso. Aceptada visualmente por el propietario en esta conversación («Aceptada, continua», referido a la candidata R05/A10 POST), y autorización posterior expresa para integrar imágenes aceptadas mediante DC-35. Fuente DQ.ED.0003 / DQ.SRC.0005, Primera Parte capítulo V, L2071–2077. La escena representa al hidalgo reposando sin heridas abiertas, mientras cura y labrador conversan; la presencia de ama y sobrina, posición de los personajes, luz y habitación son decisiones plásticas, no datos literales. Original PNG validado SHA-256 9efb5d2b6110f4ee34ab967b0698b32837f40346271ba84cb957fc2d8e0106c1; derivado WebP de conservación técnica sin cambio de escena, q82, 1672×941, 139928 bytes, SHA-256 aeb826498e9302cd2ab7048a3848c1109e00905fa23c85ca198c5a8e241337a8, blob Git b4f3a5392d06e8f4c72842189430204d528ed0ff. Sólo aprobación visual; comprobar DC-28/TS-001 en pantalla, fidelidad y derechos antes de activación o redistribución. Sin código ni publicación."
     }
   ],
-  "catalog_version": "0.5.31",
+  "catalog_version": "0.5.32",
   "last_updated_on": "2026-11-11"
 }

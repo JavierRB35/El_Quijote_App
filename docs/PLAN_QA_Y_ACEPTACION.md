@@ -1,5 +1,7 @@
 # PLAN DE QA Y ACEPTACIÓN — FASE 0
 
+**Ejecución DC-37, 2026-11-11:** [informe y evidencias reales](qa/dc37/CONFORMIDAD_Y_QA.md), [matrices por intervención/ronda](qa/dc37/README.md). Se distinguen mediciones de navegador, pruebas del binario nativo y DPI real/simulado. Los resultados actuales no sustituyen las puertas de aceptación artística ni certifican instalación offline en VM limpia.
+
 > **Actualización vinculante 2026-11-11, DC-37:** Incorporar gate nuevo de imagen completa, pergamino sin desbordamiento, control contemplación reversible, tipografía histórica, ausencia de fondos neutros finales y menú manchego. TS-001 debe comprobar texto íntegro visible por defecto pero ocultable voluntariamente con avance pausado. Referencia prioritaria: [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Decisión **solo documental**; no autoriza implementación ni nuevas imágenes.
 
 **Estado:** COMPLETO (v1.0, borrador para GO/NO-GO) — entregable FASE 0 (encargo §8, punto 10)

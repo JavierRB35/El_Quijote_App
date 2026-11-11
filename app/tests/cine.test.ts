@@ -195,7 +195,7 @@ function itemDe(
   };
 }
 
-test('secuencia completa: declaración → persistencia → frontera → neutro (sin herencia ajena)', () => {
+test('DC-37: declaración → ausencia explícita → frontera, sin herencia automática', () => {
   const items: ItemLectura[] = [];
   const s01 = { id: 'S01', media_ids: [PRE.id, POST.id] };
   const s02 = { id: 'S02', media_ids: [] };
@@ -204,7 +204,7 @@ test('secuencia completa: declaración → persistencia → frontera → neutro 
   items.push(itemDe(items, s02, { id: 'B3', visual_asset_ids: [] }));       // I2: frontera → neutro
 
   assert.deepEqual(planoDePosicion(items, 0, MEDIOS).activo?.id, PRE.id);
-  assert.equal(planoDePosicion(items, 1, MEDIOS).causa, 'persistencia');
+  assert.equal(planoDePosicion(items, 1, MEDIOS).activo, null);
   const r2 = planoDePosicion(items, 2, MEDIOS);
   assert.equal(r2.activo, null);
   assert.equal(r2.causa, 'neutro_editorial');
@@ -217,11 +217,11 @@ test('la activación post-desenlace llega solo cuando un beat la declara (umbral
   items.push(itemDe(items, s01, { id: 'B2', visual_asset_ids: [] }));       // I1: persiste
   items.push(itemDe(items, s01, { id: 'B3', visual_asset_ids: [POST.id] })); // I2: el guion declara el post
 
-  assert.equal(planoDePosicion(items, 0, MEDIOS).activo?.id, PRE.id);
-  assert.equal(planoDePosicion(items, 1, MEDIOS).activo?.id, PRE.id);
+  assert.equal(planoDePosicion(items, 0, MEDIOS).activo, null);
+  assert.equal(planoDePosicion(items, 1, MEDIOS).activo, null);
   assert.equal(planoDePosicion(items, 2, MEDIOS).activo?.id, POST.id);
   // Y retroceder revoca: determinista en ambos sentidos (EF-AV-08).
-  assert.equal(planoDePosicion(items, 1, MEDIOS).activo?.id, PRE.id);
+  assert.equal(planoDePosicion(items, 1, MEDIOS).activo, null);
 });
 
 // ---------- encuadres.json: versionado, cobertura y coherencia ----------

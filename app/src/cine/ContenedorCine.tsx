@@ -1,156 +1,122 @@
-// Contenedor cinematográfico reutilizable (encargo P1, «Implementación»):
-// capa de escena a sangre + ranuras para los estados de la interfaz
-// (narración y pregunta) y el panel lateral. Historia y Aventura lo
-// componen; ninguno conoce su interior. Reglas que fija:
-//  - La imagen (o el fondo neutro editorial) ocupa siempre la mayor superficie;
-//    los paneles respetan el lado seguro del encuadre y la región crítica.
-//  - TS-001 / DC-28: texto completo en panel separado del lienzo,
-//    nunca scroll en cuadros superpuestos ni truncamiento.
-//  - Transiciones discretas: fundido suave de plano; con movimiento reducido,
-//    corte sin deriva (reduced_motion_fallback del contrato).
-//  - El neutro es una decisión editorial: sin spinners ni avisos; solo un
-//    fallo real de carga muestra la nota discreta única (cerrable, no bloquea).
-import { useCallback, useEffect, useRef, useState } from 'react';
-import type { ReactNode } from 'react';
+// DC-37: un único lienzo y pergamino para Historia y Aventura.
+import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
+import { encuadreSeguro, regionesLibres, type Rectangulo } from './composicion';
+import './lienzo.css';
 
 export interface PlanoCine {
-  /** URI lógica del activo visible; null = fondo neutro editorial. */
   uri: string | null;
   alt: string;
   autor?: string;
-  /** Rótulo de evidencia (media_class): recreación — no evidencia histórica. */
   mediaClass?: string;
-  /** Lado reservado al texto según el encuadre del activo. */
   ladoTexto: 'derecha' | 'izquierda';
+  /** Metadatos existentes; su presencia no equivale a aprobación DC-37. */
+  regionCritica?: Rectangulo;
 }
-
 interface Props {
   plano: PlanoCine;
-  /** Estado de la interfaz: narración (texto lateral/banda) o pregunta
-   *  (panel inferior de alto contraste). */
   estado: 'narracion' | 'pregunta';
   reducirMovimiento: boolean;
-  /** Cargador de URI lógica → URL usable (inyectado: Tauri o dev). */
   cargar: (uri: string) => Promise<string>;
   cabecera: ReactNode;
-  /** Banda de narración (estado «narración»). */
   texto?: ReactNode;
-  /** Panel inferior de pregunta (estado «pregunta»). */
   pregunta?: ReactNode;
-  /** Acciones flotantes del contenedor (Descubrir más, etc.). */
   lateral?: ReactNode;
+  oculto: boolean;
+  onContemplar: (oculto: boolean) => void;
+  onComposicion?: (cabe: boolean) => void;
 }
 
-/** Nota discreta de fallo real de carga (una por URI, cerrable, no bloquea). */
-function NotaFallo({ mensaje, onCerrar }: { mensaje: string; onCerrar: () => void }) {
-  return (
-    <div className="nota-fallo" role="status" aria-live="polite">
-      <span>No se ha podido mostrar una imagen de esta escena. La historia continúa con normalidad.</span>
-      <button className="nota-cerrar" onClick={onCerrar} aria-label="Cerrar aviso (escape)">
-        ✕
-      </button>
-      <span className="sr-only">{mensaje}</span>
-    </div>
-  );
-}
-
-export default function ContenedorCine({
-  plano,
-  estado,
-  reducirMovimiento,
-  cargar,
-  cabecera,
-  texto,
-  pregunta,
-  lateral,
-}: Props) {
-  // Caché de imágenes por URI con cross-fade entre planos (el plano saliente
-  // persiste hasta que el entrante tiene píxeles: nunca se vacía el fotograma).
-  const [cargadas, setCargadas] = useState<Record<string, string>>({});
-  const [fallos, setFallos] = useState<Record<string, string>>({});
-  const [notaCerrada, setNotaCerrada] = useState<string | null>(null);
-  const pedidas = useRef<Set<string>>(new Set());
+export default function ContenedorCine({ plano, estado, reducirMovimiento, cargar,
+  cabecera, texto, pregunta, lateral, oculto, onContemplar, onComposicion }: Props) {
+  const [carga, setCarga] = useState({ uri: '', src: '', error: false });
+  const [dimensiones, setDimensiones] = useState({ w: 0, h: 0 });
+  const [ajuste, setAjuste] = useState<{ estilo: CSSProperties; emergencia: boolean; cabe: boolean; fit: 'cover' | 'contain' }>({ estilo: {}, emergencia: true, cabe: true, fit: 'contain' });
+  const raiz = useRef<HTMLElement>(null);
+  const papel = useRef<HTMLElement>(null);
+  const control = useRef<HTMLButtonElement>(null);
+  const id = useId();
 
   useEffect(() => {
     const uri = plano.uri;
-    if (!uri || pedidas.current.has(uri)) return;
-    pedidas.current.add(uri);
-    cargar(uri)
-      .then((src) => setCargadas((m) => ({ ...m, [uri]: src })))
-      .catch((e) => {
-        console.error('asset', uri, e);
-        setFallos((f) => ({ ...f, [uri]: String(e) }));
-      });
+    if (!uri) return;
+    let vigente = true;
+    let blob = '';
+    cargar(uri).then(src => {
+      blob = src;
+      if (vigente) setCarga({ uri, src, error: false });
+      else if (src.startsWith('blob:')) URL.revokeObjectURL(src);
+    }).catch(() => { if (vigente) setCarga({ uri, src: '', error: true }); });
+    return () => { vigente = false; if (blob.startsWith('blob:')) URL.revokeObjectURL(blob); };
   }, [plano.uri, cargar]);
+  const src = carga.uri === plano.uri ? carga.src : '';
+  const error = carga.uri === plano.uri && carga.error;
 
-  // Cada URI fallida tiene derecho a una única nota; cambiar de plano la retira.
-  const uriFallo =
-    plano.uri && plano.uri in fallos && notaCerrada !== plano.uri ? plano.uri : null;
-
-  const cerrarNota = useCallback(() => setNotaCerrada(plano.uri), [plano.uri]);
-  useEffect(() => {
-    const alPulsar = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && uriFallo) {
-        // Precedencia de Esc: la nota se cierra primero y el modo no la
-        // interpreta como salida al menú.
-        e.stopPropagation();
-        cerrarNota();
+  useLayoutEffect(() => {
+    const root = raiz.current, panel = papel.current;
+    if (!root || !panel || oculto) return;
+    let vigente = true;
+    const medir = () => {
+      if (!vigente) return;
+      const { width: w, height: h } = root.getBoundingClientRect();
+      const encuadre = encuadreSeguro(w, h, dimensiones.w, dimensiones.h, plano.regionCritica);
+      // Las regiones son hipótesis del inventario existente; no aprobaciones.
+      const candidatas = plano.regionCritica && src ? regionesLibres(w, h, encuadre.region) : [];
+      let elegido: Rectangulo | undefined;
+      panel.dataset.disposicion = 'filas';
+      for (const r of candidatas) {
+        panel.style.width = `${r.w}px`;
+        if (panel.scrollHeight <= r.h && panel.scrollWidth <= r.w + 1) { elegido = r; break; }
       }
+      const emergencia = !elegido;
+      const r = elegido ?? regionesLibres(w, h)[0];
+      panel.style.width = `${r.w}px`;
+      if (emergencia && estado === 'pregunta') {
+        let menor = panel.scrollHeight;
+        let disposicion = 'filas';
+        for (const candidata of ['columnas', 'paralelo', 'paralelo-amplio']) {
+          panel.dataset.disposicion = candidata;
+          if (panel.scrollHeight < menor) { menor = panel.scrollHeight; disposicion = candidata; }
+        }
+        panel.dataset.disposicion = disposicion;
+      }
+      const cabe = panel.scrollHeight <= r.h && panel.scrollWidth <= r.w + 1;
+      setAjuste({ estilo: { left: r.x, top: r.y, width: r.w }, emergencia, cabe, fit: encuadre.fit });
+      onComposicion?.(cabe);
     };
-    window.addEventListener('keydown', alPulsar, true);
-    return () => window.removeEventListener('keydown', alPulsar, true);
-  }, [uriFallo, cerrarNota]);
+    medir();
+    const resize = new ResizeObserver(medir);
+    resize.observe(root);
+    const cambios = new MutationObserver(medir);
+    cambios.observe(document.documentElement, { attributes: true, attributeFilter: ['data-ajuste-texto'] });
+    document.fonts.ready.then(medir);
+    return () => { vigente = false; resize.disconnect(); cambios.disconnect(); };
+  }, [texto, pregunta, src, dimensiones, plano.regionCritica, oculto, onComposicion, estado]);
 
-  const hayImagen = plano.uri !== null && plano.uri in cargadas;
-
-  return (
-    <main className={`cine cine-${estado} ${hayImagen ? '' : 'sin-plano'}`}>
-      <div className="lienzo" aria-hidden="true">
-        {Object.entries(cargadas).map(([uri, src]) => (
-          <img
-            key={uri}
-            src={src}
-            alt=""
-            className={`plano ${uri === plano.uri ? 'activo' : ''} ${
-              reducirMovimiento ? 'sin-deriva' : ''
-            }`}
-          />
-        ))}
-        <div className="neutro" style={{ opacity: hayImagen ? 0 : 1 }} aria-hidden="true">
-          <div className="neutro-filete" />
-        </div>
-        <div className="vineta" />
-      </div>
-
-      {/* Descripción accesible del plano (alt) fuera de la capa decorativa. */}
-      {hayImagen && plano.alt && <p className="sr-only">{plano.alt}</p>}
-
-      {cabecera}
-
-      <div className={`banda-texto lado-${plano.ladoTexto} ${estado === 'narracion' ? 'visible' : ''}`}>
-        {texto}
-      </div>
-
-      {pregunta && (
-        <section className="panel-pregunta" aria-label="Pregunta">
-          {pregunta}
-        </section>
-      )}
-
-      {lateral}
-
-      {plano.mediaClass && (
-        <footer className="pie">
-          <span className="rotulo">
-            {plano.mediaClass === 'RECREACION_IA'
-              ? 'recreación — no evidencia histórica'
-              : plano.mediaClass}
-          </span>
-          {plano.autor && <span className="pie-autor">{plano.autor}</span>}
-        </footer>
-      )}
-
-      {uriFallo && <NotaFallo mensaje={fallos[uriFallo]} onCerrar={cerrarNota} />}
-    </main>
-  );
+  return <main ref={raiz} className={`lienzo-vivo ${reducirMovimiento ? 'sin-movimiento' : ''}`}
+    data-modo={estado} data-composicion={ajuste.emergencia ? 'pendiente' : 'candidata'}
+    data-cabe={ajuste.cabe} data-contemplacion={oculto}>
+    <div className="lv-imagen" aria-hidden="true" hidden={!oculto && ajuste.emergencia}>
+      {src && <img key={plano.uri} src={src} alt="" style={{ objectFit: ajuste.fit }}
+        onLoad={e => setDimensiones({ w: e.currentTarget.naturalWidth, h: e.currentTarget.naturalHeight })}
+        onError={() => setCarga({ uri: plano.uri ?? '', src: '', error: true })} />}
+    </div>
+    {src && <p className="sr-only">{plano.alt}</p>}
+    <div className="lv-cabecera" hidden={oculto}>{cabecera}</div>
+    <button ref={control} className="lv-contemplar" aria-controls={id} aria-expanded={!oculto}
+      aria-label={oculto ? 'Mostrar texto' : 'Ocultar texto'} onClick={() => {
+        onContemplar(!oculto); control.current?.focus();
+      }}><span aria-hidden="true">{oculto ? '◉' : '◎'}</span><span>{oculto ? 'Mostrar texto' : 'Ocultar texto'}</span></button>
+    <section id={id} ref={papel} hidden={oculto} className="pergamino lv-pergamino"
+      style={ajuste.estilo} aria-label={estado === 'pregunta' ? 'Aventura narrativa' : 'Narración'}>
+      {texto}{pregunta}
+    </section>
+    {!oculto && lateral}
+    <footer className="lv-pie">
+      <span>{plano.mediaClass === 'RECREACION_IA' ? 'Recreación artística · no es evidencia histórica' : plano.mediaClass}</span>
+      {plano.autor && <span>{plano.autor}</span>}
+      {(!src || ajuste.emergencia) && <span role="status">{error ? 'Imagen no disponible.' : !src ? 'Sin imagen asociada.' : 'Composición pendiente · imagen al ocultar texto'}</span>}
+    </footer>
+    {!ajuste.cabe && !oculto && <p className="lv-limite" role="alert">Amplía la ventana o reduce el tamaño del texto en Ajustes. Esta composición aún no permite leer todo el contenido.</p>}
+  </main>;
 }

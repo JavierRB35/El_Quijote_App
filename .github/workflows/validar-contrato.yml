@@ -61,6 +61,9 @@ jobs:
       - name: Catálogo Aventura DC-34 (esquema, imágenes y referencias)
         run: python tools/editorial_validation/validar_aventura.py
 
+      - name: Cobertura DC-37 (IDs, rutas, rondas y carencias)
+        run: python -I tests/dev/test_auditoria_dc37.py
+
       - name: Integridad DC-35 de escenas aprobadas (SHA-256 y WebP)
         run: python -I tools/editorial_validation/validar_medios_aprobados.py
 

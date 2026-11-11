@@ -6,11 +6,14 @@ import { CAPITULOS, catalogoConHistoria, rondasDeCapitulo } from './capitulos/re
 import ReproductorHistoria from './historia/ReproductorHistoria';
 import AventuraNarrativa from './aventura/AventuraNarrativa';
 import Museo from './museo/Museo';
+import FondoContextual from './cine/FondoContextual';
+import { AjustesBoton, useAjustes } from './cine/ajustes';
 import './App.css';
 
 type Modo = 'menu' | 'historia' | 'aventura' | 'museo';
 
 export default function App() {
+  const { ajustes, fijarTexto, fijarMovimiento } = useAjustes();
   const [catalogo, setCatalogo] = useState<Catalogo | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [modo, setModo] = useState<Modo>('menu');
@@ -26,9 +29,9 @@ export default function App() {
       .catch((e) => setError(String(e)));
   }, []);
 
-  if (error) return <main className="cine solo-estado">Error cargando el catálogo: {error}</main>;
-  if (!catalogo) return <main className="cine solo-estado">Abriendo el Quijote…</main>;
-  if (!ficha) return <main className="cine solo-estado">No hay capítulos autorizados.</main>;
+  if (error) return <main className="cine solo-estado"><FondoContextual /><section className="pergamino estado-lectura" role="alert"><p>No se ha podido abrir el Quijote.</p><details><summary>Detalles del error</summary>{error}</details><button onClick={() => window.location.reload()}>Reintentar</button></section></main>;
+  if (!catalogo) return <main className="cine solo-estado"><FondoContextual /><p className="pergamino estado-lectura" role="status">Abriendo el Quijote…</p></main>;
+  if (!ficha) return <main className="cine solo-estado"><FondoContextual /><p className="pergamino estado-lectura">No hay capítulos autorizados.</p></main>;
 
   if (modo === 'historia') {
     return <ReproductorHistoria key={ficha.episodioId} catalogo={catalogo} ficha={ficha} onSalir={() => setModo('menu')} />;
@@ -42,10 +45,11 @@ export default function App() {
 
   return (
     <main className="cine menu">
-      <div className="menu-fondo" aria-hidden="true" />
+      <FondoContextual />
       <section className="menu-tarjeta">
         <p className="kicker">El ingenioso hidalgo don Quijote de la Mancha · 1605</p>
         <h1>El Quijote</h1>
+        <AjustesBoton ajustes={ajustes} fijarTexto={fijarTexto} fijarMovimiento={fijarMovimiento} />
         <label className="menu-capitulo-etiqueta" htmlFor="selector-capitulo">Elige un capítulo del piloto</label>
         <select
           id="selector-capitulo"
@@ -74,7 +78,7 @@ export default function App() {
           <span className="tarjeta-modo-nombre">Museo · Galería artística</span>
           <span className="tarjeta-modo-detalle">Las 376 acuarelas históricas de la edición Tusell, abiertas desde el inicio sin requisitos de progreso.</span>
         </button>
-        <p className="menu-nota">Piloto funcional: Historia y Aventura guardan su progreso por episodio. QA visual del capítulo I pendiente.</p>
+        <p className="menu-nota">Tu progreso se conserva en cada capítulo.</p>
       </section>
     </main>
   );

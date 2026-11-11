@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "actualizado": "2026-11-09 (revisión capítulo I)",
+  "actualizado": "2026-11-11 (DC-37: protección de composición H01)",
   "fuente": "assets/scenes/manifest.json (preferred_overlay_side) + docs/DIRECCION_ARTISTICA.md (sujeto en tercio izquierdo); hipótesis de layout pendiente de validación de legibilidad (DOSSIER_H4 §3.5)",
-  "nota": "region_critica en tanto por uno del fotograma 1672×941; los paneles no la cubren. Entradas ausentes usan el encuadre por defecto (texto a la derecha). Biblioteca I.1: texto a izquierda, pending QA visual; imagen anacrónica de armas retirada.",
+  "nota": "region_critica en tanto por uno del fotograma 1672×941; los paneles no la cubren. Entradas ausentes usan el encuadre por defecto (texto a la derecha). Biblioteca I.1: texto a izquierda, pending QA visual; imagen anacrónica de armas retirada. DC-37: H01 protege también Rocinante y el galgo observados en captura real; la reserva resultante no admite texto, se registra composición pendiente sin recortar ni tapar personajes.",
   "encuadres": [
     {
       "media_id": "DQ.MA.000026",
@@ -352,6 +352,16 @@
         "y": 0.25,
         "w": 0.45,
         "h": 0.65
+      }
+    },
+    {
+      "media_id": "scene:p1_c01_h01_presentacion_hidalgo_story",
+      "lado_texto": "derecha",
+      "region_critica": {
+        "x": 0,
+        "y": 0,
+        "w": 0.88,
+        "h": 1
       }
     }
   ]

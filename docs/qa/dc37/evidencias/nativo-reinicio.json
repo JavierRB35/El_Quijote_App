@@ -1,0 +1,39 @@
+{
+  "estado": "PASS",
+  "entorno": "Tauri debug custom-protocol; WebView2 Windows; perfil QA independiente; recursos locales del repositorio, no instalador distribuible",
+  "tras_reinicio": true,
+  "metadata": {
+    "width": 1366,
+    "height": 768,
+    "dpr": 1,
+    "online": false
+  },
+  "capitulos": [
+    {
+      "capitulo": "DQ.P1.C01",
+      "historia": "PASS: texto, contemplación, restauración nativa",
+      "aventura": "PASS: respuesta y restauración nativa"
+    },
+    {
+      "capitulo": "DQ.P1.C02",
+      "historia": "PASS: texto, contemplación, restauración nativa",
+      "aventura": "PASS: respuesta y restauración nativa"
+    },
+    {
+      "capitulo": "DQ.P1.C04",
+      "historia": "PASS: texto, contemplación, restauración nativa",
+      "aventura": "PASS: respuesta y restauración nativa"
+    },
+    {
+      "capitulo": "DQ.P1.C05",
+      "historia": "PASS: texto, contemplación, restauración nativa",
+      "aventura": "PASS: respuesta y restauración nativa"
+    },
+    {
+      "capitulo": "DQ.P1.C08",
+      "historia": "PASS: texto, contemplación, restauración nativa",
+      "aventura": "PASS: respuesta y restauración nativa"
+    }
+  ],
+  "errores_consola": []
+}

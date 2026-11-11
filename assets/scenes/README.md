@@ -144,3 +144,10 @@ Esta versión **sustituye** la A06 anterior con cámara exterior que el propieta
 Se integra **A07** (`PRE`, Aventura `AV2-I4-04`, Historia H09.2 durante la petición), imagen WebP original de 1672 × 941 px, calidad 82, con ID provisional `DQ.MED.900289`. El mercader toledano se dirige a don Quijote y solicita ver a la dama; don Quijote escucha montado, con lanza y adarga en reposo, ante parte de la comitiva detenida y sus quitasoles de época. El fondo derecho deja espacio para la interfaz, sin tapar a los interlocutores o los quitasoles. Texto fuente: `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1846–1855, cotejo directo.
 
 Por ser PRE, la escena debe mostrarse antes de la respuesta del caballero y **no revela** ésta ni otras consecuencias; A08 aún no tiene aceptación visual y queda fuera del lote. La integración del activo no activa rondas ni guiones, no acredita aún QA DC-28/TS-001 en pantalla ni autoriza redistribución pública.
+
+
+## Capítulo IV — A08 aprobada visualmente: respuesta de don Quijote (2026-11-11)
+
+Se integra **A08** (`POST`, Aventura `AV2-I4-04`, Historia H10.1), WebP original 1672 × 941 px a calidad 82 con ID provisional `DQ.MED.900290`. Es el contraplano de A07: don Quijote afirma con solemnidad que deben creer en la incomparable Dulcinea sin verla; el mercader escucha, Rocinante sigue detenido, adarga visible y lanza vertical sin iniciar carga. La comitiva continúa inmóvil; no hay retrato, burla siguiente ni violencia. Fuente textual `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1857–1863, cotejo directo.
+
+Por ser `POST`, no debe mostrarse hasta después de «Descubrir qué sucede» en Aventura. Su alta de imagen no activa rondas/Historia ni certifica aún QA visual DC-28/TS-001 en el juego o permisos de redistribución. A09 sigue fuera del catálogo aprobado hasta validación específica del propietario.

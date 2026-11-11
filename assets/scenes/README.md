@@ -196,3 +196,9 @@ Aprobación visual específica del propietario, sin activación de Modo Historia
 Se integra **H07A** (`STORY`, Historia H07.1) como WebP 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900297`. Ya sin don Quijote a la vista, Haldudo se dirige a Andrés como si fuera a cumplir el pago prometido. Andrés permanece libre, sin ataduras; el camino de salida está vacío y no aparecen monedas, cobro ni represalia posterior. La expresión cordial-ambigua del amo y la esperanza del muchacho son recreaciones plausibles del diálogo. Fuente `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1783–1792, cotejadas.
 
 La aceptación visual es específica de H07A. No se activa Historia/Aventura ni se acredita todavía QA DC-28/TS-001 en el juego o derechos para redistribución. H07B necesita aceptación visual propia.
+
+## Capítulo IV — H07B aprobada visualmente: Andrés se marcha (2026-11-11)
+
+Se integra **H07B** (`STORY`, Historia H07.3) como WebP 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900298`. Tras la segunda liberación, Andrés se aleja llorando por un sendero de la arboleda, mientras Juan Haldudo permanece más atrás junto a una encina. Se muestra la tristeza mediante el gesto, sin heridas visibles, golpes, nueva atadura, regreso de don Quijote o pago. Fuente `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1801–1806, cotejadas.
+
+Por revelar el efecto del episodio, esta imagen no debe exponerse antes de H07.3 ni usarse como preimagen de una ronda de Aventura. Su alta no activa historias ni acredita QA de interfaz DC-28/TS-001 o derechos para redistribución. H08 permanece fuera hasta aceptación individual.

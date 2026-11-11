@@ -1,5 +1,7 @@
 # ESPECIFICACIÓN FUNCIONAL — FASE 0
 
+> **Actualización vinculante 2026-11-11, DC-37:** Imagen a toda superficie jugable en Historia/Aventura; pergamino histórico semitransparente con texto/opciones completos, sin scroll/desbordamiento; icono fijo de ocultar/mostrar texto arriba a la derecha, modo contemplación pausado; menú inicial con pueblo y paisaje manchegos y navegación semitransparente; fondos artísticos contextuales en toda pantalla final. Sustituye la excepción TS-001 que impedía ocultación voluntaria. Referencia prioritaria: [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Decisión **solo documental**; no autoriza implementación ni nuevas imágenes.
+
 **Estado:** COMPLETA (v1.0, borrador para GO/NO-GO) — entregable FASE 0 (encargo §8); los requisitos se citan como `EF-<subsistema>-<nn>` y son **verificables** (prueba de aceptación incluida o referida al plan de QA).
 **Modo responsable:** DESARROLLO, con validación de COORDINACIÓN.
 **Fuente normativa:** encargo §3, §5.4, §7.2; decisiones cerradas DC-01…DC-17 (`VISION_Y_DECISIONES.md`); contrato editorial-técnico v0.2.0 (firmado por ambos lados).
@@ -152,6 +154,16 @@ La autoridad funcional es [REGLAS_MODO_AVENTURA_V2_2026-11-08.md](REGLAS_MODO_AV
 - `EF-COMP-02` Si no cabe, el consumidor **ensancha horizontalmente primero** hasta el máximo que permitan las zonas seguras verificadas, sin tapar hechos visuales relevantes; solo después reduce fuente dentro de límites legibles.
 - `EF-COMP-03` Todos los cuadros sobre imagen tienen **fondo semitransparente** y contraste probado sobre la imagen real; no se aceptan paneles opacos sobre el lienzo.
 - `EF-COMP-04` La composición conjunta imagen + texto debe resultar **apta tipo póster**, con sujeto, acción, pistas y hotspots despejados, y controles plenamente accesibles.
-- `EF-COMP-05` Si falla la adaptación sin scroll ni reducción ilegible, registrar **no conformidad** y resolver mediante plano/encuadre/vista separada con aprobación de Dirección; TS-001 prohíbe omitir parte de la intervención.
+- `EF-COMP-05` Si falla la adaptación sin scroll ni reducción ilegible, registrar **no conformidad** y resolver mediante plano/encuadre o segmentación editorial íntegra con aprobación de Dirección, **sin vista separada como solución visual final (DC-37)**; TS-001 prohíbe omitir parte de la intervención.
 
 **Estado:** norma incorporada; el código del vertical aún contiene `overflow-y: auto` y necesita futura PR técnica + QA visual. Checklist y rutas auditadas: [DC-28](DICTAMEN_COMPOSICION_TEXTO_IMAGEN_2026-11-08.md). El lector del libro en vista independiente mantiene su scroll habitual.
+
+## EF-UX37 — Nueva presentación visual premium obligatoria (DC-37)
+
+- **EF-UX37-01:** imagen narrativa cubre toda la superficie útil de Historia y Aventura, sin panel/columna lateral independiente ni relleno neutro; encuadre protege partes significativas.
+- **EF-UX37-02:** texto, contexto, pregunta, opciones, consecuencia y controles propios de la superposición quedan dentro de pergamino semitransparente, íntegros, legibles y sin scroll/truncamiento/desbordamiento.
+- **EF-UX37-03:** icono permanente y accesible en esquina superior derecha de imagen oculta y recupera el pergamino; texto visible por defecto; contemplación pausa voz, timers y avance, conserva estado y requiere reanudación explícita.
+- **EF-UX37-04:** tipografía serif histórica legible, escalable, offline y con contraste accesible en composición real.
+- **EF-UX37-05:** menú con imagen aprobada de pueblo/paisaje manchego de época a pantalla completa y navegación semitransparente; demás pantallas con fondo artístico contextual como acabado final.
+- **EF-UX37-06:** Historia exige asociación expresa de imagen apta por intervención (reutilización justificada); Aventura mantiene preimagen específica antiespoiler por ronda; protección de obra, fidelidad y derechos.
+- **EF-UX37-07:** no conformidad si cualquiera de las reglas P0 falla en resolución/escalado admitidos. Control y pruebas según la matriz DC-37 y el Plan de QA; no se concede PASS por documentación solamente.

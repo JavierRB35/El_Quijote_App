@@ -1,5 +1,7 @@
 # Dirección artística — colección de escenas
 
+> **Actualización vinculante DC-37 (2026-11-11):** Se aplica la nueva presentación cinematográfica completa: imágenes de Historia/Aventura a toda superficie útil, pergaminos semitransparentes y contemplación voluntaria reversible; ningún fondo neutro constituye acabado final. Consultar [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Las instrucciones históricas incompatibles se consideran sustituidas **solo en el ámbito indicado**; no se autoriza código ni producción de imágenes.
+
 **Estado:** piloto visual para revisión, v0.5, 5 de noviembre de 2026. Cinco baterías, 59 imágenes en conjunto (58 escenas y una referencia de personajes).
 
 ## Política visual vigente (DC-24–DC-27, decisión del propietario 2026-11-08)
@@ -9,7 +11,7 @@
 - **Orden de recursos:** `assets/scenes/` primero, `assets/closeups/` si complementan una escena, acuarelas solo como recurso secundario dentro del juego; nuevas imágenes mediante **prompt exacto de Dirección** si ninguna opción existente es apta. No mezclar estilos sin razón editorial.
 - **Galería/Sección artística:** acuarelas Tusell/Doré y tradición ilustrativa como contenido principal de una sección dedicada, con contexto, fuente, autoría y comparación opcional con escenas, respetando derechos.
 - **Producción y entrega:** Dirección (ChatGPT) hace selección, define y revisa prompts; el director artístico crea imágenes solo cuando el propietario lo encarga; el desarrollador único incorpora archivos, manifiestos, IDs, SHA, alt, fase, licencias y pruebas al repositorio **GitHub**. No declarar `review.state` ni redistribución autorizados sin evidencia.
-- **Conservar TS-001:** el texto permanece íntegro, accesible y legible con fondos o imágenes; neutro es fallback seguro y transición puntual, nunca una justificación para omitir el arte definitivo.
+- **TS-001 revisada por DC-37:** texto íntegro y accesible, visible por defecto y recuperable después de ocultación voluntaria del pergamino con el avance pausado. El neutro es únicamente respaldo técnico de emergencia o prototipo, nunca una pantalla artística final ni transición final aceptada.
 
 Referencias vinculantes: `docs/VISION_Y_DECISIONES.md` DC-23–DC-27 y `docs/DECISIONES_OPERATIVAS_Y_POLITICA_VISUAL_2026-11-08.md`.
 

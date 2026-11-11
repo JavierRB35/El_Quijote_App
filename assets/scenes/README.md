@@ -158,3 +158,10 @@ Por ser `POST`, no debe mostrarse hasta después de «Descubrir qué sucede» en
 Se integra **A09** (`PRE`, Aventura `AV2-I4-05`, Historia H11.1–H11.2), WebP original 1672 × 941 px a calidad 82 e ID provisional `DQ.MED.900291`. El plano medio corto desde el lado de los viajeros muestra a don Quijote indignado por las palabras del mercader contra Dulcinea. Rocinante sigue inmóvil y la lanza todavía vertical, sin amenazar físicamente. El encuadre modifica escala, eje y expresión respecto de A07 y A08, preservando el lateral derecho libre para un panel posterior. Fuente: `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1877–1881, verificadas.
 
 A09 es una preimagen antiespoiler: no revela la acometida ni el tropiezo posterior. Su integración no activa Aventura/Historia ni acredita QA de UI DC-28/TS-001 o redistribución pública. A10 continúa pendiente de aceptación visual y no se incluye en el commit.
+
+
+## Capítulo IV — A10 aprobada visualmente: caída de Rocinante (2026-11-11)
+
+Se integra exclusivamente la **versión corregida y aceptada de A10** (`POST`, Aventura `AV2-I4-05`, Historia H12), WebP original 1672 × 941 px, calidad 82, ID provisional `DQ.MED.900292`. La candidata anterior fue rechazada por una postura antinatural de las piernas del caballero; la versión ahora aceptada presenta dos piernas anatómicamente coherentes sin cambiar el suceso, caballo, lanza ni mercader. Plano general lateral del instante después del tropiezo: Rocinante en el suelo, don Quijote separado e incapaz de incorporarse, adarga, espuelas y celada visibles, lanza todavía entera; mercader ileso a distancia y sin mozo golpeador ni auxilio. Fuente: `DQ.SRC.0005`, Primera Parte capítulo IV, líneas 1885–1892, cotejadas.
+
+Esta consecuencia `POST` **solo se muestra después de «Descubrir qué sucede»**. El alta no activa la ronda ni los guiones de Historia, no certifica el QA de UI DC-28/TS-001 ni derechos de distribución pública. La H01 solicitada posteriormente será imagen autónoma pendiente de aceptación.

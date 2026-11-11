@@ -1,5 +1,7 @@
 # UX Y ACCESIBILIDAD — EL QUIJOTE
 
+**Implementación autorizada 2026-11-11:** ver [DC-37: implementación, carencias y QA](qa/dc37/README.md). Se incorporan contemplación pausada y reversible, icono permanente, pergamino compartido y medición del contenido. Las composiciones y fondos pendientes no se dan por aceptados. La última intervención de Historia se lee antes de abrir su cierre editorial, sin alterar palabras; los controles compactos conservan nombres accesibles. Descubrir conserva todo su contenido en una vista documental propia y recupera el foco al cerrar.
+
 > **Actualización vinculante DC-37 (2026-11-11):** Historia/Aventura: escena completa y pergamino histórico semitransparente para texto, opciones y feedback; icono de contemplación accesible arriba a la derecha, texto visible por defecto, ocultación pausada y restauración íntegra; ningún fondo neutro final. Esta regla prevalece sobre pantallas laterales anteriores. Consultar [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Las instrucciones históricas incompatibles se consideran sustituidas **solo en el ámbito indicado**; no se autoriza código ni producción de imágenes.
 
 **Versión:** propuesta 0.2 · **Fecha:** 2026-11-06 · **Estado:** diseño Fase 0, validación pendiente.

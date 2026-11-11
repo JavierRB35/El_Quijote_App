@@ -1,11 +1,6 @@
-// Reproductor genérico del Modo Historia: orientado a datos, no conoce
-// episodio concreto. La presentación vive en el contenedor cinematográfico
-// reutilizable (src/cine, encargo P1): la escena — imagen elegible o fondo
-// neutro editorial — ocupa la mayor superficie, y el texto íntegro se muestra
-// en la banda segura del encuadre (DC-22/TS-001). La resolución del plano es
-// determinista (resolverPlano/planoDePosicion: E-1…E-4 fail-closed, sin
-// hardcodear contenido editorial). Controles siempre operables (DC-21); el
-// neutro es una decisión de diseño (v1.2.0: media_ids: []), nunca un fallo.
+// Reproductor genérico: contenidos y guardados conservan sus contratos.
+// DC-37: lienzo compartido, asociación actual sin herencia implícita,
+// contemplación pausada y respaldo de lectura identificado como pendiente.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Catalogo, type Beat, type Escena } from '../contrato';
 import { leerAsset } from '../entorno';
@@ -34,19 +29,21 @@ interface Props {
 }
 
 /** Estructura de lectura del episodio a partir del catálogo (data-driven). */
-function construirEstructura(catalogo: Catalogo, episodioId: string): {
+function construirEstructura(catalogo: Catalogo, ficha: FichaCapitulo): {
   titulo: string;
   items: ItemLectura[];
 } {
-  const episodio = catalogo.episodio(episodioId);
+  const episodioId = ficha.episodioId;
+  // Los capítulos declarativos no requieren una ficha duplicada en el paquete I.8.
+  const titulo = catalogo.episodios().find(e => e.id === episodioId)?.title ?? ficha.titulo;
   const escenas: Escena[] = catalogo.escenasDeEpisodio(episodioId);
   const beatsPorEscena: Beat[][] = escenas.map((e) => catalogo.beatsDeEscena(e.id));
-  return { titulo: episodio.title, items: estructuraHistoria(escenas, beatsPorEscena) };
+  return { titulo, items: estructuraHistoria(escenas, beatsPorEscena) };
 }
 
 export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props) {
   const episodioId = ficha.episodioId;
-  const { titulo, items } = useMemo(() => construirEstructura(catalogo, episodioId), [catalogo, episodioId]);
+  const { titulo, items } = useMemo(() => construirEstructura(catalogo, ficha), [catalogo, ficha]);
   const medios = useMemo(() => catalogo.medios(), [catalogo]);
   const descubrimientos = useMemo(
     () => catalogo.descubrimientosDeEpisodio(episodioId),
@@ -63,8 +60,14 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
   const [enPausa, setEnPausa] = useState(false);
   const [ciclo, setCiclo] = useState(0); // re-arma la lectura (Repetir)
   const [avisoGuardado, setAvisoGuardado] = useState('');
-  const [lecturaAmplia, setLecturaAmplia] = useState(false);
+  const [oculto, setOculto] = useState(false);
+  const [composicionLegible, setComposicionLegible] = useState(true);
+  const contemplar = useCallback((valor: boolean) => {
+    setOculto(valor);
+    if (valor) setEnPausa(true); // Mostrar nunca reanuda por sorpresa.
+  }, []);
   const [descubrirAbierto, setDescubrirAbierto] = useState(false);
+  const [mostrarCierre, setMostrarCierre] = useState(false);
 
   const siguienteExiste = posicion !== null && posicion + 1 < items.length;
 
@@ -88,19 +91,23 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
   }, [items, episodioId]);
 
   const avanzar = useCallback(() => {
-    setPosicion((p) => (p !== null && p + 1 < items.length ? p + 1 : p));
-  }, [items.length]);
+    if (!oculto && posicion === items.length - 1) { setMostrarCierre(true); setEnPausa(true); return; }
+    if (!oculto) setPosicion((p) => (p !== null && p + 1 < items.length ? p + 1 : p));
+  }, [items.length, oculto, posicion]);
 
   const retroceder = useCallback(() => {
-    setPosicion((p) => (p !== null && p > 0 ? p - 1 : p));
-  }, []);
+    if (mostrarCierre && !oculto) { setMostrarCierre(false); return; }
+    if (!oculto) setPosicion((p) => (p !== null && p > 0 ? p - 1 : p));
+  }, [oculto, mostrarCierre]);
 
   const repetirBeat = useCallback(() => {
+    if (oculto) return;
+    setMostrarCierre(false);
     setPosicion((p) => (p !== null ? inicioDeBeat(items, p) : p));
     setCiclo((c) => c + 1);
-  }, [items]);
+  }, [items, oculto]);
 
-  const repetirIntervencion = useCallback(() => setCiclo((c) => c + 1), []);
+  const repetirIntervencion = useCallback(() => { if (!oculto) { setMostrarCierre(false); setCiclo((c) => c + 1); } }, [oculto]);
 
   const alternarAuto = useCallback(() => setAutoAvance((a) => !a), []);
 
@@ -129,7 +136,7 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
       restanteRef.current = null; // nuevo paso o repetición: lectura completa
       claveRef.current = clave;
     }
-    if (!autoAvance || enPausa || !siguienteExiste) return;
+    if (!autoAvance || enPausa || oculto || !composicionLegible || descubrirAbierto || !siguienteExiste) return;
     const item = items[posicion];
     const ms = restanteRef.current ?? lecturaMinimaMs(item.intervencion.texto_visible, item.beat.lectura_minima_ms);
     const vence = performance.now() + ms;
@@ -139,14 +146,16 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
       clearTimeout(id);
       restanteRef.current = Math.max(0, vence - performance.now());
     };
-  }, [posicion, ciclo, autoAvance, enPausa, siguienteExiste, items, avanzar]);
+  }, [posicion, ciclo, autoAvance, enPausa, siguienteExiste, items, avanzar, oculto, composicionLegible, descubrirAbierto]);
 
   // ---- teclado: salto manual ←/→, pausa Espacio/P, repetir R, beat B,
   // auto A, salir Esc (los controles existen también como botones). Si el
   // panel de descubrimientos está abierto, Esc lo cierra primero y no sale.
   useEffect(() => {
     const alPulsar = (e: KeyboardEvent) => {
+      if (e.defaultPrevented || (oculto && e.key !== 'Escape')) return;
       const destino = e.target as HTMLElement | null;
+      if (destino?.closest('input, select, textarea, dialog, [role="dialog"]')) return;
       const esBoton = destino?.tagName === 'BUTTON';
       switch (e.key) {
         case 'ArrowRight':
@@ -187,7 +196,7 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
     };
     window.addEventListener('keydown', alPulsar);
     return () => window.removeEventListener('keydown', alPulsar);
-  }, [avanzar, retroceder, repetirIntervencion, repetirBeat, alternarAuto, onSalir, descubrirAbierto]);
+  }, [avanzar, retroceder, repetirIntervencion, repetirBeat, alternarAuto, onSalir, descubrirAbierto, oculto]);
 
   // ---- plano visible: resolución determinista por posición (R-V4/R-V10)
   const resolucion = useMemo(
@@ -201,6 +210,7 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
     autor: activo?.author,
     mediaClass: activo?.media_class,
     ladoTexto: encuadreDe(activo?.id ?? '').lado_texto,
+    regionCritica: encuadreDe(activo?.id ?? '').region_critica,
   };
 
   if (posicion === null) {
@@ -232,7 +242,7 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
             style={{ width: `${((posicion + 1) / intervencionesTotales) * 100}%` }}
           />
         </div>
-        {!activo && <span className="rotulo rotulo-neutro">presentación neutra · sin imagen</span>}
+        {!activo && <span className="rotulo rotulo-neutro">imagen pendiente</span>}
         {avisoGuardado && <span className="guardado">{avisoGuardado}</span>}
         <span className="cabecera-acciones">
           <AjustesBoton ajustes={ajustes} fijarTexto={fijarTexto} fijarMovimiento={fijarMovimiento} />
@@ -254,20 +264,23 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
   return (
     <ContenedorCine
       plano={plano}
+      oculto={oculto}
+      onContemplar={contemplar}
+      onComposicion={setComposicionLegible}
       estado="narracion"
       reducirMovimiento={reducirMovimiento}
       cargar={leerAsset}
       cabecera={cabecera}
       texto={
         <>
-          <section
-            className={`lectura ${lecturaAmplia ? 'amplia' : ''}`}
+          {!mostrarCierre && <section
+            className="lectura"
             aria-live="polite"
           >
             <p className={`hablante hablante-${intervencion.speaker.tipo}`}>
               {etiquetaHablante(intervencion)}
             </p>
-            <p className="beat-info">
+            <p className="beat-info sr-only">
               {beat.kind} · beat {beat.order} · paso {item.intervencionIdx + 1} de {beat.utterances.length}
               {esInicioBeat ? ' · inicio del beat' : ''}
             </p>
@@ -275,25 +288,17 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
             {/* El alt de la escena describe el fallback neutro: solo aplica
                 cuando no hay plano elegible visible. */}
             {!activo && item.escena.accessibility?.alt && (
-              <p className="escena-alt">{item.escena.accessibility.alt}</p>
+              <p className="escena-alt sr-only">{item.escena.accessibility.alt}</p>
             )}
-            <button
-              className="control control-estado ampliar-lectura"
-              aria-pressed={lecturaAmplia}
-              onClick={() => setLecturaAmplia((v) => !v)}
-              aria-label={lecturaAmplia ? 'Reducir el panel de lectura' : 'Ampliar el panel de lectura'}
-            >
-              {lecturaAmplia ? 'Reducir texto' : 'Ampliar texto'}
-            </button>
-          </section>
+          </section>}
 
-          {fin && (
+          {fin && mostrarCierre && (
             <section className="cierre" aria-live="polite">
               <p className="cierre-titulo">{ficha.cierreHistoria.titulo}</p>
               <p className="cierre-texto">{ficha.cierreHistoria.texto}</p>
               <button
                 className="primario"
-                onClick={() => { setPosicion(0); setCiclo((c) => c + 1); }}
+                onClick={() => { setMostrarCierre(false); setPosicion(0); setCiclo((c) => c + 1); }}
               >
                 Volver a recorrer el episodio
               </button>
@@ -302,13 +307,13 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
 
           <footer className="controles" role="toolbar" aria-label="Controles del reproductor">
             <button className="control" onClick={retroceder} disabled={posicion === 0} aria-label="Atrás (flecha izquierda)">
-              ◂ Atrás
+              <span aria-hidden="true">◂</span>
             </button>
             <button className="control" onClick={repetirIntervencion} aria-label="Repetir intervención (R)">
-              Repetir
+              <span aria-hidden="true">↻</span>
             </button>
             <button className="control" onClick={repetirBeat} aria-label="Repetir beat desde su inicio (B)">
-              Repetir beat
+              <span aria-hidden="true">↶</span>
             </button>
             <button
               className="control"
@@ -316,15 +321,15 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
               aria-pressed={enPausa}
               aria-label={enPausa ? 'Continuar (espacio)' : 'Pausa (espacio)'}
             >
-              {enPausa ? '▸ Continuar' : '⏸ Pausa'}
+              <span aria-hidden="true">{enPausa ? '▶' : '⏸'}</span>
             </button>
             <button
               className="control control-primario"
               onClick={avanzar}
-              disabled={fin}
-              aria-label="Siguiente intervención (enter)"
+              disabled={mostrarCierre}
+              aria-label={fin ? 'Ver cierre del episodio' : 'Siguiente intervención (enter)'}
             >
-              Siguiente ▸
+              <span aria-hidden="true">{fin ? 'Ver cierre' : '▸'}</span>
             </button>
             <button
               className="control control-estado"

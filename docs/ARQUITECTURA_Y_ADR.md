@@ -1,5 +1,11 @@
 # ARQUITECTURA Y ADR
 
+## Implementación de presentación DC-37 (2026-11-11)
+
+El encargo posterior del propietario autoriza la implementación de Fase 1. Historia y Aventura comparten `ContenedorCine`, geometría de `composicion.ts`, pergamino y carga local. No cambia ningún JSON Schema ni contrato de guardado. `regionCritica` es una proyección de los metadatos de encuadre existentes, no aprobación artística. Una región insuficiente genera un estado pendiente, sin atribuir cobertura al fondo técnico. El resolvedor de Historia deja de heredar fotogramas: usa solo la declaración actual. Los detalles y límites están en [el informe DC-37](qa/dc37/README.md).
+
+El cierre editorial de Historia se conserva íntegro en una vista posterior a la última intervención, abierta explícitamente con «Ver cierre». Se evita superponer dos unidades distintas de lectura; no se divide ni recorta una intervención. Los IDs/guardados permanecen compatibles. Descubrir es una vista documental modal independiente, con scroll funcional y pausa del relato, no un pergamino narrativo con scroll. Los fondos ambientales esperan selección aprobada por destino.
+
 **Modo responsable:** DESARROLLO (director técnico/arquitecto principal)
 **Última actualización:** 2026-11-05
 

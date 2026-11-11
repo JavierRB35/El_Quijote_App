@@ -3,6 +3,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Catalogo } from '../contrato';
 import { leerAsset } from '../entorno';
+import ContenedorCine from '../cine/ContenedorCine';
+import { encuadreDe } from '../cine/resolverPlano';
 import { cargarProgresoDeEpisodio, guardarProgresoDeEpisodio } from '../historia/persistencia';
 import { AjustesBoton, movimientoReducido, useAjustes } from '../cine/ajustes';
 import {
@@ -33,28 +35,6 @@ function imagenVigente(imagen: ImagenNarrativa, catalogo: Catalogo): string {
   return (imagen.medioId && catalogo.medio(imagen.medioId)?.logical_uri) || imagen.uri;
 }
 
-function useImagen(uri: string) {
-  const [carga, setCarga] = useState<{ uri: string; src: string | null; error: boolean }>({
-    uri: '', src: null, error: false,
-  });
-  useEffect(() => {
-    let vigente = true;
-    let blob: string | null = null;
-    leerAsset(uri).then((src) => {
-      blob = src;
-      if (vigente) setCarga({ uri, src, error: false });
-      else if (src.startsWith('blob:')) URL.revokeObjectURL(src);
-    }).catch(() => {
-      if (vigente) setCarga({ uri, src: null, error: true });
-    });
-    return () => {
-      vigente = false;
-      if (blob?.startsWith('blob:')) URL.revokeObjectURL(blob);
-    };
-  }, [uri]);
-  return carga.uri === uri ? carga : { uri, src: null, error: false };
-}
-
 function Puntuacion({ puntos }: { puntos: number }) {
   return (
     <div className="an-puntos" aria-label={`Puntos de aventura: ${puntos} de ${PUNTOS_MAXIMOS}`}>
@@ -77,7 +57,7 @@ export default function AventuraNarrativa({ catalogo, onSalir, ficha, rondas }: 
   const revisionGuardado = useRef(0);
   const { ajustes, fijarTexto, fijarMovimiento } = useAjustes();
   const sinMovimiento = movimientoReducido(ajustes.movimiento);
-  const [omitirContexto, setOmitirContexto] = useState(false);
+  const [oculto, setOculto] = useState(false);
 
   useEffect(() => {
     let vivo = true;
@@ -125,20 +105,15 @@ export default function AventuraNarrativa({ catalogo, onSalir, ficha, rondas }: 
   const mostrarConsecuencia = enRevelacion || enCheckpoint || completada;
   const imagen = mostrarConsecuencia ? ronda.imagenConsecuencia : ronda.imagenPrevia;
   const uri = useMemo(() => imagenVigente(imagen, catalogo), [catalogo, imagen]);
-  const carga = useImagen(uri);
+
   const opciones = useMemo(
     () => ordenarOpciones(ronda, partida.intento), [ronda, partida.intento],
   );
-  const contextoConocido = partida.intento > 0 && partida.vistas.includes(ronda.id);
-  const mostrarContexto = !(contextoConocido && omitirContexto);
-
-  useEffect(() => { setOmitirContexto(partida.intento > 0); }, [partida.indice, partida.intento]);
-
   const procesar = useCallback((id: string) => {
-    setPartida((p) => responder(p, rondas[p.indice], id));
-  }, [rondas]);
-  const descubrir = useCallback(() => setPartida(revelar), []);
-  const avanzar = useCallback(() => setPartida((p) => continuar(p, rondas)), [rondas]);
+    if (!oculto) setPartida((p) => responder(p, rondas[p.indice], id));
+  }, [rondas, oculto]);
+  const descubrir = useCallback(() => { if (!oculto) setPartida(revelar); }, [oculto]);
+  const avanzar = useCallback(() => { if (!oculto) setPartida((p) => continuar(p, rondas)); }, [rondas, oculto]);
 
   useEffect(() => {
     const tecla = (e: KeyboardEvent) => {
@@ -155,17 +130,12 @@ export default function AventuraNarrativa({ catalogo, onSalir, ficha, rondas }: 
   if (!cargado) return <main className="an-cargando">Recuperando aventura…</main>;
 
   return (
-    <main className={`aventura-n2 ${sinMovimiento ? 'sin-movimiento' : ''}`}>
-      <div className="an-fondo" aria-hidden="true">
-        {carga.src && <img src={carga.src} alt="" />}
-      </div>
-      <div className="an-obra">
-        {carga.src
-          ? <img src={carga.src} alt={imagen.alt} />
-          : <div className="an-vacia" role="status">
-              {carga.error ? 'La imagen no está disponible; la aventura continúa.' : 'Abriendo la escena…'}
-            </div>}
-      </div>
+    <ContenedorCine estado="pregunta" reducirMovimiento={sinMovimiento} cargar={leerAsset}
+      oculto={oculto} onContemplar={setOculto}
+      plano={{ uri, alt: imagen.alt, mediaClass: 'RECREACION_IA',
+        ladoTexto: encuadreDe(imagen.medioId ?? '').lado_texto,
+        regionCritica: encuadreDe(imagen.medioId ?? '').region_critica }}
+      cabecera={
       <header className="an-cabecera">
         <div>
           <span className="an-sello-marca">EL QUIJOTE · AVENTURA</span>
@@ -176,17 +146,12 @@ export default function AventuraNarrativa({ catalogo, onSalir, ficha, rondas }: 
           <AjustesBoton ajustes={ajustes} fijarTexto={fijarTexto} fijarMovimiento={fijarMovimiento} />
           <button className="an-menubtn" onClick={onSalir}>Menú</button>
         </div>
-      </header>
-      <section className="an-panel" aria-live="polite" aria-label="Aventura narrativa">
+      </header>}
+      pregunta={<section className="an-panel" aria-live="polite" aria-label="Aventura narrativa">
         {partida.fase === 'pregunta' && (
           <>
             <p className="an-pretitle">Decisión {partida.indice + 1} de {rondas.length}</p>
-            {mostrarContexto && <p className="an-contexto">{ronda.contexto}</p>}
-            {contextoConocido && (
-              <button className="an-texto-omitido" onClick={() => setOmitirContexto((v) => !v)}>
-                {mostrarContexto ? 'Omitir contexto ya leído' : 'Recordar el contexto'}
-              </button>
-            )}
+            <p className="an-contexto">{ronda.contexto}</p>
             <h1 className="an-pregunta"><span>{ronda.personaje}</span>{ronda.pregunta}</h1>
             <div className="an-respuestas" role="group" aria-label="Elige la continuación">
               {opciones.map((o, i) => (
@@ -254,8 +219,7 @@ export default function AventuraNarrativa({ catalogo, onSalir, ficha, rondas }: 
           </>
         )}
         {errorGuardado && <p className="an-error" role="alert">{errorGuardado}</p>}
-      </section>
-      <footer className="an-credito">Recreación artística del proyecto · no es evidencia histórica</footer>
-    </main>
+      </section>}
+    />
   );
 }

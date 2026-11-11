@@ -1,0 +1,12 @@
+{
+  "estado": "PASS",
+  "pruebas": [
+    "Esc de ajustes sin salir",
+    "diálogo: foco, teclado y Esc",
+    "recuperación Historia",
+    "recuperación Aventura",
+    "fallo de imagen sin perder texto ni control",
+    "error de catálogo y reintento"
+  ],
+  "errores_consola": []
+}

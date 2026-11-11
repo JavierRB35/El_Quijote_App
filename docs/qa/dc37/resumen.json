@@ -1,0 +1,93 @@
+{
+  "alcance": "Solo contenidos existentes: I.1–I.5 e I.8; no extrapolación a 126 capítulos",
+  "historia": [
+    {
+      "capitulo": "DQ.P1.C01",
+      "total": 25,
+      "aptas": 0,
+      "candidatas_pendientes": 25,
+      "no_aptas": 0,
+      "sin_asignacion": 0,
+      "reutilizaciones_validadas": 0,
+      "intervenciones_con_candidato": 25,
+      "candidatos_distintos": 8,
+      "decisiones_pendientes": 25,
+      "cobertura_validada_porcentaje": 0
+    },
+    {
+      "capitulo": "DQ.P1.C02",
+      "total": 25,
+      "aptas": 0,
+      "candidatas_pendientes": 25,
+      "no_aptas": 0,
+      "sin_asignacion": 0,
+      "reutilizaciones_validadas": 23,
+      "intervenciones_con_candidato": 25,
+      "candidatos_distintos": 10,
+      "decisiones_pendientes": 25,
+      "cobertura_validada_porcentaje": 0
+    },
+    {
+      "capitulo": "DQ.P1.C03",
+      "total": 30,
+      "aptas": 0,
+      "candidatas_pendientes": 30,
+      "no_aptas": 0,
+      "sin_asignacion": 0,
+      "reutilizaciones_validadas": 0,
+      "intervenciones_con_candidato": 30,
+      "candidatos_distintos": 15,
+      "decisiones_pendientes": 30,
+      "cobertura_validada_porcentaje": 0
+    },
+    {
+      "capitulo": "DQ.P1.C04",
+      "total": 33,
+      "aptas": 0,
+      "candidatas_pendientes": 33,
+      "no_aptas": 0,
+      "sin_asignacion": 0,
+      "reutilizaciones_validadas": 0,
+      "intervenciones_con_candidato": 33,
+      "candidatos_distintos": 21,
+      "decisiones_pendientes": 33,
+      "cobertura_validada_porcentaje": 0
+    },
+    {
+      "capitulo": "DQ.P1.C05",
+      "total": 30,
+      "aptas": 0,
+      "candidatas_pendientes": 30,
+      "no_aptas": 0,
+      "sin_asignacion": 0,
+      "reutilizaciones_validadas": 0,
+      "intervenciones_con_candidato": 30,
+      "candidatos_distintos": 13,
+      "decisiones_pendientes": 30,
+      "cobertura_validada_porcentaje": 0
+    },
+    {
+      "capitulo": "DQ.P1.C08",
+      "total": 16,
+      "aptas": 0,
+      "candidatas_pendientes": 1,
+      "no_aptas": 4,
+      "sin_asignacion": 11,
+      "reutilizaciones_validadas": 0,
+      "intervenciones_con_candidato": 16,
+      "candidatos_distintos": 6,
+      "decisiones_pendientes": 16,
+      "cobertura_validada_porcentaje": 0
+    }
+  ],
+  "intervenciones": 159,
+  "intervenciones_activas": 129,
+  "rondas": 33,
+  "rondas_activas": 29,
+  "necesidades_aventura": 66,
+  "recursos_escenas_manifest": 317,
+  "recursos_closeups_manifest": 10,
+  "candidatos_distintos_historia": 73,
+  "aprobaciones_nuevas": 0,
+  "imagenes_nuevas_encargadas": 0
+}

@@ -1,9 +1,7 @@
-// Panel lateral «Descubrir más» (encargo P1, decisión de producto 4):
-// cajón plegado por defecto con los descubrimientos del episodio. Todo su
-// contenido es recuperable (TS-001 aplicado al material editorial: nunca se
-// recorta), operable por teclado (Esc cierra, foco gestionado) y anunciado
-// por lectores de pantalla (aria-expanded, aria-hidden, role="complementary").
+// Consulta documental independiente del pergamino narrativo. El diálogo
+// conserva todo el contenido, gestiona foco/Esc y pausa el relato anfitrión.
 import { useEffect, useRef } from 'react';
+import FondoContextual from './FondoContextual';
 import type { Discovery } from '../contrato';
 
 interface Props {
@@ -32,30 +30,24 @@ export default function PanelDescubrir({
   descubrimientos,
   nombreEpisodio,
 }: Props) {
+  const dialogo = useRef<HTMLDialogElement>(null);
+  const boton = useRef<HTMLButtonElement>(null);
   const refCierre = useRef<HTMLButtonElement>(null);
 
-  // Al abrir, el foco entra al panel; Esc lo cierra y devuelve el foco.
   useEffect(() => {
-    if (abierto) refCierre.current?.focus();
+    if (abierto) {
+      dialogo.current?.showModal();
+      refCierre.current?.focus();
+    } else if (dialogo.current?.open) {
+      dialogo.current.close();
+      boton.current?.focus();
+    }
   }, [abierto]);
-
-  useEffect(() => {
-    if (!abierto) return;
-    const alPulsar = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        // El cajón consume Esc (captura) antes que el modo lo interprete
-        // como «salir al menú».
-        e.stopPropagation();
-        onCerrar();
-      }
-    };
-    window.addEventListener('keydown', alPulsar, true);
-    return () => window.removeEventListener('keydown', alPulsar, true);
-  }, [abierto, onCerrar]);
 
   return (
     <>
       <button
+        ref={boton}
         className="control control-estado descubrir-boton"
         aria-expanded={abierto}
         aria-controls="panel-descubrir"
@@ -63,13 +55,10 @@ export default function PanelDescubrir({
       >
         {abierto ? 'Cerrar descubrimientos' : 'Descubrir más'}
       </button>
-      <aside
-        id="panel-descubrir"
-        className={`descubrir ${abierto ? 'abierto' : ''}`}
-        aria-hidden={!abierto}
+      <dialog ref={dialogo} id="panel-descubrir" className="descubrir-vista"
         aria-label={`Descubrimientos de ${nombreEpisodio}`}
-        {...(!abierto ? { inert: '' as never } : {})}
-      >
+        onCancel={e => { e.preventDefault(); e.stopPropagation(); onCerrar(); }}>
+        <FondoContextual />
         <div className="descubrir-cabecera">
           <h2 className="descubrir-titulo">Descubrir más</h2>
           <button
@@ -95,7 +84,7 @@ export default function PanelDescubrir({
             ))}
           </ul>
         )}
-      </aside>
+      </dialog>
     </>
   );
 }

@@ -1,0 +1,20 @@
+// Capturas del checkout remoto inicial servido en 1421; no modifica el checkout.
+import { chromium } from '@playwright/test';
+import { resolve } from 'node:path';
+const browser=await chromium.launch({channel:process.env.QA_BROWSER_CHANNEL||'msedge',headless:true});
+const page=await browser.newPage({viewport:{width:1366,height:768},reducedMotion:'reduce'});
+const out=resolve(import.meta.dirname,'../../docs/qa/dc37/evidencias');
+await page.goto('http://127.0.0.1:1421/');
+await page.getByRole('button',{name:/Modo Historia/}).waitFor();
+await page.screenshot({path:resolve(out,'antes-menu-1366.png')});
+await page.evaluate(()=>localStorage.setItem('quijote.historia.DQ.P1.C01.E01',JSON.stringify({version:1,episodio_id:'DQ.P1.C01.E01',escena_id:'DQ.P1.C01.E01.S02',beat_id:'DQ.BEAT.920003',intervencion_id:'DQ.INT.920003',avance_automatico:false})));
+await page.getByRole('button',{name:/Modo Historia/}).click();
+await page.locator('.texto').waitFor();
+await page.waitForTimeout(500);
+await page.screenshot({path:resolve(out,'antes-historia-1366.png')});
+await page.getByRole('button',{name:'Volver al menú (escape)'}).click();
+await page.getByRole('button',{name:/Modo Aventura/}).click();
+await page.locator('.an-opcion').first().waitFor();
+await page.waitForTimeout(500);
+await page.screenshot({path:resolve(out,'antes-aventura-1366.png')});
+await browser.close();

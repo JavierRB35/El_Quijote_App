@@ -1,3 +1,4 @@
+import FondoContextual from '../cine/FondoContextual';
 // Museo — módulo cultural completo (issue #73 + maqueta visual oficial V1).
 // Cabecera de la app según la maqueta (logo dorado «El Quijote», navegación
 // Historia · Aventura · Museo · Atlas · Lector con Museo activo, filete
@@ -109,6 +110,7 @@ export default function Museo({ catalogo, onSalir, onNavegar }: Props) {
   if (error) {
     return (
       <main className="museo">
+        <FondoContextual />
         <CabeceraMuseo onNavegar={onNavegar} />
         <p className="museo-error museo-error-central" role="alert">
           El manifiesto de ilustraciones no está disponible: {error}
@@ -120,6 +122,7 @@ export default function Museo({ catalogo, onSalir, onNavegar }: Props) {
   if (!galeria) {
     return (
       <main className="museo">
+        <FondoContextual />
         <CabeceraMuseo onNavegar={onNavegar} />
         <p className="museo-cargando museo-cargando-central">Abriendo el Museo…</p>
       </main>
@@ -128,6 +131,7 @@ export default function Museo({ catalogo, onSalir, onNavegar }: Props) {
 
   return (
     <main className="museo">
+      <FondoContextual />
       <CabeceraMuseo onNavegar={onNavegar} />
 
       {vista === 'visor' && obraActual ? (

@@ -130,38 +130,19 @@ export function inicioDeBeat(items: ItemLectura[], posicion: number): number {
   return items.findIndex((i) => i.beat.id === item.beat.id);
 }
 
-/**
- * Plano visible en una posición de la lectura (encargo P1): recomputación
- * determinista desde el inicio de la ESCENA del beat actual (la frontera de
- * escena reinicializa la perspectiva — R-V4; una partida restaurada recomputa
- * idéntico — R-V10). Acumula las declaraciones de beat (E-1) y delega cada
- * paso en resolverPlano (E-2 fail-closed, persistencia R-V3, neutro R-V6).
- */
+/** DC-37: no heredar un fotograma de otra intervención sin asociación.
+ * Los catálogos I–V aportan un beat por intervención con imagen explícita.
+ * I.8 conserva únicamente declaraciones del beat actual, pendientes de QA
+ * por intervención; la matriz registra separadamente esa granularidad. */
 export function planoDePosicion(
-  items: ItemLectura[],
-  posicion: number,
-  medios: Readonly<Record<string, MediaAsset>>,
+  items: ItemLectura[], posicion: number, medios: Readonly<Record<string, MediaAsset>>,
 ): PlanoResuelto {
   const item = items[posicion];
   if (!item) return { activo: null, causa: 'neutro_editorial' };
-  const escenaId = item.escena.id;
-  let vigente: MediaAsset | null = null;
-  const declarados = new Set<string>();
-  let resultado: PlanoResuelto = { activo: null, causa: 'neutro_editorial' };
-  for (let i = 0; i <= posicion; i++) {
-    const paso = items[i];
-    if (paso.escena.id !== escenaId) continue; // escenas anteriores: no heredan
-    for (const id of paso.beat.visual_asset_ids) declarados.add(id);
-    resultado = resolverPlano({
-      beat: paso.beat,
-      escena: paso.escena,
-      medios,
-      declarados,
-      planoVigente: vigente,
-    });
-    vigente = resultado.activo;
-  }
-  return resultado;
+  return resolverPlano({
+    beat: item.beat, escena: { id: item.escena.id, media_ids: [] }, medios,
+    declarados: new Set(item.beat.visual_asset_ids), planoVigente: null,
+  });
 }
 
 /** Etiqueta visible del hablante: rótulo del personaje o «Narrador». */

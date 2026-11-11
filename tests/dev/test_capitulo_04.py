@@ -30,6 +30,7 @@ assert len({x["imagenPrevia"]["uri"] for x in a["rondas"]}) == 5
 assert [s["id"] for s in h["escenas"]] == [f"H{i:02d}" for i in range(1,15)]
 interv = [v for s in h["escenas"] for v in s["intervenciones"]]
 assert len(interv) == len({v["id"] for v in interv}) == 33
+assert all(v["id"] == f"{s['id']}-I{i:02d}" for s in h["escenas"] for i, v in enumerate(s["intervenciones"], 1))
 assert sum(v["tipo_texto"] == "CITA_LITERAL" for v in interv) == 1
 usados = set()
 for ronda in a["rondas"]:

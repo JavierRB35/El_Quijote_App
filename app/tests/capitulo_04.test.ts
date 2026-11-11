@@ -21,6 +21,7 @@ test('I.4: catálogos activables y texto TS-001 íntegro', () => {
   const intervenciones = h.escenas.flatMap((e: any) => e.intervenciones);
   assert.equal(h.escenas.length, 14);
   assert.equal(intervenciones.length, 33);
+  assert.ok(intervenciones.every((i: any) => /^H\\d{2}-I\\d{2}$/.test(i.id)));
   assert.ok(intervenciones.every((i: any) => i.texto_visible.length >= 15 && i.imagen));
   assert.equal(intervenciones.filter((i: any) => i.tipo_texto === 'CITA_LITERAL').length, 1);
 });

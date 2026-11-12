@@ -84,3 +84,17 @@ Se corrigieron durante la verificación: apertura en blanco de Historia II/IV/V,
 - Sin modificación de corpus, JSON narrativos, imágenes originales, contratos, motor, backend, registro de activación ni datos personales. Lector, Atlas, perfiles y Cuaderno completo carecen de pantalla activa y se registran como pendientes, sin ampliar Fase 1.
 
 **IMPACTO TRANSVERSAL Y REUTILIZACIÓN:** causa y antes/después anteriores; reglas en el contenedor compartido, aplicadas y probadas en ambos modos. Museo mantiene la visualización íntegra de obras; su consulta documental y Descubrir admiten desplazamiento de página, no scroll en un overlay narrativo. Los fondos y las regiones todavía pendientes no son excepciones aprobadas a DC-37. La integración técnica no cierra esos P0 visuales.
+
+
+## Corrección solicitada tras la PR #99 — controles cinematográficos (2026-11-12)
+
+**Estado de aceptación artística: NO APROBADO.** El propietario rechazó los botones de reproducción situados dentro del pergamino y solicitó tres controles flotantes con posición fija sobre la imagen: anterior «<» en el extremo izquierdo, reproducción/pausa en el centro y siguiente «>» en el extremo derecho, con ocultación tras **2 segundos** sin mover el ratón y recuperación por movimiento. Este encargo técnico posterior concreta la preferencia orientativa de DC-37 §9 (antes se mencionaban 3 s como hipótesis); no altera TS-001 ni la aprobación de imágenes.
+
+**IMPACTO TRANSVERSAL Y REUTILIZACIÓN:**
+
+- Causa raíz: la barra de Historia se representaba dentro de la unidad textual y desplazaba los botones según la altura del contenido. Las continuaciones de Aventura también dependían del pergamino.
+- Corrección en el nivel compartido: `ControlesCine.tsx` y `lienzo.css` colocan los controles sobre el lienzo `ContenedorCine`, con posiciones en coordenadas de la superficie de juego, no del texto. El tiempo de inactividad es único y está fijado en 2000 ms. Se evita modificar los motores narrativos.
+- Consumidores: Historia usa izquierda, centro y derecha; Aventura conserva sus opciones dentro del pergamino y pasa descubrimiento/continuación/reinicio al mismo control flotante derecho. La repetición y el autoavance de Historia siguen disponibles desde Ajustes y teclado, pero ya no en el texto. Contemplación oculta controles de avance, no su icono fijo de recuperación.
+- No afectados: Museo, Lector, Atlas, Cuaderno, perfiles, motor de preguntas, corpus, derechos, imágenes y contratos; sus funcionalidades no utilizan el transporte de escenas. No se consideran pantallas finales artísticamente aprobadas por esta corrección.
+- QA: las regresiones de usuario/posición/temporizador se describen en `app/scripts/qa-dc37-controles.mjs`; la batería preexistente de `qa-dc37.mjs` se adapta a los botones flotantes. El resultado ejecutado y CI deben contrastarse en el commit de integración; no se atribuye PASS a una prueba no ejecutada.
+- Limitaciones: la evaluación real de contraste, superposición sobre rostros/pistas, fondos, Windows a 125/150 % y cobertura de imágenes mantiene su condición pendiente de la PR #99. Sin nuevas imágenes ni aceptación artística automática.

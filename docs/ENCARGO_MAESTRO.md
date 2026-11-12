@@ -1,5 +1,7 @@
 # EL QUIJOTE — PROMPT MAESTRO DE PRODUCCIÓN EDITORIAL Y DESARROLLO
 
+> **Actualización vinculante aprobada 2026-11-12 — DC-40:** explotar la comicidad de los pasajes cómicos de Cervantes con expresiones, gestos y composición que busquen la risa, **sin cambiar el estilo cinematográfico premium, inventar hechos ni adelantar desenlaces**. Queda desplazada cualquier pauta previa de seriedad excesiva incompatible con ese objetivo, solo en el ámbito expresivo. [Directriz oficial](DIRECTRIZ_COMICIDAD_VISUAL_CERVANTINA_2026-11-12.md). No autoriza generar arte ni modificar código.
+
 **Documento de encargo íntegro y compartido. Versión de especificación para auditoría y coordinación.**
 
 > **Actualización vinculante 2026-11-11 — DC-37 (diseño visual premium):** [`docs/DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md`](docs/DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Imagen a toda superficie útil en Historia y Aventura; pergamino semitransparente legible y sin scroll/desbordamiento; ocultar/mostrar voluntariamente con icono fijo arriba a la derecha, pausando voz/temporizador/avance y preservando texto/estado; tipografía histórica legible; imágenes ambientales en todas las pantallas finales y menú inicial con pueblo/paisaje manchegos de época y navegación semitransparente. **Sustituye únicamente reglas visuales/TS-001 anteriores incompatibles.** El texto sigue completo, visible por defecto y recuperable. No autoriza código, imágenes ni Fase 2; conservar derechos, DC-31–DC-36 y revisión del propietario.

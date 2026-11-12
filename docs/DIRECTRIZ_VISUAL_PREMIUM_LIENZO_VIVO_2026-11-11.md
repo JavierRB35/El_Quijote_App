@@ -1,5 +1,7 @@
 # DIRECTRIZ DC-37 — Experiencia visual cinematográfica premium: «Un lienzo vivo de La Mancha»
 
+> **Complemento aprobado DC-40 (2026-11-12):** las escenas cómicas deben comunicar intensamente la gracia del episodio con actuación y composición realistas, buscando provocar sonrisa/risa. Leer [la directriz de comicidad cervantina](DIRECTRIZ_COMICIDAD_VISUAL_CERVANTINA_2026-11-12.md). Este complemento no cambia el diseño UX de DC-37 ni los controles DC-38–DC-39, ni autoriza nuevas imágenes.
+
 **Aprobación del propietario:** 2026-11-11, instrucción expresa de convertir en normativa oficial la propuesta integral de diseño visual premium y de dar prioridad a sus requisitos sobre las reglas anteriores incompatibles.  
 **Estado normativo:** APROBADA para dirección de producto, diseño visual, especificación UX y futuro QA. **Implementación técnica: NO AUTORIZADA POR ESTA DECISIÓN; estado del código: SIN MODIFICAR por este acto.**  
 **Repositorio y rama canónicos:** JavierRB35/El_Quijote_App, main.  

@@ -1,5 +1,7 @@
 # Flujo oficial de producción de capítulos — Aventura → Historia
 
+> **Actualización vinculante DC-40 (2026-11-12):** toda evaluación conjunta de Aventura/Historia y futuro prompt autorizado para escenas cómicas deberá comprobar y potenciar el humor visual para buscar sonrisa/risa, manteniendo el estilo cinematográfico y la fidelidad. Queda desplazada la excesiva contención previa que anule la comicidad. Ver [norma específica](DIRECTRIZ_COMICIDAD_VISUAL_CERVANTINA_2026-11-12.md). No autoriza nuevas imágenes.
+
 > **Actualización vinculante 2026-11-11, DC-37:** Se conserva estrictamente el orden editorial DC-36; la revisión conjunta de aptitud visual debe tener en cuenta imagen a superficie completa, zonas seguras del pergamino, cobertura específica por intervención de Historia y preimagen exclusiva de Aventura. La TS-001 revisada conserva texto completo visible por defecto, ocultable voluntariamente en contemplación pausada. Referencia prioritaria: [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Decisión **solo documental**; no autoriza implementación ni nuevas imágenes.
 
 **Decisión del propietario:** 2026-11-09 · **Estado:** VIGENTE para todos los capítulos que se preparen a partir de esta fecha.
@@ -93,6 +95,7 @@ Distinguir por unidad: `EXISTE_Y_APROBADA`, `EXISTE_PENDIENTE_REVISION`, `NO_APT
 **Solo después de que el propietario confirme las carencias**, Dirección entrega **un prompt independiente por imagen necesaria**, listo para enviar al diseñador. El propietario solicita las imágenes y **las valida personalmente**; el diseñador no debe generar variantes no pedidas, reemplazar originales ni activar medios por iniciativa propia.
 
 Cada prompt incluirá:
+- **Intención cómica, cuando proceda (DC-40):** mecanismo humorístico verificado en el pasaje, expresiones, contraste y fotograma más gracioso permitido por la fase pre/post; potenciar sonrisa/risa sin cambiar estilo, caricaturizar, inventar hechos ni revelar consecuencias anticipadas.
 - **ID provisional y uso**: capítulo, escena/beat, ronda, fase previa o consecuencia, Aventura, Historia o ambos.
 - **Fundamento textual**: parte, capítulo, pasaje y hecho concreto narrado por Cervantes; citas breves verificadas cuando sean pertinentes.
 - **Descripción exacta de la escena**: quiénes están presentes **según el texto**, qué hacen, relaciones espaciales o temporales que sí estén descritas, objetos y ambiente sustentados; momento antes/después del hecho.

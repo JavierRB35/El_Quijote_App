@@ -1,5 +1,7 @@
 # DIRECCIÓN ARTÍSTICA — EL QUIJOTE
 
+> **Actualización vinculante DC-40, 2026-11-12:** en pasajes cómicos potenciar la risa mediante expresividad y composición intensas pero verosímiles **sin cambiar el realismo cinematográfico premium**. Toda sobriedad anterior que neutralice la comicidad queda desplazada solo en ese ámbito, no la prohibición de caricatura. Ver [directriz DC-40](DIRECTRIZ_COMICIDAD_VISUAL_CERVANTINA_2026-11-12.md). No autoriza producir imágenes.
+
 > **Actualización vinculante DC-37 (2026-11-11):** La escena narrativa llena toda la superficie útil; texto y alternativas viven íntegros dentro de pergamino semitransparente, sin desbordamiento ni scroll; icono fijo arriba a la derecha permite ocultarlo/recuperarlo voluntariamente con narración pausada. Tipografía histórica legible y fondos artísticos en todas las pantallas finales (menú: pueblo/paisaje manchego de época). TS-001 es texto completo visible por defecto y recuperable, no obligación de impedir la contemplación. Consultar [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Las instrucciones históricas incompatibles se consideran sustituidas **solo en el ámbito indicado**; no se autoriza código ni producción de imágenes.
 
 **Versión:** propuesta 0.3 · **Fecha:** 2026-11-06 · **Estado:** especificación de Fase 0, pendiente de pruebas de usabilidad y aceptación final.
@@ -12,7 +14,7 @@
 
 La experiencia principal combina aventura narrativa, preguntas, lector íntegro, atlas, museo, **galería artística de acuarelas** y cuaderno personal. Se mantiene la vocación intergeneracional del encargo; **las personas de edad avanzada pasan a ser el público de referencia prioritario para la ergonomía y la validación UX**. La aplicación ofrece actividades de recuerdo, observación, razonamiento y coordinación visomotora, pero **no es un dispositivo médico ni se atribuirán mejoras clínicas sin evidencia independiente**.
 
-La identidad se define como **aventura literaria premium, cinematográfica, serena, elegante y culturalmente rigurosa**. Evitar estética infantil, aplicaciones médicas, gamificación agresiva, pantallas sobrecargadas o formas de comunicación paternalistas.
+La identidad se define como **aventura literaria premium, cinematográfica, elegante y culturalmente rigurosa**, serena cuando corresponda y expresiva y divertida cuando Cervantes plantea una situación cómica. Evitar estética infantil, aplicaciones médicas, gamificación agresiva, pantallas sobrecargadas o formas de comunicación paternalistas.
 
 ## 1 bis. Obligación de cumplimiento de todas las imágenes y prompts (DC-32)
 
@@ -30,6 +32,10 @@ La revisión de cada imagen debe comprobar **fidelidad textual al corpus del rep
 - **Composición:** la escena narrativa ocupa el protagonismo, con controles limitados, jerarquía visible y áreas seguras para superposiciones. No existen áreas seguras universales: deben registrarse por escena y resolución.
 
 La referencia de continuidad de [DIRECCION_ARTISTICA_PILOTO.md](DIRECCION_ARTISTICA_PILOTO.md) sigue vigente. **La política visual nueva DC-24–DC-27 prevalece** sobre reglas anteriores incompatibles: imagen específica por pregunta, escenas prioritarias, acuarelas secundarias en gameplay y sección artística propia. Los inventarios y evidencias previas se conservan.
+
+### 2.1. Interpretación cómica de las escenas (DC-40)
+
+En escenas de humor cervantino, buscar **la máxima eficacia cómica compatible con el pasaje y el realismo cinematográfico premium**: gestos y expresiones elocuentes, contraste entre solemnidad del caballero y realidad, reacciones legítimas y encuadre que permita comprender de un vistazo lo absurdo de la situación. No imponer rigidez, seriedad o inexpresividad al punto de apagar el humor. Sin caricaturizar ni añadir gags ausentes; toda preimagen mantiene antiespoiler. Aplicar los criterios de prompt y QA de [DC-40](DIRECTRIZ_COMICIDAD_VISUAL_CERVANTINA_2026-11-12.md), tras la revisión de carencias por el propietario.
 
 ## 3. Interfaz orientada a la comodidad
 

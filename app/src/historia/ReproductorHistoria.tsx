@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Catalogo, type Beat, type Escena } from '../contrato';
 import { leerAsset } from '../entorno';
 import ContenedorCine, { type PlanoCine } from '../cine/ContenedorCine';
+import ControlesCine from '../cine/ControlesCine';
 import { encuadreDe } from '../cine/resolverPlano';
 import { AjustesBoton, movimientoReducido, useAjustes } from '../cine/ajustes';
 import PanelDescubrir from '../cine/PanelDescubrir';
@@ -245,7 +246,14 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
         {!activo && <span className="rotulo rotulo-neutro">imagen pendiente</span>}
         {avisoGuardado && <span className="guardado">{avisoGuardado}</span>}
         <span className="cabecera-acciones">
-          <AjustesBoton ajustes={ajustes} fijarTexto={fijarTexto} fijarMovimiento={fijarMovimiento} />
+          <AjustesBoton ajustes={ajustes} fijarTexto={fijarTexto} fijarMovimiento={fijarMovimiento}
+            accionesAdicionales={<div role="group" aria-label="Opciones de narración">
+              <button type="button" onClick={repetirIntervencion}>Repetir intervención (R)</button>
+              <button type="button" onClick={repetirBeat}>Repetir beat (B)</button>
+              <button type="button" onClick={alternarAuto} aria-pressed={autoAvance}>
+                Autoavance: {autoAvance ? 'sí' : 'no'} (A)
+              </button>
+            </div>} />
           <PanelDescubrir
             abierto={descubrirAbierto}
             alternar={() => setDescubrirAbierto((v) => !v)}
@@ -271,6 +279,14 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
       reducirMovimiento={reducirMovimiento}
       cargar={leerAsset}
       cabecera={cabecera}
+      controles={<ControlesCine
+        izquierda={{ etiqueta: 'Atrás (flecha izquierda)', onClick: retroceder,
+          deshabilitada: posicion === 0 && !mostrarCierre }}
+        centro={{ etiqueta: enPausa ? 'Continuar (espacio)' : 'Pausa (espacio)',
+          onClick: () => setEnPausa(v => !v), pulsada: enPausa }}
+        derecha={{ etiqueta: fin ? 'Ver cierre del episodio' : 'Siguiente intervención (enter)',
+          onClick: avanzar, deshabilitada: mostrarCierre }}
+      />}
       texto={
         <>
           {!mostrarCierre && <section
@@ -304,43 +320,6 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
               </button>
             </section>
           )}
-
-          <footer className="controles" role="toolbar" aria-label="Controles del reproductor">
-            <button className="control" onClick={retroceder} disabled={posicion === 0} aria-label="Atrás (flecha izquierda)">
-              <span aria-hidden="true">◂</span>
-            </button>
-            <button className="control" onClick={repetirIntervencion} aria-label="Repetir intervención (R)">
-              <span aria-hidden="true">↻</span>
-            </button>
-            <button className="control" onClick={repetirBeat} aria-label="Repetir beat desde su inicio (B)">
-              <span aria-hidden="true">↶</span>
-            </button>
-            <button
-              className="control"
-              onClick={() => setEnPausa((v) => !v)}
-              aria-pressed={enPausa}
-              aria-label={enPausa ? 'Continuar (espacio)' : 'Pausa (espacio)'}
-            >
-              <span aria-hidden="true">{enPausa ? '▶' : '⏸'}</span>
-            </button>
-            <button
-              className="control control-primario"
-              onClick={avanzar}
-              disabled={mostrarCierre}
-              aria-label={fin ? 'Ver cierre del episodio' : 'Siguiente intervención (enter)'}
-            >
-              <span aria-hidden="true">{fin ? 'Ver cierre' : '▸'}</span>
-            </button>
-            <button
-              className="control control-estado"
-              onClick={alternarAuto}
-              aria-pressed={autoAvance}
-              aria-label="Autoavance cinematográfico (A)"
-              title="Autoavance con lectura mínima garantizada"
-            >
-              Auto: {autoAvance ? 'sí' : 'no'}
-            </button>
-          </footer>
         </>
       }
     />

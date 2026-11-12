@@ -5,6 +5,7 @@
 // En Tauri el localStorage del WebView2 persiste por instalación; la
 // migración a ajustes en SQLite queda como evolución posterior (perfil DP).
 import { useCallback, useEffect, useRef, useState } from 'react';
+import type { ReactNode } from 'react';
 
 /** Cuatro pasos, alineados con el vocabulario del perfil (text_size). */
 export type TamanoTexto = 'pequeno' | 'medio' | 'grande' | 'muy_grande';
@@ -114,10 +115,12 @@ export function AjustesBoton({
   ajustes,
   fijarTexto,
   fijarMovimiento,
+  accionesAdicionales,
 }: {
   ajustes: Ajustes;
   fijarTexto: (t: TamanoTexto) => void;
   fijarMovimiento: (m: Movimiento) => void;
+  accionesAdicionales?: ReactNode;
 }) {
   const [abierto, setAbierto] = useState(false);
   const refBoton = useRef<HTMLButtonElement>(null);
@@ -208,6 +211,7 @@ export function AjustesBoton({
               <span>Reducir movimiento</span>
             </label>
           </fieldset>
+          {accionesAdicionales && <div className="ajustes-adicionales">{accionesAdicionales}</div>}
         </div>
       )}
     </span>

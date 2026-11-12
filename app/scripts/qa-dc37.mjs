@@ -91,6 +91,7 @@ for(const ch of chapters) {
   await enter(ch,'aventura',{version:2,episodio:ch.f.episodioId,partida});
   for(const r of ch.aventura.rondas) {
     assert.equal(await page.locator('.an-opcion').count(),r.opciones.length);
+    assert.equal(await page.locator('.lv-pergamino .lv-control-flotante, .lv-pergamino .controles').count(),0,'controles fuera del pergamino');
     assert.equal((await page.locator('.an-contexto').innerText()).trim(),r.contexto);
     await measure({suite:'integral',modo:'aventura',capitulo:ch.f.capituloId,id:r.id,fase:'pregunta'});
     await page.getByRole('button',{name:new RegExp(r.opciones.find(o=>o.id===r.correcta).texto.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'))}).click();
@@ -100,11 +101,11 @@ for(const ch of chapters) {
     partida=revelar(partida);
     await measure({suite:'integral',modo:'aventura',capitulo:ch.f.capituloId,id:r.id,fase:'revelacion'});
     assert.equal((await page.locator('.an-consecuencia').innerText()).trim(),r.consecuencia);
-    await page.locator('.an-panel .an-primario').click();
+    await page.locator('.lv-control-derecha').click();
     partida=continuar(partida,ch.aventura.rondas);
     if(partida.fase==='checkpoint') {
       await measure({suite:'integral',modo:'aventura',capitulo:ch.f.capituloId,id:r.id,fase:'checkpoint'});
-      await page.locator('.an-panel .an-primario').click();
+      await page.locator('.lv-control-derecha').click();
       partida=continuar(partida,ch.aventura.rondas);
     }
   }

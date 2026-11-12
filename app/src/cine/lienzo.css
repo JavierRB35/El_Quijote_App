@@ -15,7 +15,6 @@
 .lv-pergamino .texto { color: var(--tinta); font-size: calc(22px * var(--escala-texto)); line-height: 1.45; margin: 12px 0; white-space: pre-line; overflow-wrap: anywhere; }
 .lv-pergamino .hablante { color: #4c3727; font-size: calc(20px * var(--escala-texto)); margin: 0; }
 .lv-pergamino .escena-alt { color: #4c3727; font-size: calc(16px * var(--escala-texto)); }
-.lv-pergamino .controles { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; padding: 0; border: 0; background: none; }
 .lienzo-vivo button, .menu button { min-height: 48px; cursor: pointer; }
 .lv-pergamino button, .menu .tarjeta-modo, .menu select {
   color: var(--tinta); background: #faf1db99; border: 1px solid var(--filete); border-radius: 3px;
@@ -24,7 +23,6 @@
 .lv-pergamino button:hover, .menu .tarjeta-modo:hover { background: #fff8e4df; color: var(--tinta); }
 .lienzo-vivo :focus-visible, .menu :focus-visible { outline: 3px solid #285b83; outline-offset: 3px; }
 .lv-pergamino button:disabled { opacity: .55; cursor: default; }
-.lv-pergamino .control[aria-pressed='true'] { color: #29231d; background: #d9c398; border-color: #80613b; }
 .lv-pergamino .cierre { margin-top: 16px; background: none; border: 0; color: var(--tinta); padding: 0; }
 .lv-pergamino .cierre-titulo, .lv-pergamino .cierre-texto { color: var(--tinta); }
 .lv-cabecera { position: absolute; top: 12px; left: 24px; right: 190px; z-index: 3; }
@@ -40,6 +38,33 @@
 .lv-cabecera .an-cabecera-acciones { flex-wrap: nowrap; flex: 0 0 auto; }
 .lv-cabecera .an-cabecera > div:first-child { min-width: 0; }
 .lv-contemplar { position: absolute; top: 12px; right: 16px; z-index: 5; display: flex; gap: 8px; align-items: center; padding: 8px 14px; border: 1px solid #d9c398; border-radius: 4px; background: #202a36ed; color: #f2e8d5; font: 17px Georgia, serif; }
+/* Las posiciones pertenecen al lienzo, no al pergamino ni a cada intervención. */
+.lv-controles-cine { position: absolute; inset: 0; z-index: 4; pointer-events: none; }
+.lv-controles-cine > .lv-control-flotante {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  display: grid; place-items: center;
+  width: 62px; height: 62px; padding: 0;
+  border: 1px solid #d9c398; border-radius: 50%;
+  background: #202a36d9; color: #f2e8d5;
+  box-shadow: 0 3px 16px #0008;
+  font: 36px 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  opacity: 1; pointer-events: auto; cursor: pointer;
+  transition: opacity .18s ease, background .18s ease;
+}
+.lv-control-izquierda { left: clamp(12px, 2vw, 32px); }
+.lv-control-derecha { right: clamp(12px, 2vw, 32px); }
+.lv-controles-cine > .lv-control-centro { left: 50%; transform: translate(-50%, -50%); font-size: 30px; }
+.lv-controles-cine[data-visibles='false'] > .lv-control-flotante { opacity: 0; pointer-events: none; }
+.lv-controles-cine[data-visibles='false']:focus-within > .lv-control-flotante { opacity: 1; pointer-events: auto; }
+.lv-controles-cine > .lv-control-flotante:disabled { opacity: .38; cursor: default; }
+.lv-controles-cine[data-visibles='false'] > .lv-control-flotante:disabled { opacity: 0; }
+.lv-controles-cine > .lv-control-flotante:hover:not(:disabled) { background: #4c3727ef; }
+.ajustes-adicionales { margin-top: 12px; padding-top: 12px; border-top: 1px solid #d9c398; display: grid; gap: 8px; }
+.ajustes-adicionales button { min-height: 44px; font: 16px Georgia, serif; }
+@media (max-width: 700px) {
+  .lv-controles-cine > .lv-control-flotante { width: 48px; height: 48px; font-size: 28px; }
+  .lv-controles-cine > .lv-control-centro { font-size: 24px; }
+}
 .lv-pie { position: absolute; bottom: 8px; left: 24px; right: 24px; display: flex; gap: 12px; justify-content: space-between; font: 13px Georgia, serif; color: #f2e8d5; }
 .lv-pie span { background: #202a36ed; padding: 3px 6px; }
 .lv-limite { position: fixed; bottom: 36px; left: 24px; background: #fff5de; color: #29231d; padding: 10px; z-index: 6; }
@@ -68,7 +93,6 @@
 .menu .ajustes { display: inline-block; margin-bottom: 12px; }
 .menu .ajustes-panel { color: #f2e8d5; }
 .menu .ajustes > button { background: #4c3727; color: #fff5de; }
-.lv-pergamino .control { min-width: 48px; letter-spacing: normal; }
 .lv-pergamino .cierre-texto { margin: 8px 0; max-width: none; }
 .lv-pergamino[data-disposicion='columnas'] .an-respuestas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
 .lv-pergamino[data-disposicion^='paralelo'] .an-panel:has(.an-respuestas) { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; align-items: start; }
@@ -91,7 +115,6 @@
 }
 @media (max-height: 800px) {
   .lv-pergamino { padding: 14px 18px; }
-  .lv-pergamino .controles { margin-top: 8px; gap: 5px; }
   .lv-pergamino .an-panel { gap: 7px; }
   .lv-pergamino .texto { margin: 8px 0; }
 }

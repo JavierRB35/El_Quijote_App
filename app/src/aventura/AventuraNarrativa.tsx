@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Catalogo } from '../contrato';
 import { leerAsset } from '../entorno';
 import ContenedorCine from '../cine/ContenedorCine';
+import ControlesCine from '../cine/ControlesCine';
 import { encuadreDe } from '../cine/resolverPlano';
 import { cargarProgresoDeEpisodio, guardarProgresoDeEpisodio } from '../historia/persistencia';
 import { AjustesBoton, movimientoReducido, useAjustes } from '../cine/ajustes';
@@ -114,6 +115,16 @@ export default function AventuraNarrativa({ catalogo, onSalir, ficha, rondas }: 
   }, [rondas, oculto]);
   const descubrir = useCallback(() => { if (!oculto) setPartida(revelar); }, [oculto]);
   const avanzar = useCallback(() => { if (!oculto) setPartida((p) => continuar(p, rondas)); }, [rondas, oculto]);
+  // Opciones de respuesta dentro del pergamino; avance/revelación fuera de él.
+  const accionContextual = enResultado
+    ? { etiqueta: 'Descubrir qué sucede', onClick: descubrir }
+    : enRevelacion
+      ? { etiqueta: partida.puntos === 0 ? 'Volver al checkpoint' : ronda.checkpoint ? 'Completar hazaña' : 'Siguiente decisión', onClick: avanzar }
+      : enCheckpoint
+        ? { etiqueta: partida.checkpoint.indice >= rondas.length ? 'Ver final del capítulo' : 'Continuar aventura', onClick: avanzar }
+        : completada
+          ? { etiqueta: 'Volver a recorrer el capítulo', onClick: () => setPartida(nuevaPartida(partida.intento + 1, episodioId)) }
+          : null;
 
   useEffect(() => {
     const tecla = (e: KeyboardEvent) => {
@@ -147,6 +158,7 @@ export default function AventuraNarrativa({ catalogo, onSalir, ficha, rondas }: 
           <button className="an-menubtn" onClick={onSalir}>Menú</button>
         </div>
       </header>}
+      controles={accionContextual ? <ControlesCine derecha={accionContextual} /> : undefined}
       pregunta={<section className="an-panel" aria-live="polite" aria-label="Aventura narrativa">
         {partida.fase === 'pregunta' && (
           <>
@@ -173,7 +185,6 @@ export default function AventuraNarrativa({ catalogo, onSalir, ficha, rondas }: 
                 ? 'Te has quedado sin puntos. Descubre primero qué sucedió.'
                 : 'La escena siguiente mostrará lo que ocurrió realmente.'}
             </p>
-            <button className="an-primario" onClick={descubrir}>Descubrir qué sucede</button>
           </>
         )}
         {enRevelacion && (
@@ -187,9 +198,6 @@ export default function AventuraNarrativa({ catalogo, onSalir, ficha, rondas }: 
                 ? `Referencia: ${ronda.pasajeId} · edición del proyecto`
                 : `Referencia: ${ficha.etiqueta} · DQ.SRC.0005`}
             </p>
-            <button className="an-primario" onClick={avanzar}>
-              {partida.puntos === 0 ? 'Volver al checkpoint' : ronda.checkpoint ? 'Completar hazaña' : 'Siguiente decisión'}
-            </button>
           </>
         )}
         {enCheckpoint && (
@@ -201,9 +209,6 @@ export default function AventuraNarrativa({ catalogo, onSalir, ficha, rondas }: 
             <p className="an-hito">{ronda.checkpoint?.titulo}</p>
             {ronda.checkpoint?.mayor && <p className="an-insignia">♜ Insignia de caballería</p>}
             <p>+1 punto · {estadoGuardado === 'guardado' ? 'partida guardada' : estadoGuardado === 'error' ? 'guardado fallido' : 'guardando partida…'} · {partida.puntos}/{PUNTOS_MAXIMOS} puntos</p>
-            <button className="an-primario" onClick={avanzar}>
-              {partida.checkpoint.indice >= rondas.length ? 'Ver final del capítulo' : 'Continuar aventura'}
-            </button>
           </div>
         )}
         {completada && (
@@ -212,10 +217,6 @@ export default function AventuraNarrativa({ catalogo, onSalir, ficha, rondas }: 
             <h1>{ficha.cierreAventura.titulo}</h1>
             <p className="an-contexto">{ficha.cierreAventura.texto}</p>
             <p className="an-consecuencia">Aciertos: {partida.aciertos} · Errores: {partida.errores} · Puntos: {partida.puntos}/{PUNTOS_MAXIMOS}</p>
-            <button className="an-primario" onClick={() => setPartida(nuevaPartida(partida.intento + 1, episodioId))}>
-              Volver a recorrer el capítulo
-            </button>
-            <button className="an-menubtn" onClick={onSalir}>Volver al menú</button>
           </>
         )}
         {errorGuardado && <p className="an-error" role="alert">{errorGuardado}</p>}

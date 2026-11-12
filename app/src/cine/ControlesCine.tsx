@@ -1,6 +1,6 @@
 // DC-37: transporte cinematográfico sobre el lienzo, no dentro del texto.
-// Posición fija entre intervenciones; ratón: desaparición a los 2 s.
-// El foco de teclado mantiene visibles los controles (accesibilidad).
+// Posición fija; DC-39: las flechas son siempre visibles.
+// Solo Reproducir/Pausar desaparece a los 2 s sin ratón y reaparece con foco.
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 export interface AccionCine {

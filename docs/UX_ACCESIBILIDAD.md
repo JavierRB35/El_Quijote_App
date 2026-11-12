@@ -76,7 +76,7 @@ QA visual obligatoria: cubrir tamaños normales y ampliados, 1920×1080/1366×76
 | Superficie | Aplicación de reglas comunes | Diferencia funcional legítima |
 |---|---|---|
 | Aventura | Imagen protagonista, controles y alternativas visibles, encuadre seguro, tipografía ajustable, foco | Anticipación y consecuencia sin scroll en overlays; hotspot exige imagen íntegra en el área interactiva |
-| Historia | Imagen a toda superficie, pergamino semitransparente en zona segura, texto TS-001 revisado íntegro y visible por defecto, control de contemplación arriba a la derecha | Sin columna lateral independiente ni scroll; ocultación voluntaria pausa voz/avance y permite restauración íntegra |
+| Historia | Imagen a toda superficie, pergamino semitransparente en zona segura, texto TS-001 revisado íntegro y visible por defecto, control de contemplación arriba a la derecha | Sin columna lateral independiente ni scroll; ocultación voluntaria pausa voz/avance y permite restauración íntegra. DC-39: flechas «<» y «>» siempre visibles (atenuadas si se deshabilitan); autoocultación de 2 s exclusivamente para Reproducir/Pausar, sin cambios en su comportamiento |
 | Museo | Proporciones, procedencia, contraste, foco, vista contemplativa | Obras patrimoniales siempre completas; galerías y fichas extensas admiten scroll accesible |
 | Atlas | Claridad de controles, información y zonas útiles, navegación por teclado | Mapas requieren pan/zoom y fichas adaptativas; no imponer restricciones propias de una pregunta |
 | Lector | Legibilidad, reflujo, tamaño de letra, navegación, conservación de posición | Lectura extensa con scroll permitido y necesario |

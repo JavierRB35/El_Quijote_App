@@ -55,10 +55,11 @@
 .lv-control-derecha { right: clamp(12px, 2vw, 32px); }
 /* DC-38: Reproducir/Pausar anclado abajo, fuera del centro narrativo. */
 .lv-controles-cine > .lv-control-centro { left: 50%; top: auto; bottom: clamp(44px, 6vh, 72px); transform: translateX(-50%); font-size: 30px; }
-.lv-controles-cine[data-visibles='false'] > .lv-control-flotante { opacity: 0; pointer-events: none; }
-.lv-controles-cine[data-visibles='false']:focus-within > .lv-control-flotante { opacity: 1; pointer-events: auto; }
+/* DC-39: las flechas laterales no se autoocultan; el temporizador solo afecta al centro. */
+.lv-controles-cine[data-visibles='false'] > .lv-control-centro { opacity: 0; pointer-events: none; }
+.lv-controles-cine[data-visibles='false']:focus-within > .lv-control-centro { opacity: 1; pointer-events: auto; }
 .lv-controles-cine > .lv-control-flotante:disabled { opacity: .38; cursor: default; }
-.lv-controles-cine[data-visibles='false'] > .lv-control-flotante:disabled { opacity: 0; }
+.lv-controles-cine[data-visibles='false'] > .lv-control-centro:disabled { opacity: 0; }
 .lv-controles-cine > .lv-control-flotante:hover:not(:disabled) { background: #4c3727ef; }
 .ajustes-adicionales { margin-top: 12px; padding-top: 12px; border-top: 1px solid #d9c398; display: grid; gap: 8px; }
 .ajustes-adicionales button { min-height: 44px; font: 16px Georgia, serif; }

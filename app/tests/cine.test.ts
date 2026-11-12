@@ -260,3 +260,16 @@ test('encuadres versionados y coherentes con el manifiesto de escenas', () => {
     }
   }
 });
+
+// DC-39: regresión de visibilidad de la navegación frente al autoocultado central.
+test('DC-39: flechas visibles permanentemente; solo Reproducir/Pausar se autooculta', () => {
+  const css = readFileSync(path.join(RAIZ, 'app', 'src', 'cine', 'lienzo.css'), 'utf8');
+  const reglaOculta = css.match(/\.lv-controles-cine\[data-visibles='false'\] > \.lv-control-centro \{([^}]+)\}/)?.[1] ?? '';
+  assert.match(reglaOculta, /opacity:\s*0\s*;/);
+  assert.match(reglaOculta, /pointer-events:\s*none\s*;/);
+  assert.match(css, /\.lv-controles-cine\[data-visibles='false'\]:focus-within > \.lv-control-centro \{ opacity: 1; pointer-events: auto; \}/);
+  assert.doesNotMatch(css, /\.lv-controles-cine\[data-visibles='false'\][^{]*> \.lv-control-flotante/);
+  assert.doesNotMatch(css, /\.lv-controles-cine\[data-visibles='false'\][^{]*> \.lv-control-(?:izquierda|derecha)/);
+  assert.match(css, /\.lv-controles-cine > \.lv-control-flotante:disabled \{ opacity: \.38; cursor: default; \}/);
+  assert.match(css, /\.lv-controles-cine\[data-visibles='false'\] > \.lv-control-centro:disabled \{ opacity: 0; \}/);
+});

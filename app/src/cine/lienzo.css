@@ -53,7 +53,8 @@
 }
 .lv-control-izquierda { left: clamp(12px, 2vw, 32px); }
 .lv-control-derecha { right: clamp(12px, 2vw, 32px); }
-.lv-controles-cine > .lv-control-centro { left: 50%; transform: translate(-50%, -50%); font-size: 30px; }
+/* DC-38: Reproducir/Pausar anclado abajo, fuera del centro narrativo. */
+.lv-controles-cine > .lv-control-centro { left: 50%; top: auto; bottom: clamp(44px, 6vh, 72px); transform: translateX(-50%); font-size: 30px; }
 .lv-controles-cine[data-visibles='false'] > .lv-control-flotante { opacity: 0; pointer-events: none; }
 .lv-controles-cine[data-visibles='false']:focus-within > .lv-control-flotante { opacity: 1; pointer-events: auto; }
 .lv-controles-cine > .lv-control-flotante:disabled { opacity: .38; cursor: default; }

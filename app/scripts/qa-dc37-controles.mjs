@@ -19,6 +19,16 @@ try {
   assert.equal(inicial.length, 3);
   assert(inicial[0].x < 100 && inicial[2].x > 1260);
   assert(Math.abs(inicial[1].x - 683) < 2);
+  assert(inicial[1].y > 768 * 0.84 && inicial[1].y < 768 - 60,
+    'Reproducir/Pausar se sitúa en el centro horizontal inferior, no sobre el centro narrativo');
+  assert(Math.abs(inicial[0].y - 384) < 2 && Math.abs(inicial[2].y - 384) < 2,
+    'los controles laterales permanecen a media altura');
+  await page.setViewportSize({ width: 1920, height: 1080 });
+  const amplio = await medidas();
+  assert(Math.abs(amplio[1].x - 960) < 2 && amplio[1].y > 1080 * 0.84,
+    'posición inferior centrada también a 1920x1080');
+  await page.setViewportSize({ width: 1366, height: 768 });
+  assert.deepEqual(await medidas(), inicial, 'posición estable al restaurar resolución');
   await page.mouse.move(220, 480);
   assert.equal(await toolbar.getAttribute('data-visibles'), 'true');
   await page.waitForTimeout(2300);

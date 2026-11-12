@@ -1,5 +1,7 @@
 # AGENTS.md — Convenciones para agentes en este repositorio
 
+> **DC-40 — comicidad visual (2026-11-12, VIGENTE):** en escenas cómicas, exigir gestos, expresiones y composiciones que provoquen sonrisa/risa sin cambiar la estética cinematográfica ni inventar hechos. Sustituye la contención anterior solo donde apague el humor; no permite caricatura. Leer [la directriz específica](docs/DIRECTRIZ_COMICIDAD_VISUAL_CERVANTINA_2026-11-12.md) antes de prompts, selección o QA de imágenes. No generar arte por esta actualización.
+
 Proyecto: El_Quijote_App (videojuego premium del Quijote, Windows 11 x64, español).
 **DECISIÓN NUEVA DC-37, 2026-11-11 (VIGENTE):** [`docs/DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md`](docs/DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Historia/Aventura con imagen a toda la superficie jugable, pergaminos semitransparentes sin desbordamientos, control fijo arriba a la derecha para ocultar/recuperar texto en contemplación pausada, tipografía histórica legible y fondos artísticos en todas las pantallas finales (menú manchego). **TS-001 se revisa:** texto completo visible por defecto y siempre recuperable, pero ocultable voluntariamente con voz/temporizador/avance pausados. La anterior prohibición de ocultar queda desplazada; NO hay autorización para código o imágenes en este acto.
 

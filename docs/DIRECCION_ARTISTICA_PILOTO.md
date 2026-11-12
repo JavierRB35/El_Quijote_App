@@ -1,5 +1,7 @@
 # Dirección artística — colección de escenas
 
+> **DC-40, 2026-11-12:** en episodios cómicos potenciar la comicidad perceptible —expresiones, lenguaje corporal y contraste— para provocar sonrisa/risa con realismo cinematográfico intacto; la contención incompatible queda desplazada, **no** la prohibición de caricatura. [Norma completa](DIRECTRIZ_COMICIDAD_VISUAL_CERVANTINA_2026-11-12.md).
+
 > **Actualización vinculante DC-37 (2026-11-11):** Se aplica la nueva presentación cinematográfica completa: imágenes de Historia/Aventura a toda superficie útil, pergaminos semitransparentes y contemplación voluntaria reversible; ningún fondo neutro constituye acabado final. Consultar [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Las instrucciones históricas incompatibles se consideran sustituidas **solo en el ámbito indicado**; no se autoriza código ni producción de imágenes.
 
 **Estado:** piloto visual para revisión, v0.5, 5 de noviembre de 2026. Cinco baterías, 59 imágenes en conjunto (58 escenas y una referencia de personajes).
@@ -17,7 +19,7 @@ Referencias vinculantes: `docs/VISION_Y_DECISIONES.md` DC-23–DC-27 y `docs/DEC
 
 ## Identidad
 
-**Realismo cinematográfico con matiz pictórico.** Los encuadres deben parecer fotogramas de una producción de época de alta calidad: piel y materiales naturales, arquitectura verosímil, polvo, luz rasante, niebla suave y color contenido. Evitar caricatura, ilustración infantil, fantasía heroica, saturación estridente, escenas de guerra desproporcionadas y exceso de ornamentos.
+**Realismo cinematográfico con matiz pictórico.** Los encuadres deben parecer fotogramas de una producción de época de alta calidad: piel y materiales naturales, arquitectura verosímil, polvo, luz rasante, niebla suave y color contenido. Evitar caricatura (no confundir con actuación cómica intensa pero realista exigida por DC-40), ilustración infantil, fantasía heroica, saturación estridente, escenas de guerra desproporcionadas y exceso de ornamentos.
 
 ### Paleta y luz
 
@@ -29,7 +31,7 @@ Referencias vinculantes: `docs/VISION_Y_DECISIONES.md` DC-23–DC-27 y `docs/DEC
 ### Personajes y utilería
 
 - **Don Quijote:** hidalgo de unos cincuenta años, muy alto y delgado, rostro largo y anguloso, bigote y perilla entrecanos, mirada exaltada y noble; armadura antigua y gastada, sin apariencia de paladín fantástico.
-- **Sancho Panza:** campesino de mediana edad, más bajo y robusto, rostro cálido, barba corta, lino crudo y chaleco de lana ocre, sombrero sencillo, expresividad inteligente sin caricatura.
+- **Sancho Panza:** campesino de mediana edad, más bajo y robusto, rostro cálido, barba corta, lino crudo y chaleco de lana ocre, sombrero sencillo, expresividad inteligente, con gestualidad cómica verosímil cuando lo pida el episodio y sin caricatura.
 - **Rocinante:** caballo viejo y enjuto de pelaje pardo claro; **rucio:** burro pequeño gris.
 - La imagen `_art_direction/personajes_referencia.webp` fija un primer referente de fisonomía y color, pero no es documentación de vestuario histórica.
 

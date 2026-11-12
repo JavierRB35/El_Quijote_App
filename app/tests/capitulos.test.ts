@@ -38,6 +38,12 @@ test('Capítulo I: 11 escenas/25 intervenciones TS-001, planos reales aprobados'
   const pasos = historia.escenas.flatMap((s: any) => s.intervenciones);
   assert.equal(pasos.length, 25);
   assert.equal(new Set(pasos.map((p: any) => p.id)).size, 25);
+  // Fondo específico de la apertura sin sustituir el plano siguiente del hidalgo.
+  assert.equal(pasos[0].id, 'H01-I01');
+  assert.equal(pasos[0].imagen, 'p1_c01_h01_pueblo_manchego_story');
+  assert.equal(pasos[1].imagen, 'p1_c01_h01_presentacion_hidalgo_story');
+  assert.equal(manifest.images.find((i: any) => i.id === 'p1_c01_h01_pueblo_manchego_story')?.sha256,
+    'e61c787284231d2a19731cc56c4a569ea479da93fa035cae21cdcc6f003d9d3f');
   for (const p of pasos) {
     assert.ok(p.texto_visible.trim().length >= 15);
     assert.ok(p.localizador.includes('DQ.SRC.0005'));

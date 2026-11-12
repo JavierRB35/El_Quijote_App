@@ -273,3 +273,14 @@ test('DC-39: flechas visibles permanentemente; solo Reproducir/Pausar se autoocu
   assert.match(css, /\.lv-controles-cine > \.lv-control-flotante:disabled \{ opacity: \.38; cursor: default; \}/);
   assert.match(css, /\.lv-controles-cine\[data-visibles='false'\] > \.lv-control-centro:disabled \{ opacity: 0; \}/);
 });
+
+test('DC-39: flechas presentes en contemplación; botón central y progreso preservados', () => {
+  const contenedor = readFileSync(path.join(RAIZ, 'app', 'src', 'cine', 'ContenedorCine.tsx'), 'utf8');
+  const historia = readFileSync(path.join(RAIZ, 'app', 'src', 'historia', 'ReproductorHistoria.tsx'), 'utf8');
+  assert.match(contenedor, /\(!oculto \|\| controlesEnContemplacion\) && controles/);
+  assert.match(historia, /controlesEnContemplacion/);
+  assert.match(historia, /key=\{oculto \? 'contemplacion' : 'narracion'\}/);
+  assert.match(historia, /centro=\{oculto \? undefined :/);
+  assert.match(historia, /deshabilitada: oculto \|\| \(posicion === 0 && !mostrarCierre\)/);
+  assert.match(historia, /deshabilitada: oculto \|\| mostrarCierre/);
+});

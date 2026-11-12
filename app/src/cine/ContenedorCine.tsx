@@ -23,13 +23,16 @@ interface Props {
   pregunta?: ReactNode;
   lateral?: ReactNode;
   controles?: ReactNode;
+  /** Mantiene controles seleccionados durante contemplación; desactivado por defecto. */
+  controlesEnContemplacion?: boolean;
   oculto: boolean;
   onContemplar: (oculto: boolean) => void;
   onComposicion?: (cabe: boolean) => void;
 }
 
 export default function ContenedorCine({ plano, estado, reducirMovimiento, cargar,
-  cabecera, texto, pregunta, lateral, controles, oculto, onContemplar, onComposicion }: Props) {
+  cabecera, texto, pregunta, lateral, controles, controlesEnContemplacion = false,
+  oculto, onContemplar, onComposicion }: Props) {
   const [carga, setCarga] = useState({ uri: '', src: '', error: false });
   const [dimensiones, setDimensiones] = useState({ w: 0, h: 0 });
   const [ajuste, setAjuste] = useState<{ estilo: CSSProperties; emergencia: boolean; cabe: boolean; fit: 'cover' | 'contain' }>({ estilo: {}, emergencia: true, cabe: true, fit: 'contain' });
@@ -113,7 +116,7 @@ export default function ContenedorCine({ plano, estado, reducirMovimiento, carga
       {texto}{pregunta}
     </section>
     {!oculto && lateral}
-    {!oculto && controles}
+    {(!oculto || controlesEnContemplacion) && controles}
     <footer className="lv-pie">
       <span>{plano.mediaClass === 'RECREACION_IA' ? 'Recreación artística · no es evidencia histórica' : plano.mediaClass}</span>
       {plano.autor && <span>{plano.autor}</span>}

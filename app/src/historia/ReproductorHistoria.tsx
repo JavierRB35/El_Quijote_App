@@ -279,13 +279,15 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
       reducirMovimiento={reducirMovimiento}
       cargar={leerAsset}
       cabecera={cabecera}
+      controlesEnContemplacion
       controles={<ControlesCine
+        key={oculto ? 'contemplacion' : 'narracion'}
         izquierda={{ etiqueta: 'Atrás (flecha izquierda)', onClick: retroceder,
-          deshabilitada: posicion === 0 && !mostrarCierre }}
-        centro={{ etiqueta: enPausa ? 'Continuar (espacio)' : 'Pausa (espacio)',
+          deshabilitada: oculto || (posicion === 0 && !mostrarCierre) }}
+        centro={oculto ? undefined : { etiqueta: enPausa ? 'Continuar (espacio)' : 'Pausa (espacio)',
           onClick: () => setEnPausa(v => !v), pulsada: enPausa }}
         derecha={{ etiqueta: fin ? 'Ver cierre del episodio' : 'Siguiente intervención (enter)',
-          onClick: avanzar, deshabilitada: mostrarCierre }}
+          onClick: avanzar, deshabilitada: oculto || mostrarCierre }}
       />}
       texto={
         <>

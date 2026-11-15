@@ -1,5 +1,7 @@
 # AGENTS.md — Convenciones para agentes en este repositorio
 
+> **DC-41 (2026-11-15, aprobada por el propietario):** pergamino inferior derecho por defecto, más transparente y solo reubicable discretamente si hay un foco protegido fiable. Una composición pendiente no oculta jamás la imagen. En contemplación de Historia el texto permanece oculto, los temporizadores y la voz pausados, y las flechas visibles permiten navegación manual hacia delante y atrás (también teclado); al mostrar texto reaparece íntegra la intervención vigente. Aventura no permite adelantar decisiones o revelaciones ocultas. Modifica únicamente el bloqueo previo de avance manual DC-37/DC-39; conserva TS-001, fidelidad y antiespoilers.
+
 > **DC-40 — comicidad visual (2026-11-12, VIGENTE):** en escenas cómicas, exigir gestos, expresiones y composiciones que provoquen sonrisa/risa sin cambiar la estética cinematográfica ni inventar hechos. Sustituye la contención anterior solo donde apague el humor; no permite caricatura. Leer [la directriz específica](docs/DIRECTRIZ_COMICIDAD_VISUAL_CERVANTINA_2026-11-12.md) antes de prompts, selección o QA de imágenes. No generar arte por esta actualización.
 
 Proyecto: El_Quijote_App (videojuego premium del Quijote, Windows 11 x64, español).

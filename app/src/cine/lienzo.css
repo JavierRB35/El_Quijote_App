@@ -9,7 +9,11 @@
   border-radius: 3px 9px 4px 7px; box-shadow: 0 8px 32px #0004, inset 0 0 22px #80613b16;
   font-family: 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
 }
-.lv-pergamino { position: absolute; padding: 20px 24px; height: auto; overflow: visible; }
+.lv-pergamino { position: absolute; padding: 20px 24px; height: auto; overflow: visible;
+  background: rgba(232, 216, 181, .77);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
 .lv-pergamino::before { content: ''; position: absolute; inset: 7px; border: 1px solid #80613b55; pointer-events: none; border-radius: inherit; }
 .lv-pergamino .lectura { margin: 0; padding: 0; background: none; border: 0; box-shadow: none; max-height: none; overflow: visible; }
 .lv-pergamino .texto { color: var(--tinta); font-size: calc(22px * var(--escala-texto)); line-height: 1.45; margin: 12px 0; white-space: pre-line; overflow-wrap: anywhere; }

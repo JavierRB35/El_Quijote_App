@@ -298,6 +298,20 @@ test('DC-39: flechas presentes en contemplación; botón central y progreso pres
   assert.match(historia, /controlesEnContemplacion/);
   assert.match(historia, /key=\{oculto \? 'contemplacion' : 'narracion'\}/);
   assert.match(historia, /centro=\{oculto \? undefined :/);
-  assert.match(historia, /deshabilitada: oculto \|\| \(posicion === 0 && !mostrarCierre\)/);
-  assert.match(historia, /deshabilitada: oculto \|\| mostrarCierre/);
+  assert.ok(historia.includes('deshabilitada: posicion === 0 && !mostrarCierre'));
+  assert.ok(historia.includes('deshabilitada: mostrarCierre || (oculto && fin)'));
+});
+
+test('DC-41: navegar manualmente con texto oculto mantiene pausa automática', () => {
+  const historia = readFileSync(path.join(RAIZ, 'app/src/historia/ReproductorHistoria.tsx'), 'utf8');
+  const lienzo = readFileSync(path.join(RAIZ, 'app/src/cine/ContenedorCine.tsx'), 'utf8');
+  const css = readFileSync(path.join(RAIZ, 'app/src/cine/lienzo.css'), 'utf8');
+  assert.ok(historia.includes("oculto && !['ArrowLeft', 'ArrowRight', 'Escape'].includes(e.key)"));
+  assert.ok(historia.includes('enPausa || oculto || !composicionLegible'));
+  assert.ok(historia.includes('if (!oculto) { setMostrarCierre(true); setEnPausa(true); }'));
+  assert.ok(!historia.includes('if (!oculto) setPosicion'));
+  assert.ok(lienzo.includes('<div className="lv-imagen" aria-hidden="true">'));
+  assert.ok(!lienzo.includes('hidden={!oculto && ajuste.emergencia}'));
+  assert.ok(lienzo.includes('Composición por revisar · imagen visible'));
+  assert.ok(css.includes('background: rgba(232, 216, 181, .77)'));
 });

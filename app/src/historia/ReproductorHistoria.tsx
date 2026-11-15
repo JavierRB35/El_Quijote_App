@@ -65,7 +65,7 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
   const [composicionLegible, setComposicionLegible] = useState(true);
   const contemplar = useCallback((valor: boolean) => {
     setOculto(valor);
-    if (valor) setEnPausa(true); // Mostrar nunca reanuda por sorpresa.
+    if (valor) setEnPausa(true); // Pausar autoavance y voz; flechas manuales siguen activas.
   }, []);
   const [descubrirAbierto, setDescubrirAbierto] = useState(false);
   const [mostrarCierre, setMostrarCierre] = useState(false);
@@ -92,14 +92,17 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
   }, [items, episodioId]);
 
   const avanzar = useCallback(() => {
-    if (!oculto && posicion === items.length - 1) { setMostrarCierre(true); setEnPausa(true); return; }
-    if (!oculto) setPosicion((p) => (p !== null && p + 1 < items.length ? p + 1 : p));
-  }, [items.length, oculto, posicion]);
+    if (posicion === items.length - 1) {
+      if (!oculto) { setMostrarCierre(true); setEnPausa(true); }
+      return;
+    }
+    if (!mostrarCierre) setPosicion((p) => (p !== null && p + 1 < items.length ? p + 1 : p));
+  }, [items.length, oculto, posicion, mostrarCierre]);
 
   const retroceder = useCallback(() => {
-    if (mostrarCierre && !oculto) { setMostrarCierre(false); return; }
-    if (!oculto) setPosicion((p) => (p !== null && p > 0 ? p - 1 : p));
-  }, [oculto, mostrarCierre]);
+    if (mostrarCierre) { setMostrarCierre(false); return; }
+    setPosicion((p) => (p !== null && p > 0 ? p - 1 : p));
+  }, [mostrarCierre]);
 
   const repetirBeat = useCallback(() => {
     if (oculto) return;
@@ -154,7 +157,7 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
   // panel de descubrimientos está abierto, Esc lo cierra primero y no sale.
   useEffect(() => {
     const alPulsar = (e: KeyboardEvent) => {
-      if (e.defaultPrevented || (oculto && e.key !== 'Escape')) return;
+      if (e.defaultPrevented || (oculto && !['ArrowLeft', 'ArrowRight', 'Escape'].includes(e.key))) return;
       const destino = e.target as HTMLElement | null;
       if (destino?.closest('input, select, textarea, dialog, [role="dialog"]')) return;
       const esBoton = destino?.tagName === 'BUTTON';
@@ -283,11 +286,11 @@ export default function ReproductorHistoria({ catalogo, onSalir, ficha }: Props)
       controles={<ControlesCine
         key={oculto ? 'contemplacion' : 'narracion'}
         izquierda={{ etiqueta: 'Atrás (flecha izquierda)', onClick: retroceder,
-          deshabilitada: oculto || (posicion === 0 && !mostrarCierre) }}
+          deshabilitada: posicion === 0 && !mostrarCierre }}
         centro={oculto ? undefined : { etiqueta: enPausa ? 'Continuar (espacio)' : 'Pausa (espacio)',
           onClick: () => setEnPausa(v => !v), pulsada: enPausa }}
         derecha={{ etiqueta: fin ? 'Ver cierre del episodio' : 'Siguiente intervención (enter)',
-          onClick: avanzar, deshabilitada: oculto || mostrarCierre }}
+          onClick: avanzar, deshabilitada: mostrarCierre || (oculto && fin) }}
       />}
       texto={
         <>

@@ -1,5 +1,7 @@
 # COMPONENTES NARRATIVOS — Especificación de UX y contrato del consumidor (Dirección integral / desarrollador)
 
+> **DC-41 (2026-11-15, aprobada por el propietario):** pergamino inferior derecho por defecto, más transparente y solo reubicable discretamente si hay un foco protegido fiable. Una composición pendiente no oculta jamás la imagen. En contemplación de Historia el texto permanece oculto, los temporizadores y la voz pausados, y las flechas visibles permiten navegación manual hacia delante y atrás (también teclado); al mostrar texto reaparece íntegra la intervención vigente. Aventura no permite adelantar decisiones o revelaciones ocultas. Modifica únicamente el bloqueo previo de avance manual DC-37/DC-39; conserva TS-001, fidelidad y antiespoilers.
+
 > **Actualización vinculante DC-37 (2026-11-11):** TS-001 revisada: texto íntegro visible por defecto, con estado explícito de contemplación voluntaria que oculta el pergamino y pausa temporizadores/voz/avance hasta recuperar el mismo contenido; no modificar aún el código o esquemas de datos. El componente visual será pergamino semitransparente sobre escena completa. Consultar [DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md](DIRECTRIZ_VISUAL_PREMIUM_LIENZO_VIVO_2026-11-11.md). Las instrucciones históricas incompatibles se consideran sustituidas **solo en el ámbito indicado**; no se autoriza código ni producción de imágenes.
 
 **Estado:** especificación histórica v1.0, actualizada en decisiones de producto **DC-23–DC-27 (2026-11-08)**; **no es evidencia de implementación**. Dirección integral define y revisa; el desarrollador único implementa y prueba. Los anteriores informes R08/R10 son antecedentes, no equipos operativos.
@@ -24,7 +26,7 @@
 
 ## 2. Estados del reproductor de beats — matriz subsanada (dictamen H5)
 
-Alcance de TS-001 revisada: el **texto íntegro de la intervención activa** permanece visible por defecto y recuperable al retroceder; la **única ocultación voluntaria permitida** es el modo contemplación DC-37, que pausa audio/tiempo/avance y conserva íntegramente el estado. No significa mantener la novela entera fijada en una pantalla.
+Alcance de TS-001 revisada: el **texto íntegro de la intervención activa** permanece visible por defecto y recuperable al retroceder; la **única ocultación voluntaria permitida** es el modo contemplación DC-37, que pausa audio/tiempo/avance automático y conserva íntegramente el estado; DC-41 autoriza navegar manualmente entre imágenes de Historia sin mostrar texto. No significa mantener la novela entera fijada en una pantalla.
 
 **Invariante P0-1 (sin rutas de avance dependientes del audio):** existe siempre una vía de avance que no requiere voz. La voz —ausente, silenciada, fallida o terminada— nunca bloquea, nunca oculta el texto y nunca es condición necesaria para continuar.
 

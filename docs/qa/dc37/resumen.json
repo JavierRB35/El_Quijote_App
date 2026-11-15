@@ -10,7 +10,7 @@
       "sin_asignacion": 0,
       "reutilizaciones_validadas": 0,
       "intervenciones_con_candidato": 25,
-      "candidatos_distintos": 8,
+      "candidatos_distintos": 25,
       "decisiones_pendientes": 25,
       "cobertura_validada_porcentaje": 0
     },
@@ -85,9 +85,9 @@
   "rondas": 33,
   "rondas_activas": 29,
   "necesidades_aventura": 66,
-  "recursos_escenas_manifest": 317,
+  "recursos_escenas_manifest": 342,
   "recursos_closeups_manifest": 10,
-  "candidatos_distintos_historia": 73,
+  "candidatos_distintos_historia": 90,
   "aprobaciones_nuevas": 0,
   "imagenes_nuevas_encargadas": 0
 }

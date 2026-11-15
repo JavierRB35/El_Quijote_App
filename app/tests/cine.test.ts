@@ -261,6 +261,23 @@ test('encuadres versionados y coherentes con el manifiesto de escenas', () => {
   }
 });
 
+test('DC-37 I.1: las 16 imágenes nuevas tienen encuadre inicial explícito, pendiente de QA visual', () => {
+  const historia = JSON.parse(readFileSync(path.join(RAIZ, 'content/historia/parte_1/capitulo_01.json'), 'utf-8'));
+  const manifest = JSON.parse(readFileSync(path.join(RAIZ, 'assets/scenes/manifest.json'), 'utf-8'));
+  const encuadres = JSON.parse(readFileSync(path.join(RAIZ, 'app/src/cine/encuadres.json'), 'utf-8')).encuadres;
+  const nuevas = historia.escenas.flatMap((s: any) => s.intervenciones).filter((u: any) => /^p1_c01_h\d\d_i\d\d_/.test(u.imagen));
+  assert.equal(nuevas.length, 16);
+  for (const u of nuevas) {
+    const entry = encuadres.find((e: any) => e.media_id === 'scene:' + u.imagen);
+    assert.ok(entry, u.id);
+    const asset = manifest.images.find((a: any) => a.id === u.imagen);
+    assert.equal(asset.review_state, 'aprobada');
+    if (asset.preferred_overlay_side === 'left') assert.equal(entry.lado_texto, 'izquierda');
+    if (asset.preferred_overlay_side === 'right') assert.equal(entry.lado_texto, 'derecha');
+    if (asset.preferred_overlay_side === 'top') assert.ok(entry.region_critica.y >= 0.4);
+  }
+});
+
 // DC-39: regresión de visibilidad de la navegación frente al autoocultado central.
 test('DC-39: flechas visibles permanentemente; solo Reproducir/Pausar se autooculta', () => {
   const css = readFileSync(path.join(RAIZ, 'app', 'src', 'cine', 'lienzo.css'), 'utf8');

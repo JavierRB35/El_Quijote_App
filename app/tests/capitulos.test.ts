@@ -31,12 +31,20 @@ test('Capítulo I: cinco decisiones, preimágenes exclusivas y continuidad canó
     }
   }
   assert.equal(aventura.revision_visual, 'pendiente');
+  for (const [index, medioId] of [[0, 'p1_c01_h02_i02_libros_adquiridos_story'], [3, 'p1_c01_h08_i02_nombre_rocinante_story'], [4, 'p1_c01_h11_i02_nombre_dulcinea_story']] as const) {
+    assert.ok(rondas[index].imagenConsecuencia.uri.endsWith(medioId + '.webp'));
+    assert.notEqual(rondas[index].imagenPrevia.uri, rondas[index].imagenConsecuencia.uri);
+  }
 });
 
 test('Capítulo I: 11 escenas/25 intervenciones TS-001, planos reales aprobados', () => {
   assert.equal(historia.escenas.length, 11);
   const pasos = historia.escenas.flatMap((s: any) => s.intervenciones);
   assert.equal(pasos.length, 25);
+  assert.equal(new Set(pasos.map((p: any) => p.imagen)).size, 25, 'I.1: una imagen por intervención');
+  const nuevas = pasos.filter((p: any) => /^p1_c01_h\d\d_i\d\d_/.test(p.imagen));
+  assert.equal(nuevas.length, 16, 'I.1: 16 fotogramas individuales');
+  for (const p of nuevas) assert.ok(p.imagen.startsWith('p1_c01_' + p.id.toLowerCase().replaceAll('-', '_') + '_'), p.id);
   assert.equal(new Set(pasos.map((p: any) => p.id)).size, 25);
   // Fondo específico de la apertura sin sustituir el plano siguiente del hidalgo.
   assert.equal(pasos[0].id, 'H01-I01');
@@ -55,7 +63,7 @@ test('Capítulo I: 11 escenas/25 intervenciones TS-001, planos reales aprobados'
   }
   const h7 = historia.escenas.find((s: any) => s.id === 'H07').intervenciones;
   assert.deepEqual(h7.map((p: any) => p.imagen), [
-    'p1_c01_r03_armas_morrion_pre',
+    'p1_c01_h07_i01_primera_celada_carton_story',
     'p1_c01_h07_celada_rota_story',
     'p1_c01_r03_celada_reforzada_post',
   ]);

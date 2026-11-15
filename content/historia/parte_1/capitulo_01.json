@@ -54,7 +54,7 @@
           "tipo_texto": "ADAPTACION_FIEL",
           "texto_visible": "Llegó a vender muchas hanegas de tierra de sembradura para comprar más libros, y llevó a casa cuantos pudo conseguir.",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1093–1096",
-          "imagen": "p1_c01_r01_lectura_pre"
+          "imagen": "p1_c01_h02_i02_libros_adquiridos_story"
         }
       ]
     },
@@ -68,7 +68,7 @@
           "tipo_texto": "ADAPTACION_FIEL",
           "texto_visible": "De todos los autores, prefería a Feliciano de Silva. Sus requiebros y desafíos, aunque difíciles de comprender, le parecían extraordinarios.",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1096–1100",
-          "imagen": "p1_c01_r01_lectura_pre"
+          "imagen": "p1_c01_h03_i01_fascinacion_silva_story"
         },
         {
           "id": "H03-I02",
@@ -76,7 +76,7 @@
           "tipo_texto": "CITA_LITERAL",
           "texto_visible": "La razón de la sinrazón que a mi razón se hace, de tal manera mi razón enflaquece, que con razón me quejo de la vuestra fermosura.",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1100–1102",
-          "imagen": "p1_c01_r01_lectura_pre"
+          "imagen": "p1_c01_h03_i02_razon_sinrazon_story"
         },
         {
           "id": "H03-I03",
@@ -84,7 +84,7 @@
           "tipo_texto": "ADAPTACION_FIEL",
           "texto_visible": "El narrador asegura con ironía que ni Aristóteles habría desentrañado aquellas frases. El hidalgo también discutía de caballeros con el cura; maese Nicolás, el barbero, tenía otros héroes favoritos.",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1106–1123",
-          "imagen": "p1_c01_r01_lectura_pre"
+          "imagen": "p1_c01_h03_i03_cura_barbero_debate_story"
         }
       ]
     },
@@ -106,7 +106,7 @@
           "tipo_texto": "ADAPTACION_FIEL",
           "texto_visible": "Su imaginación se llenó de encantamientos, batallas, heridas, desafíos y gigantes. Llegó a creer que las invenciones de aquellos libros eran historias verdaderas.",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1128–1145",
-          "imagen": "p1_c01_h04_desvelo_nocturno_story"
+          "imagen": "p1_c01_h04_i02_imaginacion_desbordada_story"
         }
       ]
     },
@@ -120,7 +120,7 @@
           "tipo_texto": "ADAPTACION_FIEL",
           "texto_visible": "De aquella convicción nació una resolución extraordinaria: hacerse caballero andante.",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1147–1150",
-          "imagen": "p1_c01_h04_desvelo_nocturno_story"
+          "imagen": "p1_c01_h05_i01_resolucion_caballero_story"
         },
         {
           "id": "H05-I02",
@@ -128,7 +128,7 @@
           "tipo_texto": "ADAPTACION_FIEL",
           "texto_visible": "Quería ir por el mundo con armas y caballo, buscar aventuras, deshacer agravios y ganar honra y fama. Hasta se imaginó emperador de Trapisonda; enseguida quiso ponerlo en práctica.",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1149–1158",
-          "imagen": "p1_c01_h04_desvelo_nocturno_story"
+          "imagen": "p1_c01_h05_i02_horizonte_aventuras_story"
         }
       ]
     },
@@ -142,7 +142,7 @@
           "tipo_texto": "ADAPTACION_FIEL",
           "texto_visible": "Lo primero que hizo fue sacar unas armas de sus bisabuelos, olvidadas en un rincón desde hacía mucho tiempo, cubiertas de orín y moho.",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1159–1161",
-          "imagen": "p1_c01_r03_armas_morrion_pre"
+          "imagen": "p1_c01_h06_i01_armas_olvidadas_story"
         },
         {
           "id": "H06-I02",
@@ -164,7 +164,7 @@
           "tipo_texto": "ADAPTACION_FIEL",
           "texto_visible": "Con cartones fabricó una media celada que, encajada en el morrión, parecía una celada entera. Había dedicado una semana a construirla.",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1163–1168",
-          "imagen": "p1_c01_r03_armas_morrion_pre"
+          "imagen": "p1_c01_h07_i01_primera_celada_carton_story"
         },
         {
           "id": "H07-I02",
@@ -202,7 +202,7 @@
           "tipo_texto": "ADAPTACION_FIEL",
           "texto_visible": "Durante cuatro días imaginó y descartó nombres, hasta elegir uno que dijera lo que aquel caballo había sido y lo que ahora debía representar: Rocinante.",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1177–1188",
-          "imagen": "p1_c01_r04_rocin_pre"
+          "imagen": "p1_c01_h08_i02_nombre_rocinante_story"
         }
       ]
     },
@@ -216,7 +216,7 @@
           "tipo_texto": "ADAPTACION_FIEL",
           "texto_visible": "Después de dar nombre al caballo, dedicó otros ocho días a elegir el suyo. Al cabo se llamó don Quijote.",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1190–1194",
-          "imagen": "p1_c01_r04_rocin_pre"
+          "imagen": "p1_c01_h09_i01_nombre_don_quijote_story"
         },
         {
           "id": "H09-I02",
@@ -224,7 +224,7 @@
           "tipo_texto": "ADAPTACION_FIEL",
           "texto_visible": "Como Amadís había añadido Gaula a su nombre, él quiso honrar su propia tierra y llamarse don Quijote de la Mancha.",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1194–1199",
-          "imagen": "p1_c01_r05_dama_pensamientos_pre"
+          "imagen": "p1_c01_h09_i02_nombre_de_la_mancha_story"
         }
       ]
     },
@@ -246,7 +246,7 @@
           "tipo_texto": "ADAPTACION_FIEL",
           "texto_visible": "Si venzo a un gigante, ¿ante qué señora habré de enviarlo para que se arrodille y quede a su disposición?",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1207–1216",
-          "imagen": "p1_c01_r05_dama_pensamientos_pre"
+          "imagen": "p1_c01_h10_i02_soliloquio_gigante_story"
         },
         {
           "id": "H10-I03",
@@ -254,7 +254,7 @@
           "tipo_texto": "ADAPTACION_FIEL",
           "texto_visible": "En su fantasía ya tenía nombre el vencido: Caraculiambro, señor de la ínsula Malindrania. La idea de presentarlo ante su dama lo llenó de satisfacción.",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1212–1218",
-          "imagen": "p1_c01_r05_dama_pensamientos_pre"
+          "imagen": "p1_c01_h10_i03_caraculiambro_imaginado_story"
         }
       ]
     },
@@ -268,7 +268,7 @@
           "tipo_texto": "ADAPTACION_FIEL",
           "texto_visible": "Recordó entonces a Aldonza Lorenzo, una moza labradora de muy buen parecer que vivía cerca de su lugar. Había estado enamorado de ella, aunque, según el narrador, ella nunca llegó a saberlo.",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1218–1223",
-          "imagen": "p1_c01_r05_dama_pensamientos_pre"
+          "imagen": "p1_c01_h11_i01_aldonza_recuerdo_story"
         },
         {
           "id": "H11-I02",
@@ -276,7 +276,7 @@
           "tipo_texto": "ADAPTACION_FIEL",
           "texto_visible": "Decidió hacerla señora de sus pensamientos y buscó un nombre digno de una gran señora. Como ella era natural del Toboso, terminó llamándola Dulcinea del Toboso.",
           "localizador": "DQ.SRC.0005 · Parte I, capítulo I, líneas 1222–1228",
-          "imagen": "p1_c01_r05_dama_pensamientos_pre"
+          "imagen": "p1_c01_h11_i02_nombre_dulcinea_story"
         }
       ]
     }

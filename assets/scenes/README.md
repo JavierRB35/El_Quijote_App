@@ -255,3 +255,31 @@ Se cataloga `DQ.MED.900306` en `assets/scenes/part_1/chapter_05/p1_c05_r05_a10_d
 El propietario aportó y seleccionó específicamente para **H01-I01** el original `Gemini_Generated_Image_emjj6femjj6femjj.jpg` (2048×1143, 663.396 bytes; SHA-256 `bcde617de611c02166381f75da375507cc3b36affb4e794ed9aef6d84e16d62c`). Se incorpora su **derivado WebP sin recorte ni cambios de composición**, calidad 90, 480.812 bytes, SHA-256 `e61c787284231d2a19731cc56c4a569ea479da93fa035cae21cdcc6f003d9d3f`, en `assets/scenes/part_1/chapter_01/p1_c01_h01_pueblo_manchego_story.webp`; ID de inventario `DQ.MED.900328` y de reproductor `scene:p1_c01_h01_pueblo_manchego_story`.
 
 El nombre del original sugiere Gemini, pero no hay metadatos que confirmen generador ni cadena de derechos: clasificado como recreación artística con IA, **no fotografía documental ni evidencia histórica**. La aprobación expresa de uso se limita a este fondo de la **primera intervención**; H01-I02 mantiene `p1_c01_h01_presentacion_hidalgo_story.webp`. Los molinos distantes son ambiente manchego, no una ilustración de su aventura I.8. Región crítica de pueblo/molinos a la derecha; pergamino previsto a la izquierda. El contraste, la integridad visual, el comportamiento en varios tamaños y el cotejo textual directo siguen pendientes de QA. Derechos para redistribución no acreditados (`original_generated_asset_review_on_redistribution`). Véase `docs/qa/dc37/README.md`.
+
+
+## Historia I.1 — 16 fotogramas individualizados aprobados (2026-11-15; DC-35/DC-40)
+
+El propietario aprobó individualmente las **16 imágenes** del encargo artístico de Primera parte, capítulo I. Se incorporan los **WebP derivados de los PNG originales aceptados** (calidad perceptual 82, sin recortes ni modificaciones del encuadre, resolución original conservada) en `assets/scenes/part_1/chapter_01/`. Se mantienen los 326 registros anteriores; el inventario pasa a **342 activos** y los nuevos identificadores provisionales son `DQ.MED.900329`–`DQ.MED.900344`. Los PNG maestros permanecen fuera de Git.
+
+| Imagen | Beat de Historia | ID provisional | Archivo WebP |
+|---|---|---|---|
+| 01 | H02-I02 | `DQ.MED.900329` | `p1_c01_h02_i02_libros_adquiridos_story.webp` |
+| 02 | H03-I01 | `DQ.MED.900330` | `p1_c01_h03_i01_fascinacion_silva_story.webp` |
+| 03 | H03-I02 | `DQ.MED.900331` | `p1_c01_h03_i02_razon_sinrazon_story.webp` |
+| 04 | H03-I03 | `DQ.MED.900332` | `p1_c01_h03_i03_cura_barbero_debate_story.webp` |
+| 05 | H04-I02 | `DQ.MED.900333` | `p1_c01_h04_i02_imaginacion_desbordada_story.webp` |
+| 06 | H05-I01 | `DQ.MED.900334` | `p1_c01_h05_i01_resolucion_caballero_story.webp` |
+| 07 | H05-I02 | `DQ.MED.900335` | `p1_c01_h05_i02_horizonte_aventuras_story.webp` |
+| 08 | H06-I01 | `DQ.MED.900336` | `p1_c01_h06_i01_armas_olvidadas_story.webp` |
+| 09 | H07-I01 | `DQ.MED.900337` | `p1_c01_h07_i01_primera_celada_carton_story.webp` |
+| 10 | H08-I02 | `DQ.MED.900338` | `p1_c01_h08_i02_nombre_rocinante_story.webp` |
+| 11 | H09-I01 | `DQ.MED.900339` | `p1_c01_h09_i01_nombre_don_quijote_story.webp` |
+| 12 | H09-I02 | `DQ.MED.900340` | `p1_c01_h09_i02_nombre_de_la_mancha_story.webp` |
+| 13 | H10-I02 | `DQ.MED.900341` | `p1_c01_h10_i02_soliloquio_gigante_story.webp` |
+| 14 | H10-I03 | `DQ.MED.900342` | `p1_c01_h10_i03_caraculiambro_imaginado_story.webp` |
+| 15 | H11-I01 | `DQ.MED.900343` | `p1_c01_h11_i01_aldonza_recuerdo_story.webp` |
+| 16 | H11-I02 | `DQ.MED.900344` | `p1_c01_h11_i02_nombre_dulcinea_story.webp` |
+
+Los 16 registros del `manifest.json` contienen SHA-256, SHA de objeto Git, nombre y hash del PNG maestro, dimensiones, alt, procedencia IA, ancla de ficha, autorización visual y estado de QA. Aplicar el estilo DC-40 y la cronología concreta de cada intervención; las imágenes de Historia **no se asignan automáticamente a rondas de Aventura ni sustituyen preimágenes antiespoiler**. El borrador `p1_c01_biblioteca_pre.webp` se conserva sin modificación. La imagen H07-I01 fue aceptada con una reserva sobre el acabado contemporáneo aparente del cartón; mantener el aviso en una eventual auditoría editorial.
+
+**Pendiente:** cotejo textual directo final con el corpus oficial, pruebas de visualización sobre pergamino/interfaz (DC-28, DC-37 y TS-001), verificación de zonas seguras y derechos para redistribución. Este alta es exclusivamente de recursos aprobados; **no modifica guiones, rondas, React, contratos de datos ni activa el capítulo**.

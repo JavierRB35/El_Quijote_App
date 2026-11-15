@@ -44,8 +44,8 @@
         "alt": "El hidalgo lee con avidez antes de adquirir más libros."
       },
       "imagenConsecuencia": {
-        "uri": "assets://scenes/part_1/chapter_01/p1_c01_h04_desvelo_nocturno_story.webp",
-        "alt": "El hidalgo se desvela leyendo libros de caballerías durante la noche."
+        "uri": "assets://scenes/part_1/chapter_01/p1_c01_h02_i02_libros_adquiridos_story.webp",
+        "alt": "El hidalgo contempla satisfecho los numerosos libros de caballerías que ha reunido en su casa."
       }
     },
     {
@@ -148,8 +148,8 @@
         "alt": "El hidalgo contempla a su viejo rocín, antes de darle nombre."
       },
       "imagenConsecuencia": {
-        "uri": "assets://scenes/part_1/chapter_01/p1_c01_r04_rocin_pre.webp",
-        "alt": "El viejo rocín recibe el nombre de Rocinante, explicado en el texto."
+        "uri": "assets://scenes/part_1/chapter_01/p1_c01_h08_i02_nombre_rocinante_story.webp",
+        "alt": "El hidalgo acaricia con orgullo a su viejo rocín después de darle el nombre de Rocinante."
       }
     },
     {
@@ -181,8 +181,8 @@
         "alt": "Don Quijote reflexiona solo sobre la dama que le falta."
       },
       "imagenConsecuencia": {
-        "uri": "assets://scenes/part_1/chapter_01/p1_c01_r05_dama_pensamientos_pre.webp",
-        "alt": "Don Quijote imagina a su dama, cuyo nombre revela la narración."
+        "uri": "assets://scenes/part_1/chapter_01/p1_c01_h11_i02_nombre_dulcinea_story.webp",
+        "alt": "Don Quijote sonríe satisfecho después de elegir Dulcinea del Toboso como nombre de su dama ideal."
       },
       "checkpoint": {
         "id": "identidad",

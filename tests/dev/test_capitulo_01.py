@@ -19,8 +19,14 @@ assert a["estado_editorial"] == h["estado_editorial"] == "piloto_integrado"
 assert a["revision_visual"] == h["revision_visual"] == "pendiente"
 assert len(a["rondas"]) == 5
 assert len(h["escenas"]) == 11
+intervenciones = [u for escena in h["escenas"] for u in escena["intervenciones"]]
+assert len({u["imagen"] for u in intervenciones}) == 25, "DC-37: imagen distinta por intervención"
+assert sum(u["imagen"].startswith("p1_c01_h" + u["id"][1:3].lower() + "_i" + u["id"][-2:] + "_") for u in intervenciones) == 16
 assert sum(len(s["intervenciones"]) for s in h["escenas"]) == 25
 assert len({r["imagenPrevia"]["uri"] for r in a["rondas"]}) == 5
+for idx, media_id in [(0, "p1_c01_h02_i02_libros_adquiridos_story"), (3, "p1_c01_h08_i02_nombre_rocinante_story"), (4, "p1_c01_h11_i02_nombre_dulcinea_story")]:
+    assert a["rondas"][idx]["imagenConsecuencia"]["uri"].endswith(media_id + ".webp")
+    assert a["rondas"][idx]["imagenPrevia"]["uri"] != a["rondas"][idx]["imagenConsecuencia"]["uri"]
 assert [s["id"] for s in h["escenas"]] == [f"H{i:02d}" for i in range(1, 12)]
 for r in a["rondas"]:
     assert len(r["opciones"]) == 3
@@ -39,6 +45,6 @@ for escena in h["escenas"]:
             normalizar = lambda texto: re.sub(r"\s+", " ", texto).strip()
             assert normalizar(interv["texto_visible"]) in normalizar(capitulo), (escena["id"], interv["id"])
 assert [i["imagen"] for i in h["escenas"][6]["intervenciones"]] == [
-    "p1_c01_r03_armas_morrion_pre", "p1_c01_h07_celada_rota_story",
+    "p1_c01_h07_i01_primera_celada_carton_story", "p1_c01_h07_celada_rota_story",
     "p1_c01_r03_celada_reforzada_post"]
 print("PASS I.1: 5 rondas, 5 preimágenes distintas, 11 escenas, 25 intervenciones, planos reales")

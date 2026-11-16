@@ -6879,7 +6879,7 @@
       "width_px": 1672,
       "height_px": 941,
       "mime_type": "image/webp",
-      "sha256": "94bccd808a13d4bfbb87adecffe8c592d9325d4d0732dffc5b41f598a542c1f0",
+      "sha256": "19dc5c218fcd9714049c19f5cde868592aa1d7982299d0921957ab45527a75f7",
       "source_class": "RECREACION_ARTISTICA",
       "generated_with": "OpenAI ImageGen",
       "attribution_es": "Recreación artística generada con IA para El Quijote, noviembre de 2026, a petición del propietario.",
@@ -6889,7 +6889,7 @@
       "question_spoiler_validation": "pending_in_game_context_qa",
       "textual_locator_status": "verified_repo_gutenberg_2000",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Aprobación artística expresa del propietario el 2026-11-09. Uso previsto: Consecuencia de Aventura R03 e Historia (reparación concluida). Fuente: DQ.ED.0003 / DQ.SRC.0005, Primera parte, capítulo I, líneas 1164–1172, content/textos/gutenberg_2000/El_Quijote.txt. No activar automáticamente. Pendiente QA de composición DC-28 y referencias de interfaz Aventura/Historia."
+      "review_notes_es": "Aprobación artística expresa del propietario el 2026-11-09. Uso previsto: Consecuencia de Aventura R03 e Historia (reparación concluida). Fuente: DQ.ED.0003 / DQ.SRC.0005, Primera parte, capítulo I, líneas 1164–1172, content/textos/gutenberg_2000/El_Quijote.txt. No activar automáticamente. Pendiente QA de composición DC-28 y referencias de interfaz Aventura/Historia. Corrección DC-42 (16-11-2026): sustitución localizada de casco y celada final; conservación comprobada de todos los píxeles exteriores a la máscara sobre el original aprobado. Fuente visual: Lámina 1, imagen 1. Ver docs/AUDITORIA_CELADA_P1_C01_C02_2026-11-16.json."
     },
     {
       "id": "p1_c01_r04_rocin_pre",
@@ -7122,7 +7122,7 @@
       "width_px": 1672,
       "height_px": 941,
       "mime_type": "image/webp",
-      "sha256": "640813047b540a209b7871e05d0f8f991f03e5e7b3c18ddcac5337d5dce7e212",
+      "sha256": "04c0757ef729ea6a7273ffeb6640bfab99a30f7edbfe7709bf12828f89a270cc",
       "source_class": "RECREACION_ARTISTICA",
       "generated_with": "OpenAI ImageGen",
       "attribution_es": "Recreación artística generada mediante OpenAI ImageGen para El Quijote, noviembre de 2026, por encargo y con aceptación visual expresa del propietario.",
@@ -7132,7 +7132,7 @@
       "question_spoiler_validation": "pending_in_game_context_qa",
       "textual_locator_status": "pending_direct_source_cotejo",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Imagen 1/6 aprobada expresamente por el propietario el 2026-11-10; protocolo DC-35. Plano Historia H03, Primera Parte, capítulo II; ancla editorial documentada en docs/guiones/HISTORIA_P1_C02_CANDIDATA_2026-11-10.md, texto oficial DQ.ED.0003 / DQ.SRC.0005, líneas 1261–1304. La mano alzada y el paisaje concreto son recreaciones artísticas; no se representan literalmente las hazañas imaginadas. PNG original aprobado SHA-256 78c1c3c010c78c33ee5d225635bb89f5622a8e09b3933291e1bc59dc751767f5; WebP optimizado sin recorte ni alteración narrativa, 1672×941 px, 240040 bytes, SHA-256 640813047b540a209b7871e05d0f8f991f03e5e7b3c18ddcac5337d5dce7e212, Git blob SHA-1 f748e20f9eff972b173a77eac409e0d0f5ceb441. Revisión visual específica aprobada, pero cotejo textual directo, composición DC-28/TS-001, accesibilidad y redistribución aún pendientes; NO activar ni publicar por el alta del catálogo."
+      "review_notes_es": "Imagen 1/6 aprobada expresamente por el propietario el 2026-11-10; protocolo DC-35. Plano Historia H03, Primera Parte, capítulo II; ancla editorial documentada en docs/guiones/HISTORIA_P1_C02_CANDIDATA_2026-11-10.md, texto oficial DQ.ED.0003 / DQ.SRC.0005, líneas 1261–1304. La mano alzada y el paisaje concreto son recreaciones artísticas; no se representan literalmente las hazañas imaginadas. PNG original aprobado SHA-256 78c1c3c010c78c33ee5d225635bb89f5622a8e09b3933291e1bc59dc751767f5; WebP optimizado sin recorte ni alteración narrativa, 1672×941 px, 240040 bytes, SHA-256 640813047b540a209b7871e05d0f8f991f03e5e7b3c18ddcac5337d5dce7e212, Git blob SHA-1 f748e20f9eff972b173a77eac409e0d0f5ceb441. Revisión visual específica aprobada, pero cotejo textual directo, composición DC-28/TS-001, accesibilidad y redistribución aún pendientes; NO activar ni publicar por el alta del catálogo. Corrección DC-42 (16-11-2026): sustitución localizada de casco y celada final; conservación comprobada de todos los píxeles exteriores a la máscara sobre el original aprobado. Fuente visual: Lámina 1, imagen 1. Ver docs/AUDITORIA_CELADA_P1_C01_C02_2026-11-16.json."
     },
     {
       "id": "p1_c02_h05_espera_trompeta_story",
@@ -7149,7 +7149,7 @@
       "width_px": 1672,
       "height_px": 941,
       "mime_type": "image/webp",
-      "sha256": "18f663516b9b7133b60a9ba40149ab5fa5e5d9832f9fd71e8286b0a2c20f713d",
+      "sha256": "fe04ef7e839d0164a88f6e8c18b8cb3fe8ffa6bff9a4f60de214595e06ba5e5b",
       "source_class": "RECREACION_ARTISTICA",
       "generated_with": "OpenAI ImageGen",
       "attribution_es": "Recreación artística generada mediante OpenAI ImageGen para El Quijote, noviembre de 2026, por encargo y con aceptación visual expresa del propietario.",
@@ -7158,7 +7158,7 @@
       "question_spoiler_validation": "pending_in_game_context_qa",
       "textual_locator_status": "pending_direct_source_cotejo",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Imagen 2/6 aprobada expresamente por el propietario el 2026-11-10; protocolo DC-35. Plano Historia H05, Primera Parte, capítulo II; ancla editorial documentada en docs/guiones/HISTORIA_P1_C02_CANDIDATA_2026-11-10.md, texto oficial DQ.ED.0003 / DQ.SRC.0005, líneas 1315–1332. Es la venta real, no un castillo; escena distinta de la preimagen aprobada R02. No muestra un trompetero ficticio ni un castillo físico. PNG original aprobado SHA-256 c8ab8baad5a84bbc65a2627225a42b87f52f1be5a4a7f06f703f6c4f8d811e89; WebP optimizado sin recorte ni alteración narrativa, 1672×941 px, 274474 bytes, SHA-256 18f663516b9b7133b60a9ba40149ab5fa5e5d9832f9fd71e8286b0a2c20f713d, Git blob SHA-1 0bcc29843822892c0c017620306c386d1bb9467a. Revisión visual específica aprobada, pero cotejo textual directo, composición DC-28/TS-001, accesibilidad y redistribución aún pendientes; NO activar ni publicar por el alta del catálogo."
+      "review_notes_es": "Imagen 2/6 aprobada expresamente por el propietario el 2026-11-10; protocolo DC-35. Plano Historia H05, Primera Parte, capítulo II; ancla editorial documentada en docs/guiones/HISTORIA_P1_C02_CANDIDATA_2026-11-10.md, texto oficial DQ.ED.0003 / DQ.SRC.0005, líneas 1315–1332. Es la venta real, no un castillo; escena distinta de la preimagen aprobada R02. No muestra un trompetero ficticio ni un castillo físico. PNG original aprobado SHA-256 c8ab8baad5a84bbc65a2627225a42b87f52f1be5a4a7f06f703f6c4f8d811e89; WebP optimizado sin recorte ni alteración narrativa, 1672×941 px, 274474 bytes, SHA-256 18f663516b9b7133b60a9ba40149ab5fa5e5d9832f9fd71e8286b0a2c20f713d, Git blob SHA-1 0bcc29843822892c0c017620306c386d1bb9467a. Revisión visual específica aprobada, pero cotejo textual directo, composición DC-28/TS-001, accesibilidad y redistribución aún pendientes; NO activar ni publicar por el alta del catálogo. Corrección DC-42 (16-11-2026): sustitución localizada de casco y celada final; conservación comprobada de todos los píxeles exteriores a la máscara sobre el original aprobado. Fuente visual: Lámina 1, imagen 1. Ver docs/AUDITORIA_CELADA_P1_C01_C02_2026-11-16.json."
     },
     {
       "id": "p1_c02_h06_visera_risas_story",
@@ -9268,7 +9268,7 @@
       "width_px": 1672,
       "height_px": 941,
       "mime_type": "image/webp",
-      "sha256": "1681b873c9f7670b26823b6f541bfde85fc8e3824d05c0e3b86938d1e52dc333",
+      "sha256": "9ae64732b91b1b820c927c446ab81639142f3c38e49f9e46622f96e79e24a8f5",
       "source_class": "RECREACION_ARTISTICA",
       "generated_with": "OpenAI ImageGen",
       "attribution_es": "Recreación artística original generada con OpenAI ImageGen para El Quijote, noviembre de 2026, por encargo del propietario.",
@@ -9278,7 +9278,7 @@
       "question_spoiler_validation": "pending_in_game_context_qa",
       "textual_locator_status": "pending_direct_source_cotejo",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Imagen individual 1/16 aceptada expresamente por el propietario el 2026-11-16 para Historia Primera parte, capítulo II, H01-I01. Versión final aceptada v1. Ficha oficial DC-40/DC-41. PNG maestro aprobado: a_cinematic_realistic_historical_scene_at_pre_daw.png; SHA-256 PNG a716e083cf27cc546d8bed203dfc09e25cad8f6356ca0e1b9a8c2c044771199b; generación 4a767414-baf8-4f10-8424-d635dcecf24a. WebP calidad 82 sin recorte ni cambio de encuadre: 1672×941, 197368 bytes; SHA Git blob 7d1ef41220103be919be19d5489bd6e72d3307f6. Objetivo 1672×941 no aplicado donde alteraría el encuadre aprobado. Aprobación visual no implica activación del guion, QA DC-28/DC-41 en pantalla ni autorización de redistribución; usos Aventura sujetos a revisión antiespoiler."
+      "review_notes_es": "Imagen individual 1/16 aceptada expresamente por el propietario el 2026-11-16 para Historia Primera parte, capítulo II, H01-I01. Versión final aceptada v1. Ficha oficial DC-40/DC-41. PNG maestro aprobado: a_cinematic_realistic_historical_scene_at_pre_daw.png; SHA-256 PNG a716e083cf27cc546d8bed203dfc09e25cad8f6356ca0e1b9a8c2c044771199b; generación 4a767414-baf8-4f10-8424-d635dcecf24a. WebP calidad 82 sin recorte ni cambio de encuadre: 1672×941, 197368 bytes; SHA Git blob 7d1ef41220103be919be19d5489bd6e72d3307f6. Objetivo 1672×941 no aplicado donde alteraría el encuadre aprobado. Aprobación visual no implica activación del guion, QA DC-28/DC-41 en pantalla ni autorización de redistribución; usos Aventura sujetos a revisión antiespoiler. Corrección DC-42 (16-11-2026): sustitución localizada de casco y celada final; conservación comprobada de todos los píxeles exteriores a la máscara sobre el original aprobado. Fuente visual: Lámina 1, imagen 1. Ver docs/AUDITORIA_CELADA_P1_C01_C02_2026-11-16.json."
     },
     {
       "id": "p1_c02_h02_i01_duda_investidura_story",
@@ -9295,7 +9295,7 @@
       "width_px": 1602,
       "height_px": 981,
       "mime_type": "image/webp",
-      "sha256": "0110e0d18cd5d34cf5a2757d5d307f48b5bc047cb3f379d1159a9b8341a8296b",
+      "sha256": "a0c76b5dee77b0cd6cef8775d955d7e63ffe061f46f420213eda27ef38d248a8",
       "source_class": "RECREACION_ARTISTICA",
       "generated_with": "OpenAI ImageGen",
       "attribution_es": "Recreación artística original generada con OpenAI ImageGen para El Quijote, noviembre de 2026, por encargo del propietario.",
@@ -9305,7 +9305,7 @@
       "question_spoiler_validation": "pending_in_game_context_qa",
       "textual_locator_status": "pending_direct_source_cotejo",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Imagen individual 2/16 aceptada expresamente por el propietario el 2026-11-16 para Historia Primera parte, capítulo II, H02-I01. Versión final aceptada v1. Ficha oficial DC-40/DC-41. PNG maestro aprobado: a_cinematic_realistic_high_detail_scene_outdoors.png; SHA-256 PNG afb322d112ffd7c69498794c00d5a0700d5f802043004837305aabff49078543; generación 3f12223b-1d3f-45d5-99be-1c0be863ca12. WebP calidad 82 sin recorte ni cambio de encuadre: 1602×981, 234620 bytes; SHA Git blob ec51f3264b61b0028d636229e028aeefa580ba54. Objetivo 1672×941 no aplicado donde alteraría el encuadre aprobado. Aprobación visual no implica activación del guion, QA DC-28/DC-41 en pantalla ni autorización de redistribución; usos Aventura sujetos a revisión antiespoiler."
+      "review_notes_es": "Imagen individual 2/16 aceptada expresamente por el propietario el 2026-11-16 para Historia Primera parte, capítulo II, H02-I01. Versión final aceptada v1. Ficha oficial DC-40/DC-41. PNG maestro aprobado: a_cinematic_realistic_high_detail_scene_outdoors.png; SHA-256 PNG afb322d112ffd7c69498794c00d5a0700d5f802043004837305aabff49078543; generación 3f12223b-1d3f-45d5-99be-1c0be863ca12. WebP calidad 82 sin recorte ni cambio de encuadre: 1602×981, 234620 bytes; SHA Git blob ec51f3264b61b0028d636229e028aeefa580ba54. Objetivo 1672×941 no aplicado donde alteraría el encuadre aprobado. Aprobación visual no implica activación del guion, QA DC-28/DC-41 en pantalla ni autorización de redistribución; usos Aventura sujetos a revisión antiespoiler. Corrección DC-42 (16-11-2026): sustitución localizada de casco y celada final; conservación comprobada de todos los píxeles exteriores a la máscara sobre el original aprobado. Fuente visual: Lámina 1, imagen 1. Ver docs/AUDITORIA_CELADA_P1_C01_C02_2026-11-16.json."
     },
     {
       "id": "p1_c02_h02_i02_resolucion_armarse_story",
@@ -9322,7 +9322,7 @@
       "width_px": 1602,
       "height_px": 982,
       "mime_type": "image/webp",
-      "sha256": "b5ddc2cacb2c34f36dd01adf47f7ccdf1e2648151dad234960fe63c89c56bf8e",
+      "sha256": "9f18d93d95b40de7c5b25a272fca4c25a3172d28d9928a8513bfdeeeb97942a5",
       "source_class": "RECREACION_ARTISTICA",
       "generated_with": "OpenAI ImageGen",
       "attribution_es": "Recreación artística original generada con OpenAI ImageGen para El Quijote, noviembre de 2026, por encargo del propietario.",
@@ -9332,7 +9332,7 @@
       "question_spoiler_validation": "pending_in_game_context_qa",
       "textual_locator_status": "pending_direct_source_cotejo",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Imagen individual 3/16 aceptada expresamente por el propietario el 2026-11-16 para Historia Primera parte, capítulo II, H02-I02. Versión final aceptada v1. Ficha oficial DC-40/DC-41. PNG maestro aprobado: a_cinematic_highly_detailed_realistic_scene_of_d.png; SHA-256 PNG d4ef4c3c11c15d52232efac9eb79f8684fa95aeaac4115099cc1f3586cbb9612; generación cd96fb7c-1760-438b-adf5-99c9dfa887e0. WebP calidad 82 sin recorte ni cambio de encuadre: 1602×982, 190804 bytes; SHA Git blob d32668f21277244f20d9976687559147f73e6384. Objetivo 1672×941 no aplicado donde alteraría el encuadre aprobado. Aprobación visual no implica activación del guion, QA DC-28/DC-41 en pantalla ni autorización de redistribución; usos Aventura sujetos a revisión antiespoiler."
+      "review_notes_es": "Imagen individual 3/16 aceptada expresamente por el propietario el 2026-11-16 para Historia Primera parte, capítulo II, H02-I02. Versión final aceptada v1. Ficha oficial DC-40/DC-41. PNG maestro aprobado: a_cinematic_highly_detailed_realistic_scene_of_d.png; SHA-256 PNG d4ef4c3c11c15d52232efac9eb79f8684fa95aeaac4115099cc1f3586cbb9612; generación cd96fb7c-1760-438b-adf5-99c9dfa887e0. WebP calidad 82 sin recorte ni cambio de encuadre: 1602×982, 190804 bytes; SHA Git blob d32668f21277244f20d9976687559147f73e6384. Objetivo 1672×941 no aplicado donde alteraría el encuadre aprobado. Aprobación visual no implica activación del guion, QA DC-28/DC-41 en pantalla ni autorización de redistribución; usos Aventura sujetos a revisión antiespoiler. Corrección DC-42 (16-11-2026): sustitución localizada de casco y celada final; conservación comprobada de todos los píxeles exteriores a la máscara sobre el original aprobado. Fuente visual: Lámina 1, imagen 1. Ver docs/AUDITORIA_CELADA_P1_C01_C02_2026-11-16.json."
     },
     {
       "id": "p1_c02_h03_i01_cronista_hazanas_story",
@@ -9349,7 +9349,7 @@
       "width_px": 1602,
       "height_px": 982,
       "mime_type": "image/webp",
-      "sha256": "e68bfe5d387f42c131b59ec332ccb61e26530ff3060d0505226d2d4fc12d3213",
+      "sha256": "e2ee1bd1c2129822d1801e385dc39f19c2f0ddb4b4b4756290387ebcee9a2f64",
       "source_class": "RECREACION_ARTISTICA",
       "generated_with": "OpenAI ImageGen",
       "attribution_es": "Recreación artística original generada con OpenAI ImageGen para El Quijote, noviembre de 2026, por encargo del propietario.",
@@ -9359,7 +9359,7 @@
       "question_spoiler_validation": "pending_in_game_context_qa",
       "textual_locator_status": "pending_direct_source_cotejo",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Imagen individual 4/16 aceptada expresamente por el propietario el 2026-11-16 para Historia Primera parte, capítulo II, H03-I01. Versión final aceptada v1. Ficha oficial DC-40/DC-41. PNG maestro aprobado: duplicates/a_cinematic_highly_detailed_realistic_scene_in_wa.png; SHA-256 PNG f146ada1a13bd87ff1b14cfda15b5cb303243b79455ab6be5e6630ab2e69d5db; generación dda0420e-9856-47c3-ab4b-53e62badb626. WebP calidad 82 sin recorte ni cambio de encuadre: 1602×982, 186486 bytes; SHA Git blob 0e1b83941beaa84464aef7abf5a1ec2e75c44db5. Objetivo 1672×941 no aplicado donde alteraría el encuadre aprobado. Aprobación visual no implica activación del guion, QA DC-28/DC-41 en pantalla ni autorización de redistribución; usos Aventura sujetos a revisión antiespoiler."
+      "review_notes_es": "Imagen individual 4/16 aceptada expresamente por el propietario el 2026-11-16 para Historia Primera parte, capítulo II, H03-I01. Versión final aceptada v1. Ficha oficial DC-40/DC-41. PNG maestro aprobado: duplicates/a_cinematic_highly_detailed_realistic_scene_in_wa.png; SHA-256 PNG f146ada1a13bd87ff1b14cfda15b5cb303243b79455ab6be5e6630ab2e69d5db; generación dda0420e-9856-47c3-ab4b-53e62badb626. WebP calidad 82 sin recorte ni cambio de encuadre: 1602×982, 186486 bytes; SHA Git blob 0e1b83941beaa84464aef7abf5a1ec2e75c44db5. Objetivo 1672×941 no aplicado donde alteraría el encuadre aprobado. Aprobación visual no implica activación del guion, QA DC-28/DC-41 en pantalla ni autorización de redistribución; usos Aventura sujetos a revisión antiespoiler. Corrección DC-42 (16-11-2026): sustitución localizada de casco y celada final; conservación comprobada de todos los píxeles exteriores a la máscara sobre el original aprobado. Fuente visual: Lámina 1, imagen 1. Ver docs/AUDITORIA_CELADA_P1_C01_C02_2026-11-16.json."
     },
     {
       "id": "p1_c02_h03_i03_dulcinea_sol_story",
@@ -9376,7 +9376,7 @@
       "width_px": 1602,
       "height_px": 982,
       "mime_type": "image/webp",
-      "sha256": "aba356c112213b3c0570af4501dc92be05da7ade4e27ead7b59d44783d82af0c",
+      "sha256": "d96fb35889f4d1bb2b037ca4c0b54880b0b962a1d66a401fda5bffc4e4a5b651",
       "source_class": "RECREACION_ARTISTICA",
       "generated_with": "OpenAI ImageGen",
       "attribution_es": "Recreación artística original generada con OpenAI ImageGen para El Quijote, noviembre de 2026, por encargo del propietario.",
@@ -9386,7 +9386,7 @@
       "question_spoiler_validation": "pending_in_game_context_qa",
       "textual_locator_status": "pending_direct_source_cotejo",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Imagen individual 5/16 aceptada expresamente por el propietario el 2026-11-16 para Historia Primera parte, capítulo II, H03-I03. Versión final aceptada v2. Ficha oficial DC-40/DC-41. PNG maestro aprobado: a_cinematic_highly_detailed_realism_scene_don_qu.png; SHA-256 PNG d9ba01461dfda0bceaf1e0e1a6c0e1041cc644109bb0f2ce883e0aa4601a2308; generación 4a50deab-9352-4371-a8b5-7316c1135b64. WebP calidad 82 sin recorte ni cambio de encuadre: 1602×982, 185982 bytes; SHA Git blob 705df9d6fc6ef91f16d79af3a9b634602dd053df. Objetivo 1672×941 no aplicado donde alteraría el encuadre aprobado. Aprobación visual no implica activación del guion, QA DC-28/DC-41 en pantalla ni autorización de redistribución; usos Aventura sujetos a revisión antiespoiler."
+      "review_notes_es": "Imagen individual 5/16 aceptada expresamente por el propietario el 2026-11-16 para Historia Primera parte, capítulo II, H03-I03. Versión final aceptada v2. Ficha oficial DC-40/DC-41. PNG maestro aprobado: a_cinematic_highly_detailed_realism_scene_don_qu.png; SHA-256 PNG d9ba01461dfda0bceaf1e0e1a6c0e1041cc644109bb0f2ce883e0aa4601a2308; generación 4a50deab-9352-4371-a8b5-7316c1135b64. WebP calidad 82 sin recorte ni cambio de encuadre: 1602×982, 185982 bytes; SHA Git blob 705df9d6fc6ef91f16d79af3a9b634602dd053df. Objetivo 1672×941 no aplicado donde alteraría el encuadre aprobado. Aprobación visual no implica activación del guion, QA DC-28/DC-41 en pantalla ni autorización de redistribución; usos Aventura sujetos a revisión antiespoiler. Corrección DC-42 (16-11-2026): sustitución localizada de casco y celada final; conservación comprobada de todos los píxeles exteriores a la máscara sobre el original aprobado. Fuente visual: Lámina 1, imagen 1. Ver docs/AUDITORIA_CELADA_P1_C01_C02_2026-11-16.json."
     },
     {
       "id": "p1_c02_h04_i01_cansancio_hambre_story",
@@ -9403,7 +9403,7 @@
       "width_px": 1602,
       "height_px": 982,
       "mime_type": "image/webp",
-      "sha256": "ee5bc252edd35781a7015f5f5d49c3836df0717f591719cfd0b8a58b7224b47f",
+      "sha256": "326829db5a70d1f359421e18ff5db4f602642e2da549ca9ba42d85bfecf6e79f",
       "source_class": "RECREACION_ARTISTICA",
       "generated_with": "OpenAI ImageGen",
       "attribution_es": "Recreación artística original generada con OpenAI ImageGen para El Quijote, noviembre de 2026, por encargo del propietario.",
@@ -9413,7 +9413,7 @@
       "question_spoiler_validation": "pending_in_game_context_qa",
       "textual_locator_status": "pending_direct_source_cotejo",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Imagen individual 6/16 aceptada expresamente por el propietario el 2026-11-16 para Historia Primera parte, capítulo II, H04-I01. Versión final aceptada v2. Ficha oficial DC-40/DC-41. PNG maestro aprobado: a_cinematic_highly_detailed_realistic_scene_of_do.png; SHA-256 PNG 469a79c52c0acfc5bfc7646a40013bef3ac702e2c8891469ee7ebce3508153ed; generación 18b7fd30-f273-40fd-a926-77d78e38c4e6. WebP calidad 82 sin recorte ni cambio de encuadre: 1602×982, 209412 bytes; SHA Git blob 63184722cc5217d4559fe4d3d18f29911fead214. Objetivo 1672×941 no aplicado donde alteraría el encuadre aprobado. Aprobación visual no implica activación del guion, QA DC-28/DC-41 en pantalla ni autorización de redistribución; usos Aventura sujetos a revisión antiespoiler."
+      "review_notes_es": "Imagen individual 6/16 aceptada expresamente por el propietario el 2026-11-16 para Historia Primera parte, capítulo II, H04-I01. Versión final aceptada v2. Ficha oficial DC-40/DC-41. PNG maestro aprobado: a_cinematic_highly_detailed_realistic_scene_of_do.png; SHA-256 PNG 469a79c52c0acfc5bfc7646a40013bef3ac702e2c8891469ee7ebce3508153ed; generación 18b7fd30-f273-40fd-a926-77d78e38c4e6. WebP calidad 82 sin recorte ni cambio de encuadre: 1602×982, 209412 bytes; SHA Git blob 63184722cc5217d4559fe4d3d18f29911fead214. Objetivo 1672×941 no aplicado donde alteraría el encuadre aprobado. Aprobación visual no implica activación del guion, QA DC-28/DC-41 en pantalla ni autorización de redistribución; usos Aventura sujetos a revisión antiespoiler. Corrección DC-42 (16-11-2026): sustitución localizada de casco y celada final; conservación comprobada de todos los píxeles exteriores a la máscara sobre el original aprobado. Fuente visual: Lámina 1, imagen 1. Ver docs/AUDITORIA_CELADA_P1_C01_C02_2026-11-16.json."
     },
     {
       "id": "p1_c02_h05_i02_cuerno_porquero_story",
@@ -9430,7 +9430,7 @@
       "width_px": 1602,
       "height_px": 982,
       "mime_type": "image/webp",
-      "sha256": "9243b1462c2ed2489684d66b0c1c4071990c18eeb0ad4c4e5db54332b8ee4561",
+      "sha256": "d7454609d80d4edce2d9232cd3ff69224d2196554514d083a3bb2d8287ef5635",
       "source_class": "RECREACION_ARTISTICA",
       "generated_with": "OpenAI ImageGen",
       "attribution_es": "Recreación artística original generada con OpenAI ImageGen para El Quijote, noviembre de 2026, por encargo del propietario.",
@@ -9440,7 +9440,7 @@
       "question_spoiler_validation": "pending_in_game_context_qa",
       "textual_locator_status": "pending_direct_source_cotejo",
       "rights_status": "original_generated_asset_review_on_redistribution",
-      "review_notes_es": "Imagen individual 7/16 aceptada expresamente por el propietario el 2026-11-16 para Historia Primera parte, capítulo II, H05-I02. Versión final aceptada v3. Ficha oficial DC-40/DC-41. PNG maestro aprobado: duplicates/a_cinematic_highly_detailed_realistic_scene_in_wa_2.png; SHA-256 PNG 4b7b5f9f738d2abf90764343ec593e8fc03693a4175f71de1c0906a8e1f62239; generación a5f4bbb0-3398-48d7-9976-07a3342ddbf4. WebP calidad 82 sin recorte ni cambio de encuadre: 1602×982, 234018 bytes; SHA Git blob 23dfb6077b8e26c7af5baf94062ceaf429372059. Objetivo 1672×941 no aplicado donde alteraría el encuadre aprobado. Aprobación visual no implica activación del guion, QA DC-28/DC-41 en pantalla ni autorización de redistribución; usos Aventura sujetos a revisión antiespoiler."
+      "review_notes_es": "Imagen individual 7/16 aceptada expresamente por el propietario el 2026-11-16 para Historia Primera parte, capítulo II, H05-I02. Versión final aceptada v3. Ficha oficial DC-40/DC-41. PNG maestro aprobado: duplicates/a_cinematic_highly_detailed_realistic_scene_in_wa_2.png; SHA-256 PNG 4b7b5f9f738d2abf90764343ec593e8fc03693a4175f71de1c0906a8e1f62239; generación a5f4bbb0-3398-48d7-9976-07a3342ddbf4. WebP calidad 82 sin recorte ni cambio de encuadre: 1602×982, 234018 bytes; SHA Git blob 23dfb6077b8e26c7af5baf94062ceaf429372059. Objetivo 1672×941 no aplicado donde alteraría el encuadre aprobado. Aprobación visual no implica activación del guion, QA DC-28/DC-41 en pantalla ni autorización de redistribución; usos Aventura sujetos a revisión antiespoiler. Corrección DC-42 (16-11-2026): sustitución localizada de casco y celada final; conservación comprobada de todos los píxeles exteriores a la máscara sobre el original aprobado. Fuente visual: Lámina 1, imagen 1. Ver docs/AUDITORIA_CELADA_P1_C01_C02_2026-11-16.json."
     },
     {
       "id": "p1_c02_h06_i01_visera_alzada_temor_story",

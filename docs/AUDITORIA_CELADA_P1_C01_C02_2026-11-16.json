@@ -12,7 +12,7 @@
   "count": 56,
   "targets": 29,
   "visually_inspected": 34,
-  "retouched": 0,
+  "retouched": 10,
   "activated": 0,
   "images": [
     {
@@ -276,8 +276,14 @@
       "fase": "post",
       "inspeccion_visual": "inspeccionada",
       "clasificacion": "REQUIERE_RETOQUE_SOLO_CELADA",
-      "estado_ejecucion": "SIN_RETOQUE;_ARCHIVO_ORIGINAL_INTACTO",
-      "notas": "En la imagen revisada se sostiene una pieza de cartón separada del morrión de la mesa; corregir ambos componentes sin tocar manos."
+      "estado_ejecucion": "CORREGIDA_DC42_MAIN; PIXELES_FUERA_MASCARA_SIN_CAMBIO",
+      "notas": "En la imagen revisada se sostiene una pieza de cartón separada del morrión de la mesa; corregir ambos componentes sin tocar manos.",
+      "original_sha256": "94bccd808a13d4bfbb87adecffe8c592d9325d4d0732dffc5b41f598a542c1f0",
+      "final_sha256": "19dc5c218fcd9714049c19f5cde868592aa1d7982299d0921957ab45527a75f7",
+      "mask_changed_pixels": 100172,
+      "outside_mask_changed_pixels": 0,
+      "qa_tecnica": "APROBADA",
+      "qa_visual": "REVISADA_EN_COMPARATIVA"
     },
     {
       "id": "p1_c01_r04_rocin_pre",
@@ -331,8 +337,14 @@
       "fase": "story",
       "inspeccion_visual": "inspeccionada",
       "clasificacion": "REQUIERE_RETOQUE_SOLO_CELADA",
-      "estado_ejecucion": "SIN_RETOQUE;_ARCHIVO_ORIGINAL_INTACTO",
-      "notas": ""
+      "estado_ejecucion": "CORREGIDA_DC42_MAIN; PIXELES_FUERA_MASCARA_SIN_CAMBIO",
+      "notas": "",
+      "original_sha256": "1681b873c9f7670b26823b6f541bfde85fc8e3824d05c0e3b86938d1e52dc333",
+      "final_sha256": "9ae64732b91b1b820c927c446ab81639142f3c38e49f9e46622f96e79e24a8f5",
+      "mask_changed_pixels": 4754,
+      "outside_mask_changed_pixels": 0,
+      "qa_tecnica": "APROBADA",
+      "qa_visual": "REVISADA_EN_COMPARATIVA"
     },
     {
       "id": "p1_c02_h02_i01_duda_investidura_story",
@@ -342,8 +354,14 @@
       "fase": "story",
       "inspeccion_visual": "inspeccionada",
       "clasificacion": "REQUIERE_RETOQUE_SOLO_CELADA",
-      "estado_ejecucion": "SIN_RETOQUE;_ARCHIVO_ORIGINAL_INTACTO",
-      "notas": ""
+      "estado_ejecucion": "CORREGIDA_DC42_MAIN; PIXELES_FUERA_MASCARA_SIN_CAMBIO",
+      "notas": "",
+      "original_sha256": "0110e0d18cd5d34cf5a2757d5d307f48b5bc047cb3f379d1159a9b8341a8296b",
+      "final_sha256": "a0c76b5dee77b0cd6cef8775d955d7e63ffe061f46f420213eda27ef38d248a8",
+      "mask_changed_pixels": 11200,
+      "outside_mask_changed_pixels": 0,
+      "qa_tecnica": "APROBADA",
+      "qa_visual": "REVISADA_EN_COMPARATIVA"
     },
     {
       "id": "p1_c02_h02_i02_resolucion_armarse_story",
@@ -353,8 +371,14 @@
       "fase": "story",
       "inspeccion_visual": "inspeccionada",
       "clasificacion": "REQUIERE_RETOQUE_SOLO_CELADA",
-      "estado_ejecucion": "SIN_RETOQUE;_ARCHIVO_ORIGINAL_INTACTO",
-      "notas": ""
+      "estado_ejecucion": "CORREGIDA_DC42_MAIN; PIXELES_FUERA_MASCARA_SIN_CAMBIO",
+      "notas": "",
+      "original_sha256": "b5ddc2cacb2c34f36dd01adf47f7ccdf1e2648151dad234960fe63c89c56bf8e",
+      "final_sha256": "9f18d93d95b40de7c5b25a272fca4c25a3172d28d9928a8513bfdeeeb97942a5",
+      "mask_changed_pixels": 39485,
+      "outside_mask_changed_pixels": 0,
+      "qa_tecnica": "APROBADA",
+      "qa_visual": "REVISADA_EN_COMPARATIVA"
     },
     {
       "id": "p1_c02_h03_camino_monologos_story",
@@ -364,8 +388,14 @@
       "fase": "pre",
       "inspeccion_visual": "inspeccionada",
       "clasificacion": "REQUIERE_RETOQUE_SOLO_CELADA",
-      "estado_ejecucion": "SIN_RETOQUE;_ARCHIVO_ORIGINAL_INTACTO",
-      "notas": ""
+      "estado_ejecucion": "CORREGIDA_DC42_MAIN; PIXELES_FUERA_MASCARA_SIN_CAMBIO",
+      "notas": "",
+      "original_sha256": "640813047b540a209b7871e05d0f8f991f03e5e7b3c18ddcac5337d5dce7e212",
+      "final_sha256": "04c0757ef729ea6a7273ffeb6640bfab99a30f7edbfe7709bf12828f89a270cc",
+      "mask_changed_pixels": 4944,
+      "outside_mask_changed_pixels": 0,
+      "qa_tecnica": "APROBADA",
+      "qa_visual": "REVISADA_EN_COMPARATIVA"
     },
     {
       "id": "p1_c02_h03_i01_cronista_hazanas_story",
@@ -375,8 +405,14 @@
       "fase": "story",
       "inspeccion_visual": "inspeccionada",
       "clasificacion": "REQUIERE_RETOQUE_SOLO_CELADA",
-      "estado_ejecucion": "SIN_RETOQUE;_ARCHIVO_ORIGINAL_INTACTO",
-      "notas": ""
+      "estado_ejecucion": "CORREGIDA_DC42_MAIN; PIXELES_FUERA_MASCARA_SIN_CAMBIO",
+      "notas": "",
+      "original_sha256": "e68bfe5d387f42c131b59ec332ccb61e26530ff3060d0505226d2d4fc12d3213",
+      "final_sha256": "e2ee1bd1c2129822d1801e385dc39f19c2f0ddb4b4b4756290387ebcee9a2f64",
+      "mask_changed_pixels": 23220,
+      "outside_mask_changed_pixels": 0,
+      "qa_tecnica": "APROBADA",
+      "qa_visual": "REVISADA_EN_COMPARATIVA"
     },
     {
       "id": "p1_c02_h03_i03_dulcinea_sol_story",
@@ -386,8 +422,14 @@
       "fase": "story",
       "inspeccion_visual": "inspeccionada",
       "clasificacion": "REQUIERE_RETOQUE_SOLO_CELADA",
-      "estado_ejecucion": "SIN_RETOQUE;_ARCHIVO_ORIGINAL_INTACTO",
-      "notas": ""
+      "estado_ejecucion": "CORREGIDA_DC42_MAIN; PIXELES_FUERA_MASCARA_SIN_CAMBIO",
+      "notas": "",
+      "original_sha256": "aba356c112213b3c0570af4501dc92be05da7ade4e27ead7b59d44783d82af0c",
+      "final_sha256": "d96fb35889f4d1bb2b037ca4c0b54880b0b962a1d66a401fda5bffc4e4a5b651",
+      "mask_changed_pixels": 28833,
+      "outside_mask_changed_pixels": 0,
+      "qa_tecnica": "APROBADA",
+      "qa_visual": "REVISADA_EN_COMPARATIVA"
     },
     {
       "id": "p1_c02_h04_i01_cansancio_hambre_story",
@@ -397,8 +439,14 @@
       "fase": "story",
       "inspeccion_visual": "inspeccionada",
       "clasificacion": "REQUIERE_RETOQUE_SOLO_CELADA",
-      "estado_ejecucion": "SIN_RETOQUE;_ARCHIVO_ORIGINAL_INTACTO",
-      "notas": ""
+      "estado_ejecucion": "CORREGIDA_DC42_MAIN; PIXELES_FUERA_MASCARA_SIN_CAMBIO",
+      "notas": "",
+      "original_sha256": "ee5bc252edd35781a7015f5f5d49c3836df0717f591719cfd0b8a58b7224b47f",
+      "final_sha256": "326829db5a70d1f359421e18ff5db4f602642e2da549ca9ba42d85bfecf6e79f",
+      "mask_changed_pixels": 13303,
+      "outside_mask_changed_pixels": 0,
+      "qa_tecnica": "APROBADA",
+      "qa_visual": "REVISADA_EN_COMPARATIVA"
     },
     {
       "id": "p1_c02_h05_espera_trompeta_story",
@@ -408,8 +456,14 @@
       "fase": "pre",
       "inspeccion_visual": "inspeccionada",
       "clasificacion": "REQUIERE_RETOQUE_SOLO_CELADA",
-      "estado_ejecucion": "SIN_RETOQUE;_ARCHIVO_ORIGINAL_INTACTO",
-      "notas": ""
+      "estado_ejecucion": "CORREGIDA_DC42_MAIN; PIXELES_FUERA_MASCARA_SIN_CAMBIO",
+      "notas": "",
+      "original_sha256": "18f663516b9b7133b60a9ba40149ab5fa5e5d9832f9fd71e8286b0a2c20f713d",
+      "final_sha256": "fe04ef7e839d0164a88f6e8c18b8cb3fe8ffa6bff9a4f60de214595e06ba5e5b",
+      "mask_changed_pixels": 5611,
+      "outside_mask_changed_pixels": 0,
+      "qa_tecnica": "APROBADA",
+      "qa_visual": "REVISADA_EN_COMPARATIVA"
     },
     {
       "id": "p1_c02_h05_i02_cuerno_porquero_story",
@@ -419,8 +473,14 @@
       "fase": "story",
       "inspeccion_visual": "inspeccionada",
       "clasificacion": "REQUIERE_RETOQUE_SOLO_CELADA",
-      "estado_ejecucion": "SIN_RETOQUE;_ARCHIVO_ORIGINAL_INTACTO",
-      "notas": ""
+      "estado_ejecucion": "CORREGIDA_DC42_MAIN; PIXELES_FUERA_MASCARA_SIN_CAMBIO",
+      "notas": "",
+      "original_sha256": "9243b1462c2ed2489684d66b0c1c4071990c18eeb0ad4c4e5db54332b8ee4561",
+      "final_sha256": "d7454609d80d4edce2d9232cd3ff69224d2196554514d083a3bb2d8287ef5635",
+      "mask_changed_pixels": 24887,
+      "outside_mask_changed_pixels": 0,
+      "qa_tecnica": "APROBADA",
+      "qa_visual": "REVISADA_EN_COMPARATIVA"
     },
     {
       "id": "p1_c02_h06_i01_visera_alzada_temor_story",
@@ -631,5 +691,10 @@
       "estado_ejecucion": "SIN_RETOQUE;_ARCHIVO_ORIGINAL_INTACTO",
       "notas": ""
     }
-  ]
+  ],
+  "targets_remaining": 19,
+  "applied_to_original_asset_paths": 10,
+  "last_modified": "2026-11-16",
+  "dc42_review_branch": "dc42/celada-primeras-10-20261116",
+  "qa_method": "comparacion_rgb_exacta_fuera_mascara"
 }

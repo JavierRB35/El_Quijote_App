@@ -30,20 +30,20 @@ Se enumeran **exactamente 56 recursos catalogados** (27 del I y 29 del II). **29
 | P1.C01 | `p1_c01_h11_i02_nombre_dulcinea_story` | M / aprobada | NO APLICA | `assets/scenes/part_1/chapter_01/p1_c01_h11_i02_nombre_dulcinea_story.webp` |
 | P1.C01 | `p1_c01_r01_lectura_pre` | M / aprobada | NO APLICA | `assets/scenes/part_1/chapter_01/p1_c01_r01_lectura_pre.webp` |
 | P1.C01 | `p1_c01_r03_armas_morrion_pre` | V / aprobada | MORRIÓN PREVIO | `assets/scenes/part_1/chapter_01/p1_c01_r03_armas_morrion_pre.webp` |
-| P1.C01 | `p1_c01_r03_celada_reforzada_post` | V / aprobada | **RETOQUE PENDIENTE** | `assets/scenes/part_1/chapter_01/p1_c01_r03_celada_reforzada_post.webp` |
+| P1.C01 | `p1_c01_r03_celada_reforzada_post` | V / aprobada | **CORREGIDA DC-42** | `assets/scenes/part_1/chapter_01/p1_c01_r03_celada_reforzada_post.webp` |
 | P1.C01 | `p1_c01_r04_rocin_pre` | M / aprobada | NO APLICA | `assets/scenes/part_1/chapter_01/p1_c01_r04_rocin_pre.webp` |
 | P1.C01 | `p1_c01_r05_dama_pensamientos_pre` | V / aprobada | NO APLICA | `assets/scenes/part_1/chapter_01/p1_c01_r05_dama_pensamientos_pre.webp` |
 | P1.C01 | `pa_02` | M / aprobada | NO APLICA | `assets/scenes/part_1/chapter_01/pa_02_hidalgo_presentacion.webp` |
 | P1.C02 | `p1_c02_celada_reparacion_pre` | V / borrador | PREVIA | `assets/scenes/part_1/chapter_02/p1_c02_celada_reparacion_pre.webp` |
-| P1.C02 | `p1_c02_h01_i01_salida_corral_story` | V / aprobada | **RETOQUE PENDIENTE** | `assets/scenes/part_1/chapter_02/p1_c02_h01_i01_salida_corral_story.webp` |
-| P1.C02 | `p1_c02_h02_i01_duda_investidura_story` | V / aprobada | **RETOQUE PENDIENTE** | `assets/scenes/part_1/chapter_02/p1_c02_h02_i01_duda_investidura_story.webp` |
-| P1.C02 | `p1_c02_h02_i02_resolucion_armarse_story` | V / aprobada | **RETOQUE PENDIENTE** | `assets/scenes/part_1/chapter_02/p1_c02_h02_i02_resolucion_armarse_story.webp` |
-| P1.C02 | `p1_c02_h03_camino_monologos_story` | V / aprobada | **RETOQUE PENDIENTE** | `assets/scenes/part_1/chapter_02/p1_c02_h03_camino_monologos_story.webp` |
-| P1.C02 | `p1_c02_h03_i01_cronista_hazanas_story` | V / aprobada | **RETOQUE PENDIENTE** | `assets/scenes/part_1/chapter_02/p1_c02_h03_i01_cronista_hazanas_story.webp` |
-| P1.C02 | `p1_c02_h03_i03_dulcinea_sol_story` | V / aprobada | **RETOQUE PENDIENTE** | `assets/scenes/part_1/chapter_02/p1_c02_h03_i03_dulcinea_sol_story.webp` |
-| P1.C02 | `p1_c02_h04_i01_cansancio_hambre_story` | V / aprobada | **RETOQUE PENDIENTE** | `assets/scenes/part_1/chapter_02/p1_c02_h04_i01_cansancio_hambre_story.webp` |
-| P1.C02 | `p1_c02_h05_espera_trompeta_story` | V / aprobada | **RETOQUE PENDIENTE** | `assets/scenes/part_1/chapter_02/p1_c02_h05_espera_trompeta_story.webp` |
-| P1.C02 | `p1_c02_h05_i02_cuerno_porquero_story` | V / aprobada | **RETOQUE PENDIENTE** | `assets/scenes/part_1/chapter_02/p1_c02_h05_i02_cuerno_porquero_story.webp` |
+| P1.C02 | `p1_c02_h01_i01_salida_corral_story` | V / aprobada | **CORREGIDA DC-42** | `assets/scenes/part_1/chapter_02/p1_c02_h01_i01_salida_corral_story.webp` |
+| P1.C02 | `p1_c02_h02_i01_duda_investidura_story` | V / aprobada | **CORREGIDA DC-42** | `assets/scenes/part_1/chapter_02/p1_c02_h02_i01_duda_investidura_story.webp` |
+| P1.C02 | `p1_c02_h02_i02_resolucion_armarse_story` | V / aprobada | **CORREGIDA DC-42** | `assets/scenes/part_1/chapter_02/p1_c02_h02_i02_resolucion_armarse_story.webp` |
+| P1.C02 | `p1_c02_h03_camino_monologos_story` | V / aprobada | **CORREGIDA DC-42** | `assets/scenes/part_1/chapter_02/p1_c02_h03_camino_monologos_story.webp` |
+| P1.C02 | `p1_c02_h03_i01_cronista_hazanas_story` | V / aprobada | **CORREGIDA DC-42** | `assets/scenes/part_1/chapter_02/p1_c02_h03_i01_cronista_hazanas_story.webp` |
+| P1.C02 | `p1_c02_h03_i03_dulcinea_sol_story` | V / aprobada | **CORREGIDA DC-42** | `assets/scenes/part_1/chapter_02/p1_c02_h03_i03_dulcinea_sol_story.webp` |
+| P1.C02 | `p1_c02_h04_i01_cansancio_hambre_story` | V / aprobada | **CORREGIDA DC-42** | `assets/scenes/part_1/chapter_02/p1_c02_h04_i01_cansancio_hambre_story.webp` |
+| P1.C02 | `p1_c02_h05_espera_trompeta_story` | V / aprobada | **CORREGIDA DC-42** | `assets/scenes/part_1/chapter_02/p1_c02_h05_espera_trompeta_story.webp` |
+| P1.C02 | `p1_c02_h05_i02_cuerno_porquero_story` | V / aprobada | **CORREGIDA DC-42** | `assets/scenes/part_1/chapter_02/p1_c02_h05_i02_cuerno_porquero_story.webp` |
 | P1.C02 | `p1_c02_h06_i01_visera_alzada_temor_story` | V / aprobada | **RETOQUE PENDIENTE** | `assets/scenes/part_1/chapter_02/p1_c02_h06_i01_visera_alzada_temor_story.webp` |
 | P1.C02 | `p1_c02_h06_i02_discurso_doncellas_story` | V / aprobada | **RETOQUE PENDIENTE** | `assets/scenes/part_1/chapter_02/p1_c02_h06_i02_discurso_doncellas_story.webp` |
 | P1.C02 | `p1_c02_h06_visera_risas_story` | V / aprobada | **RETOQUE PENDIENTE** | `assets/scenes/part_1/chapter_02/p1_c02_h06_visera_risas_story.webp` |
@@ -76,7 +76,7 @@ Se enumeran **exactamente 56 recursos catalogados** (27 del I y 29 del II). **29
 - `p1_c02_celada_reparacion_pre`: Borrador de reparación ubicado en carpeta I.2, pero acto anterior a salida: no imponer configuración final.
 
 ## Estado de edición (obligatorio distinguir de la auditoría)
-**Sustituciones efectivamente incorporadas:** **0/29**. **Binarios originales preservados:** 56/56. **Activaciones en aplicación:** 0. El inventario identifica candidatos; solo ediciones reales, máscaras de preservación y commit verificable permitirán avanzar esas cifras.
+**Sustituciones efectivamente incorporadas:** **10/29**. **Binarios originales preservados:** 56/56. **Rutas originales actualizadas:** 10; la activación en interfaz depende del consumidor existente, sin alta automática de nuevos elementos. El inventario identifica candidatos; solo ediciones reales, máscaras de preservación y commit verificable permitirán avanzar esas cifras.
 
 ## Protocolo por imagen
 1. Abrir original del repositorio, verificar cronología, rostro, rostro oculto/visible, fase, interacciones y determinación de casco/celada.
@@ -84,3 +84,7 @@ Se enumeran **exactamente 56 recursos catalogados** (27 del I y 29 del II). **29
 3. Cambiar geometría/material/cintas conforme a la referencia única. Conservar el resto de imagen byte a byte tras decodificar; no hacer reescalado general ni nuevo tratamiento de color.
 4. Exportar sin recortar ni deformar; comparar píxeles originales y editados fuera de máscara con igualdad exacta; pasar control visual de zona editada.
 5. Actualizar ruta autorizada, hash y manifiesto, consumidores de Historia/Aventura/Museo; realizar commit y verificar integración en `main`. No marcar como corregida una imagen sin esas evidencias.
+
+
+## Actualización DC-42 — 16-11-2026
+Se han aplicado a sus rutas originales 10 correcciones localizadas (primer bloque del inventario). Las comparativas y los 10 WebP derivados se conservan en la rama `dc42/celada-primeras-10-20261116`; no se ha alterado el resto de cada fotograma (cero píxeles exteriores modificados). Quedan 19 candidatos por corregir. Los SHA-256 definitivos constan en `assets/scenes/manifest.json` y en el registro JSON.

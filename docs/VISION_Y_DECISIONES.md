@@ -1,6 +1,6 @@
 # VISIÓN Y DECISIONES — Registro maestro
 
-> **DC-42 (2026-11-16, aprobada):** Lámina 1, imagen 1 = **único canon visual de la celada final** (morrión metálico antiguo + media celada de cartón + hierro interior + nudos y cintas verdes); continuidad cronológica y localización de retoques **exclusivamente en el casco/celada**. Prohibido producir personajes diferentes con caras o siluetas confundibles: Sancho Panza y el ventero son individuos distintos, también en su vestimenta y presencia. Véase [directriz](DIRECTRIZ_CANON_CELADA_Y_PERSONAJES_2026-11-16.md) y [auditoría de 56 recursos](AUDITORIA_CELADA_P1_C01_C02_2026-11-16.md). Referencia aprobada; imágenes pendientes de retoque, sin nueva activación.
+> **DC-42 (2026-11-16, aprobada):** Lámina 1, imagen 1 = **único canon visual de la celada final** (morrión metálico antiguo + media celada de cartón + hierro interior + nudos y cintas verdes); continuidad cronológica y localización de retoques **exclusivamente en el casco/celada**. Prohibido producir personajes diferentes con caras o siluetas confundibles: Sancho Panza y el ventero son individuos distintos, también en su vestimenta y presencia. Véase [directriz](DIRECTRIZ_CANON_CELADA_Y_PERSONAJES_2026-11-16.md) y [auditoría de 56 recursos](AUDITORIA_CELADA_P1_C01_C02_2026-11-16.md). Referencia aprobada; 10/29 imágenes corregidas en sus rutas originales en `main` (commit `0e9d835`), 19 pendientes; sin alta automática de nuevas escenas.
 
 
 

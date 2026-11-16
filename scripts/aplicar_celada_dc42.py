@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
 """DC-42: localized helmet editing. Outputs PREVIEW only until visual QA."""
-from PIL import Image,ImageDraw,ImageEnhance,ImageFilter
+from PIL import Image,ImageDraw,ImageEnhance,ImageFilter,ImageOps
 import numpy as np, cv2, json, pathlib, hashlib, os
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 REF=ROOT/'assets/scenes/_art_direction/dc42_asset_auxiliar_visera.webp'
 SRC=Image.open(REF).convert('RGBA')
 # manually mapped regions in native image coordinates; four numbers: bbox
 CASES={
-  "p1_c01_r03_celada_reforzada_post": dict(rect=(590,65,1060,515),metal=(650,65,920,325),brow=(667,150,1038,335),erase=[[(675,80),(880,70),(985,138),(1030,260),(948,494),(837,475),(607,460),(600,326)]], protect=[[(514,430),(777,420),(873,478),(773,611),(530,601)],[(924,259),(1058,250),(1075,568),(921,592)]]),
+  "p1_c01_r03_celada_reforzada_post": dict(rect=(590,65,1060,515),metal=(650,65,920,325),brow=(667,150,1038,335),full=(608,58,1050,515),erase=[[(675,80),(880,70),(985,138),(1030,260),(948,494),(837,475),(607,460),(600,326)]], protect=[[(514,430),(777,420),(873,478),(773,611),(530,601)],[(924,259),(1058,250),(1075,568),(921,592)]]),
   "p1_c02_h01_i01_salida_corral_story": dict(metal=(558,15,622,110),brow=(594,39,655,91),erase=[[(564,54),(586,24),(627,19),(649,42),(648,84),(597,93),(558,108)]],protect=[[(598,61),(670,62),(671,159),(588,147)]]),
   "p1_c02_h02_i01_duda_investidura_story": dict(metal=(895,15,987,150),brow=(959,32,1066,101),erase=[[(911,44),(946,26),(1005,15),(1043,29),(1060,72),(1021,98),(954,113),(896,141)]],protect=[[(958,75),(1111,68),(1118,220),(955,233)]]),
-  "p1_c02_h02_i02_resolucion_armarse_story": dict(metal=(341,7,498,238),brow=(456,27,621,111),erase=[[(337,127),(347,65),(420,18),(510,7),(588,17),(617,83),(610,146),(516,157),(446,200),(352,216)]],protect=[[(442,99),(664,92),(682,347),(440,340)]]),
+  "p1_c02_h02_i02_resolucion_armarse_story": dict(metal=(341,7,498,238),brow=(456,27,621,111),erase=[[(329,132),(345,35),(400,0),(613,0),(637,76),(610,146),(516,157),(446,200),(352,216)]],protect=[[(442,99),(664,92),(682,347),(440,340)]]),
   "p1_c02_h03_camino_monologos_story": dict(metal=(408,30,469,134),brow=(454,44,503,80),erase=[],protect=[[(456,84),(530,84),(528,194),(454,200)]]),
   "p1_c02_h03_i01_cronista_hazanas_story": dict(metal=(516,10,648,220),brow=(615,36,756,113),erase=[[(518,97),(549,41),(608,11),(696,14),(740,58),(736,116),(643,141),(559,207),(520,195)]],protect=[[(609,83),(799,79),(813,304),(601,302)]]),
-  "p1_c02_h03_i03_dulcinea_sol_story": dict(metal=(141,13,276,224),brow=(245,33,366,111),erase=[[(152,91),(154,40),(195,19),(291,9),(349,41),(351,113),(272,157),(194,234),(147,182)]],protect=[[(243,78),(453,77),(464,318),(241,308)]]),
+  "p1_c02_h03_i03_dulcinea_sol_story": dict(metal=(141,13,276,224),brow=(245,33,366,111),erase=[[(146,95),(154,22),(190,0),(328,0),(361,36),(351,113),(272,157),(194,234),(147,182)]],protect=[[(243,78),(453,77),(464,318),(241,308)]]),
   "p1_c02_h04_i01_cansancio_hambre_story": dict(metal=(330,11,449,194),brow=(425,35,528,97),erase=[[(337,67),(385,20),(465,9),(524,35),(538,86),(485,125),(394,160),(337,165)]],protect=[[(397,88),(567,88),(574,277),(390,283)],[(404,55),(559,45),(563,150),(406,135)]]),
   "p1_c02_h05_espera_trompeta_story": dict(metal=(317,43,388,154),brow=(370,55,426,98),erase=[],protect=[[(367,89),(457,88),(456,190),(366,202)]]),
-  "p1_c02_h05_i02_cuerno_porquero_story": dict(metal=(116,10,252,215),brow=(209,30,316,103),erase=[[(120,88),(152,29),(212,9),(281,19),(306,63),(304,119),(249,164),(155,214),(118,186)]],protect=[[(200,77),(451,76),(450,308),(194,303)]]),
+  "p1_c02_h05_i02_cuerno_porquero_story": dict(metal=(116,10,252,215),brow=(209,30,316,103),erase=[[(117,89),(146,17),(198,0),(317,0),(323,63),(304,119),(249,164),(155,214),(118,186)]],protect=[[(200,77),(451,76),(450,308),(194,303)]]),
 }
 # template segments manually extracted from source asset:
 # metal with aged ridge and flared brim; frontal high cardboard brow
@@ -64,8 +64,11 @@ def process(idx,item,preview_only=True):
     else:initial=A.copy()
     canvas=Image.fromarray(initial,'RGB').convert('RGBA')
     # metal first, cardboard brow second. Cardboard is up in these open-face images
-    draw_layer(canvas,METAL,c['metal'],edit,protect,brightness=c.get('bright',1.0))
-    draw_layer(canvas,BROW,c['brow'],edit,protect,brightness=c.get('bright',1.0))
+    if 'full' in c:
+        draw_layer(canvas,ImageOps.mirror(SRC),c['full'],edit,protect,brightness=c.get('bright',1.0))
+    else:
+        draw_layer(canvas,METAL,c['metal'],edit,protect,brightness=c.get('bright',1.0))
+        draw_layer(canvas,BROW,c['brow'],edit,protect,brightness=c.get('bright',1.0))
     result=np.array(canvas.convert('RGB'))
     result=np.where((edit>0)[:,:,None],result,A)
     # mathematically exact equality outside the change mask

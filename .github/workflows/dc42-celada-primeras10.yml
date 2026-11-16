@@ -1,0 +1,51 @@
+name: DC-42 — retoques de celada (revisión, no publicar)
+on:
+  push:
+    branches:
+      - dc42/celada-primeras-10-20261116
+    paths:
+      - .github/workflows/dc42-celada-primeras10.yml
+      - scripts/aplicar_celada_dc42.py
+      - assets/scenes/_art_direction/dc42_asset_auxiliar_visera.webp
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  preparar-variantes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout de la rama de revisión
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dependencias de manipulación y verificación gráfica
+        run: python -m pip install --disable-pip-version-check pillow numpy opencv-python-headless
+      - name: Crear diez variantes sobre los originales conservando píxeles exteriores
+        run: python scripts/aplicar_celada_dc42.py
+      - name: Comprobaciones de integridad
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          r=json.loads(pathlib.Path('dc42_previews/report.json').read_text())
+          assert len(r)==10
+          assert all(x['outside_mask_changed']==0 for x in r)
+          assert all(x['changed_pixels']>0 for x in r)
+          print('DC42: 10 variantes generadas, 0 píxeles modificados fuera de máscara')
+          PY
+      - name: Incorporar solo propuestas en rama de revisión
+        run: |
+          set -e
+          mkdir -p assets/scenes/_dc42_review/primeras10
+          cp dc42_previews/*.webp assets/scenes/_dc42_review/primeras10/
+          cp dc42_previews/*_compare.jpg assets/scenes/_dc42_review/primeras10/
+          cp dc42_previews/report.json assets/scenes/_dc42_review/primeras10/
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/scenes/_dc42_review/primeras10
+          git diff --cached --quiet || (git commit -m "DC-42: propuestas enmascaradas primeras diez — sin tocar originales" && git push)

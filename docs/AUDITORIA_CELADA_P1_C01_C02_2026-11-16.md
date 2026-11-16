@@ -1,7 +1,7 @@
 # Inventario técnico de celada — Parte I, capítulos I y II
 **Corte:** main `c807bb2d659b17ed6f310575d373ace910730088`, 16-11-2026 · **Inventario de origen:** `assets/scenes/manifest.json`.
 
-Se enumeran **exactamente 56 recursos catalogados** (27 del I y 29 del II). **29** identificados como candidatos de reemplazo restringido del casco/celada (1 del I y 28 del II). **34** imágenes inspeccionadas visualmente mediante la lectura de su binario; las restantes se clasifican solo por metadatos/narrativa, no se finge haberlas visto. Todas siguen **sin retoques ni activación de versiones nuevas**.
+Se enumeran **exactamente 56 recursos catalogados** (27 del I y 29 del II). **29** identificados como candidatos de reemplazo restringido del casco/celada (1 del I y 28 del II). **34** imágenes inspeccionadas visualmente mediante la lectura de su binario; las restantes se clasifican solo por metadatos/narrativa, no se finge haberlas visto. **Actualización 16-11-2026:** 10 archivos retocados e incorporados a sus rutas originales en `main` (commit `0e9d835`); **19 candidatos restantes**. Los originales previos permanecen recuperables en el historial de Git.
 
 **Claves:** `RETOQUE` = editar solo casco/celada final; `MORRIÓN PREVIO`, `PRIMER ENSAYO`, `ENSAYO ROTO` = etapas anteriores que no deben sustituirse por el final; `NO APLICA` = sin celada según catálogo y requiere inspección si no se vio; `PREVIA` = borrador de etapa distinta. `V` = inspección visual efectuada; `M` = sólo metadatos/narrativa. Los estados de aprobación originales del manifiesto **no se han modificado**.
 

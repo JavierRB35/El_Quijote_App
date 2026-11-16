@@ -21,9 +21,9 @@
       "candidatas_pendientes": 25,
       "no_aptas": 0,
       "sin_asignacion": 0,
-      "reutilizaciones_validadas": 23,
+      "reutilizaciones_validadas": 0,
       "intervenciones_con_candidato": 25,
-      "candidatos_distintos": 10,
+      "candidatos_distintos": 25,
       "decisiones_pendientes": 25,
       "cobertura_validada_porcentaje": 0
     },
@@ -85,9 +85,9 @@
   "rondas": 33,
   "rondas_activas": 29,
   "necesidades_aventura": 66,
-  "recursos_escenas_manifest": 342,
+  "recursos_escenas_manifest": 358,
   "recursos_closeups_manifest": 10,
-  "candidatos_distintos_historia": 90,
+  "candidatos_distintos_historia": 105,
   "aprobaciones_nuevas": 0,
   "imagenes_nuevas_encargadas": 0
 }

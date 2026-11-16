@@ -278,6 +278,25 @@ test('DC-37 I.1: las 16 imágenes nuevas tienen encuadre inicial explícito, pen
   }
 });
 
+test('DC-37/DC-41 I.2: 16 focos iniciales con recurso aprobado (QA visual pendiente)', () => {
+  const h = JSON.parse(readFileSync(path.join(RAIZ, 'content/historia/parte_1/capitulo_02.json'), 'utf8'));
+  const m = JSON.parse(readFileSync(path.join(RAIZ, 'assets/scenes/manifest.json'), 'utf8'));
+  const entries = JSON.parse(readFileSync(path.join(RAIZ, 'app/src/cine/encuadres.json'), 'utf8')).encuadres;
+  const nuevos = h.escenas.flatMap((s: any) => s.intervenciones).filter((p: any) => /^p1_c02_h\d\d_i\d\d_/.test(p.imagen));
+  assert.equal(nuevos.length, 16);
+  for (const u of nuevos) {
+    const asset = m.images.find((a: any) => a.id === u.imagen);
+    assert.equal(asset?.review_state, 'aprobada');
+    assert.equal(asset?.historical_editorial_status, 'approved_owner_visual');
+    const e = entries.find((f: any) => f.media_id === 'scene:' + u.imagen);
+    assert.ok(e, u.id);
+    assert.equal(e.lado_texto, 'derecha');
+    const r = e.region_critica;
+    assert.ok(r.x >= 0 && r.w > 0 && r.x + r.w <= 1);
+    assert.ok(r.y >= .06 && r.h > 0 && r.y + r.h <= .94);
+  }
+});
+
 // DC-39: regresión de visibilidad de la navegación frente al autoocultado central.
 test('DC-39: flechas visibles permanentemente; solo Reproducir/Pausar se autooculta', () => {
   const css = readFileSync(path.join(RAIZ, 'app', 'src', 'cine', 'lienzo.css'), 'utf8');

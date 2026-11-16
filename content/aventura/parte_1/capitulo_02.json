@@ -45,8 +45,8 @@
         "alt": "Don Quijote sale solo de su lugar sobre Rocinante antes del amanecer."
       },
       "imagenConsecuencia": {
-        "uri": "assets://scenes/part_1/chapter_02/p1_c02_h03_camino_monologos_story.webp",
-        "alt": "Don Quijote continúa el camino por el campo de Montiel mientras imagina sus hazañas."
+        "uri": "assets://scenes/part_1/chapter_02/p1_c02_h02_i02_resolucion_armarse_story.webp",
+        "alt": "Don Quijote decide pedir la investidura al primero que encuentre y deja que Rocinante escoja el camino."
       }
     },
     {
@@ -78,8 +78,8 @@
         "alt": "Don Quijote cabalga hacia una venta rural con dos mujeres ante la entrada."
       },
       "imagenConsecuencia": {
-        "uri": "assets://scenes/part_1/chapter_02/p1_c02_h05_espera_trompeta_story.webp",
-        "alt": "Don Quijote detiene a Rocinante frente a la venta y espera una señal."
+        "uri": "assets://scenes/part_1/chapter_02/p1_c02_h05_i02_cuerno_porquero_story.webp",
+        "alt": "Un porquero toca su cuerno mientras don Quijote interpreta satisfecho el sonido como anuncio de su llegada a un castillo."
       },
       "checkpoint": {
         "id": "entrada_venta",
@@ -148,8 +148,8 @@
         "alt": "El ventero recibe a don Quijote todavía montado sobre Rocinante."
       },
       "imagenConsecuencia": {
-        "uri": "assets://scenes/part_1/chapter_02/p1_c02_r05_cena_sin_cana_pre.webp",
-        "alt": "Don Quijote ya está alojado y cena con la celada puesta mientras una mujer lo ayuda."
+        "uri": "assets://scenes/part_1/chapter_02/p1_c02_h08_i01_estribo_desmonta_story.webp",
+        "alt": "El ventero sostiene el estribo para ayudar a don Quijote a desmontar con dificultad ante la venta."
       }
     },
     {

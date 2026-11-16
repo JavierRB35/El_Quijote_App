@@ -114,6 +114,11 @@ test('I.2: cinco decisiones con preimágenes únicas y consecuencias comprobadas
     Array.from({ length: 5 }, (_, i) => 'AV2-I2-0' + (i + 1)));
   assert.equal(new Set(aventuraII.rondas.map((r: any) => r.imagenPrevia.uri)).size, 5);
   assert.equal(aventuraII.rondas.filter((r: any) => r.checkpoint).length, 2);
+  for (const [idx, id] of [[0, 'p1_c02_h02_i02_resolucion_armarse_story'], [1, 'p1_c02_h05_i02_cuerno_porquero_story'], [3, 'p1_c02_h08_i01_estribo_desmonta_story']] as const) {
+    const ronda = aventuraII.rondas[idx];
+    assert.ok(ronda.imagenConsecuencia.uri.endsWith(id + '.webp'), ronda.id);
+    assert.notEqual(ronda.imagenPrevia.uri, ronda.imagenConsecuencia.uri, ronda.id);
+  }
   for (const r of aventuraII.rondas) {
     assert.equal(r.opciones.length, 3);
     assert.equal(r.opciones.filter((o: any) => o.id === r.correcta).length, 1);
@@ -138,6 +143,10 @@ test('I.2: Historia 11 escenas, 25 intervenciones y recursos aprobados', () => {
   assert.equal(historiaII.escenas.length, 11);
   const pasos = historiaII.escenas.flatMap((e: any) => e.intervenciones);
   assert.equal(pasos.length, 25);
+  assert.equal(new Set(pasos.map((p: any) => p.imagen)).size, 25, 'I.2: una imagen por intervención');
+  const nuevas = pasos.filter((p: any) => /^p1_c02_h\d\d_i\d\d_/.test(p.imagen));
+  assert.equal(nuevas.length, 16, '16 fotogramas aprobados individualizados');
+  for (const p of nuevas) assert.ok(p.imagen.startsWith('p1_c02_' + p.id.toLowerCase().replaceAll('-', '_') + '_'), p.id);
   assert.equal(new Set(pasos.map((p: any) => p.id)).size, 25);
   for (const p of pasos) {
     assert.ok(p.texto_visible.length >= 15);

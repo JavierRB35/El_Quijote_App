@@ -4,8 +4,8 @@
     "original": "assets/scenes/part_1/chapter_01/p1_c01_r03_celada_reforzada_post.webp",
     "preview": "dc42_previews/01_p1_c01_r03_celada_reforzada_post.webp",
     "outside_mask_changed": 0,
-    "changed_pixels": 119393,
-    "mask_pixels": 119525,
+    "changed_pixels": 122692,
+    "mask_pixels": 122896,
     "size": [
       1672,
       941
@@ -17,7 +17,7 @@
       515
     ],
     "original_sha256": "94bccd808a13d4bfbb87adecffe8c592d9325d4d0732dffc5b41f598a542c1f0",
-    "preview_sha256": "de016011adec34fbf0cf121a901ac965dadee1a04999e20ef0c6e98d9b552263",
+    "preview_sha256": "0f8fb1386e63856e8189f9cfda8fd1264b5b6c2d9598184253230401aef58287",
     "status": "preview_unreviewed"
   },
   {
@@ -67,8 +67,8 @@
     "original": "assets/scenes/part_1/chapter_02/p1_c02_h02_i02_resolucion_armarse_story.webp",
     "preview": "dc42_previews/04_p1_c02_h02_i02_resolucion_armarse_story.webp",
     "outside_mask_changed": 0,
-    "changed_pixels": 32599,
-    "mask_pixels": 32708,
+    "changed_pixels": 39462,
+    "mask_pixels": 39586,
     "size": [
       1602,
       982
@@ -80,7 +80,7 @@
       418
     ],
     "original_sha256": "b5ddc2cacb2c34f36dd01adf47f7ccdf1e2648151dad234960fe63c89c56bf8e",
-    "preview_sha256": "b702c1a1871657c12d1be783155658bf7b80ef8badc9e083f0821427029deb1c",
+    "preview_sha256": "98e83188d26a755b5d938a549da549b351aae338052395d0a7b0290c9874abd9",
     "status": "preview_unreviewed"
   },
   {
@@ -130,8 +130,8 @@
     "original": "assets/scenes/part_1/chapter_02/p1_c02_h03_i03_dulcinea_sol_story.webp",
     "preview": "dc42_previews/07_p1_c02_h03_i03_dulcinea_sol_story.webp",
     "outside_mask_changed": 0,
-    "changed_pixels": 24049,
-    "mask_pixels": 24123,
+    "changed_pixels": 28150,
+    "mask_pixels": 28297,
     "size": [
       1602,
       982
@@ -143,7 +143,7 @@
       404
     ],
     "original_sha256": "aba356c112213b3c0570af4501dc92be05da7ade4e27ead7b59d44783d82af0c",
-    "preview_sha256": "aa4c56b37a59364ceb2580318e75ff1b3ba9e395dc3a28013a52637bdbc58c3e",
+    "preview_sha256": "033cc456674f01eb8b7cdf0ea8b41cabe4bd32112c9f07a009311cc215eb4afa",
     "status": "preview_unreviewed"
   },
   {
@@ -193,8 +193,8 @@
     "original": "assets/scenes/part_1/chapter_02/p1_c02_h05_i02_cuerno_porquero_story.webp",
     "preview": "dc42_previews/10_p1_c02_h05_i02_cuerno_porquero_story.webp",
     "outside_mask_changed": 0,
-    "changed_pixels": 19644,
-    "mask_pixels": 19679,
+    "changed_pixels": 23958,
+    "mask_pixels": 23988,
     "size": [
       1602,
       982
@@ -206,7 +206,7 @@
       395
     ],
     "original_sha256": "9243b1462c2ed2489684d66b0c1c4071990c18eeb0ad4c4e5db54332b8ee4561",
-    "preview_sha256": "7ec0be05c4e14ad6f8ac19c0ee73909ed73caf10daaa46c1fb75e819c4fb3787",
+    "preview_sha256": "b22a52fad140263ae96db87198660bf770c6bea17f6b8f37be40a3a8e68a6c91",
     "status": "preview_unreviewed"
   }
 ]

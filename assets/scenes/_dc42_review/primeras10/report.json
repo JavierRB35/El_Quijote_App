@@ -4,8 +4,8 @@
     "original": "assets/scenes/part_1/chapter_01/p1_c01_r03_celada_reforzada_post.webp",
     "preview": "dc42_previews/01_p1_c01_r03_celada_reforzada_post.webp",
     "outside_mask_changed": 0,
-    "changed_pixels": 122692,
-    "mask_pixels": 122896,
+    "changed_pixels": 100172,
+    "mask_pixels": 100366,
     "size": [
       1672,
       941
@@ -17,7 +17,7 @@
       515
     ],
     "original_sha256": "94bccd808a13d4bfbb87adecffe8c592d9325d4d0732dffc5b41f598a542c1f0",
-    "preview_sha256": "0f8fb1386e63856e8189f9cfda8fd1264b5b6c2d9598184253230401aef58287",
+    "preview_sha256": "19dc5c218fcd9714049c19f5cde868592aa1d7982299d0921957ab45527a75f7",
     "status": "preview_unreviewed"
   },
   {
@@ -80,7 +80,7 @@
       418
     ],
     "original_sha256": "b5ddc2cacb2c34f36dd01adf47f7ccdf1e2648151dad234960fe63c89c56bf8e",
-    "preview_sha256": "6b279aa03d67274beba5c1da6111659be30caf114aea1a0b753cfb93c4aff9a5",
+    "preview_sha256": "9f18d93d95b40de7c5b25a272fca4c25a3172d28d9928a8513bfdeeeb97942a5",
     "status": "preview_unreviewed"
   },
   {
@@ -206,7 +206,7 @@
       395
     ],
     "original_sha256": "9243b1462c2ed2489684d66b0c1c4071990c18eeb0ad4c4e5db54332b8ee4561",
-    "preview_sha256": "3918a63a15c95e493555f32096b222dce3a3c98fab72cec4c25448ee8551f5ef",
+    "preview_sha256": "d7454609d80d4edce2d9232cd3ff69224d2196554514d083a3bb2d8287ef5635",
     "status": "preview_unreviewed"
   }
 ]

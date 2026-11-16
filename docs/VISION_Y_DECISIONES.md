@@ -1,5 +1,9 @@
 # VISIÓN Y DECISIONES — Registro maestro
 
+> **DC-42 (2026-11-16, aprobada):** Lámina 1, imagen 1 = **único canon visual de la celada final** (morrión metálico antiguo + media celada de cartón + hierro interior + nudos y cintas verdes); continuidad cronológica y localización de retoques **exclusivamente en el casco/celada**. Prohibido producir personajes diferentes con caras o siluetas confundibles: Sancho Panza y el ventero son individuos distintos, también en su vestimenta y presencia. Véase [directriz](DIRECTRIZ_CANON_CELADA_Y_PERSONAJES_2026-11-16.md) y [auditoría de 56 recursos](AUDITORIA_CELADA_P1_C01_C02_2026-11-16.md). Referencia aprobada; imágenes pendientes de retoque, sin nueva activación.
+
+
+
 > **DC-41 (2026-11-15, aprobada por el propietario):** pergamino inferior derecho por defecto, más transparente y solo desplazable discretamente para preservar focos visuales fiables. La imagen nunca se oculta por un fallo de composición del pergamino. En contemplación de Historia, las flechas avanzan y retroceden **manualmente** por las intervenciones sin textos; voz y avance **automático** continúan pausados y Mostrar texto recupera la intervención actual completa. Esta decisión posterior sustituye únicamente la anterior deshabilitación de flechas en contemplación (DC-39) y las reglas de ubicación incompatibles; se mantienen DC-28/DC-37, TS-001, DC-40 y el antiespoiler.
 
 > **Actualización vinculante DC-40 (2026-11-12):** maximizar el humor visual de episodios cómicos sin cambiar la estética cinematográfica. Se desplazan solo las exigencias de contención anteriores que apaguen ese humor. Consultar `docs/DIRECTRIZ_COMICIDAD_VISUAL_CERVANTINA_2026-11-12.md`.

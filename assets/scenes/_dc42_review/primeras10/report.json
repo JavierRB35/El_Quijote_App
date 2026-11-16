@@ -67,8 +67,8 @@
     "original": "assets/scenes/part_1/chapter_02/p1_c02_h02_i02_resolucion_armarse_story.webp",
     "preview": "dc42_previews/04_p1_c02_h02_i02_resolucion_armarse_story.webp",
     "outside_mask_changed": 0,
-    "changed_pixels": 39462,
-    "mask_pixels": 39586,
+    "changed_pixels": 39485,
+    "mask_pixels": 39609,
     "size": [
       1602,
       982
@@ -80,7 +80,7 @@
       418
     ],
     "original_sha256": "b5ddc2cacb2c34f36dd01adf47f7ccdf1e2648151dad234960fe63c89c56bf8e",
-    "preview_sha256": "98e83188d26a755b5d938a549da549b351aae338052395d0a7b0290c9874abd9",
+    "preview_sha256": "6b279aa03d67274beba5c1da6111659be30caf114aea1a0b753cfb93c4aff9a5",
     "status": "preview_unreviewed"
   },
   {
@@ -130,8 +130,8 @@
     "original": "assets/scenes/part_1/chapter_02/p1_c02_h03_i03_dulcinea_sol_story.webp",
     "preview": "dc42_previews/07_p1_c02_h03_i03_dulcinea_sol_story.webp",
     "outside_mask_changed": 0,
-    "changed_pixels": 28150,
-    "mask_pixels": 28297,
+    "changed_pixels": 28833,
+    "mask_pixels": 29006,
     "size": [
       1602,
       982
@@ -143,7 +143,7 @@
       404
     ],
     "original_sha256": "aba356c112213b3c0570af4501dc92be05da7ade4e27ead7b59d44783d82af0c",
-    "preview_sha256": "033cc456674f01eb8b7cdf0ea8b41cabe4bd32112c9f07a009311cc215eb4afa",
+    "preview_sha256": "d96fb35889f4d1bb2b037ca4c0b54880b0b962a1d66a401fda5bffc4e4a5b651",
     "status": "preview_unreviewed"
   },
   {
@@ -193,8 +193,8 @@
     "original": "assets/scenes/part_1/chapter_02/p1_c02_h05_i02_cuerno_porquero_story.webp",
     "preview": "dc42_previews/10_p1_c02_h05_i02_cuerno_porquero_story.webp",
     "outside_mask_changed": 0,
-    "changed_pixels": 23958,
-    "mask_pixels": 23988,
+    "changed_pixels": 24887,
+    "mask_pixels": 24911,
     "size": [
       1602,
       982
@@ -206,7 +206,7 @@
       395
     ],
     "original_sha256": "9243b1462c2ed2489684d66b0c1c4071990c18eeb0ad4c4e5db54332b8ee4561",
-    "preview_sha256": "b22a52fad140263ae96db87198660bf770c6bea17f6b8f37be40a3a8e68a6c91",
+    "preview_sha256": "3918a63a15c95e493555f32096b222dce3a3c98fab72cec4c25448ee8551f5ef",
     "status": "preview_unreviewed"
   }
 ]

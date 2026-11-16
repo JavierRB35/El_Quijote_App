@@ -30,12 +30,12 @@ En imágenes existentes en los capítulos I–II con celada de la etapa final, r
 **Criterio de rechazo automático de arte:** casco distinto de la referencia en etapa final, cambio exterior a la máscara en una corrección de celada, dos personajes confundibles o inversión de cronología. La continuidad es transversal al proyecto y se verifica en prompts y aceptación de imágenes.
 
 ## 5. Inventario de auditoría y estado real
-Consultar [auditoría de 56 recursos de I.1 e I.2](AUDITORIA_CELADA_P1_C01_C02_2026-11-16.md) y [registro legible por máquina](AUDITORIA_CELADA_P1_C01_C02_2026-11-16.json). La **aprobación de la referencia** no equivale a la aprobación de 29 futuros retoques. Al crear esta directriz, las escenas preexistentes permanecen sin sustitución; no afirmar lo contrario. La instrucción expresa del propietario autoriza la corrección restringida, pero su ejecución y QA deben acreditarse individualmente.
+Consultar [auditoría de 56 recursos de I.1 e I.2](AUDITORIA_CELADA_P1_C01_C02_2026-11-16.md) y [registro legible por máquina](AUDITORIA_CELADA_P1_C01_C02_2026-11-16.json). La **aprobación de la referencia** no equivale a la aprobación de 29 futuros retoques. En la emisión original de esta directriz no se habían sustituido escenas; **actualización del 16-11-2026: 10/29 archivos corregidos en `main` (commit `0e9d835e64a1fda3c81246a13c8210fdc2a4266f`), 19 pendientes.** La instrucción expresa del propietario autoriza la corrección restringida, pero su ejecución y QA deben acreditarse individualmente.
 
 ## IMPACTO TRANSVERSAL Y REUTILIZACIÓN
 - **Causa raíz:** distintas interpretaciones incoherentes de una misma pieza de utilería y riesgo de duplicación de identidades faciales.
 - **Corrección común:** fuente de referencia única + etapas narrativas + regla de inpainting enmascarado, invariancia de píxeles y ficha de personajes.
 - **Consumidores:** Historia, Aventura y Museo en escenas actuales, nuevos capítulos y posteriores escenas de la celada; no altera texto original, scripts ni guardados.
-- **Antes/después:** el canon aprobado existe; **no se certifican sustituciones de binarios** en este commit documental.
+- **Antes/después:** el canon aprobado existe y **diez sustituciones de binarios se verifican** en el commit de integración `0e9d835e64a1fda3c81246a13c8210fdc2a4266f`, con hashes e informe de máscara en manifiesto y auditoría.
 - **Pruebas necesarias:** cobertura del inventario, integridad de original, comparación fuera de máscara, hashes, manifiesto, QA antiespoiler y revisión en interfaz.
 - **Limitación:** todo retoque aún pendiente debe pasar su validación específica; sin pruebas gráficas no se declara terminado.
